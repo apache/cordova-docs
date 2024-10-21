@@ -6,9 +6,91 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Aug 2024 09:23:53 +0000</pubDate>
-    <lastBuildDate>Thu, 29 Aug 2024 09:23:53 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.3</generator>
+    <pubDate>Mon, 21 Oct 2024 16:02:41 +0000</pubDate>
+    <lastBuildDate>Mon, 21 Oct 2024 16:02:41 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.4</generator>
+    
+      <item>
+        <title>Cordova iOS 8.0.0 Beta1 is Now Available!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released a beta for the next Cordova iOS version. This is Cordova iOS 8.0.0-beta.1!&lt;/p&gt;
+
+&lt;p&gt;This is a developer preview of Cordova&amp;#39;s supported platforms for building iOS applications. The intention of this beta release is for plugin authors and app developers to test their plugins and projects and provide feedback and bug reports before the final release of Cordova iOS 8.0.0. This version includes several breaking API changes and project structure changes, which is why we are providing this beta release for testing purposes.&lt;/p&gt;
+
+&lt;p&gt;This beta is &lt;strong&gt;not intended to be used for production App Store submissions&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios/v/8.0.0-beta.1&quot;&gt;cordova-ios@8.0.0-beta.1&lt;/a&gt; on npm&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://archive.apache.org/dist/cordova/platforms/cordova-ios-8.0.0-beta.1.tgz&quot;&gt;cordova-ios@8.0.0-beta.1.tgz&lt;/a&gt; source code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For plugin authors, we&amp;#39;ve written a guide about &lt;a href=&quot;https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc&quot;&gt;Upgrading Plugins to Cordova iOS 8.x&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To test an upgrade in your projects:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@8.0.0-beta.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install for testing:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@8.0.0-beta.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The minimum supported versions have been increased.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;iOS&lt;/strong&gt; version is now 13.&lt;/li&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;Xcode&lt;/strong&gt; version is now 15.&lt;/li&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;NodeJS&lt;/strong&gt; version is now 18.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The platform project has been modernized with some significant changes.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The Xcode project, and build target are now always named &lt;code&gt;App&lt;/code&gt;.&lt;br /&gt;
+This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what&amp;#39;s defined in config.xml.&lt;/li&gt;
+      &lt;li&gt;The platform project now uses Swift classes and a storyboard file.&lt;/li&gt;
+      &lt;li&gt;The platform project now supports building for macOS using Catalyst.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;App Icon handling has been simplified.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Projects can now provide a single 1024px × 1024px icon in config.xml.&lt;/li&gt;
+      &lt;li&gt;Projects building with Xcode 16 can now provide monochrome and dark mode icon variants.&lt;/li&gt;
+      &lt;li&gt;See &lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1465&quot;&gt;GH-1465&lt;/a&gt; for details.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixes for numerous bug reports and pain points.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Range requests are now supported for large media files when using a custom protocol.&lt;/li&gt;
+      &lt;li&gt;Opening system alert boxes from JavaScript code should no longer freeze the application.&lt;/li&gt;
+      &lt;li&gt;Improved error messaging when no iOS simulators are installed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Fixes for apps that use Cordova as a framework.&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Several memory leaks have been fixed when disposing of a Cordova view controller.&lt;/li&gt;
+      &lt;li&gt;Several API improvements for specifying background colours and splash screen behaviour.&lt;/li&gt;
+      &lt;li&gt;New &lt;a href=&quot;https://apache.github.io/cordova-ios/&quot;&gt;API documentation&lt;/a&gt; is published for the CordovaLib classes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The full changelog is available to read &lt;a href=&quot;https://github.com/apache/cordova-ios/blob/8.0.0-beta.1/RELEASENOTES.md#800-beta1-oct-17-2024&quot;&gt;here&lt;/a&gt;. Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova iOS 7.1.1 Released!</title>
@@ -1132,67 +1214,6 @@ cordova plugin add cordova-plugin-file-transfer@2.0.0
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 7.0.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.0.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.0.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@7.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Building on Xcode 11&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Cordova-iOS 7 is documented to support Xcode 11 and later. However, due to recent changes to support &lt;code&gt;LimitsNavigationsToAppBoundDomains&lt;/code&gt;, builds fail on Xcode 11. To address this issue, we have added conditional checks to ensure that the app can be built with Xcode 11. Please note that the &lt;code&gt;LimitsNavigationsToAppBoundDomains&lt;/code&gt; feature will not be available when building with Xcode 11.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Fix paths in the Xcode pbxproj&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Cordova-iOS 7.0.0&amp;#39;s Xcode project file was missing path information for some files. While this worked fine within the Xcode app, it caused problems for plugins and hooks that were attempting to modify the project file programmatically. We&amp;#39;ve fixed this issue by ensuring that all files in the Xcode project include a path property.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1369&quot;&gt;GH-1369&lt;/a&gt; fix: &lt;code&gt;xcodebuild&lt;/code&gt; version check to 11&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1358&quot;&gt;GH-1358&lt;/a&gt; fix: ensure Xcode project file references use &lt;code&gt;path&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1368&quot;&gt;GH-1368&lt;/a&gt; fix: make code compile on Xcode 11&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1360&quot;&gt;GH-1360&lt;/a&gt; fix: add missing cordova versions to &lt;code&gt;CDVAvailability.h&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2023/09/06/cordova-ios-7.0.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
         
       </item>
     

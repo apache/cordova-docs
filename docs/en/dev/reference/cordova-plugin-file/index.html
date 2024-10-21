@@ -2345,20 +2345,15 @@
 
 <p><a href="https://github.com/apache/cordova-plugin-file/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-file/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-file/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-file/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-file/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-file/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-file/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-file/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
 
-<p>This plugin implements a File API allowing read/write access to files residing on the device.</p>
+<p>This plugin implements a File API allowing read/write access to files residing on the device, based on the following W3C specifications:</p>
 
-<p>This plugin is based on several specs, including :
-The HTML5 File API
-<a href="http://www.w3.org/TR/FileAPI/">http://www.w3.org/TR/FileAPI/</a></p>
+<ul>
+  <li><a href="http://www.w3.org/TR/FileAPI">HTML5 File API</a></li>
+  <li><a href="http://www.w3.org/TR/2012/WD-file-system-api-20120417">File API: Directories and System</a><sup>1</sup></li>
+  <li><a href="https://www.w3.org/TR/2012/WD-file-writer-api-20120417/">File API: Writer</a><sup>1</sup></li>
+</ul>
 
-<p>The Directories and System extensions
-Latest:
-<a href="http://www.w3.org/TR/2012/WD-file-system-api-20120417/">http://www.w3.org/TR/2012/WD-file-system-api-20120417/</a>
-Although most of the plugin code was written when an earlier spec was current:
-<a href="http://www.w3.org/TR/2011/WD-file-system-api-20110419/">http://www.w3.org/TR/2011/WD-file-system-api-20110419/</a></p>
-
-<p>It also implements the FileWriter spec :
-<a href="http://dev.w3.org/2009/dap/file-system/file-writer.html">http://dev.w3.org/2009/dap/file-system/file-writer.html</a></p>
+<p><sup>1</sup> These specifications are discontinued and the file plugin may not have the entire specification implemented.</p>
 
 <blockquote>
   <p><em>Note</em> While the W3C FileSystem spec is deprecated for web browsers, the FileSystem APIs are supported in Cordova applications with this plugin for the platforms listed in the <em>Supported Platforms</em> list, with the exception of the Browser platform.</p>
@@ -3361,7 +3356,7 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
     <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwrite</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
             <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
         <span class="p">};</span>
@@ -3422,13 +3417,13 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
     <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file read...</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwrite</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
             <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
         <span class="p">};</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file read: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
         <span class="p">};</span>
 
         <span class="c1">// If we are appending data to file, go to the end of the file.</span>
@@ -3500,7 +3495,7 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
     <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwrite</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
             <span class="k">if</span> <span class="p">(</span><span class="nx">dataObj</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
