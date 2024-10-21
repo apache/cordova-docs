@@ -15,7 +15,7 @@ This is a developer preview of Cordova's supported platforms for building iOS ap
 This beta is **not intended to be used for production App Store submissions**.
 
 * [cordova-ios@8.0.0-beta.1](https://www.npmjs.com/package/cordova-ios/v/8.0.0-beta.1) on npm
-* [cordova-ios@8.0.0-beta.1.tgz](https://dlcdn.apache.org/cordova/platforms/cordova-ios-8.0.0-beta.1.tgz) source code
+* [cordova-ios@8.0.0-beta.1.tgz](https://archive.apache.org/dist/cordova/platforms/cordova-ios-8.0.0-beta.1.tgz) source code
 
 For plugin authors, we've written a guide about [Upgrading Plugins to Cordova iOS 8.x](https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc).
 
