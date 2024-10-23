@@ -67,9 +67,17 @@ const YAML_FRONT_MATTER = '---\n---\n';
 const WATCH_INTERVAL = 1000; // in milliseconds
 const VERSION_VAR_NAME = 'latest_docs_version';
 const LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
-const NEXT_DOCS_VERSION = nextversion.getNextVersion(LATEST_DOCS_VERSION);
-const LANGUAGES = listdirsSync(DOCS_DIR);
 
+// '--bumpCli' flag hat determins if the next version is major CLI or new date release.
+const bumpCli = argv.bumpCli || false;
+const NEXT_DOCS_VERSION = nextversion.getNextVersion(bumpCli, LATEST_DOCS_VERSION);
+
+if (fs.existsSync(path.join(DOCS_DIR, 'en', NEXT_DOCS_VERSION))) {
+    logger(styleText(['red'], '[ERROR] ')) + `The targeted docs version ""${NEXT_DOCS_VERSION}"" already exist. Are you trying to update the existing snapshot? Use "npm run update-docs".`);
+    process.exit(1);
+}
+
+const LANGUAGES = listdirsSync(DOCS_DIR);
 const PROD_BY_DEFAULT = false;
 
 // compute/get/set/adjust passed options

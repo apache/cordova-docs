@@ -17,7 +17,9 @@
 
 'use strict';
 
-function getNextVersion (previousVersion) {
+function getNextVersion (bumpCli, previousVersion) {
+    bumpCli = bumpCli || false;
+
     // get previous version number
     // NOTE:
     //      only versions of the form N.x are accepted
@@ -28,7 +30,9 @@ function getNextVersion (previousVersion) {
 
     // get next major version
     const previousMajor = previousVersionMatch[1];
-    const nextMajor = parseInt(previousMajor) + 1;
+    const nextMajor = bumpCli
+        ? parseInt(previousMajor) + 1
+        : parseInt(previousMajor);
 
     // create next version
     const currentDate = new Date();
@@ -41,7 +45,9 @@ function getNextVersion (previousVersion) {
 
 function main () {
     // get arg
-    const previousVersion = process.argv[2];
+    const shouldBumpCli = process.argv[2] || false;
+    const previousVersion = process.argv[3];
+
     if (!previousVersion) {
         console.error('no version specified');
         process.exit(1);
@@ -50,7 +56,7 @@ function main () {
     // try to get the next version
     let nextVersion = null;
     try {
-        nextVersion = getNextVersion(previousVersion);
+        nextVersion = getNextVersion(shouldBumpCli, previousVersion);
     } catch (e) {
         console.error(e);
         process.exit(1);
