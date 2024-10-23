@@ -21,7 +21,7 @@ function getNextVersion (previousVersion) {
     // get previous version number
     // NOTE:
     //      only versions of the form N.x are accepted
-    const previousVersionMatch = previousVersion.match(/^(\d+)\.x$/);
+    const previousVersionMatch = previousVersion.match(/^(\d+)\.x(-\d{4}.\d{2})?$/);
     if (!previousVersionMatch) {
         throw Error('invalid version');
     }
@@ -31,7 +31,10 @@ function getNextVersion (previousVersion) {
     const nextMajor = parseInt(previousMajor) + 1;
 
     // create next version
-    const nextVersion = nextMajor + '.x';
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    const nextVersion = `${nextMajor}.x-${currentYear}.${currentMonth}`;
 
     return nextVersion;
 }
