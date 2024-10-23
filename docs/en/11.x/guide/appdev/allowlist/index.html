@@ -2330,7 +2330,7 @@
 <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<p>Without any <code>&lt;access&gt;</code> tags, only requests to <code>file://</code> URLs are allowed. However, the default Cordova application includes <code>&lt;access origin="*"&gt;</code> by default.</p>
+<p>Without any <code>&lt;access&gt;</code> tags, only requests to the location where the app content is served are allowed.</p>
 
 <p>Note: Allow List cannot block network redirects from a allow listed remote website (i.e. <code>http</code> or <code>https</code>) to a non-allowlisted website. Use CSP rules to mitigate redirects to non-allowlisted websites for webviews that support CSP.</p>
 
