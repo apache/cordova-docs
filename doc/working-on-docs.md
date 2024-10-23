@@ -15,8 +15,6 @@ The following command can quickly sync the `dev` docs with the current latest do
 npm run update-docs
 ```
 
-Read more [here](https://github.com/apache/cordova-docs/blob/master/gulpfile.js#L212).
-
 ## Create new snapshot from `dev`
 
 The following commands can be used to create a new snapshot of `dev` docs:
