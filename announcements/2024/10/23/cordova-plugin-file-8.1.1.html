@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released a beta for the next Cordova iOS version. This is Cordova iOS 8.0.0-beta.1!This is a developer preview of ...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-file!  cordova-plugin-file@8.1.1To upgrade:cordova plugin remove cordova-plu...">
 
     <title>
         
             
-                Cordova iOS 8.0.0 Beta1 is Now Available! - Apache Cordova
+                File Plugin 8.1.1 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -126,82 +126,55 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova iOS 8.0.0 Beta1 is Now Available!</div>
+        <div class="title">File Plugin 8.1.1 Released!</div>
         <div class="author">By:
             
-              <a href="https://dpogue.ca">Darryl Pogue</a>
+              <a href="https://breautek.com">Norman Breau</a>
             
         </div>
-        <div class="date">21 Oct 2024</div>
+        <div class="date">23 Oct 2024</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released a beta for the next Cordova iOS version. This is Cordova iOS 8.0.0-beta.1!</p>
-
-<p>This is a developer preview of Cordova&#39;s supported platforms for building iOS applications. The intention of this beta release is for plugin authors and app developers to test their plugins and projects and provide feedback and bug reports before the final release of Cordova iOS 8.0.0. This version includes several breaking API changes and project structure changes, which is why we are providing this beta release for testing purposes.</p>
-
-<p>This beta is <strong>not intended to be used for production App Store submissions</strong>.</p>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-ios/v/8.0.0-beta.1">cordova-ios@8.0.0-beta.1</a> on npm</li>
-  <li><a href="https://archive.apache.org/dist/cordova/platforms/cordova-ios-8.0.0-beta.1.tgz">cordova-ios@8.0.0-beta.1.tgz</a> source code</li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.1.1</a></li>
 </ul>
 
-<p>For plugin authors, we&#39;ve written a guide about <a href="https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc">Upgrading Plugins to Cordova iOS 8.x</a>.</p>
+<p><strong>To upgrade:</strong></p>
 
-<p><strong>To test an upgrade in your projects:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
-cordova platform add ios@8.0.0-beta.1
-</code></pre></div></div>
-
-<p><strong>To install for testing:</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@8.0.0-beta.1
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.1.1
 </code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
+<p>For Android, we corrected an issue that prevented <code>.toURL()</code> to be used on <code>content://</code> file entries. Now <code>.toURL()</code> will return a DOM-usable url on both <code>file://</code> and <code>content://</code> file entries.</p>
+
+<p>This will be important for upcoming releases planned for the Camera plugin.</p>
+
+<p>Note that the <code>AndroidInsecureFileModeEnabled</code> preference must be off. If <code>AndroidInsecureFileModeEnabled</code> preference is turned on, then <code>.toURL()</code> will return the underlying URL and modern Android devices will reject <code>content://</code> file paths. If your project is still using <code>AndroidInsecureFileModeEnabled</code> it is time to strongly consider migrating to schemes by turning the <code>AndroidInsecureFileModeEnabled</code> preference off.</p>
+
+<p>By default, the <code>AndroidInsecureFileModeEnabled</code> preference is disabled. If your project does not explicitly enable it, then no action is required.</p>
+
+<p>For iOS, there are no changes.</p>
+
+<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+<!--more-->
+<h1>Changes include:</h1>
+
+<p><strong>Fixes:</strong></p>
 <ul>
-  <li><strong>The minimum supported versions have been increased.</strong>
-    <ul>
-      <li>The minimum supported <strong>iOS</strong> version is now 13.</li>
-      <li>The minimum supported <strong>Xcode</strong> version is now 15.</li>
-      <li>The minimum supported <strong>NodeJS</strong> version is now 18.</li>
-    </ul>
-  </li>
-  <li><strong>The platform project has been modernized with some significant changes.</strong>
-    <ul>
-      <li>The Xcode project, and build target are now always named <code>App</code>.<br />
-This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what&#39;s defined in config.xml.</li>
-      <li>The platform project now uses Swift classes and a storyboard file.</li>
-      <li>The platform project now supports building for macOS using Catalyst.</li>
-    </ul>
-  </li>
-  <li><strong>App Icon handling has been simplified.</strong>
-    <ul>
-      <li>Projects can now provide a single 1024px × 1024px icon in config.xml.</li>
-      <li>Projects building with Xcode 16 can now provide monochrome and dark mode icon variants.</li>
-      <li>See <a href="https://github.com/apache/cordova-ios/pull/1465">GH-1465</a> for details.</li>
-    </ul>
-  </li>
-  <li><strong>Fixes for numerous bug reports and pain points.</strong>
-    <ul>
-      <li>Range requests are now supported for large media files when using a custom protocol.</li>
-      <li>Opening system alert boxes from JavaScript code should no longer freeze the application.</li>
-      <li>Improved error messaging when no iOS simulators are installed.</li>
-    </ul>
-  </li>
-  <li><strong>Fixes for apps that use Cordova as a framework.</strong>
-    <ul>
-      <li>Several memory leaks have been fixed when disposing of a Cordova view controller.</li>
-      <li>Several API improvements for specifying background colours and splash screen behaviour.</li>
-      <li>New <a href="https://apache.github.io/cordova-ios/">API documentation</a> is published for the CordovaLib classes.</li>
-    </ul>
-  </li>
+  <li><a href="https://github.com/apache/cordova-plugin-file/pull/629">GH-629</a> fix(android): Content FS support in PathHandler (#629)</li>
 </ul>
 
-<p>The full changelog is available to read <a href="https://github.com/apache/cordova-ios/blob/8.0.0-beta.1/RELEASENOTES.md#800-beta1-oct-17-2024">here</a>. Please report any issues you find on our <a href="https://github.com/apache/cordova-iOS/issues">Cordova-iOS</a> GitHub issue tracker!</p>
+<p><strong>Documentation:</strong></p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-file/pull/639">GH-639</a> docs: Correct onwriteend to onwrite (#639)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file/pull/638">GH-628</a> docs: Reformatting specs (#638)</li>
+</ul>
 
         </div>
     </section>
@@ -209,37 +182,17 @@ This resolves numerous issues around CocoaPods, multi-target projects, and Info.
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2024/07/24/cordova-ios-7.1.1.html">Previous</a>
+                    <a href="/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2024/07/24/cordova-ios-7.1.1.html">Cordova iOS 7.1.1 Released!</a>
-                    <div class="date"> 24 Jul 2024 - By Bryan Ellis </div>
+                    <a class="title" href="/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html">Cordova iOS 8.0.0 Beta1 is Now Available!</a>
+                    <div class="date"> 21 Oct 2024 - By Darryl Pogue </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova iOS...
+                        We are happy to announce that we have just released a beta...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">File Plugin 8.1.1 Released!</a>
-                    <div class="date"> 23 Oct 2024 - By Norman Breau </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>
