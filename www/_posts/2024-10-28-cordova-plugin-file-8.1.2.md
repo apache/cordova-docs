@@ -3,7 +3,7 @@ layout: post
 author:
     name: Norman Breau
     url: https://breautek.com
-title:  "File Plugin 8.1.1 Released!"
+title:  "File Plugin 8.1.2 Released!"
 categories: announcements
 tags: news releases
 ---
