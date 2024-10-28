@@ -31,6 +31,8 @@ By default, the `AndroidInsecureFileModeEnabled` preference is disabled. If your
 
 For iOS, there are no changes.
 
+_Edit (2024-10-28)_: This patch introduces a regression on Android platforms when resolving `.toURL()` on some `file://` URIs. Please use upgrade to `cordova-plugin-file@8.1.2` instead.
+
 Please report any issues you find by following the this [How to File a Bug](https://github.com/apache/cordova#filing-a-bug) guide!
 
 <!--more-->
