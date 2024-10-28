@@ -92,6 +92,7 @@ Please report any issues you find by following the [How to File a Bug](https://g
 
 **Breaking:**
 * [GH-902](https://github.com/apache/cordova-plugin-camera/pull/902) fix(android): always return uris (#902)
+* [GH-909](https://github.com/apache/cordova-plugin-camera/pull/909) refactor(android): Make WRITE_EXTERNAL_STORAGE optional (#909)
 * [GH-910](https://github.com/apache/cordova-plugin-camera/pull/910) fix(android): Return data uris as an URI (#910)
 * [GH-911](https://github.com/apache/cordova-plugin-camera/pull/911) fix(ios): Sync camera API return to match Android changes (#911)
 * [GH-912](https://github.com/apache/cordova-plugin-camera/pull/912) fix(browser): Make data uri be returned as actual URI strings (#912)
