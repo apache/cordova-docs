@@ -21,13 +21,13 @@ cordova plugin add cordova-plugin-file@8.1.2
 
 ## Release Highlights
 
-This patch is a regression fix. To see [8.1.1](https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html) higlights for full details.
+This patch is a regression fix. See [8.1.1 release blog](https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html) post for more details.
 
 In 8.1.1, the `FileEntry.toURL()` method broke when used on any `file://` that didn't lead to the app's internal assets on Android. This is now corrected.
 
 This bug didn't effect iOS devices.
 
-Please report any issues you find by following the this [How to File a Bug](https://github.com/apache/cordova#filing-a-bug) guide!
+Please report any issues you find by following the [How to File a Bug](https://github.com/apache/cordova#filing-a-bug) guide!
 
 <!--more-->
 # Changes include:
