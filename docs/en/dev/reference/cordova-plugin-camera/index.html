@@ -2460,8 +2460,97 @@ If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
 
 <h3>camera.getPicture(successCallback, errorCallback, options)</h3>
 <p>Takes a photo using the camera, or retrieves a photo from the device&#39;s
-image gallery.  The image is passed to the success callback as a
-Base64-encoded <code>String</code>, or as the URI for the image file.</p>
+image gallery. The result is provided in the first parameter of the <code>successCallback</code> as a string.</p>
+
+<p>As of v8.0.0, the result is formatted as URIs. The scheme will vary depending on settings and platform.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Destination Type</th>
+      <th>Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Android</td>
+      <td>FILE_URI</td>
+      <td>An URI scheme such as <code>file://...</code> or <code>content://...</code></td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>DATA_URL</td>
+      <td>Base 64 encoded with the proper data URI header</td>
+    </tr>
+    <tr>
+      <td>iOS</td>
+      <td>FILE_URI</td>
+      <td><code>file://</code> schemed paths</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>DATA_URL</td>
+      <td>Base 64 encoded with the proper data URI header</td>
+    </tr>
+    <tr>
+      <td>Browser</td>
+      <td>FILE_URI</td>
+      <td>Not supported</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>DATA_URL</td>
+      <td>Base 64 encoded with the proper data URI header</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>v7 and earlier versions, the return format is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Destination Type</th>
+      <th>Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Android</td>
+      <td>FILE_URI</td>
+      <td>Raw file path (unprefixed)</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>DATA_URL</td>
+      <td>Base 64 encoded, without the <code>data:</code> prefix</td>
+    </tr>
+    <tr>
+      <td>iOS</td>
+      <td>FILE_URI</td>
+      <td><code>file://</code> schemed paths</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>DATA_URL</td>
+      <td>Base 64 encoded, without the <code>data:</code> prefix</td>
+    </tr>
+    <tr>
+      <td>Browser</td>
+      <td>FILE_URI</td>
+      <td>Not supported</td>
+    </tr>
+    <tr>
+      <td>&#160;</td>
+      <td>DATA_URL</td>
+      <td>Base 64 encoded, without the <code>data:</code> prefix</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For this reason, upgrading to v8 is strongly recommended as it greatly streamlines the return data.</p>
 
 <p>The <code>camera.getPicture</code> function opens the device&#39;s default camera
 application that allows users to snap pictures by default - this behavior occurs,
@@ -2474,19 +2563,11 @@ that allows users to select an existing image.</p>
 
 <p>The return value is sent to the <a href="#module_camera.onSuccess"><code>cameraSuccess</code></a> callback function, in
 one of the following formats, depending on the specified
-<code>cameraOptions</code>:</p>
+<code>cameraOptions</code>. You can do whatever you want with content:</p>
 
 <ul>
-  <li>A <code>String</code> containing the Base64-encoded photo image.</li>
-  <li>A <code>String</code> representing the image file location on local storage (default).</li>
-</ul>
-
-<p>You can do whatever you want with the encoded image or URI, for
-example:</p>
-
-<ul>
-  <li>Render the image in an <code>&lt;img&gt;</code> tag, as in the example below</li>
-  <li>Save the data locally (<code>LocalStorage</code>, <a href="http://brianleroux.github.com/lawnchair/">Lawnchair</a>, etc.)</li>
+  <li>Render the content in an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> tag</li>
+  <li>Copy the data to a persistent location</li>
   <li>Post the data to a remote server</li>
 </ul>
 
@@ -2495,6 +2576,31 @@ selected from the device&#39;s gallery are not downscaled to a lower
 quality, even if a <code>quality</code> parameter is specified.  To avoid common
 memory problems, set <code>Camera.destinationType</code> to <code>FILE_URI</code> rather
 than <code>DATA_URL</code>.</p>
+
+<p><strong>NOTE</strong>: To use <code>saveToPhotoAlbum</code> option on Android 9 (API 28) and lower, the <code>WRITE_EXTERNAL_STORAGE</code> permission must be declared.</p>
+
+<p>To do this, add the following in your <code>config.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/config-file&gt;</span>
+</code></pre></div></div>
+
+<p>Android 10 (API 29) and later devices does not require <code>WRITE_EXTERNAL_STORAGE</code> permission. If your application only supports Android 10 or later, then this step is not necessary.</p>
+
+<h4>FILE_URI Usage</h4>
+
+<p>When <code>FILE_URI</code> is used, the returned path is not directly usable. The file path needs to be resolved into
+a DOM-usable URL using the <a href="https://github.com/apache/cordova-plugin-file">Cordova File Plugin</a>.</p>
+
+<p>Additionally, the file URIs returned is a temporary read access grant. The OS reserves the right to revoke permission to access the resource, which typically occurs after the app has been closed. For images captured using the camera, the image is stored in a temporary location which can be cleared at any time, usually after the app exits. It&#39;s the application&#39;s decision to decide how the content should be used depending on their use cases.</p>
+
+<p>For persistent access to the content, the resource should be copied to your app&#39;s storage container. An example use case is an app allowing an user to select a profile picture from their gallery or camera. The application will need
+consistent access to that resource, so it&#39;s not suitable to retain the temporary access path. So the appplication should copy the resource to a persistent location.</p>
+
+<p>For use cases that involve temporary use, it is valid and safe to use the temporary file path to display the content. An example of this could be an image editing application, rendering the data into a canvas.</p>
+
+<p><strong>NOTE</strong>: The returned schemes is an implementation detail. Do not assume that it will always be a <code>file://</code> URI.</p>
 
 <p><strong>Supported Platforms</strong></p>
 
@@ -2607,17 +2713,24 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
     <tr>
       <td>imageData</td>
       <td><code>string</code></td>
-      <td>Base64 encoding of the image data, <em>or</em> the image file URI, depending on <a href="#module_camera.CameraOptions"><code>cameraOptions</code></a> in effect.</td>
+      <td>Data URI, <em>or</em> the image file URI, depending on <a href="#module_camera.CameraOptions"><code>cameraOptions</code></a> in effect.</td>
     </tr>
   </tbody>
 </table>
 
 <p><strong>Example</strong></p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Show image</span>
-<span class="c1">//</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Show image captured with FILE_URI</span>
+<span class="kd">function</span> <span class="nx">cameraCallback</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+    <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Show image captured with DATA_URL</span>
 <span class="kd">function</span> <span class="nx">cameraCallback</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
    <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
-   <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">data:image/jpeg;base64,</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">imageData</span><span class="p">;</span>
+   <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageData</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 <p><a name="module_camera.CameraOptions"></a></p>
@@ -2660,10 +2773,10 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>Set the source of the picture.</td>
     </tr>
     <tr>
-      <td>allowEdit</td>
+      <td><del>allowEdit</del></td>
       <td><code>Boolean</code></td>
       <td><code>false</code></td>
-      <td>Allow simple editing of image before selection.</td>
+      <td><strong>Deprecated</strong>. Allow simple editing of image before selection.</td>
     </tr>
     <tr>
       <td>encodingType</td>
@@ -2699,7 +2812,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>saveToPhotoAlbum</td>
       <td><code>Boolean</code></td>
       <td>&#160;</td>
-      <td>Save the image to the photo album on the device after capture.</td>
+      <td>Save the image to the photo album on the device after capture.<br />See <a href="#cameragetpicturesuccesscallback-errorcallback-options">Android Quirks</a>.</td>
     </tr>
     <tr>
       <td>popoverOptions</td>
@@ -2743,7 +2856,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>DATA_URL</td>
       <td><code>number</code></td>
       <td><code>0</code></td>
-      <td>Return base64 encoded string. DATA_URL can be very memory intensive and cause app crashes or out of memory errors. Use FILE_URI if possible</td>
+      <td>Return data uri. DATA_URL can be very memory intensive and cause app crashes or out of memory errors. Use FILE_URI if possible</td>
     </tr>
     <tr>
       <td>FILE_URI</td>
@@ -3041,39 +3154,43 @@ location.</p>
 
 <p>Take a photo and retrieve the image&#39;s file location:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI });
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Don't forget to install cordova-plugin-file for resolveLocalFileSystemURL!</span>
 
-function onSuccess(imageURI) {
-    var image = document.getElementById('myImage');
-    image.src = imageURI;
-}
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">FILE_URI</span> <span class="p">});</span>
 
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
+<span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">image</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+    <span class="p">},</span> <span class="nx">onFail</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>Take a photo and retrieve it as a Base64-encoded image:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
  * Warning: Using DATA_URL is not recommended! The DATA_URL destination
  * type is very memory intensive, even with a low quality setting. Using it
  * can result in out of memory errors and application crashes. Use FILE_URI
  * instead.
- */
-navigator.camera.getPicture(onSuccess, onFail, { quality: 25,
-    destinationType: Camera.DestinationType.DATA_URL
-});
+ */</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">DATA_URL</span>
+<span class="p">});</span>
 
-function onSuccess(imageData) {
-    var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageData;
-}
+<span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageData</span><span class="p">;</span>
+<span class="p">}</span>
 
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
+<span class="kd">function</span> <span class="nx">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h4>Preferences (iOS)</h4>
@@ -3100,7 +3217,7 @@ successful.</p>
 
 <h4>Browser Quirks</h4>
 
-<p>Can only return photos as Base64-encoded image.</p>
+<p>Can only return photos as data URI image.</p>
 
 <h4>iOS Quirks</h4>
 
@@ -3109,9 +3226,9 @@ can cause problems.  Wrap the alert within a <code>setTimeout()</code> to allow
 the iOS image picker or popover to fully close before the alert
 displays:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setTimeout(function() {
-    // do your thing here!
-}, 0);
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// do your thing here!</span>
+<span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h2><code>CameraOptions</code> Errata <a name="CameraOptions-quirks"></a></h2>
@@ -3131,12 +3248,6 @@ displays:</p>
   <li>
     <p>Ignores the <code>encodingType</code> parameter if the image is unedited (i.e. <code>quality</code> is 100, <code>correctOrientation</code> is false, and no <code>targetHeight</code> or <code>targetWidth</code> are specified). The <code>CAMERA</code> source will always return the JPEG file given by the native camera and the <code>PHOTOLIBRARY</code> and <code>SAVEDPHOTOALBUM</code> sources will return the selected file in its existing encoding.</p>
   </li>
-</ul>
-
-<h4>iOS Quirks</h4>
-
-<ul>
-  <li>When using <code>destinationType.FILE_URI</code>, photos are saved in the application&#39;s temporary directory. The contents of the application&#39;s temporary directory is deleted when the application ends.</li>
 </ul>
 
 <h2>Sample: Take Pictures, Select Pictures from the Picture Library, and Get Thumbnails <a name="sample"></a></h2>
@@ -3281,52 +3392,36 @@ displays:</p>
 
 <h2>Take a picture and get a FileEntry Object <a name="convert"></a></h2>
 
-<p>If you want to do something like copy the image to another location, or upload it somewhere using the FileTransfer plugin, you need to get a FileEntry object for the returned picture. To do that, call <code>window.resolveLocalFileSystemURL</code> on the file URI returned by the Camera app. If you need to use a FileEntry object, set the <code>destinationType</code> to <code>Camera.DestinationType.FILE_URI</code> in your CameraOptions object (this is also the default value).</p>
+<p>If you want to do something like copy the image to another location, or upload it somewhere, an <code>FileEntry</code> is needed for the returned picture. To do this, call <code>window.resolveLocalFileSystemURL</code> on the file URI returned by the Camera app. If you need to use a FileEntry object, set the <code>destinationType</code> to <code>Camera.DestinationType.FILE_URI</code> in your CameraOptions object (this is also the default value).</p>
 
-<blockquote>
-  <p><em>Note</em> You need the <a href="https://www.npmjs.com/package/cordova-plugin-file">File plugin</a> to call <code>window.resolveLocalFileSystemURL</code>.</p>
-</blockquote>
+<p><strong>NOTE:</strong> You need the <a href="https://www.npmjs.com/package/cordova-plugin-file">File plugin</a> to call <code>window.resolveLocalFileSystemURL</code>.</p>
 
 <p>Here is the call to <code>window.resolveLocalFileSystemURL</code>. The image URI is passed to this function from the success callback of <code>getPicture</code>. The success handler of <code>resolveLocalFileSystemURL</code> receives the FileEntry object.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getFileEntry</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">)</span> <span class="p">{</span>
     <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">success</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="c1">// Do something with the FileEntry object, like write to it, upload it, etc.</span>
-        <span class="c1">// writeFile(fileEntry, imgUri);</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">got file: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span><span class="p">);</span>
-        <span class="c1">// displayFileData(fileEntry.nativeURL, "Native URL");</span>
+        <span class="c1">// Example 1: Copy to app data directory</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">profilePic</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+        <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
+        
+        <span class="c1">// Example 2: Upload it!</span>
+        <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+            
+            <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+                <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">https://myserver.com/upload</span><span class="dl">'</span><span class="p">);</span>
+                <span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                    <span class="c1">// All done!</span>
+                <span class="p">};</span>
+                <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="p">};</span>
 
-    <span class="p">},</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="c1">// If don't get the FileEntry (which may happen when testing</span>
-      <span class="c1">// on some emulators), copy to a new FileEntry.</span>
-        <span class="nx">createNewFileEntry</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>In the example shown in the preceding code, you call the app&#39;s <code>createNewFileEntry</code> function if you don&#39;t get a valid FileEntry object. The image URI returned from the Camera app should result in a valid FileEntry, but platform behavior on some emulators may be different for files returned from the file picker.</p>
-
-<blockquote>
-  <p><em>Note</em> To see an example of writing to a FileEntry, see the <a href="https://www.npmjs.com/package/cordova-plugin-file">File plugin README</a>.</p>
-</blockquote>
-
-<p>The code shown here creates a file in your app&#39;s cache (in sandboxed storage) named <code>tempFile.jpeg</code>. With the new FileEntry object, you can copy the image to the file or do something else like upload it.</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createNewFileEntry</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">cacheDirectory</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">success</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="c1">// JPEG file</span>
-        <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="dl">"</span><span class="s2">tempFile.jpeg</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
-
-            <span class="c1">// Do something with it, like write to it, upload it, etc.</span>
-            <span class="c1">// writeFile(fileEntry, imgUri);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">got file: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span><span class="p">);</span>
-            <span class="c1">// displayFileData(fileEntry.fullPath, "File copied to");</span>
-
-        <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
-
-    <span class="p">},</span> <span class="nx">onErrorResolveUrl</span><span class="p">);</span>
+            <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+        <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
+    <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 

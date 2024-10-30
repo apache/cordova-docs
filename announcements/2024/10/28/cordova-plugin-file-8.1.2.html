@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-file!  cordova-plugin-file@8.1.1To upgrade:cordova plugin remove cordova-plu...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-file!  cordova-plugin-file@8.1.2To upgrade:cordova plugin remove cordova-plu...">
 
     <title>
         
             
-                File Plugin 8.1.1 Released! - Apache Cordova
+                File Plugin 8.1.2 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/10/28/cordova-plugin-file-8.1.2.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -126,56 +126,44 @@
 
 <div class="post">
     <header>
-        <div class="title">File Plugin 8.1.1 Released!</div>
+        <div class="title">File Plugin 8.1.2 Released!</div>
         <div class="author">By:
             
               <a href="https://breautek.com">Norman Breau</a>
             
         </div>
-        <div class="date">23 Oct 2024</div>
+        <div class="date">28 Oct 2024</div>
     </header>
     <section>
         <div>
             <p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code>!</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.1.1</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.1.2</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@8.1.1
+cordova plugin add cordova-plugin-file@8.1.2
 </code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<p>For Android, we corrected an issue that prevented <code>.toURL()</code> to be used on <code>content://</code> file entries. Now <code>.toURL()</code> will return a DOM-usable url on both <code>file://</code> and <code>content://</code> file entries.</p>
+<p>This patch is a regression fix. See <a href="https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">8.1.1 release blog</a> post for more details.</p>
 
-<p>This will be important for upcoming releases planned for the Camera plugin.</p>
+<p>In 8.1.1, the <code>FileEntry.toURL()</code> method broke when used on any <code>file://</code> that didn&#39;t lead to the app&#39;s internal assets on Android. This is now corrected.</p>
 
-<p>Note that the <code>AndroidInsecureFileModeEnabled</code> preference must be off. If <code>AndroidInsecureFileModeEnabled</code> preference is turned on, then <code>.toURL()</code> will return the underlying URL and modern Android devices will reject <code>content://</code> file paths. If your project is still using <code>AndroidInsecureFileModeEnabled</code> it is time to strongly consider migrating to schemes by turning the <code>AndroidInsecureFileModeEnabled</code> preference off.</p>
+<p>This bug didn&#39;t effect iOS devices.</p>
 
-<p>By default, the <code>AndroidInsecureFileModeEnabled</code> preference is disabled. If your project does not explicitly enable it, then no action is required.</p>
-
-<p>For iOS, there are no changes.</p>
-
-<p><em>Edit (2024-10-28)</em>: This patch introduces a regression on Android platforms when resolving <code>.toURL()</code> on some <code>file://</code> URIs. Please use upgrade to <code>cordova-plugin-file@8.1.2</code> instead.</p>
-
-<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
 <p><strong>Fixes:</strong></p>
 <ul>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/629">GH-629</a> fix(android): Content FS support in PathHandler (#629)</li>
-</ul>
-
-<p><strong>Documentation:</strong></p>
-<ul>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/639">GH-639</a> docs: Correct onwriteend to onwrite (#639)</li>
-  <li><a href="https://github.com/apache/cordova-plugin-file/pull/638">GH-628</a> docs: Reformatting specs (#638)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file/pull/640">GH-640</a> fix(android): Regression breaking resolved DOM-usable file:// paths (#640)</li>
 </ul>
 
         </div>
@@ -184,37 +172,17 @@ cordova plugin add cordova-plugin-file@8.1.1
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html">Previous</a>
+                    <a href="/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html">Cordova iOS 8.0.0 Beta1 is Now Available!</a>
-                    <div class="date"> 21 Oct 2024 - By Darryl Pogue </div>
+                    <a class="title" href="/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">File Plugin 8.1.1 Released!</a>
+                    <div class="date"> 23 Oct 2024 - By Norman Breau </div>
                     <p class="content">
-                        We are happy to announce that we have just released a beta...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2024/10/28/cordova-plugin-file-8.1.2.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2024/10/28/cordova-plugin-file-8.1.2.html">File Plugin 8.1.2 Released!</a>
-                    <div class="date"> 28 Oct 2024 - By Norman Breau </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>

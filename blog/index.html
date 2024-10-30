@@ -129,6 +129,51 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Mon, 28 Oct 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/10/28/cordova-plugin-file-8.1.2.html">File Plugin 8.1.2 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">28 Oct 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://breautek.com">Norman Breau</a>
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2024/10/28/cordova-plugin-file-8.1.2.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.1.2</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.1.2
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This patch is a regression fix. See <a href="https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">8.1.1 release blog</a> post for more details.</p>
+
+<p>In 8.1.1, the <code>FileEntry.toURL()</code> method broke when used on any <code>file://</code> that didn&#39;t lead to the app&#39;s internal assets on Android. This is now corrected.</p>
+
+<p>This bug didn&#39;t effect iOS devices.</p>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/announcements/2024/10/28/cordova-plugin-file-8.1.2.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 23 Oct 2024 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2024/10/23/cordova-plugin-file-8.1.1.html">File Plugin 8.1.1 Released!</a>
@@ -168,6 +213,8 @@ cordova plugin add cordova-plugin-file@8.1.1
 <p>By default, the <code>AndroidInsecureFileModeEnabled</code> preference is disabled. If your project does not explicitly enable it, then no action is required.</p>
 
 <p>For iOS, there are no changes.</p>
+
+<p><em>Edit (2024-10-28)</em>: This patch introduces a regression on Android platforms when resolving <code>.toURL()</code> on some <code>file://</code> URIs. Please use upgrade to <code>cordova-plugin-file@8.1.2</code> instead.</p>
 
 <p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
 
@@ -14284,7 +14331,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Wed, 23 Oct 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Mon, 28 Oct 2024 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
