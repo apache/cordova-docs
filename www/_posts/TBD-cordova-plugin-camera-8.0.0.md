@@ -39,7 +39,7 @@ All platforms consistently return a `<scheme>:...` now.
 
 For all platforms, when using the `DATA_URL` option, the returned base64 encoed image used to return just the base64 encoded part. As of v8.0.0, the returned string now includes the `data:` uri header, including the MIME type that the base64 data represents.
 
-For iOS, `file://` uris were previously returned consistently. So no changes were made here.
+For iOS, `file://` uris were always previously returned consistently therefore, no changes were made here.
 
 For Android, the API behaved consistently depending on the underlying source of the content. Most of the time a raw file path was returned. It will now always return a URI of some sort, though unlike iOS, it is unsafe to assume it will be a `file://` uri.
 
