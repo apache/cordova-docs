@@ -21,7 +21,8 @@ cordova plugin add cordova-plugin-camera@8.0.0
 
 ## Release Highlights
 
-This is a major update as it includes some breaking public API mechanisms, for the better!
+This is a major update as it includes some breaking public API mechanisms, for
+the better!
 
 The breaking changes includes:
 - [getPicture](#getpicture)
@@ -33,46 +34,74 @@ Additionally the `allowEdit` feature is now deprecated. [See more details](#depr
 
 ### getPicture
 
-The Camera plugin previously was very inconsistent with the return paths when using `getPicture` API. Sometimes it was `file://` uri, sometimes it was a raw file path. Applications would have to check and usually prefix the path themselves to make any use of them. So we've streamlined the returned data as URIs.
+The Camera plugin previously was very inconsistent with the return paths when
+using `getPicture` API. Sometimes it was `file://` uri, sometimes it was a raw
+file path. Applications would have to check and usually prefix the path
+themselves to make any use of them. So we've streamlined the returned data as
+URIs.
 
 All platforms consistently return a `<scheme>:...` now.
 
-For all platforms, when using the `DATA_URL` option, the returned base64 encoed image used to return just the base64 encoded part. As of v8.0.0, the returned string now includes the `data:` uri header, including the MIME type that the base64 data represents.
+For all platforms, when using the `DATA_URL` option, the returned base64 encoded
+image used to return just the base64 encoded part. As of v8.0.0, the returned
+string now includes the `data:` uri header, including the MIME type that the
+base64 data represents.
 
-For iOS, `file://` uris were always previously returned consistently therefore, no changes were made here.
+For iOS, `file://` uris were always previously returned consistently therefore,
+no changes were made here.
 
-For Android, the API behaved consistently depending on the underlying source of the content. Most of the time a raw file path was returned. It will now always return a URI of some sort, though unlike iOS, it is unsafe to assume it will be a `file://` uri.
+For Android, the API behaved consistently depending on the underlying source of
+the content. Most of the time a raw file path was returned. It will now always
+return a URI of some sort, though unlike iOS, it is unsafe to assume it will be
+a `file://` uri.
 
-If you were testing and prefixing your file paths, you are no longer required to. All URIs returned when using `FILE_URI` option is resolvable by `cordova-plugin-file@8.1.2` and later.
+If you were testing and prefixing your file paths, you are no longer required to.
+All URIs returned when using `FILE_URI` option is resolvable by 
+cordova-plugin-file@8.1.2` and later.
 
-For examples on how to use the results, see the [Camera Plugin Documentation](https://github.com/apache/cordova-plugin-camera?tab=readme-ov-file#take-a-picture-and-get-a-fileentry-object-)
+For examples on how to use the results, see the
+[Camera Plugin Documentation](https://github.com/apache/cordova-plugin-camera?tab=readme-ov-file#take-a-picture-and-get-a-fileentry-object-)
 
 ### URI Persistence
 
 For all platforms using `FILE_URI` option, the returned URI is **temporarily access** only.
 
-When sourcing content from the camera, the file is stored in the app's temporary directory, which the OS may clear out at any time when disk space is sparse.
+When sourcing content from the camera, the file is stored in the app's temporary
+directory, which the OS may clear out at any time when disk space is sparse.
 
-<!-- For iOS, this might not be completely accurate, but for the sake of making the blog brief/simple, I'm omitting this fact -->
-When sourcing content from the user's gallery, the returned URI has a temporarily read permission provided by the OS which expires once the application exits.
+<!-- For iOS, this might not be completely accurate, but for the sake of making
+the blog brief/simple, I'm omitting this fact -->
+When sourcing content from the user's gallery, the returned URI has a
+temporarily read permission provided by the OS which expires once the application
+exits.
 
-This means that the URI returned by `getPicture` should not be stored. The application should decide what to do with it depending on their needs and requirements.
+This means that the URI returned by `getPicture` should not be stored. The
+application should decide what to do with it depending on their needs and
+requirements.
 
-**Example 1:** The application is receiving an image for the user's profile picture and it will require persistent access to that content.
+**Example 1:** The application is receiving an image for the user's profile
+picture and it will require persistent access to that content.
 
-Solution: The application should copy the content to the app's data directory and store and use the copied URI instead.
+Solution: The application should copy the content to the app's data directory
+and store and use the copied URI instead.
 
-**Example 2:** The application is receiving an image to edit or make manipulations. It just needs one-time read to load into memory to put the data in an image editor.
+**Example 2:** The application is receiving an image to edit or make
+manipulations. It just needs one-time read to load into memory to put the data
+in an image editor.
 
-Solution: The application can safely use the temporarily URI to read and display the content and save the manipulated data later.
+Solution: The application can safely use the temporarily URI to read and display
+the content and save the manipulated data later.
 
 ### Optional WRITE_EXTERNAL_STORAGE Permission
 
-For Android 7 - 12, this plugin used to always include the `WRITE_EXTERNAL_STORAGE` permission, and for implementation reasons it was required to operate.
+For Android 7 - 12, this plugin used to always include the `WRITE_EXTERNAL_STORAGE`
+permission, and for implementation reasons it was required to operate.
 
-As of v8.0.0, the Camera plugin no longer automatically includes the permission declaration, as in most cases it is no longer required.
+As of v8.0.0, the Camera plugin no longer automatically includes the permission
+declaration, as in most cases it is no longer required.
 
-If your application enables the `saveToPhotoAlbum` option, then you'll need to add the following to the `config.xml` file:
+If your application enables the `saveToPhotoAlbum` option, then you'll need to
+add the following to the `config.xml` file:
 
 ```xml
 <platform name="android">
@@ -82,23 +111,27 @@ If your application enables the `saveToPhotoAlbum` option, then you'll need to a
 </platform>
 ```
 
-If your application does not use `saveToPhotoAlbum`, then your application does not require any permissions to operate both the camera, or picking from the user's gallery.
+If your application does not use `saveToPhotoAlbum`, then your application does
+not require any permissions to operate both the camera, or picking from the
+user's gallery.
 
-Attempting to use `saveToPhotoAlbum` without declaring the `WRITE_EXTERNAL_STORAGE` will result in an error being returned on Android 7, Android 8, and Android 9 devices.
+Attempting to use `saveToPhotoAlbum` without declaring the `WRITE_EXTERNAL_STORAGE`
+will result in an error being returned on Android 7, Android 8, and Android 9 devices.
 
 ### Deprecation: allowEdit
 
-The `allowEdit` feature when capturing images from the camera, or selecting images from the gallery
-is now deprecated. Behaviour of this feature was inconsistent across platforms, and often times is
-unreliable as it was dependent on support of the underlying Camera application which
-was not standard.
+The `allowEdit` feature when capturing images from the camera, or selecting
+images from the gallery is now deprecated. Behaviour of this feature was
+inconsistent across platforms, and often times is unreliable as it was dependent
+on support of the underlying Camera application which was not standard.
 
-The feature still exists for the time being and should work as-is given it's documented caveats,
-but Apache Cordova will no longer provide support for issues arising from using
-the feature. The `allowEdit` option is scheduled to be completely removed at a later date with
-no direct replacement.
+The feature still exists for the time being and should work as-is given it's
+documented caveats, but Apache Cordova will no longer provide support for issues
+arising from using the feature. The `allowEdit` option is scheduled to be
+completely removed at a later date with no direct replacement.
 
-Users using the `allowEdit` feature should move to a dedicated image manipulation library.
+Users using the `allowEdit` feature should move to a dedicated image
+manipulation library.
 
 ### Known Issues
 
