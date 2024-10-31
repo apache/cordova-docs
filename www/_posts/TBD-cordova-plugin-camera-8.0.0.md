@@ -72,8 +72,8 @@ directory, which the OS may clear out at any time when disk space is sparse.
 <!-- For iOS, this might not be completely accurate, but for the sake of making
 the blog brief/simple, I'm omitting this fact -->
 When sourcing content from the user's gallery, the returned URI has a
-temporarily read permission provided by the OS which expires once the application
-exits.
+temporarily read permission provided by the OS which expires typically once the
+application exits.
 
 This means that the URI returned by `getPicture` should not be stored. The
 application should decide what to do with it depending on their needs and
