@@ -43,7 +43,7 @@ For iOS, `file://` uris were always previously returned consistently therefore, 
 
 For Android, the API behaved consistently depending on the underlying source of the content. Most of the time a raw file path was returned. It will now always return a URI of some sort, though unlike iOS, it is unsafe to assume it will be a `file://` uri.
 
-If you were testing and prefixing your file paths, you no longer required to. All URIs returned when using `FILE_URI` option is resolvable by `cordova-plugin-file@8.1.2` and later.
+If you were testing and prefixing your file paths, you are no longer required to. All URIs returned when using `FILE_URI` option is resolvable by `cordova-plugin-file@8.1.2` and later.
 
 For examples on how to use the results, see the [Camera Plugin Documentation](https://github.com/apache/cordova-plugin-camera?tab=readme-ov-file#take-a-picture-and-get-a-fileentry-object-)
 
