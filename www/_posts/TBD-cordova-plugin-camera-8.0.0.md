@@ -129,7 +129,7 @@ workaround is not necessary.
 Android will start returning `content://` instead of `file://` URIs when
 selecting images from the user's gallery in order to make use of the underlying
 MediaStore APIs. In order for these paths to be resolvable to a DOM-usable URL,
-`AndroidInsecureFileModeEnabled` must be off (the default value).
+the `AndroidInsecureFileModeEnabled` preference must be `"false"` (the default value).
 
 Please report any issues you find by following the
 [How to File a Bug](https://github.com/apache/cordova#filing-a-bug) guide!
