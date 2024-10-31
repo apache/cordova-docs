@@ -28,6 +28,9 @@ The breaking changes includes:
 - [URI Persistence](#uri-persistence)
 - [Optional WRITE_EXTERNAL_STORAGE](#optional-write_external_storage-permission)
 
+Additionally the `allowEdit` feature is now deprecated. [See more details](#deprecation-allowedit).
+
+
 ### getPicture
 
 The Camera plugin previously was very inconsistent with the return paths when using `getPicture` API. Sometimes it was `file://` uri, sometimes it was a raw file path. Applications would have to check and usually prefix the path themselves to make any use of them. So we've streamlined the returned data as URIs.
@@ -85,6 +88,40 @@ If your application does not use `saveToPhotoAlbum`, then your application does 
 
 Attempting to use `saveToPhotoAlbum` without declaring the `WRITE_EXTERNAL_STORAGE` will result in an error being returned on Android 7, Android 8, and Android 9 devices.
 
+### Deprecation: allowEdit
+
+The `allowEdit` feature when capturing images from the camera, or selecting images from the gallery
+is now deprecated. Behaviour of this feature was inconsistent across platforms, and often times is
+unreliable as it was dependent on support of the underlying Camera application which
+was not standard.
+
+The feature still exists for the time being and should work as-is given it's documented caveats,
+but Apache Cordova will no longer provide support for issues arising from using
+the feature. The `allowEdit` option is scheduled to be completely removed at a later date with
+no direct replacement.
+
+Users using the `allowEdit` feature should move to a dedicated image manipulation library.
+
+### Known Issues
+
+On iOS, the `FileEntry.toURL` method does not produce a DOM-usable uri while
+the application is configured to use schemes. A [fix](https://github.com/apache/cordova-plugin-file/pull/642) for this will be available
+at an later date. In the meantime, the following can be used as a workaround:
+
+```javascript
+// TODO: Remove when https://github.com/apache/cordova-plugin-file/pull/642 is released
+function toDomURL(fileEntry) {
+    if (cordova.platform === "ios") {
+        return window.WkWebView.convertFilePath(fileEntry.nativeUrl);
+    }
+    else {
+        return fileEntry.toURL();
+    }
+}
+```
+
+If your app is still hosted on the `file://` protocol on iOS, then the workaround is not necessary.
+
 Please report any issues you find by following the [How to File a Bug](https://github.com/apache/cordova#filing-a-bug) guide!
 
 <!--more-->
@@ -96,6 +133,7 @@ Please report any issues you find by following the [How to File a Bug](https://g
 * [GH-910](https://github.com/apache/cordova-plugin-camera/pull/910) fix(android): Return data uris as an URI (#910)
 * [GH-911](https://github.com/apache/cordova-plugin-camera/pull/911) fix(ios): Sync camera API return to match Android changes (#911)
 * [GH-912](https://github.com/apache/cordova-plugin-camera/pull/912) fix(browser): Make data uri be returned as actual URI strings (#912)
+* [GH-915](https://github.com/apache/cordova-plugin-camera/pull/915) fix(android): remove WRITE_EXTERNAL_PERMISSION (#915)
 
 **Improvements:**
 * [GH-901](https://github.com/apache/cordova-plugin-camera/pull/901) fix(android): Isolate provider access to a subdirectory (#901)
@@ -106,6 +144,9 @@ Please report any issues you find by following the [How to File a Bug](https://g
 **Fixes:**
 * [GH-903](https://github.com/apache/cordova-plugin-camera/pull/903) fix(android): Improper serialization of image uri in save instance state (#903)
 * [GH-905](https://github.com/apache/cordova-plugin-camera/pull/905) fix(android): improper cache path construction during image manipulation (#905)
+
+**Deprecations:**
+* [GH-914](https://github.com/apache/cordova-plugin-camera/pull/914) deprecation: allowEdit (#914)
 
 **Documentation:**
 * [GH-913](https://github.com/apache/cordova-plugin-camera/pull/913) docs: Revisions for v8 public API changes with the return string formats of getPicture (#913)
