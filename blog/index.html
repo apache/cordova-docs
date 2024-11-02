@@ -129,6 +129,188 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Sat, 02 Nov 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/11/02/camera-plugin-camera-8.0.0.html">Camera Plugin 8.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">02 Nov 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://breautek.com">Norman Breau</a>
+                            
+                        </span>
+                        <a class="comment" href="/announcements/2024/11/02/camera-plugin-camera-8.0.0.html#disqus_thread"></a>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released a major update for <code>cordova-plugin-camera</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@8.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-camera
+cordova plugin add cordova-plugin-camera@8.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This is a major update as it includes some breaking public API mechanisms, for
+the better!</p>
+
+<p>The breaking changes includes:</p>
+<ul>
+  <li><a href="#getpicture">getPicture</a></li>
+  <li><a href="#uri-persistence">URI Persistence</a></li>
+  <li><a href="#optional-write_external_storage-permission">Optional WRITE_EXTERNAL_STORAGE</a></li>
+</ul>
+
+<p>Additionally the <code>allowEdit</code> feature is now deprecated. <a href="#deprecation-allowedit">See more details</a>.</p>
+
+<h3>getPicture</h3>
+
+<p>The Camera plugin previously was very inconsistent with the return paths when
+using <code>getPicture</code> API. Sometimes it was <code>file://</code> uri, sometimes it was a raw
+file path. Applications would have to check and usually prefix the path
+themselves to make any use of them. So we&#39;ve streamlined the returned data as
+URIs.</p>
+
+<p>All platforms consistently return a <code>&lt;scheme&gt;:...</code> now.</p>
+
+<p>For all platforms, when using the <code>DATA_URL</code> option, the returned base64 encoded
+image used to return just the base64 encoded part. As of v8.0.0, the returned
+string now includes the <code>data:</code> uri header, including the MIME type that the
+base64 data represents.</p>
+
+<p>For iOS, <code>file://</code> uris were always previously returned consistently therefore,
+no changes were made here.</p>
+
+<p>For Android, the API behaved consistently depending on the underlying source of
+the content. Most of the time a raw file path was returned. It will now always
+return a URI of some sort, though unlike iOS, it is unsafe to assume it will be
+a <code>file://</code> uri.</p>
+
+<p>If you were testing and prefixing your file paths, you are no longer required to.
+All URIs returned when using <code>FILE_URI</code> option is resolvable by 
+cordova-plugin-file@8.1.2` and later.</p>
+
+<p>For examples on how to use the results, see the
+<a href="https://github.com/apache/cordova-plugin-camera?tab=readme-ov-file#take-a-picture-and-get-a-fileentry-object-">Camera Plugin Documentation</a></p>
+
+<h3>URI Persistence</h3>
+
+<p>For all platforms using <code>FILE_URI</code> option, the returned URI is <strong>temporarily access</strong> only.</p>
+
+<p>When sourcing content from the camera, the file is stored in the app&#39;s temporary
+directory, which the OS may clear out at any time when disk space is sparse.</p>
+
+<!-- For iOS, this might not be completely accurate, but for the sake of making
+the blog brief/simple, I'm omitting this fact -->
+<p>When sourcing content from the user&#39;s gallery, the returned URI has a
+temporarily read permission provided by the OS which expires typically once the
+application exits.</p>
+
+<p>This means that the URI returned by <code>getPicture</code> should not be stored. The
+application should decide what to do with it depending on their needs and
+requirements.</p>
+
+<p><strong>Example 1:</strong> The application is receiving an image for the user&#39;s profile
+picture and it will require persistent access to that content.</p>
+
+<p>Solution: The application should copy the content to the app&#39;s data directory
+and store and use the copied URI instead.</p>
+
+<p><strong>Example 2:</strong> The application is receiving an image to edit or make
+manipulations. It just needs one-time read to load into memory to put the data
+in an image editor.</p>
+
+<p>Solution: The application can safely use the temporarily URI to read and display
+the content and save the manipulated data later.</p>
+
+<h3>Optional WRITE_EXTERNAL_STORAGE Permission</h3>
+
+<p>For Android 7 - 12, this plugin used to always include the <code>WRITE_EXTERNAL_STORAGE</code>
+permission, and for implementation reasons it was required to operate.</p>
+
+<p>As of v8.0.0, the Camera plugin no longer automatically includes the permission
+declaration, as in most cases it is no longer required.</p>
+
+<p>If your application enables the <code>saveToPhotoAlbum</code> option, then you&#39;ll need to
+add the following to the <code>config.xml</code> file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/config-file&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p>If your application does not use <code>saveToPhotoAlbum</code>, then your application does
+not require any permissions to operate both the camera, or picking from the
+user&#39;s gallery.</p>
+
+<p>Attempting to use <code>saveToPhotoAlbum</code> without declaring the <code>WRITE_EXTERNAL_STORAGE</code>
+will result in an error being returned on Android 7, Android 8, and Android 9 devices.</p>
+
+<h3>Deprecation: allowEdit</h3>
+
+<p>The <code>allowEdit</code> feature when capturing images from the camera, or selecting
+images from the gallery is now deprecated. Behaviour of this feature was
+inconsistent across platforms, and often times is unreliable as it was dependent
+on support of the underlying Camera application which was not standard.</p>
+
+<p>The feature still exists for the time being and should work as-is given it&#39;s
+documented caveats, but Apache Cordova will no longer provide support for issues
+arising from using the feature. The <code>allowEdit</code> option is scheduled to be
+completely removed at a later date with no direct replacement.</p>
+
+<p>Users using the <code>allowEdit</code> feature should move to a dedicated image
+manipulation library.</p>
+
+<h3>Known Issues</h3>
+
+<h4>iOS</h4>
+
+<p>The <code>FileEntry.toURL</code> method on iOS does not produce a DOM-usable uri while
+the application is configured to use schemes. A <a href="https://github.com/apache/cordova-plugin-file/pull/642">fix</a>
+for this will be available at an later date. In the meantime, the following can
+be used as a workaround:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// TODO: Remove when https://github.com/apache/cordova-plugin-file/pull/642 is released</span>
+<span class="kd">function</span> <span class="nx">toDomURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platform</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">ios</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">WkWebView</span><span class="p">.</span><span class="nx">convertFilePath</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">nativeUrl</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If your app is still hosted on the <code>file://</code> protocol on iOS, then the
+workaround is not necessary.</p>
+
+<h4>Android</h4>
+
+<p>Android will start returning <code>content://</code> instead of <code>file://</code> URIs when
+selecting images from the user&#39;s gallery in order to make use of the underlying
+MediaStore APIs. In order for these paths to be resolvable to a DOM-usable URL,
+the <code>AndroidInsecureFileModeEnabled</code> preference must be <code>"false"</code> (the default value).</p>
+
+<p>Please report any issues you find by following the
+<a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/announcements/2024/11/02/camera-plugin-camera-8.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Fri, 01 Nov 2024 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2024/11/01/cordova-lib-release-12.0.2.html">Cordova Lib 12.0.2 Released!</a>
@@ -14386,7 +14568,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Fri, 01 Nov 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Sat, 02 Nov 2024 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

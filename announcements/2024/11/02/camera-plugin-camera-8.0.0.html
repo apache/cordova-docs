@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released a major update for cordova-plugin-camera!  cordova-plugin-camera@8.0.0To upgrade:cordova plugin remove co...">
+
+    <title>
+        
+            
+                Camera Plugin 8.0.0 Released! - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2024/11/02/camera-plugin-camera-8.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- Fonts -->
+    <!-- For attribution information, see www/attributions.html -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:700,400,300,700italic,400italic,300italic' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Camera Plugin 8.0.0 Released!</div>
+        <div class="author">By:
+            
+              <a href="https://breautek.com">Norman Breau</a>
+            
+        </div>
+        <div class="date">02 Nov 2024</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released a major update for <code>cordova-plugin-camera</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@8.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-camera
+cordova plugin add cordova-plugin-camera@8.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This is a major update as it includes some breaking public API mechanisms, for
+the better!</p>
+
+<p>The breaking changes includes:</p>
+<ul>
+  <li><a href="#getpicture">getPicture</a></li>
+  <li><a href="#uri-persistence">URI Persistence</a></li>
+  <li><a href="#optional-write_external_storage-permission">Optional WRITE_EXTERNAL_STORAGE</a></li>
+</ul>
+
+<p>Additionally the <code>allowEdit</code> feature is now deprecated. <a href="#deprecation-allowedit">See more details</a>.</p>
+
+<h3>getPicture</h3>
+
+<p>The Camera plugin previously was very inconsistent with the return paths when
+using <code>getPicture</code> API. Sometimes it was <code>file://</code> uri, sometimes it was a raw
+file path. Applications would have to check and usually prefix the path
+themselves to make any use of them. So we&#39;ve streamlined the returned data as
+URIs.</p>
+
+<p>All platforms consistently return a <code>&lt;scheme&gt;:...</code> now.</p>
+
+<p>For all platforms, when using the <code>DATA_URL</code> option, the returned base64 encoded
+image used to return just the base64 encoded part. As of v8.0.0, the returned
+string now includes the <code>data:</code> uri header, including the MIME type that the
+base64 data represents.</p>
+
+<p>For iOS, <code>file://</code> uris were always previously returned consistently therefore,
+no changes were made here.</p>
+
+<p>For Android, the API behaved consistently depending on the underlying source of
+the content. Most of the time a raw file path was returned. It will now always
+return a URI of some sort, though unlike iOS, it is unsafe to assume it will be
+a <code>file://</code> uri.</p>
+
+<p>If you were testing and prefixing your file paths, you are no longer required to.
+All URIs returned when using <code>FILE_URI</code> option is resolvable by 
+cordova-plugin-file@8.1.2` and later.</p>
+
+<p>For examples on how to use the results, see the
+<a href="https://github.com/apache/cordova-plugin-camera?tab=readme-ov-file#take-a-picture-and-get-a-fileentry-object-">Camera Plugin Documentation</a></p>
+
+<h3>URI Persistence</h3>
+
+<p>For all platforms using <code>FILE_URI</code> option, the returned URI is <strong>temporarily access</strong> only.</p>
+
+<p>When sourcing content from the camera, the file is stored in the app&#39;s temporary
+directory, which the OS may clear out at any time when disk space is sparse.</p>
+
+<!-- For iOS, this might not be completely accurate, but for the sake of making
+the blog brief/simple, I'm omitting this fact -->
+<p>When sourcing content from the user&#39;s gallery, the returned URI has a
+temporarily read permission provided by the OS which expires typically once the
+application exits.</p>
+
+<p>This means that the URI returned by <code>getPicture</code> should not be stored. The
+application should decide what to do with it depending on their needs and
+requirements.</p>
+
+<p><strong>Example 1:</strong> The application is receiving an image for the user&#39;s profile
+picture and it will require persistent access to that content.</p>
+
+<p>Solution: The application should copy the content to the app&#39;s data directory
+and store and use the copied URI instead.</p>
+
+<p><strong>Example 2:</strong> The application is receiving an image to edit or make
+manipulations. It just needs one-time read to load into memory to put the data
+in an image editor.</p>
+
+<p>Solution: The application can safely use the temporarily URI to read and display
+the content and save the manipulated data later.</p>
+
+<h3>Optional WRITE_EXTERNAL_STORAGE Permission</h3>
+
+<p>For Android 7 - 12, this plugin used to always include the <code>WRITE_EXTERNAL_STORAGE</code>
+permission, and for implementation reasons it was required to operate.</p>
+
+<p>As of v8.0.0, the Camera plugin no longer automatically includes the permission
+declaration, as in most cases it is no longer required.</p>
+
+<p>If your application enables the <code>saveToPhotoAlbum</code> option, then you&#39;ll need to
+add the following to the <code>config.xml</code> file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/config-file&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p>If your application does not use <code>saveToPhotoAlbum</code>, then your application does
+not require any permissions to operate both the camera, or picking from the
+user&#39;s gallery.</p>
+
+<p>Attempting to use <code>saveToPhotoAlbum</code> without declaring the <code>WRITE_EXTERNAL_STORAGE</code>
+will result in an error being returned on Android 7, Android 8, and Android 9 devices.</p>
+
+<h3>Deprecation: allowEdit</h3>
+
+<p>The <code>allowEdit</code> feature when capturing images from the camera, or selecting
+images from the gallery is now deprecated. Behaviour of this feature was
+inconsistent across platforms, and often times is unreliable as it was dependent
+on support of the underlying Camera application which was not standard.</p>
+
+<p>The feature still exists for the time being and should work as-is given it&#39;s
+documented caveats, but Apache Cordova will no longer provide support for issues
+arising from using the feature. The <code>allowEdit</code> option is scheduled to be
+completely removed at a later date with no direct replacement.</p>
+
+<p>Users using the <code>allowEdit</code> feature should move to a dedicated image
+manipulation library.</p>
+
+<h3>Known Issues</h3>
+
+<h4>iOS</h4>
+
+<p>The <code>FileEntry.toURL</code> method on iOS does not produce a DOM-usable uri while
+the application is configured to use schemes. A <a href="https://github.com/apache/cordova-plugin-file/pull/642">fix</a>
+for this will be available at an later date. In the meantime, the following can
+be used as a workaround:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// TODO: Remove when https://github.com/apache/cordova-plugin-file/pull/642 is released</span>
+<span class="kd">function</span> <span class="nx">toDomURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platform</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">ios</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">WkWebView</span><span class="p">.</span><span class="nx">convertFilePath</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">nativeUrl</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If your app is still hosted on the <code>file://</code> protocol on iOS, then the
+workaround is not necessary.</p>
+
+<h4>Android</h4>
+
+<p>Android will start returning <code>content://</code> instead of <code>file://</code> URIs when
+selecting images from the user&#39;s gallery in order to make use of the underlying
+MediaStore APIs. In order for these paths to be resolvable to a DOM-usable URL,
+the <code>AndroidInsecureFileModeEnabled</code> preference must be <code>"false"</code> (the default value).</p>
+
+<p>Please report any issues you find by following the
+<a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+<!--more-->
+<h1>Changes include:</h1>
+
+<p><strong>Breaking:</strong></p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/902">GH-902</a> fix(android): always return uris (#902)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/909">GH-909</a> refactor(android): Make WRITE_EXTERNAL_STORAGE optional (#909)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/910">GH-910</a> fix(android): Return data uris as an URI (#910)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/911">GH-911</a> fix(ios): Sync camera API return to match Android changes (#911)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/912">GH-912</a> fix(browser): Make data uri be returned as actual URI strings (#912)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/915">GH-915</a> fix(android): remove WRITE_EXTERNAL_PERMISSION (#915)</li>
+</ul>
+
+<p><strong>Improvements:</strong></p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/901">GH-901</a> fix(android): Isolate provider access to a subdirectory (#901)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/904">GH-904</a> fix(android): Use VERSION_CODES instead of hard-coded API literals (#904)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/906">GH-906</a> refactor(android): replace image path usage with image uris</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/907">GH-907</a> refactor(android): remove query img usage (#907)</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/903">GH-903</a> fix(android): Improper serialization of image uri in save instance state (#903)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/905">GH-905</a> fix(android): improper cache path construction during image manipulation (#905)</li>
+</ul>
+
+<p><strong>Deprecations:</strong></p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/914">GH-914</a> deprecation: allowEdit (#914)</li>
+</ul>
+
+<p><strong>Documentation:</strong></p>
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/913">GH-913</a> docs: Revisions for v8 public API changes with the return string formats of getPicture (#913)</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2024/11/01/cordova-lib-release-12.0.2.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2024/11/01/cordova-lib-release-12.0.2.html">Cordova Lib 12.0.2 Released!</a>
+                    <div class="date"> 01 Nov 2024 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are excited to announce the release of cordova-lib. cordova-lib@12.0.2 To upgrade:...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+            </div>
+        </div>
+    </footer>
+    <div class="disqus">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'cordovablogs';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2024 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>
