@@ -5,9 +5,10 @@ const path = require('path');
 const fs = require('fs');
 const fse = require('fs-extra');
 const child_process = require('child_process');
+const { styleText } = require('node:util');
 
 // var gulp = require('gulp');
-const gutil = require('gulp-util');
+const minimist = require('minimist');
 const Less = require('gulp-less');
 const Sass = require('gulp-sass')(require('sass'));
 const header = require('gulp-header');
@@ -22,8 +23,10 @@ const Crawler = require('simplecrawler');
 const ncp = require('ncp');
 
 const nextversion = require('./tools/bin/nextversion');
-const util = require('./tools/bin/util');
+const { listdirsSync, srcTocfileName, logger } = require('./tools/bin/util');
 const gulp = require('gulp');
+
+const argv = minimist(process.argv.slice(2));
 
 // constants
 const ROOT_DIR = '.';
@@ -66,23 +69,23 @@ const WATCH_INTERVAL = 1000; // in milliseconds
 const VERSION_VAR_NAME = 'latest_docs_version';
 const LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
 const NEXT_DOCS_VERSION = nextversion.getNextVersion(LATEST_DOCS_VERSION);
-const LANGUAGES = util.listdirsSync(DOCS_DIR);
+const LANGUAGES = listdirsSync(DOCS_DIR);
 
 const PROD_BY_DEFAULT = false;
 
 // compute/get/set/adjust passed options
-gutil.env.prod = gutil.env.prod || PROD_BY_DEFAULT;
-gutil.env.dev = !gutil.env.prod;
-gutil.env.outDir = gutil.env.prod ? PROD_DIR : DEV_DIR;
+argv.prod = argv.prod || PROD_BY_DEFAULT;
+argv.dev = !argv.prod;
+argv.outDir = argv.prod ? PROD_DIR : DEV_DIR;
 
 // check for errors
-if (gutil.env.prod && gutil.env.nodocs) {
+if (argv.prod && argv.nodocs) {
     fatal("can't ignore docs when doing a production build");
 }
 
 // helpers
 function fatal (message) {
-    gutil.log(gutil.colors.red('ERROR') + ': ' + message);
+    logger(styleText(['red'], 'ERROR') + ': ' + message);
     process.exit(1);
 }
 
@@ -119,14 +122,14 @@ function getJekyllConfigs () {
     let configs = BASE_CONFIGS;
 
     // add build-specific config files
-    if (gutil.env.prod) {
+    if (argv.prod) {
         configs = configs.concat(PROD_CONFIGS);
     } else {
         configs = configs.concat(DEV_CONFIGS);
     }
 
     // add a special exclude file if "nodocs" was specified
-    if (gutil.env.nodocs) {
+    if (argv.nodocs) {
         configs = configs.concat(NODOCS_CONFIG_FILE);
     }
 
@@ -136,7 +139,7 @@ function getJekyllConfigs () {
 function jekyllBuild (done) {
     const bundle = getBundleExecutable();
     const configs = getJekyllConfigs();
-    let flags = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
+    let flags = argv.prod ? PROD_FLAGS : DEV_FLAGS;
 
     flags = flags.concat(['--config', configs.join(',')]);
 
@@ -166,9 +169,9 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
     LANGUAGES.forEach(function (languageName) {
         // get files to copy
         const oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
-        const oldVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, oldVersion));
+        const oldVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, oldVersion));
         const newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
-        const newVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, newVersion));
+        const newVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, newVersion));
 
         const copyOptions = {
             stopOnErr: true
@@ -187,50 +190,49 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
 // tasks
 
 module.exports.help = module.exports.default = function help () {
-    gutil.log('');
-    gutil.log('Tasks:');
-    gutil.log('');
-    gutil.log('    build         same as configs + data + styles + jekyll');
-    gutil.log('    jekyll        build with jekyll');
-    gutil.log('    regen         same as jekyll + reload');
-    gutil.log('    serve         build the site and open it in a browser');
-    gutil.log('    reload        refresh the browser');
-    gutil.log('');
-    gutil.log('    newversion    create ' + NEXT_DOCS_VERSION + ' docs from dev docs');
-    gutil.log('    snapshot      copy dev docs to ' + LATEST_DOCS_VERSION + ' docs');
-    gutil.log('');
-    gutil.log('    configs       run all the below tasks');
-    gutil.log('    defaults      create ' + DEFAULTS_CONFIG_FILE);
-    gutil.log('    version       create ' + VERSION_CONFIG_FILE);
-    gutil.log('');
-    gutil.log('    data          run all the below tasks');
-    gutil.log('    docs-versions create ' + DOCS_VERSION_FILE);
-    gutil.log('    pages-dict    create ' + ALL_PAGES_FILE);
-    gutil.log('    toc           create all generated ToC files in ' + TOC_DIR);
-    gutil.log('    fetch         download docs specified in ' + FETCH_CONFIG);
-    gutil.log('');
-    gutil.log('    styles        run all the below tasks');
-    gutil.log('    less          compile all .less files');
-    gutil.log('    sass          compile all .scss files');
-    gutil.log('    css           copy over all .css files');
-    gutil.log('');
-    gutil.log('    watch         serve + then watch all source files and regenerate as necessary');
-    gutil.log('    link-bugs     replace CB-XXXX references with nice links');
-    gutil.log('');
-    gutil.log('    help          show this text');
-    gutil.log('    clean         remove all generated files and folders');
-    gutil.log('');
-    gutil.log('Arguments:');
-    gutil.log("    --nodocs      don't generate docs");
-    gutil.log('    --prod        build for production; without it, will build dev instead');
-    gutil.log('');
+    logger('');
+    logger('Tasks:');
+    logger('');
+    logger('    build         same as configs + data + styles + jekyll');
+    logger('    jekyll        build with jekyll');
+    logger('    regen         same as jekyll + reload');
+    logger('    serve         build the site and open it in a browser');
+    logger('    reload        refresh the browser');
+    logger('');
+    logger('    newversion    create ' + NEXT_DOCS_VERSION + ' docs from dev docs');
+    logger('    snapshot      copy dev docs to ' + LATEST_DOCS_VERSION + ' docs');
+    logger('');
+    logger('    configs       run all the below tasks');
+    logger('    defaults      create ' + DEFAULTS_CONFIG_FILE);
+    logger('    version       create ' + VERSION_CONFIG_FILE);
+    logger('');
+    logger('    data          run all the below tasks');
+    logger('    docs-versions create ' + DOCS_VERSION_FILE);
+    logger('    pages-dict    create ' + ALL_PAGES_FILE);
+    logger('    toc           create all generated ToC files in ' + TOC_DIR);
+    logger('    fetch         download docs specified in ' + FETCH_CONFIG);
+    logger('');
+    logger('    styles        run all the below tasks');
+    logger('    less          compile all .less files');
+    logger('    sass          compile all .scss files');
+    logger('    css           copy over all .css files');
+    logger('');
+    logger('    watch         serve + then watch all source files and regenerate as necessary');
+    logger('    link-bugs     replace CB-XXXX references with nice links');
+    logger('');
+    logger('    help          show this text');
+    logger('    clean         remove all generated files and folders');
+    logger('');
+    logger('Arguments:');
+    logger("    --nodocs      don't generate docs");
+    logger('    --prod        build for production; without it, will build dev instead');
+    logger('');
 };
 
 const fetch = module.exports.fetch = function fetch (done) {
     // skip fetching if --nofetch was passed
-    if (gutil.env.nofetch) {
-        gutil.log(gutil.colors.yellow(
-            'Skipping fetching external docs.'));
+    if (argv.nofetch) {
+        logger(styleText(['yellow'], 'Skipping fetching external docs.'));
         done();
         return;
     }
@@ -293,7 +295,7 @@ const less = module.exports.less = function less () {
         .pipe(Less())
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
 };
 
@@ -301,7 +303,7 @@ const css = module.exports.css = function css () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.css'))
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
 };
 
@@ -310,7 +312,7 @@ const sass = module.exports.sass = function sass () {
         .pipe(Sass().on('error', Sass.logError))
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
 };
 
@@ -331,14 +333,14 @@ const serve = module.exports.serve = gulp.series(build, function serve () {
     const route = {};
 
     // set site root for browsersync
-    if (gutil.env.prod) {
-        route[BASE_URL] = gutil.env.outDir;
+    if (argv.prod) {
+        route[BASE_URL] = argv.outDir;
     }
 
     browsersync({
         notify: true,
         server: {
-            baseDir: gutil.env.outDir,
+            baseDir: argv.outDir,
             routes: route
         }
     });
@@ -412,11 +414,11 @@ module.exports.checklinks = function checkLinks (done) {
     const crawler = new Crawler('http://localhost:3000/');
 
     crawler.on('fetch404', function (queueItem, response) {
-        gutil.log(
+        logger(
             'Resource not found linked from ' +
             queueItem.referrer + ' to', queueItem.url
         );
-        gutil.log('Status code: ' + response.statusCode);
+        logger('Status code: ' + response.statusCode);
     }).on('complete', function () {
         done();
     });
