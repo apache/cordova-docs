@@ -23,7 +23,7 @@ const Crawler = require('simplecrawler');
 const ncp = require('ncp');
 
 const nextversion = require('./tools/bin/nextversion');
-const util = require('./tools/bin/util');
+const { listdirsSync, srcTocfileName, logger } = require('./tools/bin/util');
 const gulp = require('gulp');
 
 const argv = minimist(process.argv.slice(2));
@@ -69,7 +69,7 @@ const WATCH_INTERVAL = 1000; // in milliseconds
 const VERSION_VAR_NAME = 'latest_docs_version';
 const LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
 const NEXT_DOCS_VERSION = nextversion.getNextVersion(LATEST_DOCS_VERSION);
-const LANGUAGES = util.listdirsSync(DOCS_DIR);
+const LANGUAGES = listdirsSync(DOCS_DIR);
 
 const PROD_BY_DEFAULT = false;
 
@@ -85,7 +85,7 @@ if (argv.prod && argv.nodocs) {
 
 // helpers
 function fatal (message) {
-    gutil.log(gutil.colors.red('ERROR') + ': ' + message);
+    logger(gutil.colors.red('ERROR') + ': ' + message);
     process.exit(1);
 }
 
@@ -169,9 +169,9 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
     LANGUAGES.forEach(function (languageName) {
         // get files to copy
         const oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
-        const oldVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, oldVersion));
+        const oldVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, oldVersion));
         const newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
-        const newVersionToc = path.join(TOC_DIR, util.srcTocfileName(languageName, newVersion));
+        const newVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, newVersion));
 
         const copyOptions = {
             stopOnErr: true
@@ -190,49 +190,49 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
 // tasks
 
 module.exports.help = module.exports.default = function help () {
-    gutil.log('');
-    gutil.log('Tasks:');
-    gutil.log('');
-    gutil.log('    build         same as configs + data + styles + jekyll');
-    gutil.log('    jekyll        build with jekyll');
-    gutil.log('    regen         same as jekyll + reload');
-    gutil.log('    serve         build the site and open it in a browser');
-    gutil.log('    reload        refresh the browser');
-    gutil.log('');
-    gutil.log('    newversion    create ' + NEXT_DOCS_VERSION + ' docs from dev docs');
-    gutil.log('    snapshot      copy dev docs to ' + LATEST_DOCS_VERSION + ' docs');
-    gutil.log('');
-    gutil.log('    configs       run all the below tasks');
-    gutil.log('    defaults      create ' + DEFAULTS_CONFIG_FILE);
-    gutil.log('    version       create ' + VERSION_CONFIG_FILE);
-    gutil.log('');
-    gutil.log('    data          run all the below tasks');
-    gutil.log('    docs-versions create ' + DOCS_VERSION_FILE);
-    gutil.log('    pages-dict    create ' + ALL_PAGES_FILE);
-    gutil.log('    toc           create all generated ToC files in ' + TOC_DIR);
-    gutil.log('    fetch         download docs specified in ' + FETCH_CONFIG);
-    gutil.log('');
-    gutil.log('    styles        run all the below tasks');
-    gutil.log('    less          compile all .less files');
-    gutil.log('    sass          compile all .scss files');
-    gutil.log('    css           copy over all .css files');
-    gutil.log('');
-    gutil.log('    watch         serve + then watch all source files and regenerate as necessary');
-    gutil.log('    link-bugs     replace CB-XXXX references with nice links');
-    gutil.log('');
-    gutil.log('    help          show this text');
-    gutil.log('    clean         remove all generated files and folders');
-    gutil.log('');
-    gutil.log('Arguments:');
-    gutil.log("    --nodocs      don't generate docs");
-    gutil.log('    --prod        build for production; without it, will build dev instead');
-    gutil.log('');
+    logger('');
+    logger('Tasks:');
+    logger('');
+    logger('    build         same as configs + data + styles + jekyll');
+    logger('    jekyll        build with jekyll');
+    logger('    regen         same as jekyll + reload');
+    logger('    serve         build the site and open it in a browser');
+    logger('    reload        refresh the browser');
+    logger('');
+    logger('    newversion    create ' + NEXT_DOCS_VERSION + ' docs from dev docs');
+    logger('    snapshot      copy dev docs to ' + LATEST_DOCS_VERSION + ' docs');
+    logger('');
+    logger('    configs       run all the below tasks');
+    logger('    defaults      create ' + DEFAULTS_CONFIG_FILE);
+    logger('    version       create ' + VERSION_CONFIG_FILE);
+    logger('');
+    logger('    data          run all the below tasks');
+    logger('    docs-versions create ' + DOCS_VERSION_FILE);
+    logger('    pages-dict    create ' + ALL_PAGES_FILE);
+    logger('    toc           create all generated ToC files in ' + TOC_DIR);
+    logger('    fetch         download docs specified in ' + FETCH_CONFIG);
+    logger('');
+    logger('    styles        run all the below tasks');
+    logger('    less          compile all .less files');
+    logger('    sass          compile all .scss files');
+    logger('    css           copy over all .css files');
+    logger('');
+    logger('    watch         serve + then watch all source files and regenerate as necessary');
+    logger('    link-bugs     replace CB-XXXX references with nice links');
+    logger('');
+    logger('    help          show this text');
+    logger('    clean         remove all generated files and folders');
+    logger('');
+    logger('Arguments:');
+    logger("    --nodocs      don't generate docs");
+    logger('    --prod        build for production; without it, will build dev instead');
+    logger('');
 };
 
 const fetch = module.exports.fetch = function fetch (done) {
     // skip fetching if --nofetch was passed
     if (argv.nofetch) {
-        gutil.log(gutil.colors.yellow(
+        logger(gutil.colors.yellow(
             'Skipping fetching external docs.'));
         done();
         return;
@@ -415,11 +415,11 @@ module.exports.checklinks = function checkLinks (done) {
     const crawler = new Crawler('http://localhost:3000/');
 
     crawler.on('fetch404', function (queueItem, response) {
-        gutil.log(
+        logger(
             'Resource not found linked from ' +
             queueItem.referrer + ' to', queueItem.url
         );
-        gutil.log('Status code: ' + response.statusCode);
+        logger('Status code: ' + response.statusCode);
     }).on('complete', function () {
         done();
     });
