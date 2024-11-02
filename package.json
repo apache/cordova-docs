@@ -37,7 +37,6 @@
     "gulp-less": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
-    "gulp-util": "^3.0.8",
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
     "ncp": "^2.0.0",
