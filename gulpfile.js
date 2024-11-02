@@ -8,6 +8,7 @@ const child_process = require('child_process');
 
 // var gulp = require('gulp');
 const gutil = require('gulp-util');
+const minimist = require('minimist');
 const Less = require('gulp-less');
 const Sass = require('gulp-sass')(require('sass'));
 const header = require('gulp-header');
@@ -24,6 +25,8 @@ const ncp = require('ncp');
 const nextversion = require('./tools/bin/nextversion');
 const util = require('./tools/bin/util');
 const gulp = require('gulp');
+
+const argv = minimist(process.argv.slice(2));
 
 // constants
 const ROOT_DIR = '.';
@@ -71,12 +74,12 @@ const LANGUAGES = util.listdirsSync(DOCS_DIR);
 const PROD_BY_DEFAULT = false;
 
 // compute/get/set/adjust passed options
-gutil.env.prod = gutil.env.prod || PROD_BY_DEFAULT;
-gutil.env.dev = !gutil.env.prod;
-gutil.env.outDir = gutil.env.prod ? PROD_DIR : DEV_DIR;
+argv.prod = argv.prod || PROD_BY_DEFAULT;
+argv.dev = !argv.prod;
+argv.outDir = argv.prod ? PROD_DIR : DEV_DIR;
 
 // check for errors
-if (gutil.env.prod && gutil.env.nodocs) {
+if (argv.prod && argv.nodocs) {
     fatal("can't ignore docs when doing a production build");
 }
 
@@ -119,14 +122,14 @@ function getJekyllConfigs () {
     let configs = BASE_CONFIGS;
 
     // add build-specific config files
-    if (gutil.env.prod) {
+    if (argv.prod) {
         configs = configs.concat(PROD_CONFIGS);
     } else {
         configs = configs.concat(DEV_CONFIGS);
     }
 
     // add a special exclude file if "nodocs" was specified
-    if (gutil.env.nodocs) {
+    if (argv.nodocs) {
         configs = configs.concat(NODOCS_CONFIG_FILE);
     }
 
@@ -136,7 +139,7 @@ function getJekyllConfigs () {
 function jekyllBuild (done) {
     const bundle = getBundleExecutable();
     const configs = getJekyllConfigs();
-    let flags = gutil.env.prod ? PROD_FLAGS : DEV_FLAGS;
+    let flags = argv.prod ? PROD_FLAGS : DEV_FLAGS;
 
     flags = flags.concat(['--config', configs.join(',')]);
 
@@ -228,7 +231,7 @@ module.exports.help = module.exports.default = function help () {
 
 const fetch = module.exports.fetch = function fetch (done) {
     // skip fetching if --nofetch was passed
-    if (gutil.env.nofetch) {
+    if (argv.nofetch) {
         gutil.log(gutil.colors.yellow(
             'Skipping fetching external docs.'));
         done();
@@ -293,7 +296,7 @@ const less = module.exports.less = function less () {
         .pipe(Less())
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
 };
 
@@ -301,7 +304,7 @@ const css = module.exports.css = function css () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.css'))
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
 };
 
@@ -310,7 +313,7 @@ const sass = module.exports.sass = function sass () {
         .pipe(Sass().on('error', Sass.logError))
         .pipe(header(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, gutil.env.outDir)))
+        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
 };
 
@@ -331,14 +334,14 @@ const serve = module.exports.serve = gulp.series(build, function serve () {
     const route = {};
 
     // set site root for browsersync
-    if (gutil.env.prod) {
-        route[BASE_URL] = gutil.env.outDir;
+    if (argv.prod) {
+        route[BASE_URL] = argv.outDir;
     }
 
     browsersync({
         notify: true,
         server: {
-            baseDir: gutil.env.outDir,
+            baseDir: argv.outDir,
             routes: route
         }
     });
