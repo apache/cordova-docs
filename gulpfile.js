@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const fse = require('fs-extra');
 const child_process = require('child_process');
+const { styleText } = require('node:util');
 
 // var gulp = require('gulp');
 const gutil = require('gulp-util');
@@ -85,7 +86,7 @@ if (argv.prod && argv.nodocs) {
 
 // helpers
 function fatal (message) {
-    logger(gutil.colors.red('ERROR') + ': ' + message);
+    logger(styleText(['red'], 'ERROR') + ': ' + message);
     process.exit(1);
 }
 
@@ -232,8 +233,7 @@ module.exports.help = module.exports.default = function help () {
 const fetch = module.exports.fetch = function fetch (done) {
     // skip fetching if --nofetch was passed
     if (argv.nofetch) {
-        logger(gutil.colors.yellow(
-            'Skipping fetching external docs.'));
+        logger(styleText(['yellow'], 'Skipping fetching external docs.'));
         done();
         return;
     }
