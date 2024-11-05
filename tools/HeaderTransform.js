@@ -17,7 +17,6 @@
     under the License.
 */
 
-const path = require('node:path');
 const { Transform } = require('node:stream');
 const { styleText } = require('node:util');
 
@@ -28,9 +27,21 @@ class HeaderTransform extends Transform {
         super({ objectMode: true });
         this.headerText = headerText;
         this.isFirstChunk = true;
+        this.currentFile = undefined;
     }
 
     _transform (chunk, encoding, callback) {
+        /*
+         * Since `gulp.src` can glob multiple source files, when piping the results into a stream transform,
+         * it may be necessary to track the current file path (`currentFile`) and compare it to `chunk.path`
+         * to determine whether a chunk belongs to the current file or a new file.
+         * For each new file, we reset the `isFirstChunk` flag to ensure that the header is applied
+         * correctly at the start of each file.
+         */
+        if (VinylFile.isVinyl(chunk) && (!this.currentFile || this.currentFile !== chunk.path)) {
+            this.currentFile = chunk.path;
+            this.isFirstChunk = true;
+        }
         /*
          * Header text should only be prepended to the first chunk.
          * All other chunks will be pushed with no transformation.
@@ -43,14 +54,12 @@ class HeaderTransform extends Transform {
 
         if (Buffer.isBuffer(chunk)) {
             this.push(this.headerText + chunk);
-        } else if (chunk && chunk.isBuffer && chunk.contents) {
-            // This use case is triggered when `gulp.src` is used.
-            const vinlyPath = path.basename(chunk.path);
-            const vinylContents = Buffer.concat([
+        } else if (VinylFile.isVinyl(chunk)) {
+            chunk.contents = Buffer.concat([
                 Buffer.from(this.headerText),
                 chunk.contents
             ]);
-            this.push(new VinylFile({ contents: vinylContents, path: vinlyPath }));
+            this.push(chunk);
         } else {
             throw Error(styleText(['red'], 'Unknown "chunk" type.'));
         }
