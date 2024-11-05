@@ -27,9 +27,20 @@ class HeaderTransform extends Transform {
     constructor (headerText) {
         super({ objectMode: true });
         this.headerText = headerText;
+        this.isFirstChunk = true;
     }
 
     _transform (chunk, encoding, callback) {
+        /*
+         * Header text should only be prepended to the first chunk.
+         * All other chunks will be pushed with no transformation.
+         */
+        if (!this.isFirstChunk) {
+            this.push(chunk);
+            callback();
+            return;
+        }
+
         if (Buffer.isBuffer(chunk)) {
             this.push(this.headerText + chunk);
         } else if (chunk && chunk.isBuffer && chunk.contents) {
@@ -43,6 +54,8 @@ class HeaderTransform extends Transform {
         } else {
             throw Error(styleText(['red'], 'Unknown "chunk" type.'));
         }
+
+        this.isFirstChunk = false;
         callback();
     }
 }
