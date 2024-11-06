@@ -71,12 +71,6 @@ const LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
 // '--bumpCli' flag hat determins if the next version is major CLI or new date release.
 const bumpCli = argv.bumpCli || false;
 const NEXT_DOCS_VERSION = nextversion.getNextVersion(bumpCli, LATEST_DOCS_VERSION);
-
-if (fs.existsSync(path.join(DOCS_DIR, 'en', NEXT_DOCS_VERSION))) {
-    logger(styleText(['red'], '[ERROR] ')) + `The targeted docs version ""${NEXT_DOCS_VERSION}"" already exist. Are you trying to update the existing snapshot? Use "npm run update-docs".`);
-    process.exit(1);
-}
-
 const LANGUAGES = listdirsSync(DOCS_DIR);
 const PROD_BY_DEFAULT = false;
 
@@ -389,6 +383,11 @@ module.exports.lint = function lint () {
 };
 
 module.exports.newversion = gulp.series(fetch, function newVersion (done) {
+    if (fs.existsSync(path.join(DOCS_DIR, 'en', NEXT_DOCS_VERSION))) {
+        logger(styleText(['red'], '[ERROR] ') + `The targeted docs version ""${NEXT_DOCS_VERSION}"" already exist. Are you trying to update the existing snapshot? Use "npm run update-docs".`);
+        process.exit(1);
+    }
+
     copyDocsVersion('dev', NEXT_DOCS_VERSION, function (error) {
         if (error) {
             console.error(error);
