@@ -17,8 +17,7 @@
 
 'use strict';
 
-const fs = require('fs');
-const fse = require('fs-extra');
+const fs = require('node:fs');
 const https = require('https');
 const path = require('path');
 const child_process = require('child_process');
@@ -187,7 +186,7 @@ function downloadEntries (downloadPrefix, entries) {
 
         // create directory for the file if it doesn't exist
         if (!fs.existsSync(outFileDir)) {
-            fse.mkdirsSync(outFileDir);
+            fs.mkdirSync(outFileDir, { recursive: true });
         }
 
         console.log(fetchURI + ' -> ' + outFilePath);

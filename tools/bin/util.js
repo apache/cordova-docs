@@ -20,7 +20,7 @@
 const { styleText } = require('node:util');
 
 module.exports = (function () {
-    const fs = require('fs');
+    const fs = require('node:fs');
     const path = require('path');
 
     function stripFrontMatter (text) {

@@ -17,7 +17,7 @@
 
 'use strict';
 
-const fs = require('fs');
+const fs = require('node:fs');
 const path = require('path');
 const minimist = require('minimist');
 const argv = minimist(process.argv.slice(2));

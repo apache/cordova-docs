@@ -2,8 +2,7 @@
 
 // dependencies
 const path = require('path');
-const fs = require('fs');
-const fse = require('fs-extra');
+const fs = require('node:fs');
 const child_process = require('child_process');
 const { styleText } = require('node:util');
 
@@ -108,7 +107,7 @@ function bin (name) {
 
 function remove (path) {
     console.log('removing ' + path);
-    fse.removeSync(path);
+    fs.rmSync(path, { recursive: true, force: true })
 }
 
 function getBundleExecutable () {
