@@ -17,7 +17,6 @@
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
   "dependencies": {
-    "baconjs": "^3.0.17",
     "classnames": "^2.3.1",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0"
