@@ -29,7 +29,6 @@
     "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
     "gulp-htmllint": "0.0.19",
-    "gulp-less": "^5.0.0",
     "gulp-sass": "^5.0.0",
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
