@@ -21,13 +21,20 @@ const fs = require('fs');
 const path = require('path');
 
 const yaml = require('js-yaml');
-const optimist = require('optimist');
 const chalk = require('chalk');
+const minimist = require('minimist');
 
 const util = require('./util');
-
 // constants
 const VERBOSE_BY_DEFAULT = false;
+
+const argOptions = [
+    { name: 'srcToc', type: 'string', require: true, describe: 'the source ToC for the given directory' },
+    { name: 'srcRoot', type: 'string', require: true, describe: 'the directory containing files described by the ToC' },
+    { name: 'verbose', type: 'boolean', alias: 'v', default: VERBOSE_BY_DEFAULT, describe: 'if true, print more helpful information' }
+];
+const formatedArgOptions = util.formatMinimistOptions(argOptions);
+const argv = minimist(process.argv.slice(2), formatedArgOptions);
 
 // globals
 let verbose = VERBOSE_BY_DEFAULT;
@@ -123,15 +130,6 @@ function augmentString (srcTocString, prefix) {
 }
 
 function main () {
-    // get args
-    const argv = optimist
-        .usage('Usage: $0 [options]')
-        .demand('srcToc').describe('srcToc', 'the source ToC for the given directory')
-        .demand('srcRoot').describe('srcRoot', 'the directory containing files described by the ToC')
-        .boolean('verbose').describe('verbose', 'if true, print more helpful information').default('verbose', VERBOSE_BY_DEFAULT)
-        .alias('v', 'verbose')
-        .argv;
-
     const srcTocPath = argv.srcToc;
     const srcRootPath = argv.srcRoot;
 
@@ -147,6 +145,7 @@ function main () {
 }
 
 if (require.main === module) {
+    util.displayOptionHelpIfNeeded(argv, argOptions);
     main();
 }
 

@@ -19,8 +19,8 @@
 
 const fs = require('fs');
 const path = require('path');
-
-const argv = require('optimist').argv;
+const minimist = require('minimist');
+const argv = minimist(process.argv.slice(2));
 
 const augment = require('./augment_toc');
 const util = require('./util');

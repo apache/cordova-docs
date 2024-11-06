@@ -23,7 +23,7 @@ const https = require('https');
 const path = require('path');
 const child_process = require('child_process');
 const yaml = require('js-yaml');
-const optimist = require('optimist');
+const minimist = require('minimist');
 
 const util = require('./util');
 
@@ -34,6 +34,16 @@ const DEFAULT_LANGUAGE_NAME = 'en';
 
 const THIS_FILE = path.basename(__filename);
 const WARNING_COMMENT = '<!-- WARNING: This file is generated. See ' + THIS_FILE + '. -->\n\n';
+
+const argOptions = [
+    { name: 'config', type: 'string', require: true, describe: '.yml file listing fetched files' },
+    { name: 'docsRoot', type: 'string', require: true, describe: 'docs root directory' },
+    { name: 'version', type: 'string', default: DEFAULT_VERSION_NAME, describe: 'version in which to save the downloaded files' },
+    { name: 'language', type: 'string', default: DEFAULT_LANGUAGE_NAME, describe: 'language in which to save the downloaded files' },
+    { name: 'dump', type: 'boolean', describe: 'only print the downloaded files' }
+];
+const formatedArgOptions = util.formatMinimistOptions(argOptions);
+const argv = minimist(process.argv.slice(2), formatedArgOptions);
 
 // helpers
 function isPluginName (packageName) {
@@ -226,21 +236,6 @@ function downloadEntries (downloadPrefix, entries) {
 
 // main
 function main () {
-    // get args
-    const argv = optimist
-        .usage('Usage: $0 [options]')
-        .demand('config')
-        .demand('docsRoot')
-        .string('version')
-        .string('language')
-        .boolean('dump')
-        .describe('config', '.yml file listing fetched files')
-        .describe('docsRoot', 'docs root directory')
-        .describe('version', 'version in which to save the downloaded files').default('version', DEFAULT_VERSION_NAME)
-        .describe('language', 'language in which to save the downloaded files').default('language', DEFAULT_LANGUAGE_NAME)
-        .describe('dump', 'only print the downloaded files')
-        .argv;
-
     const configFile = argv.config;
     const docsRoot = argv.docsRoot;
     const targetVersion = argv.version;
@@ -272,5 +267,7 @@ function main () {
         downloadEntries(downloadPrefix, configEntries);
     }
 }
+
+util.displayOptionHelpIfNeeded(argv, argOptions);
 
 main();

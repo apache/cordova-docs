@@ -37,18 +37,12 @@
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
     "ncp": "^2.0.0",
-    "optimist": "^0.6.1",
     "sass": "^1.62.0",
     "semver": "^7.5.0",
     "simplecrawler": "^1.1.9",
     "vinyl": "^3.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  },
-  "overrides": {
-    "optimist": {
-      "minimist": "1.2.8"
-    }
   },
   "engines": {
     "node": ">=16.20.2"
