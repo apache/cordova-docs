@@ -20,7 +20,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const yaml = require('js-yaml');
-const glob = require('glob');
 const minimist = require('minimist');
 
 const util = require('./util');
@@ -88,7 +87,8 @@ function main () {
 
     // add entries for all Markdown files in the site root
     const allMarkdownFiles = path.join(siteRootPath, '**/*.md');
-    glob(allMarkdownFiles, function (error, filePaths) {
+    fs.glob(allMarkdownFiles, function (error, filePaths) {
+        console.log(filePaths);
         if (error) throw error;
 
         for (let i = 0; i < filePaths.length; i++) {

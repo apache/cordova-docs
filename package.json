@@ -27,7 +27,6 @@
     "@babel/preset-react": "^7.14.5",
     "@cordova/eslint-config": "^5.1.0",
     "browser-sync": "^3.0.3",
-    "glob": "^7.1.7",
     "gulp": "^5.0.0",
     "gulp-htmllint": "0.0.19",
     "gulp-less": "^5.0.0",
