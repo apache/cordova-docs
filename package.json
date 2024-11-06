@@ -34,7 +34,6 @@
     "gulp-sass": "^5.0.0",
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
-    "ncp": "^2.0.0",
     "sass": "^1.62.0",
     "semver": "^7.5.0",
     "simplecrawler": "^1.1.9",

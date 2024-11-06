@@ -17,7 +17,6 @@ const buffer = require('vinyl-buffer');
 
 const htmllint = require('gulp-htmllint');
 const Crawler = require('simplecrawler');
-const ncp = require('ncp');
 
 const nextversion = require('./tools/bin/nextversion');
 const { listdirsSync, srcTocfileName, logger } = require('./tools/bin/util');
@@ -173,17 +172,13 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
         const newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
         const newVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, newVersion));
 
-        const copyOptions = {
-            stopOnErr: true
-        };
-
         // copy docs
         console.log(oldVersionDocs + ' -> ' + newVersionDocs);
-        ncp.ncp(oldVersionDocs, newVersionDocs, copyOptions, doneCopying);
+        fs.cp(oldVersionDocs, newVersionDocs, { recursive: true, force: true }, doneCopying);
 
         // copy ToC
         console.log(oldVersionToc + ' -> ' + newVersionToc);
-        ncp.ncp(oldVersionToc, newVersionToc, copyOptions, doneCopying);
+        fs.cp(oldVersionToc, newVersionToc, { recursive: true, force: true }, doneCopying);
     });
 }
 
