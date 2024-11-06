@@ -6,8 +6,7 @@ This repository contains the source code for the Cordova website at [cordova.apa
 
 ## Technical Overview
 
-The main parts are built as a static site with [Jekyll](http://jekyllrb.com/), containing the homepage and subpages, the [blog](https://cordova.apache.org/blog) and the [docs](https://cordova.apache.org/docs).  
-The [plugin search](https://cordova.apache.org/plugins) is an embedded PreactJS application.
+The main parts are built as a static site with [Jekyll](http://jekyllrb.com/), containing the homepage and subpages, the [blog](https://cordova.apache.org/blog) and the [docs](https://cordova.apache.org/docs).
 
 Here in the repository the code of the actual site is located in [`/www`](www) with its subfolder [`/docs`](www/docs), [`/blog`](www/blog) and [`/plugins`](www/plugins).  
 Some additional content is [pulled in during the build process](TODO).
