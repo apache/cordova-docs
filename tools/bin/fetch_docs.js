@@ -19,7 +19,7 @@
 
 const fs = require('node:fs');
 const https = require('https');
-const path = require('path');
+const path = require('node:path');
 const child_process = require('child_process');
 const yaml = require('js-yaml');
 const minimist = require('minimist');

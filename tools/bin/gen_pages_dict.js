@@ -18,7 +18,7 @@
 'use strict';
 
 const fs = require('node:fs');
-const path = require('path');
+const path = require('node:path');
 const yaml = require('js-yaml');
 const glob = require('glob');
 const minimist = require('minimist');

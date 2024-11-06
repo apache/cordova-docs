@@ -21,7 +21,7 @@ const { styleText } = require('node:util');
 
 module.exports = (function () {
     const fs = require('node:fs');
-    const path = require('path');
+    const path = require('node:path');
 
     function stripFrontMatter (text) {
         // get and replace front matter if it's there
