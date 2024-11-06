@@ -16,9 +16,6 @@
   },
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
-  "dependencies": {
-    "classnames": "^2.3.1"
-  },
   "devDependencies": {
     "@cordova/eslint-config": "^5.1.0",
     "browser-sync": "^3.0.3",
