@@ -106,7 +106,7 @@ function bin (name) {
 
 function remove (path) {
     console.log('removing ' + path);
-    fs.rmSync(path, { recursive: true, force: true })
+    fs.rmSync(path, { recursive: true, force: true });
 }
 
 function getBundleExecutable () {
