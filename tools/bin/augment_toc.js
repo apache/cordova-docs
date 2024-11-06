@@ -19,9 +19,9 @@
 
 const fs = require('node:fs');
 const path = require('path');
+const { styleText } = require('node:util');
 
 const yaml = require('js-yaml');
-const chalk = require('chalk');
 const minimist = require('minimist');
 
 const util = require('./util');
@@ -53,7 +53,7 @@ function augmentEntry (originalEntry, prefix) {
 
     // skip entries that don't point to a valid file
     if (!fs.existsSync(filePath)) {
-        console.warn(chalk.red('WARNING! Possible 404 in ToC: "' + filePath + '"; create the file to fix'));
+        console.warn(styleText(['red'], 'WARNING! Possible 404 in ToC: "' + filePath + '"; create the file to fix'));
         return originalEntry;
     }
 
