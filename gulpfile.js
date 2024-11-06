@@ -7,14 +7,12 @@ const fse = require('fs-extra');
 const child_process = require('child_process');
 const { styleText } = require('node:util');
 
-// var gulp = require('gulp');
 const minimist = require('minimist');
+const gulp = require('gulp');
 const Less = require('gulp-less');
 const Sass = require('gulp-sass')(require('sass'));
-const header = require('gulp-header');
-const footer = require('gulp-footer');
-const rename = require('gulp-rename');
 const browsersync = require('browser-sync');
+
 const vstream = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 
@@ -24,7 +22,8 @@ const ncp = require('ncp');
 
 const nextversion = require('./tools/bin/nextversion');
 const { listdirsSync, srcTocfileName, logger } = require('./tools/bin/util');
-const gulp = require('gulp');
+
+const HeaderTransform = require('./tools/HeaderTransform');
 
 const argv = minimist(process.argv.slice(2));
 
@@ -245,15 +244,9 @@ const toc = module.exports.toc = gulp.series(fetch, function toc (done) {
 });
 
 const version = module.exports.version = function version () {
-    // this code is stupid; it's basically the line:
-    //      cat VERSION | sed -e 's/^/VERSION_VAR_NAME: /' > _version.yml
-    // however we're in Gulp, and we need to support Windows...
-    // so we contort it into a monster
-    return gulp.src(VERSION_FILE)
-        .pipe(header(VERSION_VAR_NAME + ': '))
-        .pipe(footer('\n'))
-        .pipe(rename(VERSION_CONFIG_FILE))
-        .pipe(gulp.dest('.'));
+    return fs.createReadStream(VERSION_FILE)
+        .pipe(new HeaderTransform(`${VERSION_VAR_NAME}: `))
+        .pipe(fs.createWriteStream(VERSION_CONFIG_FILE));
 };
 
 const defaults = module.exports.defaults = function defaults () {
@@ -293,7 +286,7 @@ module.exports.regen = gulp.series(jekyll, function regen () {
 const less = module.exports.less = function less () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.less'))
         .pipe(Less())
-        .pipe(header(YAML_FRONT_MATTER))
+        .pipe(new HeaderTransform(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
         .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
@@ -301,7 +294,7 @@ const less = module.exports.less = function less () {
 
 const css = module.exports.css = function css () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.css'))
-        .pipe(header(YAML_FRONT_MATTER))
+        .pipe(new HeaderTransform(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
         .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
@@ -310,7 +303,7 @@ const css = module.exports.css = function css () {
 const sass = module.exports.sass = function sass () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.scss'))
         .pipe(Sass().on('error', Sass.logError))
-        .pipe(header(YAML_FRONT_MATTER))
+        .pipe(new HeaderTransform(YAML_FRONT_MATTER))
         .pipe(gulp.dest(CSS_OUT_DIR))
         .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
         .pipe(browsersync.reload({ stream: true }));
