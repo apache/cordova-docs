@@ -3,7 +3,7 @@
 // dependencies
 const path = require('node:path');
 const fs = require('node:fs');
-const child_process = require('child_process');
+const child_process = require('node:child_process');
 const { styleText } = require('node:util');
 
 const minimist = require('minimist');
