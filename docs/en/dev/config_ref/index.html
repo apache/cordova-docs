@@ -2800,8 +2800,12 @@ and will be indicated as such.</p>
       <td>If set, the value will append to the end of old UserAgent of webview. When using with OverrideUserAgent, this value will be ignored.</td>
     </tr>
     <tr>
+      <td>AutoHideSplashScreen<br /> <span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: true</em> <br /> Indicates whether to hide splash screen automatically or not. The splash screen is hidden after the amount of time specified in the <code>SplashScreenDelay</code> preference.</td>
+    </tr>
+    <tr>
       <td>BackgroundColor<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
-      <td>Sets the app&#39;s background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. <br /><strong>Note</strong>: <code>transparent</code> value will set the application tile background to the accent color on Windows.</td>
+      <td>Sets the app&#39;s background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes.</td>
     </tr>
     <tr>
       <td>CordovaWebViewEngine<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
@@ -2822,6 +2826,14 @@ and will be indicated as such.</p>
     <tr>
       <td>ErrorUrl<br /><span class="cdv-var-type url">Url</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
       <td><em>Default: null</em> <br />When this preference is set, the application will display the specified local page upon encountering an error. Additionally, if this preference is set, the Android system will suppress the default dialog titled &quot;Application Error&quot;.</td>
+    </tr>
+    <tr>
+      <td>FadeSplashScreen<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
+      <td><em>Default: true</em> <br /> Controls the ability of the fade in and out of the splash screen. <br /> For Android, it controls only the fade out.</td>
+    </tr>
+    <tr>
+      <td>FadeSplashScreenDuration<br /><span class="cdv-var-type float">Float</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: 500</em> (Android), <em>250</em> (iOS) <br />Time in milliseconds to fade out the splashscreen.</td>
     </tr>
     <tr>
       <td>FullScreen<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
@@ -2922,6 +2934,14 @@ and will be indicated as such.</p>
     <tr>
       <td>ShowTitle<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
       <td><em>Default: false</em> <br />  Show the title at the top of the screen.</td>
+    </tr>
+    <tr>
+      <td>SplashScreenBackgroundColor<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>Sets the app&#39;s splashscreen background color. Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes.</td>
+    </tr>
+    <tr>
+      <td>SplashScreenDelay<br /><span class="cdv-var-type float">Float</span> <svg class="platform-icon android"><use href="#android"></use></svg> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: 0</em> <br /> Amount of time in milliseconds to wait before automatically hide splash screen.</td>
     </tr>
     <tr>
       <td>Suppresses3DTouchGesture<br /><span class="cdv-var-type boolean">Boolean</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
