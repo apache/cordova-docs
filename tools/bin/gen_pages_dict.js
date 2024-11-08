@@ -17,13 +17,21 @@
 
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const yaml = require('js-yaml');
-const glob = require('glob');
-const optimist = require('optimist');
+const minimist = require('minimist');
 
 const util = require('./util');
+
+const argOptions = [
+    { name: 'languages', type: 'string', require: true, describe: 'comma-separated list of docs languages ' },
+    { name: 'latestVersion', type: 'string', require: true, describe: 'the current latest docs version' },
+    { name: 'siteRoot', type: 'string', require: true, describe: 'the source ToC for the given directory' },
+    { name: 'redirectsFile', type: 'string', default: null, describe: 'file containing redirects for the website' }
+];
+const formatedArgOptions = util.formatMinimistOptions(argOptions);
+const argv = minimist(process.argv.slice(2), formatedArgOptions);
 
 // constants
 const LATEST_ALIAS_URI = '/latest/';
@@ -60,15 +68,6 @@ function isInLatestDocs (uri, latestVersion) {
 
 // main
 function main () {
-    // get args
-    const argv = optimist
-        .usage('Usage: $0 [options]')
-        .demand('languages').describe('languages', 'comma-separated list of docs languages')
-        .demand('latestVersion').describe('latestVersion', 'the current latest docs version')
-        .demand('siteRoot').describe('siteRoot', 'the source ToC for the given directory')
-        .string('redirectsFile').describe('redirectsFile', 'file containing redirects for the website').default('redirectsFile', null)
-        .argv;
-
     const siteRootPath = argv.siteRoot;
     const redirectsFilePath = argv.redirectsFile;
     const latestVersion = argv.latestVersion;
@@ -88,7 +87,8 @@ function main () {
 
     // add entries for all Markdown files in the site root
     const allMarkdownFiles = path.join(siteRootPath, '**/*.md');
-    glob(allMarkdownFiles, function (error, filePaths) {
+    fs.glob(allMarkdownFiles, function (error, filePaths) {
+        console.log(filePaths);
         if (error) throw error;
 
         for (let i = 0; i < filePaths.length; i++) {
@@ -113,5 +113,6 @@ function main () {
 }
 
 if (require.main === module) {
+    util.displayOptionHelpIfNeeded(argv, argOptions);
     main();
 }

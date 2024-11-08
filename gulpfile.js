@@ -1,15 +1,13 @@
 'use strict';
 
 // dependencies
-const path = require('path');
-const fs = require('fs');
-const fse = require('fs-extra');
-const child_process = require('child_process');
+const path = require('node:path');
+const fs = require('node:fs');
+const child_process = require('node:child_process');
 const { styleText } = require('node:util');
 
 const minimist = require('minimist');
 const gulp = require('gulp');
-const Less = require('gulp-less');
 const Sass = require('gulp-sass')(require('sass'));
 const browsersync = require('browser-sync');
 
@@ -18,7 +16,6 @@ const buffer = require('vinyl-buffer');
 
 const htmllint = require('gulp-htmllint');
 const Crawler = require('simplecrawler');
-const ncp = require('ncp');
 
 const nextversion = require('./tools/bin/nextversion');
 const { listdirsSync, srcTocfileName, logger } = require('./tools/bin/util');
@@ -108,7 +105,7 @@ function bin (name) {
 
 function remove (path) {
     console.log('removing ' + path);
-    fse.removeSync(path);
+    fs.rmSync(path, { recursive: true, force: true });
 }
 
 function getBundleExecutable () {
@@ -174,17 +171,13 @@ function copyDocsVersion (oldVersion, newVersion, cb) {
         const newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
         const newVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, newVersion));
 
-        const copyOptions = {
-            stopOnErr: true
-        };
-
         // copy docs
         console.log(oldVersionDocs + ' -> ' + newVersionDocs);
-        ncp.ncp(oldVersionDocs, newVersionDocs, copyOptions, doneCopying);
+        fs.cp(oldVersionDocs, newVersionDocs, { recursive: true, force: true }, doneCopying);
 
         // copy ToC
         console.log(oldVersionToc + ' -> ' + newVersionToc);
-        ncp.ncp(oldVersionToc, newVersionToc, copyOptions, doneCopying);
+        fs.cp(oldVersionToc, newVersionToc, { recursive: true, force: true }, doneCopying);
     });
 }
 
@@ -214,7 +207,6 @@ module.exports.help = module.exports.default = function help () {
     logger('    fetch         download docs specified in ' + FETCH_CONFIG);
     logger('');
     logger('    styles        run all the below tasks');
-    logger('    less          compile all .less files');
     logger('    sass          compile all .scss files');
     logger('    css           copy over all .css files');
     logger('');
@@ -285,15 +277,6 @@ module.exports.regen = gulp.series(jekyll, function regen () {
     browsersync.reload();
 });
 
-const less = module.exports.less = function less () {
-    return gulp.src(path.join(CSS_SRC_DIR, '**', '*.less'))
-        .pipe(Less())
-        .pipe(new HeaderTransform(YAML_FRONT_MATTER))
-        .pipe(gulp.dest(CSS_OUT_DIR))
-        .pipe(gulp.dest(CSS_OUT_DIR.replace(SOURCE_DIR, argv.outDir)))
-        .pipe(browsersync.reload({ stream: true }));
-};
-
 const css = module.exports.css = function css () {
     return gulp.src(path.join(CSS_SRC_DIR, '**', '*.css'))
         .pipe(new HeaderTransform(YAML_FRONT_MATTER))
@@ -311,7 +294,7 @@ const sass = module.exports.sass = function sass () {
         .pipe(browsersync.reload({ stream: true }));
 };
 
-const styles = module.exports.styles = gulp.series(less, css, sass);
+const styles = module.exports.styles = gulp.series(css, sass);
 const data = module.exports.data = gulp.series(toc, docsVersion, pagesDict);
 const configs = module.exports.configs = gulp.series(defaults, version);
 

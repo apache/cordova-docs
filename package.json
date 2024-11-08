@@ -16,42 +16,23 @@
   },
   "author": "Apache Software Foundation",
   "license": "Apache-2.0",
-  "dependencies": {
-    "baconjs": "^3.0.17",
-    "classnames": "^2.3.1",
-    "preact": "^8.2.5",
-    "preact-compat": "^3.17.0"
-  },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-react": "^7.14.5",
-    "@cordova/eslint-config": "^5.0.0",
+    "@cordova/eslint-config": "^5.1.0",
     "browser-sync": "^3.0.3",
-    "chalk": "^4.1.2",
-    "fs-extra": "^10.0.0",
-    "glob": "^7.1.7",
     "gulp": "^5.0.0",
     "gulp-htmllint": "0.0.19",
-    "gulp-less": "^5.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
-    "ncp": "^2.0.0",
-    "optimist": "^0.6.1",
-    "sass": "^1.62.0",
-    "semver": "^7.5.0",
+    "sass": "^1.80.6",
+    "semver": "^7.6.3",
     "simplecrawler": "^1.1.9",
     "vinyl": "^3.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "overrides": {
-    "optimist": {
-      "minimist": "1.2.8"
-    }
-  },
   "engines": {
-    "node": ">=16.20.2"
+    "node": ">=20.18.0"
   },
   "repository": "github:apache/cordova-docs",
   "bugs": "https://github.com/apache/cordova-docs/issues",

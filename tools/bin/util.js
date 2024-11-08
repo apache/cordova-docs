@@ -20,8 +20,8 @@
 const { styleText } = require('node:util');
 
 module.exports = (function () {
-    const fs = require('fs');
-    const path = require('path');
+    const fs = require('node:fs');
+    const path = require('node:path');
 
     function stripFrontMatter (text) {
         // get and replace front matter if it's there
@@ -117,6 +117,68 @@ module.exports = (function () {
         console.log(`[${styleText(['magenta'], ts)}] ${msg}`);
     }
 
+    function formatMinimistOptions (options) {
+        const formattedOptions = { string: [], boolean: [], default: {}, require: [], alias: {} };
+        options.forEach(function (i) {
+            formattedOptions[i.type].push(i.name);
+
+            if (Object.prototype.hasOwnProperty.call(i, 'default')) {
+                formattedOptions.default[i.name] = i.default;
+            }
+
+            if (Object.prototype.hasOwnProperty.call(i, 'require')) {
+                formattedOptions.require.push(i.name);
+            }
+
+            if (Object.prototype.hasOwnProperty.call(i, 'alias')) {
+                formattedOptions.alias[i.name] = i.alias;
+            }
+        });
+        return formattedOptions;
+    }
+
+    function displayOptionHelpIfNeeded (argv, rawOptions) {
+        rawOptions = rawOptions.sort((a, b) => a.name.localeCompare(b.name));
+        const options = formatMinimistOptions(rawOptions);
+        const missingArgs = findMissingRequiredMinimistOptions(argv, options);
+
+        const nameColumnWidth = Math.max(...rawOptions.map(i => `--${i.name}`.length), 8);
+        const descriptionColumnWidth = Math.max(...rawOptions.map(i => i.describe.length), 20);
+
+        const printoutCommandList = rawOptions.map(i => {
+            const required = i.require ? '[required]' : '';
+            let defaultVal = '';
+
+            if (Object.prototype.hasOwnProperty.call(i, 'default') && i.default !== undefined) {
+                switch (i.default) {
+                case null:
+                    defaultVal = '[default: null]';
+                    break;
+                case false:
+                    defaultVal = '[default: false]';
+                    break;
+                case true:
+                    defaultVal = '[default: true]';
+                    break;
+                default:
+                    defaultVal = `[default: ${i.default}]`;
+                }
+            }
+            const name = `--${i.name}`.padEnd(nameColumnWidth);
+            const describe = i.describe.padEnd(descriptionColumnWidth);
+            return `${name}  ${describe}  ${required}${defaultVal}`.trim();
+        });
+
+        if (missingArgs.length > 0) {
+            console.log(`\nOptions:\n  ${printoutCommandList.join('\n  ')}\n\nMissing required arguments: ${missingArgs.join(', ')}`);
+            process.exit(1);
+        }
+    }
+
+    const findMissingRequiredMinimistOptions = (argv, options) => options.require
+        .map(a => !argv[a] ? a : null)
+        .filter(item => item !== null);
+
     return {
         stripFrontMatter,
         getFrontMatterString,
@@ -128,6 +190,11 @@ module.exports = (function () {
         genTocfileName,
         mergeObjects,
         generatedBy,
-        logger
+        logger,
+
+        // args support
+        formatMinimistOptions,
+        findMissingRequiredMinimistOptions,
+        displayOptionHelpIfNeeded
     };
 })();
