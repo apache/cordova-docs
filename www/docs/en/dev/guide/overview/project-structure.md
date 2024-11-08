@@ -57,7 +57,7 @@ If you are developing code in the `www` folder directly, you should add this fol
 
 ### `node_modules/`
 
-This directory contains all of the checked-out packages from the npmjs registry.
+This directory contains all of the JavaScript dependency packages from the npm JavaScript registry for Cordova and its tools, along with any dependencies of your project (as specified in `package.json`).
 
 When adding a Cordova platform or plugin with the `cordova platform add` and `cordova plugin add` command, these platforms and plugins are fetched from the npmjs registry and downloaded into the `node_modules/` directory.
 
