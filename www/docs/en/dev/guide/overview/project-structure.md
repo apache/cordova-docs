@@ -46,7 +46,9 @@ Your project might already have a `package.json` file with its own dependencies,
 
 ### `config.xml`
 
-Configures your application and allows you to customize the behavior of your project. See also [config.xml reference documentation][config.xml ref]
+Contains the preferences and configuration options for your Cordova application and allows you to customize the behavior of your project.
+
+See also [`config.xml` reference documentation][config.xml ref].
 
 ### `www/`
 
