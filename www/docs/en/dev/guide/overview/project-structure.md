@@ -34,7 +34,7 @@ myapp/
 ├── node_modules/
 ├── package.json
 ├── platforms/
-└── plugins/
+├── plugins/
 └── www
 ```
 
