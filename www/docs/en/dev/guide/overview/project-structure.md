@@ -81,7 +81,11 @@ Contains all the source code and build scripts for the platforms that you add to
 
 ### `plugins/`
 
-Any added plugins will be extracted or copied into this directory.
+The `plugins` directory is used as a staging area where installed plugins are copied before being applied to the `platforms` directory.
+
+This directory should not be committed to version control.
+
+If you've created custom, in-house or modified plugins and want to store them within the project, it's recommended **not** to store them in the `plugins` directory.
 
 ### Version control
 
