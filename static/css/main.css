@@ -8240,12 +8240,12 @@ header .btn.search-button {
   color: #999999;
 }
 header .btn.search-button:hover {
-  color: #e6e6e6;
+  color: rgb(229.5, 229.5, 229.5);
 }
 
 /* footer */
 footer {
-  background-color: #f2f2f2;
+  background-color: rgb(242.25, 242.25, 242.25);
   position: relative;
 }
 footer strong {
@@ -8257,7 +8257,7 @@ footer h1 {
 }
 footer h2 {
   text-transform: uppercase;
-  color: gray;
+  color: rgb(127.5, 127.5, 127.5);
   font-size: 1em;
   font-weight: bold;
 }
@@ -8308,7 +8308,7 @@ h1 {
 }
 
 h2 {
-  color: gray;
+  color: rgb(127.5, 127.5, 127.5);
   font-size: 18px;
 }
 
@@ -8492,7 +8492,7 @@ html {
   width: 100%;
 }
 #hero #hero_section .hero_content p {
-  color: #e6e6e6;
+  color: rgb(229.5, 229.5, 229.5);
   font-weight: 300;
   color: rgb(166, 178, 180);
 }
@@ -8658,7 +8658,7 @@ img#logo_top {
 .well_code, .well_code div {
   padding-bottom: 69px;
   position: relative;
-  background-color: #e6e6e6;
+  background-color: rgb(229.5, 229.5, 229.5);
   margin-top: 25px;
 }
 .well_code div {
@@ -8689,7 +8689,7 @@ img#logo_top {
 ********* Showcase Section ***********
 */
 .dark {
-  background-color: #1a1a1a;
+  background-color: rgb(25.5, 25.5, 25.5);
 }
 
 .dark, .dark .container-fluid { /* Fixes an overflow problem in the showcase sections */
@@ -8723,7 +8723,7 @@ img#logo_top {
 }
 
 .supported_platforms {
-  background-color: #262626;
+  background-color: rgb(38.25, 38.25, 38.25);
   margin-left: -15px;
   margin-right: -15px;
   margin-bottom: 40px;
@@ -8747,7 +8747,7 @@ img#logo_top {
   padding: 8px;
 }
 .card_gallery .card .card_inner {
-  background-color: #262626;
+  background-color: rgb(38.25, 38.25, 38.25);
   padding: 32px 16px 24px 16px;
 }
 .card_gallery .card .card_inner .card_title {
@@ -9317,7 +9317,7 @@ img#logo_top {
   width: 320px;
   overflow-y: scroll;
   overflow-x: hidden;
-  background: #262626;
+  background: rgb(38.25, 38.25, 38.25);
 }
 .docs .site-toc-container .site-toc {
   padding: 10px 15px;
@@ -9633,7 +9633,7 @@ html[lang=ru] .docs #old-home ul li {
   padding: 0;
 }
 .contribute-help .list li {
-  background: #e6e6e6;
+  background: rgb(229.5, 229.5, 229.5);
   position: relative;
   list-style: none;
   margin-bottom: 16px;
@@ -9760,7 +9760,7 @@ html[lang=ru] .docs #old-home ul li {
   padding: 0;
 }
 .contact .list li {
-  background: #e6e6e6;
+  background: rgb(229.5, 229.5, 229.5);
   position: relative;
   list-style: none;
   margin-bottom: 16px;

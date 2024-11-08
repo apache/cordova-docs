@@ -2600,26 +2600,43 @@
 
 <p><em><strong>Note:</strong> The directories above are generally located in the Android SDK ROOT.</em></p>
 
-<h4>macOS and Linux</h4>
+<h4>Linux and macOS</h4>
 
-<p>On a Mac or Linux, with a text editor, create or modify the <code>~/.bash_profile</code> file.</p>
+<p>On Linux or macOS versions prior to Catalina, use any text editor to create or modify the <code>~/.bash_profile</code> file.
+<br />On macOS Catalina and newer, create or modify the <code>~/.zprofile</code> file, as the default shell has changed.</p>
 
-<p>To set an environment variable, add a line that uses <code>export</code> like so (substitute the path with your local installation):</p>
+<p>Add the following line to your shell&#39;s profile to set up the <code>ANDROID_HOME</code> environment variable.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>/Development/android-sdk/
+<p><strong>Linux:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>~/Android/Sdk
 </code></pre></div></div>
 
-<p>To update your <code>PATH</code>, add a line resembling the following (substitute the paths with your local Android SDK installation&#39;s location):</p>
+<p><strong>macOS:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>~/Library/Android/sdk
+</code></pre></div></div>
+
+<p>The above examples point to the standard paths where the Android SDK is typically stored. Depending on your environment configuration, the path may differ. Be sure to confirm that the path exist or adjust them to match your local installation.</p>
+
+<p>After setting the <code>ANDROID_HOME</code> environment variable, update the <code>PATH</code> variable to include directories containing various Android-related binaries.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/platform-tools/
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/cmdline-tools/latest/bin/
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/build-tools
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/build-tools/
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/emulator/
 </code></pre></div></div>
 
 <p>Reload your terminal to see this change reflected or run the following command:</p>
 
+<p><strong>Linux and macOS older then Catalina:</strong></p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<p><strong>macOS Catalina and newer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.zprofile
 </code></pre></div></div>
 
 <h4>Windows</h4>
