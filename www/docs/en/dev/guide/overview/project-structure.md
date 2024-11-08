@@ -40,7 +40,9 @@ myapp/
 
 ### `package.json`
 
-TODO
+A manifest declaring what JavaScript package dependencies are used by your project, including Cordova, the added platforms, and any added plugins. This is also where plugin variable values are stored.
+
+Your project might already have a `package.json` file with its own dependencies, or one generated from a framework. Cordova will simply add what it needs to the `package.json` file without interfering with other tools or dependencies.
 
 ### `config.xml`
 
