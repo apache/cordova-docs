@@ -145,7 +145,7 @@ The Content Security Policy `meta` tag, or CSP for short, is a very powerful mec
 
 On Android and iOS, the network request allow list (see above) is not able to filter all types of requests (e.g. `<video>` & WebSockets are not blocked). So, in addition to the allow list, you should use a [Content Security Policy](http://content-security-policy.com/) `<meta>` tag on all of your pages.
 
-> **Note**: If your app has multiple HTML files and navigates between them using the browser's navigation features, you should include the CSP in each file. If using a framework, you only need to include the CSP on `index.html`.
+> **Note**: If your app has multiple HTML files and navigates between them using the browser's navigation features, you should include the CSP in each file. If your app is a single-page application, you only need to include the CSP on `index.html`.
 
 ### Cordova's Default Template Content Security Policy
 
