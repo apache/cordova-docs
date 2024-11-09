@@ -109,7 +109,7 @@ The above CSP enforces the following:
 
 By defalt, using this CSP will prevent _inline JavaScript_ and `eval()`. There are occasions, unfortunately, where a library may need one or the other, but this is rare and becoming moreso. If you must override this functionality, you can do so using the `script-src` directive.
 
-You should fully understand the CSP tag and the various directives that can be specified. More documentation is available at [Content Security Policy](https://developers.google.com/web/fundamentals/security/csp/) (via Google Developers) and Mozilla's [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) article.
+You should fully understand the CSP tag and the various directives that can be specified. More documentation is available at [Content Security Policy](https://web.dev/articles/csp) (via Google Developers) and Mozilla's [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) article.
 
 > **Warning**: Failure to include `gap:` in `default-src` may result in the app failing to work properly on iOS.
 
@@ -139,7 +139,7 @@ There are also plugins that can do true certificate pinning for some platforms, 
 
 If your app communicates to an external server, it should be communicating using modern encryption standards. Use `https` protocol whenever possible.
 
-[Let's Encrypt](https://letsencrypt.org/) is a free, automated, and open certificate authority provided by the nonprofit [Internet Security Research Group](https://www.abetterinternet.org/). Let's Encrypt will offer free standard certificates, which will be sufficient for most developers. Enterprise organizations may still want to use a traditional certificate authority that offers more advanced features such as [Organization Validation](https://en.wikipedia.org/wiki/Public_key_certificate#Organization_validation) certificates.
+[Let's Encrypt](https://letsencrypt.org/) is a free, automated, and open certificate authority provided by the nonprofit [Internet Security Research Group](https://www.abetterinternet.org/). Let's Encrypt will offer free standard certificates, which will be sufficient for most developers. Enterprise organizations may still want to use a traditional certificate authority that offers more advanced features such as [Organization validation](https://en.wikipedia.org/wiki/Public_key_certificate#Organization_validation) certificates.
 
 It is also important to keep up to date with security standards as they change over time. What might be acceptable SSL/TLS configuration today may not be acceptable years in the future. Using tools to test your certificate and SSL/TLS configuration should be done regularly. [SSL Labs](https://www.ssllabs.com/ssltest/) is a free online service provided by Qualys, Inc to test your server's SSL/TLS configuration and encryption strength, in addition to supported platforms.
 
@@ -178,5 +178,5 @@ Hot code push solutions improve matters a bit, since they will download code and
 
 ## Recommended Articles and Other Resources
 
-* [HTML5 Security cheat sheet, detailing how to secure your HTML5 application](https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet)
-* [Whitepaper about well known security flaws in Webview based hybrid applications](http://www.cis.syr.edu/~wedu/Research/paper/webview_acsac2011.pdf)
+* [OWASP Cheat Sheet Series - HTML5 Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html)
+* [Research Paper - Attacks on WebView in the Android System](https://www.cs.ucr.edu/~heng/pubs/webview_acsac2011.pdf)
