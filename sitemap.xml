@@ -47253,6 +47253,17 @@
     
 
     <url>
+    <loc>https://cordova.apache.org/docs/en/dev/guide/overview/project-structure.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.2</priority>
+</url>
+
+
+    
+    
+    
+
+    <url>
     <loc>https://cordova.apache.org/sitemap.xml</loc>
 </url>
 
