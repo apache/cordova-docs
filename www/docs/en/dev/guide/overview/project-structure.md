@@ -48,7 +48,7 @@ Your project might already have a `package.json` file with its own dependencies,
 
 Contains the preferences and configuration options for your Cordova application and allows you to customize the behavior of your project.
 
-See also [`config.xml` reference documentation][config.xml ref].
+See also [`config.xml` reference documentation](../../config_ref/index.html).
 
 ### `www/`
 
@@ -71,7 +71,7 @@ It also contain scripts that is used during the `cordova prepare` and `cordova b
 
 The `node_modules` directory is  the original unedited source of truth and nothing should be edited in this directory. Additionally, this directory should not be checked into any version control system.
 
-For more details, see [npmjs folders documentation](https://docs.npmjs.com/cli/v7/configuring-npm/folders#node-modules).
+For more details, see [npmjs folders documentation](https://docs.npmjs.com/cli/v10/configuring-npm/folders#node-modules).
 
 ### `platforms/`
 
