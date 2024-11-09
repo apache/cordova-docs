@@ -61,7 +61,7 @@ The JavaScript function eval() has a long history of being abused. Using it inco
 
 ### Do not assume that your source code is secure
 
-Since a Cordova application is built from HTML and JavaScript assets that get packaged in a native container, you should not consider your code to be secure. It is possible to reverse engineer a Cordova application.
+Since a Cordova application is built from HTML and JavaScript assets that get packaged in a native container, you should not consider your code to be secure. It is possible for an iOS or Android application to be unpacked and unzipped to reveal its web assets such as HTML and JS.
 
 A sampling of what you should not include in your code:
 
