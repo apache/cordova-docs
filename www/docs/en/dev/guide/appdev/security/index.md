@@ -34,7 +34,7 @@ The following guide includes some security best practices that you should consid
 * Content Security Policy
 * Certificate Pinning
 * Using TLS/SSL
-* Self-signed Certificates
+* Avoid Self-signed Certificates
 * Wrapping external sites and hot code push
 * Encrypted storage
 * Recommended Articles and Other Resources
