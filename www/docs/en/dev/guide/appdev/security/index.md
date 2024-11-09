@@ -30,8 +30,8 @@ The following guide includes some security best practices that you should consid
 
 * General Tips
 * Plugins and Security
-* Content Security Policy
 * Allow List
+* Content Security Policy
 * Certificate Pinning
 * Using TLS/SSL
 * Self-signed Certificates
@@ -85,45 +85,13 @@ If you must inject content into the primary webview, be certain that it has been
 
 > **Tip**: If you need to include advertising, use any of the many third-party plugins for Cordova. These are safer than executing arbitrary JavaScript from advertisers.
 
-## Content Security Policy
-
-The Content Security Policy `meta` tag, or CSP for short, is a very powerful mechanism you can use to control trusted sources of content. You can restrict various content types and restrict the domains from which content can be loaded. You can also disable unsafe and risky HTML and JavaScript, which can further increase the security of your app. The CSP tag should be placed in your app's `index.html` file.
-
-> **Note**: If your app has multiple HTML files and navigates between them using the browser's navigation features, you should include the CSP in each file. If using a framework, you only need to include the CSP on `index.html`.
-
-The CSP that Cordova typically uses in its templates looks like this (indented for clarity):
-
-```html
-<meta http-equiv="Content-Security-Policy"
-      content="default-src 'self' data: gap: https://ssl.gstatic.com;
-               style-src 'self' 'unsafe-inline';
-               media-src *">
-```
-
-The above CSP enforces the following:
-
-* Media can be loaded from anywhere
-* Styles can only be loaded from the app itself (`'self'`)
-* Inline styles are permitted (`'unsafe-inline'`)
-* All other network requests can only be from (or to) the app itself, `data:` URLs, the iOS Cordova bridge (`gap:`), or to Android's TalkBack accessibility feature (`https://ssl.gstatic.com`)
-
-By defalt, using this CSP will prevent _inline JavaScript_ and `eval()`. There are occasions, unfortunately, where a library may need one or the other, but this is rare and becoming moreso. If you must override this functionality, you can do so using the `script-src` directive.
-
-You should fully understand the CSP tag and the various directives that can be specified. More documentation is available at [Content Security Policy](https://web.dev/articles/csp) (via Google Developers) and Mozilla's [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) article.
-
-> **Warning**: Failure to include `gap:` in `default-src` may result in the app failing to work properly on iOS.
-
-> **Tip**: If you're using web sockets, include `ws:` (`wss:` if using SSL) in the `connect-src` directive.
-
-### Debugging the CSP
-
-Chances are good that when you add a CSP to your app, you'll encounter some problems. Thankfully both Google Chrome's developer tools and Safari's web inspector will make it glaringly obvious when the CSP has been violated. Watch the console for any violations, and fix accordingly. Generally the error messages are pretty verbose, indicating exactly what resource was rejected, and why.
-
-TODO: include example
-
 ## Allow List
 
 By default the app's navigation is unrestricted. It's recommended to restrict the navigation only to trusted domains. Learn more by reading the [Allow List Guide](../allowlist/index.html)
+
+## Content Security Policy (CSP)
+
+Cordova’s default template includes a basic Content Security Policy (CSP). It’s recommended to review and customize this CSP to fit your app's specific needs. For more information, refer to the [Allow List Guide - Content Security Policy (CSP)](../allowlist/index.html#content-security-policy-csp).
 
 ## Certificate Pinning
 
