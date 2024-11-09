@@ -161,22 +161,7 @@ The CSP that Cordova's default template uses looks like this (indented for clari
 
 The above snippet enforces the following:
 
-**Image Source:**
-
-* Images can only be loaded from the same origin (`'self'`).
-* Allows loading images from `data:` URIs.
-* Allows loading images from `content:` URIs, typically used within the Android ecosystem.
-
-**Media Source:**
-
-* Media can be loaded from any source.
-
-**Style Source:**
-
-* Styles can only be loaded from the same origin (`'self'`).
-* Inline styles (`'unsafe-inline'`) are also allowed, meaning styles can be directly applied using the `style` attribute on elements or within `<style>` tags.
-
-**Default Source:**
+**Default Source (`default-src`):**
 
 As a fallback, all other network requests are restricted to:
 
@@ -184,6 +169,21 @@ As a fallback, all other network requests are restricted to:
 * Resources loaded via `data:` URIs.
 * Resources from the specified external domain `https://ssl.gstatic.com`.
 * JavaScript methods such as `eval()` (and similar) are permitted with `'unsafe-eval'`.
+
+**Style Source (`style-src`):**
+
+* Styles can only be loaded from the same origin (`'self'`).
+* Inline styles (`'unsafe-inline'`) are also allowed, meaning styles can be directly applied using the `style` attribute on elements or within `<style>` tags.
+
+**Media Source (`media-src`):**
+
+* Media can be loaded from any source.
+
+**Image Source (`img-src`):**
+
+* Images can only be loaded from the same origin (`'self'`).
+* Allows loading images from `data:` URIs.
+* Allows loading images from `content:` URIs, typically used within the Android ecosystem.
 
 ### Example Content Security Policy Declarations
 
