@@ -43,7 +43,7 @@ The following guide includes some security best practices that you should consid
 
 ### Use InAppBrowser for outside links
 
-Use the InAppBrowser when opening links to any outside website. This is much safer than allow listing a domain name and including the content directly in your application because the InAppBrowser will use the native browser's security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content.
+Use the [InAppBrowser](https://www.npmjs.com/package/cordova-plugin-inappbrowser) when opening links to any outside website. This is much safer than allow listing a domain name and including the content directly in your application because the InAppBrowser will use the native browser's security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content.
 
 ### Validate all user input
 
