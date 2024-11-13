@@ -31,7 +31,6 @@ priority: 0.7
                                 {{ post.author.name }}
                             {% endif %}
                         </span>
-                        <a class="comment" href="{{ site.baseurl }}{{ post.url }}#disqus_thread"></a>
                     </div>
                 </header>
                 <section class="post-excerpt">
@@ -53,5 +52,3 @@ priority: 0.7
         }, 2000);
     };
 </script>
-
-{% include comment_count.html %}
