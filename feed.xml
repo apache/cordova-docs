@@ -6,9 +6,70 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Nov 2024 06:37:11 +0000</pubDate>
-    <lastBuildDate>Wed, 13 Nov 2024 06:37:11 +0000</lastBuildDate>
+    <pubDate>Thu, 21 Nov 2024 15:36:34 +0000</pubDate>
+    <lastBuildDate>Thu, 21 Nov 2024 15:36:34 +0000</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
+    
+      <item>
+        <title>File Plugin 8.1.3 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.1.3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.1.3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This patch fixes an issue with &lt;code&gt;FileEntry.toURL()&lt;/code&gt; on iOS devices when the app 
+is hosted through schemes. The intent for this API is to produce a URL that
+can be used in the DOM, like image tags for example. However, iOS devices always
+produced &lt;code&gt;file://&lt;/code&gt; URIs which is not usable when the webview is configured to
+use schemes.&lt;/p&gt;
+
+&lt;p&gt;Starting with 8.1.3, &lt;code&gt;FileEntry.toURL()&lt;/code&gt; will produce an app-scheme URI if the
+iOS webview is configured to use app schemes, or a &lt;code&gt;file://&lt;/code&gt; uri otherwise.&lt;/p&gt;
+
+&lt;p&gt;This brings the behaviour closer to Android&amp;#39;s implementation.&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/642&quot;&gt;GH-642&lt;/a&gt; fix(ios): Entry.toURL() to produce DOM-usable uri when using scheme-hosted webview (#642)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Tests:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/643&quot;&gt;GH-643&lt;/a&gt; fix(test): file.spec.131 moveTo may fail due to read order assumption (#643)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Docs:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/645&quot;&gt;GH-645&lt;/a&gt; docs: Added upgrade notes to &lt;code&gt;README&lt;/code&gt; for v8 (#645)&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2024/11/20/cordova-plugin-file-8.1.3.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/11/20/cordova-plugin-file-8.1.3.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Camera Plugin 8.0.0 Released!</title>
@@ -1001,123 +1062,6 @@ cordova platform add electron@4.0.0
         <category>news</category>
         
         <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Survey 2023 Results</title>
-        <description>&lt;p&gt;Thank you very much for taking part in our user &amp;amp; contributor survey. We received 228 submissions. Let&amp;#39;s dive straight into the data.&lt;/p&gt;
-
-&lt;p&gt;This survey got over 200 responses and considering only a fraction of people who actually see the survey will respond, there are probably quite a lot of happy Cordova users and new and long-running app projects out there. We got some good feedback of the most requested improvements and biggest pain points.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;Obviously almost all respondents work with Cordova and the most used platforms are &lt;strong&gt;Android (97.4%), iOS (89%)&lt;/strong&gt;, Browser (21.1%) and Electron (7%). Windows and macOS Catalyst got only a handful of responses in total.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image7.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart platforms&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Build apps with access to native features not yet present in the web platform&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The top 3 reasons for picking Cordova are &lt;strong&gt;ease of use, cross-platform support and the prevalence and familiarity of web skills and technologies&lt;/strong&gt;. These reasons all were mentioned almost equally. Quite a few (~20) users mentioned that Cordova was chosen a while ago, or they migrated from Phonegap (~7). There are probably quite a few long-running Cordova projects out there. Other mentioned reasons are the support of native features, Ionic, fast development, maturity of the project and open source.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It is easy to write, inspect and debug like a webpage&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;Alternatives&lt;/h2&gt;
-
-&lt;p&gt;Cordova&amp;#39;s unofficial goal has always been to cease to exist once the Web catches up with supporting new APIs and features similar to native. Therefore, it&amp;#39;s good news that a small number of users (6.1%) migrated their apps to &lt;strong&gt;PWAs&lt;/strong&gt;. About 13% migrated to &lt;strong&gt;Capacitor&lt;/strong&gt; and 3% to Flutter and React-Native each. About 2% of projects moved to Electron or fully native. Around 4% are thinking about or are in the process of migrating.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image2.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart migrating&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Only 23.2% of respondents have migrated apps to alternative solutions.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The biggest reason to migrate is &lt;strong&gt;not well maintained plugins&lt;/strong&gt; followed by &lt;strong&gt;operating system and app store compatibility issues&lt;/strong&gt; and &lt;strong&gt;slow development of the framework itself&lt;/strong&gt;. This is something we as the Cordova community needs to address. Some users also mentioned the fear of long term support. Others had build or Gradle issues or preferred more modern frameworks with Typescript support and a better developer experience. WebView and performance issues also got mentioned a handful of times.&lt;/p&gt;
-
-&lt;h2&gt;Contributing&lt;/h2&gt;
-
-&lt;p&gt;Only a minority of respondents (21.1%) have contributed to Apache maintained plugins, platforms, or tooling and 17.5% would love to start contributing.&lt;/p&gt;
-
-&lt;p&gt;The answers to the question &amp;quot;What&amp;#39;s holding you back from contributing?&amp;quot; are probably pretty typical for open source projects. The biggest factors are time (53%) and work-life-balance (37%). The second most mentioned reasons &lt;strong&gt;I need help getting started&lt;/strong&gt; (21%) and &lt;strong&gt;Imposter Syndrome&lt;/strong&gt; (10%) we should address with better documentation and support for first contributors.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image1.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart contributing&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For those who are interested in contributing to Apache Cordova, the best way is to submit PR. It could be to fix a known issue that you might have or others have reported, or submitting new features. In terms of Work-Life balance, Apache Cordova is based on volunteering. There is no requirement in dedicating time every day. Usually some might work on Cordova for a few minutes when they can spare.&lt;/p&gt;
-
-&lt;p&gt;Some users develop for the Web only and don&amp;#39;t want to get into the native part which is totally fair because that&amp;#39;s the point of using Cordova. Developing plugins and getting into Cordova internals is not as hard and scary as it might look at first, and we really need your support for the project.&lt;/p&gt;
-
-&lt;p&gt;We also included a question about &lt;strong&gt;release voting&lt;/strong&gt; because we think that most users don&amp;#39;t know how the release process at Apache works. For every release we need at least 3 members of the PMC to check and cast a positive vote on the release. Persons who are not part of the PMC can vote as well and help test the release. The voting and decision process for releases happens on the mailing list. Sometimes it can take a while to finally publish a release because 3 PMC members need to find time to check it. If we can onboard new members, releases might happen a little faster again.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/survey/image4.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Chart voting&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;Areas of improvement&lt;/h2&gt;
-
-&lt;p&gt;One of the main reasons to run this survey was to identify the pain points for many Cordova developers. If we can identify the areas that need improvements we can gather ideas for quick fixes and long term goals.&lt;/p&gt;
-
-&lt;p&gt;The most mentioned issues is the &lt;strong&gt;lack of maintenance for third party plugins&lt;/strong&gt;. More on that in the next paragraph. The second-biggest pain point is keeping up with App/Play store requirements and OS API changes combined with &lt;strong&gt;slow releases and breaking updates&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Many users also mentioned issues with &lt;strong&gt;native projects&lt;/strong&gt;. They tend to break with updates or require manual changes that cause headaches with Cordovas hooks and ephemeral native projects.&lt;/p&gt;
-
-&lt;p&gt;Quite a lot of pain points also involve around &lt;strong&gt;documentation&lt;/strong&gt;. We should work on better documentation for config.xml and how to develop plugins. Some users also would like (video) tutorials. Sometimes information about new features or changes are hidden somewhere in PRs, issues and comments. We should do a better job updating the documentation.&lt;/p&gt;
-
-&lt;p&gt;Some users also fear the longevity of the project and think that new APIs and changes take too long to be supported. The project is quite old, and some code is considered legacy code today and some users would like to see support for new languages like Typescript, Swift, Kotlin.&lt;/p&gt;
-
-&lt;h2&gt;Plugins&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I’m so grateful for the plugins! I understand how hard they can be to maintain.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Most respondents didn&amp;#39;t share any feedback for plugins and quite a few mentioned they were pleased with Cordova&amp;#39;s plugin ecosystem.&lt;/p&gt;
-
-&lt;p&gt;Because of its maturity and age there are many Cordova plugins for almost any use case, but the lack of maintenance is concerning for a lot of users. Quite a few plugin authors moved on and longer maintain their plugin and users have a hard time finding working forks and fixes. Some respondents suggested that a list of curated plugins could help with that.&lt;/p&gt;
-
-&lt;p&gt;Some users also find developing and testing plugins very hard.&lt;/p&gt;
-
-&lt;h3&gt;Some user voices&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Building cordova plugins is not ideal because the plugins are authored outside of any native project which makes it hard to develop and test. Not having the native project available means the plugin cannot be built independently of a cordova project, cannot be tested independently of a cordova project, and cannot make use of the standard IDE with intellisense without a cordova project.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;There are many Cordova plugins that are currently not maintained, which makes adding a new plugin to a project really painful, as you always have to check if the plugin is still functional and if there are alternative plugins.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Overall, very good, considering they&amp;#39;re mostly by volunteers. But my impression has been that some plugins that have no alternative aren&amp;#39;t always well-maintained (no specific examples, sorry).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Sometimes poorly maintained, slow to implement fixes, outdated, etc. But yet still critical for any real Cordova project&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I always end up forking them due to them no being updated with each Cordova release&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Cordova makes it simple to build plugins.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;Closing words&lt;/h2&gt;
-
-&lt;p&gt;As you might know, most of the maintainers are volunteers and work on Cordova in their free time. Therefore, we need your help ensuring that Cordova remains a robust and reliable platform for building mobile apps. Your involvement, whether it&amp;#39;s providing feedback, fixing bugs, or developing plugins, is essential to ensuring Cordova&amp;#39;s continued relevance and adoption. The Cordova PMC will do its best to make contributing as easy as possible and provide developer guidance, code reviews, documentation, and frequent releases. A large portion of bug fixes, plugins and features have been provided by dedicated individuals for many years now and will be in the future. You can contribute to Cordova&amp;#39;s future success with your fixes, solutions, plugins and collaboration on releases.&lt;/p&gt;
-
-&lt;p&gt;Thank you for being a part of the Cordova community. Together, we can shape the future of mobile development.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/01/12/survey-results.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/01/12/survey-results.html</guid>
-        
-        <category>news</category>
         
         
         <category>announcements</category>

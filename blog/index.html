@@ -126,6 +126,55 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Wed, 20 Nov 2024 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2024/11/20/cordova-plugin-file-8.1.3.html">File Plugin 8.1.3 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">20 Nov 2024</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://breautek.com">Norman Breau</a>
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-file</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file">cordova-plugin-file@8.1.3</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-file
+cordova plugin add cordova-plugin-file@8.1.3
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This patch fixes an issue with <code>FileEntry.toURL()</code> on iOS devices when the app 
+is hosted through schemes. The intent for this API is to produce a URL that
+can be used in the DOM, like image tags for example. However, iOS devices always
+produced <code>file://</code> URIs which is not usable when the webview is configured to
+use schemes.</p>
+
+<p>Starting with 8.1.3, <code>FileEntry.toURL()</code> will produce an app-scheme URI if the
+iOS webview is configured to use app schemes, or a <code>file://</code> uri otherwise.</p>
+
+<p>This brings the behaviour closer to Android&#39;s implementation.</p>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/announcements/2024/11/20/cordova-plugin-file-8.1.3.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Sat, 02 Nov 2024 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2024/11/02/camera-plugin-camera-8.0.0.html">Camera Plugin 8.0.0 Released!</a>
@@ -14281,7 +14330,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Sat, 02 Nov 2024 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Wed, 20 Nov 2024 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
