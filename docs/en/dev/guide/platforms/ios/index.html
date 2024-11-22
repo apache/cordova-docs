@@ -2584,7 +2584,7 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
     <tr>
       <td>Authentication Key Path</td>
       <td><code>--authenticationKeyPath</code></td>
-      <td>(Optional) The path to an <a href="https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api">App Store Connect API</a> p8 key file, for automatic distribution signing.</td>
+      <td>(Optional) The absolute path to an <a href="https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api">App Store Connect API</a> p8 key file, for automatic distribution signing. A relative path will not work.</td>
     </tr>
     <tr>
       <td>Authentication Key ID</td>
@@ -2624,7 +2624,7 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
             </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"authenticationKeyPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/path/to/AuthKey_D383SF739.p8"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authenticationKeyPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/absolute/path/to/AuthKey_D383SF739.p8"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"authenticationKeyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D383SF739"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"authenticationKeyIssuerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6053b7fe-68a8-4acb-89be-165aa6465141"</span><span class="w">
         </span><span class="p">}</span><span class="w">
