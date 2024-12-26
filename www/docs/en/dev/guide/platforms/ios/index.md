@@ -50,6 +50,18 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
     </thead>
     <tbody>
         <tr>
+            <td>8.x</td>
+            <td>13.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: >=1.16.0</li>
+                    <li>ios-deploy: >=1.12.2</li>
+                    <li>Node: >=20.5.0</li>
+                    <li>Xcode (xcodebuild): >=15.0.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td>7.x</td>
             <td>11.0</td>
             <td>
