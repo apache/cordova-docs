@@ -6,9 +6,106 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Nov 2024 05:01:52 +0000</pubDate>
-    <lastBuildDate>Fri, 22 Nov 2024 05:01:52 +0000</lastBuildDate>
+    <pubDate>Thu, 09 Jan 2025 07:26:40 +0000</pubDate>
+    <lastBuildDate>Thu, 09 Jan 2025 07:26:40 +0000</lastBuildDate>
     <generator>Jekyll v4.3.4</generator>
+    
+      <item>
+        <title>Cordova needs you in 2025! Let's start with a meetup</title>
+        <description>&lt;p&gt;The beginning of a new year is always a good opportunity for a project to reflect on the past year and make plans for the one ahead. As we wrapped up 2024, we had an idea that we’re excited to share: hosting another community meetup for Cordova.&lt;/p&gt;
+
+&lt;p&gt;This meetup will be an excellent chance to recap the recent releases and highlight some upcoming tasks. 2024 saw some promising contributions from new developers, and we’ve noticed growing interest in our project. This makes the meetup the perfect time to onboard new contributors and strengthen our community.&lt;/p&gt;
+
+&lt;p&gt;Without more committers, it will become increasingly challenging to maintain a steady release cycle and address the needs of our users. By bringing together experienced contributors and newcomers, we aim to foster collaboration and make future releases smoother. The release process is vital but can often feel overwhelming within the ASF framework. To address this, we are exploring ways to simplify it and provide clearer guidance to our community, making participation more accessible for everyone. &lt;strong&gt;Stay tuned!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1&gt;Joining the Meetup&lt;/h1&gt;
+
+&lt;p&gt;The meetup will be held virtually on Jitsi for participants worldwide. After signing up on our &lt;strong&gt;&lt;a href=&quot;https://lu.ma/zdsnddl2&quot;&gt;meetup page&lt;/a&gt;&lt;/strong&gt;, you’ll receive detailed instructions on how to join. Whether you’re a seasoned contributor or just starting to explore Cordova, we encourage you to participate.&lt;/p&gt;
+
+&lt;p&gt;Let’s kick off 2025 with a strong sense of community and a shared vision for Cordova’s future. We’re looking forward to seeing you there!&lt;/p&gt;
+
+&lt;h1&gt;Agenda&lt;/h1&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Introduction&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Short recap of 2024&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Platform Releases
+        &lt;ul&gt;
+          &lt;li&gt;Cordova-Android&lt;/li&gt;
+          &lt;li&gt;Cordova-Electron&lt;/li&gt;
+          &lt;li&gt;Cordova-iOS&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Plugin Releases
+        &lt;ul&gt;
+          &lt;li&gt;Camera&lt;/li&gt;
+          &lt;li&gt;Device&lt;/li&gt;
+          &lt;li&gt;File&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Other Points
+        &lt;ul&gt;
+          &lt;li&gt;Cordova-Android Next Major&lt;/li&gt;
+          &lt;li&gt;Community Survey&lt;/li&gt;
+          &lt;li&gt;User Feedback of 2024&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What&amp;#39;s Next in 2025&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Platform Releases
+        &lt;ul&gt;
+          &lt;li&gt;Cordova-iOS 8&lt;/li&gt;
+          &lt;li&gt;Cordova-Android 14&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Community Release Livestream&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Other Topic Points
+        &lt;ul&gt;
+          &lt;li&gt;Google Android release timeline changes and what it means for Cordova&lt;/li&gt;
+          &lt;li&gt;User Feedback for 2025&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Community Interest &amp;amp; Feedback&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Interest in Contributing
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Why do we need more people to contribute?&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;How do you feel about the state of Cordova?&lt;/li&gt;
+      &lt;li&gt;What areas do you find needing attention?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Wrap-Up&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/01/08/meetup-1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/01/08/meetup-1.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>File Plugin 8.1.3 Released!</title>
@@ -962,102 +1059,6 @@ cordova platform add ios@7.1.0
         <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Electron 4.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Electron 4.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Electron applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-electron&quot;&gt;cordova-electron@4.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove electron
-cordova platform add electron@4.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add electron@4.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;Some of the notable breaking changes in this release are:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Node.js Requirement:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This release requires the environment to have &lt;strong&gt;Node.js&lt;/strong&gt; &lt;code&gt;18.0.0&lt;/code&gt; or higher. It is recommended to use the current LTS, which is &lt;code&gt;20.11.1&lt;/code&gt; at the time of this release.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Electron Update:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Electron&lt;/strong&gt; core dependencies have been updated to &lt;code&gt;29.0.0&lt;/code&gt;. This version of Electron comes with the following app stack:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Chromium 122.0.6261.39&lt;/li&gt;
-  &lt;li&gt;Node v20.9.0&lt;/li&gt;
-  &lt;li&gt;V8 12.2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;More information about Electron 29.0.0 can be read on their &lt;a href=&quot;https://www.electronjs.org/blog/electron-29-0&quot;&gt;blog post here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Removed Plugin Argument&amp;#39;s Accidental Multidimensional Array Wrapping:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In Cordova-Electron 3.0.0, plugin support was introduced, but an unintentional multidimensional array wrapping of the plugin arguments occurred. This wrapping may not have been noticeable to app developers, but it affected plugin developers.&lt;/p&gt;
-
-&lt;p&gt;Typically, a plugin includes a set of APIs that may accept arguments, and these arguments are forwarded to the native side of the plugin. Due to improper argument spreading, plugin developers had to consistently access index 0 at the first level to retrieve the actual arguments, as in &lt;code&gt;args[0][0]&lt;/code&gt;. There was never an &lt;code&gt;args[n+1]&lt;/code&gt; scenario.&lt;/p&gt;
-
-&lt;p&gt;This release corrected this issue. Plugin developers will need to update their plugins if the plugins are designed to read passed-in arguments.&lt;/p&gt;
-
-&lt;p&gt;For a quick start guide and in-depth configuration setup, please check out our &lt;a href=&quot;https://cordova.apache.org/docs/en/12.x/guide/platforms/electron/index.html&quot;&gt;Cordova Electron Documentation&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find at &lt;a href=&quot;http://issues.cordova.io/&quot;&gt;issues.cordova.io&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;h4&gt;Breaking&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/263&quot;&gt;GH-263&lt;/a&gt; feat!: bump &lt;code&gt;electron@^29.0.0&lt;/code&gt; w/ supporting changes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/266&quot;&gt;GH-266&lt;/a&gt; fix!: remove extra array wrapper from passed arguments&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/264&quot;&gt;GH-264&lt;/a&gt; npm(dep)!: bump &lt;code&gt;electron-builder@^24.12.0&lt;/code&gt;, bump node engine requirement &amp;amp; CI
-    &lt;ul&gt;
-      &lt;li&gt;Updates Node Engine Requirement &lt;code&gt;&amp;gt;= 18.0.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/271&quot;&gt;GH-271&lt;/a&gt; dep!: bump &lt;code&gt;fs-extra@^11.2.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/265&quot;&gt;GH-265&lt;/a&gt; npm(dep)!: bump other dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Others&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/232&quot;&gt;GH-232&lt;/a&gt; dep(npm): bump dev dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/270&quot;&gt;GH-270&lt;/a&gt; chore: rebuilt &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;CI:**&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/268&quot;&gt;GH-268&lt;/a&gt; ci: downgrade codecov action dependency to v3&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/267&quot;&gt;GH-267&lt;/a&gt; ci: add node 20.x &amp;amp; use latest action dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-electron/pull/236&quot;&gt;GH-236&lt;/a&gt; ci: update github action workflow&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/03/11/cordova-electron-release-4.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/03/11/cordova-electron-release-4.0.0.html</guid>
         
         <category>news</category>
         
