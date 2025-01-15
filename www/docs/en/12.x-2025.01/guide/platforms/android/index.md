@@ -41,22 +41,6 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
     </thead>
     <tbody>
         <tr>
-            <td>13.0.x</td>
-            <td>24 (7.0) - 34 (14.0)</td>
-            <td>
-                <ul>
-                    <li>Build Tools: ^34.0.0</li>
-                    <li>Kotlin: 1.9.24</li>
-                    <li>Gradle: 8.7</li>
-                    <li>Android Gradle Plugin: 8.3.0</li>
-                    <li>AndroidX Compat Library: 1.6.1</li>
-                    <li>AndroidX WebKit Library: 1.6.0</li>
-                    <li>AndroidX Core SplashScreen: 1.0.0</li>
-                    <li>Google Services Gradle Plugin: 4.3.15</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
             <td>12.0.x</td>
             <td>24 (7.0) - 33 (13.0)</td>
             <td>
@@ -177,11 +161,9 @@ To ensure your system meets the necessary requirements, please refer to the "[In
 
 ### Java Development Kit (JDK)
 
-If using `cordova-android` 13 or later, install the [Java Development Kit (JDK) 17](https://www.oracle.com/java/technologies/downloads/#java17).
+If you are using `cordova-android` 10.0.0 or greater, install the [Java Development Kit (JDK) 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
 
-If using `cordova-android` 10 through 12, install the [Java Development Kit (JDK) 11](https://www.oracle.com/java/technologies/downloads/#java11)
-
-If using `cordova-android` 9 or earlier, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
+If you are using any version below `cordova-android` 10.0.0, install the [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html).
 
 The `JAVA_HOME` environment variable must be set according to your JDK installation path. See the [Setting Environment Variables](#setting-environment-variables) section on how to set up environment variables. Alternatively as of `cordova-android` 10.0.0 or greater, `CORDOVA_JAVA_HOME` can be set in place of `JAVA_HOME`, allowing a JDK install to be used specifically for Cordova development.
 
@@ -282,48 +264,29 @@ It is also recommended to update the `PATH` environment variable to include the 
 
 _**Note:** The directories above are generally located in the Android SDK ROOT._
 
-#### Linux and macOS
+#### macOS and Linux
 
-On Linux or macOS versions prior to Catalina, use any text editor to create or modify the `~/.bash_profile` file.
-<br>On macOS Catalina and newer, create or modify the `~/.zprofile` file, as the default shell has changed.
+On a Mac or Linux, with a text editor, create or modify the `~/.bash_profile` file.
 
-Add the following line to your shell's profile to set up the `ANDROID_HOME` environment variable.
-
-**Linux:**
+To set an environment variable, add a line that uses `export` like so (substitute the path with your local installation):
 
 ```bash
-export ANDROID_HOME=~/Android/Sdk
+export ANDROID_HOME=/Development/android-sdk/
 ```
 
-**macOS:**
-
-```bash
-export ANDROID_HOME=~/Library/Android/sdk
-```
-
-The above examples point to the standard paths where the Android SDK is typically stored. Depending on your environment configuration, the path may differ. Be sure to confirm that the path exist or adjust them to match your local installation.
-
-After setting the `ANDROID_HOME` environment variable, update the `PATH` variable to include directories containing various Android-related binaries.
+To update your `PATH`, add a line resembling the following (substitute the paths with your local Android SDK installation's location):
 
 ```bash
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
-export PATH=$PATH:$ANDROID_HOME/build-tools/
+export PATH=$PATH:$ANDROID_HOME/build-tools
 export PATH=$PATH:$ANDROID_HOME/emulator/
 ```
 
 Reload your terminal to see this change reflected or run the following command:
 
-**Linux and macOS older then Catalina:**
-
 ```bash
 source ~/.bash_profile
-```
-
-**macOS Catalina and newer:**
-
-```bash
-source ~/.zprofile
 ```
 
 #### Windows
@@ -511,7 +474,7 @@ versionCode = MAJOR * 10000 + MINOR * 100 + PATCH
 ```
 
 If your application has enabled the `cdvBuildMultipleApks` Gradle property (see [Setting Gradle Properties](#setting-gradle-properties)), the version code of your app will also be multiplied by 10 so that the last digit of the code can be used to indicate the architecture the apk was built for. This multiplication
-will happen regardless of whether the version code is taken from the `android-versionCode` attribute or generated using the `version`.
+will happen regardless of whether the version code is taken from the `android-versionCode` attribute or generated using the `version`. 
 
 _**Note:** Be aware that some plugins added to your project may set this Gradle property automatically._
 
@@ -615,7 +578,7 @@ To open a Cordova-Android project in Android Studio:
 3. Navigate to the project's Android platform directory: (`<project-root>/platforms/android`)
 4. Click **Open**
 
-Once it finishes importing, you should be able to build and run the app directly from **Android Studio**.
+Once it finishes importing, you should be able to build and run the app directly from **Android Studio**. 
 
 For more resources, please see:
 
