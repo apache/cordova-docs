@@ -67,7 +67,7 @@ cordova plugin add cordova-plugin-device
 
 The plugin repository must feature a top-level `plugin.xml` manifest
 file. There are many ways to configure this file, details for which
-are available in the [Plugin Specification](../../../plugin_ref/spec.html). 
+are available in the [Plugin Specification](../../../plugin_ref/spec.html).
 
 This abbreviated version of the `Device` plugin provides a simple example to use as a model:
 
@@ -101,7 +101,7 @@ JavaScript interface](#the-javascript-interface).
 set of native code, for the `ios` platform in this case.
 - The `config-file` tag encapsulates a `feature` tag that is injected into
 the platform-specific `config.xml` file to make the platform aware of
-the additional code library. 
+the additional code library.
 - The `header-file` and `source-file` tags
 specify the path to the library's component files.
 
@@ -186,14 +186,14 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 ## Testing a Plugin during development
 
-The simplest way to manually test a plugin during development is to create a 
+The simplest way to manually test a plugin during development is to create a
 Cordova app as usual and add the plugin with the `--link` option:
 
 ```bash
 cordova plugin add ../path/to/my/plugin/relative/to/project --link
 ```
 
-This creates a symbolic link instead of copying the plugin files, which enables you 
+This creates a symbolic link instead of copying the plugin files, which enables you
 to work on your plugin and then simply rebuild the app to use your changes.
 
 ## Validating a Plugin using Plugman
@@ -304,7 +304,7 @@ structure:
 * `PLUGIN_VERSION` specifies the version of your plugin. It should adhere to the syntax for a single version as defined by [npm's semver package][npm-semver] or an upper bound (see [below](#upper-bounds))
 * `DEPENDENCY` may be one of the following:
     * The Cordova CLI: `"cordova"`
-    * A Cordova platform: `"cordova-android"`, `"cordova-ios"` etc.
+    * A Cordova platform: `"cordova-android"`, `"cordova-ios"`, etc.
     * Another Cordova plugin: `"cordova-plugin-camera"`, etc.
 * `SEMVER_RANGE` should adhere to the syntax for a range as defined by [npm's semver package][npm-semver]
 
