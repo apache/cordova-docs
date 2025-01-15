@@ -1542,7 +1542,31 @@
                             <a href="/docs/en/latest/" class="missing-page">
                                 
                                     
-                                12.x
+                                12.x-2025.01
+                                
+                                    (Latest)
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/" class="missing-page">
+                                
+                                    
+                                12.x-2025.01
                                 
                                     (Latest)
                                 
@@ -2679,7 +2703,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
   <li>iOS</li>
 </ul>
 
-<p><strong>Kind</strong>: static method of <code>[camera](#module_camera)</code><br />
+<p><strong>Kind</strong>: static method of <code>[camera](#module_camera)</code>
 <strong>Example</strong></p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">cleanup</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">);</span>
 
@@ -2762,7 +2786,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
   <li><a href="#CameraOptions-quirks">Quirks</a></li>
 </ul>
 
-<p><strong>Kind</strong>: static typedef of <code>[camera](#module_camera)</code><br />
+<p><strong>Kind</strong>: static typedef of <code>[camera](#module_camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -2860,7 +2884,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 <h3>Camera.DestinationType : <code>enum</code></h3>
 <p>Defines the output format of <code>Camera.getPicture</code> call.</p>
 
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code><br />
+<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -2891,7 +2915,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 <p><a name="module_Camera.EncodingType"></a></p>
 
 <h3>Camera.EncodingType : <code>enum</code></h3>
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code><br />
+<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -2922,7 +2946,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 <p><a name="module_Camera.MediaType"></a></p>
 
 <h3>Camera.MediaType : <code>enum</code></h3>
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code><br />
+<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -2961,7 +2985,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 <h3>Camera.PictureSourceType : <code>enum</code></h3>
 <p>Defines the output format of <code>Camera.getPicture</code> call.</p>
 
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code><br />
+<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -3000,7 +3024,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 <h3>Camera.PopoverArrowDirection : <code>enum</code></h3>
 <p>Matches iOS UIPopoverArrowDirection constants to specify arrow location on popover.</p>
 
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code><br />
+<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -3043,7 +3067,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 <p><a name="module_Camera.Direction"></a></p>
 
 <h3>Camera.Direction : <code>enum</code></h3>
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code><br />
+<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
 <strong>Properties</strong></p>
 
 <table>
@@ -3426,11 +3450,11 @@ displays:</p>
         <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">profilePic</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
         <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
-        
+
         <span class="c1">// Example 2: Upload it!</span>
         <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-            
+
             <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
                 <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
                 <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">https://myserver.com/upload</span><span class="dl">'</span><span class="p">);</span>
