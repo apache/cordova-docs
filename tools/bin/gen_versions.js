@@ -40,27 +40,26 @@ function main () {
     // go through directory that contains all languages
     util.listdirsSync(rootDir).forEach(function (langId) {
         const langPath = path.join(rootDir, langId);
-        let versionNames = util.listdirsSync(langPath);
 
-        // Remove dev version for semver sort. We'll add it back later.
-        versionNames.splice(versionNames.indexOf('dev'), 1);
+        // Get all directories, excluding dev, and make sure it is in lexicographically order.
+        const versionNames = util.listdirsSync(langPath)
+            .filter(dir => dir !== 'dev')
+            .sort((a, b) => a.localeCompare(b));
 
-        // semver doesn't like a value of 10.x, so we'll coerce the values into proper 10.0.0,
-        // and store a map to easily convert map our sorted away back to our desired text.
-        const coercionMap = {};
-        versionNames = versionNames.map((v) => {
-            const coerced = semver.coerce(v).toString();
-            coercionMap[coerced] = v;
-            return coerced;
+        // Semver cant sort invalid values. E.g. 10.x or 12.x-2025.01
+        // Will create an array of objects containing the coerce value (10.0.0) for sorting and
+        // the original readable name for display.
+        const versionMap = versionNames.map((readable) => {
+            const [versionPart] = readable.split('-');
+            const coerced = semver.coerce(versionPart)?.toString() || versionPart;
+            return { readable, semantic: coerced };
         });
 
-        versionNames = semver.sort(versionNames);
+        const sortedVersions = versionMap.filter(v => semver.valid(v.semantic))
+            .sort((a, b) => semver.compare(a.semantic, b.semantic))
+            .map(v => v.readable);
 
-        // Now we can restore our desired labelling
-        versionNames = versionNames.map((v) => coercionMap[v]);
-
-        // Finally, don't forget to restore our dev version
-        versionNames.push('dev');
+        sortedVersions.push('dev'); // add back dev
 
         // get language ID
         const langName = LANGUAGE_MAP[langId];
@@ -72,7 +71,7 @@ function main () {
         // set the language name and the versions it has
         config[langId] = {
             name: langName,
-            versions: versionNames
+            versions: sortedVersions
         };
     });
 
