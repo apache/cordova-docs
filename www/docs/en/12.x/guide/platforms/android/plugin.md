@@ -80,15 +80,19 @@ referenced by a call from JavaScript, unless `<param>` with an `onload`
 </feature>
 ```
 
-Plugins should use the `initialize` method for their start-up logic.
+Plugins should use `pluginInitialize` for their start-up logic.
 
 ```java
+/**
+ * Called after plugin construction and fields have been initialized.
+ */
 @Override
-public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-    super.initialize(cordova, webView);
-    // your init code here
+protected void pluginInitialize() {
+    // Your code here ...
 }
 ```
+
+Do not use [CordovaPlugin#initialize(CordovaInterface cordova, CordovaWebView webView)](https://github.com/apache/cordova-android/blob/dff2fc633121f995b6827a9d1a211c3c54d60c7d/framework/src/org/apache/cordova/CordovaPlugin.java#L68) anylonger, as this will be deprecated in the future. `CordovaPlugin` has the public members `cordova` and `webView` which you can access in your plugin.
 
 Plugins also have access to Android lifecycle events and can handle them
 by extending one of the provided methods (`onResume`, `onDestroy`, etc).
