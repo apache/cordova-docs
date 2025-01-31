@@ -6,9 +6,31 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Jan 2025 23:01:29 +0000</pubDate>
-    <lastBuildDate>Sat, 25 Jan 2025 23:01:29 +0000</lastBuildDate>
-    <generator>Jekyll v4.3.4</generator>
+    <pubDate>Fri, 31 Jan 2025 21:22:34 +0000</pubDate>
+    <lastBuildDate>Fri, 31 Jan 2025 21:22:34 +0000</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova 2024 recap and plans for 2025 - Meetup recording</title>
+        <description>&lt;p&gt;We kicked off 2025 with a very successful virtual meetup! Thank you to everyone who attended, and a huge thanks to Bryan Ellis (@erisu) for preparing and hosting the meeting. We had over 100 registrations and more than 60 attendees.&lt;/p&gt;
+
+&lt;p&gt;The recording is available on &lt;a href=&quot;https://www.youtube.com/watch?v=mxZsVWJ8AT8&quot;&gt;YouTube&lt;/a&gt;, and you can find the slides &lt;a href=&quot;https://www.erisu.dev/slides/cordova-meetup-2025/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Bryan provided a recap of 2024, summarizing Cordova releases and milestones, and shared some plans for the current year. As always, we can&amp;#39;t provide exact timelines since our work is entirely volunteer-driven. However, if you’d like to help us achieve our goals, you can start contributing at any time!&lt;/p&gt;
+
+&lt;p&gt;We also have plans for additional meetups to make contributing even more accessible. Stay tuned for more details!&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html</guid>
+        
+        <category>news</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova needs you in 2025! Let's start with a meetup</title>
@@ -929,136 +951,6 @@ cordova platform add android@13.0.0
         <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 7.1.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.1.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.1.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@7.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.1.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Features&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This preference allows you to set the splashscreen&amp;#39;s background colour. If no &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; is provided, it will fall back to the &lt;code&gt;BackgroundColor&lt;/code&gt;, which is the current behavior, and then fallback to the system background colour when nothing is defined.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;code&gt;privacy-manifest&lt;/code&gt; Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This release supplies the templated blank privacy manifest file, &lt;code&gt;PrivacyInfo.xcprivacy&lt;/code&gt; which can be configured from &lt;code&gt;config.xml&lt;/code&gt;.&lt;/p&gt;
-
-    &lt;p&gt;This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.&lt;/p&gt;
-
-    &lt;p&gt;It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.&lt;/p&gt;
-
-    &lt;p&gt;Below is an example config.xml entry that app developers can define to configure the privacy manifest file.&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;platform&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ios&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;privacy-manifest&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyTracking&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;true/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyCollectedDataTypes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyAccessedAPITypes&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;key&amp;gt;&lt;/span&gt;NSPrivacyTrackingDomains&lt;span class=&quot;nt&quot;&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;array/&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/privacy-manifest&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/platform&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;The contents and values of &lt;code&gt;NSPrivacyTracking&lt;/code&gt;, &lt;code&gt;NSPrivacyCollectedDataTypes&lt;/code&gt;, &lt;code&gt;NSPrivacyAccessedAPITypes&lt;/code&gt;, and &lt;code&gt;NSPrivacyTrackingDomains&lt;/code&gt; will depend on the specific native APIs being utilized.&lt;/p&gt;
-
-    &lt;p&gt;It is recommended to read the Apple Developer documentation to better understand these parameters.&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files&quot;&gt;Privacy manifest files&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api&quot;&gt;Describing use of required reason API&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests&quot;&gt;Describing data use in privacy manifests&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Fixes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Use &lt;code&gt;PROVISIONING_PROFILE_SPECIFIER&lt;/code&gt; for manual codesigning&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Allows you to use either the UUID or name value from the provisioning profile for the build flag &lt;code&gt;provisioningProfile&lt;/code&gt; in either the &lt;code&gt;build.json&lt;/code&gt; configuration file or via the CLI command.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;WASM MIME type error&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Enables WebAssembly support in Cordova WebView.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1411&quot;&gt;GH-1411&lt;/a&gt; feat: &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1406&quot;&gt;GH-1406&lt;/a&gt; feat: add &lt;code&gt;privacy-manifest&lt;/code&gt; config support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1383&quot;&gt;GH-1383&lt;/a&gt; feat: add PrivacyInfo.xcprivacy for CordovaLib &amp;amp; app template&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1405&quot;&gt;GH-1405&lt;/a&gt; fix: use &lt;code&gt;PROVISIONING_PROFILE_SPECIFIER&lt;/code&gt; for manual codesigning&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1374&quot;&gt;GH-1374&lt;/a&gt; fix: WASM MIME type error by specifying it in Info.plist template&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1413&quot;&gt;GH-1413&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1404&quot;&gt;GH-1404&lt;/a&gt; chore: update package &amp;amp; package-lock&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1382&quot;&gt;GH-1382&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;@babel/traverse&lt;/code&gt; from 7.21.4 to 7.23.2&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1380&quot;&gt;GH-1380&lt;/a&gt; chore: Update Slack signup link in SUPPORT_QUESTION.md&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1412&quot;&gt;GH-1412&lt;/a&gt; ci: Fix ObjC testing with latest Xcode&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1408&quot;&gt;GH-1408&lt;/a&gt; ci(gh-action): add Apache RAT &amp;amp; package license checker workflow w/ license header additions&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/04/03/cordova-ios-7.1.0.html</guid>
         
         <category>news</category>
         
