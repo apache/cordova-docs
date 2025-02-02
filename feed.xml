@@ -6,9 +6,56 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 Jan 2025 21:22:34 +0000</pubDate>
-    <lastBuildDate>Fri, 31 Jan 2025 21:22:34 +0000</lastBuildDate>
+    <pubDate>Sun, 02 Feb 2025 05:21:12 +0000</pubDate>
+    <lastBuildDate>Sun, 02 Feb 2025 05:21:12 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Common 5.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@5.0.1&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/222&quot;&gt;GH-222&lt;/a&gt; chore: bump npm dependencies to current minor revisions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/217&quot;&gt;GH-217&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/214&quot;&gt;GH-214&lt;/a&gt; chore(deps): bump micromatch from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/211&quot;&gt;GH-211&lt;/a&gt; chore: Minor test fixes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/210&quot;&gt;GH-210&lt;/a&gt; chore: Don&amp;#39;t list dev dependencies in NOTICE&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/208&quot;&gt;GH-208&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/203&quot;&gt;GH-203&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/204&quot;&gt;GH-204&lt;/a&gt; chore: fix typo in license checker&amp;#39;s ignored-packages config&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/218&quot;&gt;GH-218&lt;/a&gt; ci: Fix dependabot PR failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/207&quot;&gt;GH-207&lt;/a&gt; ci: Add NodeJS 22 to CI matrix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/206&quot;&gt;GH-206&lt;/a&gt; ci: Set up CodeQL analysis&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/205&quot;&gt;GH-205&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/202&quot;&gt;GH-202&lt;/a&gt; ci: add release audit workflow&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova 2024 recap and plans for 2025 - Meetup recording</title>
@@ -722,235 +769,6 @@ cordova platform add ios@7.1.1
         <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Android 13.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 13.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@13.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
-cordova platform add android@13.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@13.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;BREAKING CHANGES&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Target SDK&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;This release has increased the target SDK to 34 (Android 14).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Android Studio Requirement&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Android Studio Jellyfish is required if building and running from Android Studio.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Required Build Tools&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;To use &lt;code&gt;cordova-android@13&lt;/code&gt;, SDK Platform &lt;code&gt;34&lt;/code&gt; and SDK Build Tools &lt;code&gt;34.0.0&lt;/code&gt; must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in your projects.&lt;/p&gt;
-
-    &lt;p&gt;To install SDK Platform 34:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
-      &lt;li&gt;Click on &lt;code&gt;SDK Platforms&lt;/code&gt; tab&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;Android 14.0 (&quot;UpsideDownCake&quot;)&lt;/code&gt; which has the &lt;code&gt;API Level&lt;/code&gt; of &lt;code&gt;34&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/cordova-android-13-platform-sdk-34.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;To install SDK Build Tools 34.0.0:&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
-      &lt;li&gt;Click on &lt;code&gt;SDK Tools&lt;/code&gt; tab&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;Show Package Details&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Expand &lt;code&gt;Android SDK Build-Tools&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Check &lt;code&gt;34.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2024/cordova-android-13-sdk-build-tools-3400.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;The following project dependencies were bumpped:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Kotlin: &lt;code&gt;1.9.24&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Gradle: &lt;code&gt;8.7&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;8.3.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Preference&lt;/th&gt;
-          &lt;th&gt;Default Value&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-minSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;24&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-maxSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;em&gt;Not set&lt;/em&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-targetSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;34&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-compileSdkVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;em&gt;android-targetSdkVersion configured value&lt;/em&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;android-buildToolsVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;34.0.0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;GradleVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;8.7&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;AndroidGradlePluginVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;8.3.0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;GradlePluginKotlinVersion&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;1.9.24&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;p&gt;Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Increased Java Requirement&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;The Java Development Kit (JDK) requirement has been increased to version 17 due to the new versions of dependencies and tooling previously described.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Removed &lt;code&gt;kotlin-android-extensions&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code&gt;kotlin-android-extensions&lt;/code&gt; will no longer be checked out when kotlin is greater than or equal to version &lt;code&gt;1.8.0&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Feature&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; Preference Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Added support for a general preference to be consistent across platforms for setting the splash screen background color.&lt;/p&gt;
-
-    &lt;p&gt;The following order of priority is applied when it comes to the Cordova Android platform:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;AndroidWindowSplashScreenBackground&lt;/code&gt; preference&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;BackgroundColor&lt;/code&gt; preference&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;#ffffff&lt;/code&gt; hardcoded&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Add Camera Intent Support for File Input Capture&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Allows user to access and use the camera when the HTML file &lt;code&gt;input&lt;/code&gt; tag contains the &lt;code&gt;capture&lt;/code&gt; flag.&lt;/p&gt;
-
-    &lt;p&gt;Example:&lt;/p&gt;
-
-    &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;file&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;capture&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Added &lt;code&gt;ResolveServiceWorkerRequests&lt;/code&gt; Preference Support&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Added a preference that makes it possible for service worker requests to go through the asset loader. By default this is enabled.&lt;/p&gt;
-
-    &lt;p&gt;This can be disabled with the following preference.&lt;/p&gt;
-
-    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;preference&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ResolveServiceWorkerRequests&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-android/issues&quot;&gt;Cordova-android&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1678&quot;&gt;GH-1678&lt;/a&gt; feat!: API 34 Support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1543&quot;&gt;GH-1543&lt;/a&gt; feat!: bump &lt;code&gt;kotlin@1.9.24&lt;/code&gt; &amp;amp; drop &lt;code&gt;kotlin-android-extensions&lt;/code&gt; when kotlin &lt;code&gt;&amp;gt;=1.8.0&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1700&quot;&gt;GH-1700&lt;/a&gt; feat(splash): Support &lt;code&gt;SplashScreenBackgroundColor&lt;/code&gt; preference&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1609&quot;&gt;GH-1609&lt;/a&gt; feat: add camera intent with file input capture&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1696&quot;&gt;GH-1696&lt;/a&gt; feat: Add &lt;code&gt;ResolveServiceWorkerRequests&lt;/code&gt; preference&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores, Dependencies &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1677&quot;&gt;GH-1677&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;@babel/traverse&lt;/code&gt; from &lt;code&gt;7.22.10&lt;/code&gt; to &lt;code&gt;7.23.2&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1713&quot;&gt;GH-1713&lt;/a&gt; dep: bump npm dependencies 20240515
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;semver@7.6.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;rewire@7.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;nopt@7.2.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;jasmine@5.1.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;fs-extra@11.2.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;fast-glob@3.3.2&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;dedent@1.5.3&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;@cordova/eslint-config@5.1.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;which@4.0.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;properties-parser@0.6.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;android-versions@2.0.0&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1711&quot;&gt;GH-1711&lt;/a&gt; ci: Set up CodeQL analysis w/ fixes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1687&quot;&gt;GH-1687&lt;/a&gt; ci(release-audit): add license header and dependency checker&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1703&quot;&gt;GH-1703&lt;/a&gt; ci: update &lt;code&gt;codecov@v4&lt;/code&gt; w/ token&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/05/23/cordova-android-13.0.0.html</guid>
         
         <category>news</category>
         

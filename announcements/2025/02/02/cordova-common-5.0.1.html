@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We kicked off 2025 with a very successful virtual meetup! Thank you to everyone who attended, and a huge thanks to Bryan Ellis (@erisu) for preparing and hos...">
+    <meta name="description" content="We are happy to announce that cordova-common@5.0.1 has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova toolin...">
 
     <title>
         
             
-                Cordova 2024 recap and plans for 2025 - Meetup recording - Apache Cordova
+                Cordova Common 5.0.1 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -123,24 +123,47 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova 2024 recap and plans for 2025 - Meetup recording</div>
+        <div class="title">Cordova Common 5.0.1 Released!</div>
         <div class="author">By:
             
-              <a href="https://twitter.com/niklasmaerz">Niklas Merz</a>
+              Bryan Ellis
             
         </div>
-        <div class="date">31 Jan 2025</div>
+        <div class="date">02 Feb 2025</div>
     </header>
     <section>
         <div>
-            <p>We kicked off 2025 with a very successful virtual meetup! Thank you to everyone who attended, and a huge thanks to Bryan Ellis (@erisu) for preparing and hosting the meeting. We had over 100 registrations and more than 60 attendees.</p>
+            <p>We are happy to announce that <code>cordova-common@5.0.1</code> has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
 
-<p>The recording is available on <a href="https://www.youtube.com/watch?v=mxZsVWJ8AT8">YouTube</a>, and you can find the slides <a href="https://www.erisu.dev/slides/cordova-meetup-2025/">here</a>.</p>
+<h2>Release Highlights</h2>
 
-<p>Bryan provided a recap of 2024, summarizing Cordova releases and milestones, and shared some plans for the current year. As always, we can&#39;t provide exact timelines since our work is entirely volunteer-driven. However, if you’d like to help us achieve our goals, you can start contributing at any time!</p>
+<p>The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.</p>
 
-<p>We also have plans for additional meetups to make contributing even more accessible. Stay tuned for more details!</p>
+<!--more-->
+<h1>Changes include:</h1>
 
+<p><strong>Chores:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-common/pull/222">GH-222</a> chore: bump npm dependencies to current minor revisions</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/217">GH-217</a> chore(deps): bump cross-spawn from 7.0.3 to 7.0.6</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/214">GH-214</a> chore(deps): bump micromatch from 4.0.5 to 4.0.8</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/211">GH-211</a> chore: Minor test fixes</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/210">GH-210</a> chore: Don&#39;t list dev dependencies in NOTICE</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/208">GH-208</a> chore(deps): bump braces from 3.0.2 to 3.0.3</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/203">GH-203</a> chore(deps): Modernize some dependencies</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/204">GH-204</a> chore: fix typo in license checker&#39;s ignored-packages config</li>
+</ul>
+
+<p><strong>CI:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-common/pull/218">GH-218</a> ci: Fix dependabot PR failures</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/207">GH-207</a> ci: Add NodeJS 22 to CI matrix</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/206">GH-206</a> ci: Set up CodeQL analysis</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/205">GH-205</a> ci: update codecov@v4 w/ token</li>
+  <li><a href="https://github.com/apache/cordova-common/pull/202">GH-202</a> ci: add release audit workflow</li>
+</ul>
 
         </div>
     </section>
@@ -148,37 +171,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2025/01/08/meetup-1.html">Previous</a>
+                    <a href="/announcements/2025/01/31/meetup-1-recording.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2025/01/08/meetup-1.html">Cordova needs you in 2025! Let's start with a meetup</a>
-                    <div class="date"> 08 Jan 2025 - By Niklas Merz </div>
+                    <a class="title" href="/announcements/2025/01/31/meetup-1-recording.html">Cordova 2024 recap and plans for 2025 - Meetup recording</a>
+                    <div class="date"> 31 Jan 2025 - By Niklas Merz </div>
                     <p class="content">
-                        The beginning of a new year is always a good opportunity for...
+                        We kicked off 2025 with a very successful virtual meetup! Thank you...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2025/02/02/cordova-common-5.0.1.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2025/02/02/cordova-common-5.0.1.html">Cordova Common 5.0.1 Released!</a>
-                    <div class="date"> 02 Feb 2025 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that cordova-common@5.0.1 has been released. This is...
-                    </p>
                 
             </div>
         </div>
