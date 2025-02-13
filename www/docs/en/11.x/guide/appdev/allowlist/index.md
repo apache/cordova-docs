@@ -58,7 +58,7 @@ In `config.xml`, add `<access>` tags, like this:
 <access origin="*" />
 ```
 
-Without any `<access>` tags, only requests to `file://` URLs are allowed. However, the default Cordova application includes `<access origin="*">` by default.
+Without any `<access>` tags, only requests to the location where the app content is served are allowed.
 
 Note: Allow List cannot block network redirects from a allow listed remote website (i.e. `http` or `https`) to a non-allowlisted website. Use CSP rules to mitigate redirects to non-allowlisted websites for webviews that support CSP.
 

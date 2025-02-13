@@ -17,10 +17,10 @@
 
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-
-const argv = require('optimist').argv;
+const fs = require('node:fs');
+const path = require('node:path');
+const minimist = require('minimist');
+const argv = minimist(process.argv.slice(2));
 
 const augment = require('./augment_toc');
 const util = require('./util');

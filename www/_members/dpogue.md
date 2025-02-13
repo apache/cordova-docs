@@ -1,8 +1,7 @@
 ---
 name: Darryl Pogue
-subtitle: "<strong>PMC Member</strong> since Sept. 2016 and Web App developer"
+subtitle: "<strong>PMC Member</strong> since Sept. 2016"
 imageurl: https://avatars.githubusercontent.com/u/241708?s=256&v=4
-twitter: https://twitter.com/dpogue
 homepage: https://dpogue.ca
 ---
 

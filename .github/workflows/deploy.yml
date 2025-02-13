@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
@@ -32,7 +32,7 @@ jobs:
         run: npm run build:prod
 
       - name: Run deploy
-        uses: JamesIves/github-pages-deploy-action@5dc1d5a192aeb5ab5b7d5a77b7d36aea4a7f5c92
+        uses: JamesIves/github-pages-deploy-action@v4.6.8
         with:
           branch: asf-site
           folder: build-prod

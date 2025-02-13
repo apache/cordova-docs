@@ -314,7 +314,7 @@ FullScreen(boolean) <br/> {% cdv_platform android %} | *Default: false* <br/>  A
 GapBetweenPages(float) <br/> {% cdv_platform ios %} | *Default: 0* <br/>  The size of the gap, in points, between pages.
 HideMousePointer(integer) <br/> ==OS X== | *Default: -1* <br/> **(OS X 4.0.0+)** Sets the timeout for hiding the mouse pointer. Set to 0 for immediate, set to -1 for never.
 GradlePluginGoogleServicesEnabled (boolean) <br/> {% cdv_platform android %} | *Default: false* <br/>  Set to true to enable the Google Services Gradle plugin.
-GradlePluginGoogleServicesEnabled (semver) <br/> {% cdv_platform android %} | *Default: 4.2.0* <br/>  Set version of Google Services Gradle plugin to be used.
+GradlePluginGoogleServicesVersion (semver) <br/> {% cdv_platform android %} | *Default: 4.2.0* <br/>  Set version of Google Services Gradle plugin to be used.
 GradlePluginKotlinEnabled (boolean) <br/> {% cdv_platform android %} | *Default: false* <br/>  Set to true to allow Kotlin files to be built.
 GradlePluginKotlinCodeStyle (string) <br/> {% cdv_platform android %} | *Default: official* <br/> Allowed values: official, obsolete<br/>  Sets how the Kotlin code is formatting for readability.
 GradlePluginKotlinVersion (semver) <br/> {% cdv_platform android %} | *Default: 1.3.50* <br/> Set the version of the Kotlin Gradle plugin to be used.
