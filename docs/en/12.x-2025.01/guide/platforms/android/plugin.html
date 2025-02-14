@@ -2415,14 +2415,18 @@ referenced by a call from JavaScript, unless <code>&lt;param&gt;</code> with an 
 <span class="nt">&lt;/feature&gt;</span>
 </code></pre></div></div>
 
-<p>Plugins should use the <code>initialize</code> method for their start-up logic.</p>
+<p>Plugins should use <code>pluginInitialize</code> for their start-up logic.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">(</span><span class="nc">CordovaInterface</span> <span class="n">cordova</span><span class="o">,</span> <span class="nc">CordovaWebView</span> <span class="n">webView</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">super</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">cordova</span><span class="o">,</span> <span class="n">webView</span><span class="o">);</span>
-    <span class="c1">// your init code here</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Called after plugin construction and fields have been initialized.
+ */</span>
+<span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">pluginInitialize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Your code here ...</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
+<p>Do not use <a href="https://github.com/apache/cordova-android/blob/dff2fc633121f995b6827a9d1a211c3c54d60c7d/framework/src/org/apache/cordova/CordovaPlugin.java#L68">CordovaPlugin#initialize(CordovaInterface cordova, CordovaWebView webView)</a> anylonger, as this will be deprecated in the future. <code>CordovaPlugin</code> has the public members <code>cordova</code> and <code>webView</code> which you can access in your plugin.</p>
 
 <p>Plugins also have access to Android lifecycle events and can handle them
 by extending one of the provided methods (<code>onResume</code>, <code>onDestroy</code>, etc).
