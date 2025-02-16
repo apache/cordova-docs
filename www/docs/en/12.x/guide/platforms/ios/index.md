@@ -124,7 +124,7 @@ The [CocoaPods](https://cocoapods.org/#install) tools are needed to build iOS ap
 To install CocoaPods, run the following from command-line terminal:
 
 ```bash
-$ sudo gem install cocoapods
+$ brew install cocoapods
 ```
 
 ## Project Configuration
