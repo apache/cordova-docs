@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that cordova-common@5.0.1 has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova toolin...">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media-capture!  cordova-plugin-media-capture@6.0.0To upgrade:cordova plugin ...">
 
     <title>
         
             
-                Cordova Common 5.0.1 Released! - Apache Cordova
+                Media Capture Plugin 6.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -123,46 +123,83 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Common 5.0.1 Released!</div>
+        <div class="title">Media Capture Plugin 6.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">02 Feb 2025</div>
+        <div class="date">26 Feb 2025</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>cordova-common@5.0.1</code> has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like <code>config.xml</code> parsing.</p>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-media-capture</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0">cordova-plugin-media-capture@6.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@6.0.0
+</code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<p>The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.</p>
+<p>This major release primarily focused on <strong>ensuring</strong> that the plugin complies with Android&#39;s new strict permission requirements.</p>
+
+<p>Specifically, it <strong>removes</strong> unnecessary permissions such as:</p>
+
+<ul>
+  <li><code>android.permission.READ_EXTERNAL_STORAGE</code></li>
+  <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code></li>
+  <li><code>android.permission.RECORD_AUDIO</code></li>
+</ul>
+
+<p>Additionally, it <strong>removes</strong> broad media permissions:</p>
+
+<ul>
+  <li><code>android.permission.READ_MEDIA_AUDIO</code></li>
+  <li><code>android.permission.READ_MEDIA_IMAGES</code></li>
+  <li><code>android.permission.READ_MEDIA_VIDEO</code></li>
+</ul>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
 
 <!--more-->
 <h1>Changes include:</h1>
 
-<p><strong>Chores:</strong></p>
+<p><strong>Breaking Changes:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-common/pull/222">GH-222</a> chore: bump npm dependencies to current minor revisions</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/217">GH-217</a> chore(deps): bump cross-spawn from 7.0.3 to 7.0.6</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/214">GH-214</a> chore(deps): bump micromatch from 4.0.5 to 4.0.8</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/211">GH-211</a> chore: Minor test fixes</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/210">GH-210</a> chore: Don&#39;t list dev dependencies in NOTICE</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/208">GH-208</a> chore(deps): bump braces from 3.0.2 to 3.0.3</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/203">GH-203</a> chore(deps): Modernize some dependencies</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/204">GH-204</a> chore: fix typo in license checker&#39;s ignored-packages config</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/308">GH-308</a> feat(android)!: remove unnecessary permissions</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/280">GH-280</a> feat(android)!: remove RECORD_AUDIO permission not requested at runtime</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/295">GH-295</a> fix(android)!: remove broad media permissions</li>
 </ul>
 
-<p><strong>CI:</strong></p>
+<p><strong>Features:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-common/pull/218">GH-218</a> ci: Fix dependabot PR failures</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/207">GH-207</a> ci: Add NodeJS 22 to CI matrix</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/206">GH-206</a> ci: Set up CodeQL analysis</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/205">GH-205</a> ci: update codecov@v4 w/ token</li>
-  <li><a href="https://github.com/apache/cordova-common/pull/202">GH-202</a> ci: add release audit workflow</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/281">GH-281</a> feat(android): Field &#39;storagePermissions&#39; may be &#39;final&#39;</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/307">GH-307</a> fix(android): Remove usage of Media Store queries</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/302">GH-302</a> fix(android): save media capture to File Provider</li>
+</ul>
+
+<p><strong>Chores, Refactoring, CI:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/306">GH-306</a> chore: upgrade eslint config and rolled dependencies</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/305">GH-305</a> chore: npmrc</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/284">GH-284</a> chore: update asf config</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/309">GH-309</a> refactor(android): cleanup unused or obsolete code</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/304">GH-304</a> ci(ios): update workflow environment</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/301">GH-301</a> ci: sync workflow w/ paramedic</li>
 </ul>
 
         </div>
@@ -171,37 +208,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2025/01/31/meetup-1-recording.html">Previous</a>
+                    <a href="/announcements/2025/02/02/cordova-common-5.0.1.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2025/01/31/meetup-1-recording.html">Cordova 2024 recap and plans for 2025 - Meetup recording</a>
-                    <div class="date"> 31 Jan 2025 - By Niklas Merz </div>
+                    <a class="title" href="/announcements/2025/02/02/cordova-common-5.0.1.html">Cordova Common 5.0.1 Released!</a>
+                    <div class="date"> 02 Feb 2025 - By Bryan Ellis </div>
                     <p class="content">
-                        We kicked off 2025 with a very successful virtual meetup! Thank you...
+                        We are happy to announce that cordova-common@5.0.1 has been released. This is...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">Media Capture Plugin 6.0.0 Released!</a>
-                    <div class="date"> 26 Feb 2025 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released an update...
-                    </p>
                 
             </div>
         </div>

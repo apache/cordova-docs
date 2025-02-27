@@ -6,9 +6,93 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Feb 2025 23:08:50 +0000</pubDate>
-    <lastBuildDate>Wed, 26 Feb 2025 23:08:50 +0000</lastBuildDate>
+    <pubDate>Thu, 27 Feb 2025 04:08:29 +0000</pubDate>
+    <lastBuildDate>Thu, 27 Feb 2025 04:08:29 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Media Capture Plugin 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-media-capture&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0&quot;&gt;cordova-plugin-media-capture@6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@6.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This major release primarily focused on &lt;strong&gt;ensuring&lt;/strong&gt; that the plugin complies with Android&amp;#39;s new strict permission requirements.&lt;/p&gt;
+
+&lt;p&gt;Specifically, it &lt;strong&gt;removes&lt;/strong&gt; unnecessary permissions such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.WRITE_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.RECORD_AUDIO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, it &lt;strong&gt;removes&lt;/strong&gt; broad media permissions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_AUDIO&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_IMAGES&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_VIDEO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/308&quot;&gt;GH-308&lt;/a&gt; feat(android)!: remove unnecessary permissions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/280&quot;&gt;GH-280&lt;/a&gt; feat(android)!: remove RECORD_AUDIO permission not requested at runtime&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/295&quot;&gt;GH-295&lt;/a&gt; fix(android)!: remove broad media permissions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/281&quot;&gt;GH-281&lt;/a&gt; feat(android): Field &amp;#39;storagePermissions&amp;#39; may be &amp;#39;final&amp;#39;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/307&quot;&gt;GH-307&lt;/a&gt; fix(android): Remove usage of Media Store queries&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/302&quot;&gt;GH-302&lt;/a&gt; fix(android): save media capture to File Provider&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores, Refactoring, CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/306&quot;&gt;GH-306&lt;/a&gt; chore: upgrade eslint config and rolled dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/305&quot;&gt;GH-305&lt;/a&gt; chore: npmrc&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/284&quot;&gt;GH-284&lt;/a&gt; chore: update asf config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/309&quot;&gt;GH-309&lt;/a&gt; refactor(android): cleanup unused or obsolete code&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/304&quot;&gt;GH-304&lt;/a&gt; ci(ios): update workflow environment&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/301&quot;&gt;GH-301&lt;/a&gt; ci: sync workflow w/ paramedic&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Common 5.0.1 Released!</title>
@@ -696,79 +780,6 @@ This resolves numerous issues around CocoaPods, multi-target projects, and Info.
         <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/21/cordova-ios-8.1.1-beta.1.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 7.1.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 7.1.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@7.1.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@7.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@7.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;h3&gt;Fixes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Properly uninstall plugins with asset tags&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Fixed issues where plugins were not uninstalling properly if the plugin had &lt;code&gt;&amp;lt;asset&amp;gt;&lt;/code&gt; tags defined in &lt;code&gt;plugin.xml&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Version warnings during plugin add&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;Fixed an issue that displayed version check failure warnings when installing plugins.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Moved &lt;code&gt;CODE_SIGN_ENTITLEMENTS&lt;/code&gt; to the target settings of the application target within the Xcode project.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-iOS/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1446&quot;&gt;GH-1446&lt;/a&gt; fix: uninstall plugin with &lt;code&gt;asset&lt;/code&gt; tag&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1435&quot;&gt;GH-1435&lt;/a&gt; fix: Fix version checking helper scripts&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1436&quot;&gt;GH-1436&lt;/a&gt; fix: Properly set the webview config when it is provided&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1438&quot;&gt;GH-1438&lt;/a&gt; fix: Set CodeSigning Entitlements in Xcode Project at Target level&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1426&quot;&gt;GH-1426&lt;/a&gt; chore: Update CordovaLib.xcodeproj fixture&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1419&quot;&gt;GH-1419&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/07/24/cordova-ios-7.1.1.html</guid>
         
         <category>news</category>
         

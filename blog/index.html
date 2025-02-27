@@ -126,6 +126,62 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Wed, 26 Feb 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">Media Capture Plugin 6.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">26 Feb 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update for <code>cordova-plugin-media-capture</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0">cordova-plugin-media-capture@6.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@6.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<p>This major release primarily focused on <strong>ensuring</strong> that the plugin complies with Android&#39;s new strict permission requirements.</p>
+
+<p>Specifically, it <strong>removes</strong> unnecessary permissions such as:</p>
+
+<ul>
+  <li><code>android.permission.READ_EXTERNAL_STORAGE</code></li>
+  <li><code>android.permission.WRITE_EXTERNAL_STORAGE</code></li>
+  <li><code>android.permission.RECORD_AUDIO</code></li>
+</ul>
+
+<p>Additionally, it <strong>removes</strong> broad media permissions:</p>
+
+<ul>
+  <li><code>android.permission.READ_MEDIA_AUDIO</code></li>
+  <li><code>android.permission.READ_MEDIA_IMAGES</code></li>
+  <li><code>android.permission.READ_MEDIA_VIDEO</code></li>
+</ul>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+</p>
+                    <div><a href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Sun, 02 Feb 2025 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2025/02/02/cordova-common-5.0.1.html">Cordova Common 5.0.1 Released!</a>
@@ -14424,7 +14480,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Sun, 02 Feb 2025 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Wed, 26 Feb 2025 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

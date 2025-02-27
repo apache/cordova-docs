@@ -47,6 +47,7 @@ function checkNotification() {
     var dates = [];
     if (lastVisit != "") {
         
+        dates.push('Wed, 26 Feb 2025 00:00:00 +0000');
         dates.push('Sun, 02 Feb 2025 00:00:00 +0000');
         dates.push('Fri, 31 Jan 2025 00:00:00 +0000');
         dates.push('Wed, 08 Jan 2025 00:00:00 +0000');
