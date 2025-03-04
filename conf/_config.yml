@@ -70,4 +70,4 @@ exclude:
     - static/css-src
 
 collections:
-  - members
+    - members
