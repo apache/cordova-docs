@@ -236,43 +236,7 @@ The `--nosave` flag could be appended to the command to prevent removal of speci
 
     _Note: If the plugin definition existed in `config.xml` from older version's of Cordova CLI, it will also be removed from `config.xml`._
 
-## Updating Platforms
-
-**Command Syntax:**
-
-```bash
-cordova platform update [<package-spec> ...]
-```
-
-You can update platforms using the command above. For details on valid `package-spec` formats, refer to the [Adding Platforms and Plugins](#Adding-Platforms-and-Plugins) section.
-
-_Note: The `update` command applies **only** to platforms._
-
-### Various `update` Examples
-
-- **Cordova Resolved Name:**
-
-    ```bash
-    cordova platform update android
-    ```
-
-    In addition to updating the `cordova-android` platform to the pinned version, it updates the `package.json` file.
-
-    ```bash
-    cordova platform update android@13.0.0
-    ```
-
-    This will update the platform to the targeted version.
-
-- **Local Directory Path:**
-
-    ```bash
-    cordova platform update /path/to/android/platform
-    ```
-
-    In addition to updating the `cordova-android` platform to the local directory content, it will also update the `package.json` file pointing to the local directory path.
-
-### Important Notes on Platform Restoration
+## Important Notes on Platform Restoration
 
 1. What version is installed when using `cordova platform add android` and the platform is defined in `config.xml`?
 
