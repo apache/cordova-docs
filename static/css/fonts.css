@@ -1,0 +1,126 @@
+/*
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+*/
+@font-face {
+  font-family: "Raleway";
+  font-weight: 100;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-Thin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 200;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 900;
+  font-style: normal;
+  src: url(/static/fonts/raleway/Raleway-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 100;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-ThinItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 200;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-ExtraLightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-LightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-Italic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-SemiBoldItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-BoldItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-ExtraBoldItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-weight: 900;
+  font-style: italic;
+  src: url(/static/fonts/raleway/Raleway-BlackItalic.ttf) format("truetype");
+}

@@ -25191,6 +25191,15 @@
     
 
     <url>
+    <loc>https://cordova.apache.org/static/css/fonts.css</loc>
+</url>
+
+
+    
+    
+    
+
+    <url>
     <loc>https://cordova.apache.org/docs/en/3.1.0/cordova/geolocation/geolocation.clearWatch.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
