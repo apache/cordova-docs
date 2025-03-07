@@ -1,8 +1,8 @@
 ---
 name: Niklas Merz
 subtitle:  "<strong>PMC Member</strong> since Dec. 2019 and plugin author"
-imageurl: https://avatars.githubusercontent.com/u/3585860?s=256&v=4
-twitter: https://twitter.com/niklasmaerz
+github: NiklasMerz
+x: niklasmaerz
 homepage: https://blog.merzlabs.com
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: Norman Breau
 subtitle: "<strong>PMC Member</strong> since Aug. 2019"
-imageurl: https://avatars.githubusercontent.com/u/11200662?s=256&v=4
+github: breautek
 homepage: https://breautek.com
 ---
 

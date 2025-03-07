@@ -1,7 +1,7 @@
 ---
 name: Bryan Ellis
-subtitle:  "<strong>PMC Member</strong> since July 2018"
-imageurl: https://avatars.githubusercontent.com/u/1029107
+subtitle: "<strong>PMC Member</strong> since July 2018"
+github: erisu
 homepage: https://erisu.dev
 ---
 
