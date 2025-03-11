@@ -348,21 +348,35 @@ protected void getReadPermission(int requestCode)
 }
 ```
 
-This will call the activity and cause a prompt to appear, asking for the permission.  Once the user has the permission, the result must be handled with the `onRequestPermissionResult` method, which
-every plugin should override.  An example of this can be found below:
+This will call the activity and cause a prompt to appear, asking for the permission. Once the user has the permission, the result must be handled with the `onRequestPermissionResult` method, a forwarded [Android method](https://developer.android.com/reference/android/app/Activity#onRequestPermissionsResult(int,%20java.lang.String[],%20int[])), which every plugin should override.  An example of this can be found below:
 
 ```java
-public void onRequestPermissionResult(int requestCode, String[] permissions,
-                                         int[] grantResults) throws JSONException
+@Override
+public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) throws JSONException
 {
-    for(int r:grantResults)
+    // It is possible that the permissions request interaction with the user is interrupted.
+    // In this case you will receive an empty permissions and grantResults array, which should be
+    // treated as a cancellation.
+    boolean granted = grantResults.length != 0;
+
+    // Check if a permission is denied by user
+    for(int grantResult : grantResults)
     {
-        if(r == PackageManager.PERMISSION_DENIED)
+        if(grantResult == PackageManager.PERMISSION_DENIED)
         {
-            this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, PERMISSION_DENIED_ERROR));
-            return;
+            granted = false;
+            break;
         }
     }
+
+    // User denied a permission
+    if(!granted)
+    {
+        this.callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR, PERMISSION_DENIED_ERROR));
+        return;
+    }
+    
+    // Handle the request with the granted permission
     switch(requestCode)
     {
         case SEARCH_REQ_CODE:
