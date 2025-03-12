@@ -140,9 +140,29 @@ Hot code push solutions improve matters a bit, since they will download code and
 * Certificate checking to ensure that the download is from a trusted server
 * Falls back to last downloaded code in the event something goes wrong
 
-## Encrypted storage
+## Encrypted Storage
 
-(TBD)
+Both **Android** and **iOS** offer various secure storage options. While **Apache Cordova** does not provide these mechanisms natively at the platform core or plugin level, third-party plugins may be available or can be created to implement such features.
+
+**Android:**
+
+* [**Encrypted Shared Preferences**](https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences)
+
+    **Encrypted SharedPreferences** is an encrypted version of SharedPreferences, where both the keys and values are encrypted. This is ideal for storing small amounts of data, such as user settings, preferences, or other sensitive information.
+
+* [**Encrypted File Storage**](https://developer.android.com/reference/androidx/security/crypto/EncryptedFile)
+
+    **Encrypted File Storage** is suitable for securely storing files, perfect for large data. By using the `EncryptedFile` class, you can create and read encrypted files, ensuring that the file contents remain protected.
+
+**iOS:**
+
+* **File Protection**
+
+    Using [`NSFileManager`](https://developer.apple.com/documentation/foundation/nsfilemanager), which provides an interface for managing the file system, you can define a file's protection level with the [`NSFileProtectionType`](https://developer.apple.com/documentation/foundation/nsfileprotectiontype) attribute. This allows you to store files on disk with protection based on the device's lock state. Files are encrypted and accessible only when the device is unlocked.
+
+* [**Keychain Services**](https://developer.apple.com/documentation/security/keychain-services?language=objc)
+
+    **Keychain Services** is a secure method for storing small pieces of sensitive data, such as passwords or tokens. Data in the keychain is encrypted and protected by the device's security mechanisms.
 
 ## Recommended Articles and Other Resources
 
