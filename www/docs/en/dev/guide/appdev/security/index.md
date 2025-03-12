@@ -55,9 +55,9 @@ Always validate any and all input that your application accepts. This includes u
 
 If usernames, password, geolocation information, and other sensitive data is stored, then it could potentially be retrieved later by an unauthorized user or application.
 
-### Don't use eval()
+### Don't use `eval()`
 
-The JavaScript function eval() has a long history of being abused. Using it incorrectly can open your code up for injection attacks, debugging difficulties, and slower code execution.
+The JavaScript function `eval()` has a long history of being abused. Using it incorrectly can open your code up for injection attacks, debugging difficulties, and slower code execution.
 
 ### Do not assume that your source code is secure
 
