@@ -141,7 +141,9 @@ Note: `allow-navigation` takes precedence over `allow-intent`. Allowing navigati
 
 ## Content Security Policy (CSP)
 
-The Content Security Policy `meta` tag, or CSP for short, is a very powerful mechanism you can use to control trusted sources of content. You can restrict various content types and restrict the domains from which content can be loaded. You can also disable unsafe and risky HTML and JavaScript, which can further increase the security of your app. The CSP tag should be placed in your app's `index.html` file.
+The [**Content Security Policy (CSP)**](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) `<meta>` tag is a very powerful mechanism that allows you to control trusted sources of content. You can restrict various content types and domains from which content can be loaded from. Unsafe and risky HTML and JavaScript can also be disabled to further increase the security of your app.
+
+The CSP `<meta>` tag should be placed in your app's index.html file.
 
 On Android and iOS, the network request allow list (see above) is not able to filter all types of requests (e.g. `<video>` & WebSockets are not blocked). So, in addition to the allow list, you should use a [Content Security Policy](http://content-security-policy.com/) `<meta>` tag on all of your pages.
 
