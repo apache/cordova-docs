@@ -85,7 +85,7 @@ By default navigations are only allowed to `file://` URLs. To allow others URLs,
      to the host, or as a suffix to the path -->
 <allow-navigation href="*://*.example.com/*" />
 
-<!-- 
+<!--
     A wildcard can be used to allow the entire network, over HTTP and HTTPS.
     This is *NOT RECOMMENDED*
 -->
@@ -203,7 +203,7 @@ Here are some example CSP declarations for your `.html` pages:
 <!-- Allow everything but only from the same origin and foo.com -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' foo.com">
 
-<!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that 
+<!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that
     * CSS only from the same origin and inline styles,
     * scripts only from the same origin and inline styles, and eval()
 -->
