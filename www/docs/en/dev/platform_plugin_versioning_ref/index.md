@@ -208,7 +208,7 @@ The `remove` command also has an alias of `rm`.
 
 The `package-name` argument must be the name of the platform or plugin you want to remove.
 
-For platforms, you **MUST** use the [Cordova Resolved Names](#Cordova-Resolved-Names) when removing them.
+For Apache Cordova's platforms, you **MUST** use the [Cordova Resolved Names](#Cordova-Resolved-Names) when removing them.
 
 The `--nosave` flag could be appended to the command to prevent removal of specified platform and plugins from the `package.json` file.
 
