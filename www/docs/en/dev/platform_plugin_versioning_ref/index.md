@@ -158,9 +158,9 @@ When restoring a Cordova project, this metadata determines which platforms and p
     cordova platform add https://github.com/apache/cordova-android#rel/13.0.0
     ```
 
-    Various Git URL formats are supported for installing platforms and plugins. A branch name or tag can be specified by appending `#<branch-name|tag>` to the URL.
+    Various Git URL formats are supported for installing platforms and plugins. Optionally, a treeish (branch name, tag, or commit ID) can be specified by appending `#<treeish>` to the URL.
 
-    When targeting a branch or tag, ensure it is production-ready before using it in a production environment. This functionality is useful for reviewing pull requests, testing future releases, or submitting in release vote.
+    When targeting a treeish, ensure it is production-ready before using it in a production environment. This functionality is useful for testing and reviewing pull requests, future releases, or release votes.
 
 - **Git service short hand:**
 
