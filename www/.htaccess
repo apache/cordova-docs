@@ -116,7 +116,7 @@ RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R
 RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
 
 # Redirect http to https
-# From Cordova PMC Member raphinesse 
+# From Cordova PMC Member raphinesse
 # https://s.apache.org/An8s
 
 # If we receive a forwarded http request from a proxy...
@@ -129,6 +129,19 @@ RewriteCond %{HTTPS} !=on
 # Redirect to https version
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect all docs translations to their English version
-RewriteCond $1 !=en
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/(.*)$ {{site.baseurl}}/docs/en/$2 [R=302,L]
+# Prevent redirecting away from archive URLs
+RewriteCond %{REQUEST_URI} ^/archive/ [NC]
+RewriteRule .* - [L]
+
+# Prevent redirecting away from English docs
+RewriteCond %{REQUEST_URI} ^/docs/en/ [NC]
+RewriteRule .* - [L]
+
+# Redirect all non-English documentation to the English version.
+# If the English counterpart is missing, a 404 page will be displayed.
+# Over time, the non-English documentation has fallen out of sync with the English version.
+# For example, some pages may have been removed from the English documentation because they were no longer
+# relevant or were merged into other pages, while the translated versions were not updated accordingly.
+RewriteCond %{REQUEST_URI} ^/docs/(\w\w(?:-\w\w)?) [NC]
+RewriteCond %1 !=en
+RewriteRule ^docs/(\w\w(?:-\w\w)?)/(.*)$ /docs/en/$2 [R=302,L]
