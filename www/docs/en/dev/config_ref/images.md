@@ -152,43 +152,54 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 Icons are not applicable to the Browser platform.
 
 ## iOS
+
 ```xml
     <platform name="ios">
-        <!-- iOS 8.0+ -->
-        <!-- iPhone 6 Plus  -->
-        <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
-        <!-- iOS 7.0+ -->
-        <!-- iPhone / iPod Touch  -->
-        <icon src="res/ios/icon-60.png" width="60" height="60" />
-        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
-        <!-- iPad -->
-        <icon src="res/ios/icon-76.png" width="76" height="76" />
-        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
-        <!-- Spotlight Icon -->
-        <icon src="res/ios/icon-40.png" width="40" height="40" />
+        <!-- Notifications on iPhone, iPad Pro, iPad, iPad mini -->
+        <icon src="res/ios/icon-38@2x.png" width="76" height="76" />
+        <icon src="res/ios/icon-38@3x.png" width="114" height="114" />
+
+        <!-- Settings on iPhone, iPad Pro, iPad, iPad mini -->
+        <icon src="res/ios/icon-29@1x.png" width="29" height="29" />
+        <icon src="res/ios/icon-29@2x.png" width="58" height="58" />
+        <icon src="res/ios/icon-29@3x.png" width="87" height="87" />
+
+        <!-- Spotlight on iPhone, iPad Pro, iPad, iPad mini -->
+        <icon src="res/ios/icon-40@1x.png" width="40" height="40" />
         <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
-        <!-- iOS 6.1 -->
-        <!-- iPhone / iPod Touch -->
-        <icon src="res/ios/icon.png" width="57" height="57" />
-        <icon src="res/ios/icon@2x.png" width="114" height="114" />
-        <!-- iPad -->
-        <icon src="res/ios/icon-72.png" width="72" height="72" />
-        <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
-        <!-- iPad Pro -->
-        <icon src="res/ios/icon-167.png" width="167" height="167" />
-        <!-- iPhone Spotlight and Settings Icon -->
-        <icon src="res/ios/icon-small.png" width="29" height="29" />
-        <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
-        <icon src="res/ios/icon-small@3x.png" width="87" height="87" />
-        <!-- iPad Spotlight and Settings Icon -->
-        <icon src="res/ios/icon-50.png" width="50" height="50" />
-        <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
-        <!-- iTunes Marketing Image -->
+
+        <!-- Home Screen on iPad, iPad mini -->
+        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+
+        <!-- Home Screen on iPad Pro -->
+        <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
+
+        <!-- Home Screen on iPhone -->
+        <icon src="res/ios/icon-60@1x.png" width="60" height="60" />
+        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+        <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+
+        <!-- macOS app icons -->
+        <icon src="res/ios/icon-16.png" width="16" height="16" />
+        <icon src="res/ios/icon-32.png" width="32" height="32" />
+        <icon src="res/ios/icon-64.png" width="64" height="64" />
+        <icon src="res/ios/icon-128.png" width="128" height="128" />
+        <icon src="res/ios/icon-256.png" width="256" height="256" />
+        <icon src="res/ios/icon-512.png" width="512" height="512" />
+
+        <!-- App Store Icon and another macOS app icons -->
         <icon src="res/ios/icon-1024.png" width="1024" height="1024" />
     </platform>
 ```
-### See Also
-- [App Icons on iPad and iPhone](https://developer.apple.com/library/content/qa/qa1686/_index.html)
+
+**Notes:**
+
+- Alpha channel is not supported for any iOS icons.
+
+**References:**
+
+- [Apple Developer - Configuring your app icon](https://developer.apple.com/documentation/xcode/configuring-your-app-icon/)
+- [Apple Developer - Human Interface Guidelines > App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons)
 
 [splashscreen_plugin]: ../reference/cordova-plugin-splashscreen/
 
