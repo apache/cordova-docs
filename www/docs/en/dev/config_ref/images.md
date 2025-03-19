@@ -45,14 +45,6 @@ width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
 target        | *Optional* <br/> {% cdv_platform electron %} <br/> Set target to supply unique icons for `app` and `installer`
 
-The following configuration can be used to define a single default icon
-which will be used for all platforms.
-```xml
-    <icon src="res/icon.png" />
-```
-For each platform, you can also define a pixel-perfect icon set to fit
-different screen resolutions.
-
 ## Android
 
 Android's **Adaptive Icons** feature enables you to create separate foreground and background layers for your App Icons. To use Adaptive Icons in Cordova, you need at least **Cordova CLI** 9.0.0 and **Cordova-Android** 8.0.0.
