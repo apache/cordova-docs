@@ -2409,18 +2409,11 @@ If you do not specify an icon, the Apache Cordova logo is used.</p>
   </tbody>
 </table>
 
-<p>The following configuration can be used to define a single default icon
-which will be used for all platforms.</p>
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/icon.png"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-<p>For each platform, you can also define a pixel-perfect icon set to fit
-different screen resolutions.</p>
-
 <h2>Android</h2>
 
-<p>Instead of using a single image for an icon, you can use two images (background and foreground) to create an <strong>Adaptive Icon</strong>. To use Adaptive Icons in Cordova, at minimum <strong>Cordova CLI</strong> 9.0.0 and <strong>Cordova-Android</strong> 8.0.0 is required.</p>
+<p>Android&#39;s <strong>Adaptive Icons</strong> feature enables you to create separate foreground and background layers for your App Icons. To use Adaptive Icons in Cordova, you need at least <strong>Cordova CLI</strong> 9.0.0 and <strong>Cordova-Android</strong> 8.0.0.</p>
 
-<p>Android 13 has introduced themed icons which are monochrome images appended to the existing <strong>Adaptive Icons</strong>. To use Themed Icon in Cordova, at minimum <strong>Cordova CLI</strong> 12.0.0 and <strong>Cordova-Android</strong> 12.0.0 is required.</p>
+<p>With Android 13, Google introduced <strong>Themed Icons</strong>, which are monochrome variations of <strong>Adaptive Icons</strong> that integrate seamlessly with the system&#39;s color scheme. To use <strong>Themed Icons</strong> in Cordova, you&#39;ll need at least <strong>Cordova CLI</strong> 12.0.0 and <strong>Cordova-Android</strong> 12.0.0.</p>
 
 <table>
   <thead>
@@ -2454,6 +2447,7 @@ different screen resolutions.</p>
 <p>To use the adaptive icons the <code>background</code>, <code>foreground</code> and optionally <code>monochrome</code> attributes must be defined in place of the <code>src</code> attribute. The <code>src</code> attribute is not used for adaptive icons.</p>
 
 <h4>Adaptive Icon with Images:</h4>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/ldpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.png"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/mdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.png"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.png"</span> <span class="nt">/&gt;</span>
@@ -2467,6 +2461,7 @@ different screen resolutions.</p>
 <p><strong>Note:</strong> In this example, the foreground image will also be used as the fallback icon for Android devices that do not support the adaptive icons. The fallback icon can be overridden by setting the src attribute.</p>
 
 <h4>Adaptive Icon with Vectors:</h4>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/ldpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.xml"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/ldpi.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/mdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.xml"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/mdpi.png"</span> <span class="nt">/&gt;</span>
@@ -2480,6 +2475,7 @@ different screen resolutions.</p>
 <p><strong>Note:</strong> In this example, the src attribute must be defined when then foreground attribute is defined with a vector or color.</p>
 
 <h4>Adaptive Icon with Colors:</h4>
+
 <p>Create a <code>res/values/colors.xml</code> resource file in your project directory to store the app&#39;s color definitions.</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 <span class="nt">&lt;resources&gt;</span>
@@ -2521,7 +2517,8 @@ different screen resolutions.</p>
     <span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
 
-<h3>See Also</h3>
+<p><strong>See Also:</strong></p>
+
 <ul>
   <li><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive">Android icon guide</a></li>
   <li><a href="https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming">Android Adaptive icons - User theming</a></li>
@@ -2532,43 +2529,56 @@ different screen resolutions.</p>
 <p>Icons are not applicable to the Browser platform.</p>
 
 <h2>iOS</h2>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
-        <span class="c">&lt;!-- iOS 8.0+ --&gt;</span>
-        <span class="c">&lt;!-- iPhone 6 Plus  --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@3x.png"</span> <span class="na">width=</span><span class="s">"180"</span> <span class="na">height=</span><span class="s">"180"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iOS 7.0+ --&gt;</span>
-        <span class="c">&lt;!-- iPhone / iPod Touch  --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60.png"</span> <span class="na">width=</span><span class="s">"60"</span> <span class="na">height=</span><span class="s">"60"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@2x.png"</span> <span class="na">width=</span><span class="s">"120"</span> <span class="na">height=</span><span class="s">"120"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iPad --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-76.png"</span> <span class="na">width=</span><span class="s">"76"</span> <span class="na">height=</span><span class="s">"76"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-76@2x.png"</span> <span class="na">width=</span><span class="s">"152"</span> <span class="na">height=</span><span class="s">"152"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- Spotlight Icon --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-40.png"</span> <span class="na">width=</span><span class="s">"40"</span> <span class="na">height=</span><span class="s">"40"</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- Notifications on iPhone, iPad Pro, iPad, iPad mini --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-38@2x.png"</span> <span class="na">width=</span><span class="s">"76"</span> <span class="na">height=</span><span class="s">"76"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-38@3x.png"</span> <span class="na">width=</span><span class="s">"114"</span> <span class="na">height=</span><span class="s">"114"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- Settings on iPhone, iPad Pro, iPad, iPad mini --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-29@1x.png"</span> <span class="na">width=</span><span class="s">"29"</span> <span class="na">height=</span><span class="s">"29"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-29@2x.png"</span> <span class="na">width=</span><span class="s">"58"</span> <span class="na">height=</span><span class="s">"58"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-29@3x.png"</span> <span class="na">width=</span><span class="s">"87"</span> <span class="na">height=</span><span class="s">"87"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- Spotlight on iPhone, iPad Pro, iPad, iPad mini --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-40@1x.png"</span> <span class="na">width=</span><span class="s">"40"</span> <span class="na">height=</span><span class="s">"40"</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-40@2x.png"</span> <span class="na">width=</span><span class="s">"80"</span> <span class="na">height=</span><span class="s">"80"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iOS 6.1 --&gt;</span>
-        <span class="c">&lt;!-- iPhone / iPod Touch --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon.png"</span> <span class="na">width=</span><span class="s">"57"</span> <span class="na">height=</span><span class="s">"57"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon@2x.png"</span> <span class="na">width=</span><span class="s">"114"</span> <span class="na">height=</span><span class="s">"114"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iPad --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-72.png"</span> <span class="na">width=</span><span class="s">"72"</span> <span class="na">height=</span><span class="s">"72"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-72@2x.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iPad Pro --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-167.png"</span> <span class="na">width=</span><span class="s">"167"</span> <span class="na">height=</span><span class="s">"167"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iPhone Spotlight and Settings Icon --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-small.png"</span> <span class="na">width=</span><span class="s">"29"</span> <span class="na">height=</span><span class="s">"29"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-small@2x.png"</span> <span class="na">width=</span><span class="s">"58"</span> <span class="na">height=</span><span class="s">"58"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-small@3x.png"</span> <span class="na">width=</span><span class="s">"87"</span> <span class="na">height=</span><span class="s">"87"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iPad Spotlight and Settings Icon --&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-50.png"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-50@2x.png"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
-        <span class="c">&lt;!-- iTunes Marketing Image --&gt;</span>
+
+        <span class="c">&lt;!-- Home Screen on iPad, iPad mini --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-76@2x.png"</span> <span class="na">width=</span><span class="s">"152"</span> <span class="na">height=</span><span class="s">"152"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- Home Screen on iPad Pro --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-83.5@2x.png"</span> <span class="na">width=</span><span class="s">"167"</span> <span class="na">height=</span><span class="s">"167"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- Home Screen on iPhone --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@1x.png"</span> <span class="na">width=</span><span class="s">"60"</span> <span class="na">height=</span><span class="s">"60"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@2x.png"</span> <span class="na">width=</span><span class="s">"120"</span> <span class="na">height=</span><span class="s">"120"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-60@3x.png"</span> <span class="na">width=</span><span class="s">"180"</span> <span class="na">height=</span><span class="s">"180"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- macOS app icons --&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-16.png"</span> <span class="na">width=</span><span class="s">"16"</span> <span class="na">height=</span><span class="s">"16"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-32.png"</span> <span class="na">width=</span><span class="s">"32"</span> <span class="na">height=</span><span class="s">"32"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-64.png"</span> <span class="na">width=</span><span class="s">"64"</span> <span class="na">height=</span><span class="s">"64"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-128.png"</span> <span class="na">width=</span><span class="s">"128"</span> <span class="na">height=</span><span class="s">"128"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-256.png"</span> <span class="na">width=</span><span class="s">"256"</span> <span class="na">height=</span><span class="s">"256"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-512.png"</span> <span class="na">width=</span><span class="s">"512"</span> <span class="na">height=</span><span class="s">"512"</span> <span class="nt">/&gt;</span>
+
+        <span class="c">&lt;!-- App Store Icon and another macOS app icons --&gt;</span>
         <span class="nt">&lt;icon</span> <span class="na">src=</span><span class="s">"res/ios/icon-1024.png"</span> <span class="na">width=</span><span class="s">"1024"</span> <span class="na">height=</span><span class="s">"1024"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/platform&gt;</span>
 </code></pre></div></div>
-<h3>See Also</h3>
+
+<p><strong>Notes:</strong></p>
+
 <ul>
-  <li><a href="https://developer.apple.com/library/content/qa/qa1686/_index.html">App Icons on iPad and iPhone</a></li>
+  <li>Alpha channel is not supported for any iOS icons.</li>
+</ul>
+
+<p><strong>References:</strong></p>
+
+<ul>
+  <li><a href="https://developer.apple.com/documentation/xcode/configuring-your-app-icon/">Apple Developer - Configuring your app icon</a></li>
+  <li><a href="https://developer.apple.com/design/human-interface-guidelines/app-icons">Apple Developer - Human Interface Guidelines &gt; App icons</a></li>
 </ul>
 
 <h2>Electron</h2>
