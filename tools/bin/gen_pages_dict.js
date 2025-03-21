@@ -40,7 +40,7 @@ const LATEST_ALIAS_URI = '/latest/';
 function pathToURI (filePath, rootPath) {
     return filePath
         .replace(new RegExp('^' + rootPath), '')
-        .replace(/\\.md$/, '.html');
+        .replace(/\.md$/, '.html');
 }
 
 function pagesFromRedirects (redirects, languages) {
@@ -88,7 +88,6 @@ function main () {
     // add entries for all Markdown files in the site root
     const allMarkdownFiles = path.join(siteRootPath, '**/*.md');
     fs.glob(allMarkdownFiles, function (error, filePaths) {
-        console.log(filePaths);
         if (error) throw error;
 
         for (let i = 0; i < filePaths.length; i++) {
