@@ -2668,20 +2668,34 @@ documentation <a href="https://developer.android.com/guide/topics/security/permi
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>This will call the activity and cause a prompt to appear, asking for the permission.  Once the user has the permission, the result must be handled with the <code>onRequestPermissionResult</code> method, which
-every plugin should override.  An example of this can be found below:</p>
+<p>This will call the activity and cause a prompt to appear, asking for the permission. Once the user has the permission, the result must be handled with the <code>onRequestPermissionResult</code> method, a forwarded <a href="https://developer.android.com/reference/android/app/Activity#onRequestPermissionsResult(int,%20java.lang.String[],%20int[])">Android method</a>, which every plugin should override.  An example of this can be found below:</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span>
-                                         <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRequestPermissionResult</span><span class="o">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="o">,</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">permissions</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">grantResults</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">JSONException</span>
 <span class="o">{</span>
-    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="nl">r:</span><span class="n">grantResults</span><span class="o">)</span>
+    <span class="c1">// It is possible that the permissions request interaction with the user is interrupted.</span>
+    <span class="c1">// In this case you will receive an empty permissions and grantResults array, which should be</span>
+    <span class="c1">// treated as a cancellation.</span>
+    <span class="kt">boolean</span> <span class="n">granted</span> <span class="o">=</span> <span class="n">grantResults</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">;</span>
+
+    <span class="c1">// Check if a permission is denied by user</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">grantResult</span> <span class="o">:</span> <span class="n">grantResults</span><span class="o">)</span>
     <span class="o">{</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">r</span> <span class="o">==</span> <span class="nc">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_DENIED</span><span class="o">)</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">grantResult</span> <span class="o">==</span> <span class="nc">PackageManager</span><span class="o">.</span><span class="na">PERMISSION_DENIED</span><span class="o">)</span>
         <span class="o">{</span>
-            <span class="k">this</span><span class="o">.</span><span class="na">callbackContext</span><span class="o">.</span><span class="na">sendPluginResult</span><span class="o">(</span><span class="k">new</span> <span class="nc">PluginResult</span><span class="o">(</span><span class="nc">PluginResult</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">ERROR</span><span class="o">,</span> <span class="no">PERMISSION_DENIED_ERROR</span><span class="o">));</span>
-            <span class="k">return</span><span class="o">;</span>
+            <span class="n">granted</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="k">break</span><span class="o">;</span>
         <span class="o">}</span>
     <span class="o">}</span>
+
+    <span class="c1">// User denied a permission</span>
+    <span class="k">if</span><span class="o">(!</span><span class="n">granted</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">callbackContext</span><span class="o">.</span><span class="na">sendPluginResult</span><span class="o">(</span><span class="k">new</span> <span class="nc">PluginResult</span><span class="o">(</span><span class="nc">PluginResult</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">ERROR</span><span class="o">,</span> <span class="no">PERMISSION_DENIED_ERROR</span><span class="o">));</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="c1">// Handle the request with the granted permission</span>
     <span class="k">switch</span><span class="o">(</span><span class="n">requestCode</span><span class="o">)</span>
     <span class="o">{</span>
         <span class="k">case</span> <span class="nl">SEARCH_REQ_CODE:</span>
