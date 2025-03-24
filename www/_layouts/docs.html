@@ -18,6 +18,8 @@ set some constants
 {% assign MY_ENTRY = page.url | replace: VERSION_ROOT,"" %}
 {% assign my_entry_parts = MY_ENTRY | split: "/" %}
 
+{% assign page_url = "/" | append: page.path | replace: ".md", ".html" %}
+
 {% comment %}
 PATH_TO_ROOT: path from here to version root, replacing all parts except the last one with '../'
 NOTE:
@@ -152,7 +154,7 @@ NOTE:
                                     layouts change from version to version
                             {% endcomment %}
                             {% capture other_version_root %}/docs/{{ page.language }}/{{ other_version_string }}/{% endcapture %}
-                            {% assign other_version_url = page.url | replace:VERSION_ROOT,other_version_root %}
+                            {% assign other_version_url = page_url | replace:VERSION_ROOT,other_version_root %}
 
                             {% unless ALL_PAGES contains other_version_url %}
                                 {% assign other_version_url = other_version_root %}
@@ -177,7 +179,7 @@ NOTE:
             Get URL for this page in the latest version
             {% endcomment %}
             {% capture latest_root %}/docs/{{ page.language }}/latest/{% endcapture %}
-            {% assign latest_url = page.url | replace:VERSION_ROOT,latest_root %}
+            {% assign latest_url = page_url | replace:VERSION_ROOT,latest_root %}
 
             {% comment %}
             If this page doesn't exist, just use root
