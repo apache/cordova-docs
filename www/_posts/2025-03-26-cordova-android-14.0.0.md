@@ -72,6 +72,24 @@ cordova platform add android@14.0.0
 
     To use `cordova-android@14.0.0`, SDK Platform `35` and SDK Build Tools `35.0.0` must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.
 
+    **Upgrade with Command-line tools:**
+
+    The recommended way to install SDK Platform 35 and SDK Build Tools 35.0.0 is by using `sdkmanager`, which is part of Android's [Command-line tools](https://developer.android.com/tools/) package. The command-line tools is useful as it does not require Android Studio.
+
+    At the time of writing, **version 19** of the Command-line tools was downloaded from Android Studio's SDK Manager and used. It can also be downloaded from the [Android Developers](https://developer.android.com/studio#command-line-tools-only) website.
+
+    ```bash
+    sdkmanager 'build-tools;35.0.0' 'platforms;android-35'
+    ```
+
+    You may need to run the `update` flag first:
+
+    ```bash
+    sdkmanager --update
+    ```
+
+    **Upgrade with Android Studio:**
+
     To install SDK Platform 35:
 
     1. Open Android Studio's **SDK Manager**:
