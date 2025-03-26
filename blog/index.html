@@ -123,6 +123,225 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Wed, 26 Mar 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/03/26/cordova-android-14.0.0.html">Cordova Android 14.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">26 Mar 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 14.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@14.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@14.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@14.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>BREAKING CHANGES</h3>
+
+<ul>
+  <li>
+    <p><strong>Increased Target SDK</strong></p>
+
+    <p>This release has increased the target SDK to 35 (Android 15).</p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following Gradle dependencies were bumpped:</p>
+
+    <ul>
+      <li>Gradle: <code>8.13</code></li>
+      <li>Android Gradle Plugin (AGP): <code>8.7.3</code></li>
+    </ul>
+
+    <p>Additionally, the following libraries have been upgraded:</p>
+
+    <ul>
+      <li>AndroidX App Compat - <code>1.7.0</code></li>
+      <li>AndroidX WebKit - <code>1.12.1</code></li>
+      <li>AndroidX SplashScreen Core - <code>1.0.1</code></li>
+      <li>Google Services Gradle Plugin - <code>4.4.2</code></li>
+    </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Preference</th>
+          <th>Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>android-minSdkVersion</code></td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td><code>android-maxSdkVersion</code></td>
+          <td><em>Not set</em></td>
+        </tr>
+        <tr>
+          <td><code>android-targetSdkVersion</code></td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td><code>android-compileSdkVersion</code></td>
+          <td><em>android-targetSdkVersion configured value</em></td>
+        </tr>
+        <tr>
+          <td><code>android-buildToolsVersion</code></td>
+          <td>35.0.0</td>
+        </tr>
+        <tr>
+          <td><code>GradleVersion</code></td>
+          <td>8.13</td>
+        </tr>
+        <tr>
+          <td><code>AndroidGradlePluginVersion</code></td>
+          <td>8.7.3</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginKotlinVersion</code></td>
+          <td>1.9.24</td>
+        </tr>
+        <tr>
+          <td><code>AndroidXAppCompatVersion</code></td>
+          <td>1.7.0</td>
+        </tr>
+        <tr>
+          <td><code>AndroidXWebKitVersion</code></td>
+          <td>1.12.1</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginGoogleServicesVersion</code></td>
+          <td>4.4.2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Increased Android Studio Requirement</strong></p>
+
+    <p>With the increase of Android Gradle Plugin, Android Studio Ladybug is the minimum required version for building and running projects in Android Studio. This aligns with the <a href="https://developer.android.com/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility">Android Gradle plugin and Android Studio compatibility</a> documentation.</p>
+  </li>
+  <li>
+    <p><strong>Required Build Tools</strong></p>
+
+    <p>To use <code>cordova-android@14.0.0</code>, SDK Platform <code>35</code> and SDK Build Tools <code>35.0.0</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.</p>
+
+    <p><strong>Upgrade with Command-line tools:</strong></p>
+
+    <p>The recommended way to install SDK Platform 35 and SDK Build Tools 35.0.0 is by using <code>sdkmanager</code>, which is part of Android&#39;s <a href="https://developer.android.com/tools/">Command-line tools</a> package. The command-line tools is useful as it does not require Android Studio.</p>
+
+    <p>At the time of writing, <strong>version 19</strong> of the Command-line tools was downloaded from Android Studio&#39;s SDK Manager and used. It can also be downloaded from the <a href="https://developer.android.com/studio#command-line-tools-only">Android Developers</a> website.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sdkmanager <span class="s1">'build-tools;35.0.0'</span> <span class="s1">'platforms;android-35'</span>
+</code></pre></div>    </div>
+
+    <p>You may need to run the <code>update</code> flag first:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sdkmanager <span class="nt">--update</span>
+</code></pre></div>    </div>
+
+    <p><strong>Upgrade with Android Studio:</strong></p>
+
+    <p>To install SDK Platform 35:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 15.0 ("VanillaIceCream")</code> which has the <code>API Level</code> of <code>35</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2025/cordova-android-14-platform-sdk-35.png" style="width: 100%;" alt="Android SDK Platform" /></p>
+
+    <p>To install SDK Build Tools 35.0.0:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>35.0.0</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2025/cordova-android-14-sdk-build-tools-3500.png" style="width: 100%;" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Increased Java Source &amp; Target Compatibility</strong></p>
+
+    <p>The Java Source &amp; Target Compatibility has been increased to version 11. This aligns with the default settings used when creating a blank native project.</p>
+  </li>
+  <li>
+    <p><strong>Increased Node.js Engine Requirement</strong></p>
+
+    <p>The Node.js engine requirement in this release has been increased to version 20.5.0 or later.</p>
+  </li>
+  <li>
+    <p><strong>Deprecated <code>CordovaPlugin</code>&#39;s <code>initialize</code> Method</strong></p>
+
+    <p>The <code>initialize</code> method of the <code>CordovaPlugin</code> class has been marked as deprecated and will be removed in a future release. While this method was always considered deprecated, it was not properly annotated to notify plugin developers.</p>
+
+    <p>We recommend using the <code>pluginInitialize</code> method as a replacement for <code>initialize</code>.</p>
+  </li>
+  <li>
+    <p><strong>Replaced Library <code>kotlin-stdlib-jdk*</code> with <code>kotlin-stdlib</code></strong></p>
+
+    <p>The <code>kotlin-stdlib-jdk*</code> libraries have been replaced with <code>kotlin-stdlib</code>. Both <code>kotlin-stdlib-jdk7</code> and <code>kotlin-stdlib-jdk8</code> are merged into <code>kotlin-stdlib</code>.</p>
+  </li>
+</ul>
+
+<h3>Feature</h3>
+
+<ul>
+  <li>
+    <p><strong>Added <code>AndroidEdgeToEdge</code> Preference Support</strong></p>
+
+    <p>By default, Android 15 enforces the Edge-to-Edge feature, which may affect some Apache Cordova apps.</p>
+
+    <p>In this major release, Apache Cordova has opted out of the Edge-to-Edge feature to retain the original behavior and allow app developers ample time to make the necessary adjustments to support Edge-to-Edge.</p>
+
+    <p>Users can re-enable the Edge-to-Edge feature using this new preference flag.</p>
+
+    <p>It is expected that in Android&#39;s next major release, opting out of Edge-to-Edge will no longer be possible.</p>
+
+    <p>Apache Cordova will continue to prepare for this expected future behavior change.</p>
+  </li>
+</ul>
+
+</p>
+                    <div><a href="/announcements/2025/03/26/cordova-android-14.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 26 Feb 2025 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html">Media Capture Plugin 6.0.0 Released!</a>
@@ -14477,7 +14696,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Wed, 26 Feb 2025 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Wed, 26 Mar 2025 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
