@@ -6,9 +6,67 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 26 Mar 2025 15:40:38 +0000</pubDate>
-    <lastBuildDate>Wed, 26 Mar 2025 15:40:38 +0000</lastBuildDate>
+    <pubDate>Wed, 30 Apr 2025 05:25:14 +0000</pubDate>
+    <lastBuildDate>Wed, 30 Apr 2025 05:25:14 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Android 14.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 14.0.1&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@14.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@14.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@14.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fetching Gradle Path for Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Resolved an issue in Windows environments where projects containing spaces in their paths could not be built due to changes in how the Gradle path was fetched.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Setting Gradle&amp;#39;s java.home&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Resolved an issue where the user-defined environment variable &lt;code&gt;JAVA_HOME&lt;/code&gt; or &lt;code&gt;CORDOVA_JAVA_HOME&lt;/code&gt; was not being used to set the &lt;code&gt;java.home&lt;/code&gt; property for the Gradle Wrapper.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1795&quot;&gt;GH-1795&lt;/a&gt; fix: configure gradle &lt;code&gt;java.home&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1793&quot;&gt;GH-1793&lt;/a&gt; fix(windows): get gradle path with &lt;code&gt;which&lt;/code&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/04/30/cordova-android-14.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/04/30/cordova-android-14.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 14.0.0 Released!</title>
@@ -913,63 +971,6 @@ cordova plugin add cordova-plugin-file@8.1.2
         <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/10/28/cordova-plugin-file-8.1.2.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/28/cordova-plugin-file-8.1.2.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>File Plugin 8.1.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.1.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@8.1.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;For Android, we corrected an issue that prevented &lt;code&gt;.toURL()&lt;/code&gt; to be used on &lt;code&gt;content://&lt;/code&gt; file entries. Now &lt;code&gt;.toURL()&lt;/code&gt; will return a DOM-usable url on both &lt;code&gt;file://&lt;/code&gt; and &lt;code&gt;content://&lt;/code&gt; file entries.&lt;/p&gt;
-
-&lt;p&gt;This will be important for upcoming releases planned for the Camera plugin.&lt;/p&gt;
-
-&lt;p&gt;Note that the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference must be off. If &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference is turned on, then &lt;code&gt;.toURL()&lt;/code&gt; will return the underlying URL and modern Android devices will reject &lt;code&gt;content://&lt;/code&gt; file paths. If your project is still using &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; it is time to strongly consider migrating to schemes by turning the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference off.&lt;/p&gt;
-
-&lt;p&gt;By default, the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference is disabled. If your project does not explicitly enable it, then no action is required.&lt;/p&gt;
-
-&lt;p&gt;For iOS, there are no changes.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Edit (2024-10-28)&lt;/em&gt;: This patch introduces a regression on Android platforms when resolving &lt;code&gt;.toURL()&lt;/code&gt; on some &lt;code&gt;file://&lt;/code&gt; URIs. Please use upgrade to &lt;code&gt;cordova-plugin-file@8.1.2&lt;/code&gt; instead.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find by following the this &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/629&quot;&gt;GH-629&lt;/a&gt; fix(android): Content FS support in PathHandler (#629)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Documentation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/639&quot;&gt;GH-639&lt;/a&gt; docs: Correct onwriteend to onwrite (#639)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/638&quot;&gt;GH-628&lt;/a&gt; docs: Reformatting specs (#638)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html</guid>
         
         <category>news</category>
         

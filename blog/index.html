@@ -123,6 +123,61 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Wed, 30 Apr 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/04/30/cordova-android-14.0.1.html">Cordova Android 14.0.1 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">30 Apr 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Android 14.0.1</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@14.0.1</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@14.0.1
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@14.0.1
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>Fixes</h3>
+
+<ul>
+  <li><strong>Fetching Gradle Path for Windows</strong></li>
+</ul>
+
+<p>Resolved an issue in Windows environments where projects containing spaces in their paths could not be built due to changes in how the Gradle path was fetched.</p>
+
+<ul>
+  <li><strong>Setting Gradle&#39;s java.home</strong></li>
+</ul>
+
+<p>Resolved an issue where the user-defined environment variable <code>JAVA_HOME</code> or <code>CORDOVA_JAVA_HOME</code> was not being used to set the <code>java.home</code> property for the Gradle Wrapper.</p>
+
+</p>
+                    <div><a href="/announcements/2025/04/30/cordova-android-14.0.1.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 26 Mar 2025 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2025/03/26/cordova-android-14.0.0.html">Cordova Android 14.0.0 Released!</a>
@@ -14696,7 +14751,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Wed, 26 Mar 2025 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Wed, 30 Apr 2025 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
