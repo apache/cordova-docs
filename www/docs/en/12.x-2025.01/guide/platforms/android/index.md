@@ -333,7 +333,7 @@ When you installed the Java Development Kit like described in this guide you can
 
 Set `JAVA_HOME` like you already did it for `ANDROID_HOME`.
 
-### Reaload Terminal
+### Reload Terminal
 
 Reload your terminal to see this change reflected or run the following command:
 
