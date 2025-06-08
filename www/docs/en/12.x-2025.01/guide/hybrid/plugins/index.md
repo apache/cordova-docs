@@ -194,7 +194,7 @@ cordova plugin add ../path/to/my/plugin/relative/to/project --link
 ```
 
 This creates a symbolic link instead of copying the plugin files, which enables you
-to work on your plugin and then simply rebuild the app to use your changes. The plugin should be added after the platform, or the link will not work. The link will also be lost if you re-add the platform or restore the project. In that case, you'll need to re-add the plugin to restore the link.
+to work on your plugin and then simply rebuild the app to use your changes. The plugin should be added after the platform, or the link will not work. The link will also be lost if you re-add the platform or [restore the project](../../../platform_plugin_versioning_ref/index.md) with `cordova prepare`. In that case, you'll need to re-add the plugin to restore the link.
 
 ## Validating a Plugin using Plugman
 
