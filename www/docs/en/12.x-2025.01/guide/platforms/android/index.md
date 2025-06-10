@@ -328,7 +328,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator/
 
 **macOS:**
 
-When you installed the Java Development Kit like described in this guide you can get the java home path executing
+When you installed the Java Development Kit, as described in this guide, you can get the java home path by executing:
 
 `echo $(/usr/libexec/java_home)`
 
