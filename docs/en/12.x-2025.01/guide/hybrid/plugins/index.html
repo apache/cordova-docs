@@ -2532,8 +2532,7 @@ Cordova app as usual and add the plugin with the <code>--link</code> option:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add ../path/to/my/plugin/relative/to/project <span class="nt">--link</span>
 </code></pre></div></div>
 
-<p>This creates a symbolic link instead of copying the plugin files, which enables you
-to work on your plugin and then simply rebuild the app to use your changes.</p>
+<p>This creates a symbolic link instead of copying the plugin files, which enables you to work on your plugin and then simply rebuild the app to use your changes. The plugin should be added after the platform, or the link will not work. The link will also be lost if you re-add the platform or <a href="../../../platform_plugin_versioning_ref/index.md">restore the project</a> with <code>cordova prepare</code>. In that case, you&#39;ll need to re-add the plugin to restore the link.</p>
 
 <h2>Validating a Plugin using Plugman</h2>
 
