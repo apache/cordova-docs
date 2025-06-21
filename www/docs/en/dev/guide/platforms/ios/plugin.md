@@ -43,7 +43,7 @@ toc_title: iOS
   - [Common Pitfalls](#common-pitfalls)
 
 
-This guide provides details on implementing native plugin code for the iOS platform. The plugin's native code can be written in either Objective-C or Swift.
+This guide provides details on implementing native plugin code for the iOS platform. The plugin's platform-native code can be written in either Objective-C or Swift.
 
 Before proceeding, refer to the [Plugin Development Guide][plugin-dev] for an overview of plugin structure, plugin core files, and its common JavaScript interface. This guide will continue to use the _echo_ plugin, as an exmaple, which enables communication between the Cordova WebView and the native platform.
 
@@ -103,7 +103,7 @@ In the following example, we will place all files in the `src/ios/` directory. T
     In this example, we are exposing the `echo` method:
 
     ```objc
-    #import <Cordova/CDVPlugin.h>
+    #import <Cordova/Cordova.h>
 
     @interface Echo : CDVPlugin
 
@@ -120,7 +120,7 @@ In the following example, we will place all files in the `src/ios/` directory. T
 
     ```objc
     #import "Echo.h"
-    #import <Cordova/CDVPlugin.h>
+    #import <Cordova/Cordova.h>
 
     @implementation Echo
 
@@ -158,7 +158,7 @@ In the following example, we will place all files in the `src/ios/` directory. T
     Objective-C based projects will added the following to the header & source files:
 
     ```objc
-    #import <Cordova/CDVPlugin.h>
+    #import <Cordova/Cordova.h>
     ```
 
 **Additional References:**
@@ -264,6 +264,7 @@ let package = Package(
         .library(name: "cordova-plugin-echo", targets: ["cordova-plugin-echo"])
     ],
     dependencies: [
+        // This must be included as a dependency, with this format for it to work.
         .package(url: "https://github.com/apache/cordova-ios.git", branch: "master")
     ],
     targets: [

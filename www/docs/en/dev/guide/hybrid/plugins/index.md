@@ -206,7 +206,7 @@ Plugin developers typically include a front-end JavaScript API. The primary purp
 exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 ```
 
-The `cordova.exec` method is is what triggeres the request from the front-end WebView to the native side of the platform, invoking an action method on the specified service class with the provided arguments. Depending on the outcome, either the success or failure callback will be triggered.
+The `cordova.exec` method is what triggeres the request from the front-end WebView to the native side of the platform, invoking an action method on the specified service class with the provided arguments. Depending on the outcome, either the success or failure callback will be triggered.
 
 - **`successCallback`**: The first argument is the success callback. If the native operation completes successfully, this function is invoked with any returned data.
 - **`failCallback`**: The second argument is the error callback. If the operation fails, this function is called with an error object or message.
