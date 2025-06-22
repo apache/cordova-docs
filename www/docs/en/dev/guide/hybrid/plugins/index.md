@@ -41,17 +41,16 @@ description: Develop your own Cordova plugin.
   - [Testing a Plugin during development](#testing-a-plugin-during-development)
   - [Publishing Plugins](#publishing-plugins)
 
-
-A Cordova _plugin_ is a package that enables the Cordova apps to access native device features and functionality that is ordinarily unavailable to web-based apps. All of the core Cordova API features are implemented as plugins. Many third-party plugins are also available to provide additional capabilities such as barcode scanning, NFC communication, push notification, or even customizing interfaces.
+A Cordova _plugin_ is a package that enables the Cordova apps to access native device features and functionality that is ordinarily unavailable to web-based apps. All of the core Cordova API features are implemented as plugins. Many third-party plugins are also available to provide additional capabilities such as barcode scanning, near-field communication (NFC), push notification, or even customizing interfaces.
 
 Check out these locations for Cordova plugins:
 
 - Official Apache Cordova plugins on the [Cordova Plugin page](/plugins/).
 - Third-party plugins on the [npmjs registry](https://www.npmjs.com/search?q=keywords:ecosystem:cordova).
 
-Plugins consist of a single JavaScript interface paired with corresponding native code libraries for each supported platform. In essence, this hides the platform-specific native implementations behind a common JavaScript interface.
+Plugins usually consist of a JavaScript interface paired with corresponding platform-native code. In essence, this hides the platform-specific native implementations behind a common JavaScript interface.
 
-This page will walk through the steps to create a basic _echo_ plugin that passes a string from the frontend JavaScript to the native platform and back. The purpose of this guide is to provide a model for how to build and publish a Cordova plugin. It focuses on the fundamentals of plugin structure and the outward-facing JavaScript interface.
+This page will walk through the steps to create a basic _echo_ plugin that passes a string from the front-end JavaScript to the native platform and back. The purpose of this guide is to provide a model for how to build and publish a Cordova plugin. It focuses on the fundamentals of plugin structure and the outward-facing JavaScript interface.
 
 For the corresponding native implementations, see the list at the end of this section.
 
@@ -198,7 +197,6 @@ Below is a simple example of the `plugin.xml` file that will be used for the `Ec
 ## Adding a Front-End JavaScript API
 
 Plugin developers typically include a front-end JavaScript API. The primary purpose is to abstract away Cordova's internal APIs, eliminate the need for app developers to understand the specific naming of your plugin's service or methods, and simplify the overall usage of the plugin.
-
 
 ### `cordova.exec` Command Syntax
 

@@ -43,7 +43,6 @@ toc_title: iOS
   - [Debugging Plugins for iOS](#debugging-plugins-for-ios)
   - [Common Pitfalls](#common-pitfalls)
 
-
 This guide provides details on implementing native plugin code for the iOS platform. The plugin's platform-native code can be written in either Objective-C or Swift.
 
 Before proceeding, refer to the [Plugin Development Guide][plugin-dev] for an overview of plugin structure, plugin core files, and its common JavaScript interface. This guide will continue to use the _echo_ plugin, as an exmaple, which enables communication between the Cordova WebView and the native platform.
@@ -454,7 +453,6 @@ For security purpose, its highly unrecommended to enable the `InspectableWebview
 - Don't forget to add your plugin's mapping to `plugin.xml`. If you forget, an error is logged in the Xcode console.
 
 - Don't forget to add any hosts you connect to in the allow list, as described in Domain [Allow List Guide](../../appdev/allowlist/index.html). If you forget, an error is logged in the Xcode console.
-
 
 [plugin-dev]: ../../hybrid/plugins/index.html
 [CDVInvokedUrlCommand.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h
