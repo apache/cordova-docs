@@ -37,6 +37,7 @@ toc_title: iOS
       - [Handeling Long-running \& Background Activities](#handeling-long-running--background-activities)
       - [Hooking into WKURLSchemeTask](#hooking-into-wkurlschemetask)
       - [Using Background Threads](#using-background-threads)
+      - [Adding a Privacy Manifest File](#adding-a-privacy-manifest-file)
   - [CDVPluginResult Message Types](#cdvpluginresult-message-types)
   - [Other Supported `CDVPlugin` Features](#other-supported-cdvplugin-features)
   - [Debugging Plugins for iOS](#debugging-plugins-for-ios)
@@ -246,7 +247,7 @@ For example:
 
 ### Supporting Swift Package Manager (SPM)
 
-Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager has been implemented. To start using SPM with your plugin, a `Package.swift` file will need to be created in the plugin's root directory and a couple of things needs to be set and made aware in the `plugin.xml`.
+Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a `Package.swift` file will need to be created in the plugin's root directory and a couple of things needs to be set and made aware in the `plugin.xml`.
 
 #### Creating SPM's `Package.swift` File
 
@@ -281,7 +282,8 @@ let package = Package(
 )
 ```
 
-If the plugin has a privacy manifest to declare, you can add the following line `.copy("Resources/PrivacyInfo.xcprivacy")` to the `cordova-plugin-echo` `target` `resources` element.
+If the plugin is required to provide a privacy manifest file, the following line should be added to the `resources` element of the `cordova-plugin-echo` target: `.copy("Resources/PrivacyInfo.xcprivacy")`.
+On top of the SPM declaration, be sure to also refer to the section titled [Adding a Privacy Manifest File](#adding-a-privacy-manifest-file) to ensure that the actual resource file is properly declared in the `plugin.xml` so it is correctly injected into the app.
 
 If the plugin requires for any third-party dependencies, it should be added to the `dependencies` element, and the `target`'s `dependencies`.
 
@@ -340,6 +342,54 @@ For example:
     }];
 }
 ```
+
+#### Adding a Privacy Manifest File
+
+As of May 1, 2024, Apple requires a privacy manifest file to be created for apps and third-party SDKs. The purpose of the privacy manifest file is to explain the data being collected and the reasons for the required APIs it uses.
+
+Plugins can include a pre-bundled `PrivacyInfo.xcprivacy` file that lists any privacy-sensitive APIs they use, along with the reasons for their usage.
+
+It is recommended to review the following Apple Developer document, "[Describing data use in privacy manifests](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests)", to understand the list of known `NSPrivacyCollectedDataTypes` and `NSPrivacyCollectedDataTypePurposes`.
+
+Ensure all four keys—`NSPrivacyTracking`, `NSPrivacyTrackingDomains`, `NSPrivacyAccessedAPITypes`, and `NSPrivacyCollectedDataTypes`—are defined, even if you are not making an addition to the other items. Apple requires all to be defined.
+
+Once you've identified what the contents of the `PrivacyInfo.xcprivacy` will look like, lets start creating the bundle and loading it as a resource.
+
+1. Create a directory named `CDVEcho.bundle` inside the `src/ios` directory. Make sure the bundle name is unique enough to avoid conflicts with other plugins.
+
+2. Inside the new `CDVEcho.bundle` directory, create a privacy manifest file named `PrivacyInfo.xcprivacy`.
+
+3. Add the contents you've identified for this file. Here's an example:
+
+   ```xml
+   <!-- Example PrivacyInfo.xcprivacy Contents -->
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>NSPrivacyTracking</key>
+       <false/>
+       <key>NSPrivacyTrackingDomains</key>
+       <array/>
+       <key>NSPrivacyAccessedAPITypes</key>
+       <array/>
+       <key>NSPrivacyCollectedDataTypes</key>
+       <array/>
+   </dict>
+   </plist>
+   ```
+
+4. Update your `plugin.xml` to load the `CDVEcho.bundle` into the app's resources.
+
+   Inside the iOS `<platform>` element, add a `<resource-file>` element pointing to the `CDVEcho.bundle` directory:
+
+   ```xml
+   <platform name="ios">
+       <resource-file src="src/ios/CDVEcho.bundle" target="CDVEcho.bundle" />
+   </platform>
+   ```
+
+5. **Optional:** If your plugin supports Swift Package Manager, refer to the section [Creating SPM's `Package.swift` File](#creating-spms-packageswift-file) to ensure the privacy manifest is also included as a resource file.
 
 ## CDVPluginResult Message Types
 
