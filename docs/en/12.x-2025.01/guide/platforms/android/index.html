@@ -2649,6 +2649,8 @@
 <p>On Linux or macOS versions prior to Catalina, use any text editor to create or modify the <code>~/.bash_profile</code> file.
 <br />On macOS Catalina and newer, create or modify the <code>~/.zprofile</code> file, as the default shell has changed.</p>
 
+<h5>ANDROID_HOME</h5>
+
 <p>Add the following line to your shell&#39;s profile to set up the <code>ANDROID_HOME</code> environment variable.</p>
 
 <p><strong>Linux:</strong></p>
@@ -2670,6 +2672,18 @@
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/build-tools/
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$ANDROID_HOME</span>/emulator/
 </code></pre></div></div>
+
+<h4>JAVA_HOME</h4>
+
+<p><strong>macOS:</strong></p>
+
+<p>When you installed the Java Development Kit, as described in this guide, you can get the java home path by executing:</p>
+
+<p><code>echo $(/usr/libexec/java_home)</code></p>
+
+<p>Set <code>JAVA_HOME</code> like you already did it for <code>ANDROID_HOME</code>.</p>
+
+<h3>Reload Terminal</h3>
 
 <p>Reload your terminal to see this change reflected or run the following command:</p>
 
