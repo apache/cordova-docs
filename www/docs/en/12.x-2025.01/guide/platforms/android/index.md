@@ -297,6 +297,8 @@ _**Note:** The directories above are generally located in the Android SDK ROOT._
 On Linux or macOS versions prior to Catalina, use any text editor to create or modify the `~/.bash_profile` file.
 <br>On macOS Catalina and newer, create or modify the `~/.zprofile` file, as the default shell has changed.
 
+##### ANDROID_HOME
+
 Add the following line to your shell's profile to set up the `ANDROID_HOME` environment variable.
 
 **Linux:**
@@ -321,6 +323,18 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/
 export PATH=$PATH:$ANDROID_HOME/build-tools/
 export PATH=$PATH:$ANDROID_HOME/emulator/
 ```
+
+#### JAVA_HOME
+
+**macOS:**
+
+When you installed the Java Development Kit, as described in this guide, you can get the java home path by executing:
+
+`echo $(/usr/libexec/java_home)`
+
+Set `JAVA_HOME` like you already did it for `ANDROID_HOME`.
+
+### Reload Terminal
 
 Reload your terminal to see this change reflected or run the following command:
 
