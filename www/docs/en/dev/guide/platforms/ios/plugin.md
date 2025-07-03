@@ -204,7 +204,7 @@ Below is an example of what this should look like once the feature is added to t
         <feature name="Echo">
             <param name="ios-package" value="Echo" />
         </feature>
-    <config-file>
+    </config-file>
 
     <!-- If your plugin uses Swift -->
     <source-file src="src/ios/Echo.swift" />
