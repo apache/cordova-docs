@@ -165,9 +165,9 @@ In the following example, we will place all files in the `src/ios/` directory. T
 
 For more details, see the following class headers:
 
-- [CDVInvokedUrlCommand.h][CDVInvokedUrlCommand.h]
-- [CDVPluginResult.h][CDVPluginResult.h]
-- [CDVCommandDelegate.h][CDVCommandDelegate.h]
+- [CDVInvokedUrlCommand][CDVInvokedUrlCommand]
+- [CDVPluginResult][CDVPluginResult]
+- [CDVCommandDelegate][CDVCommandDelegate]
 
 ### Configuring the `plugin.xml`
 
@@ -246,7 +246,7 @@ For example:
 
 ### Supporting Swift Package Manager (SPM)
 
-Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a `Package.swift` file will need to be created in the plugin's root directory and a couple of things needs to be set and made aware in the `plugin.xml`.
+Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a `Package.swift` file will need to be created in the plugin's root directory and add the `package="swift"` attribute to the iOS `<platform>` element in your `plugin.xml` file.
 
 #### Creating SPM's `Package.swift` File
 
@@ -324,7 +324,7 @@ The [WKURLSchemeTask](https://developer.apple.com/documentation/webkit/wkurlsche
 
 #### Using Background Threads
 
-Plugin methods ordinarily execute in the same thread as the main interface. If your plugin requires a great deal of processing or requires a blocking call, you should use a background thread.
+Plugin methods ordinarily execute in the same thread as the main interface. If your plugin requires a great deal of processing or requires a blocking call, you should use a background thread. It is important to note that any operations involving the UI, such as displaying alerts, changing colors, or performing other visual updates, must be executed on the main thread.
 
 For example:
 
@@ -392,7 +392,7 @@ Once you've identified what the contents of the `PrivacyInfo.xcprivacy` will loo
 
 ## CDVPluginResult Message Types
 
-You can use `CDVPluginResult` to return a variety of result types back to the JavaScript callbacks, using class methods that follow this pattern:
+You can use [`CDVPluginResult`][CDVPluginResult] to return a variety of result types back to the JavaScript callbacks, using class methods that follow this pattern:
 
 ```objc
 + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
@@ -427,10 +427,9 @@ For example, the plugin can capture:
 - App Terminate Event
 - `handleOpenURL` events
 
-For additional reference, see the following classes:
+For additional reference, see the following class documentation:
 
-- [CDVPlugin.h][CDVPlugin.h]
-- [CDVPlugin.m][CDVPlugin.m]
+- [CDVPlugin][CDVPlugin]
 
 ## Debugging Plugins for iOS
 
@@ -455,10 +454,9 @@ For security purpose, its highly unrecommended to enable the `InspectableWebview
 - Don't forget to add any hosts you connect to in the allow list, as described in Domain [Allow List Guide](../../appdev/allowlist/index.html). If you forget, an error is logged in the Xcode console.
 
 [plugin-dev]: ../../hybrid/plugins/index.html
-[CDVInvokedUrlCommand.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVInvokedUrlCommand.h
-[CDVPluginResult.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPluginResult.h
-[CDVCommandDelegate.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVCommandDelegate.h
-[CDVPlugin.h]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.h
-[CDVPlugin.m]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/Public/CDVPlugin.m
 [ResumeEvent]: ../../../cordova/events/events.html#resume
 [PauseEvent]: ../../../cordova/events/events.html#pause
+[CDVCommandDelegate]: https://apache.github.io/cordova-ios/documentation/cordova/cdvcommanddelegate
+[CDVInvokedUrlCommand]: https://apache.github.io/cordova-ios/documentation/cordova/cdvinvokedurlcommand
+[CDVPlugin]: https://apache.github.io/cordova-ios/documentation/cordova/cdvplugin
+[CDVPluginResult]: https://apache.github.io/cordova-ios/documentation/cordova/cdvpluginresult
