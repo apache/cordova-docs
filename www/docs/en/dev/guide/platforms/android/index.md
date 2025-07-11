@@ -477,7 +477,7 @@ You can set these properties in one of four ways:
     cdvMinSdkVersion=20
     ```
 
-- [Extending `build.gradle`](#extending-buildgradle) with the `build-extras.gradle file
+- [Extending `build.gradle`](#extending-buildgradle) with the `build-extras.gradle` file
 
     Create a file named `build-extras.gradle` in the directory `<project-root>/platforms/android/app` with the contents such as:
 
@@ -487,14 +487,31 @@ You can set these properties in one of four ways:
 
 The latter two options both involve including an extra file in your Android platform folder. In general, it is discouraged to edit the contents of this folder because it is easy for those changes to be lost or overwritten. Instead, these files should be copied into the folder as part of the build command by using the `before_build` [hook script](../../appdev/hooks/index.html).
 
-#### Extending build.gradle
+#### Extending `build.gradle`
 
-If you need to customize the `build.gradle` file, rather than edit it directly, it is recommended to create a sibling file named `build-extras.gradle`. This file will be included by the main `build.gradle` script when present. This file must be placed in the `app` folder of the Android's platform directory (`<your-project>/platforms/android/app`). It is recommended to use the `before_build` [hook script](../../appdev/hooks/index.html) to copy this file over.
+To customize the `app/build.gradle` file without modifying it directly, create a sibling file named `build-extras.gradle`.
 
-Here's an example:
+If this file exists in the `<your-project>/platforms/android/app` directory during the build process, it will be automatically applied by the app's `build.gradle` script.
+
+To automate placing `build-extras.gradle` in the correct location, use the `<resource-file>` element in `config.xml`.
+
+In the example below, the source `build-extras.gradle` is saved in a `res/` directory in the project root. It is then declared in `config.xml` to copy it to the appropriate target location:
+
+```xml
+<resource-file src="res/build-extras.gradle" target="app/build-extras.gradle"/>
+```
+
+**Note:** The `res/` directory name is just an example. You can use any directory and file name you prefer. However, it's recommended not to place the file inside the `platforms`, `plugins`, or `www` directories. Also, make sure the `target` path matches exactly as shown in the example.
+
+**Note:** Plugin developers can also include a `build-extras.gradle` file, but should use the `<framework>` element in `plugin.xml` instead of `<resource-file>`:
+
+```xml
+<framework src="build-extras.gradle" custom="true" type="gradleReference" />
+```
+
+**Example `build-extras.gradle`:**
 
 ```groovy
-// Example build-extras.gradle
 // This file is included at the beginning of `build.gradle`
 
 // special properties (see `build.gradle`) can be set and overwrite the defaults
@@ -516,12 +533,6 @@ dependencies {
 ext.postBuildExtras = {
     android.buildTypes.debug.applicationIdSuffix = '.debug'
 }
-```
-
-Note that plugins can also include `build-extras.gradle` files via:
-
-```xml
-<framework src="some.gradle" custom="true" type="gradleReference" />
 ```
 
 #### Configuring Gradle JVM Args
