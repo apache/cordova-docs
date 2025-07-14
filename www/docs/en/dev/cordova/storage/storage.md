@@ -64,15 +64,13 @@ For more information, see:
 
 ### Disadvantages
 
-- Only stores strings, so complex data structures have to be serialized,
-  and only data that can be serialized can be stored.
+- Only stores strings, so complex data structures have to be serialized, and only data that can be serialized can be stored.
 - Performs poorly with large amounts of data. In particular:
     - The lack of indexing means searches require manually iterating all data.
     - Storing large or complex items is slow due to the need to serialize/de-serialize.
     - Synchronous API means calls will lock up the user interface.
 - Limited total amount of storage (typically around 5MB).
-- iOS stores `localStorage` data in a location that may be cleaned out by
-  the OS when space is required.
+- On iOS systems, WebKit may delete web-related data storage when the device is under storage pressure or exceeds defined storage quotas. This eviction is triggered by WebKit itself, based on its internal quota management policies. For more information, see [WebKit – Updates to Storage Policy][WebKitUpdatesToStoragePolicy].
 
 ## IndexedDB
 
@@ -187,6 +185,7 @@ For more information, see:
 
 - Complex API with nested callbacks.
 - Limited total amount of storage and possible eviction [as described on MDN][MDNIndexedDBLimitsAndEviction].
+- On iOS systems, WebKit may delete web-related data storage when the device is under storage pressure or exceeds defined storage quotas. This eviction is triggered by WebKit itself, based on its internal quota management policies. For more information, see [WebKit – Updates to Storage Policy][WebKitUpdatesToStoragePolicy].
 
 ## Plugin-Based Options
 
@@ -219,6 +218,7 @@ It is available in the following variations:
 Search [Cordova plugins][CordovaPlugins] for other plugins that provide
 alternative storage options.
 
+[WebKitUpdatesToStoragePolicy]: https://webkit.org/blog/14403/updates-to-storage-policy/
 [Html5RocksStorageOverview]: http://www.html5rocks.com/en/features/storage
 [Html5RocksStorageTutorial]: http://www.html5rocks.com/en/tutorials/offline/storage/
 [W3CSpecStorage]: https://html.spec.whatwg.org/multipage/webstorage.html
