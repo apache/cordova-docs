@@ -145,18 +145,29 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
     }
     ```
 
-3. Setup up the theming for your activity to comply with Cordova.
+3. Set up your activity's style to comply with Cordova
 
-    As Cordova-Android framework displays a SplashScreen, we will need to update the native app's `themes.xml` to include a SplashScreen theme and `postSplashScreenTheme` for our Cordova activity.
+    By default, `CordovaActivity` shows an initial splash screen. If this is the desired behavior, your custom activity should define a style in the `android:theme` attribute that inherits from `Theme.SplashScreen.IconBackground`.
 
-    **Note:** Since `CordovaActivity` extends `AppCompatActivity`, the `postSplashScreenTheme` that the activity will transition to must inherit from a `Theme.AppCompat.*` style. For example, you can use `Theme.AppCompat.DayNight.NoActionBar` or a custom theme based on it.
+    Below is an example of what your `<activity>` might look like in `AndroidManifest.xml`:
 
-    Below is an example and the theme names can be changed to your perfered naming.
+    **Sample `AndroidManifest.xml` `<activity>`:**
+
+    ```xml
+    <activity
+        android:name=".TestActivity"
+        android:exported="false"
+        android:theme="@style/Theme.MyCordovaAppSplashScreen" />
+    ```
+
+    Here's the corresponding style in `themes.xml` to match the `android:theme` value. Feel free to rename the style to suit your app.
+
+    **Sample `themes.xml` `<style>`:**
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <resources xmlns:tools="http://schemas.android.com/tools">
-        <!-- The theme that will be used for the activity that displays Cordova -->
+        <!-- Theme for the activity that hosts Cordova -->
         <style name="Theme.MyCordovaAppSplashScreen" parent="Theme.SplashScreen.IconBackground">
             <item name="windowSplashScreenBackground">@color/black</item>
             <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
@@ -164,11 +175,24 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
             <item name="postSplashScreenTheme">@style/Theme.MyCordovaApp</item>
         </style>
 
-        <!-- The Post SplashScreen Theme -->
+        <!-- Theme applied after the splash screen -->
         <style name="Theme.MyCordovaApp" parent="Theme.AppCompat.DayNight.NoActionBar" />
     </resources>
     ```
-    Next, update the `android:theme` attribute for your Cordova `<activity>` to `@style/Theme.MyCordovaAppSplashScreen` .
+
+    > **Note:** Since `CordovaActivity` extends `AppCompatActivity`, the `postSplashScreenTheme` must inherit from a `Theme.AppCompat.*` style (e.g., `Theme.AppCompat.DayNight.NoActionBar` or a custom variant).
+
+    If you **don't** want the initial splash screen to appear, override the `showInitialSplashScreen` method in your activity:
+
+    **Kotlin example:**
+
+    ```kotlin
+    override fun showInitialSplashScreen(): Boolean {
+        return false
+    }
+    ```
+
+    > **Note:** If the splash screen is disabled, make sure the `android:theme` points directly to a theme based on `Theme.AppCompat.*`. Avoid using `Theme.SplashScreen.*`.
 
 4. Copy your application's web assets (HTML, CSS, JavaScript) to the Android project's `<app-root-directory>/app/src/main/assets/www/` directory.
 
