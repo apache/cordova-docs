@@ -2404,8 +2404,7 @@ snippet shows the most important methods exposed by the returned <code>Storage</
 <h3>Disadvantages</h3>
 
 <ul>
-  <li>Only stores strings, so complex data structures have to be serialized,
-and only data that can be serialized can be stored.</li>
+  <li>Only stores strings, so complex data structures have to be serialized, and only data that can be serialized can be stored.</li>
   <li>Performs poorly with large amounts of data. In particular:
     <ul>
       <li>The lack of indexing means searches require manually iterating all data.</li>
@@ -2414,8 +2413,7 @@ and only data that can be serialized can be stored.</li>
     </ul>
   </li>
   <li>Limited total amount of storage (typically around 5MB).</li>
-  <li>iOS stores <code>localStorage</code> data in a location that may be cleaned out by
-the OS when space is required.</li>
+  <li>On iOS systems, WebKit may delete web-related data storage when the device is under storage pressure or exceeds defined storage quotas. This eviction is triggered by WebKit itself, based on its internal quota management policies. For more information, see <a href="https://webkit.org/blog/14403/updates-to-storage-policy/">WebKit – Updates to Storage Policy</a>.</li>
 </ul>
 
 <h2>IndexedDB</h2>
@@ -2537,6 +2535,7 @@ good search performance.</li>
 <ul>
   <li>Complex API with nested callbacks.</li>
   <li>Limited total amount of storage and possible eviction <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">as described on MDN</a>.</li>
+  <li>On iOS systems, WebKit may delete web-related data storage when the device is under storage pressure or exceeds defined storage quotas. This eviction is triggered by WebKit itself, based on its internal quota management policies. For more information, see <a href="https://webkit.org/blog/14403/updates-to-storage-policy/">WebKit – Updates to Storage Policy</a>.</li>
 </ul>
 
 <h2>Plugin-Based Options</h2>
