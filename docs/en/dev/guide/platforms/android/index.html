@@ -2887,7 +2887,7 @@ C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 </code></pre></div>    </div>
   </li>
   <li>
-    <p><a href="#extending-buildgradle">Extending <code>build.gradle</code></a> with the `build-extras.gradle file</p>
+    <p><a href="#extending-buildgradle">Extending <code>build.gradle</code></a> with the <code>build-extras.gradle</code> file</p>
 
     <p>Create a file named <code>build-extras.gradle</code> in the directory <code>&lt;project-root&gt;/platforms/android/app</code> with the contents such as:</p>
 
@@ -2898,14 +2898,29 @@ C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 
 <p>The latter two options both involve including an extra file in your Android platform folder. In general, it is discouraged to edit the contents of this folder because it is easy for those changes to be lost or overwritten. Instead, these files should be copied into the folder as part of the build command by using the <code>before_build</code> <a href="../../appdev/hooks/index.html">hook script</a>.</p>
 
-<h4>Extending build.gradle</h4>
+<h4>Extending <code>build.gradle</code></h4>
 
-<p>If you need to customize the <code>build.gradle</code> file, rather than edit it directly, it is recommended to create a sibling file named <code>build-extras.gradle</code>. This file will be included by the main <code>build.gradle</code> script when present. This file must be placed in the <code>app</code> folder of the Android&#39;s platform directory (<code>&lt;your-project&gt;/platforms/android/app</code>). It is recommended to use the <code>before_build</code> <a href="../../appdev/hooks/index.html">hook script</a> to copy this file over.</p>
+<p>To customize the <code>app/build.gradle</code> file without modifying it directly, create a sibling file named <code>build-extras.gradle</code>.</p>
 
-<p>Here&#39;s an example:</p>
+<p>If this file exists in the <code>&lt;your-project&gt;/platforms/android/app</code> directory during the build process, it will be automatically applied by the app&#39;s <code>build.gradle</code> script.</p>
 
-<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example build-extras.gradle</span>
-<span class="c1">// This file is included at the beginning of `build.gradle`</span>
+<p>To automate placing <code>build-extras.gradle</code> in the correct location, use the <code>&lt;resource-file&gt;</code> element in <code>config.xml</code>.</p>
+
+<p>In the example below, the source <code>build-extras.gradle</code> is saved in a <code>res/</code> directory in the project root. It is then declared in <code>config.xml</code> to copy it to the appropriate target location:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"res/build-extras.gradle"</span> <span class="na">target=</span><span class="s">"app/build-extras.gradle"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Note:</strong> The <code>res/</code> directory name is just an example. You can use any directory and file name you prefer. However, it&#39;s recommended not to place the file inside the <code>platforms</code>, <code>plugins</code>, or <code>www</code> directories. Also, make sure the <code>target</code> path matches exactly as shown in the example.</p>
+
+<p><strong>Note:</strong> Plugin developers can also include a <code>build-extras.gradle</code> file, but should use the <code>&lt;framework&gt;</code> element in <code>plugin.xml</code> instead of <code>&lt;resource-file&gt;</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"build-extras.gradle"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"gradleReference"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Example <code>build-extras.gradle</code>:</strong></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This file is included at the beginning of `build.gradle`</span>
 
 <span class="c1">// special properties (see `build.gradle`) can be set and overwrite the defaults</span>
 <span class="n">ext</span><span class="o">.</span><span class="na">cdvDebugSigningPropertiesFile</span> <span class="o">=</span> <span class="s1">'../../android-debug-keys.properties'</span>
@@ -2926,11 +2941,6 @@ C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 <span class="n">ext</span><span class="o">.</span><span class="na">postBuildExtras</span> <span class="o">=</span> <span class="o">{</span>
     <span class="n">android</span><span class="o">.</span><span class="na">buildTypes</span><span class="o">.</span><span class="na">debug</span><span class="o">.</span><span class="na">applicationIdSuffix</span> <span class="o">=</span> <span class="s1">'.debug'</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Note that plugins can also include <code>build-extras.gradle</code> files via:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"some.gradle"</span> <span class="na">custom=</span><span class="s">"true"</span> <span class="na">type=</span><span class="s">"gradleReference"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
 <h4>Configuring Gradle JVM Args</h4>
