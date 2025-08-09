@@ -6,9 +6,75 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Jul 2025 13:21:21 +0000</pubDate>
-    <lastBuildDate>Mon, 14 Jul 2025 13:21:21 +0000</lastBuildDate>
+    <pubDate>Sat, 09 Aug 2025 07:13:33 +0000</pubDate>
+    <lastBuildDate>Sat, 09 Aug 2025 07:13:33 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Common 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@6.0.0&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Removal of &lt;code&gt;superspawn&lt;/code&gt;, which also dropped the npm dependencies &lt;code&gt;q&lt;/code&gt; and &lt;code&gt;cross-spawn&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Update to the &lt;code&gt;&amp;lt;resource-file&amp;gt;&lt;/code&gt; directive to allow directories and their contents to be copied.&lt;/li&gt;
+  &lt;li&gt;Update to the &lt;code&gt;&amp;lt;config-file&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;edit-config&amp;gt;&lt;/code&gt; directives to support finding unprefixed &lt;code&gt;Info.plist&lt;/code&gt; files.&lt;/li&gt;
+  &lt;li&gt;Increase in the Node.js engine requirement to &lt;code&gt;&amp;gt;=20.9.0&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/239&quot;&gt;GH-239&lt;/a&gt; feat!: change &lt;code&gt;resource-file&lt;/code&gt; behavior to support directory contents&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/236&quot;&gt;GH-236&lt;/a&gt; feat!: remove &lt;code&gt;superspawn.js&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/231&quot;&gt;GH-231&lt;/a&gt; feat!: remove &lt;code&gt;superspawn&lt;/code&gt; &amp;amp; npm packages &lt;code&gt;q&lt;/code&gt; &amp;amp; &lt;code&gt;cross-spawn&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/235&quot;&gt;GH-235&lt;/a&gt; dep(npm)!: bump &lt;code&gt;@cordova/eslint-config@6.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Bumps &lt;code&gt;node &amp;gt;=20.9.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/228&quot;&gt;GH-228&lt;/a&gt; chore!: bump &lt;code&gt;node &amp;gt;=20.5.0&lt;/code&gt; &amp;amp; upgrade npm packages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/212&quot;&gt;GH-212&lt;/a&gt; feat: Support finding an unprefixed &lt;code&gt;Info.plist&lt;/code&gt; file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/240&quot;&gt;GH-240&lt;/a&gt; chore: update &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/232&quot;&gt;GH-232&lt;/a&gt; chore(tests): Improve test coverage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/229&quot;&gt;GH-229&lt;/a&gt; chore(coverage): Move from &lt;code&gt;nyc&lt;/code&gt; to &lt;code&gt;c8&lt;/code&gt; for code coverage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/238&quot;&gt;GH-238&lt;/a&gt; dep(npm): update w/ rebuilt &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/237&quot;&gt;GH-237&lt;/a&gt; refactor(bom): Bring &lt;code&gt;strip-bom&lt;/code&gt; in as util&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI &amp;amp; Refactoring:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/234&quot;&gt;GH-234&lt;/a&gt; ci: use macos-15&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/233&quot;&gt;GH-233&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/230&quot;&gt;GH-230&lt;/a&gt; ci: add permissions block &amp;amp; commit hash pinning of third-party actions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 14.0.1 Released!</title>
@@ -926,51 +992,6 @@ npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;cordova@latest
         <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/11/01/cordova-lib-release-12.0.2.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/11/01/cordova-lib-release-12.0.2.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>File Plugin 8.1.2 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file&quot;&gt;cordova-plugin-file@8.1.2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file
-cordova plugin add cordova-plugin-file@8.1.2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This patch is a regression fix. See &lt;a href=&quot;https://cordova.apache.org/announcements/2024/10/23/cordova-plugin-file-8.1.1.html&quot;&gt;8.1.1 release blog&lt;/a&gt; post for more details.&lt;/p&gt;
-
-&lt;p&gt;In 8.1.1, the &lt;code&gt;FileEntry.toURL()&lt;/code&gt; method broke when used on any &lt;code&gt;file://&lt;/code&gt; that didn&amp;#39;t lead to the app&amp;#39;s internal assets on Android. This is now corrected.&lt;/p&gt;
-
-&lt;p&gt;This bug didn&amp;#39;t effect iOS devices.&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/640&quot;&gt;GH-640&lt;/a&gt; fix(android): Regression breaking resolved DOM-usable file:// paths (#640)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 28 Oct 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/10/28/cordova-plugin-file-8.1.2.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/10/28/cordova-plugin-file-8.1.2.html</guid>
         
         <category>news</category>
         
