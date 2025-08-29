@@ -48,6 +48,7 @@ function checkNotification() {
     if (lastVisit != "") {
         
         dates.push('Fri, 29 Aug 2025 00:00:00 +0000');
+        dates.push('Fri, 29 Aug 2025 00:00:00 +0000');
         dates.push('Sat, 09 Aug 2025 00:00:00 +0000');
         dates.push('Wed, 30 Apr 2025 00:00:00 +0000');
         dates.push('Wed, 26 Mar 2025 00:00:00 +0000');

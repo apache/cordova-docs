@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Aug 2025 06:12:37 +0000</pubDate>
-    <lastBuildDate>Fri, 29 Aug 2025 06:12:37 +0000</lastBuildDate>
+    <pubDate>Fri, 29 Aug 2025 06:33:22 +0000</pubDate>
+    <lastBuildDate>Fri, 29 Aug 2025 06:33:22 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -67,6 +67,50 @@
         <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova App Hello World 7.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-app-hello-world@7.0.0&lt;/code&gt; has been released. This is the default app template used when creating a new Cordova App project though Cordova CLI.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this release were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setting the &lt;code&gt;body&lt;/code&gt; element&amp;#39;s &lt;code&gt;box-sizing&lt;/code&gt; to &lt;code&gt;border-box&lt;/code&gt; to avoid the &lt;code&gt;safe-area-inset&lt;/code&gt; padding that caused scrolling issues&lt;/li&gt;
+  &lt;li&gt;Disabled the &lt;code&gt;overscroll&lt;/code&gt; behavior of the root element to remove rubber-banding effects.&lt;/li&gt;
+  &lt;li&gt;Used modern, unprefixed CSS directives.&lt;/li&gt;
+  &lt;li&gt;Updated default template&amp;#39;s package ID to &lt;code&gt;org.apache.cordova.hellocordova&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/98&quot;&gt;GH-98&lt;/a&gt; fix(css): Fix extra padding causing scrolling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/99&quot;&gt;GH-99&lt;/a&gt; chore: updated defaults, license headers &amp;amp; added release audit workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/78&quot;&gt;GH-78&lt;/a&gt; chore: correct &lt;code&gt;access&lt;/code&gt; inline comment&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</guid>
         
         <category>news</category>
         
@@ -774,217 +818,6 @@ iOS webview is configured to use app schemes, or a &lt;code&gt;file://&lt;/code&
         <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2024/11/20/cordova-plugin-file-8.1.3.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/11/20/cordova-plugin-file-8.1.3.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Camera Plugin 8.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released a major update for &lt;code&gt;cordova-plugin-camera&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-camera&quot;&gt;cordova-plugin-camera@8.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-camera
-cordova plugin add cordova-plugin-camera@8.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This is a major update as it includes some breaking public API mechanisms, for
-the better!&lt;/p&gt;
-
-&lt;p&gt;The breaking changes includes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#getpicture&quot;&gt;getPicture&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#uri-persistence&quot;&gt;URI Persistence&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#optional-write_external_storage-permission&quot;&gt;Optional WRITE_EXTERNAL_STORAGE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Additionally the &lt;code&gt;allowEdit&lt;/code&gt; feature is now deprecated. &lt;a href=&quot;#deprecation-allowedit&quot;&gt;See more details&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3&gt;getPicture&lt;/h3&gt;
-
-&lt;p&gt;The Camera plugin previously was very inconsistent with the return paths when
-using &lt;code&gt;getPicture&lt;/code&gt; API. Sometimes it was &lt;code&gt;file://&lt;/code&gt; uri, sometimes it was a raw
-file path. Applications would have to check and usually prefix the path
-themselves to make any use of them. So we&amp;#39;ve streamlined the returned data as
-URIs.&lt;/p&gt;
-
-&lt;p&gt;All platforms consistently return a &lt;code&gt;&amp;lt;scheme&amp;gt;:...&lt;/code&gt; now.&lt;/p&gt;
-
-&lt;p&gt;For all platforms, when using the &lt;code&gt;DATA_URL&lt;/code&gt; option, the returned base64 encoded
-image used to return just the base64 encoded part. As of v8.0.0, the returned
-string now includes the &lt;code&gt;data:&lt;/code&gt; uri header, including the MIME type that the
-base64 data represents.&lt;/p&gt;
-
-&lt;p&gt;For iOS, &lt;code&gt;file://&lt;/code&gt; uris were always previously returned consistently therefore,
-no changes were made here.&lt;/p&gt;
-
-&lt;p&gt;For Android, the API behaved consistently depending on the underlying source of
-the content. Most of the time a raw file path was returned. It will now always
-return a URI of some sort, though unlike iOS, it is unsafe to assume it will be
-a &lt;code&gt;file://&lt;/code&gt; uri.&lt;/p&gt;
-
-&lt;p&gt;If you were testing and prefixing your file paths, you are no longer required to.
-All URIs returned when using &lt;code&gt;FILE_URI&lt;/code&gt; option is resolvable by 
-cordova-plugin-file@8.1.2` and later.&lt;/p&gt;
-
-&lt;p&gt;For examples on how to use the results, see the
-&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera?tab=readme-ov-file#take-a-picture-and-get-a-fileentry-object-&quot;&gt;Camera Plugin Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3&gt;URI Persistence&lt;/h3&gt;
-
-&lt;p&gt;For all platforms using &lt;code&gt;FILE_URI&lt;/code&gt; option, the returned URI is &lt;strong&gt;temporarily access&lt;/strong&gt; only.&lt;/p&gt;
-
-&lt;p&gt;When sourcing content from the camera, the file is stored in the app&amp;#39;s temporary
-directory, which the OS may clear out at any time when disk space is sparse.&lt;/p&gt;
-
-&lt;!-- For iOS, this might not be completely accurate, but for the sake of making
-the blog brief/simple, I'm omitting this fact --&gt;
-&lt;p&gt;When sourcing content from the user&amp;#39;s gallery, the returned URI has a
-temporarily read permission provided by the OS which expires typically once the
-application exits.&lt;/p&gt;
-
-&lt;p&gt;This means that the URI returned by &lt;code&gt;getPicture&lt;/code&gt; should not be stored. The
-application should decide what to do with it depending on their needs and
-requirements.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt; The application is receiving an image for the user&amp;#39;s profile
-picture and it will require persistent access to that content.&lt;/p&gt;
-
-&lt;p&gt;Solution: The application should copy the content to the app&amp;#39;s data directory
-and store and use the copied URI instead.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt; The application is receiving an image to edit or make
-manipulations. It just needs one-time read to load into memory to put the data
-in an image editor.&lt;/p&gt;
-
-&lt;p&gt;Solution: The application can safely use the temporarily URI to read and display
-the content and save the manipulated data later.&lt;/p&gt;
-
-&lt;h3&gt;Optional WRITE_EXTERNAL_STORAGE Permission&lt;/h3&gt;
-
-&lt;p&gt;For Android 7 - 12, this plugin used to always include the &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;
-permission, and for implementation reasons it was required to operate.&lt;/p&gt;
-
-&lt;p&gt;As of v8.0.0, the Camera plugin no longer automatically includes the permission
-declaration, as in most cases it is no longer required.&lt;/p&gt;
-
-&lt;p&gt;If your application enables the &lt;code&gt;saveToPhotoAlbum&lt;/code&gt; option, then you&amp;#39;ll need to
-add the following to the &lt;code&gt;config.xml&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;platform&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;config-file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;AndroidManifest.xml&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;parent=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/*&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://schemas.android.com/apk/res/android&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:maxSdkVersion=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;28&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/config-file&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/platform&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If your application does not use &lt;code&gt;saveToPhotoAlbum&lt;/code&gt;, then your application does
-not require any permissions to operate both the camera, or picking from the
-user&amp;#39;s gallery.&lt;/p&gt;
-
-&lt;p&gt;Attempting to use &lt;code&gt;saveToPhotoAlbum&lt;/code&gt; without declaring the &lt;code&gt;WRITE_EXTERNAL_STORAGE&lt;/code&gt;
-will result in an error being returned on Android 7, Android 8, and Android 9 devices.&lt;/p&gt;
-
-&lt;h3&gt;Deprecation: allowEdit&lt;/h3&gt;
-
-&lt;p&gt;The &lt;code&gt;allowEdit&lt;/code&gt; feature when capturing images from the camera, or selecting
-images from the gallery is now deprecated. Behaviour of this feature was
-inconsistent across platforms, and often times is unreliable as it was dependent
-on support of the underlying Camera application which was not standard.&lt;/p&gt;
-
-&lt;p&gt;The feature still exists for the time being and should work as-is given it&amp;#39;s
-documented caveats, but Apache Cordova will no longer provide support for issues
-arising from using the feature. The &lt;code&gt;allowEdit&lt;/code&gt; option is scheduled to be
-completely removed at a later date with no direct replacement.&lt;/p&gt;
-
-&lt;p&gt;Users using the &lt;code&gt;allowEdit&lt;/code&gt; feature should move to a dedicated image
-manipulation library.&lt;/p&gt;
-
-&lt;h3&gt;Known Issues&lt;/h3&gt;
-
-&lt;h4&gt;iOS&lt;/h4&gt;
-
-&lt;p&gt;The &lt;code&gt;FileEntry.toURL&lt;/code&gt; method on iOS does not produce a DOM-usable uri while
-the application is configured to use schemes. A &lt;a href=&quot;https://github.com/apache/cordova-plugin-file/pull/642&quot;&gt;fix&lt;/a&gt;
-for this will be available at an later date. In the meantime, the following can
-be used as a workaround:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// TODO: Remove when https://github.com/apache/cordova-plugin-file/pull/642 is released&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;toDomURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fileEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cordova&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;WkWebView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;convertFilePath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fileEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nativeUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If your app is still hosted on the &lt;code&gt;file://&lt;/code&gt; protocol on iOS, then the
-workaround is not necessary.&lt;/p&gt;
-
-&lt;h4&gt;Android&lt;/h4&gt;
-
-&lt;p&gt;Android will start returning &lt;code&gt;content://&lt;/code&gt; instead of &lt;code&gt;file://&lt;/code&gt; URIs when
-selecting images from the user&amp;#39;s gallery in order to make use of the underlying
-MediaStore APIs. In order for these paths to be resolvable to a DOM-usable URL,
-the &lt;code&gt;AndroidInsecureFileModeEnabled&lt;/code&gt; preference must be &lt;code&gt;&quot;false&quot;&lt;/code&gt; (the default value).&lt;/p&gt;
-
-&lt;p&gt;Please report any issues you find by following the
-&lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/902&quot;&gt;GH-902&lt;/a&gt; fix(android): always return uris (#902)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/909&quot;&gt;GH-909&lt;/a&gt; refactor(android): Make WRITE_EXTERNAL_STORAGE optional (#909)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/910&quot;&gt;GH-910&lt;/a&gt; fix(android): Return data uris as an URI (#910)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/911&quot;&gt;GH-911&lt;/a&gt; fix(ios): Sync camera API return to match Android changes (#911)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/912&quot;&gt;GH-912&lt;/a&gt; fix(browser): Make data uri be returned as actual URI strings (#912)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/915&quot;&gt;GH-915&lt;/a&gt; fix(android): remove WRITE_EXTERNAL_PERMISSION (#915)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Improvements:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/901&quot;&gt;GH-901&lt;/a&gt; fix(android): Isolate provider access to a subdirectory (#901)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/904&quot;&gt;GH-904&lt;/a&gt; fix(android): Use VERSION_CODES instead of hard-coded API literals (#904)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/906&quot;&gt;GH-906&lt;/a&gt; refactor(android): replace image path usage with image uris&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/907&quot;&gt;GH-907&lt;/a&gt; refactor(android): remove query img usage (#907)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/903&quot;&gt;GH-903&lt;/a&gt; fix(android): Improper serialization of image uri in save instance state (#903)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/905&quot;&gt;GH-905&lt;/a&gt; fix(android): improper cache path construction during image manipulation (#905)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Deprecations:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/914&quot;&gt;GH-914&lt;/a&gt; deprecation: allowEdit (#914)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Documentation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-camera/pull/913&quot;&gt;GH-913&lt;/a&gt; docs: Revisions for v8 public API changes with the return string formats of getPicture (#913)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2024/11/02/camera-plugin-camera-8.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2024/11/02/camera-plugin-camera-8.0.0.html</guid>
         
         <category>news</category>
         
