@@ -5,41 +5,56 @@ title: Apache Cordova Nightly Builds
 
 # Nightly builds
 
-**These are not official releases.**
+**Nightly builds are not official releases and should not be used in production.**
 
-Cordova community provides Cordova nightly builds as a way to test new features and bug-fixes not yet included into the latest official release. Nightly builds are performed by [Apache Jenkins](https://builds.apache.org/view/A-D/view/Cordova/job/cordova-nightly/) every day approximately at 3PM UTC and are being published to NPM under the `@nightly` dist tag.
+They are generated and published to the NPM registry around 3 PM UTC under the `@nightly` dist tag.
 
 The following NPM packages are being released as a part of the nightly builds:
-- cordova
+
+- cordova (cordova-cli)
 - cordova-lib
+- cordova-common
+- cordova-fetch
+- cordova-serve
+- cordova-create
+- xcode (cordova-node-xcode)
 - cordova-android
+- cordova-electron
 - cordova-ios
-- cordova-windows
 
 ## Notice
 
-The nightly builds are untested and may contain known and unknown defects, undeclared features, and perhaps other issues. They are intended to be used for testing purposes by developers, and others who want to help with resolving bugs.
+Nightly builds are intended for testing purposes only—such as trying out unreleased features, verifying bug fixes, or identifying new issues before an official release.
+
+These builds are created daily from the main branch and may be **unstable**. They are untested, may contain known and unknown defects, undeclared features, and perhaps other issues.
 
 ## Installation
 
-To try out the latest nightly version you can do:
+The Cordova CLI nightly build can be installed either locally (project scope) or globally.
 
-```bash
+### Install locally (project scope):
+
+```zsh
 npm install cordova@nightly
-./node_modules/.bin/cordova --version
+npx cordova --version
 ```
 
-You can supply the `--global` option to NPM to install the nightly version globally. _Note_ that this will replace your main Cordova distribution.
+### Install globally:
 
-```bash
-npm install --global cordova@nightly
+```zsh
+npm install -g cordova@nightly
+cordova
 ```
 
-## Submitting issues
+> **Note:** Installing globally will replace any existing Cordova installation.
 
-Please let us know about any issues in the nightly builds so we can fix them as soon as possible. For submitting issues, please refer to the [Reporting Issues](./issues.md) document.
+## Submitting Issues
 
-When submitting an issue, please add a note that the issue was reproduced using a nightly build, and provide the nightly version that you are using. You can get this via:
+If you encounter any issues with the nightly builds, please report them to the appropriate GitHub repository.
+
+For details on how to report issues, see the [Reporting Issues](./issues.md) guide.
+
+When submitting, **mention that the issue occurred using a nightly build** and include the version by running:
 
 ```bash
 cordova --version
