@@ -113,41 +113,67 @@
     <div class="contribute-help">
     <h1>Nightly builds</h1>
 
-<p><strong>These are not official releases.</strong></p>
+<p><strong>Nightly builds are not official releases and should not be used in production.</strong></p>
 
-<p>Cordova community provides Cordova nightly builds as a way to test new features and bug-fixes not yet included into the latest official release. Nightly builds are performed by <a href="https://builds.apache.org/view/A-D/view/Cordova/job/cordova-nightly/">Apache Jenkins</a> every day approximately at 3PM UTC and are being published to NPM under the <code>@nightly</code> dist tag.</p>
+<p>They are generated and published to the NPM registry around 3 PM UTC under the <code>@nightly</code> dist tag.</p>
 
 <p>The following NPM packages are being released as a part of the nightly builds:</p>
+
 <ul>
-  <li>cordova</li>
+  <li>cordova (cordova-cli)</li>
   <li>cordova-lib</li>
+  <li>cordova-common</li>
+  <li>cordova-fetch</li>
+  <li>cordova-serve</li>
+  <li>cordova-create</li>
+  <li>xcode (cordova-node-xcode)</li>
   <li>cordova-android</li>
+  <li>cordova-electron</li>
   <li>cordova-ios</li>
-  <li>cordova-windows</li>
 </ul>
 
 <h2>Notice</h2>
 
-<p>The nightly builds are untested and may contain known and unknown defects, undeclared features, and perhaps other issues. They are intended to be used for testing purposes by developers, and others who want to help with resolving bugs.</p>
+<p>Nightly builds are intended for testing purposes only—such as trying out unreleased features, verifying bug fixes, or identifying new issues before an official release.</p>
 
-<h2>Installation</h2>
+<p>These builds are created daily from the main branch and may be <strong>unstable</strong>. They are untested, may contain known and unknown defects, undeclared features, and perhaps other issues.</p>
 
-<p>To try out the latest nightly version you can do:</p>
+<h2>Installing Cordova CLI Nightly Builds</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>cordova@nightly
-./node_modules/.bin/cordova <span class="nt">--version</span>
+<p>The Cordova CLI nightly build can be installed either locally (project scope) or globally.</p>
+
+<h3>Install locally (project scope):</h3>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>cordova@nightly
+npx cordova <span class="nt">--version</span>
 </code></pre></div></div>
 
-<p>You can supply the <code>--global</code> option to NPM to install the nightly version globally. <em>Note</em> that this will replace your main Cordova distribution.</p>
+<h3>Install globally:</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--global</span> cordova@nightly
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> cordova@nightly
+cordova
 </code></pre></div></div>
 
-<h2>Submitting issues</h2>
+<blockquote>
+  <p><strong>Note:</strong> Installing globally will replace any existing Cordova installation.</p>
+</blockquote>
 
-<p>Please let us know about any issues in the nightly builds so we can fix them as soon as possible. For submitting issues, please refer to the <a href="./issues.md">Reporting Issues</a> document.</p>
+<h2>Installing Cordova Platform Nightly Builds</h2>
 
-<p>When submitting an issue, please add a note that the issue was reproduced using a nightly build, and provide the nightly version that you are using. You can get this via:</p>
+<p>Cordova CLI uses npm to install platforms and plugins, as they are distributed as npm packages. To install a nightly build of a platform, simply append the <code>@nightly</code> tag to the platform name in the <code>platform add</code> command.</p>
+
+<p>For example:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@nightly
+</code></pre></div></div>
+
+<h2>Submitting Issues</h2>
+
+<p>If you encounter any issues with the nightly builds, please report them to the appropriate GitHub repository.</p>
+
+<p>For details on how to report issues, see the <a href="./issues.md">Reporting Issues</a> guide.</p>
+
+<p>When submitting, <strong>mention that the issue occurred using a nightly build</strong> and include the version by running:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova <span class="nt">--version</span>
 </code></pre></div></div>
