@@ -28,7 +28,7 @@ Nightly builds are intended for testing purposes only—such as trying out unrel
 
 These builds are created daily from the main branch and may be **unstable**. They are untested, may contain known and unknown defects, undeclared features, and perhaps other issues.
 
-## Installation
+## Installing Cordova CLI Nightly Builds
 
 The Cordova CLI nightly build can be installed either locally (project scope) or globally.
 
@@ -47,6 +47,16 @@ cordova
 ```
 
 > **Note:** Installing globally will replace any existing Cordova installation.
+
+## Installing Cordova Platform Nightly Builds
+
+Cordova CLI uses npm to install platforms and plugins, as they are distributed as npm packages. To install a nightly build of a platform, simply append the `@nightly` tag to the platform name in the `platform add` command.
+
+For example:
+
+```zsh
+cordova platform add ios@nightly
+```
 
 ## Submitting Issues
 
