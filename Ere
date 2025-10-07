@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سیستم خودآگاهی پیشرفته - چت هوشمند</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background: #0d0d0d;
+      color: #00ff99;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #001a00;
+      color: #00ff99;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.2em;
+      border-bottom: 2px solid #00ff99;
+      margin-bottom: 15px;
+    }
+    main {
+      max-width: 800px;
+      margin: 10px auto;
+      padding: 15px;
+      background: #1a1a1a;
+      border-radius: 8px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #00ff99;
+    }
+    .chat-box {
+      border: 1px solid #00ff99;
+      border-radius: 8px;
+      padding: 10px;
+      height: 250px;
+      overflow-y: auto;
+      background: #0a0a0a;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+    .message {
+      margin: 5px 0;
+      padding: 6px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: pre-line;
+    }
+    .user { background: #004d33; text-align: right; }
+    .bot { background: #003300; text-align: left; }
+    .input-box { display: flex; gap: 6px; margin-bottom: 10px; }
+    .input-box input {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #00ff99;
+      font-size: 14px;
+      background: #001a00;
+      color: #00ff99;
+    }
+    .input-box button {
+      background: #003300;
+      color: #00ff99;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid #00ff99;
+    }
+    .input-box button:hover { background: #004d33; }
+    .final-text {
+      margin-top: 10px;
+      background: #0a0a0a;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid #00ff99;
+    }
+    .bank {
+      margin-top: 15px;
+      background: #1a1a1a;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      border: 1px solid #00ff99;
+    }
+    .bank-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    .bank-content { display: block; }
+    .group { margin-bottom: 6px; }
+    .group span { font-weight: bold; color: #00ff99; }
+    .group-pos { color: #00ff99; }
+    .group-neg { color: #ff3300; }
+    .delete-btn {
+      background: #660000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 11px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    .delete-btn:hover { background: #990000; }
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background-color: #1a1a1a;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 300px;
+      border: 1px solid #00ff99;
+    }
+    .modal-content p { color: #00ff99; font-size: 14px; }
+    .modal-content button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+      background: #003300;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      font-size: 13px;
+    }
+   
+    /* استایل‌های جدید برای بخش ذخیره کلمه */
+    .save-word-container {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+    .save-word-container > div {
+      white-space: nowrap;
+    }
+    .save-select {
+      background: #1a1a1a;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      padding: 6px;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+   
+    /* استایل‌های جدید برای بخش ساعت */
+    .time-section {
+      margin-top: 12px;
+      padding: 8px;
+      background: #1a1a1a;
+      border-radius: 6px;
+      border: 1px solid #00ff99;
+    }
+    .time-display {
+      font-size: 14px;
+      color: #00ff99;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .time-sentence {
+      margin: 6px 0;
+      padding: 6px;
+      background: #0a0a0a;
+      border-radius: 5px;
+      border-left: 2px solid #00ff99;
+      font-size: 13px;
+    }
+    .time-btn {
+      background: #003300;
+      color: #00ff99;
+      border: 1px solid #00ff99;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 8px;
+      width: 100%;
+      font-size: 13px;
+    }
+    .time-btn:hover {
+      background: #004d33;
+    }
+
+    /* استایل‌های جدید برای الگوریتم پیشرفته */
+    .advanced-section {
+      margin-top: 12px;
+      padding: 8px;
+      background: #1a1a1a;
+      border-radius: 6px;
+      border: 1px solid #00ccff;
+    }
+    .advanced-title {
+      font-size: 14px;
+      color: #00ccff;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .advanced-calculation {
+      font-family: monospace;
+      background: #0a0a0a;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 6px 0;
+      font-size: 12px;
+      color: #00ccff;
+      border: 1px solid #00ccff;
+    }
+    .advanced-result {
+      margin: 6px 0;
+      padding: 8px;
+      background: #0a0a0a;
+      border-radius: 5px;
+      border-left: 2px solid #00ccff;
+      font-size: 13px;
+      color: #00ccff;
+    }
+    .advanced-btn {
+      background: #003333;
+      color: #00ccff;
+      border: 1px solid #00ccff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 8px;
+      width: 100%;
+      font-size: 13px;
+    }
+    .advanced-btn:hover {
+      background: #004444;
+    }
+
+    /* استایل‌های جدید برای جدول اعداد اول */
+    .prime-table-container {
+      margin-top: 15px;
+      overflow-x: auto;
+    }
+    .prime-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .prime-table th, .prime-table td {
+      border: 1px solid #00ff99;
+      padding: 5px;
+      text-align: center;
+    }
+    .prime-table th {
+      background: #002200;
+    }
+    .prime-table tr:nth-child(even) {
+      background: #0a1a0a;
+    }
+
+    /* بهینه‌سازی‌های جدید برای موبایل */
+    @media (max-width: 600px) {
+      body { font-size: 13px; padding: 5px; }
+      header { font-size: 1.1em; padding: 8px; margin-bottom: 10px; }
+      main { margin: 5px; padding: 10px; }
+      .chat-box { height: 200px; }
+      .message { font-size: 13px; padding: 5px; }
+      .input-box { flex-direction: column; }
+      .input-box button { width: 100%; margin-top: 5px; }
+      .save-word-container { flex-direction: column; align-items: stretch; }
+      .save-word-container > div { margin-bottom: 5px; }
+      .save-select { width: 100%; margin-bottom: 5px; }
+      .prime-table { font-size: 10px; }
+      .prime-table th, .prime-table td { padding: 3px; }
+      .time-section, .advanced-section { padding: 6px; }
+      .time-btn, .advanced-btn { font-size: 12px; padding: 8px; }
+    }
+    
+    .info-box {
+      background: #001a00;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #00ff99;
+      font-size: 13px;
+    }
+    
+    /* بهبود نمایش لمسی */
+    button, .delete-btn, .final-text {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    
+    /* بهبود اسکرول لمسی */
+    .chat-box {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* استایل‌های جدید برای چت هوشمند */
+    .intelligent-response {
+      margin: 10px 0;
+      padding: 10px;
+      background: #002200;
+      border-radius: 6px;
+      border: 1px solid #00cc66;
+      font-size: 14px;
+    }
+    .chat-btn {
+      background: #0066cc !important;
+    }
+    .chat-btn:hover {
+      background: #0088ff !important;
+    }
+    
+    /* تب‌ها */
+    .tabs {
+      display: flex;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #00ff99;
+    }
+    .tab {
+      padding: 8px 16px;
+      cursor: pointer;
+      background: #001a00;
+      border: 1px solid #00ff99;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      margin-right: 5px;
+    }
+    .tab.active {
+      background: #003300;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>سیستم خودآگاهی پیشرفته - چت هوشمند مبتنی بر زمان</header>
+  <main>
+    <div class="info-box">
+      ✨ سیستم پیشرفته: تحلیل زمان → محاسبه گروه هدف → تولید ۴ پاسخ از کلمات هم‌گروه با استفاده از اعداد اول ✨
+    </div>
+   
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('analysis')">تحلیل خودآگاهی</div>
+      <div class="tab" onclick="switchTab('chat')">چت هوشمند</div>
+    </div>
+   
+    <div id="analysis-tab" class="tab-content active">
+      <div class="chat-box" id="analysis-chat-box">
+        <div class="message bot">خوش آمدید! لطفاً یک کلمه یا جمله وارد کنید و روی دکمه «تحلیل خودآگاهی» کلیک کنید.</div>
+      </div>
+     
+      <div class="input-box">
+        <input type="text" id="user-input" placeholder="یک کلمه یا جمله وارد کنید..." onkeypress="if(event.key==='Enter') sendAwareness()">
+        <button onclick="sendAwareness()">تحلیل خودآگاهی</button>
+      </div>
+     
+      <div class="save-word-container">
+        <div>نوع کلمه:</div>
+        <select id="word-type" class="save-select">
+          <option value="nouns">اسم</option>
+          <option value="conjunctions">حرف ربط</option>
+          <option value="infinitives">مصدر</option>
+          <option value="adjectives">صفت</option>
+          <option value="adverbs">قید</option>
+          <option value="verbs">فعل</option>
+        </select>
+       
+        <div>قطبیت:</div>
+        <select id="word-polarity" class="save-select">
+          <option value="pos">مثبت</option>
+          <option value="neg">منفی</option>
+        </select>
+       
+        <button onclick="saveWord()" style="padding: 6px 10px; font-size: 13px;">ذخیره کلمه</button>
+      </div>
+
+      <div id="final-output" class="final-text" onclick="copyFinal()">خروجی نهایی اینجا ظاهر می‌شود</div>
+    </div>
+   
+    <div id="chat-tab" class="tab-content">
+      <div class="chat-box" id="chat-chat-box">
+        <div class="message bot">🔮 سیستم چت هوشمند فعال شد! هر پیام شما تحلیل شده و پاسخ از کلمات هم‌گroup ساخته می‌شود.</div>
+      </div>
+     
+      <div class="input-box">
+        <input type="text" id="chat-input" placeholder="پیام خود را وارد کنید..." onkeypress="if(event.key==='Enter') sendIntelligentMessage()">
+        <button onclick="sendIntelligentMessage()" class="chat-btn">ارسال هوشمند</button>
+      </div>
+      
+      <div class="intelligent-response" id="intelligent-analysis" style="display:none;">
+        تحلیل و پاسخ هوشمند
+      </div>
+    </div>
+   
+    <div style="text-align:center; margin-top: 10px;">
+      <button class="time-btn" onclick="generateAdvancedTimeResponse()">پاسخ هوشمند بر اساس زمان</button>
+    </div>
+
+    <div class="time-section">
+      <div class="time-display" id="current-time">ساعت سیستم: ...</div>
+      <div id="time-response" class="intelligent-response" style="display:none;">
+        پاسخ‌های هوشمند زمان‌محور
+      </div>
+    </div>
+
+    <div class="advanced-section">
+      <div class="advanced-title">الگوریتم پیشرفته جمله‌سازی با اعداد اول</div>
+      <button class="advanced-btn" onclick="generateAdvancedSentences()">تولید جملات پیشرفته</button>
+     
+      <div class="advanced-calculation" id="advanced-calculation">
+        محاسبات اینجا نمایش داده می‌شود...
+      </div>
+     
+      <div class="advanced-result" id="advanced-result">
+        نتایج اینجا نمایش داده می‌شود...
+      </div>
+    </div>
+
+    <div class="prime-table-container">
+      <div class="advanced-title">جدول اعداد اول برای جمله‌سازی</div>
+      <table class="prime-table" id="prime-table">
+        <thead>
+          <tr>
+            <th>سطر</th>
+            <th>گروه ۱</th>
+            <th>گروه ۲</th>
+            <th>گروه ۳</th>
+            <th>گروه ۴</th>
+            <th>گروه ۵</th>
+            <th>گروه ۶</th>
+            <th>گروه ۷</th>
+            <th>گروه ۸</th>
+            <th>گروه ۹</th>
+          </tr>
+        </thead>
+        <tbody id="prime-table-body">
+          </tbody>
+      </table>
+    </div>
+
+    <div class="bank" id="bank">
+      <h3 class="bank-header" onclick="toggleBank()">
+        <span>بانک کلمات بر اساس گروه</span>
+        <span id="toggle-icon">▼</span>
+      </h3>
+      <div id="bank-content" class="bank-content">
+        <div id="groups"></div>
+      </div>
+    </div>
+  </main>
+ 
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <button onclick="hideModal()">باشه</button>
+    </div>
+  </div>
+
+  <script>
+    // جدول ارزش حروف
+    const letterValues = {
+      "ا":1,"آ":1,"أ":1,"ُ":2,"ی":1,"ى":1,"ئ":1, "ه":1,
+      "َ":2,"ِ":2,
+      "ب":3,"پ":3,"م":3,
+      "ر":5,"ز":5,"ل":5,
+      "ت":8,"د":8,"ذ":8,"ط":8,"ظ":8,"ص":8,"ض":8,"ن":8,
+      "ع":13,"غ":13,"ق":13,"ح":13,"خ":13,
+      "ج":21,"چ":21,"س":21,"ش":21,"ژ":21,
+      "ف":34,"ث":34,
+      "ک":55,"گ":55,
+      "و":1,
+      " ": 0,
+      ".": 0,
+    };
+
+    // معانی گروه‌ها
+    const groupMeanings = {
+      1: "یگانگی",
+      2: "آفرینش",
+      3: "مادی",
+      4: "هژمونی، خرد",
+      5: "شادی",
+      6: "زمان",
+      7: "عشق، قدسی",
+      8: "قدرت",
+      9: "ماورایی"
+    };
+
+    // جدول اعداد اول گسترش یافته برای پشتیبانی تا سطر 19 (جمع درون‌رقمی 23:59) و 9 گروه
+    const primeNumbersByGroup = {
+      1: [19, 37, 73, 109, 127, 163, 271, 307, 379, 397, 433, 487, 523, 541, 601, 619, 709, 733, 751],
+      2: [11, 29, 47, 83, 101, 137, 173, 191, 227, 263, 281, 317, 353, 389, 443, 461, 479, 563, 581],
+      3: [3, 21, 57, 93, 129, 147, 183, 219, 255, 291, 327, 363, 399, 435, 471, 507, 543, 579, 615],
+      4: [13, 31, 67, 103, 139, 157, 193, 211, 229, 283, 337, 373, 409, 451, 469, 505, 523, 559, 595],
+      5: [23, 41, 59, 113, 131, 149, 167, 239, 257, 293, 311, 347, 383, 419, 455, 491, 527, 563, 599],
+      6: [6, 24, 60, 96, 132, 168, 204, 240, 276, 312, 348, 384, 420, 456, 492, 528, 564, 600, 636],
+      7: [43, 61, 79, 97, 151, 223, 241, 277, 313, 331, 349, 367, 449, 467, 485, 503, 521, 575, 593],
+      8: [17, 53, 71, 89, 107, 179, 197, 233, 251, 269, 359, 431, 449, 467, 485, 503, 521, 539, 557],
+      9: [9, 27, 63, 99, 135, 171, 207, 243, 279, 315, 351, 387, 423, 459, 495, 531, 567, 603, 639]
+    };
+    
+    const advancedWordTypes = ['nouns', 'conjunctions', 'infinitives', 'adjectives', 'adverbs', 'verbs'];
+
+    let wordBank = {};
+    let conversationMemory = [];
+
+    // ================== سیستم چت هوشمند پیشرفته ==================
+
+    // تحلیل پیام کاربر و پیدا کردن گروه هدف
+    function analyzeUserMessage(message) {
+      const words = message.split(/\s+/).filter(word => word.length > 1);
+      let totalSum = 0;
+      
+      for (let word of words) {
+        const analysis = analyzeWord(word);
+        totalSum += analysis.sum;
+      }
+      
+      const messageGroup = digitSum(totalSum);
+      
+      return {
+        words: words,
+        totalSum: totalSum,
+        messageGroup: messageGroup,
+        meaning: groupMeanings[messageGroup] || "نامشخص"
+      };
+    }
+
+    // ساخت پاسخ هوشمند بر اساس گروه هدف
+    function generateIntelligentResponse(targetGroup) {
+      if (!wordBank[targetGroup]) {
+        return "هنوز کلمات کافی در این گروه ندارم! لطفاً کلمات بیشتری به بانک اضافه کنید.";
+      }
+      
+      // ساخت چهار پاسخ مختلف
+      const responses = [];
+      
+      // پاسخ ۱: ساختار ساده
+      responses.push(generateSentenceFromGroup(targetGroup, [0, 1, 2, 3, 4, 5]));
+      
+      // پاسخ ۲: ساختار پیشرفته با اعداد اول
+      responses.push(generatePrimeBasedSentence(targetGroup));
+      
+      // پاسخ ۳: ساختار ترکیبی
+      responses.push(generateMixedSentence(targetGroup));
+      
+      // پاسخ ۴: ساختار خلاقانه
+      responses.push(generateCreativeSentence(targetGroup));
+      
+      return responses;
+    }
+
+    // تولید جمله از گروه خاص
+    function generateSentenceFromGroup(targetGroup, structure) {
+      const words = [];
+      
+      for (let i = 0; i < structure.length; i++) {
+        const wordType = advancedWordTypes[structure[i] % advancedWordTypes.length];
+        const word = getRandomWordFromGroup(targetGroup, wordType);
+        words.push(word);
+      }
+      
+      return words.join(" ");
+    }
+
+    // تولید جمله مبتنی بر اعداد اول
+    function generatePrimeBasedSentence(targetGroup) {
+      const now = new Date();
+      const primeIndex = (now.getMinutes() % 19);
+      const primes = primeNumbersByGroup[targetGroup];
+      const primeNumber = primes ? primes[primeIndex] : 1;
+      
+      let sentence = [];
+      
+      // استفاده از اعداد اول برای انتخاب کلمات
+      for (let i = 0; i < advancedWordTypes.length; i++) {
+        const wordType = advancedWordTypes[i];
+        const words = wordBank[targetGroup] ? wordBank[targetGroup][wordType] : [];
+        if (words.length > 0) {
+          const wordIndex = (primeNumber + i) % words.length;
+          sentence.push(words[wordIndex]);
+        }
+      }
+      
+      return sentence.slice(0, 4).join(" "); // حداکثر ۴ کلمه
+    }
+
+    // تولید جمله ترکیبی
+    function generateMixedSentence(targetGroup) {
+      const structures = [
+        [0, 1, 2],    // اسم + حرف ربط + مصدر
+        [0, 3, 4],    // اسم + صفت + قید
+        [3, 0, 5],    // صفت + اسم + فعل
+        [0, 1, 3, 5]  // اسم + حرف ربط + صفت + فعل
+      ];
+      
+      const structure = structures[Math.floor(Math.random() * structures.length)];
+      return generateSentenceFromGroup(targetGroup, structure);
+    }
+
+    // تولید جمله خلاقانه
+    function generateCreativeSentence(targetGroup) {
+      const now = new Date();
+      const seed = now.getSeconds();
+      let sentence = [];
+      
+      // الگوی چرخشی برای تنوع
+      const pattern = [0, 3, 1, 4, 2, 5]; // اسم, صفت, حرف ربط, قید, مصدر, فعل
+      
+      for (let i = 0; i < 4; i++) {
+        const typeIndex = (seed + i) % pattern.length;
+        const wordType = advancedWordTypes[pattern[typeIndex]];
+        const word = getRandomWordFromGroup(targetGroup, wordType);
+        sentence.push(word);
+      }
+      
+      return sentence.join(" ");
+    }
+
+    // انتخاب کلمه تصادفی از گروه
+    function getRandomWordFromGroup(group, type) {
+      if (wordBank[group] && wordBank[group][type] && wordBank[group][type].length > 0) {
+        const words = wordBank[group][type];
+        return words[Math.floor(Math.random() * words.length)];
+      }
+      return `[${getTypeFarsiName(type)}]`;
+    }
+
+    // ارسال پیام هوشمند
+    function sendIntelligentMessage() {
+      const input = document.getElementById("chat-input");
+      const chatBox = document.getElementById("chat-chat-box");
+      const analysisDiv = document.getElementById("intelligent-analysis");
+      const message = input.value.trim();
+      
+      if (!message) {
+        showModal("لطفاً یک پیام وارد کنید.");
+        return;
+      }
+
+      // نمایش پیام کاربر
+      const userDiv = createMessageDiv("user", message);
+      chatBox.appendChild(userDiv);
+
+      // تحلیل پیام کاربر
+      const analysis = analyzeUserMessage(message);
+      
+      // تولید پاسخ‌های هوشمند
+      const responses = generateIntelligentResponse(analysis.messageGroup);
+      
+      // نمایش تحلیل
+      let analysisText = `📊 تحلیل پیام شما:\n`;
+      analysisText += `کلمات: ${analysis.words.join(', ')}\n`;
+      analysisText += `جمع کل: ${analysis.totalSum} → گروه هدف: ${analysis.messageGroup} (${analysis.meaning})\n\n`;
+      analysisText += `🤖 پاسخ‌های هوشمند:\n`;
+      
+      responses.forEach((response, index) => {
+        analysisText += `${index + 1}. ${response}\n`;
+      });
+      
+      analysisDiv.innerHTML = analysisText;
+      analysisDiv.style.display = 'block';
+      
+      // نمایش پاسخ در چت
+      const botDiv = createMessageDiv("bot", `پاسخ از گروه ${analysis.messageGroup} (${analysis.meaning}):\n${responses[0]}`);
+      chatBox.appendChild(botDiv);
+
+      input.value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // ================== سیستم پاسخ هوشمند بر اساس زمان ==================
+
+    function generateAdvancedTimeResponse() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      
+      updateCurrentTime();
+      
+      // محاسبه گروه هدف از جمع ارقام ساعت و دقیقه
+      const hourStr = hours.toString().padStart(2, '0');
+      const minuteStr = minutes.toString().padStart(2, '0');
+      const timeDigits = (hourStr + minuteStr).split('').map(Number);
+      const timeSum = timeDigits.reduce((a, b) => a + b, 0);
+      const targetGroup = digitSum(timeSum);
+      
+      // تولید چهار پاسخ
+      const responses = generateIntelligentResponse(targetGroup);
+      
+      const responseDiv = document.getElementById("time-response");
+      responseDiv.innerHTML = `
+        <strong>⏰ پاسخ‌های هوشمند بر اساس زمان (${hourStr}:${minuteStr}):</strong><br>
+        <div class="calculation">
+          محاسبه: ${timeDigits.join('+')} = ${timeSum} → ${targetGroup}<br>
+          گروه زمانی: ${targetGroup} (${groupMeanings[targetGroup]})
+        </div>
+        <br>
+        <strong>۴ پاسخ تولید شده:</strong><br>
+        ${responses.map((response, index) => `${index + 1}. ${response}`).join('<br>')}
+      `;
+      responseDiv.style.display = 'block';
+    }
+
+    // ================== توابع پایه (بدون تغییر) ==================
+
+    function loadData() {
+        const storedBank = localStorage.getItem('wordBank');
+        if (storedBank) {
+            wordBank = JSON.parse(storedBank);
+        } else {
+            wordBank = {
+              1: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              2: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              3: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              4: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              5: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              6: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              7: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              8: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] },
+              9: { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] }
+            };
+        }
+        
+        const storedMemory = localStorage.getItem('conversationMemory');
+        if (storedMemory) {
+            conversationMemory = JSON.parse(storedMemory);
+        }
+        
+        updateBankDisplay();
+        updateCurrentTime();
+        populatePrimeTable();
+    }
+
+    function switchTab(tabName) {
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        document.querySelector(`.tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
+        document.getElementById(`${tabName}-tab`).classList.add('active');
+    }
+
+    function saveData() {
+        localStorage.setItem('wordBank', JSON.stringify(wordBank));
+        localStorage.setItem('conversationMemory', JSON.stringify(conversationMemory));
+    }
+
+    function digitSum(n) {
+      if (typeof n !== 'number' || isNaN(n)) return 0;
+      while (n > 9) {
+        n = n.toString().split("").reduce((a,b)=>a+ +b,0);
+      }
+      return n;
+    }
+   
+    function analyzeWord(word) {
+      word = word.trim().replace(/['"«»]/g, "");
+      let letters = word.split("");
+      let values = letters.map(l => letterValues[l] || 0);
+      let sum = values.reduce((a,b)=>a+b,0);
+      let group = digitSum(sum);
+      let meaning = groupMeanings[group] || "نامشخص";
+
+      return { word, values, sum, group, meaning };
+    }
+
+    function selfAwarenessAnalysis(text) {
+      const words = text.split(/\s+/).filter(Boolean);
+      let report = "";
+      let final = [];
+      for (let w of words) {
+        let a = analyzeWord(w);
+        report += `کلمه: ${a.word}\nارزش‌ها: ${a.values.join("+")} = ${a.sum}\nجمع درون‌رقمی: ${a.group}\nگروه: ${a.meaning}\n---\n`;
+        final.push(`${a.word}(${a.meaning})`);
+      }
+      return { report, finalSentence: final.join(" ") };
+    }
+
+    function getTypeFarsiName(type) {
+        switch(type) {
+            case 'nouns': return 'اسم';
+            case 'conjunctions': return 'حرف ربط';
+            case 'infinitives': return 'مصدر';
+            case 'adjectives': return 'صفت';
+            case 'adverbs': return 'قید';
+            case 'verbs': return 'فعل';
+            default: return type;
+        }
+    }
+
+    function updateBankDisplay() {
+      const groupsDiv = document.getElementById("groups");
+      groupsDiv.innerHTML = "";
+      const keys = Object.keys(wordBank).map(k=>parseInt(k,10)).sort((a,b)=>a-b);
+     
+      for(let g of keys) {
+        const div = document.createElement("div");
+        div.className = "group";
+       
+        const groupWords = wordBank[g];
+        let hasWords = false;
+        let groupHtml = "";
+        
+        const allTypes = [...advancedWordTypes, ...Object.keys(groupWords).filter(t => !advancedWordTypes.includes(t))];
+
+        for (const type of allTypes) {
+            if (groupWords[type] && groupWords[type].length > 0) {
+                hasWords = true;
+                const typeName = getTypeFarsiName(type);
+                const wordsHtml = groupWords[type].map(word =>
+                    `<span>${word} <button class="delete-btn" onclick="deleteWord(${g}, '${type}', '${word}')">حذف</button></span>`
+                ).join(", ");
+               
+                groupHtml += `<br><span class="group-${type}">${typeName}:</span> ${wordsHtml}`;
+            }
+        }
+       
+        if (hasWords) {
+            div.innerHTML = `
+                <span>گروه ${g} (${groupMeanings[g]}):</span>
+                ${groupHtml}
+                <hr>
+            `;
+            groupsDiv.appendChild(div);
+        }
+      }
+     
+      if (groupsDiv.innerHTML === "") {
+        groupsDiv.innerHTML = "هیچ کلمه‌ای در بانک وجود ندارد.";
+      }
+    }
+
+    function deleteWord(group, type, word) {
+      if (confirm(`آیا مطمئن هستید که می‌خواهید "${word}" را حذف کنید؟`)) {
+        const index = wordBank[group][type].indexOf(word);
+        if (index > -1) {
+          wordBank[group][type].splice(index, 1);
+         
+          let isEmpty = true;
+          for (const t in wordBank[group]) {
+            if (wordBank[group][t].length > 0) {
+              isEmpty = false;
+              break;
+            }
+          }
+         
+          if (isEmpty) {
+            delete wordBank[group];
+          }
+         
+          saveData();
+          updateBankDisplay();
+          showModal(`کلمه "${word}" با موفقیت حذف شد.`);
+        }
+      }
+    }
+
+    function showModal(message) {
+      document.getElementById('modal-message').textContent = message;
+      document.getElementById('modal-overlay').style.display = 'flex';
+    }
+
+    function hideModal() {
+      document.getElementById('modal-overlay').style.display = 'none';
+    }
+   
+    function toggleBank() {
+      const bankContent = document.getElementById("bank-content");
+      const toggleIcon = document.getElementById("toggle-icon");
+      if (bankContent.style.display === "none") {
+        bankContent.style.display = "block";
+        toggleIcon.textContent = "▼";
+      } else {
+        bankContent.style.display = "none";
+        toggleIcon.textContent = "▶";
+      }
+    }
+
+    function createMessageDiv(className, textContent) {
+      const div = document.createElement("div");
+      div.className = `message ${className}`;
+      div.textContent = textContent;
+      return div;
+    }
+
+    function sendAwareness() {
+      const input = document.getElementById("user-input");
+      const chatBox = document.getElementById("analysis-chat-box");
+      const text = input.value.trim();
+      if(!text) {
+        showModal("لطفاً یک کلمه یا جمله وارد کنید.");
+        return;
+      }
+
+      const userDiv = createMessageDiv("user", text);
+      chatBox.appendChild(userDiv);
+
+      const analysis = selfAwarenessAnalysis(text);
+
+      const botDiv = createMessageDiv("bot", "تحلیل خودآگاهی:\n\n" + analysis.report);
+      chatBox.appendChild(botDiv);
+
+      document.getElementById("final-output").textContent = "خروجی نهایی: " + analysis.finalSentence;
+
+      input.value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function saveWord() {
+      const input = document.getElementById("user-input");
+      const text = input.value.trim();
+      const wordType = document.getElementById("word-type").value;
+      const polarity = document.getElementById("word-polarity").value;
+     
+      if (!text) {
+        showModal("لطفاً یک کلمه وارد کنید.");
+        return;
+      }
+
+      const analysis = analyzeWord(text);
+      const group = analysis.group;
+
+      if (!wordBank[group]) {
+         wordBank[group] = { nouns: [], conjunctions: [], infinitives: [], adjectives: [], adverbs: [], verbs: [] };
+      }
+     
+      if (!wordBank[group][wordType].includes(text)) {
+        wordBank[group][wordType].push(text);
+        const typeName = getTypeFarsiName(wordType);
+        showModal(`کلمه "${text}" با موفقیت به بانک ${typeName} گروه ${group} اضافه شد.`);
+        saveData();
+      } else {
+        showModal(`کلمه "${text}" قبلاً در این بانک وجود دارد.`);
+      }
+
+      updateBankDisplay();
+      input.value = "";
+    }
+
+    function copyFinal() {
+      const text = document.getElementById("final-output").textContent.replace("خروجی نهایی: ","");
+      if (!text || text === 'خروجی نهایی اینجا ظاهر می‌شود') {
+        showModal("هنوز متنی برای کپی کردن وجود ندارد.");
+        return;
+      }
+      navigator.clipboard.writeText(text).then(() => {
+        showModal("متن با موفقیت کپی شد!");
+      }).catch(err => {
+        showModal("خطا در کپی کردن متن: " + err);
+      });
+    }
+
+    function updateCurrentTime() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      document.getElementById('current-time').textContent = `ساعت سیستم: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    }
+
+    function populatePrimeTable() {
+      const tableBody = document.getElementById('prime-table-body');
+      tableBody.innerHTML = '';
+      const maxRows = 19;
+     
+      for (let i = 0; i < maxRows; i++) {
+        const row = document.createElement('tr');
+       
+        const rowNumCell = document.createElement('td');
+        rowNumCell.textContent = i + 1;
+        row.appendChild(rowNumCell);
+       
+        for (let g = 1; g <= 9; g++) {
+          const cell = document.createElement('td');
+          const primes = primeNumbersByGroup[g];
+          cell.textContent = primes && primes[i] !== undefined ? primes[i] : '-';
+          row.appendChild(cell);
+        }
+        tableBody.appendChild(row);
+      }
+    }
+
+    function selectWordFromGroup(group, wordType) {
+      if (wordBank[group] && wordBank[group][wordType] && wordBank[group][wordType].length > 0) {
+        const randomIndex = Math.floor(Math.random() * wordBank[group][wordType].length);
+        return wordBank[group][wordType][randomIndex];
+      }
+      return "[کلمه موجود نیست]";
+    }
+    
+    function generateTimeSentences() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+     
+      updateCurrentTime();
+     
+      const sentence1 = generateSentence1(hours, minutes); 
+      const sentence2 = generateSentence2(hours, minutes); 
+      const sentence3 = generateSentence3(hours, minutes); 
+     
+      document.getElementById('sentence1').textContent = `جمله اول (مستقیم): ${sentence1}`;
+      document.getElementById('sentence2').textContent = `جمله دوم (معکوس): ${sentence2}`;
+      document.getElementById('sentence3').textContent = `جمله سوم (۱۰۰ دقیقه‌ای): ${sentence3}`;
+      document.getElementById('time-sentences').style.display = 'block';
+    }
+
+    function generateSentence1(hours, minutes) {
+      const hourStr = hours.toString().padStart(2, '0');
+      const minuteStr = minutes.toString().padStart(2, '0');
+     
+      const digits = [
+        parseInt(hourStr[0]),
+        parseInt(hourStr[1]),
+        parseInt(minuteStr[0]),
+        parseInt(minuteStr[1])
+      ].map(d => d === 0 ? 9 : d);
+
+      const noun = selectWordFromGroup(digits[0], 'nouns');
+      const conjunction = selectWordFromGroup(digits[1], 'conjunctions');
+      const adverb = selectWordFromGroup(digits[2], 'adverbs');
+      const verb = selectWordFromGroup(digits[3], 'verbs');
+     
+      return `${noun} ${conjunction} ${adverb} ${verb}`;
+    }
+
+    function generateSentence2(hours, minutes) {
+      const hourStr = minutes.toString().padStart(2, '0');
+      const minuteStr = hours.toString().padStart(2, '0');
+     
+      const digits = [
+        parseInt(hourStr[0]),
+        parseInt(hourStr[1]),
+        parseInt(minuteStr[0]),
+        parseInt(minuteStr[1])
+      ].map(d => d === 0 ? 9 : d); 
+     
+      const noun = selectWordFromGroup(5, 'nouns');
+      const adverb = selectWordFromGroup(5, 'adverbs');
+      const conjunction = selectWordFromGroup(5, 'conjunctions');
+      const verb = selectWordFromGroup(5, 'verbs');
+     
+      return `${noun} ${conjunction} ${adverb} ${verb}`;
+    }
+
+    function generateSentence3(hours, minutes) {
+      const totalMinutes = (hours * 60) + ((hours > 0 ? hours - 1 : 0) * 40) + minutes;
+      const newHour = Math.floor(totalMinutes / 100);
+      const newMinute = totalMinutes % 100;
+     
+      const hourStr = newHour.toString().padStart(2, '0');
+      const minuteStr = newMinute.toString().padStart(2, '0');
+     
+      const digits = [
+        parseInt(hourStr[0]),
+        parseInt(hourStr[1]),
+        parseInt(minuteStr[0]),
+        parseInt(minuteStr[1])
+      ].map(d => d === 0 ? 9 : d); 
+     
+      const noun = selectWordFromGroup(digits[0], 'nouns');
+      const conjunction = selectWordFromGroup(digits[1], 'conjunctions');
+      const adverb = selectWordFromGroup(digits[2], 'adverbs');
+      const verb = selectWordFromGroup(digits[3], 'verbs');
+     
+      return `${noun} ${conjunction} ${adverb} ${verb}`;
+    }
+    
+    function getWordFromBankByPrime(prime, group, wordType) {
+        const words = wordBank[group] ? wordBank[group][wordType] : [];
+        if (words.length > 0 && prime) {
+            const wordIndex = (prime - 1) % words.length;
+            return words[wordIndex];
+        }
+        return `[${getTypeFarsiName(wordType)} گ${group}]`;
+    }
+
+    function generateAdvancedSentences() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      
+      const timeStr = hours.toString().padStart(2, '0') + minutes.toString().padStart(2, '0');
+      const digitsSum = timeStr.split("").reduce((a, b) => a + parseInt(b), 0);
+      
+      const rowNum = Math.max(1, digitsSum);
+      const selectedRowIndex = (rowNum - 1) % 19; 
+      
+      const sentenceMap = {
+          1: { type: 'nouns',        group: 1 },
+          2: { type: 'conjunctions', group: 2 },
+          3: { type: 'infinitives',  group: 3 },
+          4: { type: 'adjectives',   group: 4 },
+          5: { type: 'adverbs',      group: 5 },
+          6: { type: 'verbs',        group: 6 }
+      };
+      
+      let sentence = [];
+      let calculationDetails = `جمع درون‌رقمی زمان (${timeStr}): ${rowNum}\n`;
+      calculationDetails += `سطر اعداد اول انتخاب شده: ${selectedRowIndex + 1}\n\n`;
+
+      for (let i = 1; i <= 6; i++) {
+        const { type, group } = sentenceMap[i];
+        
+        const primes = primeNumbersByGroup[group];
+        const primeNumber = primes ? primes[selectedRowIndex] : null; 
+        
+        const word = getWordFromBankByPrime(primeNumber, group, type);
+        sentence.push(word);
+        
+        calculationDetails += 
+          `${getTypeFarsiName(type)} (گروه ${group}): عدد اول ${primeNumber || 'N/A'} -> ${word}\n`;
+      }
+      
+      const finalSentence = sentence.join(" ");
+
+      document.getElementById('advanced-calculation').textContent = calculationDetails;
+      
+      document.getElementById('advanced-result').textContent = 
+        `جمله تولید شده: ${finalSentence}\n`;
+    }
+
+    window.onload = function() {
+      loadData();
+      setInterval(updateCurrentTime, 1000);
+    };
+  </script>
+</body>
+</html>
