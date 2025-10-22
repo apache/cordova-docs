@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that cordova-fetch@5.0.0 has been released. This is the library used behind-the-scenes of the Cordova tooling for fetching of Cordov...">
+    <meta name="description" content="We are happy to announce that cordova-create@6.0.0 has been released. This is the library used behind-the-scenes of the Cordova tooling for creating a Cordov...">
 
     <title>
         
             
-                Cordova Fetch 5.0.0 Released! - Apache Cordova
+                Cordova Create 6.0.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2025/10/22/cordova-create-6.0.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -120,17 +120,17 @@
 
 <div class="post">
     <header>
-        <div class="title">Cordova Fetch 5.0.0 Released!</div>
+        <div class="title">Cordova Create 6.0.0 Released!</div>
         <div class="author">By:
             
               Bryan Ellis
             
         </div>
-        <div class="date">29 Aug 2025</div>
+        <div class="date">22 Oct 2025</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that <code>cordova-fetch@5.0.0</code> has been released. This is the library used behind-the-scenes of the Cordova tooling for fetching of Cordova platforms and plugins.</p>
+            <p>We are happy to announce that <code>cordova-create@6.0.0</code> has been released. This is the library used behind-the-scenes of the Cordova tooling for creating a Cordova project.</p>
 
 <h2>Release Highlights</h2>
 
@@ -138,7 +138,7 @@
 
 <ul>
   <li>Updated the library&#39;s npm dependencies.</li>
-  <li>Increased in the Node.js engine requirement to <code>&gt;=20.9.0</code>.</li>
+  <li>Increased in the Node.js engine requirement to <code>&gt;=20.17.0 || &gt;=22.9.0</code>.</li>
 </ul>
 
 <!--more-->
@@ -147,39 +147,38 @@
 <p><strong>Breaking Changes:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/131">GH-131</a> chore(npm)!: bump <code>cordova-common@6.0.0</code></li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/125">GH-125</a> chore!: bump node requirement &amp; npm dependencies</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/99">GH-99</a> chore!: upgrade <code>@cordova/eslint-config@6.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-create/pull/98">GH-98</a> chore!: bump package dependencies
+    <ul>
+      <li><code>cordova-app-hello-world@7.0.0</code></li>
+      <li><code>cordova-common@6.0.0</code></li>
+      <li><code>cordova-fetch5.0.0</code></li>
+      <li><code>tmp@0.2.5</code></li>
+      <li><code>rewire@9.0.1</code></li>
+      <li><code>jasmine@5.10.0</code></li>
+      <li><code>npm-package-arg@13.0.0</code></li>
+      <li>Bumped node engine requirement <code>&gt;=20.17.0 || &gt;=22.9.0</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-create/pull/94">GH-94</a> chore!: bump node requirement &amp; npm dependencies</li>
 </ul>
 
-<p><strong>Chores:</strong></p>
+<p><strong>Chores &amp; CI:</strong></p>
 
 <ul>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/136">GH-136</a> chore(README): update badges</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/135">GH-135</a> chore: update &amp; add source code license headers</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/130">GH-130</a> chore: bump <code>@cordova/eslint-config</code></li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/127">GH-127</a> chore(coverage): Move from <code>nyc</code> to <code>c8</code> for code coverage</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/124">GH-124</a> chore(deps-dev): bump <code>brace-expansion</code> from 1.1.11 to 1.1.12</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/122">GH-122</a> chore(deps): bump <code>cross-spawn</code> from 7.0.3 to 7.0.6</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/120">GH-120</a> chore(deps): bump <code>micromatch</code> from 4.0.5 to 4.0.8</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/119">GH-119</a> chore(deps): bump <code>braces</code> from 3.0.2 to 3.0.3</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/116">GH-116</a> chore(deps): Update some dependencies, add Node 20 to CI</li>
-</ul>
-
-<p><strong>CI:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/137">GH-137</a> ci: workflow updates</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/128">GH-128</a> ci(workflow): update release-audit &amp; license config</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/123">GH-123</a> ci: Add licence checker workflow</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/121">GH-121</a> ci: Fix dependabot code scanning errors</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/118">GH-118</a> ci: Set up CodeQL analysis</li>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/117">GH-117</a> ci: update codecov@v4 w/ token</li>
-</ul>
-
-<p><strong>Tests:</strong></p>
-
-<ul>
-  <li><a href="https://github.com/apache/cordova-fetch/pull/126">GH-126</a> test: drop <code>file-url</code></li>
+  <li><a href="https://github.com/apache/cordova-create/pull/103">GH-103</a> chore: add <code>.npmrc</code> &amp; update ignore files</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/102">GH-102</a> chore: replace <code>nyc</code> with <code>c8</code></li>
+  <li><a href="https://github.com/apache/cordova-create/pull/101">GH-101</a> chore: update project defaults</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/100">GH-100</a> chore: ci and license updates</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/97">GH-97</a> chore(deps): bump <code>tmp</code> from 0.2.3 to 0.2.4</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/96">GH-96</a> ci: use <code>macos-15</code> instead of <code>macos-latest</code></li>
+  <li><a href="https://github.com/apache/cordova-create/pull/93">GH-93</a> ci(workflow): add release-audit &amp; license config</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/92">GH-92</a> chore(deps-dev): bump <code>brace-expansion</code> from 1.1.11 to 1.1.12</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/91">GH-91</a> chore(deps): bump <code>cross-spawn</code> from 7.0.3 to 7.0.6</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/90">GH-90</a> chore(deps): bump <code>micromatch</code> from 4.0.5 to 4.0.8</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/88">GH-88</a> chore(deps): bump <code>braces</code> from 3.0.2 to 3.0.3</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/86">GH-86</a> chore(deps): Update npm deps, add Node 20 to CI</li>
+  <li><a href="https://github.com/apache/cordova-create/pull/87">GH-87</a> ci: update <code>codecov@v4</code> w/ token</li>
 </ul>
 
         </div>
@@ -188,37 +187,17 @@
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html">Previous</a>
+                    <a href="/announcements/2025/08/29/cordova-fetch-5.0.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html">Cordova App Hello World 7.0.0 Released!</a>
+                    <a class="title" href="/announcements/2025/08/29/cordova-fetch-5.0.0.html">Cordova Fetch 5.0.0 Released!</a>
                     <div class="date"> 29 Aug 2025 - By Bryan Ellis </div>
                     <p class="content">
-                        We are happy to announce that cordova-app-hello-world@7.0.0 has been released. This is...
+                        We are happy to announce that cordova-fetch@5.0.0 has been released. This is...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2025/10/22/cordova-create-6.0.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2025/10/22/cordova-create-6.0.0.html">Cordova Create 6.0.0 Released!</a>
-                    <div class="date"> 22 Oct 2025 - By Bryan Ellis </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that cordova-create@6.0.0 has been released. This is...
-                    </p>
                 
             </div>
         </div>
