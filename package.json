@@ -22,7 +22,7 @@
     "gulp": "^5.0.0",
     "gulp-htmllint": "0.0.19",
     "gulp-sass": "^5.1.0",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "minimist": "^1.2.8",
     "sass": "^1.80.6",
     "semver": "^7.6.3",
