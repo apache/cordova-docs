@@ -2858,6 +2858,10 @@ and will be indicated as such.</p>
       <td><em>Default: CDVWebViewEngine</em> <br />  This sets the WebView engine plugin to be used to render the host app. The plugin must conform to the CDVWebViewEngineProtocol protocol. The &#39;value&#39; here should match the &#39;feature&#39; name of the WebView engine plugin that is installed. This preference usually would be set by the WebView engine plugin that is installed, automatically.</td>
     </tr>
     <tr>
+      <td>CrashRecoveryBehavior<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td><em>Default: refresh</em> <br /> Allowed values: refresh, reload <br /> Specifies the crash recovery behavior for the iOS web view. The <code>reload</code> option will cause the web view to reload the starting URL for the app, whereas <code>refresh</code> will attempt to restore the current URL state.</td>
+    </tr>
+    <tr>
       <td>DefaultVolumeStream<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon android"><use href="#android"></use></svg></td>
       <td><em>Default: default</em> <br />  Added in cordova-android 3.7.0, This preference sets which volume the hardware volume buttons link to. By default this is &quot;call&quot; for phones and &quot;media&quot; for tablets. Set this to &quot;media&quot; to have your app&#39;s volume buttons always change the media volume. Note that when using Cordova&#39;s media plugin, the volume buttons will dynamically change to controlling the media volume when any Media objects are active.</td>
     </tr>
