@@ -29,6 +29,7 @@ github:
     - javascript
     - nodejs
     - hacktoberfest
+    - jekyll
 
   features:
     wiki: false
