@@ -57,6 +57,24 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             </td>
         </tr>
         <tr>
+            <td>14.0.x</td>
+            <td>24 (7.0) - 35 (15.0)</td>
+            <td>
+                <ul>
+                    <li>Build Tools: ^35.0.0</li>
+                    <li>Kotlin: 1.9.24</li>
+                    <li>Gradle: 8.13</li>
+                    <li>Android Gradle Plugin: 8.7.3</li>
+                    <li>AndroidX Compat Library: 1.7.0</li>
+                    <li>AndroidX WebKit Library: 1.12.1</li>
+                    <li>AndroidX Core SplashScreen: 1.0.1</li>
+                    <li>Google Services Gradle Plugin: 4.4.2</li>
+                    <li>Java Development Kit (JDK): 17</li>
+                    <li>Node.js: >=20.5.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
         <td>11.0.x</td>
         <td>22 (5.1) - 32 (12L)</td>
         <td>
