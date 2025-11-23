@@ -325,45 +325,6 @@ The screen should look like this:
 
 ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode10-review-settings.png)
 
-## Platform Centered Workflow
-
-cordova-ios includes a number of scripts that allow the platform to be used
-without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform cordova CLI.
-For example, you need to use shell tools when deploying a custom
-Cordova WebView alongside native components. Before using this
-development path, you must still configure the SDK environment
-as described in [Requirements and Support](#link-requirements-and-support)
-above.
-
-For each of the scripts discussed below, refer to
- [Cordova CLI Reference][cli] for more information on their
-arguments and usage. Each script has a name that matches the corresponding CLI
-command. For example, `cordova-ios/bin/create` is equivalent to
-`cordova create`.
-
-To get started, either download the cordova-ios package from
-[npm](https://www.npmjs.com/package/cordova-ios) or
-[Github](https://github.com/apache/cordova-ios).
-
-To create a project using this package, run the `create` script in the `bin`
-folder:
-
-```bash
-$ cordova-ios/bin/create ...
-```
-
-To run the app, use the `run` script in the `bin` folder:
-
-```bash
-$ cordova-ios/bin/run
-```
-
-The created project will have a folder named `cordova` inside that contains
-scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
-
-To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
-
 ## Upgrading
 
 Refer to [this](./upgrade.html) article for instructions to upgrade your ```cordova-ios``` version.
