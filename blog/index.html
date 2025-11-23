@@ -123,6 +123,108 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Sun, 23 Nov 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/11/23/cordova-ios-8.0.0.html">Cordova iOS 8.0.0 is now available!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">23 Nov 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://dpogue.ca">Darryl Pogue</a>
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>After nearly 2 years of work, we are excited to finally announce that we have released <strong>Cordova iOS 8.0.0</strong>! This is Cordova&#39;s platform supporting the development of applications for iOS &amp; iPadOS; now with better support for the latest platform features.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@8.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@8.0.0
+</code></pre></div></div>
+
+<p><strong>This is a major version release which includes some breaking changes!</strong><br />
+We have tried hard to make the update process as smooth as possible for both application and plugin developers, while improving the experience for developers embedding Cordova iOS as a library.</p>
+
+<p>For plugin authors, we&#39;ve written a guide about <a href="https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc">Upgrading Plugins to Cordova iOS 8.x</a>.</p>
+
+<h2>Release Highlights</h2>
+
+<ul>
+  <li><strong>Supported version minimums</strong>
+    <ul>
+      <li>The minimum supported <strong>iOS</strong> version is now 13.</li>
+      <li>The minimum supported <strong>Xcode</strong> version is now 15.</li>
+      <li>The minimum supported <strong>NodeJS</strong> version is now 20.17.</li>
+    </ul>
+  </li>
+  <li><strong>Embracing Swift</strong>
+    <ul>
+      <li>The platform project now uses Swift classes and a storyboard file.</li>
+      <li>Plugins can now be set up as Swift packages, including other Swift packages as dependencies.</li>
+      <li>CordovaLib is available as a Swift package to be embedded in existing projects.</li>
+    </ul>
+  </li>
+  <li><strong>Platform project modernizing</strong>
+    <ul>
+      <li>The Xcode project, and build target are now always named <code>App</code>.<br />
+This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what&#39;s defined in config.xml.</li>
+      <li>The platform project now supports building for macOS using Catalyst.</li>
+      <li>The platform project has adopted the iOS Scene APIs, which are required for iOS 26 support.</li>
+      <li>CordovaLib (used as a library) supports targeting the visionOS platform.</li>
+    </ul>
+  </li>
+  <li><strong>Build-in status bar handling</strong>
+    <ul>
+      <li>Status bar handling is now built-in to Cordova iOS, and the StatusBar plugin is no longer required in most cases.</li>
+      <li>Whether the status bar is shown or not is controlled by the viewport meta tag&#39;s <code>viewport-fit</code> directive.</li>
+      <li>The background color of the status bar is controlled by the theme-color meta tag.</li>
+    </ul>
+  </li>
+  <li><strong>App icon simplification</strong>
+    <ul>
+      <li>Projects can now provide a single 1024px × 1024px icon in config.xml.</li>
+      <li>Projects building with Xcode 16 or newer can provide monochrome and dark mode icon variants.</li>
+      <li>See <a href="https://github.com/apache/cordova-ios/pull/1465">GH-1465</a> for details.</li>
+      <li><strong>NOTE:</strong> Cordova iOS 8.0.0 does not include support for the new Xcode 26 Icon Composer file format. We hope to introduce support in the near future.</li>
+    </ul>
+  </li>
+  <li><strong>Bunches of bugs fixed</strong>
+    <ul>
+      <li>Range requests are now supported for large media files when using a custom protocol.</li>
+      <li>Opening system alert boxes from JavaScript code should no longer freeze the application.</li>
+      <li>Improved error messaging when no iOS simulators are installed.</li>
+      <li>Configurable behavior for recovering from web view crashes that sometimes left blank screens.</li>
+      <li>Fix for <code>handleOpenURL()</code> not firing reliably when the app is launched.</li>
+      <li>Improve handling for the <code>deployment-target</code> preference with CocoaPods.</li>
+    </ul>
+  </li>
+  <li><strong>Embedded framework improvements</strong>
+    <ul>
+      <li>Several memory leaks have been fixed when disposing of a Cordova view controller.</li>
+      <li>Several API improvements for specifying background colours and splash screen behaviour.</li>
+      <li>Introduced <code>CDVSceneDelegate</code> for integrating with the iOS Scene API.</li>
+      <li>Added nullability annotations to several classes and API methods.</li>
+      <li>New <a href="https://apache.github.io/cordova-ios/">API documentation</a> is published for the CordovaLib classes.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The full changelog is available to read <a href="https://github.com/apache/cordova-ios/blob/rel/8.0.0/RELEASENOTES.md">here</a>. Please report any issues you find on our <a href="https://github.com/apache/cordova-ios/issues">Cordova-iOS</a> GitHub issue tracker!</p>
+</p>
+                    <div><a href="/announcements/2025/11/23/cordova-ios-8.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Wed, 05 Nov 2025 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2025/11/05/cordova-lib-13.0.0.html">Cordova Lib 13.0.0 Released!</a>
@@ -14929,7 +15031,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Wed, 05 Nov 2025 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Sun, 23 Nov 2025 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

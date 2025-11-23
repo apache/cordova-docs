@@ -6,9 +6,105 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Nov 2025 17:19:06 +0000</pubDate>
-    <lastBuildDate>Sat, 22 Nov 2025 17:19:06 +0000</lastBuildDate>
+    <pubDate>Sun, 23 Nov 2025 11:04:22 +0000</pubDate>
+    <lastBuildDate>Sun, 23 Nov 2025 11:04:22 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova iOS 8.0.0 is now available!</title>
+        <description>&lt;p&gt;After nearly 2 years of work, we are excited to finally announce that we have released &lt;strong&gt;Cordova iOS 8.0.0&lt;/strong&gt;! This is Cordova&amp;#39;s platform supporting the development of applications for iOS &amp;amp; iPadOS; now with better support for the latest platform features.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@8.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@8.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;This is a major version release which includes some breaking changes!&lt;/strong&gt;&lt;br /&gt;
+We have tried hard to make the update process as smooth as possible for both application and plugin developers, while improving the experience for developers embedding Cordova iOS as a library.&lt;/p&gt;
+
+&lt;p&gt;For plugin authors, we&amp;#39;ve written a guide about &lt;a href=&quot;https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc&quot;&gt;Upgrading Plugins to Cordova iOS 8.x&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Supported version minimums&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;iOS&lt;/strong&gt; version is now 13.&lt;/li&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;Xcode&lt;/strong&gt; version is now 15.&lt;/li&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;NodeJS&lt;/strong&gt; version is now 20.17.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Embracing Swift&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The platform project now uses Swift classes and a storyboard file.&lt;/li&gt;
+      &lt;li&gt;Plugins can now be set up as Swift packages, including other Swift packages as dependencies.&lt;/li&gt;
+      &lt;li&gt;CordovaLib is available as a Swift package to be embedded in existing projects.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Platform project modernizing&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The Xcode project, and build target are now always named &lt;code&gt;App&lt;/code&gt;.&lt;br /&gt;
+This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what&amp;#39;s defined in config.xml.&lt;/li&gt;
+      &lt;li&gt;The platform project now supports building for macOS using Catalyst.&lt;/li&gt;
+      &lt;li&gt;The platform project has adopted the iOS Scene APIs, which are required for iOS 26 support.&lt;/li&gt;
+      &lt;li&gt;CordovaLib (used as a library) supports targeting the visionOS platform.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Build-in status bar handling&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Status bar handling is now built-in to Cordova iOS, and the StatusBar plugin is no longer required in most cases.&lt;/li&gt;
+      &lt;li&gt;Whether the status bar is shown or not is controlled by the viewport meta tag&amp;#39;s &lt;code&gt;viewport-fit&lt;/code&gt; directive.&lt;/li&gt;
+      &lt;li&gt;The background color of the status bar is controlled by the theme-color meta tag.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;App icon simplification&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Projects can now provide a single 1024px × 1024px icon in config.xml.&lt;/li&gt;
+      &lt;li&gt;Projects building with Xcode 16 or newer can provide monochrome and dark mode icon variants.&lt;/li&gt;
+      &lt;li&gt;See &lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1465&quot;&gt;GH-1465&lt;/a&gt; for details.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Cordova iOS 8.0.0 does not include support for the new Xcode 26 Icon Composer file format. We hope to introduce support in the near future.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bunches of bugs fixed&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Range requests are now supported for large media files when using a custom protocol.&lt;/li&gt;
+      &lt;li&gt;Opening system alert boxes from JavaScript code should no longer freeze the application.&lt;/li&gt;
+      &lt;li&gt;Improved error messaging when no iOS simulators are installed.&lt;/li&gt;
+      &lt;li&gt;Configurable behavior for recovering from web view crashes that sometimes left blank screens.&lt;/li&gt;
+      &lt;li&gt;Fix for &lt;code&gt;handleOpenURL()&lt;/code&gt; not firing reliably when the app is launched.&lt;/li&gt;
+      &lt;li&gt;Improve handling for the &lt;code&gt;deployment-target&lt;/code&gt; preference with CocoaPods.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Embedded framework improvements&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Several memory leaks have been fixed when disposing of a Cordova view controller.&lt;/li&gt;
+      &lt;li&gt;Several API improvements for specifying background colours and splash screen behaviour.&lt;/li&gt;
+      &lt;li&gt;Introduced &lt;code&gt;CDVSceneDelegate&lt;/code&gt; for integrating with the iOS Scene API.&lt;/li&gt;
+      &lt;li&gt;Added nullability annotations to several classes and API methods.&lt;/li&gt;
+      &lt;li&gt;New &lt;a href=&quot;https://apache.github.io/cordova-ios/&quot;&gt;API documentation&lt;/a&gt; is published for the CordovaLib classes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The full changelog is available to read &lt;a href=&quot;https://github.com/apache/cordova-ios/blob/rel/8.0.0/RELEASENOTES.md&quot;&gt;here&lt;/a&gt;. Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-ios/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/11/23/cordova-ios-8.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/23/cordova-ios-8.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Lib 13.0.0 Released!</title>
@@ -793,28 +889,6 @@ cordova plugin add cordova-plugin-media-capture@6.0.0
         <category>news</category>
         
         <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova 2024 recap and plans for 2025 - Meetup recording</title>
-        <description>&lt;p&gt;We kicked off 2025 with a very successful virtual meetup! Thank you to everyone who attended, and a huge thanks to Bryan Ellis (@erisu) for preparing and hosting the meeting. We had over 100 registrations and more than 60 attendees.&lt;/p&gt;
-
-&lt;p&gt;The recording is available on &lt;a href=&quot;https://www.youtube.com/watch?v=mxZsVWJ8AT8&quot;&gt;YouTube&lt;/a&gt;, and you can find the slides &lt;a href=&quot;https://www.erisu.dev/slides/cordova-meetup-2025/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Bryan provided a recap of 2024, summarizing Cordova releases and milestones, and shared some plans for the current year. As always, we can&amp;#39;t provide exact timelines since our work is entirely volunteer-driven. However, if you’d like to help us achieve our goals, you can start contributing at any time!&lt;/p&gt;
-
-&lt;p&gt;We also have plans for additional meetups to make contributing even more accessible. Stay tuned for more details!&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/01/31/meetup-1-recording.html</guid>
-        
-        <category>news</category>
         
         
         <category>announcements</category>
