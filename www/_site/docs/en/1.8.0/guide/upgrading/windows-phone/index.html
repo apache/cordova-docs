@@ -1,0 +1,23 @@
+<h1 id="upgrading-cordova-windows-phone">Upgrading Cordova Windows Phone</h1>
+
+<p>This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.</p>
+
+<ul>
+  <li>To upgrade to 1.8.0, please go from 1.7.0</li>
+</ul>
+
+<h2 id="upgrade-to-180-from-170">Upgrade to 1.8.0 from 1.7.0</h2>
+
+<h3 id="in-visual-studios-solution-explorer-window">In Visual Studio’s Solution Explorer window:</h3>
+<ol>
+  <li>Delete the file GapLib/WP7CordovaClassLib.dll from your project.</li>
+  <li>Remove the reference to WP7CordovaClassLib in the References folder.</li>
+  <li>Right-Click on References and Select ‘Add Reference’</li>
+  <li>Navigate to the new distribution and add the file ‘WP7CordovaClassLib.dll’
+    <ul>
+      <li>note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.</li>
+    </ul>
+  </li>
+  <li>Copy the new cordova-1.8.0.js into your project ( be sure it is marked as Content )</li>
+  <li>Update your HTML to use the new cordova-1.8.0.js file.</li>
+</ol>

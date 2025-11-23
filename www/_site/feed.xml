@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 23 Nov 2025 19:27:29 +0530</pubDate>
+    <lastBuildDate>Sun, 23 Nov 2025 19:27:29 +0530</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova iOS 8.0.0 is now available!</title>
+        <description>&lt;p&gt;After nearly 2 years of work, we are excited to finally announce that we have released &lt;strong&gt;Cordova iOS 8.0.0&lt;/strong&gt;! This is Cordova’s platform supporting the development of applications for iOS &amp;amp; iPadOS; now with better support for the latest platform features.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@8.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@8.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;This is a major version release which includes some breaking changes!&lt;/strong&gt;&lt;br /&gt;
+We have tried hard to make the update process as smooth as possible for both application and plugin developers, while improving the experience for developers embedding Cordova iOS as a library.&lt;/p&gt;
+
+&lt;p&gt;For plugin authors, we’ve written a guide about &lt;a href=&quot;https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc&quot;&gt;Upgrading Plugins to Cordova iOS 8.x&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Supported version minimums&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;iOS&lt;/strong&gt; version is now 13.&lt;/li&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;Xcode&lt;/strong&gt; version is now 15.&lt;/li&gt;
+      &lt;li&gt;The minimum supported &lt;strong&gt;NodeJS&lt;/strong&gt; version is now 20.17.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Embracing Swift&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The platform project now uses Swift classes and a storyboard file.&lt;/li&gt;
+      &lt;li&gt;Plugins can now be set up as Swift packages, including other Swift packages as dependencies.&lt;/li&gt;
+      &lt;li&gt;CordovaLib is available as a Swift package to be embedded in existing projects.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Platform project modernizing&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The Xcode project, and build target are now always named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App&lt;/code&gt;.&lt;br /&gt;
+This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what’s defined in config.xml.&lt;/li&gt;
+      &lt;li&gt;The platform project now supports building for macOS using Catalyst.&lt;/li&gt;
+      &lt;li&gt;The platform project has adopted the iOS Scene APIs, which are required for iOS 26 support.&lt;/li&gt;
+      &lt;li&gt;CordovaLib (used as a library) supports targeting the visionOS platform.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Build-in status bar handling&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Status bar handling is now built-in to Cordova iOS, and the StatusBar plugin is no longer required in most cases.&lt;/li&gt;
+      &lt;li&gt;Whether the status bar is shown or not is controlled by the viewport meta tag’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viewport-fit&lt;/code&gt; directive.&lt;/li&gt;
+      &lt;li&gt;The background color of the status bar is controlled by the theme-color meta tag.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;App icon simplification&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Projects can now provide a single 1024px × 1024px icon in config.xml.&lt;/li&gt;
+      &lt;li&gt;Projects building with Xcode 16 or newer can provide monochrome and dark mode icon variants.&lt;/li&gt;
+      &lt;li&gt;See &lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1465&quot;&gt;GH-1465&lt;/a&gt; for details.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Cordova iOS 8.0.0 does not include support for the new Xcode 26 Icon Composer file format. We hope to introduce support in the near future.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bunches of bugs fixed&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Range requests are now supported for large media files when using a custom protocol.&lt;/li&gt;
+      &lt;li&gt;Opening system alert boxes from JavaScript code should no longer freeze the application.&lt;/li&gt;
+      &lt;li&gt;Improved error messaging when no iOS simulators are installed.&lt;/li&gt;
+      &lt;li&gt;Configurable behavior for recovering from web view crashes that sometimes left blank screens.&lt;/li&gt;
+      &lt;li&gt;Fix for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;handleOpenURL()&lt;/code&gt; not firing reliably when the app is launched.&lt;/li&gt;
+      &lt;li&gt;Improve handling for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deployment-target&lt;/code&gt; preference with CocoaPods.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Embedded framework improvements&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Several memory leaks have been fixed when disposing of a Cordova view controller.&lt;/li&gt;
+      &lt;li&gt;Several API improvements for specifying background colours and splash screen behaviour.&lt;/li&gt;
+      &lt;li&gt;Introduced &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CDVSceneDelegate&lt;/code&gt; for integrating with the iOS Scene API.&lt;/li&gt;
+      &lt;li&gt;Added nullability annotations to several classes and API methods.&lt;/li&gt;
+      &lt;li&gt;New &lt;a href=&quot;https://apache.github.io/cordova-ios/&quot;&gt;API documentation&lt;/a&gt; is published for the CordovaLib classes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The full changelog is available to read &lt;a href=&quot;https://github.com/apache/cordova-ios/blob/rel/8.0.0/RELEASENOTES.md&quot;&gt;here&lt;/a&gt;. Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-ios/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Nov 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/11/23/cordova-ios-8.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/11/23/cordova-ios-8.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Lib 13.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-lib@13.0.0&lt;/code&gt; has been released. This is the main library behind the Cordova CLI, handling project and build operations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-lib/v/13.0.0&quot;&gt;cordova-lib@13.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Updated the library’s npm dependencies.&lt;/li&gt;
+  &lt;li&gt;Increased the Node.js engine requirement to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=20.17.0 || &amp;gt;=22.9.0&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Dropped support for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova serve&lt;/code&gt; command.&lt;/li&gt;
+  &lt;li&gt;Dropped support for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create plugin&lt;/code&gt; command.&lt;/li&gt;
+  &lt;li&gt;Added support for listing available emulators with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova emulate &amp;lt;platform&amp;gt; --list&lt;/code&gt; command.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/964&quot;&gt;GH-964&lt;/a&gt; chore(npm)!: bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;write-file-atomic@7.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/961&quot;&gt;GH-961&lt;/a&gt; chore!: update dependencies &amp;amp; node requirement&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/957&quot;&gt;GH-957&lt;/a&gt; feat!: remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova serve&lt;/code&gt; command&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/955&quot;&gt;GH-955&lt;/a&gt; chore(npm)!: bump various packages&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/953&quot;&gt;GH-953&lt;/a&gt; feat(plugman)!: remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create plugin&lt;/code&gt; support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/949&quot;&gt;GH-949&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/958&quot;&gt;GH-958&lt;/a&gt; chore!: remove deprecated platform data&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/959&quot;&gt;GH-959&lt;/a&gt; chore!: remove unused templates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/952&quot;&gt;GH-952&lt;/a&gt; feat: replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dep-graph&lt;/code&gt; dependency w/ custom class&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/944&quot;&gt;GH-944&lt;/a&gt; fix(emulator): Support listing emulators with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--list&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/963&quot;&gt;GH-963&lt;/a&gt; chore: update &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/960&quot;&gt;GH-960&lt;/a&gt; chore: various updates to the root files&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/956&quot;&gt;GH-956&lt;/a&gt; chore(npm): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@cordova/eslint-config@6.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/946&quot;&gt;GH-946&lt;/a&gt; chore(deps-dev): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brace-expansion&lt;/code&gt; from 1.1.11 to 1.1.12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/939&quot;&gt;GH-939&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path-to-regexp&lt;/code&gt; and express&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/937&quot;&gt;GH-937&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross-spawn&lt;/code&gt; from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/938&quot;&gt;GH-938&lt;/a&gt; chore(ci): Fix failing dependabot PRs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI &amp;amp; Others:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/954&quot;&gt;GH-954&lt;/a&gt; ci: various workflow improvements&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/950&quot;&gt;GH-950&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/945&quot;&gt;GH-945&lt;/a&gt; ci: Add node 22 and 24 to CI testing matrix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/941&quot;&gt;GH-941&lt;/a&gt; Keep final new line in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/942&quot;&gt;GH-942&lt;/a&gt; Persist relative paths on disk&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 05 Nov 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/11/05/cordova-lib-13.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/11/05/cordova-lib-13.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Create 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-create@6.0.0&lt;/code&gt; has been released. This is the library used behind-the-scenes of the Cordova tooling for creating a Cordova project.&lt;/p&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Updated the library’s npm dependencies.&lt;/li&gt;
+  &lt;li&gt;Increased in the Node.js engine requirement to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=20.17.0 || &amp;gt;=22.9.0&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/99&quot;&gt;GH-99&lt;/a&gt; chore!: upgrade &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@cordova/eslint-config@6.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/98&quot;&gt;GH-98&lt;/a&gt; chore!: bump package dependencies
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-app-hello-world@7.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-common@6.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-fetch5.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tmp@0.2.5&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rewire@9.0.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jasmine@5.10.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm-package-arg@13.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Bumped node engine requirement &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=20.17.0 || &amp;gt;=22.9.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/94&quot;&gt;GH-94&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores &amp;amp; CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/103&quot;&gt;GH-103&lt;/a&gt; chore: add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.npmrc&lt;/code&gt; &amp;amp; update ignore files&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/102&quot;&gt;GH-102&lt;/a&gt; chore: replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nyc&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c8&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/101&quot;&gt;GH-101&lt;/a&gt; chore: update project defaults&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/100&quot;&gt;GH-100&lt;/a&gt; chore: ci and license updates&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/97&quot;&gt;GH-97&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tmp&lt;/code&gt; from 0.2.3 to 0.2.4&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/96&quot;&gt;GH-96&lt;/a&gt; ci: use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macos-15&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macos-latest&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/93&quot;&gt;GH-93&lt;/a&gt; ci(workflow): add release-audit &amp;amp; license config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/92&quot;&gt;GH-92&lt;/a&gt; chore(deps-dev): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brace-expansion&lt;/code&gt; from 1.1.11 to 1.1.12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/91&quot;&gt;GH-91&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross-spawn&lt;/code&gt; from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/90&quot;&gt;GH-90&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;micromatch&lt;/code&gt; from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/88&quot;&gt;GH-88&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;braces&lt;/code&gt; from 3.0.2 to 3.0.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/86&quot;&gt;GH-86&lt;/a&gt; chore(deps): Update npm deps, add Node 20 to CI&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/pull/87&quot;&gt;GH-87&lt;/a&gt; ci: update &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;codecov@v4&lt;/code&gt; w/ token&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 22 Oct 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/10/22/cordova-create-6.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/10/22/cordova-create-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Fetch 5.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-fetch@5.0.0&lt;/code&gt; has been released. This is the library used behind-the-scenes of the Cordova tooling for fetching of Cordova platforms and plugins.&lt;/p&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Updated the library’s npm dependencies.&lt;/li&gt;
+  &lt;li&gt;Increased in the Node.js engine requirement to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=20.9.0&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/131&quot;&gt;GH-131&lt;/a&gt; chore(npm)!: bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-common@6.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/125&quot;&gt;GH-125&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/136&quot;&gt;GH-136&lt;/a&gt; chore(README): update badges&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/135&quot;&gt;GH-135&lt;/a&gt; chore: update &amp;amp; add source code license headers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/130&quot;&gt;GH-130&lt;/a&gt; chore: bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@cordova/eslint-config&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/127&quot;&gt;GH-127&lt;/a&gt; chore(coverage): Move from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nyc&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c8&lt;/code&gt; for code coverage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/124&quot;&gt;GH-124&lt;/a&gt; chore(deps-dev): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brace-expansion&lt;/code&gt; from 1.1.11 to 1.1.12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/122&quot;&gt;GH-122&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross-spawn&lt;/code&gt; from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/120&quot;&gt;GH-120&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;micromatch&lt;/code&gt; from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/119&quot;&gt;GH-119&lt;/a&gt; chore(deps): bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;braces&lt;/code&gt; from 3.0.2 to 3.0.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/116&quot;&gt;GH-116&lt;/a&gt; chore(deps): Update some dependencies, add Node 20 to CI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/137&quot;&gt;GH-137&lt;/a&gt; ci: workflow updates&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/128&quot;&gt;GH-128&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/123&quot;&gt;GH-123&lt;/a&gt; ci: Add licence checker workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/121&quot;&gt;GH-121&lt;/a&gt; ci: Fix dependabot code scanning errors&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/118&quot;&gt;GH-118&lt;/a&gt; ci: Set up CodeQL analysis&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/117&quot;&gt;GH-117&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Tests:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/126&quot;&gt;GH-126&lt;/a&gt; test: drop &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-url&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/08/29/cordova-fetch-5.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/08/29/cordova-fetch-5.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova App Hello World 7.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-app-hello-world@7.0.0&lt;/code&gt; has been released. This is the default app template used when creating a new Cordova App project though Cordova CLI.&lt;/p&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this release were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;body&lt;/code&gt; element’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;box-sizing&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;border-box&lt;/code&gt; to avoid the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;safe-area-inset&lt;/code&gt; padding that caused scrolling issues&lt;/li&gt;
+  &lt;li&gt;Disabled the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;overscroll&lt;/code&gt; behavior of the root element to remove rubber-banding effects.&lt;/li&gt;
+  &lt;li&gt;Used modern, unprefixed CSS directives.&lt;/li&gt;
+  &lt;li&gt;Updated default template’s package ID to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;org.apache.cordova.hellocordova&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/98&quot;&gt;GH-98&lt;/a&gt; fix(css): Fix extra padding causing scrolling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/99&quot;&gt;GH-99&lt;/a&gt; chore: updated defaults, license headers &amp;amp; added release audit workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/78&quot;&gt;GH-78&lt;/a&gt; chore: correct &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;access&lt;/code&gt; inline comment&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 29 Aug 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Common 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-common@6.0.0&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Removal of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;superspawn&lt;/code&gt;, which also dropped the npm dependencies &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross-spawn&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Update to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;resource-file&amp;gt;&lt;/code&gt; directive to allow directories and their contents to be copied.&lt;/li&gt;
+  &lt;li&gt;Update to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;config-file&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;edit-config&amp;gt;&lt;/code&gt; directives to support finding unprefixed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info.plist&lt;/code&gt; files.&lt;/li&gt;
+  &lt;li&gt;Increase in the Node.js engine requirement to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=20.9.0&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/239&quot;&gt;GH-239&lt;/a&gt; feat!: change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resource-file&lt;/code&gt; behavior to support directory contents&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/236&quot;&gt;GH-236&lt;/a&gt; feat!: remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;superspawn.js&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/231&quot;&gt;GH-231&lt;/a&gt; feat!: remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;superspawn&lt;/code&gt; &amp;amp; npm packages &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cross-spawn&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/235&quot;&gt;GH-235&lt;/a&gt; dep(npm)!: bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@cordova/eslint-config@6.0.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Bumps &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node &amp;gt;=20.9.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/228&quot;&gt;GH-228&lt;/a&gt; chore!: bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node &amp;gt;=20.5.0&lt;/code&gt; &amp;amp; upgrade npm packages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/212&quot;&gt;GH-212&lt;/a&gt; feat: Support finding an unprefixed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Info.plist&lt;/code&gt; file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/240&quot;&gt;GH-240&lt;/a&gt; chore: update &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/232&quot;&gt;GH-232&lt;/a&gt; chore(tests): Improve test coverage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/229&quot;&gt;GH-229&lt;/a&gt; chore(coverage): Move from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nyc&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c8&lt;/code&gt; for code coverage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/238&quot;&gt;GH-238&lt;/a&gt; dep(npm): update w/ rebuilt &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/237&quot;&gt;GH-237&lt;/a&gt; refactor(bom): Bring &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;strip-bom&lt;/code&gt; in as util&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI &amp;amp; Refactoring:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/234&quot;&gt;GH-234&lt;/a&gt; ci: use macos-15&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/233&quot;&gt;GH-233&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/230&quot;&gt;GH-230&lt;/a&gt; ci: add permissions block &amp;amp; commit hash pinning of third-party actions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 09 Aug 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/08/09/cordova-common-6.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/08/09/cordova-common-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Android 14.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cordova Android 14.0.1&lt;/code&gt;! This is one of Cordova’s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@14.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@14.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@14.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3 id=&quot;fixes&quot;&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fetching Gradle Path for Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Resolved an issue in Windows environments where projects containing spaces in their paths could not be built due to changes in how the Gradle path was fetched.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Setting Gradle’s java.home&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Resolved an issue where the user-defined environment variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JAVA_HOME&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CORDOVA_JAVA_HOME&lt;/code&gt; was not being used to set the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java.home&lt;/code&gt; property for the Gradle Wrapper.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1795&quot;&gt;GH-1795&lt;/a&gt; fix: configure gradle &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java.home&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1793&quot;&gt;GH-1793&lt;/a&gt; fix(windows): get gradle path with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;which&lt;/code&gt; command&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 30 Apr 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/04/30/cordova-android-14.0.1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/04/30/cordova-android-14.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Android 14.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cordova Android 14.0.0&lt;/code&gt;! This is one of Cordova’s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@14.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@14.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@14.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3 id=&quot;breaking-changes&quot;&gt;BREAKING CHANGES&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Target SDK&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This release has increased the target SDK to 35 (Android 15).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The following Gradle dependencies were bumpped:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Gradle: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.13&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.7.3&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Additionally, the following libraries have been upgraded:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;AndroidX App Compat - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.7.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX WebKit - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.12.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX SplashScreen Core - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.0.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Google Services Gradle Plugin - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.4.2&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:&lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Preference&lt;/th&gt;
+          &lt;th&gt;Default Value&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android-minSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;24&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android-maxSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;Not set&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android-targetSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;35&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android-compileSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;android-targetSdkVersion configured value&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android-buildToolsVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;35.0.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GradleVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;8.13&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AndroidGradlePluginVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;8.7.3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GradlePluginKotlinVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.9.24&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AndroidXAppCompatVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.7.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AndroidXWebKitVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.12.1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GradlePluginGoogleServicesVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;4.4.2&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;p&gt;Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Android Studio Requirement&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;With the increase of Android Gradle Plugin, Android Studio Ladybug is the minimum required version for building and running projects in Android Studio. This aligns with the &lt;a href=&quot;https://developer.android.com/build/releases/gradle-plugin#android_gradle_plugin_and_android_studio_compatibility&quot;&gt;Android Gradle plugin and Android Studio compatibility&lt;/a&gt; documentation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Required Build Tools&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;To use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-android@14.0.0&lt;/code&gt;, SDK Platform &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;35&lt;/code&gt; and SDK Build Tools &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;35.0.0&lt;/code&gt; must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Upgrade with Command-line tools:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The recommended way to install SDK Platform 35 and SDK Build Tools 35.0.0 is by using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sdkmanager&lt;/code&gt;, which is part of Android’s &lt;a href=&quot;https://developer.android.com/tools/&quot;&gt;Command-line tools&lt;/a&gt; package. The command-line tools is useful as it does not require Android Studio.&lt;/p&gt;
+
+    &lt;p&gt;At the time of writing, &lt;strong&gt;version 19&lt;/strong&gt; of the Command-line tools was downloaded from Android Studio’s SDK Manager and used. It can also be downloaded from the &lt;a href=&quot;https://developer.android.com/studio#command-line-tools-only&quot;&gt;Android Developers&lt;/a&gt; website.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;s1&quot;&gt;&apos;build-tools;35.0.0&apos;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;platforms;android-35&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;You may need to run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update&lt;/code&gt; flag first:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;nt&quot;&gt;--update&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;strong&gt;Upgrade with Android Studio:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;To install SDK Platform 35:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open Android Studio’s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
+      &lt;li&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SDK Platforms&lt;/code&gt; tab&lt;/li&gt;
+      &lt;li&gt;Check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Android 15.0 (&quot;VanillaIceCream&quot;)&lt;/code&gt; which has the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;API Level&lt;/code&gt; of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;35&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Apply&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2025/cordova-android-14-platform-sdk-35.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;To install SDK Build Tools 35.0.0:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open Android Studio’s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
+      &lt;li&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SDK Tools&lt;/code&gt; tab&lt;/li&gt;
+      &lt;li&gt;Check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Show Package Details&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Expand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Android SDK Build-Tools&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;35.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Apply&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2025/cordova-android-14-sdk-build-tools-3500.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Java Source &amp;amp; Target Compatibility&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The Java Source &amp;amp; Target Compatibility has been increased to version 11. This aligns with the default settings used when creating a blank native project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Node.js Engine Requirement&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The Node.js engine requirement in this release has been increased to version 20.5.0 or later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Deprecated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CordovaPlugin&lt;/code&gt;’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;initialize&lt;/code&gt; Method&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;initialize&lt;/code&gt; method of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CordovaPlugin&lt;/code&gt; class has been marked as deprecated and will be removed in a future release. While this method was always considered deprecated, it was not properly annotated to notify plugin developers.&lt;/p&gt;
+
+    &lt;p&gt;We recommend using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pluginInitialize&lt;/code&gt; method as a replacement for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;initialize&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Replaced Library &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib-jdk*&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib-jdk*&lt;/code&gt; libraries have been replaced with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib&lt;/code&gt;. Both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib-jdk7&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib-jdk8&lt;/code&gt; are merged into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kotlin-stdlib&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;feature&quot;&gt;Feature&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AndroidEdgeToEdge&lt;/code&gt; Preference Support&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;By default, Android 15 enforces the Edge-to-Edge feature, which may affect some Apache Cordova apps.&lt;/p&gt;
+
+    &lt;p&gt;In this major release, Apache Cordova has opted out of the Edge-to-Edge feature to retain the original behavior and allow app developers ample time to make the necessary adjustments to support Edge-to-Edge.&lt;/p&gt;
+
+    &lt;p&gt;Users can re-enable the Edge-to-Edge feature using this new preference flag.&lt;/p&gt;
+
+    &lt;p&gt;It is expected that in Android’s next major release, opting out of Edge-to-Edge will no longer be possible.&lt;/p&gt;
+
+    &lt;p&gt;Apache Cordova will continue to prepare for this expected future behavior change.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1788&quot;&gt;GH-1788&lt;/a&gt; dep!: bump npm packages
+    &lt;ul&gt;
+      &lt;li&gt;nyc@17.1.0&lt;/li&gt;
+      &lt;li&gt;which@5.0.0&lt;/li&gt;
+      &lt;li&gt;semver@7.7.1&lt;/li&gt;
+      &lt;li&gt;jasmine@5.6.0&lt;/li&gt;
+      &lt;li&gt;android-versions@2.1.0&lt;/li&gt;
+      &lt;li&gt;cordova-common@5.0.1&lt;/li&gt;
+      &lt;li&gt;fast-glob@3.3.3&lt;/li&gt;
+      &lt;li&gt;nopt@8.1.0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1789&quot;&gt;GH-1789&lt;/a&gt; feat!: bump node engine requirement &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=20.5.0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1784&quot;&gt;GH-1784&lt;/a&gt; feat!: bump java default targets to 11&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1771&quot;&gt;GH-1771&lt;/a&gt; feat!: deprecate CordovaPlugin’s method initialize&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1767&quot;&gt;GH-1767&lt;/a&gt; feat!: use kotlin-stdlib instead of kotlin-stdlib-jdk*&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1763&quot;&gt;GH-1763&lt;/a&gt; feat!: SDK 35 Support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1785&quot;&gt;GH-1785&lt;/a&gt; feat: bump gradle to 8.13&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1779&quot;&gt;GH-1779&lt;/a&gt; feat: add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AndroidEdgeToEdge&lt;/code&gt; preference &amp;amp; theme flag&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1778&quot;&gt;GH-1778&lt;/a&gt; feat: Account for Node security patch&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1768&quot;&gt;GH-1768&lt;/a&gt; feat: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;androidx.core:core-splashscreen@1.0.1&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1766&quot;&gt;GH-1766&lt;/a&gt; feat: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.google.gms:google-services@4.4.2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1765&quot;&gt;GH-1765&lt;/a&gt; feat: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;androidx.webkit:webkit@1.12.1&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1764&quot;&gt;GH-1764&lt;/a&gt; feat: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;androidx.appcompat:appcompat@1.7.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1790&quot;&gt;GH-1790&lt;/a&gt; fix: replace fs-extra.ensureFileSync with fs.writeFileSync&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1781&quot;&gt;GH-1781&lt;/a&gt; fix: copy gradle wrapper from tools to platform root dir&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1770&quot;&gt;GH-1770&lt;/a&gt; fix: creation of cdv-gradle-config.json w/ –link flag&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1739&quot;&gt;GH-1739&lt;/a&gt; fix(docs): Incorrect JDK requirement stated in README&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1718&quot;&gt;GH-1718&lt;/a&gt; fix: app restart when BT keyboard is connected in some devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores &amp;amp; Refactoring:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1786&quot;&gt;GH-1786&lt;/a&gt; chore: add AndroidX build test to gitignore&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1774&quot;&gt;GH-1774&lt;/a&gt; style: update &amp;amp; resolve doc block warnings&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1772&quot;&gt;GH-1772&lt;/a&gt; refactor: replace fs-extra with node:fs&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1769&quot;&gt;GH-1769&lt;/a&gt; refactor: prefix node:*&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1748&quot;&gt;GH-1748&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1750&quot;&gt;GH-1750&lt;/a&gt; chore(ci): Fix dependabot PR failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1736&quot;&gt;GH-1736&lt;/a&gt; chore(deps): bump micromatch from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1716&quot;&gt;GH-1716&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 26 Mar 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/03/26/cordova-android-14.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/03/26/cordova-android-14.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Media Capture Plugin 6.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-plugin-media-capture&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0&quot;&gt;cordova-plugin-media-capture@6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@6.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This major release primarily focused on &lt;strong&gt;ensuring&lt;/strong&gt; that the plugin complies with Android’s new strict permission requirements.&lt;/p&gt;
+
+&lt;p&gt;Specifically, it &lt;strong&gt;removes&lt;/strong&gt; unnecessary permissions such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android.permission.READ_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android.permission.WRITE_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android.permission.RECORD_AUDIO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, it &lt;strong&gt;removes&lt;/strong&gt; broad media permissions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android.permission.READ_MEDIA_AUDIO&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android.permission.READ_MEDIA_IMAGES&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android.permission.READ_MEDIA_VIDEO&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/308&quot;&gt;GH-308&lt;/a&gt; feat(android)!: remove unnecessary permissions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/280&quot;&gt;GH-280&lt;/a&gt; feat(android)!: remove RECORD_AUDIO permission not requested at runtime&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/295&quot;&gt;GH-295&lt;/a&gt; fix(android)!: remove broad media permissions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/281&quot;&gt;GH-281&lt;/a&gt; feat(android): Field ‘storagePermissions’ may be ‘final’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/307&quot;&gt;GH-307&lt;/a&gt; fix(android): Remove usage of Media Store queries&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/302&quot;&gt;GH-302&lt;/a&gt; fix(android): save media capture to File Provider&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores, Refactoring, CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/306&quot;&gt;GH-306&lt;/a&gt; chore: upgrade eslint config and rolled dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/305&quot;&gt;GH-305&lt;/a&gt; chore: npmrc&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/284&quot;&gt;GH-284&lt;/a&gt; chore: update asf config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/309&quot;&gt;GH-309&lt;/a&gt; refactor(android): cleanup unused or obsolete code&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/304&quot;&gt;GH-304&lt;/a&gt; ci(ios): update workflow environment&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/301&quot;&gt;GH-301&lt;/a&gt; ci: sync workflow w/ paramedic&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 26 Feb 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Common 5.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cordova-common@5.0.1&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
+
+&lt;h2 id=&quot;release-highlights&quot;&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1 id=&quot;changes-include&quot;&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/222&quot;&gt;GH-222&lt;/a&gt; chore: bump npm dependencies to current minor revisions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/217&quot;&gt;GH-217&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/214&quot;&gt;GH-214&lt;/a&gt; chore(deps): bump micromatch from 4.0.5 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/211&quot;&gt;GH-211&lt;/a&gt; chore: Minor test fixes&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/210&quot;&gt;GH-210&lt;/a&gt; chore: Don’t list dev dependencies in NOTICE&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/208&quot;&gt;GH-208&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/203&quot;&gt;GH-203&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/204&quot;&gt;GH-204&lt;/a&gt; chore: fix typo in license checker’s ignored-packages config&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/218&quot;&gt;GH-218&lt;/a&gt; ci: Fix dependabot PR failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/207&quot;&gt;GH-207&lt;/a&gt; ci: Add NodeJS 22 to CI matrix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/206&quot;&gt;GH-206&lt;/a&gt; ci: Set up CodeQL analysis&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/205&quot;&gt;GH-205&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/202&quot;&gt;GH-202&lt;/a&gt; ci: add release audit workflow&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 02 Feb 2025 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/announcements/2025/02/02/cordova-common-5.0.1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/announcements/2025/02/02/cordova-common-5.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+  </channel>
+</rss>

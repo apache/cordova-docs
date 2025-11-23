@@ -1,0 +1,482 @@
+<h1 id="ios-plugin-development-guide">iOS Plugin Development Guide</h1>
+
+<ul>
+  <li><a href="#ios-plugin-development-guide">iOS Plugin Development Guide</a>
+    <ul>
+      <li><a href="#creating-an-cordova-plugin-for-ios">Creating an Cordova Plugin for iOS</a>
+        <ul>
+          <li><a href="#adding-native-source-code">Adding Native Source Code</a></li>
+          <li><a href="#configuring-the-pluginxml">Configuring the <code class="language-plaintext highlighter-rouge">plugin.xml</code></a>
+            <ul>
+              <li><a href="#adding-plugin-code-to-ios-project">Adding Plugin Code to iOS Project</a></li>
+              <li><a href="#setting-class-mapping-for-webview-to-native-communication">Setting Class Mapping for WebView-to-Native Communication</a></li>
+              <li><a href="#configuring-plugin-initialization-timing">Configuring Plugin Initialization Timing</a></li>
+            </ul>
+          </li>
+          <li><a href="#supporting-swift-package-manager-spm">Supporting Swift Package Manager (SPM)</a>
+            <ul>
+              <li><a href="#creating-spms-packageswift-file">Creating SPM’s <code class="language-plaintext highlighter-rouge">Package.swift</code> File</a></li>
+            </ul>
+          </li>
+          <li><a href="#additional-native-side-implementation">Additional Native Side Implementation</a>
+            <ul>
+              <li><a href="#executing-plugin-initialization-logic">Executing Plugin Initialization Logic</a></li>
+              <li><a href="#handeling-long-running--background-activities">Handeling Long-running \&amp; Background Activities</a></li>
+              <li><a href="#hooking-into-wkurlschemetask">Hooking into WKURLSchemeTask</a></li>
+              <li><a href="#using-background-threads">Using Background Threads</a></li>
+              <li><a href="#adding-a-privacy-manifest-file">Adding a Privacy Manifest File</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#cdvpluginresult-message-types">CDVPluginResult Message Types</a></li>
+      <li><a href="#other-supported-cdvplugin-features">Other Supported <code class="language-plaintext highlighter-rouge">CDVPlugin</code> Features</a></li>
+      <li><a href="#debugging-plugins-for-ios">Debugging Plugins for iOS</a></li>
+      <li><a href="#common-pitfalls">Common Pitfalls</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>This guide provides details on implementing native plugin code for the iOS platform. The plugin’s platform-native code can be written in either Objective-C or Swift.</p>
+
+<p>Before proceeding, refer to the <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a> for an overview of plugin structure, plugin core files, and its common JavaScript interface. This guide will continue to use the <em>echo</em> plugin, as an exmaple, which enables communication between the Cordova WebView and the native platform.</p>
+
+<h2 id="creating-an-cordova-plugin-for-ios">Creating an Cordova Plugin for iOS</h2>
+
+<p>In this section we will cover:</p>
+
+<ol>
+  <li>Adding Native Source Code</li>
+  <li>Configuring <code class="language-plaintext highlighter-rouge">plugin.xml</code>
+    <ul>
+      <li>Adding Plugin Code to iOS Project</li>
+      <li>Setting Class Mapping for WebView-to-Native Communication</li>
+    </ul>
+  </li>
+  <li>Adding Swift Package Manager Support</li>
+  <li>Additional Native Side Implementation</li>
+</ol>
+
+<h3 id="adding-native-source-code">Adding Native Source Code</h3>
+
+<p>In the following example, we will place all files in the <code class="language-plaintext highlighter-rouge">src/ios/</code> directory. This directory will be located inside the Cordova plugin’s project root directory. The name and path of the directory are not strict and can be customized as you prefer. However, this is the typical pattern used by official Apache Cordova plugins to separate platform-specific source code and resources.</p>
+
+<ul>
+  <li>
+    <p><strong>Swift</strong></p>
+
+    <p>In Swift, the implementation source code is written inside a <code class="language-plaintext highlighter-rouge">.swift</code> file. This is where the business logic is performed.</p>
+
+    <p>To expose methods written in Swift to Objective-C, the <code class="language-plaintext highlighter-rouge">@objc</code> annotation needs to be added. When the <code class="language-plaintext highlighter-rouge">@objc</code> annotation is used, those methods are automatically included in the <code class="language-plaintext highlighter-rouge">-Swift.h</code> header file. This is required so that Cordova can locate and invoke them.</p>
+
+    <p><strong>Echo.swift (Source File):</strong></p>
+
+    <p>In this example, when the <code class="language-plaintext highlighter-rouge">echo</code> method is invoked, an <code class="language-plaintext highlighter-rouge">.ok</code> response with the provided message is returned if the message exists; otherwise, an <code class="language-plaintext highlighter-rouge">.error</code> is returned.</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#if canImport(Cordova)</span>
+  <span class="kd">import</span> <span class="kt">Cordova</span>
+  <span class="cp">#endif</span>
+
+  <span class="kd">@objc</span><span class="p">(</span><span class="kt">Echo</span><span class="p">)</span>
+  <span class="kd">class</span> <span class="kt">Echo</span> <span class="p">:</span> <span class="kt">CDVPlugin</span> <span class="p">{</span>
+      <span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">sample</span><span class="p">(</span><span class="n">_</span> <span class="nv">command</span> <span class="p">:</span> <span class="kt">CDVInvokedUrlCommand</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">let</span> <span class="nv">myarg</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+          <span class="k">let</span> <span class="nv">pluginResult</span><span class="p">;</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="n">myarg</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+              <span class="n">pluginResult</span> <span class="o">=</span> <span class="kt">CDVPluginResult</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="nv">messageAs</span><span class="p">:</span> <span class="n">myarg</span><span class="p">)</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="n">pluginResult</span> <span class="o">=</span> <span class="kt">CDVPluginResult</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="o">.</span><span class="n">error</span><span class="p">)</span>
+          <span class="p">}</span>
+
+          <span class="k">self</span><span class="o">.</span><span class="n">commandDelegate</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="n">pluginResult</span><span class="p">,</span> <span class="nv">callbackId</span><span class="p">:</span> <span class="n">command</span><span class="o">.</span><span class="n">callbackId</span><span class="p">)</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Objective-C</strong></p>
+
+    <p><strong>Echo.h (Header File):</strong></p>
+
+    <p>The header file defines the methods and properties that are exposed to other native classes. We also expose the methods that the front-end WebView requests so that Cordova can locate and invoke them.</p>
+
+    <p>In this example, we are exposing the <code class="language-plaintext highlighter-rouge">echo</code> method:</p>
+
+    <div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#import &lt;Cordova/Cordova.h&gt;
+</span>
+  <span class="k">@interface</span> <span class="nc">Echo</span> <span class="p">:</span> <span class="nc">CDVPlugin</span>
+
+  <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">echo</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span><span class="p">;</span>
+
+  <span class="k">@end</span>
+</code></pre></div>    </div>
+
+    <p><strong>Echo.m (Source File):</strong></p>
+
+    <p>The implementation source code (.m files) is where the business logic is performed.</p>
+
+    <p>In this example, when the <code class="language-plaintext highlighter-rouge">echo</code> method is invoked, it examines the contents of the first argument to determine if there is something to echo back to the front-end WebView. If there is content, a <code class="language-plaintext highlighter-rouge">OK</code> result is returned with the message; otherwise, an <code class="language-plaintext highlighter-rouge">ERROR</code> is returned.</p>
+
+    <div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#import "Echo.h"
+</span>  <span class="cp">#import &lt;Cordova/Cordova.h&gt;
+</span>
+  <span class="k">@implementation</span> <span class="nc">Echo</span>
+
+  <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">echo</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span>
+  <span class="p">{</span>
+      <span class="n">CDVPluginResult</span><span class="o">*</span> <span class="n">pluginResult</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+      <span class="n">NSString</span><span class="o">*</span> <span class="n">echo</span> <span class="o">=</span> <span class="p">[</span><span class="n">command</span><span class="p">.</span><span class="n">arguments</span> <span class="nf">objectAtIndex</span><span class="p">:</span><span class="mi">0</span><span class="p">];</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="n">echo</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="o">&amp;&amp;</span> <span class="p">[</span><span class="n">echo</span> <span class="nf">length</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_OK</span> <span class="nf">messageAsString</span><span class="p">:</span><span class="n">echo</span><span class="p">];</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_ERROR</span><span class="p">];</span>
+      <span class="p">}</span>
+
+      <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">sendPluginResult</span><span class="p">:</span><span class="n">pluginResult</span> <span class="nf">callbackId</span><span class="p">:</span><span class="n">command</span><span class="p">.</span><span class="n">callbackId</span><span class="p">];</span>
+  <span class="p">}</span>
+
+  <span class="k">@end</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Additional Notes:</strong></p>
+
+<ul>
+  <li>Plugin entry classes must extend <code class="language-plaintext highlighter-rouge">CDVPlugin</code>.</li>
+  <li>Supporting classes does not extend <code class="language-plaintext highlighter-rouge">CDVPlugin</code>.</li>
+  <li>
+    <p>The following <code class="language-plaintext highlighter-rouge">import</code> statements are required to be added to the top of the plugin entry classes.</p>
+
+    <p>Swift based project will added the following to the source file:</p>
+
+    <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#if canImport(Cordova)</span>
+  <span class="kd">import</span> <span class="kt">Cordova</span>
+  <span class="cp">#endif</span>
+</code></pre></div>    </div>
+
+    <p>Objective-C based projects will added the following to the header &amp; source files:</p>
+
+    <div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="cp">#import &lt;Cordova/Cordova.h&gt;
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Additional References:</strong></p>
+
+<p>For more details, see the following class headers:</p>
+
+<ul>
+  <li><a href="https://apache.github.io/cordova-ios/documentation/cordova/cdvinvokedurlcommand">CDVInvokedUrlCommand</a></li>
+  <li><a href="https://apache.github.io/cordova-ios/documentation/cordova/cdvpluginresult">CDVPluginResult</a></li>
+  <li><a href="https://apache.github.io/cordova-ios/documentation/cordova/cdvcommanddelegate">CDVCommandDelegate</a></li>
+</ul>
+
+<h3 id="configuring-the-pluginxml">Configuring the <code class="language-plaintext highlighter-rouge">plugin.xml</code></h3>
+
+<h4 id="adding-plugin-code-to-ios-project">Adding Plugin Code to iOS Project</h4>
+
+<p>Now that we have our native source code written in our plugin project, we need to add these resource files to the application’s directory. This ensures that the source code is available and used by the app. This can be achieved by defining the <code class="language-plaintext highlighter-rouge">&lt;source-file&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;header-file&gt;</code> elements in the <code class="language-plaintext highlighter-rouge">plugin.xml</code>.</p>
+
+<p>Below is an example of what this should look like inside the <code class="language-plaintext highlighter-rouge">plugin.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- If your plugin uses Swift --&gt;</span>
+    <span class="nt">&lt;source-file</span> <span class="na">src=</span><span class="s">"src/ios/Echo.swift"</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- If your plugin uses Objective-C --&gt;</span>
+    <span class="c">&lt;!-- &lt;header-file src="src/ios/Echo.h" /&gt; --&gt;</span>
+    <span class="c">&lt;!-- &lt;source-file src="src/ios/Echo.m" /&gt; --&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p><em>Note:</em> If you are following along with <strong>Objective-C</strong>, be sure to update the above accordingly. In the example above, we are using <strong>Swift</strong>.</p>
+
+<p>What the above configuration does is for the iOS platform, it places the header file and source file in the appropriate location within the application. It also creates the necessary references in the Xcode project so that the application will recognize and use these files.</p>
+
+<h4 id="setting-class-mapping-for-webview-to-native-communication">Setting Class Mapping for WebView-to-Native Communication</h4>
+
+<p>To be able to trigger native functionality in JavaScript, the native classes needs to be mapped within <code class="language-plaintext highlighter-rouge">plugin.xml</code> by using the <code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code> element.</p>
+
+<p>Below is an example of what this should look like once the feature is added to the <code class="language-plaintext highlighter-rouge">plugin.xml</code> from the previous steps, combined:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"config.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"Echo"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/feature&gt;</span>
+    <span class="nt">&lt;/config-file&gt;</span>
+
+    <span class="c">&lt;!-- If your plugin uses Swift --&gt;</span>
+    <span class="nt">&lt;source-file</span> <span class="na">src=</span><span class="s">"src/ios/Echo.swift"</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- If your plugin uses Objective-C --&gt;</span>
+    <span class="c">&lt;!-- &lt;header-file src="src/ios/Echo.h" /&gt; --&gt;</span>
+    <span class="c">&lt;!-- &lt;source-file src="src/ios/Echo.m" /&gt; --&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p>Specify the plugin’s <code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code> tag ensures that the necessary configuration is automatically injected into the Cordova-iOS project, as described in the <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a>.</p>
+
+<p>Lets break down what each element and attribute means.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">name</code> attribute should match with the <code class="language-plaintext highlighter-rouge">service</code> parameter’ value that is used in the JavaScript <code class="language-plaintext highlighter-rouge">cordova.exec</code> method call.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;param&gt;</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">value</code> attribute should match the name of the plugin’sObjective-C or Swift class name.</li>
+      <li>The <code class="language-plaintext highlighter-rouge">name</code> attribute should always have the value of <code class="language-plaintext highlighter-rouge">ios-package</code> for iOS plugins.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If the follow guidelines are not met, the plugin may compile but Cordova will not be able to access it.</p>
+
+<p><strong>IMPORTANT NOTE:</strong> During the platform preparation for building the app, an auto-generated merged <code class="language-plaintext highlighter-rouge">config.xml</code> file is created. This file contains all platform-specific application configurations and plugin data gathered from the application’s <code class="language-plaintext highlighter-rouge">config.xml</code> and the plugin’s <code class="language-plaintext highlighter-rouge">plugin.xml</code>. The <code class="language-plaintext highlighter-rouge">config-file</code> block, as shown in the example above, ensures that the plugin’s feature is injected into the merged <code class="language-plaintext highlighter-rouge">config.xml</code>, allowing the plugin to function properly. This <code class="language-plaintext highlighter-rouge">config.xml</code> is separate from the application’s root <code class="language-plaintext highlighter-rouge">config.xml</code>.</p>
+
+<h4 id="configuring-plugin-initialization-timing">Configuring Plugin Initialization Timing</h4>
+
+<p>A single instance of a plugin object is typically created for the lifecycle of each <code class="language-plaintext highlighter-rouge">WKWebView</code>, though the instantiation timing depends on the plugin’s implementation.</p>
+
+<p>By default, plugins are instantiated when they are first referenced by a call from JavaScript. However, plugins can be configured to instantiate when the app loads by defining the <code class="language-plaintext highlighter-rouge">onload</code> attribute within a <code class="language-plaintext highlighter-rouge">&lt;param&gt;</code> element in the plugin’s <code class="language-plaintext highlighter-rouge">plugin.xml</code> configuration file. This <code class="language-plaintext highlighter-rouge">&lt;param&gt;</code> should be added to the plugin’s <code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code> element.</p>
+
+<p>For example:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;feature</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"ios-package"</span> <span class="na">value=</span><span class="s">"Echo"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"onload"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span> <span class="c">&lt;!-- Initialize plugin on app load --&gt;</span>
+<span class="nt">&lt;/feature&gt;</span>
+</code></pre></div></div>
+
+<h3 id="supporting-swift-package-manager-spm">Supporting Swift Package Manager (SPM)</h3>
+
+<p>Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a <code class="language-plaintext highlighter-rouge">Package.swift</code> file will need to be created in the plugin’s root directory and add the <code class="language-plaintext highlighter-rouge">package="swift"</code> attribute to the iOS <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> element in your <code class="language-plaintext highlighter-rouge">plugin.xml</code> file.</p>
+
+<h4 id="creating-spms-packageswift-file">Creating SPM’s <code class="language-plaintext highlighter-rouge">Package.swift</code> File</h4>
+
+<p>In the plugin’s root directory, create a new file called <code class="language-plaintext highlighter-rouge">Package.swift</code> with the following content:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// swift-tools-version:5.5</span>
+
+<span class="kd">import</span> <span class="kt">PackageDescription</span>
+
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"cordova-plugin-echo"</span><span class="p">,</span>
+    <span class="nv">platforms</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nf">iOS</span><span class="p">(</span><span class="o">.</span><span class="n">v13</span><span class="p">)],</span>
+    <span class="nv">products</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">library</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"cordova-plugin-echo"</span><span class="p">,</span> <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="s">"cordova-plugin-echo"</span><span class="p">])</span>
+    <span class="p">],</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1">// This must be included as a dependency, with this format for it to work.</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/apache/cordova-ios.git"</span><span class="p">,</span> <span class="nv">branch</span><span class="p">:</span> <span class="s">"master"</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+            <span class="nv">name</span><span class="p">:</span> <span class="s">"cordova-plugin-echo"</span><span class="p">,</span>
+            <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+                <span class="o">.</span><span class="nf">product</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Cordova"</span><span class="p">,</span> <span class="nv">package</span><span class="p">:</span> <span class="s">"cordova-ios"</span><span class="p">)</span>
+            <span class="p">],</span>
+            <span class="nv">path</span><span class="p">:</span> <span class="s">"src/ios"</span><span class="p">,</span>
+            <span class="nv">resources</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="nv">publicHeadersPath</span><span class="p">:</span> <span class="s">"."</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>If the plugin is required to provide a privacy manifest file, the following line should be added to the <code class="language-plaintext highlighter-rouge">resources</code> element of the <code class="language-plaintext highlighter-rouge">cordova-plugin-echo</code> target: <code class="language-plaintext highlighter-rouge">.copy("Resources/PrivacyInfo.xcprivacy")</code>.
+On top of the SPM declaration, be sure to also refer to the section titled <a href="#adding-a-privacy-manifest-file">Adding a Privacy Manifest File</a> to ensure that the actual resource file is properly declared in the <code class="language-plaintext highlighter-rouge">plugin.xml</code> so it is correctly injected into the app.</p>
+
+<p>If the plugin requires for any third-party dependencies, it should be added to the <code class="language-plaintext highlighter-rouge">dependencies</code> element, and the <code class="language-plaintext highlighter-rouge">target</code>’s <code class="language-plaintext highlighter-rouge">dependencies</code>.</p>
+
+<p>For example:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"SomePackageName"</span><span class="p">,</span> <span class="nv">url</span><span class="p">:</span> <span class="s">"..."</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">),</span>
+<span class="p">],</span>
+<span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">target</span><span class="p">(</span>
+        <span class="o">...</span>
+        <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+            <span class="o">.</span><span class="nf">product</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Cordova"</span><span class="p">,</span> <span class="nv">package</span><span class="p">:</span> <span class="s">"cordova-ios"</span><span class="p">),</span>
+            <span class="o">.</span><span class="nf">product</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"SomePackageLibraryName"</span><span class="p">,</span> <span class="nv">package</span><span class="p">:</span> <span class="s">"SomePackageName"</span><span class="p">)</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="additional-native-side-implementation">Additional Native Side Implementation</h3>
+
+<h4 id="executing-plugin-initialization-logic">Executing Plugin Initialization Logic</h4>
+
+<p>If the plugin has any logic that should execute on the during the plugin’s initialization process, the <code class="language-plaintext highlighter-rouge">pluginInitialize</code> method should be defined in the plugin’s class.</p>
+
+<p>For example, if the plugin has defined <code class="language-plaintext highlighter-rouge">onload</code> as <code class="language-plaintext highlighter-rouge">true</code>, when the app loads, the <code class="language-plaintext highlighter-rouge">pluginInitialize</code> method will be executed. Because this is triggered during app load, there is no <code class="language-plaintext highlighter-rouge">callbackID</code> so the <code class="language-plaintext highlighter-rouge">pluginInitialize</code> method can not return any results to the WebView. If results matter, they would need to be stored in some manar and later fetched with a JavaScript API call.</p>
+
+<h4 id="handeling-long-running--background-activities">Handeling Long-running &amp; Background Activities</h4>
+
+<p>Plugins with long-running requests or background activities, such as media playback, listeners, or those that maintain internal state, should implement the <code class="language-plaintext highlighter-rouge">onReset</code> method to cancel these requests or clean up after those activities.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">onReset</code> method is called when the <code class="language-plaintext highlighter-rouge">WKWebView</code> navigates to a new page or refreshes, triggering a reload of the JavaScript.</p>
+
+<h4 id="hooking-into-wkurlschemetask">Hooking into WKURLSchemeTask</h4>
+
+<p>The <a href="https://developer.apple.com/documentation/webkit/wkurlschemetask">WKURLSchemeTask</a> is an interface Cordova’s main WKWebView uses to load files from your app’s bundle. You can create your own custom schemes or custom loading code for the WebView by implementing the <code class="language-plaintext highlighter-rouge">- (BOOL) overrideSchemeTask: (id &lt;WKURLSchemeTask&gt;)urlSchemeTask</code> method in a plugin.</p>
+
+<h4 id="using-background-threads">Using Background Threads</h4>
+
+<p>Plugin methods ordinarily execute in the same thread as the main interface. If your plugin requires a great deal of processing or requires a blocking call, you should use a background thread. It is important to note that any operations involving the UI, such as displaying alerts, changing colors, or performing other visual updates, must be executed on the main thread.</p>
+
+<p>For example:</p>
+
+<div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">myPluginMethod</span><span class="p">:(</span><span class="n">CDVInvokedUrlCommand</span><span class="o">*</span><span class="p">)</span><span class="nv">command</span>
+<span class="p">{</span>
+    <span class="c1">// Check command.arguments here.</span>
+    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">runInBackground</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
+        <span class="n">NSString</span><span class="o">*</span> <span class="n">payload</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+        <span class="c1">// Some blocking logic...</span>
+        <span class="n">CDVPluginResult</span><span class="o">*</span> <span class="n">pluginResult</span> <span class="o">=</span> <span class="p">[</span><span class="n">CDVPluginResult</span> <span class="nf">resultWithStatus</span><span class="p">:</span><span class="n">CDVCommandStatus_OK</span> <span class="nf">messageAsString</span><span class="p">:</span><span class="n">payload</span><span class="p">];</span>
+        <span class="c1">// The sendPluginResult method is thread-safe.</span>
+        <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">commandDelegate</span> <span class="nf">sendPluginResult</span><span class="p">:</span><span class="n">pluginResult</span> <span class="nf">callbackId</span><span class="p">:</span><span class="n">command</span><span class="p">.</span><span class="n">callbackId</span><span class="p">];</span>
+    <span class="p">}];</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="adding-a-privacy-manifest-file">Adding a Privacy Manifest File</h4>
+
+<p>As of May 1, 2024, Apple requires a privacy manifest file to be created for apps and third-party SDKs. The purpose of the privacy manifest file is to explain the data being collected and the reasons for the required APIs it uses.</p>
+
+<p>Plugins can include a pre-bundled <code class="language-plaintext highlighter-rouge">PrivacyInfo.xcprivacy</code> file that lists any privacy-sensitive APIs they use, along with the reasons for their usage.</p>
+
+<p>It is recommended to review the following Apple Developer document, “<a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a>”, to understand the list of known <code class="language-plaintext highlighter-rouge">NSPrivacyCollectedDataTypes</code> and <code class="language-plaintext highlighter-rouge">NSPrivacyCollectedDataTypePurposes</code>.</p>
+
+<p>Ensure all four keys—<code class="language-plaintext highlighter-rouge">NSPrivacyTracking</code>, <code class="language-plaintext highlighter-rouge">NSPrivacyTrackingDomains</code>, <code class="language-plaintext highlighter-rouge">NSPrivacyAccessedAPITypes</code>, and <code class="language-plaintext highlighter-rouge">NSPrivacyCollectedDataTypes</code>—are defined, even if you are not making an addition to the other items. Apple requires all to be defined.</p>
+
+<p>Once you’ve identified what the contents of the <code class="language-plaintext highlighter-rouge">PrivacyInfo.xcprivacy</code> will look like, lets start creating the bundle and loading it as a resource.</p>
+
+<ol>
+  <li>
+    <p>Create a directory named <code class="language-plaintext highlighter-rouge">CDVEcho.bundle</code> inside the <code class="language-plaintext highlighter-rouge">src/ios</code> directory. Make sure the bundle name is unique enough to avoid conflicts with other plugins.</p>
+  </li>
+  <li>
+    <p>Inside the new <code class="language-plaintext highlighter-rouge">CDVEcho.bundle</code> directory, create a privacy manifest file named <code class="language-plaintext highlighter-rouge">PrivacyInfo.xcprivacy</code>.</p>
+  </li>
+  <li>
+    <p>Add the contents you’ve identified for this file. Here’s an example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Example PrivacyInfo.xcprivacy Contents --&gt;</span>
+<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+    <span class="nt">&lt;key&gt;</span>NSPrivacyTracking<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;false/&gt;</span>
+    <span class="nt">&lt;key&gt;</span>NSPrivacyTrackingDomains<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;array/&gt;</span>
+    <span class="nt">&lt;key&gt;</span>NSPrivacyAccessedAPITypes<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;array/&gt;</span>
+    <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypes<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;array/&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Update your <code class="language-plaintext highlighter-rouge">plugin.xml</code> to load the <code class="language-plaintext highlighter-rouge">CDVEcho.bundle</code> into the app’s resources.</p>
+
+    <p>Inside the iOS <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> element, add a <code class="language-plaintext highlighter-rouge">&lt;resource-file&gt;</code> element pointing to the <code class="language-plaintext highlighter-rouge">CDVEcho.bundle</code> directory:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;resource-file</span> <span class="na">src=</span><span class="s">"src/ios/CDVEcho.bundle"</span> <span class="na">target=</span><span class="s">"CDVEcho.bundle"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Optional:</strong> If your plugin supports Swift Package Manager, refer to the section <a href="#creating-spms-packageswift-file">Creating SPM’s <code class="language-plaintext highlighter-rouge">Package.swift</code> File</a> to ensure the privacy manifest is also included as a resource file.</p>
+  </li>
+</ol>
+
+<h2 id="cdvpluginresult-message-types">CDVPluginResult Message Types</h2>
+
+<p>You can use <a href="https://apache.github.io/cordova-ios/documentation/cordova/cdvpluginresult"><code class="language-plaintext highlighter-rouge">CDVPluginResult</code></a> to return a variety of result types back to the JavaScript callbacks, using class methods that follow this pattern:</p>
+
+<div class="language-objc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">CDVPluginResult</span><span class="o">*</span><span class="p">)</span><span class="nf">resultWithStatus</span><span class="p">:(</span><span class="n">CDVCommandStatus</span><span class="p">)</span><span class="nv">statusOrdinal</span> <span class="n">messageAs</span><span class="p">...</span>
+</code></pre></div></div>
+
+<p>The following types can be used:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">String</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Int</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Double</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Bool</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Array</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Dictionary</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ArrayBuffer</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Multipart</code></li>
+</ul>
+
+<p>You can also leave out any arguments to send a status, or return an error, or even choose not to send any plugin result, in which case neither callback fires.</p>
+
+<p>Note the following for complex return values:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">messageAsArrayBuffer</code> expects <code class="language-plaintext highlighter-rouge">NSData*</code> and will convert it to an <code class="language-plaintext highlighter-rouge">ArrayBuffer</code> in the JavaScript callback. Likewise, any <code class="language-plaintext highlighter-rouge">ArrayBuffer</code> the JavaScript sends to a native side will be converted to <code class="language-plaintext highlighter-rouge">NSData*</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">messageAsMultipart</code> expects an <code class="language-plaintext highlighter-rouge">NSArray*</code> containing any of the other supported types, and sends the entire array as the <code class="language-plaintext highlighter-rouge">arguments</code> to your JavaScript callback.  This way, all of the arguments are serialized or deserialized as necessary, so it is safe to return <code class="language-plaintext highlighter-rouge">NSData*</code> as multipart, but not as <code class="language-plaintext highlighter-rouge">Array</code>/<code class="language-plaintext highlighter-rouge">Dictionary</code>.</p>
+  </li>
+</ul>
+
+<h2 id="other-supported-cdvplugin-features">Other Supported <code class="language-plaintext highlighter-rouge">CDVPlugin</code> Features</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">CDVPlugin</code> class features other methods that a plugin can override.</p>
+
+<p>For example, the plugin can capture:</p>
+<ul>
+  <li><a href="../../../cordova/events/events.html#pause"><code class="language-plaintext highlighter-rouge">pause</code></a> Event</li>
+  <li><a href="../../../cordova/events/events.html#resume"><code class="language-plaintext highlighter-rouge">resume</code></a> Event</li>
+  <li>App Terminate Event</li>
+  <li><code class="language-plaintext highlighter-rouge">handleOpenURL</code> events</li>
+</ul>
+
+<p>For additional reference, see the following class documentation:</p>
+
+<ul>
+  <li><a href="https://apache.github.io/cordova-ios/documentation/cordova/cdvplugin">CDVPlugin</a></li>
+</ul>
+
+<h2 id="debugging-plugins-for-ios">Debugging Plugins for iOS</h2>
+
+<p>To debug the native side, you will need to use Xcode’s built-in debugger.</p>
+
+<p>For JavaScript, you can launch the Safari Web Inspector and attach it to the running application process. The app can be running on either an iOS Simulator or device.</p>
+
+<p>Generally, its recommended to use a debug build for testing as it should already allow the WebView to be inspectable. If for any reason you need to test on a release build, you can enable WebView Inspector by setting the <code class="language-plaintext highlighter-rouge">InspectableWebview</code> config preference to <code class="language-plaintext highlighter-rouge">true</code> in the application’s <code class="language-plaintext highlighter-rouge">config.xml</code>.</p>
+
+<p>E.g.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"InspectableWebview"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>For security purpose, its highly unrecommended to enable the <code class="language-plaintext highlighter-rouge">InspectableWebview</code> for release builds. If you do set it, remove the setting before deploy the app to the app store.</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li>
+    <p>Don’t forget to add your plugin’s mapping to <code class="language-plaintext highlighter-rouge">plugin.xml</code>. If you forget, an error is logged in the Xcode console.</p>
+  </li>
+  <li>
+    <p>Don’t forget to add any hosts you connect to in the allow list, as described in Domain <a href="../../appdev/allowlist/index.html">Allow List Guide</a>. If you forget, an error is logged in the Xcode console.</p>
+  </li>
+</ul>
+

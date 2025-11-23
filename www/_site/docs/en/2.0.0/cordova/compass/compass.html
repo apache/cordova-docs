@@ -1,0 +1,70 @@
+<h1 id="compass">Compass</h1>
+
+<blockquote>
+  <p>Obtains the direction that the device is pointing.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a></li>
+  <li><a href="compass.watchHeading.html">compass.watchHeading</a></li>
+  <li><a href="compass.clearWatch.html">compass.clearWatch</a></li>
+  <li><a href="compass.watchHeadingFilter.html">compass.watchHeadingFilter</a> 	(obsolete)</li>
+  <li>compass.clearWatchFilter		(obsolete)</li>
+</ul>
+
+<h2 id="arguments">Arguments</h2>
+
+<ul>
+  <li><a href="parameters/compassSuccess.html">compassSuccess</a></li>
+  <li><a href="parameters/compassError.html">compassError</a></li>
+  <li><a href="parameters/compassOptions.html">compassOptions</a></li>
+  <li><a href="parameters/compassHeading.html">compassHeading</a></li>
+</ul>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlpluginsxml">app/res/xml/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Compass" value="org.apache.cordova.CompassListener" /&gt;
+</code></pre></div></div>
+
+<h3 id="bada">Bada</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="blackberry-webworks">BlackBerry WebWorks</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="ios">iOS</h3>
+
+<h4 id="appsupporting-filescordovaplist">App/Supporting Files/Cordova.plist</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;Compass&lt;/key&gt;
+    &lt;string&gt;CDVLocation&lt;/string&gt;
+&lt;/dict&gt;
+</code></pre></div></div>
+
+<h3 id="webos">webOS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="windows-phone">Windows Phone</h3>
+
+<h4 id="propertieswpappmanifestxml">Properties/WPAppManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
+    &lt;Capability Name="ID_CAP_SENSORS" /&gt;
+&lt;/Capabilities&gt;
+</code></pre></div></div>
+
+<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>

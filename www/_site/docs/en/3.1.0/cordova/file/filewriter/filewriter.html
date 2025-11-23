@@ -1,0 +1,244 @@
+<h1 id="filewriter">FileWriter</h1>
+
+<p>As object that allows you to create and write data to a file.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>readyState</strong>: One of the three possible states, either <code class="language-plaintext highlighter-rouge">INIT</code>, <code class="language-plaintext highlighter-rouge">WRITING</code>, or <code class="language-plaintext highlighter-rouge">DONE</code>.</p>
+  </li>
+  <li>
+    <p><strong>fileName</strong>: The name of the file to be written. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>length</strong>: The length of the file to be written. <em>(long)</em></p>
+  </li>
+  <li>
+    <p><strong>position</strong>: The current position of the file pointer. <em>(long)</em></p>
+  </li>
+  <li>
+    <p><strong>error</strong>: An object containing errors. <em>(FileError)</em></p>
+  </li>
+  <li>
+    <p><strong>onwritestart</strong>: Called when the write starts. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>onwrite</strong>: Called when the request has completed successfully.  <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>onabort</strong>: Called when the write has been aborted. For instance, by invoking the abort() method. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>onerror</strong>: Called when the write has failed. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>onwriteend</strong>: Called when the request has completed (either in success or failure).  <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p>The following property is <em>not</em> supported:</p>
+
+<ul>
+  <li><strong>onprogress</strong>: Called while writing the file, reporting progress in terms of <code class="language-plaintext highlighter-rouge">progress.loaded</code>/<code class="language-plaintext highlighter-rouge">progress.total</code>. <em>(Function)</em>
+    <h2 id="methods">Methods</h2>
+  </li>
+  <li>
+    <p><strong>abort</strong>: Aborts writing the file.</p>
+  </li>
+  <li>
+    <p><strong>seek</strong>: Moves the file pointer to the specified byte.</p>
+  </li>
+  <li>
+    <p><strong>truncate</strong>: Shortens the file to the specified length.</p>
+  </li>
+  <li><strong>write</strong>: Writes data to the file.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">FileWriter</code> object offers a way to write UTF-8 encoded files to
+the device file system.  Applications respond to <code class="language-plaintext highlighter-rouge">writestart</code>,
+<code class="language-plaintext highlighter-rouge">progress</code>, <code class="language-plaintext highlighter-rouge">write</code>, <code class="language-plaintext highlighter-rouge">writeend</code>, <code class="language-plaintext highlighter-rouge">error</code>, and <code class="language-plaintext highlighter-rouge">abort</code> events.</p>
+
+<p>Each <code class="language-plaintext highlighter-rouge">FileWriter</code> corresponds to a single file, to which data can be
+written many times.  The <code class="language-plaintext highlighter-rouge">FileWriter</code> maintains the file’s <code class="language-plaintext highlighter-rouge">position</code>
+and <code class="language-plaintext highlighter-rouge">length</code> attributes, which allow the app to <code class="language-plaintext highlighter-rouge">seek</code> and <code class="language-plaintext highlighter-rouge">write</code>
+anywhere in the file. By default, the <code class="language-plaintext highlighter-rouge">FileWriter</code> writes to the
+beginning of the file, overwriting existing data. Set the optional
+<code class="language-plaintext highlighter-rouge">append</code> boolean to <code class="language-plaintext highlighter-rouge">true</code> in the <code class="language-plaintext highlighter-rouge">FileWriter</code>’s constructor to
+write to the end of the file.</p>
+
+<p>Text data is supported by all platforms listed below. Text is encoded as UTF-8 before being written to the filesystem. Some platforms also support binary data, which can be passed in as either an ArrayBuffer or a Blob.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<p>Text and Binary Support:</p>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<p>Text-only Support:</p>
+
+<ul>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="seek-quick-example">Seek Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+    // fast forwards file pointer to end of file
+    writer.seek(writer.length);
+};
+
+var fail = function(evt) {
+    console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="truncate-quick-example">Truncate Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+    writer.truncate(10);
+};
+
+var fail = function(evt) {
+    console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="write-quick-example">Write Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+    writer.onwrite = function(evt) {
+        console.log("write success");
+    };
+    writer.write("some sample text");
+};
+
+var fail = function(evt) {
+    console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="binary-write-quick-example">Binary Write Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+    var data = new ArrayBuffer(5),
+        dataView = new Int8Array(data);
+    for (i=0; i &lt; 5; i++) {
+        dataView[i] = i;
+    }
+    writer.onwrite = function(evt) {
+        console.log("write success");
+    };
+    writer.write(data);
+};
+
+var fail = function(evt) {
+    console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="append-quick-example">Append Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+    writer.onwrite = function(evt) {
+    console.log("write success");
+};
+writer.seek(writer.length);
+    writer.write("appended text");
+};
+
+var fail = function(evt) {
+    console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="abort-quick-example">Abort Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+    writer.onwrite = function(evt) {
+        console.log("write success");
+    };
+    writer.write("some sample text");
+    writer.abort();
+};
+
+var fail = function(evt) {
+    console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;FileWriter Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+    }
+
+    function gotFS(fileSystem) {
+        fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+    }
+
+    function gotFileEntry(fileEntry) {
+        fileEntry.createWriter(gotFileWriter, fail);
+    }
+
+    function gotFileWriter(writer) {
+        writer.onwriteend = function(evt) {
+            console.log("contents of file now 'some sample text'");
+            writer.truncate(11);
+            writer.onwriteend = function(evt) {
+                console.log("contents of file now 'some sample'");
+                writer.seek(4);
+                writer.write(" different text");
+                writer.onwriteend = function(evt){
+                    console.log("contents of file now 'some different text'");
+                }
+            };
+        };
+        writer.write("some sample text");
+    }
+
+    function fail(error) {
+        console.log(error.code);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Write File&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

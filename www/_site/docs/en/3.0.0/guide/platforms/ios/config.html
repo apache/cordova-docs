@@ -1,0 +1,92 @@
+<h1 id="ios-configuration">iOS Configuration</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">config.xml</code> settings file controls various Cordova settings.
+This is application wide, and not set per CDVViewController instance.
+The <code class="language-plaintext highlighter-rouge">config.xml</code> file is located in your <code class="language-plaintext highlighter-rouge">&lt;project folder&gt;/&lt;appname&gt;</code>
+directory.</p>
+
+<h2 id="preference"><code class="language-plaintext highlighter-rouge">&lt;preference&gt;</code></h2>
+
+<p>Various preferences (as <code class="language-plaintext highlighter-rouge">&lt;preference&gt;</code> tags) default on not breaking
+existing apps. The available preferences are:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">DisallowOverscroll</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to <code class="language-plaintext highlighter-rouge">true</code> if
+you don’t want the WebView to rubber-band.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">TopActivityIndicator</code> (string, defaults to <code class="language-plaintext highlighter-rouge">gray</code>): this is the top
+spinning throbber in the status/battery bar, valid values are
+<code class="language-plaintext highlighter-rouge">whiteLarge</code>, <code class="language-plaintext highlighter-rouge">white</code>, and <code class="language-plaintext highlighter-rouge">gray</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">EnableLocation</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to <code class="language-plaintext highlighter-rouge">true</code>, to
+initialize the <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> plugin at start-up (so the fix on your
+location can be more accurate) <strong>DEPRECATED</strong>: please set the
+<code class="language-plaintext highlighter-rouge">onload</code> attribute of the <code class="language-plaintext highlighter-rouge">[Geolocation](../../../cordova/geolocation/geolocation.html)</code> plugin to <code class="language-plaintext highlighter-rouge">true</code>
+instead.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">EnableViewportScale</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to <code class="language-plaintext highlighter-rouge">true</code> to
+prevent viewport scaling through a meta tag.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">AutoHideSplashScreen</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): set to <code class="language-plaintext highlighter-rouge">false</code> to
+control when the splashscreen is hidden through a JavaScript API.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">FadeSplashScreen</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): set to <code class="language-plaintext highlighter-rouge">false</code> to
+prevent the splash-screen to fade in and out when showing or hiding
+it.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">FadeSplashScreenDuration</code> (float, defaults to 2): The splash-screen
+Fade duration in seconds.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ShowSplashScreenSpinner</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): set to <code class="language-plaintext highlighter-rouge">false</code>
+to hide the splash-screen spinner.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">MediaPlaybackRequiresUserAction</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set
+to true to not allow autoplayed HTML5 video.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">AllowInlineMediaPlayback</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to
+true to allow inline HTML5 media playback, also, the video element
+in the HTML document must also include the webkit-playsinline
+attribute.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">BackupWebStorage</code> (string, defaults to <code class="language-plaintext highlighter-rouge">cloud</code>): valid values are
+<code class="language-plaintext highlighter-rouge">none</code>, <code class="language-plaintext highlighter-rouge">cloud</code> and <code class="language-plaintext highlighter-rouge">local</code>. Set to <code class="language-plaintext highlighter-rouge">cloud</code> to allow the web
+storage data to be backed up to iCloud, and set to <code class="language-plaintext highlighter-rouge">local</code> to only
+allow local backups (iTunes sync). Set to <code class="language-plaintext highlighter-rouge">none</code> to not allow any
+backups of web storage.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">KeyboardDisplayRequiresUserAction</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>):
+set to false to open the keyboard when form elements get focus via
+the JavaScript focus() call.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SuppressesIncrementalRendering</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set
+to true to wait until all new view content has been received
+before it is rendered.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">HideKeyboardFormAccessoryBar</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to
+true to hide the additional toolbar that is on top of the
+keyboard. This toolbar features the <strong>Prev</strong>, <strong>Next</strong>, and <strong>Done</strong>
+buttons.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">KeyboardShrinksView</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to <code class="language-plaintext highlighter-rouge">true</code> to
+shrink the WebView when the keyboard comes up. The WebView shrinks
+instead of the viewport shrinking and the page scrollable. This
+applies to apps that position their elements relative to the bottom
+of the WebView. This is the default behaviour on Android, and makes
+a lot of sense when building apps as opposed to webpages.</p>
+  </li>
+</ul>

@@ -1,0 +1,24 @@
+<h1 id="upgrading-cordova-webos">Upgrading Cordova webOS</h1>
+
+<p>This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.</p>
+
+<h2 id="upgrade-to-210-from-200">Upgrade to 2.1.0 from 2.0.0</h2>
+
+<ol>
+  <li>
+    <p>remove cordova-2.0.0.js from your project</p>
+  </li>
+  <li>
+    <p>update the following line in your index.html:</p>
+
+    <p>change this:
+ <script type="text/javascript" src="cordova-2.0.0.js"></script></p>
+
+    <p>to:
+ <script type="text/javascript" src="cordova-2.1.0.js"></script></p>
+  </li>
+  <li>
+    <p>run the makefile to generate the newest version of the cordova-2.1.0.js file</p>
+  </li>
+</ol>
+

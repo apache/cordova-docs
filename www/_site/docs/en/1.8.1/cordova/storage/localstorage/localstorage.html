@@ -1,0 +1,102 @@
+<h1 id="localstorage">localStorage</h1>
+
+<p>Provides access to a W3C <a href="../storage.html">Storage</a> interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var storage = window.localStorage;
+</code></pre></div></div>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>key</strong>: Returns the name of the key at the position specified.</li>
+  <li><strong>getItem</strong>: Returns the item identified by it’s key.</li>
+  <li><strong>setItem</strong>: Saves and item at the key provided.</li>
+  <li><strong>removeItem</strong>: Removes the item identified by it’s key.</li>
+  <li><strong>clear</strong>: Removes all of the key value pairs.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>localStorage provides an interface to a W3C <a href="../storage.html">Storage</a> interface.  It allows one to save data as key-value pairs.</p>
+
+<p>Note: window.sessionStorage provides the same interface, but is cleared between app launches.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7</li>
+  <li>webOS</li>
+</ul>
+
+<h2 id="key-quick-example">Key Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var keyName = window.localStorage.key(0);
+</code></pre></div></div>
+
+<h2 id="set-item-quick-example">Set Item Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.localStorage.setItem("key", "value");
+</code></pre></div></div>
+
+<h2 id="get-item-quick-example">Get Item Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var value = window.localStorage.getItem("key");
+// value is now equal to "value"
+</code></pre></div></div>
+
+<h2 id="remove-item-quick-example">Remove Item Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.localStorage.removeItem("key");
+</code></pre></div></div>
+
+<h2 id="clear-quick-example">Clear Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.localStorage.clear();
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		window.localStorage.setItem("key", "value");
+		var keyname = window.localStorage.key(i);
+		// keyname is now equal to "key"
+		var value = window.localStorage.getItem("key");
+		// value is now equal to "value"
+		window.localStorage.removeItem("key");
+		window.localStorage.setItem("key2", "value2");
+		window.localStorage.clear();
+		// localStorage is now empty
+    }
+
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;localStorage&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-7-quirks">Windows Phone 7 Quirks</h2>
+
+<ul>
+  <li>dot notation is NOT available on Windows Phone. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = ‘someValue’;</li>
+</ul>

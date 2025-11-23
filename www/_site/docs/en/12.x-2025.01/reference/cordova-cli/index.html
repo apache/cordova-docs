@@ -1,0 +1,961 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#  KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+-->
+
+<h1 id="cordova-command-line-interface-cli-commands">Cordova Command-line-interface (CLI) Commands</h1>
+
+<h2 id="cli-syntax">CLI Syntax</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="o">[</span>options] <span class="nt">--</span> <span class="o">[</span>platformOpts]
+</code></pre></div></div>
+
+<h2 id="global-command-list">Global Command List</h2>
+
+<p>These commands are available at all times.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">create</code></td>
+      <td>Create a project</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">help &lt;command&gt;</code></td>
+      <td>Get help for a command</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">telemetry</code></td>
+      <td>Turn telemetry collection on or off</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">config</code></td>
+      <td>Set, get, delete, edit, and list global cordova options</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="project-command-list">Project Command List</h2>
+
+<p>These commands are supported when the current working directory is a valid Cordova project.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">info</code></td>
+      <td>Generate project information</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">requirements</code></td>
+      <td>Checks and print out all the installation requirements for platforms specified</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">platform</code></td>
+      <td>Manage project platforms</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">plugin</code></td>
+      <td>Manage project plugins</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">prepare</code></td>
+      <td>Copy files into platform(s) for building</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">compile</code></td>
+      <td>Compile project for platform(s)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">build</code></td>
+      <td>Build project for platform(s) (<code class="language-plaintext highlighter-rouge">prepare</code> + <code class="language-plaintext highlighter-rouge">compile</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">clean</code></td>
+      <td>Cleanup project from build artifacts</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">run</code></td>
+      <td>Run project (including prepare &amp;&amp; compile)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">serve</code></td>
+      <td>Run project with a local webserver (including prepare)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="common-options">Common options</h2>
+
+<p>These options apply to all cordova-cli commands.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-d or –verbose</td>
+      <td>Pipe out more verbose output to your shell. You can also subscribe to <code class="language-plaintext highlighter-rouge">log</code> and <code class="language-plaintext highlighter-rouge">warn</code> events if you are consuming <code class="language-plaintext highlighter-rouge">cordova-cli</code> as a node module by calling <code class="language-plaintext highlighter-rouge">cordova.on('log', function() {})</code> or <code class="language-plaintext highlighter-rouge">cordova.on('warn', function() {})</code>.</td>
+    </tr>
+    <tr>
+      <td>-v or –version</td>
+      <td>Print out the version of your <code class="language-plaintext highlighter-rouge">cordova-cli</code> install.</td>
+    </tr>
+    <tr>
+      <td>–nohooks</td>
+      <td>Suppress executing hooks (taking RegExp hook patterns as parameters)</td>
+    </tr>
+    <tr>
+      <td>–no-telemetry</td>
+      <td>Disable telemetry collection for the current command.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="platform-specific-options">Platform-specific options</h2>
+
+<p>Certain commands have options (<code class="language-plaintext highlighter-rouge">platformOpts</code>) that are specific to a particular platform. They can be provided to the cordova-cli with a ‘–’ separator that stops the command parsing within the cordova-lib module and passes through rest of the options for platforms to parse.</p>
+
+<h2 id="cli-usage-example">CLI Usage Example</h2>
+
+<p>The following example illustrates how to utilize Cordova CLI to perform various tasks such as:</p>
+
+<ul>
+  <li>Creating a project</li>
+  <li>Adding the <code class="language-plaintext highlighter-rouge">camera</code> plugin</li>
+  <li>Adding, building, and running the project on the <code class="language-plaintext highlighter-rouge">android</code> platform</li>
+</ul>
+
+<p>Additionally, it includes an example showcasing the usage of specific options provided by the Cordova-Android platform, such as <code class="language-plaintext highlighter-rouge">--keystore</code>, which is utilized for release signing.</p>
+
+<ol>
+  <li>
+    <p>Create a cordova project</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova create myApp com.myCompany.myApp myApp
+ <span class="nb">cd </span>myApp
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add Camera Plugin to the Project</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova plugin add cordova-plugin-camera
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add Android Platform to the Project</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova platform add android
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Confirm System is Configured with Android Platform Requirements</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova requirements android
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Build Project for Android with Verbose Logging Enabled</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova build android <span class="nt">--verbose</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run Project on Android Platform</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova run android
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Build Project for Android in Release Mode with Signing Parameters</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova build android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span><span class="s2">"..</span><span class="se">\a</span><span class="s2">ndroid.keystore"</span> <span class="nt">--storePassword</span><span class="o">=</span>android <span class="nt">--alias</span><span class="o">=</span>mykey
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="cordova-create-command"><code class="language-plaintext highlighter-rouge">cordova create</code> command</h2>
+
+<p>Creates the directory structure for the Cordova project in the specified path.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova create path <span class="o">[</span><span class="nb">id</span> <span class="o">[</span>name]] <span class="o">[</span>options]
+</code></pre></div></div>
+
+<p><strong>Arguments:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>path</td>
+      <td>Directory which should not already exist. Cordova will create this directory. For more details on the directory structure, see below.</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td><em>Default</em>: <code class="language-plaintext highlighter-rouge">io.cordova.hellocordova</code> <br />  Reverse domain-style identifier that maps to <code class="language-plaintext highlighter-rouge">id</code> attribute of <code class="language-plaintext highlighter-rouge">widget</code> element in <code class="language-plaintext highlighter-rouge">config.xml</code>. This can be changed but there may be code generated using this value, such as Java package names. It is recommended that you select an appropriate value.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><em>Default</em>: <code class="language-plaintext highlighter-rouge">HelloCordova</code> <br /> Application’s display title that maps <code class="language-plaintext highlighter-rouge">name</code> element in <code class="language-plaintext highlighter-rouge">config.xml</code> file. This can be changed but there may be code generated using this value, such as Java class names. The default value is <code class="language-plaintext highlighter-rouge">HelloCordova</code>, but it is recommended that you select an appropriate value.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Options:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>–template</td>
+      <td>Use a custom template located locally, in NPM, or GitHub.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li>Create a Cordova project in <code class="language-plaintext highlighter-rouge">myapp</code> directory using the specified ID and display name:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova create myapp com.mycompany.myteam.myapp MyApp
+</code></pre></div></div>
+
+<h2 id="cordova-platform-command"><code class="language-plaintext highlighter-rouge">cordova platform</code> command</h2>
+
+<p>Manage cordova platforms - allowing you to add, remove, update and list platforms. Running commands to add or remove platforms affects the contents of the project’s platforms directory.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova <span class="o">{</span>platform | platforms<span class="o">}</span> <span class="o">[</span>
+    add &lt;platform-spec&gt; <span class="o">[</span>...] <span class="o">{</span><span class="nt">--save</span> | <span class="nb">link</span><span class="o">=</span>&lt;path&gt; <span class="o">}</span> |
+    <span class="o">{</span>remove | <span class="nb">rm</span><span class="o">}</span>  platform <span class="o">[</span>...] <span class="o">{</span><span class="nt">--save</span><span class="o">}</span>|
+    <span class="o">{</span>list | <span class="nb">ls</span><span class="o">}</span>  |
+    update <span class="o">]</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sub-command</th>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>add <code class="language-plaintext highlighter-rouge">&lt;platform-spec&gt;</code> […]</td>
+      <td> </td>
+      <td>Add specified platforms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–nosave</td>
+      <td>Do not save <code class="language-plaintext highlighter-rouge">&lt;platform-spec&gt;</code> into <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code> after installing them using <code class="language-plaintext highlighter-rouge">&lt;engine&gt;</code> tag</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–link=<code class="language-plaintext highlighter-rouge">&lt;path&gt;</code></td>
+      <td>When <code class="language-plaintext highlighter-rouge">&lt;platform-spec&gt;</code> is a local path, links the platform library directly instead of making a copy of it (support varies by platform; useful for platform development)</td>
+    </tr>
+    <tr>
+      <td>remove <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> […]</td>
+      <td> </td>
+      <td>Remove specified platforms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–nosave</td>
+      <td>Do not delete specified platforms from <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code> after removing them</td>
+    </tr>
+    <tr>
+      <td>update <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> […]</td>
+      <td> </td>
+      <td>Update specified platforms</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–save</td>
+      <td>Updates the version specified in <code class="language-plaintext highlighter-rouge">config.xml</code></td>
+    </tr>
+    <tr>
+      <td>list</td>
+      <td> </td>
+      <td>List all installed and available platforms</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="platform-spec">Platform-spec</h3>
+
+<p>There are a number of ways to specify a platform:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform-spec&gt; : platform[@version] | path | url[#commit-ish]
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>platform</td>
+      <td>Platform name e.g. android, ios, electron etc. to be added to the project. Every release of cordova CLI pins a version for each platform. When no version is specified this version is used to add the platform.</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>Major.minor.patch version specifier using semver</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>Path to a directory or tarball containing a platform</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>URL to a git repository or tarball containing a platform</td>
+    </tr>
+    <tr>
+      <td>commit-ish</td>
+      <td>Commit/tag/branch reference. If none is specified, ‘master’ is used</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">android</code></li>
+  <li><code class="language-plaintext highlighter-rouge">browser</code></li>
+  <li><code class="language-plaintext highlighter-rouge">electron</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ios</code></li>
+</ul>
+
+<h3 id="examples-1">Examples</h3>
+
+<ul>
+  <li>Add pinned version of the <code class="language-plaintext highlighter-rouge">android</code> and <code class="language-plaintext highlighter-rouge">ios</code> platform and save the downloaded version to <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android ios
+</code></pre></div></div>
+
+<ul>
+  <li>Add <code class="language-plaintext highlighter-rouge">android</code> platform with <a href="http://semver.org/">semver</a> version ^5.0.0 and save it to <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@^5.0.0
+</code></pre></div></div>
+
+<ul>
+  <li>Add platform by cloning the specified git repo and checkout to the <code class="language-plaintext highlighter-rouge">4.0.0</code> tag:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add https://github.com/myfork/cordova-android.git#4.0.0
+</code></pre></div></div>
+
+<ul>
+  <li>Add platform using a local directory named <code class="language-plaintext highlighter-rouge">android</code>:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ../android
+</code></pre></div></div>
+
+<ul>
+  <li>Add platform using the specified tarball:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ../cordova-android.tgz
+</code></pre></div></div>
+
+<ul>
+  <li>Remove <code class="language-plaintext highlighter-rouge">android</code> platform from the project and remove from <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform <span class="nb">rm </span>android
+</code></pre></div></div>
+
+<ul>
+  <li>Remove <code class="language-plaintext highlighter-rouge">android</code> platform from the project and do NOT remove from <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform <span class="nb">rm </span>android <span class="nt">--nosave</span>
+</code></pre></div></div>
+
+<ul>
+  <li>List available and installed platforms with version numbers. This is useful to find version numbers when reporting issues:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform <span class="nb">ls</span>
+</code></pre></div></div>
+
+<h2 id="cordova-plugin-command"><code class="language-plaintext highlighter-rouge">cordova plugin</code> command</h2>
+
+<p>Manage project plugins</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova <span class="o">{</span>plugin | plugins<span class="o">}</span> <span class="o">[</span>
+    add &lt;plugin-spec&gt; <span class="o">[</span>..] <span class="o">{</span><span class="nt">--searchpath</span><span class="o">=</span>&lt;directory&gt; | <span class="nt">--noregistry</span> | <span class="nt">--link</span> | <span class="nt">--save</span> | <span class="nt">--force</span><span class="o">}</span> |
+    <span class="o">{</span>remove | <span class="nb">rm</span><span class="o">}</span> <span class="o">{</span>&lt;pluginid&gt; | &lt;name&gt;<span class="o">}</span> <span class="nt">--save</span> |
+    <span class="o">{</span>list | <span class="nb">ls</span><span class="o">}</span>
+<span class="o">]</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sub-command</th>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>add <code class="language-plaintext highlighter-rouge">&lt;plugin-spec&gt;</code> […]</td>
+      <td> </td>
+      <td>Add specified plugins</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–searchpath <code class="language-plaintext highlighter-rouge">&lt;directory&gt;</code></td>
+      <td>When looking up plugins by ID, look in this directory and each of its subdirectories before hitting the registry. Multiple search paths can be specified. Use ‘:’ as a separator in <code class="language-plaintext highlighter-rouge">*nix</code> based systems and ‘;’ for Windows.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–noregistry</td>
+      <td>Don’t search the registry for plugins.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–link</td>
+      <td>When installing from a local path, creates a symbolic link instead of copying files. The extent to which files are linked varies by platform. Useful for plugin development.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–nosave</td>
+      <td>Do NOT save the <code class="language-plaintext highlighter-rouge">&lt;plugin-spec&gt;</code> as part of the <code class="language-plaintext highlighter-rouge">plugin</code> element  into <code class="language-plaintext highlighter-rouge">config.xml</code> or <code class="language-plaintext highlighter-rouge">package.json</code>.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–force</td>
+      <td><em>Introduced in version 6.1.</em> Forces copying source files from the plugin even if the same file already exists in the target directory.</td>
+    </tr>
+    <tr>
+      <td>remove <code class="language-plaintext highlighter-rouge">&lt;pluginid&gt;\|&lt;name&gt;</code> […]</td>
+      <td> </td>
+      <td>Remove plugins with the given IDs/name.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>–nosave</td>
+      <td>Do NOT remove the specified plugin from config.xml or package.json</td>
+    </tr>
+    <tr>
+      <td>list</td>
+      <td> </td>
+      <td>List currently installed plugins</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="plugin-spec">Plugin-spec</h3>
+
+<p>There are a number of ways to specify a plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin-spec&gt; : [@scope/]pluginID[@version]|directory|url[#commit-ish][:subdir]
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>scope</td>
+      <td>Scope of plugin published as a <a href="https://docs.npmjs.com/misc/scope">scoped npm package</a></td>
+    </tr>
+    <tr>
+      <td>plugin</td>
+      <td>Plugin id (id of plugin in npm registry or in –searchPath)</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>Major.minor.patch version specifier using semver</td>
+    </tr>
+    <tr>
+      <td>directory</td>
+      <td>Directory containing plugin.xml</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>Url to a git repository containing a plugin.xml</td>
+    </tr>
+    <tr>
+      <td>commit-ish</td>
+      <td>Commit/tag/branch reference. If none is specified, ‘master’ is used</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="algorithm-for-resolving-plugins">Algorithm for resolving plugins</h3>
+
+<p>When adding a plugin to a project, the CLI will resolve the plugin
+based on the following criteria (listed in order of precedence):</p>
+
+<ol>
+  <li>The <code class="language-plaintext highlighter-rouge">plugin-spec</code> given in the command (e.g. <code class="language-plaintext highlighter-rouge">cordova plugin add pluginID@version</code>)</li>
+  <li>The <code class="language-plaintext highlighter-rouge">plugin-spec</code> saved in <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code> (i.e. if the plugin was previously added without <code class="language-plaintext highlighter-rouge">--nosave</code>)</li>
+  <li>As of Cordova version 6.1, the latest plugin version published to npm that the current project can support (only applies to plugins that list their <a href="http://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html#specifying-project-requirements">Cordova dependencies</a> in their <code class="language-plaintext highlighter-rouge">package.json</code>)</li>
+  <li>The latest plugin version published to npm</li>
+</ol>
+
+<h3 id="examples-2">Examples</h3>
+
+<ul>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-plugin-camera</code> and <code class="language-plaintext highlighter-rouge">cordova-plugin-file</code> to the project and save it to <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>. Use <code class="language-plaintext highlighter-rouge">../plugins</code> directory to search for the plugins.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin add cordova-plugin-camera cordova-plugin-file <span class="nt">--searchpath</span> ../plugins
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-plugin-camera</code> with <a href="http://semver.org/">semver</a> version ^2.0.0 and save it to <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin add cordova-plugin-camera@^2.0.0
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add the plugin from the specified local directory:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin add ../cordova-plugin-camera
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add the plugin from the specified tarball file:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin add ../cordova-plugin-camera.tgz
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Remove the plugin from the project and the <code class="language-plaintext highlighter-rouge">config.xml</code> &amp; <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin <span class="nb">rm </span>camera
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Remove the plugin from the project, but not the <code class="language-plaintext highlighter-rouge">config.xml</code> or <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin <span class="nb">rm </span>camera <span class="nt">--nosave</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>List all plugins installed in the project:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin <span class="nb">ls</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="conflicting-plugins">Conflicting plugins</h3>
+<p>Conflicting plugins may occur when adding plugins that use <code class="language-plaintext highlighter-rouge">edit-config</code> tags in their plugin.xml file. <code class="language-plaintext highlighter-rouge">edit-config</code> allows plugins to add or replace attributes of XML elements.</p>
+
+<p>This feature can cause issues with the application if more than one plugin tries to modify the same XML element. Conflict detection has been implemented to prevent plugins from being added so one plugin doesn’t try to overwrite another plugin’s <code class="language-plaintext highlighter-rouge">edit-config</code> changes. An error will be thrown when a conflict in <code class="language-plaintext highlighter-rouge">edit-config</code> has been found and the plugin won’t be added. The error message will mention that all conflicts must be resolved before the plugin can be added. One option to resolving the <code class="language-plaintext highlighter-rouge">edit-config</code> conflict is to make changes to the affected plugins’ plugin.xml so that they do not modify the same XML element. The other option is to use the <code class="language-plaintext highlighter-rouge">--force</code> flag to force add the plugin. This option should be used with caution as it ignores the conflict detection and will overwrite all conflicts it has with other plugins, thus may leave the other plugins in a bad state.</p>
+
+<p>Refer to the <a href="https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config">plugin.xml guide</a> for managing <code class="language-plaintext highlighter-rouge">edit-config</code>, resolving conflicts, and examples.</p>
+
+<h2 id="cordova-prepare-command"><code class="language-plaintext highlighter-rouge">cordova prepare</code> command</h2>
+
+<p>Transforms config.xml metadata to platform-specific manifest files, copies icons &amp; splashscreens,
+copies plugin files for specified platforms so that the project is ready to build with each native SDK.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova prepare <span class="o">[</span>&lt;platform&gt; <span class="o">[</span>..]]
+</code></pre></div></div>
+
+<h3 id="options">Options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;platform&gt; [..]</code></td>
+      <td>Platform name(s) to prepare. If not specified, all platforms are prepared.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cordova-compile-command"><code class="language-plaintext highlighter-rouge">cordova compile</code> command</h2>
+
+<p><code class="language-plaintext highlighter-rouge">cordova compile</code> is a subset of the <a href="#cordova-build-command">cordova build command</a>.
+It only performs the compilation step without doing prepare. It’s common to invoke <code class="language-plaintext highlighter-rouge">cordova build</code> instead of this command - however, this stage is useful to allow extending using <a href="http://cordova.apache.org/docs/en/latest/guide_appdev_hooks_index.md.html">hooks</a>.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova compile <span class="o">[</span>&lt;platform&gt; <span class="o">[</span>...]]
+    <span class="o">[</span><span class="nt">--debug</span> | <span class="nt">--release</span><span class="o">]</span>
+    <span class="o">[</span><span class="nt">--device</span> | <span class="nt">--emulator</span> | <span class="nt">--target</span><span class="o">=</span>&lt;targetName&gt;]
+    <span class="o">[</span><span class="nt">--buildConfig</span><span class="o">=</span>&lt;configfile&gt;]
+    <span class="o">[</span><span class="nt">--</span> &lt;platformOpts&gt;]
+</code></pre></div></div>
+<p>For detailed documentation see <a href="#cordova-build-command">cordova build command</a> docs below.</p>
+
+<h2 id="cordova-build-command"><code class="language-plaintext highlighter-rouge">cordova build</code> command</h2>
+
+<p>Shortcut for <code class="language-plaintext highlighter-rouge">cordova prepare</code> + <code class="language-plaintext highlighter-rouge">cordova compile</code> for all/the specified platforms. Allows you to build the app for the specified platform.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build <span class="o">[</span>&lt;platform&gt; <span class="o">[</span>...]]
+    <span class="o">[</span><span class="nt">--debug</span> | <span class="nt">--release</span><span class="o">]</span>
+    <span class="o">[</span><span class="nt">--device</span> | <span class="nt">--emulator</span><span class="o">]</span>
+    <span class="o">[</span><span class="nt">--buildConfig</span><span class="o">=</span>&lt;configfile&gt;]
+    <span class="o">[</span><span class="nt">--</span> &lt;platformOpts&gt;]
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;platform&gt; [..]</code></td>
+      <td>Platform name(s) to build. If not specified, all platforms are built.</td>
+    </tr>
+    <tr>
+      <td>–debug</td>
+      <td>Perform a debug build. This typically translates to debug mode for the underlying platform being built.</td>
+    </tr>
+    <tr>
+      <td>–release</td>
+      <td>Perform a release build. This typically translates to release mode for the underlying platform being built.</td>
+    </tr>
+    <tr>
+      <td>–device</td>
+      <td>Build it for a device</td>
+    </tr>
+    <tr>
+      <td>–emulator</td>
+      <td>Build it for an emulator. In particular, the platform architecture might be different for a device vs. emulator.</td>
+    </tr>
+    <tr>
+      <td>–buildConfig=<code class="language-plaintext highlighter-rouge">&lt;configFile&gt;</code></td>
+      <td>Default: build.json in cordova root directory. <br /> Use the specified build configuration file. <code class="language-plaintext highlighter-rouge">build.json</code> file is used to specify paramaters to customize the app build process especially related to signing the package.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;platformOpts&gt;</code></td>
+      <td>To provide platform specific options, you must include them after <code class="language-plaintext highlighter-rouge">--</code> separator. Review platform guide docs for more details.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="examples-3">Examples</h3>
+
+<ul>
+  <li>Build for <code class="language-plaintext highlighter-rouge">android</code> and <code class="language-plaintext highlighter-rouge">ios</code> platform in <code class="language-plaintext highlighter-rouge">debug</code> mode for deployment to device:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android ios <span class="nt">--debug</span> <span class="nt">--device</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Build for <code class="language-plaintext highlighter-rouge">android</code> platform in <code class="language-plaintext highlighter-rouge">release</code> mode and use the specified build configuration:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--release</span> <span class="nt">--buildConfig</span><span class="o">=</span>..<span class="se">\m</span>yBuildConfig.json
+</code></pre></div></div>
+
+<ul>
+  <li>Build for <code class="language-plaintext highlighter-rouge">android</code> platform in release mode and pass custom platform options to android build process:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span><span class="s2">"..</span><span class="se">\a</span><span class="s2">ndroid.keystore"</span> <span class="nt">--storePassword</span><span class="o">=</span>android <span class="nt">--alias</span><span class="o">=</span>mykey
+</code></pre></div></div>
+
+<h2 id="cordova-run-command"><code class="language-plaintext highlighter-rouge">cordova run</code> command</h2>
+
+<p>Prepares, builds, and deploys app on specified platform devices/emulators. If a device is connected it will be used, unless an eligible emulator is already running.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run <span class="o">[</span>&lt;platform&gt; <span class="o">[</span>...]]
+    <span class="o">[</span><span class="nt">--list</span> | <span class="nt">--debug</span> | <span class="nt">--release</span><span class="o">]</span>
+    <span class="o">[</span><span class="nt">--noprepare</span><span class="o">]</span>
+    <span class="o">[</span><span class="nt">--nobuild</span><span class="o">]</span>
+    <span class="o">[</span><span class="nt">--device</span> | <span class="nt">--emulator</span> | <span class="nt">--target</span><span class="o">=</span>&lt;targetName&gt;]
+    <span class="o">[</span><span class="nt">--buildConfig</span><span class="o">=</span>&lt;configfile&gt;]
+    <span class="o">[</span><span class="nt">--</span> &lt;platformOpts&gt;]
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;platform&gt; [..]</code></td>
+      <td>Platform name(s) to run. If not specified, all platforms are run.</td>
+    </tr>
+    <tr>
+      <td>–list</td>
+      <td>Lists available targets. Displays both device and emulator deployment targets unless specified</td>
+    </tr>
+    <tr>
+      <td>–debug</td>
+      <td>Deploy a debug build. This is the default behavior unless <code class="language-plaintext highlighter-rouge">--release</code> is specified.</td>
+    </tr>
+    <tr>
+      <td>–release</td>
+      <td>Deploy a release build</td>
+    </tr>
+    <tr>
+      <td>–noprepare</td>
+      <td>Skip preparing (available in Cordova v6.2 or later)</td>
+    </tr>
+    <tr>
+      <td>–nobuild</td>
+      <td>Skip building</td>
+    </tr>
+    <tr>
+      <td>–device</td>
+      <td>Deploy to a device</td>
+    </tr>
+    <tr>
+      <td>–emulator</td>
+      <td>Deploy to an emulator</td>
+    </tr>
+    <tr>
+      <td>–target</td>
+      <td>Deploy to a specific target emulator/device. Use <code class="language-plaintext highlighter-rouge">--list</code> to display target options</td>
+    </tr>
+    <tr>
+      <td>–buildConfig=<code class="language-plaintext highlighter-rouge">&lt;configFile&gt;</code></td>
+      <td>Default: build.json in cordova root directory. <br /> Use the specified build configuration file. <code class="language-plaintext highlighter-rouge">build.json</code> file is used to specify paramaters to customize the app build process especially related to signing the package.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;platformOpts&gt;</code></td>
+      <td>To provide platform specific options, you must include them after <code class="language-plaintext highlighter-rouge">--</code> separator. Review platform guide docs for more details.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="examples-4">Examples</h3>
+
+<ul>
+  <li>Run a release build of current cordova project on <code class="language-plaintext highlighter-rouge">android</code> platform emulator named <code class="language-plaintext highlighter-rouge">Nexus_5_API_23_x86</code>. Use the spcified build configuration when running:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run android <span class="nt">--release</span> <span class="nt">--buildConfig</span><span class="o">=</span>..<span class="se">\m</span>yBuildConfig.json <span class="nt">--target</span><span class="o">=</span>Nexus_5_API_23_x86
+</code></pre></div></div>
+
+<ul>
+  <li>Run a debug build of current cordova project on <code class="language-plaintext highlighter-rouge">android</code> platform using a device or emulator (if no device is connected). Skip doing the build:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run android <span class="nt">--nobuild</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Run a debug build of current cordova project on an <code class="language-plaintext highlighter-rouge">ios</code> device:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run ios <span class="nt">--device</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Enumerate names of all the connected devices and available emulators that can be used to run this app:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run ios <span class="nt">--list</span>
+</code></pre></div></div>
+
+<h2 id="cordova-emulate-command"><code class="language-plaintext highlighter-rouge">cordova emulate</code> command</h2>
+
+<p>Alias for <code class="language-plaintext highlighter-rouge">cordova run --emulator</code>. Launches the emulator instead of device. See <a href="#cordova-run-command">cordova run command docs</a> for more details.</p>
+
+<h2 id="cordova-clean-command"><code class="language-plaintext highlighter-rouge">cordova clean</code> command</h2>
+
+<p>Cleans the build artifacts for all the platforms, or the specified platform by running platform-specific build cleanup.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova clean <span class="o">[</span>&lt;platform&gt; <span class="o">[</span>...]]
+</code></pre></div></div>
+
+<p><strong>Example Usage:</strong></p>
+
+<ul>
+  <li>Clean <code class="language-plaintext highlighter-rouge">android</code> platform build artifacts:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova clean android
+</code></pre></div></div>
+
+<h2 id="cordova-requirements-command"><code class="language-plaintext highlighter-rouge">cordova requirements</code> command</h2>
+
+<p>Checks and print out all the requirements for platforms specified (or all platforms added
+to project if none specified). If all requirements for each platform are met, exits with code 0
+otherwise exits with non-zero code.</p>
+
+<p>This can be useful when setting up a machine for building a particular platform.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova requirements <span class="o">[</span>platform?]
+</code></pre></div></div>
+
+<h2 id="cordova-info-command"><code class="language-plaintext highlighter-rouge">cordova info</code> command</h2>
+
+<p>Print out useful information helpful for submitting bug
+reports and getting help.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova info
+</code></pre></div></div>
+
+<h2 id="cordova-serve-command"><code class="language-plaintext highlighter-rouge">cordova serve</code> command</h2>
+
+<p>Run a local web server for www/ assets using specified <code class="language-plaintext highlighter-rouge">port</code> or default of 8000. Access projects at: <code class="language-plaintext highlighter-rouge">http://HOST_IP:PORT/PLATFORM/www</code></p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova serve <span class="o">[</span>port]
+</code></pre></div></div>
+
+<h2 id="cordova-telemetry-command"><code class="language-plaintext highlighter-rouge">cordova telemetry</code> command</h2>
+
+<p>Turns telemetry collection on or off.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova telemetry <span class="o">[</span>State]
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>on</td>
+      <td>Turn telemetry collection on.</td>
+    </tr>
+    <tr>
+      <td>off</td>
+      <td>Turn telemetry collection off.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="details">Details</h3>
+
+<p>A timed prompt asking the user to opt-in or out is displayed the first time cordova is run.
+It lasts for 30 seconds, after which the user is automatically opted-out if they don’t provide any answer.
+In CI environments, the <code class="language-plaintext highlighter-rouge">CI</code> environment variable can be set, which will prevent the prompt from showing up.
+Telemetry collection can also be turned off on a single command by using the <code class="language-plaintext highlighter-rouge">--no-telemetry</code> flag.</p>
+
+<p><strong>Usage Example:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova telemetry on
+cordova telemetry off
+cordova build <span class="nt">--no-telemetry</span>
+</code></pre></div></div>
+
+<p>For details, see our privacy notice: https://cordova.apache.org/privacy</p>
+
+<h2 id="cordova-help-command"><code class="language-plaintext highlighter-rouge">cordova help</code> command</h2>
+
+<p>Show syntax summary, or the help for a specific command.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova <span class="nb">help</span> <span class="o">[</span><span class="nb">command</span><span class="o">]</span>
+cordova <span class="o">[</span><span class="nb">command</span><span class="o">]</span> <span class="nt">-h</span>
+cordova <span class="nt">-h</span> <span class="o">[</span><span class="nb">command</span><span class="o">]</span>
+</code></pre></div></div>
+
+<h2 id="cordova-config-command"><code class="language-plaintext highlighter-rouge">cordova config</code> command</h2>
+
+<p>Set, get, delete, edit, and list global cordova options.</p>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova config <span class="o">[</span><span class="nb">ls</span>|edit|set|get|delete] &lt;key?&gt; &lt;value?&gt;
+</code></pre></div></div>
+
+<p><strong>Usage Examples:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova config <span class="nb">ls
+</span>cordova config edit
+cordova config <span class="nb">set </span>save-exact <span class="nb">true
+</span>cordova config get save-exact
+cordova config delete save-exact
+</code></pre></div></div>
+

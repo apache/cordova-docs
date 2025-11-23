@@ -1,0 +1,122 @@
+<h1 id="cordova-for-windows-10">Cordova for Windows 10</h1>
+<p>Maybe you could instead call it “Windows 10 for Cordova.”  Windows 10 has had its HTML and
+JavaScript Apps platform re-engineered to bring Cordova support to the web, and to get
+platform security restrictions out of your way.</p>
+
+<h2 id="getting-started-with-windows-10">Getting Started with Windows 10</h2>
+<p>Adding Windows 10 support to your app is as easy as setting your Windows target platform
+version to 10.0:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="windows-target-version" value="10.0" /&gt;
+&lt;preference name="windows-phone-target-version" value="10.0" /&gt;
+</code></pre></div></div>
+
+<p>When you build with these preferences both set, only a single .appx (and .appxupload) will
+be built.  They will require Windows 10 at a minimum.</p>
+
+<h3 id="understanding-remote-mode-vs-local-mode">Understanding Remote Mode vs. Local Mode</h3>
+<p>Remote Mode is a new feature of the HTML Applications for Windows platform in Windows 10.  In
+Windows 8 and 8.1, HTML Applications worked in what is called “Local Mode” in Windows 10.  In
+Local Mode, HTML Applications have full access to the native Windows API surface and
+capabilities.  In order to prevent script injection attacks which could result in leaking
+personally-identifiable information due to malicious code, Local Mode disallows inline script,
+and requires developers who perform DOM manipulation to do so within an explicit context
+(<code class="language-plaintext highlighter-rouge">MSApp.execUnsafeLocalFunction</code>).</p>
+
+<p>Remote Mode eliminates those requirements, which makes it possible to use unmodified libraries like jQuery or AngularJS directly in your code, without any changes.  To do so, it removes your ability to declare certain capabilities when certifying your app in the Windows Store.  The removal of these capabilities usually doesn’t prevent getting to certain functionality, but it might require to use a different combination of APIs or tactics.</p>
+
+<h3 id="effect-of-remote-mode-on-capabilities">Effect of Remote Mode on capabilities</h3>
+<p>The following capabilities are unavailable when deploying your Remote Mode application to the Windows Store:</p>
+
+<ul>
+  <li>Enterprise Authentication (<code class="language-plaintext highlighter-rouge">enterpriseAuthentication</code>)</li>
+  <li>Shared User Certificates (<code class="language-plaintext highlighter-rouge">sharedUserCertificates</code>)</li>
+  <li>Documents Library (<code class="language-plaintext highlighter-rouge">documentsLibrary</code>)</li>
+  <li>Music Library (<code class="language-plaintext highlighter-rouge">musicLibrary</code>)</li>
+  <li>Pictures Library (<code class="language-plaintext highlighter-rouge">picturesLibrary</code>)</li>
+  <li>Videos Library (<code class="language-plaintext highlighter-rouge">videosLibrary</code>)</li>
+  <li>Removable <a href="../../../cordova/storage/storage.html">Storage</a> (<code class="language-plaintext highlighter-rouge">removableStorage</code>)</li>
+  <li>Internet client/server (<code class="language-plaintext highlighter-rouge">internetClientServer</code>) - note that <code class="language-plaintext highlighter-rouge">internetClient</code> is still permitted</li>
+  <li>Private network client/server (<code class="language-plaintext highlighter-rouge">privateNetworkClientServer</code>)</li>
+</ul>
+
+<p>Each of the library restrictions may be worked around by requesting that the user interact with the file system via a <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx">File Picker</a>.  This prevents malicious injected code from arbitrarily accessing the file system.</p>
+
+<p>The network-related restrictions must be worked around by either using an API that doesn’t use capability checks or by brokering communication via standard internet communication channels, such as <code class="language-plaintext highlighter-rouge">XMLHttpRequest</code> or Web Sockets.</p>
+
+<p>The Enterprise Authentication and Shared User Certificates capabilities are specifically targeted at Enterprise scenarios.  These capabilities are supported for private/enterprise-enabled App Stores, so if you are building apps which are going to be deployed to an internal deployment mechanism, you can still support these.  However, they are not supported for Remote Mode apps in the public Windows Store.  When you build targeting Windows 10, if one of these capabilities is detected in your app manifest, a warning will be displayed.</p>
+
+<h2 id="reference">Reference</h2>
+
+<h3 id="configxml-preferences">config.xml Preferences</h3>
+
+<h4 id="windows-target-version-windows-phone-target-version">windows-target-version, windows-phone-target-version</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="windows-target-version" value="10.0" /&gt;
+&lt;preference name="windows-phone-target-version" value="10.0" /&gt;
+</code></pre></div></div>
+
+<p><em>At least one is required.</em></p>
+
+<p>These preferences identify the version of Windows or Windows Phone you would like your
+app package to target.</p>
+
+<p><strong>Valid Values</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">10.0</code>, <code class="language-plaintext highlighter-rouge">UAP</code>: Builds for Windows 10 Universal App Platform</li>
+  <li><code class="language-plaintext highlighter-rouge">8.1</code>: Builds for Windows 8.1 or Windows Phone 8.1</li>
+  <li><code class="language-plaintext highlighter-rouge">8.0</code>: Build for Windows 8.0.  Not valid for Windows Phone (use the <strong>wp8</strong> Cordova
+platform instead)</li>
+</ul>
+
+<p><strong>Scenarios</strong></p>
+
+<p>If you are targeting Windows 10 only, you only need to have a single <code class="language-plaintext highlighter-rouge">windows-target-version</code>
+setting in your config.xml file.</p>
+
+<h4 id="windowsdefaulturiprefix">WindowsDefaultUriPrefix</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="WindowsDefaultUriPrefix" value="ms-appx://|ms-appx-web://" /&gt;
+</code></pre></div></div>
+
+<p>This preference identifies whether you want your app to target the <strong>local context</strong> or <strong>remote
+context</strong> as its startup URI.  When building for Windows 10, the default is the remote
+context (<code class="language-plaintext highlighter-rouge">ms-appx-web://</code>).</p>
+
+<p>In order to have a local-mode application that is not impacted by Remote Mode capability
+restrictions, you must set this preference to <code class="language-plaintext highlighter-rouge">ms-appx://</code> and not declare any <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code>
+elements with remote URIs.</p>
+
+<p><strong>Valid Values</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ms-appx://</code> (Default for Windows 8.0, 8.1): The start page runs in the local context</li>
+  <li><code class="language-plaintext highlighter-rouge">ms-appx-web://</code> (Default for Windows 10): The start page runs in the remote context</li>
+</ul>
+
+<h4 id="sdk-minversion-sdk-maxversiontested">{SDK}-MinVersion, {SDK}-MaxVersionTested</h4>
+<p><em>Optional</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="Windows.Universal-MinVersion" value="10.0.0.0" /&gt;
+&lt;preference name="Windows.Mobile-MinVersion" value="10.0.9927.0" /&gt;
+&lt;preference name="Windows.Mobile-MaxVersionTested" value="10.0.10031.0" /&gt;
+&lt;preference name="Microsoft.Band-MinVersion" value="10.0.11.0" /&gt;
+</code></pre></div></div>
+
+<p>These preferences identify which ecosystems (including but not limited to Windows Universal, Windows Mobile, or Xbox) and their min/max versions they are compatible with.  They still require that the platforms have support for the Universal App Platform (so Windows 10 as the base OS).  However, these may indicate that the application is aware of particular functionality that may only be available on certain devices (such as game streaming on Xbox).</p>
+
+<p><strong>Valid Values</strong></p>
+
+<p>There are three parts to each value: the <strong>SDK</strong>, the <strong>version restriction</strong>, and the <strong>version value</strong>.  These preferences are detected by beginning with <code class="language-plaintext highlighter-rouge">Windows</code> or <code class="language-plaintext highlighter-rouge">Microsoft</code> and ending in <code class="language-plaintext highlighter-rouge">-MinVersion</code> or <code class="language-plaintext highlighter-rouge">-MaxVersionTested</code>:</p>
+
+<ul>
+  <li>The <strong>SDK</strong> defines what specialized platform you want to target.  The default is <code class="language-plaintext highlighter-rouge">Windows.Universal</code>.  Valid values for these are defined in the AppxManifest schema, in the <code class="language-plaintext highlighter-rouge">Package/Depednencies/TargetPlatform</code> elements.</li>
+  <li>The <strong>version restriction</strong> defines application compatibility rules.  For example, if the <code class="language-plaintext highlighter-rouge">-MinVersion</code> is set to 10.1.0.0, then OS versions which don’t support at least 10.1.0.0 of the corresponding SDK won’t be able to load it.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-MinVersion</code> specifies the minimum version of the SDK required</li>
+      <li><code class="language-plaintext highlighter-rouge">-MaxVersionTested</code> specifies the highest-tested version of the SDK.  If a new version of the corresponding SDK is released, it will run in compatibility mode for the specified version.</li>
+    </ul>
+  </li>
+  <li>The <strong>version value</strong> is a 4-integer tuple in the form of <em>major.minor.build.qfe</em>.</li>
+</ul>
+
+<p>If no preferences of these types are specified in your config.xml file, then Windows.Universal version 10.0.0.0 will be chosen by default.</p>

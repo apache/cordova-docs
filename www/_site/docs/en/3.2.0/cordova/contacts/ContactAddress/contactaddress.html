@@ -1,0 +1,183 @@
+<h1 id="contactaddress">ContactAddress</h1>
+
+<p>Contains address properties for a <code class="language-plaintext highlighter-rouge">[Contact](../Contact/contact.html)</code> object.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Set to <code class="language-plaintext highlighter-rouge">true</code> if this <code class="language-plaintext highlighter-rouge">ContactAddress</code> contains the user’s preferred value. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>type</strong>: A string indicating what type of field this is, <em>home</em> for example. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: The full address formatted for display. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>streetAddress</strong>: The full street address. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>locality</strong>: The city or locality. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>region</strong>: The state or region. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>postalCode</strong>: The zip code or postal code. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>country</strong>: The country name. <em>(DOMString)</em></p>
+  </li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">ContactAddress</code> object stores the properties of a single address
+of a contact.  A <code class="language-plaintext highlighter-rouge">[Contact](../Contact/contact.html)</code> object may include more than one address in
+a <code class="language-plaintext highlighter-rouge">ContactAddress[]</code> array.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// display the address information for all contacts
+
+function onSuccess(contacts) {
+    for (var i = 0; i &lt; contacts.length; i++) {
+        for (var j = 0; j &lt; contacts[i].addresses.length; j++) {
+            alert("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
+                "Type: "           + contacts[i].addresses[j].type          + "\n" +
+                "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
+                "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
+                "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
+                "Region: "         + contacts[i].addresses[j].region        + "\n" +
+                "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
+                "Country: "        + contacts[i].addresses[j].country);
+        }
+    }
+};
+
+function onError(contactError) {
+    alert('onError!');
+};
+
+// find all contacts
+var options = new ContactFindOptions();
+options.filter = "";
+var filter = ["displayName", "addresses"];
+navigator.contacts.find(filter, onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // find all contacts
+        var options = new ContactFindOptions();
+        options.filter = "";
+        var filter = ["displayName", "addresses"];
+        navigator.contacts.find(filter, onSuccess, onError, options);
+    }
+
+    // onSuccess: Get a snapshot of the current contacts
+    //
+    function onSuccess(contacts) {
+        // display the address information for all contacts
+        for (var i = 0; i &lt; contacts.length; i++) {
+            for (var j = 0; j &lt; contacts[i].addresses.length; j++) {
+                alert("Pref: "           + contacts[i].addresses[j].pref          + "\n" +
+                      "Type: "           + contacts[i].addresses[j].type          + "\n" +
+                      "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
+                      "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
+                      "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
+                      "Region: "         + contacts[i].addresses[j].region        + "\n" +
+                      "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
+                      "Country: "        + contacts[i].addresses[j].country);
+            }
+        }
+    };
+
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-2x-quirks">Android 2.X Quirks</h2>
+
+<ul>
+  <li><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code> on Android 2.X devices.</li>
+</ul>
+
+<h2 id="blackberry-webworks-50-quirks">BlackBerry WebWorks 5.0+ Quirks</h2>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported on BlackBerry devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Partially supported.  Only one each of <em>Work</em> and <em>Home</em> type addresses can be stored per contact.</p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: Partially supported.  Returns a concatenation of all BlackBerry address fields.</p>
+  </li>
+  <li>
+    <p><strong>streetAddress</strong>: Supported.  Returns a concatenation of BlackBerry <strong>address1</strong> and <strong>address2</strong> address fields.</p>
+  </li>
+  <li>
+    <p><strong>locality</strong>: Supported.  Stored in BlackBerry <strong>city</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>region</strong>: Supported.  Stored in BlackBerry <strong>stateProvince</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>postalCode</strong>: Supported.  Stored in BlackBerry <strong>zipPostal</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>country</strong>: Supported.</p>
+  </li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported on iOS devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: Currently not supported.</p>
+  </li>
+</ul>
+

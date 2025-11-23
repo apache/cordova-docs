@@ -1,0 +1,197 @@
+<h1 id="blackberry-10-shell-tool-guide">BlackBerry 10 Shell Tool Guide</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">cordova</code> command-line utility is a high-level tool that allows
+you to build applications across several platforms at once. An older
+version of the Cordova framework provides sets of command-line tools
+specific to each platform. To use them as an alternative to the CLI,
+you need to download this version of Cordova from
+<a href="http://cordova.apache.org">cordova.apache.org</a>. The download contains
+separate archives for each platform. Expand the platform you wish to
+target. The tools described here are typically available in the
+top-level <code class="language-plaintext highlighter-rouge">bin</code> directory, otherwise consult the <strong>README</strong> file for
+more detailed directions.</p>
+
+<p>For information on the low-level command-line interface that enables
+plugins, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>. See Application Plugins
+for details on how to develop plugins.</p>
+
+<p>If you need help with any command listed below, type the command along
+with the <code class="language-plaintext highlighter-rouge">-h</code> or <code class="language-plaintext highlighter-rouge">-help</code> arguments, which are supported by all
+commands and which provide descriptions for each of the available
+arguments.</p>
+
+<h2 id="create-an-app">Create an App</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">create</code> command creates a new project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/create &lt;path-to-project&gt; &lt;project-package&gt; &lt;project-name&gt;
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;path-to-project&gt;</code> specifies the directory you want the project created in</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;project-package&gt;</code> specifies a reverse domain style identifier</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;project-name&gt;</code> specifies the apps display name</p>
+  </li>
+</ul>
+
+<p><strong>NOTE</strong>: the <code class="language-plaintext highlighter-rouge">create</code> command bootstraps dependency installation
+through the <code class="language-plaintext highlighter-rouge">npm install</code> command. Depending on the installation
+directory and system permissions, this may require administrator
+privileges.  If there’s problem on OSX/Linux, run <code class="language-plaintext highlighter-rouge">sudo npm install</code>
+before using the <code class="language-plaintext highlighter-rouge">create</code> command. On Windows, run <code class="language-plaintext highlighter-rouge">npm install</code> in a
+command-line utility opened with administrator privileges.</p>
+
+<h2 id="create-a-target">Create a Target</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">target</code> command allows you to manage the emulator or BlackBerry
+devices that you use to test the app. You can add or remove a target,
+or set a target as the default target.</p>
+
+<h3 id="add-a-target">Add a Target</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/target add &lt;name&gt; &lt;ip-address&gt; [-t | --type &lt;device | simulator&gt;] [-p | --password &lt;password&gt;] [--pin &lt;device-pin&gt;]
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;name&gt;</code> specifies a unique name for the target.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;ip-address&gt;</code> specifies the ip address of the BlackBerry device or
+simulator.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-p | --password &lt;password&gt;</code> specifies the password for the device or
+emulator. This is required only if the device or emulator is
+password protected.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">--pin &lt;device-pin&gt;</code> specifies the PIN of the BlackBerry device,
+which identifies that device as a valid host for the debug
+token. This argument is required only when creating a debug
+token.</p>
+  </li>
+</ul>
+
+<h3 id="remove-a-target">Remove a Target</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/target remove &lt;name&gt;
+</code></pre></div></div>
+
+<h3 id="set-a-target-as-the-default">Set a Target as the Default</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/target default &lt;name&gt;
+</code></pre></div></div>
+
+<h2 id="build-the-app">Build the App</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">build</code> command builds the project as a .bar file. You can build
+the app in either release mode (which produces a signed .bar file) or
+in debug mode (which produces an unsigned .bar file).</p>
+
+<h3 id="build-the-app-in-release-mode">Build the App in Release Mode</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/build release [-k | --keystorepass &lt;password&gt;] [-b | --buildId &lt;number&gt;] [-p | --params &lt;params-JSON-file&gt;]
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-k | --keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-b | --buildId &lt;number&gt;</code>  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-p | --params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</p>
+  </li>
+</ul>
+
+<h3 id="build-the-project-in-debug-mode">Build the Project in Debug Mode</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/build debug [&lt;target&gt;] [-k | --keystorepass &lt;password&gt;] [-p | --params &lt;params-JSON-file&gt;]  [-ll | --loglevel &lt;error|warn|verbose&gt;]
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;target&gt;</code> specifies the name of a previously added target. If
+<code class="language-plaintext highlighter-rouge">&lt;target&gt;</code> is not specified, the default target is used, if one has
+been created. This argument is only required if you want the script
+to deploy the app to a BlackBerry device or emulator and you have
+not created a default target. Additionally, if <code class="language-plaintext highlighter-rouge">&lt;target&gt;</code> is a
+device, then that device must be connected to your computer by USB
+connection or be connected to the same Wi-Fi network as your
+computer.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-k | --keystorepass &lt;password&gt;</code> specifies the password you defined
+when you configured your computer to sign applications. This
+password is also used to create your debug token. This argument is
+only required if you want the script to create and install the debug
+token for you.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-p | --params &lt;params-JSON-file&gt;</code> specifies a JSON file containing
+additional parameters to pass to downstream tools.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-ll | --loglevel &lt;level&gt;</code> specifies the log level. The log level may
+be one of <code class="language-plaintext highlighter-rouge">error</code>, <code class="language-plaintext highlighter-rouge">warn</code>, or <code class="language-plaintext highlighter-rouge">verbose</code>.</p>
+  </li>
+</ul>
+
+<p>If you have previously defined a default target (and previously
+installed a debug token, if that target is a BlackBerry device), you
+can run the script with no arguments, and the script packages your
+app and deploys it to the default target. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/build debug
+</code></pre></div></div>
+
+<h2 id="run-the-app">Run the App</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">run</code> command deploys the app’s most recent build on the specified
+BlackBerry device or an emulator. To deploy your app, you need to
+specify a target for the device or emulator:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/run &lt;target&gt;
+</code></pre></div></div>
+
+<p>…where <code class="language-plaintext highlighter-rouge">&lt;target&gt; </code>specifies the name of a previously added target.
+If <code class="language-plaintext highlighter-rouge">&lt;target&gt;</code> is a device, then it must be connected to your computer
+via USB cable, or else over the same Wi-Fi network as your computer.</p>
+
+<h2 id="handle-plugins">Handle Plugins</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">target</code> command allows you to add and remove plugins.  To fetch a
+locally hosted plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/plugin fetch &lt;path-to-plugin&gt;
+</code></pre></div></div>
+
+<p>View a list of installed plugins:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/plugin ls
+</code></pre></div></div>
+
+<p>Add a plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/plugin add &lt;name&gt;
+</code></pre></div></div>
+
+<p>Remove a plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
+</code></pre></div></div>

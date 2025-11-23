@@ -1,0 +1,181 @@
+<h1 id="windows-plugins">Windows Plugins</h1>
+
+<p>This section provides details for how to implement a plugin for use in
+a Windows Store app for Windows 8.1 phone and desktop, and Universal Windows Platform (Windows 10+). Before reading this, see <a href="../../hybrid/plugins/index.html">Create your first plugin</a> for an overview of the plugin’s structure and its common JavaScript interface. This section continues to demonstrate the sample <em>echo</em> plugin that communicates from the Cordova webview to the native platform and back.</p>
+
+<h2 id="creating-a-windows-plugin-in-javascript">Creating a Windows Plugin in JavaScript</h2>
+
+<p>Windows Cordova plugins are essentially a thin wrapper around existing WinJS provided functions, but assuming you will want to define your JS common interface for multiple devices, you will typically have one JS file that provides the API:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// inside file www/echoplugin.js</span>
+<span class="kd">var</span> <span class="nx">EchoPlugin</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">// the echo function calls successCallback with the provided text in strInput</span>
+    <span class="c1">// if strInput is empty, it will call the errorCallback</span>
+    <span class="na">echo</span><span class="p">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">strInput</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">cordova</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span><span class="nx">errorCallback</span><span class="p">,</span><span class="dl">"</span><span class="s2">EchoPlugin</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">echo</span><span class="dl">"</span><span class="p">,[</span><span class="nx">strInput</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">cordova.exec</code> function is defined differently on every platform, this is because each platform has it’s own way of communicating between the application js code, and the native wrapper code. But in the case of Windows, there is no native wrapper, so the exec call is there for consistency. So even though you could write the Windows specific code as a part of plugin’s common JS code directly, this is not recommended and plugin authors should use the same exec API for Windows as for other platforms. This way the plugin API becomes consistent and you can also take advantage of any parameter checking, or other common code provided by developers who were working on other platforms.</p>
+
+<h3 id="plugin-exec-proxy">Plugin Exec Proxy</h3>
+
+<p>On Windows, Cordova provides a proxy that you can use to register an object that will handle all <code class="language-plaintext highlighter-rouge">cordova.exec</code> calls to an API. So in our case, we will assume that the code in <code class="language-plaintext highlighter-rouge">echoplugin.js</code> is handling cross platform relevant JavaScript, and we can simply write a proxy for Windows.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// in file www/echoplugin.js</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">echo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">cordova</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="dl">'</span><span class="s1">Nothing to echo.</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">},</span> <span class="dl">"</span><span class="s2">Echo</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">echo</span><span class="dl">"</span><span class="p">,</span> <span class="p">[</span><span class="nx">str</span><span class="p">]);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// in file src/windows/echopluginProxy.js</span>
+<span class="nx">cordova</span><span class="p">.</span><span class="nx">commandProxy</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">Echo</span><span class="dl">"</span><span class="p">,{</span>
+    <span class="na">echo</span><span class="p">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span><span class="nx">errorCallback</span><span class="p">,</span><span class="nx">strInput</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">strInput</span> <span class="o">||</span> <span class="o">!</span><span class="nx">strInput</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">errorCallback</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error, something was wrong with the input string. =&gt;</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">strInput</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">successCallback</span><span class="p">(</span><span class="nx">strInput</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">echo</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// or alternative syntax</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">echo</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">strInput</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">strInput</span> <span class="o">||</span> <span class="o">!</span><span class="nx">strInput</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">errorCallback</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error, something was wrong with the input string. =&gt;</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">strInput</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">successCallback</span><span class="p">(</span><span class="nx">strInput</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">echo</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cordova/exec/proxy</span><span class="dl">'</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">Echo</span><span class="dl">'</span><span class="p">,</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">www/echoplugin.js</code> file will forward the <code class="language-plaintext highlighter-rouge">echo</code> function call to this proxy through the <code class="language-plaintext highlighter-rouge">cordova.exec</code> command and execute this implementation in <code class="language-plaintext highlighter-rouge">src/windows/echopluginProxy.js</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin.xml</code> file will have the settings required for our plugin. In this case, we want to add our <code class="language-plaintext highlighter-rouge">echoplugin.js</code> file in the <code class="language-plaintext highlighter-rouge">www</code> directory and the <code class="language-plaintext highlighter-rouge">echopluginProxy.js</code> file inside the <code class="language-plaintext highlighter-rouge">windows</code> source code of our application. Details of these elements can be found in the <a href="../../../plugin_ref/spec.html">Plugin.xml</a> reference.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
+    <span class="na">id=</span><span class="s">"echoplugin"</span>
+    <span class="na">version=</span><span class="s">"0.1.0"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"www/echoplugin.js"</span> <span class="na">name=</span><span class="s">"echoplugin"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;clobbers</span> <span class="na">target=</span><span class="s">"window.echoplugin"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/js-module&gt;</span>
+
+    <span class="c">&lt;!-- windows --&gt;</span>
+    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"src/windows/echopluginProxy.js"</span> <span class="na">name=</span><span class="s">"EchoProxy"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;merges</span> <span class="na">target=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/js-module&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+
+    <span class="c">&lt;!-- other platforms --&gt;</span>
+
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<p>This gives us a working Windows JavaScript plugin that uses a common file (<code class="language-plaintext highlighter-rouge">www/echoplugin.js</code>) and uses a proxy to provide the Windows only portion of implementation (<code class="language-plaintext highlighter-rouge">src/windows/echopluginProxy.js</code>). So how do we add native/managed code to this? Well we are going to start the same, the only difference will be what we do inside in echopluginProxy methods.</p>
+
+<h2 id="creating-a-windows-plugin-in-c-or-managed-code">Creating a Windows Plugin in C++ or managed code.</h2>
+
+<p>In Windows, Javascript authored apps are able to interop with native (C++) and managed code (C#, VB) by creating a Windows runtime component. You can learn the basics here and checkout more details in guides on MSDN:</p>
+<ul>
+  <li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/br230301.aspx">Creating Windows Runtime Components in C# and Visual Basic</a></li>
+  <li><a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx">Creating Windows Runtime Components in C++</a></li>
+</ul>
+
+<p>When you create your Windows Runtime Component, any class that is defined as <code class="language-plaintext highlighter-rouge">public ref class sealed</code> is considered an ‘activatable class’ and will be callable from JavaScript.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// in your header file .h</span>
+<span class="k">namespace</span> <span class="n">EchoRuntimeComponent</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">ref</span> <span class="k">class</span> <span class="nc">EchoPluginRT</span> <span class="n">sealed</span>
+    <span class="p">{</span>
+        <span class="nl">public:</span>
+        <span class="k">static</span> <span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">Echo</span><span class="p">(</span><span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">input</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// in the implementation file .cpp</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">EchoRuntimeComponent</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">Platform</span><span class="p">;</span>
+
+<span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">EchoPluginRT</span><span class="o">::</span><span class="n">Echo</span><span class="p">(</span><span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">input</span><span class="o">-&gt;</span><span class="n">IsEmpty</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"Error: input string is empty."</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">input</span><span class="o">-&gt;</span><span class="n">ToString</span><span class="p">()</span> <span class="o">+</span> <span class="s">"echo"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now in order for us to call the native code, we use the namespace, classname, and lowerCamelCase the method we are calling.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">EchoRuntimeComponent</span><span class="p">.</span><span class="nx">EchoPluginRT</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="dl">"</span><span class="s2">boom</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Moving this to our echopluginProxy.js file, we get:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// in file echopluginProxy.js</span>
+<span class="nx">cordova</span><span class="p">.</span><span class="nx">commandProxy</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">EchoPlugin</span><span class="dl">"</span><span class="p">,{</span>
+    <span class="na">echo</span><span class="p">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span> <span class="nx">errorCallback</span><span class="p">,</span> <span class="nx">strInput</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">EchoRuntimeComponent</span><span class="p">.</span><span class="nx">EchoPluginRT</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="nx">strInput</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error</span><span class="dl">"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">errorCallback</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">successCallback</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>And that’s it, we have an end to end C++ backed js callable plugin for use in Apache Cordova Windows!</p>
+
+<h3 id="considerations">Considerations</h3>
+
+<ul>
+  <li>The callback is typically async, so calling the callback right away is probably not expected by the caller. In practice, if the call is not async, you should at least use a javascript timeout to force the callback to be called asynchronously.</li>
+  <li>Activatable classes can be used to do event dispatching, async callbacks, passing your own object types, arrays, collections, overloaded methods and much more. Refer to <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx">Creating Windows Runtime Components in C++</a> for details.</li>
+</ul>
+
+<h3 id="defining-your-plugin-in-pluginxml">Defining your plugin in plugin.xml</h3>
+
+<p>Now that we have a working plugin, we need to revisit the plugin definition from earlier so we can publish it. We can now add the runtime component as a framework, through the <code class="language-plaintext highlighter-rouge">&lt;framework&gt;</code> tag inside our platfrom settings. Note that the output type of a WindowsRuntimeComponent can be either .winmd or .dll</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
+    <span class="na">id=</span><span class="s">"echoplugin"</span>
+    <span class="na">version=</span><span class="s">"0.2.0"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"www/echoplugin.js"</span> <span class="na">name=</span><span class="s">"echoplugin"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;clobbers</span> <span class="na">target=</span><span class="s">"window.echoplugin"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/js-module&gt;</span>
+
+    <span class="c">&lt;!-- windows --&gt;</span>
+    <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"windows"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"src/windows/echopluginProxy.js"</span> <span class="na">name=</span><span class="s">"EchoProxy"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;merges</span> <span class="na">target=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/js-module&gt;</span>
+        <span class="nt">&lt;framework</span> <span class="na">src=</span><span class="s">"src/windows/EchoRuntimeComponent.winmd"</span> <span class="na">custom=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/platform&gt;</span>
+
+    <span class="c">&lt;!-- other platforms --&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<p>That’s it, you now have a distributable plugin that you can share with the world!</p>

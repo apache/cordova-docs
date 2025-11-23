@@ -1,0 +1,50 @@
+<h1 id="splashscreenshow">splashscreen.show</h1>
+
+<p>Displays the splash screen.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.splashscreen.show();
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>This method displays the application’s splash screen.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.splashscreen.show();
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Splashscreen Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.show();
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

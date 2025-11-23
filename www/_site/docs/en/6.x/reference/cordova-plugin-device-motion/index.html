@@ -1,0 +1,228 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!---
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Android</th>
+      <th style="text-align: center">iOS</th>
+      <th style="text-align: center">Windows 8.1 Store</th>
+      <th style="text-align: center">Windows 8.1 Phone</th>
+      <th style="text-align: center">Windows 10 Store</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device-motion/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device-motion" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device-motion/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device-motion" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device-motion/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device-motion" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device-motion/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device-motion" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device-motion/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device-motion" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-device-motion"><img src="https://travis-ci.org/apache/cordova-plugin-device-motion.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cordova-plugin-device-motion">cordova-plugin-device-motion</h1>
+
+<p>This plugin provides access to the device’s accelerometer. The accelerometer is
+a motion sensor that detects the change (<em>delta</em>) in movement relative to the
+current device orientation, in three dimensions along the <em>x</em>, <em>y</em>, and <em>z</em>
+axis.</p>
+
+<p>Access is via a global <code class="language-plaintext highlighter-rouge">navigator.accelerometer</code> object.</p>
+
+<p>Although the object is attached to the global scoped <code class="language-plaintext highlighter-rouge">navigator</code>, it is not available until after the <code class="language-plaintext highlighter-rouge">deviceready</code> event.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.accelerometer);
+}
+</code></pre></div></div>
+
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Device%20Motion%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-device-motion
+</code></pre></div></div>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li>navigator.accelerometer.getCurrentAcceleration</li>
+  <li>navigator.accelerometer.watchAcceleration</li>
+  <li>navigator.accelerometer.clearWatch</li>
+</ul>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li>Acceleration</li>
+</ul>
+
+<h2 id="navigatoraccelerometergetcurrentacceleration">navigator.accelerometer.getCurrentAcceleration</h2>
+
+<p>Get the current acceleration along the <em>x</em>, <em>y</em>, and <em>z</em> axes.</p>
+
+<p>These acceleration values are returned to the <code class="language-plaintext highlighter-rouge">accelerometerSuccess</code>
+callback function.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+</code></pre></div></div>
+
+<h3 id="example">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(acceleration) {
+    alert('Acceleration X: ' + acceleration.x + '\n' +
+          'Acceleration Y: ' + acceleration.y + '\n' +
+          'Acceleration Z: ' + acceleration.z + '\n' +
+          'Timestamp: '      + acceleration.timestamp + '\n');
+}
+
+function onError() {
+    alert('onError!');
+}
+
+navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+</code></pre></div></div>
+
+<h3 id="browser-quirks">Browser Quirks</h3>
+
+<p>Values for X, Y, Z motion are all randomly generated in order to simulate the accelerometer.</p>
+
+<h3 id="android-quirks">Android Quirks</h3>
+
+<p>The accelerometer is called with the <code class="language-plaintext highlighter-rouge">SENSOR_DELAY_UI</code> flag, which limits the maximum readout frequency to something between 20 and 60 Hz, depending on the device. Values for <strong>period</strong> corresponding to higher frequencies will result in duplicate samples. More details can be found in the <a href="http://developer.android.com/guide/topics/sensors/sensors_overview.html#sensors-monitor">Android API Guide</a>.</p>
+
+<h3 id="ios-quirks">iOS Quirks</h3>
+
+<ul>
+  <li>
+    <p>iOS doesn’t recognize the concept of getting the current acceleration at any given point.</p>
+  </li>
+  <li>
+    <p>You must watch the acceleration and capture the data at given time intervals.</p>
+  </li>
+  <li>
+    <p>Thus, the <code class="language-plaintext highlighter-rouge">getCurrentAcceleration</code> function yields the last value reported from a <code class="language-plaintext highlighter-rouge">watchAccelerometer</code> call.</p>
+  </li>
+</ul>
+
+<h2 id="navigatoraccelerometerwatchacceleration">navigator.accelerometer.watchAcceleration</h2>
+
+<p>Retrieves the device’s current <code class="language-plaintext highlighter-rouge">Acceleration</code> at a regular interval, executing
+the <code class="language-plaintext highlighter-rouge">accelerometerSuccess</code> callback function each time. Specify the interval in
+milliseconds via the <code class="language-plaintext highlighter-rouge">acceleratorOptions</code> object’s <code class="language-plaintext highlighter-rouge">frequency</code> parameter.</p>
+
+<p>The returned watch ID references the accelerometer’s watch interval,
+and can be used with <code class="language-plaintext highlighter-rouge">navigator.accelerometer.clearWatch</code> to stop watching the
+accelerometer.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
+                                                       accelerometerError,
+                                                       accelerometerOptions);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>accelerometerOptions</strong>: An object with the following optional keys:
+    <ul>
+      <li><strong>frequency</strong>: requested frequency of calls to accelerometerSuccess with acceleration data in Milliseconds. <em>(Number)</em> (Default: 10000)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="example-1">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(acceleration) {
+    alert('Acceleration X: ' + acceleration.x + '\n' +
+          'Acceleration Y: ' + acceleration.y + '\n' +
+          'Acceleration Z: ' + acceleration.z + '\n' +
+          'Timestamp: '      + acceleration.timestamp + '\n');
+}
+
+function onError() {
+    alert('onError!');
+}
+
+var options = { frequency: 3000 };  // Update every 3 seconds
+
+var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+</code></pre></div></div>
+
+<h3 id="ios-quirks-1">iOS Quirks</h3>
+
+<p>The API calls the success callback function at the interval requested,
+but restricts the range of requests to the device between 40ms and
+1000ms. For example, if you request an interval of 3 seconds,
+(3000ms), the API requests data from the device every 1 second, but
+only executes the success callback every 3 seconds.</p>
+
+<h2 id="navigatoraccelerometerclearwatch">navigator.accelerometer.clearWatch</h2>
+
+<p>Stop watching the <code class="language-plaintext highlighter-rouge">Acceleration</code> referenced by the <code class="language-plaintext highlighter-rouge">watchID</code> parameter.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.accelerometer.clearWatch(watchID);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>watchID</strong>: The ID returned by <code class="language-plaintext highlighter-rouge">navigator.accelerometer.watchAcceleration</code>.</li>
+</ul>
+
+<h3 id="example-2">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
+// ... later on ...
+
+navigator.accelerometer.clearWatch(watchID);
+</code></pre></div></div>
+
+<h2 id="acceleration">Acceleration</h2>
+
+<p>Contains <code class="language-plaintext highlighter-rouge">Accelerometer</code> data captured at a specific point in time.
+Acceleration values include the effect of gravity (9.81 m/s^2), so that when a
+device lies flat and facing up, <em>x</em>, <em>y</em>, and <em>z</em> values returned should be
+<code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">0</code>, and <code class="language-plaintext highlighter-rouge">9.81</code>.</p>
+
+<h3 id="properties">Properties</h3>
+
+<ul>
+  <li><strong>x</strong>:  Amount of acceleration on the x-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>y</strong>:  Amount of acceleration on the y-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>z</strong>:  Amount of acceleration on the z-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>timestamp</strong>: Creation timestamp in milliseconds. <em>(DOMTimeStamp)</em></li>
+</ul>

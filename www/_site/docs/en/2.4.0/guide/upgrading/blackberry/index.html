@@ -1,0 +1,154 @@
+<h1 id="upgrading-cordova-blackberry">Upgrading Cordova BlackBerry</h1>
+
+<p>This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.</p>
+
+<h2 id="upgrade-to-240-from-230">Upgrade to 2.4.0 from 2.3.0</h2>
+
+<p>Updating just the www folder:</p>
+
+<ol>
+  <li>Open your <code class="language-plaintext highlighter-rouge">www/</code> folder, which contains your app.</li>
+  <li>Remove and update the .jar file in the <code class="language-plaintext highlighter-rouge">ext/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">ext-air/</code> folder.</li>
+  <li>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.4.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code class="language-plaintext highlighter-rouge">playbook/</code> folder.</li>
+      <li>If BlackBerry10, then update the .js file in the <code class="language-plaintext highlighter-rouge">qnx/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.4.0.js</code> file.</li>
+</ol>
+
+<p>Updating the sample folder (ie, updating using the ant tools):</p>
+
+<ol>
+  <li>Open the <code class="language-plaintext highlighter-rouge">sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code class="language-plaintext highlighter-rouge">cordova.2.3.0/ext/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">cordova.2.3.0/ext-air/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">cordova.2.3.0/ext-qnx/</code> folder.</li>
+  <li>Update the .js file in the <code class="language-plaintext highlighter-rouge">cordova.2.3.0/javascript/</code> folder.</li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">sample/lib/</code> folder and rename the <code class="language-plaintext highlighter-rouge">cordova.2.3.0/</code> folder to <code class="language-plaintext highlighter-rouge">cordova.2.4.0/</code>.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">ant blackberry build</code> or <code class="language-plaintext highlighter-rouge">ant playbook build</code> to update the <code class="language-plaintext highlighter-rouge">www/</code> folder with updated Cordova.</li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">www/</code> folder and update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.4.0.js</code> file</li>
+</ol>
+
+<h2 id="upgrade-to-200-from-190">Upgrade to 2.0.0 from 1.9.0</h2>
+
+<p>Updating just the www folder:</p>
+
+<ol>
+  <li>Open your <code class="language-plaintext highlighter-rouge">www/</code> folder, which contains your app.</li>
+  <li>Remove and update the .jar file in the <code class="language-plaintext highlighter-rouge">ext/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">ext-air/</code> folder.</li>
+  <li>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.0.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code class="language-plaintext highlighter-rouge">playbook/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.0.0.js</code> file.</li>
+  <li>
+    <p>Update your <code class="language-plaintext highlighter-rouge">www/plugins.xml</code> file. Two plugins changed their
+namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
+<a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+ &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+ &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Updating the sample folder (ie, updating using the ant tools):</p>
+
+<ol>
+  <li>Open the <code class="language-plaintext highlighter-rouge">sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code class="language-plaintext highlighter-rouge">cordova.1.9.0/ext/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">cordova.1.9.0/ext-air/</code> folder.</li>
+  <li>Update the .js file in the <code class="language-plaintext highlighter-rouge">cordova.1.9.0/javascript/</code> folder.</li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">sample/lib/</code> folder and rename the <code class="language-plaintext highlighter-rouge">cordova.1.9.0/</code> folder to <code class="language-plaintext highlighter-rouge">cordova.2.0.0/</code>.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">ant blackberry build</code> or <code class="language-plaintext highlighter-rouge">ant playbook build</code> to update the <code class="language-plaintext highlighter-rouge">www/</code> folder with updated Cordova.</li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">www/</code> folder and update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.0.0.js</code> file.</li>
+  <li>
+    <p>Open the <code class="language-plaintext highlighter-rouge">www/</code> folder and update the <code class="language-plaintext highlighter-rouge">plugins.xml</code> file. Two plugins
+changed their namespace/service label. Change the old entries for the
+<a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+  &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+  &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ul>
+  <li>To upgrade to 1.8.0, please go from 1.7.0</li>
+</ul>
+
+<h2 id="upgrade-to-180-from-170">Upgrade to 1.8.0 from 1.7.0</h2>
+
+<p>Updating just the www folder:</p>
+
+<ol>
+  <li>Open your <code class="language-plaintext highlighter-rouge">www/</code> folder, which contains your app.</li>
+  <li>Remove and update the .jar file in the <code class="language-plaintext highlighter-rouge">ext/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">ext-air/</code> folder.</li>
+  <li>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> into your project.
+    <ul>
+      <li>If playbook, then update the .js file in the <code class="language-plaintext highlighter-rouge">playbook/</code> folder.</li>
+    </ul>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> file.</li>
+  <li>
+    <p>Update your <code class="language-plaintext highlighter-rouge">www/plugins.xml</code> file. Two plugins changed their
+namespace/service label. Change the old entries for the <a href="../../../cordova/media/capture/capture.html">Capture</a> and
+<a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+ &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+ &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Updating the sample folder (ie, updating using the ant tools):</p>
+
+<ol>
+  <li>Open the <code class="language-plaintext highlighter-rouge">sample/lib/</code> folder.</li>
+  <li>Update the .jar file in the <code class="language-plaintext highlighter-rouge">cordova.1.7.0/ext/</code> folder.</li>
+  <li>Update the contents of the <code class="language-plaintext highlighter-rouge">cordova.1.7.0/ext-air/</code> folder.</li>
+  <li>Update the .js file in the <code class="language-plaintext highlighter-rouge">cordova.1.7.0/javascript/</code> folder.</li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">sample/lib/</code> folder and rename the <code class="language-plaintext highlighter-rouge">cordova.1.7.0/</code> folder to <code class="language-plaintext highlighter-rouge">cordova.1.8.0/</code>.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">ant blackberry build</code> or <code class="language-plaintext highlighter-rouge">ant playbook build</code> to update the <code class="language-plaintext highlighter-rouge">www/</code> folder with updated Cordova.</li>
+  <li>Open the <code class="language-plaintext highlighter-rouge">www/</code> folder and update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> file.</li>
+  <li>
+    <p>Open the <code class="language-plaintext highlighter-rouge">www/</code> folder and update the <code class="language-plaintext highlighter-rouge">plugins.xml</code> file. Two plugins
+changed their namespace/service label. Change the old entries for the
+<a href="../../../cordova/media/capture/capture.html">Capture</a> and <a href="../../../cordova/contacts/Contact/contact.html">Contact</a> plugins from:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/&gt;
+  &lt;plugin name="Contact" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+
+    <p>To:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/&gt;
+  &lt;plugin name="Contacts" value="org.apache.cordova.pim.Contact"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+

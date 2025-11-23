@@ -1,0 +1,80 @@
+<h1 id="globalizationdatetostring">globalization.dateToString</h1>
+
+<p>Returns a date formatted as a string according to the client’s locale and timezone.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.dateToString(date, successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Returns the formatted date <code class="language-plaintext highlighter-rouge">String</code> via a <code class="language-plaintext highlighter-rouge">value</code> property accessible
+from the object passed as a parameter to the <code class="language-plaintext highlighter-rouge">successCallback</code>.</p>
+
+<p>The inbound <code class="language-plaintext highlighter-rouge">date</code> parameter should be of type <code class="language-plaintext highlighter-rouge">Date</code>.</p>
+
+<p>If there is an error formatting the date, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and its default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{formatLength:'short', selector:'date and time'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.formatLength</code> can be <code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">medium</code>, <code class="language-plaintext highlighter-rouge">long</code>, or <code class="language-plaintext highlighter-rouge">full</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.selector</code> can be <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">time</code> or <code class="language-plaintext highlighter-rouge">date and time</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>If the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale, this displays a popup
+dialog with text similar to <code class="language-plaintext highlighter-rouge">date: 9/25/2012 4:21PM</code> using the default
+options:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.dateToString(
+    new Date(),
+    function (date) { alert('date: ' + date.value + '\n'); },
+    function () { alert('Error getting dateString\n'); },
+    { formatLength: 'short', selector: 'date and time' }
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;dateToString Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkDateString() {
+      navigator.globalization.dateToString(
+        new Date(),
+        function (date) {alert('date: ' + date.value + '\n');},
+        function () {alert('Error getting dateString\n');,
+        {formatLength:'short', selector:'date and time'}}
+      );
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDateString()"&gt;Click for date string&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h2>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">formatLength</code> option supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</li>
+</ul>

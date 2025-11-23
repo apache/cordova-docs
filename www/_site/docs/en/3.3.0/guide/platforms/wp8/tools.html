@@ -1,0 +1,122 @@
+<h1 id="windows-phone-shell-tool-guide">Windows Phone Shell Tool Guide</h1>
+
+<p>This guide shows how to use Cordova’s set of platform-centered shell
+tools to develop Windows Phone apps for both versions 7 and 8. This
+development path, discussed in the <a href="../../overview/index.html">Overview</a>, may offer you a greater
+range of development options for the Windows Phone platform than the
+cross-platform CLI tool described in <a href="../../cli/index.html">The Command-Line Interface</a>.
+Before using either development path, you must first configure the SDK
+environment as described in the <a href="../wp7/index.html">Windows Phone 7 Platform Guide</a> or
+the <a href="index.html">Windows Phone 8 Platform Guide</a>.</p>
+
+<p>To enable shell tools for Windows Phone development, download Cordova
+from <a href="http://cordova.apache.org">cordova.apache.org</a>. The download
+contains separate archives for each platform. Expand each you wish to
+target, <code class="language-plaintext highlighter-rouge">wp8</code> in this case, which in turn is forked into <code class="language-plaintext highlighter-rouge">wp7</code> and
+<code class="language-plaintext highlighter-rouge">wp8</code> subdirectories. The relevant tools are typically available
+in the top-level <code class="language-plaintext highlighter-rouge">bin</code> directory, otherwise consult the <strong>README</strong>
+file for more detailed directions.</p>
+
+<p>These tools allow you to create, build, and run apps.  For information
+on the all-purpose command-line interface that enables plugin
+features, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>. See Application Plugins
+for details on how to develop plugins.</p>
+
+<h2 id="windows-phone">Windows Phone</h2>
+
+<p>The Windows Phone command-line tools support creating, building, and
+running new projects. Commands must be run from a cmd or powershell
+prompt.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">WP8</code> repo now includes code to build both WP7 and WP8 apps.  The
+repo has subdirectories for each: <code class="language-plaintext highlighter-rouge">wp7/</code> and <code class="language-plaintext highlighter-rouge">wp8/</code>.</p>
+
+<h2 id="create-a-project">Create a Project</h2>
+
+<p>There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 application.</p>
+
+<h3 id="run-the-batch-file-to-create-and-install-the-templates">Run the Batch File to Create and Install the Templates</h3>
+
+<ul>
+  <li>
+    <p>The root of the repo contains a <code class="language-plaintext highlighter-rouge">createTemplates.bat</code> file.
+Double-clicking it generates two <code class="language-plaintext highlighter-rouge">.zip</code> files:
+<code class="language-plaintext highlighter-rouge">CordovaWP7_x_x_x.zip</code> and <code class="language-plaintext highlighter-rouge">CordovaWP8_x_x_x.zip</code>, where <em>3.3.0</em>
+represents the current version number. To easily use these files in
+Visual Studio, copy them to <code class="language-plaintext highlighter-rouge">My Documents\Visual Studio
+2012\Templates\ProjectTemplates\</code>. You are then able to create
+new Apache Cordova Windows Phone apps from Visual Studio’s
+<strong>File → New Project</strong> menu.</p>
+  </li>
+  <li>
+    <p>If you run the batch file from the command line, you can also call with a parameter to install automatically</p>
+  </li>
+</ul>
+
+<p>Run the script :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt;createTemplates.bat -install
+</code></pre></div></div>
+
+<h3 id="use-the-create-scripts-on-the-command-line">Use the Create Scripts on the Command Line</h3>
+
+<p>Run the <code class="language-plaintext highlighter-rouge">create</code> command, specifying the existing path to the project,
+the reverse-domain-style package identifier, and the app’s display
+name.  Here is the syntax for both Windows Phone 7 and 8:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt;.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
+    &gt;.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
+
+    &gt;PathToNewProject : The path to where you wish to create the project
+    &gt;PackageName      : The namespace for the project (default is Cordova.Example)
+    &gt;AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
+
+    &gt;examples:
+    &gt;.\wp7\bin\create C:\path\to\my_new_project
+    &gt;.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
+</code></pre></div></div>
+
+<p>Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)</p>
+
+<p>Build and Run it</p>
+
+<h2 id="building-the-project-clean-then-build">Building the Project (Clean, then Build)</h2>
+
+<ul>
+  <li>
+    <p>Debug</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ C:\path\to\my_new_project\cordova\build --debug
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Release</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ C:\path\to\my_new_project\cordova\build --release
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="running-the-app">Running the App</h2>
+
+<p>Run the ‘run’ command with the following <em>optional</em> parameters</p>
+
+<ul>
+  <li>
+    <p>Target specification. This includes <code class="language-plaintext highlighter-rouge">--emulator</code>, <code class="language-plaintext highlighter-rouge">--device</code>, or <code class="language-plaintext highlighter-rouge">--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code class="language-plaintext highlighter-rouge">--debug</code>, <code class="language-plaintext highlighter-rouge">--release</code>, or <code class="language-plaintext highlighter-rouge">--nobuild</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ C:\path\to\my_new_project\cordova\run [Target] [Build]
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>By default the <code class="language-plaintext highlighter-rouge">run</code> command is called with <code class="language-plaintext highlighter-rouge">--emulator --debug</code> if flags are not provided.</p>
+
+<h2 id="cleaning">Cleaning</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ C:\path\to\my_new_project\cordova\clean
+</code></pre></div></div>
+

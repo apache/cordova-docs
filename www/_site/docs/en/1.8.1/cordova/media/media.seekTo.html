@@ -1,0 +1,138 @@
+<h1 id="mediaseekto">media.seekTo</h1>
+
+<p>Sets the current position within an audio file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>media.seekTo(milliseconds);
+</code></pre></div></div>
+
+<h2 id="parameters">Parameters</h2>
+
+<ul>
+  <li><strong>milliseconds</strong>: The position to set the playback position within the audio in milliseconds. .</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>Function <code class="language-plaintext highlighter-rouge">media.seekTo</code> is an asynchronous function that updates the current position of the underlying audio file of a <a href="media.html">Media</a> object. Also updates the <strong>_position</strong> parameter within the <a href="media.html">Media</a> object.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // Audio player
+    //
+    var my_media = new Media(src, onSuccess, onError);
+	my_media.play();
+    // SeekTo to 10 seconds after 5 seconds
+    setTimeout(function() {
+        my_media.seekTo(10000);
+    }, 5000);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Media Example&lt;/title&gt;
+    
+        &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" charset="utf-8"&gt;
+    
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+        }
+    
+        // Audio player
+        //
+        var my_media = null;
+        var mediaTimer = null;
+    
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+    
+            // Play audio
+            my_media.play();
+            // Update media position every second
+    		mediaTimer = setInterval(function() {
+        		// get media position
+       			my_media.getCurrentPosition(
+            		// success callback
+            		function(position) {
+                		if (position &gt; -1) {
+                    		setAudioPosition(position + " sec");
+                		}
+            		},
+            		// error callback
+            		function(e) {
+                		console.log("Error getting pos=" + e);
+            		}
+        		);
+    		}, 1000);
+    		// SeekTo to 10 seconds after 5 seconds
+    		setTimeout(function() {
+        		my_media.seekTo(10000);
+       		}, 5000);
+ 		}
+    
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+    
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+    
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+    
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+    
+        &lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');"&gt;Play Audio&lt;/a&gt;
+        &lt;a href="#" class="btn large" onclick="stopAudio();"&gt;Stop Playing Audio&lt;/a&gt;
+        &lt;p id="audio_position"&gt;&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="blackberry-webworks-quirks">BlackBerry WebWorks Quirks</h2>
+
+<ul>
+  <li>This API is not supported on BlackBerry OS 5 devices.</li>
+</ul>

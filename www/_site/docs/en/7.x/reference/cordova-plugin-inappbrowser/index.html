@@ -1,0 +1,836 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Android 4.4</th>
+      <th style="text-align: center">Android 5.1</th>
+      <th style="text-align: center">Android 6.0</th>
+      <th style="text-align: center">iOS 9.3</th>
+      <th style="text-align: center">iOS 10.0</th>
+      <th style="text-align: center">Windows 10 Store</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-inappbrowser/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-inappbrowser" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-inappbrowser/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-inappbrowser" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-inappbrowser/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-inappbrowser" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-inappbrowser/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-inappbrowser" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-inappbrowser/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-inappbrowser" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-inappbrowser/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-inappbrowser" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-inappbrowser"><img src="https://travis-ci.org/apache/cordova-plugin-inappbrowser.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cordova-plugin-inappbrowser">cordova-plugin-inappbrowser</h1>
+
+<p>You can show helpful articles, videos, and web resources inside of your app. Users can view web pages without leaving your app.</p>
+
+<blockquote>
+  <p>To get a few ideas, check out the <a href="#sample">sample</a> at the bottom of this page or go straight to the <a href="#reference">reference</a> content.</p>
+</blockquote>
+
+<p>This plugin provides a web browser view that displays when calling <code class="language-plaintext highlighter-rouge">cordova.InAppBrowser.open()</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">cordova.InAppBrowser.open()</code> function is defined to be a drop-in replacement
+for the <code class="language-plaintext highlighter-rouge">window.open()</code> function.  Existing <code class="language-plaintext highlighter-rouge">window.open()</code> calls can use the
+InAppBrowser window, by replacing window.open:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.open = cordova.InAppBrowser.open;
+</code></pre></div></div>
+
+<p>The InAppBrowser window behaves like a standard web browser,
+and can’t access Cordova APIs. For this reason, the InAppBrowser is recommended
+if you need to load third-party (untrusted) content, instead of loading that
+into the main Cordova webview. The InAppBrowser is not subject to the
+whitelist, nor is opening links in the system browser.</p>
+
+<p>The InAppBrowser provides by default its own GUI controls for the user (back,
+forward, done).</p>
+
+<p>For backwards compatibility, this plugin also hooks <code class="language-plaintext highlighter-rouge">window.open</code>.
+However, the plugin-installed hook of <code class="language-plaintext highlighter-rouge">window.open</code> can have unintended side
+effects (especially if this plugin is included only as a dependency of another
+plugin).  The hook of <code class="language-plaintext highlighter-rouge">window.open</code> will be removed in a future major release.
+Until the hook is removed from the plugin, apps can manually restore the default
+behaviour:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>delete window.open // Reverts the call back to it's prototype's default
+</code></pre></div></div>
+
+<p>Although <code class="language-plaintext highlighter-rouge">window.open</code> is in the global scope, InAppBrowser is not available until after the <code class="language-plaintext highlighter-rouge">deviceready</code> event.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log("window.open works well");
+}
+</code></pre></div></div>
+
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20InAppBrowser%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2 id="reference"><a id="reference">Reference</a></h2>
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-inappbrowser
+</code></pre></div></div>
+
+<p>If you want all page loads in your app to go through the InAppBrowser, you can
+simply hook <code class="language-plaintext highlighter-rouge">window.open</code> during initialization.  For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+</code></pre></div></div>
+
+<h2 id="cordovainappbrowseropen">cordova.InAppBrowser.open</h2>
+
+<p>Opens a URL in a new <code class="language-plaintext highlighter-rouge">InAppBrowser</code> instance, the current browser
+instance, or the system browser.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open(url, target, options);
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>ref</strong>: Reference to the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window when the target is set to <code class="language-plaintext highlighter-rouge">'_blank'</code>. <em>(InAppBrowser)</em></p>
+  </li>
+  <li>
+    <p><strong>url</strong>: The URL to load <em>(String)</em>. Call <code class="language-plaintext highlighter-rouge">encodeURI()</code> on this if the URL contains Unicode characters.</p>
+  </li>
+  <li>
+    <p><strong>target</strong>: The target in which to load the URL, an optional parameter that defaults to <code class="language-plaintext highlighter-rouge">_self</code>. <em>(String)</em></p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">_self</code>: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">_blank</code>: Opens in the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">_system</code>: Opens in the system’s web browser.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>options</strong>: Options for the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>. Optional, defaulting to: <code class="language-plaintext highlighter-rouge">location=yes</code>. <em>(String)</em></p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">options</code> string must not contain any blank space, and each feature’s name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:</p>
+
+    <ul>
+      <li><strong>location</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to turn the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>’s location bar on or off.</li>
+    </ul>
+
+    <p>Android only:</p>
+
+    <ul>
+      <li><strong>hidden</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code class="language-plaintext highlighter-rouge">no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>clearcache</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to have the browser’s cookie cache cleared before the new window is opened</li>
+      <li><strong>clearsessioncache</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to have the session cookie cache cleared before the new window is opened</li>
+      <li><strong>zoom</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to show Android browser’s zoom controls, set to <code class="language-plaintext highlighter-rouge">no</code> to hide them.  Default value is <code class="language-plaintext highlighter-rouge">yes</code>.</li>
+      <li><strong>hardwareback</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to use the hardware back button to navigate backwards through the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>’s history. If there is no previous page, the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> will close.  The default value is <code class="language-plaintext highlighter-rouge">yes</code>, so you must set it to <code class="language-plaintext highlighter-rouge">no</code> if you want the back button to simply close the InAppBrowser.</li>
+      <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>shouldPauseOnSuspend</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> to make InAppBrowser WebView to pause/resume with the app to stop background audio (this may be required to avoid Google Play issues like described in <a href="https://issues.apache.org/jira/browse/CB-11013">CB-11013</a>).</li>
+      <li><strong>useWideViewPort</strong>: Sets whether the WebView should enable support for the “viewport” HTML meta tag or should use a wide viewport. When the value of the setting is <code class="language-plaintext highlighter-rouge">no</code>, the layout width is always set to the width of the WebView control in device-independent (CSS) pixels. When the value is <code class="language-plaintext highlighter-rouge">yes</code> and the page contains the viewport meta tag, the value of the width specified in the tag is used. If the page does not contain the tag or does not provide a width, then a wide viewport will be used. (defaults to <code class="language-plaintext highlighter-rouge">yes</code>).</li>
+    </ul>
+
+    <p>iOS only:</p>
+
+    <ul>
+      <li><strong>closebuttoncaption</strong>: set to a string to use as the <strong>Done</strong> button’s caption. Note that you need to localize this value yourself.</li>
+      <li><strong>disallowoverscroll</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> (default is <code class="language-plaintext highlighter-rouge">no</code>). Turns on/off the UIWebViewBounce property.</li>
+      <li><strong>hidden</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code class="language-plaintext highlighter-rouge">no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>clearcache</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to have the browser’s cookie cache cleared before the new window is opened</li>
+      <li><strong>clearsessioncache</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to have the session cookie cache cleared before the new window is opened</li>
+      <li><strong>toolbar</strong>:  set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to turn the toolbar on or off for the InAppBrowser (defaults to <code class="language-plaintext highlighter-rouge">yes</code>)</li>
+      <li><strong>enableViewportScale</strong>:  Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to prevent viewport scaling through a meta tag (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> to prevent HTML5 audio or video from autoplaying (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>allowInlineMediaPlayback</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML’s <code class="language-plaintext highlighter-rouge">video</code> element must also include the <code class="language-plaintext highlighter-rouge">webkit-playsinline</code> attribute (defaults to <code class="language-plaintext highlighter-rouge">no</code>)</li>
+      <li><strong>keyboardDisplayRequiresUserAction</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to open the keyboard when form elements receive focus via JavaScript’s <code class="language-plaintext highlighter-rouge">focus()</code> call (defaults to <code class="language-plaintext highlighter-rouge">yes</code>).</li>
+      <li><strong>suppressesIncrementalRendering</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to wait until all new view content is received before being rendered (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>presentationstyle</strong>:  Set to <code class="language-plaintext highlighter-rouge">pagesheet</code>, <code class="language-plaintext highlighter-rouge">formsheet</code> or <code class="language-plaintext highlighter-rouge">fullscreen</code> to set the <a href="http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle">presentation style</a> (defaults to <code class="language-plaintext highlighter-rouge">fullscreen</code>).</li>
+      <li><strong>transitionstyle</strong>: Set to <code class="language-plaintext highlighter-rouge">fliphorizontal</code>, <code class="language-plaintext highlighter-rouge">crossdissolve</code> or <code class="language-plaintext highlighter-rouge">coververtical</code> to set the <a href="http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle">transition style</a> (defaults to <code class="language-plaintext highlighter-rouge">coververtical</code>).</li>
+      <li><strong>toolbarposition</strong>: Set to <code class="language-plaintext highlighter-rouge">top</code> or <code class="language-plaintext highlighter-rouge">bottom</code> (default is <code class="language-plaintext highlighter-rouge">bottom</code>). Causes the toolbar to be at the top or bottom of the window.</li>
+    </ul>
+
+    <p>Windows only:</p>
+
+    <ul>
+      <li><strong>hidden</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to create the browser and load the page, but not show it. The loadstop event fires when loading is complete. Omit or set to <code class="language-plaintext highlighter-rouge">no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>fullscreen</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to create the browser control without a border around it. Please note that if <strong>location=no</strong> is also specified, there will be no control presented to user to close IAB window.</li>
+      <li><strong>hardwareback</strong>: works the same way as on Android platform.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>OSX</li>
+  <li>Windows 8 and 8.1</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+var ref2 = cordova.InAppBrowser.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
+</code></pre></div></div>
+
+<h3 id="firefox-os-quirks">Firefox OS Quirks</h3>
+
+<p>As plugin doesn’t enforce any design there is a need to add some CSS rules if
+opened with <code class="language-plaintext highlighter-rouge">target='_blank'</code>. The rules might look like these</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.inAppBrowserWrap</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0.75</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">235</span><span class="p">,</span><span class="m">235</span><span class="p">,</span><span class="m">235</span><span class="p">,</span><span class="m">1.0</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.inAppBrowserWrap</span> <span class="nt">menu</span> <span class="p">{</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">list-style-type</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">padding-left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.inAppBrowserWrap</span> <span class="nt">menu</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">3px</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">30</span><span class="p">,</span><span class="m">0.50</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.inAppBrowserWrap</span> <span class="nt">menu</span> <span class="nt">li</span><span class="nc">.disabled</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="m">#777</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="osx-quirks">OSX Quirks</h3>
+
+<p>At the moment the only supported target in OSX is <code class="language-plaintext highlighter-rouge">_system</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">_blank</code> and <code class="language-plaintext highlighter-rouge">_self</code> targets are not yet implemented and are ignored silently. Pull requests and patches to get these to work are greatly appreciated.</p>
+
+<h3 id="windows-quirks">Windows Quirks</h3>
+
+<p>Windows 8.0, 8.1 and Windows Phone 8.1 don’t support remote urls to be opened in the Cordova WebView so remote urls are always showed in the system’s web browser if opened with <code class="language-plaintext highlighter-rouge">target='_self'</code>.</p>
+
+<p>On Windows 10 if the URL is NOT in the white list and is opened with <code class="language-plaintext highlighter-rouge">target='_self'</code> it will be showed in the system’s web browser instead of InAppBrowser popup.</p>
+
+<p>Similar to Firefox OS IAB window visual behaviour can be overridden via <code class="language-plaintext highlighter-rouge">inAppBrowserWrap</code>/<code class="language-plaintext highlighter-rouge">inAppBrowserWrapFullscreen</code> CSS classes</p>
+
+<h3 id="browser-quirks">Browser Quirks</h3>
+
+<ul>
+  <li>
+    <p>Plugin is implemented via iframe,</p>
+  </li>
+  <li>
+    <p>Navigation history (<code class="language-plaintext highlighter-rouge">back</code> and <code class="language-plaintext highlighter-rouge">forward</code> buttons in LocationBar) is not implemented.</p>
+  </li>
+</ul>
+
+<h2 id="inappbrowser">InAppBrowser</h2>
+
+<p>The object returned from a call to <code class="language-plaintext highlighter-rouge">cordova.InAppBrowser.open</code> when the target is set to <code class="language-plaintext highlighter-rouge">'_blank'</code>.</p>
+
+<h3 id="methods">Methods</h3>
+
+<ul>
+  <li>addEventListener</li>
+  <li>removeEventListener</li>
+  <li>close</li>
+  <li>show</li>
+  <li>hide</li>
+  <li>executeScript</li>
+  <li>insertCSS</li>
+</ul>
+
+<h2 id="inappbrowseraddeventlistener">InAppBrowser.addEventListener</h2>
+
+<blockquote>
+  <p>Adds a listener for an event from the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>. (Only available when the target is set to <code class="language-plaintext highlighter-rouge">'_blank'</code>)</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.addEventListener(eventname, callback);
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>ref</strong>: reference to the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window <em>(InAppBrowser)</em></p>
+  </li>
+  <li>
+    <p><strong>eventname</strong>: the event to listen for <em>(String)</em></p>
+
+    <ul>
+      <li><strong>loadstart</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> starts to load a URL.</li>
+      <li><strong>loadstop</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> finishes loading a URL.</li>
+      <li><strong>loaderror</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> encounters an error when loading a URL.</li>
+      <li><strong>exit</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window is closed.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>callback</strong>: the function that executes when the event fires. The function is passed an <code class="language-plaintext highlighter-rouge">InAppBrowserEvent</code> object as a parameter.</p>
+  </li>
+</ul>
+
+<h2 id="example-1">Example</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">var</span> <span class="nx">inAppBrowserRef</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">_blank</span><span class="dl">"</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">location=yes,hidden=yes</span><span class="dl">"</span><span class="p">;</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstart</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstop</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaderror</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading please wait ...</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="s2">body{font-size: 25px;</span><span class="dl">"</span> <span class="p">});</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">scriptErrorMesssage</span> <span class="o">=</span>
+       <span class="dl">"</span><span class="s2">alert('Sorry we cannot open that page. Message from the server is : </span><span class="dl">"</span>
+       <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">');</span><span class="dl">"</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+           <span class="dl">"</span><span class="s2">Sorry we couldn't open that page. Message from the server is : '</span><span class="dl">"</span>
+           <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">'</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="inappbrowserevent-properties">InAppBrowserEvent Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>type</strong>: the eventname, either <code class="language-plaintext highlighter-rouge">loadstart</code>, <code class="language-plaintext highlighter-rouge">loadstop</code>, <code class="language-plaintext highlighter-rouge">loaderror</code>, or <code class="language-plaintext highlighter-rouge">exit</code>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>url</strong>: the URL that was loaded. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>code</strong>: the error code, only in the case of <code class="language-plaintext highlighter-rouge">loaderror</code>. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>message</strong>: the error message, only in the case of <code class="language-plaintext highlighter-rouge">loaderror</code>. <em>(String)</em></p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-1">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows 8 and 8.1</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="browser-quirks-1">Browser Quirks</h3>
+
+<p><code class="language-plaintext highlighter-rouge">loadstart</code> and <code class="language-plaintext highlighter-rouge">loaderror</code> events are not being fired.</p>
+
+<h3 id="quick-example">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstart', function(event) { alert(event.url); });
+</code></pre></div></div>
+
+<h2 id="inappbrowserremoveeventlistener">InAppBrowser.removeEventListener</h2>
+
+<blockquote>
+  <p>Removes a listener for an event from the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>. (Only available when the target is set to <code class="language-plaintext highlighter-rouge">'_blank'</code>)</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.removeEventListener(eventname, callback);
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>ref</strong>: reference to the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window. <em>(InAppBrowser)</em></p>
+  </li>
+  <li>
+    <p><strong>eventname</strong>: the event to stop listening for. <em>(String)</em></p>
+
+    <ul>
+      <li><strong>loadstart</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> starts to load a URL.</li>
+      <li><strong>loadstop</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> finishes loading a URL.</li>
+      <li><strong>loaderror</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> encounters an error loading a URL.</li>
+      <li><strong>exit</strong>: event fires when the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window is closed.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>callback</strong>: the function to execute when the event fires.
+The function is passed an <code class="language-plaintext highlighter-rouge">InAppBrowserEvent</code> object.</p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-2">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows 8 and 8.1</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="quick-example-1">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+var myCallback = function(event) { alert(event.url); }
+ref.addEventListener('loadstart', myCallback);
+ref.removeEventListener('loadstart', myCallback);
+</code></pre></div></div>
+
+<h2 id="inappbrowserclose">InAppBrowser.close</h2>
+
+<blockquote>
+  <p>Closes the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.close();
+</code></pre></div></div>
+
+<ul>
+  <li><strong>ref</strong>: reference to the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window <em>(InAppBrowser)</em></li>
+</ul>
+
+<h3 id="supported-platforms-3">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows 8 and 8.1</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="quick-example-2">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.close();
+</code></pre></div></div>
+
+<h2 id="inappbrowsershow">InAppBrowser.show</h2>
+
+<blockquote>
+  <p>Displays an InAppBrowser window that was opened hidden. Calling this has no effect if the InAppBrowser was already visible.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.show();
+</code></pre></div></div>
+
+<ul>
+  <li><strong>ref</strong>: reference to the InAppBrowser window (<code class="language-plaintext highlighter-rouge">InAppBrowser</code>)</li>
+</ul>
+
+<h3 id="supported-platforms-4">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows 8 and 8.1</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="quick-example-3">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'hidden=yes');
+// some time later...
+ref.show();
+</code></pre></div></div>
+
+<h2 id="inappbrowserhide">InAppBrowser.hide</h2>
+
+<blockquote>
+  <p>Hides the InAppBrowser window. Calling this has no effect if the InAppBrowser was already hidden.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.hide();
+</code></pre></div></div>
+
+<ul>
+  <li><strong>ref</strong>: reference to the InAppBrowser window (<code class="language-plaintext highlighter-rouge">InAppBrowser</code>)</li>
+</ul>
+
+<h3 id="supported-platforms-5">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows 8 and 8.1</li>
+</ul>
+
+<h3 id="quick-example-4">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank');
+// some time later...
+ref.hide();
+</code></pre></div></div>
+
+<h2 id="inappbrowserexecutescript">InAppBrowser.executeScript</h2>
+
+<blockquote>
+  <p>Injects JavaScript code into the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window. (Only available when the target is set to <code class="language-plaintext highlighter-rouge">'_blank'</code>)</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.executeScript(details, callback);
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>ref</strong>: reference to the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window. <em>(InAppBrowser)</em></p>
+  </li>
+  <li><strong>injectDetails</strong>: details of the script to run, specifying either a <code class="language-plaintext highlighter-rouge">file</code> or <code class="language-plaintext highlighter-rouge">code</code> key. <em>(Object)</em>
+    <ul>
+      <li><strong>file</strong>: URL of the script to inject.</li>
+      <li><strong>code</strong>: Text of the script to inject.</li>
+    </ul>
+  </li>
+  <li><strong>callback</strong>: the function that executes after the JavaScript code is injected.
+    <ul>
+      <li>If the injected script is of type <code class="language-plaintext highlighter-rouge">code</code>, the callback executes
+with a single parameter, which is the return value of the
+script, wrapped in an <code class="language-plaintext highlighter-rouge">Array</code>. For multi-line scripts, this is
+the return value of the last statement, or the last expression
+evaluated.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-6">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows 8 and 8.1</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="quick-example-5">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstop', function() {
+    ref.executeScript({file: "myscript.js"});
+});
+</code></pre></div></div>
+
+<h3 id="browser-quirks-2">Browser Quirks</h3>
+
+<ul>
+  <li>only <strong>code</strong> key is supported.</li>
+</ul>
+
+<h3 id="windows-quirks-1">Windows Quirks</h3>
+
+<p>Due to <a href="https://msdn.microsoft.com/en-us/library/windows.ui.xaml.controls.webview.invokescriptasync.aspx">MSDN docs</a> the invoked script can return only string values, otherwise the parameter, passed to <strong>callback</strong> will be <code class="language-plaintext highlighter-rouge">[null]</code>.</p>
+
+<h2 id="inappbrowserinsertcss">InAppBrowser.insertCSS</h2>
+
+<blockquote>
+  <p>Injects CSS into the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window. (Only available when the target is set to <code class="language-plaintext highlighter-rouge">'_blank'</code>)</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ref.insertCSS(details, callback);
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>ref</strong>: reference to the <code class="language-plaintext highlighter-rouge">InAppBrowser</code> window <em>(InAppBrowser)</em></p>
+  </li>
+  <li><strong>injectDetails</strong>: details of the script to run, specifying either a <code class="language-plaintext highlighter-rouge">file</code> or <code class="language-plaintext highlighter-rouge">code</code> key. <em>(Object)</em>
+    <ul>
+      <li><strong>file</strong>: URL of the stylesheet to inject.</li>
+      <li><strong>code</strong>: Text of the stylesheet to inject.</li>
+    </ul>
+  </li>
+  <li><strong>callback</strong>: the function that executes after the CSS is injected.</li>
+</ul>
+
+<h3 id="supported-platforms-7">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="quick-example-6">Quick Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstop', function() {
+    ref.insertCSS({file: "mystyles.css"});
+}); __
+</code></pre></div></div>
+
+<h2 id="sample-show-help-pages-with-an-inappbrowser"><a id="sample"></a>Sample: Show help pages with an InAppBrowser</h2>
+
+<p>You can use this plugin to show helpful documentation pages within your app. Users can view online help documents and then close them without leaving the app.</p>
+
+<p>Here’s a few snippets that show how you do this.</p>
+
+<ul>
+  <li><a href="#give">Give users a way to ask for help</a>.</li>
+  <li><a href="#load">Load a help page</a>.</li>
+  <li><a href="#let">Let users know that you’re getting their page ready</a>.</li>
+  <li><a href="#show">Show the help page</a>.</li>
+  <li><a href="#handle">Handle page errors</a>.</li>
+</ul>
+
+<h3 id="give-users-a-way-to-ask-for-help"><a id="give"></a>Give users a way to ask for help</h3>
+
+<p>There’s lots of ways to do this in your app. A drop down list is a simple way to do that.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"help-select"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"default"</span><span class="nt">&gt;</span>Need help?<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"article"</span><span class="nt">&gt;</span>Show me a helpful article<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"video"</span><span class="nt">&gt;</span>Show me a helpful video<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search for other topics<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;/select&gt;</span>
+
+</code></pre></div></div>
+
+<p>Gather the users choice in the <code class="language-plaintext highlighter-rouge">onDeviceReady</code> function of the page and then send an appropriate URL to a helper function in some shared library file. Our helper function is named <code class="language-plaintext highlighter-rouge">showHelp()</code> and we’ll write that function next.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#help-select</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">url</span><span class="p">;</span>
+
+    <span class="k">switch</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">case</span> <span class="dl">"</span><span class="s2">article</span><span class="dl">"</span><span class="p">:</span>
+            <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://cordova.apache.org/docs/en/latest/</span><span class="dl">"</span>
+                        <span class="o">+</span> <span class="dl">"</span><span class="s2">reference/cordova-plugin-inappbrowser/index.html</span><span class="dl">"</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="dl">"</span><span class="s2">video</span><span class="dl">"</span><span class="p">:</span>
+            <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://youtu.be/F-GlVrTaeH0</span><span class="dl">"</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+
+        <span class="k">case</span> <span class="dl">"</span><span class="s2">search</span><span class="dl">"</span><span class="p">:</span>
+            <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://www.google.com/#q=inAppBrowser+plugin</span><span class="dl">"</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+
+<span class="p">});</span>
+
+</code></pre></div></div>
+
+<h3 id="load-a-help-page"><a id="load"></a>Load a help page</h3>
+
+<p>We’ll use the <code class="language-plaintext highlighter-rouge">open</code> function to load the help page. We’re setting the <code class="language-plaintext highlighter-rouge">hidden</code> property to <code class="language-plaintext highlighter-rouge">yes</code> so that we can show the browser only after the page content has loaded. That way, users don’t see a blank browser while they wait for content to appear. When the <code class="language-plaintext highlighter-rouge">loadstop</code> event is raised, we’ll know when the content has loaded. We’ll handle that event shortly.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">_blank</span><span class="dl">"</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">location=yes,hidden=yes</span><span class="dl">"</span><span class="p">;</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstart</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstop</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaderror</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="let-users-know-that-youre-getting-their-page-ready"><a id="let"></a>Let users know that you’re getting their page ready</h3>
+
+<p>Because the browser doesn’t immediately appear, we can use the <code class="language-plaintext highlighter-rouge">loadstart</code> event to show a status message, progress bar, or other indicator. This assures users that content is on the way.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading please wait ...</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="show-the-help-page"><a id="show"></a>Show the help page</h3>
+
+<p>When the <code class="language-plaintext highlighter-rouge">loadstopcallback</code> event is raised, we know that the content has loaded and we can make the browser visible. This sort of trick can create the impression of better performance. The truth is that whether you show the browser before content loads or not, the load times are exactly the same.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="s2">body{font-size: 25px;</span><span class="dl">"</span> <span class="p">});</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>You might have noticed the call to the <code class="language-plaintext highlighter-rouge">insertCSS</code> function. This serves no particular purpose in our scenario. But it gives you an idea of why you might use it. In this case, we’re just making sure that the font size of your pages have a certain size. You can use this function to insert any CSS style elements. You can even point to a CSS file in your project.</p>
+
+<h3 id="handle-page-errors"><a id="handle"></a>Handle page errors</h3>
+
+<p>Sometimes a page no longer exists, a script error occurs, or a user lacks permission to view the resource. How or if you handle that situation is completely up to you and your design. You can let the browser show that message or you can present it in another way.</p>
+
+<p>We’ll try to show that error in a message box. We can do that by injecting a script that calls the <code class="language-plaintext highlighter-rouge">alert</code> function. That said, this won’t work in browsers on Windows devices so we’ll have to look at the parameter of the <code class="language-plaintext highlighter-rouge">executeScript</code> callback function to see if our attempt worked. If it didn’t work out for us, we’ll just show the error message in a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> on the page.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">function</span> <span class="nx">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">scriptErrorMesssage</span> <span class="o">=</span>
+       <span class="dl">"</span><span class="s2">alert('Sorry we cannot open that page. Message from the server is : </span><span class="dl">"</span>
+       <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">');</span><span class="dl">"</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
+
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+           <span class="dl">"</span><span class="s2">Sorry we couldn't open that page. Message from the server is : '</span><span class="dl">"</span>
+           <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">'</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="more-usage-info">More Usage Info</h2>
+
+<h3 id="local-urls--source-is-in-the-app-package-">Local Urls ( source is in the app package )</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var iab = cordova.InAppBrowser;
+
+iab.open('local-url.html');                  // loads in the Cordova WebView
+iab.open('local-url.html', '_self');         // loads in the Cordova WebView
+iab.open('local-url.html', '_system');       // Security error: system browser, but url will not load (iOS)
+iab.open('local-url.html', '_blank');        // loads in the InAppBrowser
+iab.open('local-url.html', 'random_string'); // loads in the InAppBrowser
+iab.open('local-url.html', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+
+</code></pre></div></div>
+
+<h3 id="whitelisted-content">Whitelisted Content</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var iab = cordova.InAppBrowser;
+
+iab.open('http://whitelisted-url.com');                  // loads in the Cordova WebView
+iab.open('http://whitelisted-url.com', '_self');         // loads in the Cordova WebView
+iab.open('http://whitelisted-url.com', '_system');       // loads in the system browser
+iab.open('http://whitelisted-url.com', '_blank');        // loads in the InAppBrowser
+iab.open('http://whitelisted-url.com', 'random_string'); // loads in the InAppBrowser
+
+iab.open('http://whitelisted-url.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+
+</code></pre></div></div>
+
+<h3 id="urls-that-are-not-white-listed">Urls that are not white-listed</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var iab = cordova.InAppBrowser;
+
+iab.open('http://url-that-fails-whitelist.com');                  // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', '_self');         // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', '_system');       // loads in the system browser
+iab.open('http://url-that-fails-whitelist.com', '_blank');        // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', 'random_string'); // loads in the InAppBrowser
+iab.open('http://url-that-fails-whitelist.com', 'random_string', 'location=no'); // loads in the InAppBrowser, no location bar
+
+</code></pre></div></div>

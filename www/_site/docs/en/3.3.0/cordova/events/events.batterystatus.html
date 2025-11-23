@@ -1,0 +1,88 @@
+<h1 id="batterystatus">batterystatus</h1>
+
+<p>The event fires when there is a change in the battery status.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterystatus", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>This event fires when the percentage of battery charge changes by at
+least 1 percent, or if the device is plugged in or unplugged.</p>
+
+<p>The battery status handler is passed an object that contains two
+properties:</p>
+
+<ul>
+  <li>
+    <p><strong>level</strong>: The percentage of battery charge (0-100). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></p>
+  </li>
+</ul>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">window.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">[deviceready](events.deviceready.html)</code> event fires.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="windows-phone-7-and-8-quirks">Windows Phone 7 and 8 Quirks</h2>
+
+<p>Windows Phone 7 does not provide native APIs to determine battery
+level, so the <code class="language-plaintext highlighter-rouge">level</code> property is unavailable.  The <code class="language-plaintext highlighter-rouge">isPlugged</code>
+parameter <em>is</em> supported.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterystatus", onBatteryStatus, false);
+
+function onBatteryStatus(info) {
+    // Handle the online event
+    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Ready Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+    }
+
+    // Handle the batterystatus event
+    //
+    function onBatteryStatus(info) {
+        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

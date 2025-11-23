@@ -1,0 +1,75 @@
+<h1 id="deviceplatform">device.platform</h1>
+
+<p>Get the device’s operating system name.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.platform;
+</code></pre></div></div>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Depending on the device, a few examples are:
+//   - "Android"
+//   - "BlackBerry"
+//   - "iOS"
+//   - "WinCE"
+//   - "Tizen"
+var devicePlatform = device.platform;
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Model: '    + device.model    + '&lt;br /&gt;' +
+                            'Device Cordova: '  + device.cordova  + '&lt;br /&gt;' +
+                            'Device Platform: ' + device.platform + '&lt;br /&gt;' +
+                            'Device UUID: '     + device.uuid     + '&lt;br /&gt;' +
+                            'Device Version: '  + device.version  + '&lt;br /&gt;';
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="blackberry-quirks">BlackBerry Quirks</h2>
+
+<p>Devices may return the device platform version number instead of the
+platform name.  For example, the Storm2 9550 returns a value such as
+<code class="language-plaintext highlighter-rouge">2.13.0.95</code>.</p>
+
+<h2 id="windows-phone-7-quirks">Windows Phone 7 Quirks</h2>
+
+<p>Windows Phone 7 devices report the platform as <code class="language-plaintext highlighter-rouge">WinCE</code>.</p>
+
+<h2 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h2>
+
+<p>Windows Phone 8 devices report the platform as <code class="language-plaintext highlighter-rouge">Win32NT</code>.</p>

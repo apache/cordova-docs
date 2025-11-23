@@ -1,0 +1,30 @@
+<h1 id="fileerror">FileError</h1>
+
+<p>A ‘FileError’ object is set when an error occurs in any of the <a href="../fileobj/fileobj.html">File</a> API methods.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>code:</strong> One of the predefined error codes listed below.</li>
+</ul>
+
+<h2 id="constants">Constants</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">FileError.NOT_FOUND_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.SECURITY_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.ABORT_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.NOT_READABLE_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.ENCODING_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.NO_MODIFICATION_ALLOWED_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.INVALID_STATE_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.SYNTAX_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.INVALID_MODIFICATION_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.QUOTA_EXCEEDED_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.TYPE_MISMATCH_ERR</code></li>
+  <li><code class="language-plaintext highlighter-rouge">FileError.PATH_EXISTS_ERR</code></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">FileError</code> object is the only parameter of any of the <a href="../fileobj/fileobj.html">File</a> API’s error callbacks.  Developers must read the code property to determine the type of error.</p>

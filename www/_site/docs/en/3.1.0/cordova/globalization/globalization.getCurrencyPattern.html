@@ -1,0 +1,108 @@
+<h1 id="globalizationgetcurrencypattern">globalization.getCurrencyPattern</h1>
+
+<p>Returns a pattern string to format and parse currency values according
+to the client’s user preferences and ISO 4217 currency code.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Returns the pattern to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object
+as a parameter. That object should contain the following properties:</p>
+
+<ul>
+  <li>
+    <p><strong>pattern</strong>: The currency pattern to format and parse currency values.  The patterns follow Unicode Technical Standard #35. <a href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>code</strong>: The ISO 4217 currency code for the pattern. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting currency. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+</ul>
+
+<p>The inbound <code class="language-plaintext highlighter-rouge">currencyCode</code> parameter should be a <code class="language-plaintext highlighter-rouge">String</code> of one of
+the ISO 4217 currency codes, for example ‘USD’.</p>
+
+<p>If there is an error obtaining the pattern, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).FORMATTING\_ERROR</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale and the selected
+currency is United States Dollars, this example displays a popup
+dialog with text similar to the results that follow:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getCurrencyPattern(
+    'USD',
+    function (pattern) {
+        alert('pattern: '  + pattern.pattern  + '\n' +
+              'code: '     + pattern.code     + '\n' +
+              'fraction: ' + pattern.fraction + '\n' +
+              'rounding: ' + pattern.rounding + '\n' +
+              'decimal: '  + pattern.decimal  + '\n' +
+              'grouping: ' + pattern.grouping);
+    },
+    function () { alert('Error getting pattern\n'); }
+);
+</code></pre></div></div>
+
+<p>Expected result:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern: $#,##0.##;($#,##0.##)
+code: USD
+fraction: 2
+rounding: 0
+decimal: .
+grouping: ,
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getCurrencyPattern Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkPattern() {
+      navigator.globalization.getCurrencyPattern(
+        'USD',
+        function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                  'code: '     + pattern.code     + '\n' +
+                                  'fraction: ' + pattern.fraction + '\n' +
+                                  'rounding: ' + pattern.rounding + '\n' +
+                                  'decimal: '  + pattern.decimal  + '\n' +
+                                  'grouping: ' + pattern.grouping);},
+        function () {alert('Error getting pattern\n');}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkPattern()"&gt;Click for pattern&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

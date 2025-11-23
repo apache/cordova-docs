@@ -1,0 +1,74 @@
+<h1 id="blackberry-shell-tool-guide">BlackBerry Shell Tool Guide</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">cordova</code> command-line utility is a high-level tool that allows
+you to build applications across several platforms at once. An older
+version of the Cordova framework provides sets of command-line tools
+specific to each platform. To use them as an alternative to the CLI,
+you need to download this version of Cordova from
+<a href="http://cordova.apache.org">cordova.apache.org</a>. The download contains
+separate archives for each platform. Expand the platform you wish to
+target. The tools described here are typically available in the
+top-level <code class="language-plaintext highlighter-rouge">bin</code> directory, otherwise consult the <strong>README</strong> file for
+more detailed directions.</p>
+
+<p>For information on the low-level command-line interface that enables
+plugins, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>. See Application Plugins
+for details on how to develop plugins.</p>
+
+<h2 id="create-a-project">Create a Project</h2>
+
+<p>Run the <code class="language-plaintext highlighter-rouge">create</code> command, specifying the existing path to the project,
+the reverse-domain-style package identifier, and the app’s display
+name.  Here is the syntax for both Mac and Windows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
+    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
+</code></pre></div></div>
+
+<p><strong>NOTE</strong>: The BlackBerry platform ignores the package name placeholder
+(<code class="language-plaintext highlighter-rouge">com.example.project_name</code>), but it’s still required for use by
+cross-platform tools.</p>
+
+<h2 id="build-a-project">Build a Project</h2>
+
+<p>For BlackBerry projects, please make sure you customize the
+<code class="language-plaintext highlighter-rouge">project.properties</code> file in your Cordova project’s root directory.
+You need to do so to supply your BlackBerry signing key password, and
+specify locations for the BlackBerry WebWorks SDK and BlackBerry
+emulator executables.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/build &lt;platform&gt;
+    $ /path/to/my_new_project/cordova/build.bat &lt;platform&gt;
+</code></pre></div></div>
+
+<h2 id="launch-emulator">Launch Emulator</h2>
+
+<p>For BlackBerry projects, please make sure you customize the
+<code class="language-plaintext highlighter-rouge">project.properties</code> file in the root of your Cordova project directory.
+You need to do so to supply your BlackBerry signing key password, and
+specify locations for the BlackBerry WebWorks SDK and BlackBerry
+emulator executables.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/my_new_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
+<p>and then choose ‘no’ when prompted with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Do you have a BlackBerry device connected to your computer? (y/n)
+    $ /path/to/my_new_project/cordova/run &lt;platform&gt;
+</code></pre></div></div>
+
+<p>and then choose ‘no’ when prompted with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Do you have a BlackBerry device connected to your computer? (y/n)
+</code></pre></div></div>
+
+<h2 id="logging">Logging</h2>
+
+<p>Unfortunately, streaming logs directly from the device is currently
+unsupported. However, BlackBerry offers built-in Web Inspector support
+for Playbook and BlackBerry smartphone devices running BlackBerry OS
+7.0 and above. You can also access your application’s logs (including
+any calls to <code class="language-plaintext highlighter-rouge">console.log</code>) on your device by holding down the ‘‘ALT’’
+key from the home screen and typing ‘‘lglg’’ keys.</p>
+

@@ -1,0 +1,45 @@
+<h1 id="positionerror">PositionError</h1>
+
+<p>A <code class="language-plaintext highlighter-rouge">PositionError</code> object is passed to the <code class="language-plaintext highlighter-rouge">[geolocationError](../parameters/geolocationError.html)</code> callback when an error occurs.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>code</strong>: One of the predefined error codes listed below.</p>
+  </li>
+  <li>
+    <p><strong>message</strong>: Error message describing the details of the error encountered.</p>
+  </li>
+</ul>
+
+<h2 id="constants">Constants</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PositionError.PERMISSION_DENIED</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PositionError.POSITION_UNAVAILABLE</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PositionError.TIMEOUT</code></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">PositionError</code> object is passed to the <code class="language-plaintext highlighter-rouge">[geolocationError](../parameters/geolocationError.html)</code>
+callback function when an error occurs with geolocation.</p>
+
+<h3 id="positionerrorpermission_denied"><code class="language-plaintext highlighter-rouge">PositionError.PERMISSION_DENIED</code></h3>
+
+<p>Returned when the user does not allow your application to retrieve
+position information. This is dependent on the platform.</p>
+
+<h3 id="positionerrorposition_unavailable"><code class="language-plaintext highlighter-rouge">PositionError.POSITION_UNAVAILABLE</code></h3>
+
+<p>Returned when the device is unable to retrieve a position. In general
+this means the device has no network connectivity and/or cannot get a
+satellite fix.</p>
+
+<h3 id="positionerrortimeout"><code class="language-plaintext highlighter-rouge">PositionError.TIMEOUT</code></h3>
+
+<p>Returned when the device is unable to retrieve a position within the
+time specified in the <code class="language-plaintext highlighter-rouge">[geolocationOptions](../parameters/geolocation.options.html)</code>’ <code class="language-plaintext highlighter-rouge">timeout</code> property. When
+used with <code class="language-plaintext highlighter-rouge">[geolocation.watchPosition](../geolocation.watchPosition.html)</code>, this error could be passed to
+the <code class="language-plaintext highlighter-rouge">[geolocationError](../parameters/geolocationError.html)</code> callback every <code class="language-plaintext highlighter-rouge">timeout</code> milliseconds.</p>

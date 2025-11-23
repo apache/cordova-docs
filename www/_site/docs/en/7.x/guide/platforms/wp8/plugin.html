@@ -1,0 +1,255 @@
+<h1 id="windows-phone-8-plugins">Windows Phone 8 Plugins</h1>
+
+<p>This section provides details for how to implement native plugin code
+on the Windows Phone platform. Before reading this, see <a href="../../hybrid/plugins/index.html">Plugin Development Guide</a>
+for an overview of the plugin’s structure and its common
+JavaScript interface. This section continues to demonstrate the sample
+<em>echo</em> plugin that communicates from the Cordova webview to the native
+platform and back.</p>
+
+<p>Writing a plugin for Cordova on Windows Phone requires a basic
+understanding of Cordova’s architecture. Cordova-WP8 consists of a
+<code class="language-plaintext highlighter-rouge">WebBrowser</code> that hosts the application’s JavaScript code and manages
+native API calls. You can extend a C# <code class="language-plaintext highlighter-rouge">BaseCommand</code> class
+(<code class="language-plaintext highlighter-rouge">WPCordovaClassLib.Cordova.Commands.BaseCommand</code>), which comes with
+most of the functionality you need:</p>
+
+<ol>
+  <li>
+    <p>Select your project, and right-click to choose <strong>Add → New
+Item…</strong> If you wish, you can add it to the <code class="language-plaintext highlighter-rouge">Plugins</code> folder.</p>
+  </li>
+  <li>
+    <p>Select <strong>Class</strong> and name it <code class="language-plaintext highlighter-rouge">Echo.cs</code>.  This class name must
+<em>exactly</em> match what you call specify as the service in the
+<code class="language-plaintext highlighter-rouge">cordova.exec()</code> call on the JavaScript side.</p>
+  </li>
+  <li>
+    <p>Include the base classes implementation:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> using WPCordovaClassLib.Cordova;
+ using WPCordovaClassLib.Cordova.Commands;
+ using WPCordovaClassLib.Cordova.JSON;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Extend your class from <code class="language-plaintext highlighter-rouge">BaseCommand</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> public class Echo : BaseCommand
+ {
+     // ...
+ }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Add an <code class="language-plaintext highlighter-rouge">echo</code> method that is callable from JavaScript:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> public class Echo : BaseCommand
+ {
+     public void echo(string options)
+     {
+         // all JS callable plugin methods MUST have this signature!
+         // public, returning void, 1 argument that is a string
+     }
+ }
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>See the
+<a href="https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs">BaseCommand.cs</a>
+class for methods available for the plugin to override.  For example,
+the plugin can capture <a href="../../../cordova/events/events.html#pause">pause</a> and <a href="../../../cordova/events/events.html#resume">resume</a> events.</p>
+
+<h2 id="namespaces">Namespaces</h2>
+
+<p>The default namespace for unqualified commands is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    namespace Cordova.Extension.Commands
+    {
+        // ...
+    }
+</code></pre></div></div>
+
+<p>If you want to specify your own namespace, you need to make a fully
+qualified call to <code class="language-plaintext highlighter-rouge">cordova.exec</code>. For example, if you want to define
+your C# class like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    namespace com.mydomain.cordovaExtensions
+    {
+        public class Echo : BaseCommand
+        {
+            // ...
+        }
+    }
+</code></pre></div></div>
+
+<p>The JavaScript would need to call <code class="language-plaintext highlighter-rouge">exec</code> like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
+</code></pre></div></div>
+
+<h2 id="interpreting-arguments-in-c">Interpreting Arguments in C#</h2>
+
+<p>In the example discussed in Application Plugins, the data your plugin
+receives is a string, but what if you want to pass an array of
+strings?  Suppose the JavaScript <code class="language-plaintext highlighter-rouge">cordova.exec</code> call is specified like
+this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cordova.exec(win, fail, "Echo", "echo", ["input string"]);
+</code></pre></div></div>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">options</code> string passed to the <code class="language-plaintext highlighter-rouge">Echo.echo</code> method is
+JSON:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "[\"input string\"]"
+</code></pre></div></div>
+
+<p>All JavaScript <code class="language-plaintext highlighter-rouge">exec</code> arguments are JSON-encoded before being passed
+into C#, and so need to be decoded:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    string optVal = JsonHelper.Deserialize&lt;string[]&gt;(options)[0];
+    // optVal now has the value of "input string"
+</code></pre></div></div>
+
+<h2 id="passing-results-from-c-to-javascript">Passing Results from C# to JavaScript</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">BaseCommand</code> class provides methods to pass data to JavaScript
+callback handlers.  If you simply want to signal success with no
+accompanying result, you can simply call:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DispatchCommandResult();
+    // calls back with an empty plugin result, considered a success callback
+</code></pre></div></div>
+
+<p>To pass data back, you need to call <code class="language-plaintext highlighter-rouge">DispatchCommandResult</code>
+differently:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
+</code></pre></div></div>
+
+<p>Use an encoded JSON string to pass structured object data back to
+JavaScript:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
+</code></pre></div></div>
+
+<p>To signal an error, call <code class="language-plaintext highlighter-rouge">DispatchCommandResult</code> with a <code class="language-plaintext highlighter-rouge">PluginResult</code>
+object whose status is <code class="language-plaintext highlighter-rouge">ERROR</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
+</code></pre></div></div>
+
+<h2 id="handling-serialization-errors">Handling Serialization Errors</h2>
+
+<p>When interpreting your arguments, <code class="language-plaintext highlighter-rouge">try</code>/<code class="language-plaintext highlighter-rouge">catch</code> blocks help screen out
+bad input. This pattern appears throughout the Cordova C# code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    string optVal = null;
+
+    try
+    {
+        optVal = JsonHelper.Deserialize&lt;string[]&gt;(options)[0];
+    }
+    catch(Exception)
+    {
+        // simply catch the exception, we handle null values and exceptions together
+    }
+
+    if (optVal == null)
+    {
+        DispatchCommandResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
+    }
+    else
+    {
+        // ... continue on to do our work
+    }
+</code></pre></div></div>
+
+<h2 id="plugin-lifetime">Plugin Lifetime</h2>
+
+<p>Plugins with long-running requests, background activity such as media
+playback, listeners, or that maintain internal state should implement
+the <code class="language-plaintext highlighter-rouge">onReset</code> method to clean up those activities. The method runs
+when the CordovaView WebBrowser navigates to a new page or refreshes, which
+reloads the JavaScript.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+    public virtual void OnReset() { }
+</code></pre></div></div>
+
+<h2 id="plugin-xml">Plugin XML</h2>
+
+<p>The following shows how to use the <code class="language-plaintext highlighter-rouge">plugin.xml</code> file to specify a
+plugin’s source files on the Windows Phone platform.  See Application
+Plugins for an overview, and <a href="../../../plugin_ref/spec.html">Plugin Specification</a> for details on
+available options.</p>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">&lt;source-file&gt;</code> element defines all plugin resources, such
+as <em>.cs</em>, <em>.xaml</em>, <em>.xaml.cs</em>, and <em>.dll</em> files, and image assets.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">&lt;config-file&gt;</code> element defines elements to inject into a
+configuration file. This example adds a plugin to the platform’s
+<code class="language-plaintext highlighter-rouge">config.xml</code> file:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;config-file target="config.xml" parent="/*"&gt;
+      &lt;feature name="PluginName"&gt;
+          &lt;param name="wp-package" value="PluginName"/&gt;
+      &lt;/feature&gt;
+  &lt;/config-file&gt;
+</code></pre></div>    </div>
+
+    <p>This example adds the contacts capability to the <code class="language-plaintext highlighter-rouge">WMAppManifest.xml</code>
+file:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities"&gt;
+      &lt;Capability Name="ID_CAP_CONTACTS" /&gt;
+  &lt;/config-file&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="debugging-plugins">Debugging Plugins</h2>
+
+<p>Use Visual Studio’s debugger to debug a plugin’s C# component. You can
+set a break point at any of the methods exposed by your class.</p>
+
+<p>JavaScript is more difficult to debug on Windows Phone. You need to
+use <code class="language-plaintext highlighter-rouge">console.log</code> to output the plugin’s state, or to inform
+yourself of errors.</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li>
+    <p>Be careful not to pass arguments from JavaScript to the native side
+that are difficult to deserialize as JSON. Most device platforms
+expect the argument passed to <code class="language-plaintext highlighter-rouge">cordova.exec()</code> to be an array, such
+as the following:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
+</code></pre></div>    </div>
+
+    <p>This may result in an overly complex string value for C# to decode:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "[\"this is a string\", 54, { literal:'trouble' }]"
+</code></pre></div>    </div>
+
+    <p>Instead, consider converting <em>all</em> parameters to strings before
+calling <code class="language-plaintext highlighter-rouge">exec()</code>, and decoding each separately:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", "54", "{literal:'trouble'}"]);
+  string[] optValues = JsonHelper.Deserialize&lt;string[]&gt;(options);
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>It is usually better to check parameters in JavaScript before
+calling <code class="language-plaintext highlighter-rouge">exec()</code>. Doing so allows you to re-use more code and pull
+unnecessary functionality from the plugin’s various native
+implementations.</p>
+  </li>
+</ul>
+

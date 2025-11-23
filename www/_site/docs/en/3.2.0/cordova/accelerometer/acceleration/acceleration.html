@@ -1,0 +1,91 @@
+<h1 id="acceleration">Acceleration</h1>
+
+<p>Contains <code class="language-plaintext highlighter-rouge">[Accelerometer](../accelerometer.html)</code> data captured at a specific point in time.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>x</strong>:  Amount of acceleration on the x-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>y</strong>:  Amount of acceleration on the y-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>z</strong>:  Amount of acceleration on the z-axis. (in m/s^2) <em>(Number)</em></li>
+  <li><strong>timestamp</strong>: Creation timestamp in milliseconds. <em>(DOMTimeStamp)</em></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>An <code class="language-plaintext highlighter-rouge">Acceleration</code> object is populated and returned by any of the API’s
+<code class="language-plaintext highlighter-rouge">[Accelerometer](../accelerometer.html)</code> methods. Acceleration values include the effect of
+gravity (9.81 m/s^2), so that when a device lies flat and facing up,
+<em>x</em>, <em>y</em>, and <em>z</em> values returned should be <code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">0</code>, and <code class="language-plaintext highlighter-rouge">9.81</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(acceleration) {
+    alert('Acceleration X: ' + acceleration.x + '\n' +
+          'Acceleration Y: ' + acceleration.y + '\n' +
+          'Acceleration Z: ' + acceleration.z + '\n' +
+          'Timestamp: '      + acceleration.timestamp + '\n');
+};
+
+function onError() {
+    alert('onError!');
+};
+
+navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Acceleration Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    }
+
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n' +
+              'Timestamp: '      + acceleration.timestamp + '\n');
+    }
+
+    // onError: Failed to get the acceleration
+    //
+    function onError() {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;getCurrentAcceleration&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

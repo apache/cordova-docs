@@ -1,0 +1,73 @@
+<h1 id="getting-started-with-blackberry">Getting Started with BlackBerry</h1>
+
+<h2 id="video-tutorials">Video Tutorials:</h2>
+
+<ul>
+  <li><a href="http://www.youtube.com/v/eF0h0K0OLwI?autoplay=1">PhoneGap and BlackBerry Widgets uick Start Video</a></li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="requirements">Requirements</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+</li>
+</ul>
+
+<p>For 4.x devices check out <a href="http://wiki.phonegap.com/w/page/25653281/Getting%20Started%20with%20PhoneGap-BlackBerry%20with%20the%20Latest%20Environment">this guide</a>.</p>
+
+<ol>
+  <li>
+    <h2 id="install-sdk--phonegap">Install SDK + PhoneGap</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>(Windows Only) Download and install <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk">SUN JDK</a> (32-Bit Version). Add it to your PATH variable.</li>
+  <li>(Windows Only) Download and extract <a href="http://ant.apache.org/bindownload.cgi">Apache Ant</a>. Add it to your PATH variable.</li>
+  <li>Download <a href="ttps://bdsc.webapps.blackberry.com/html5/download/sdk">BlackBerry WebWorks Smartphone SDK</a> for BlackBerry development and/or <a href="https://bdsc.webapps.blackberry.com/html5/download/sdk">BlackBerry WebWorks Tablet OS SDK</a> for Playbook development. Keep note of the directories you install these SDKs.</li>
+  <li>Download the latest copy of <a href="http://phonegap.com/download">PhoneGap</a> and extract its contents. We will be working with the Android directory.</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="setup-new-project">Setup New Project</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Open up a command prompt/terminal and navigate to where you extracted PhoneGap. CD into the PhoneGapBlackBerry directory.</li>
+  <li>Create a PhoneGap BlackBerry and PlayBook project. Type ‘ant create -Dproject.path=’followed by the location you wish to create your project into the command prompt/terminal.</li>
+  <li>Change to the newly created directory located at <code class="language-plaintext highlighter-rouge">C:\Dev\bbw\sample</code>.</li>
+  <li>Open up the project.properties file with your favourite editor and change the lines <code class="language-plaintext highlighter-rouge">BlackBerry.bbwp.dir=</code> and <code class="language-plaintext highlighter-rouge">PlayBook.bbwp.dir=</code> to equal the respective install locations of the SDKs you downloaded earlier.</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="hello-world"><a href="../webos/index.html">Hello World</a></h2>
+  </li>
+</ol>
+
+<p>Build the PhoneGap sample project by typing <code class="language-plaintext highlighter-rouge">ant target build</code> in your command prompt/terminal while you are in your project’s directory. Replace the target with either blackberry or playbook. Note this is the sample PhoneGap project and not a basic hello world application. You can go edit the index.html file located in the www directory of your project to make it say <a href="../webos/index.html">Hello World</a> if you wish.</p>
+
+<h2 id="5a-deploy-to-simulator-windows-only">5A. Deploy to Simulator (Windows Only)</h2>
+
+<ul>
+  <li>While in your project directory, in command prompt/terminal type <code class="language-plaintext highlighter-rouge">ant target load-simulator</code>. Replace the target with either blackberry or playbook.</li>
+  <li>Press the BlackBerry button on the simulator, go to downloads and you should see your app loaded there.</li>
+</ul>
+
+<h2 id="5b-deploy-to-device-windows-and-mac">5B. Deploy to <a href="../../../phonegap/device/device.html">Device</a> (Windows and Mac)</h2>
+
+<ul>
+  <li>You have to have your signing keys from RIM by filling out this <a href="https://www.blackberry.com/SignedKeys/">form</a>.</li>
+  <li>While in your project directory, in command prompt/terminal type <code class="language-plaintext highlighter-rouge">ant target load-device</code>. Replace the target with either blackberry or playbook.</li>
+  <li>Press the BlackBerry button on the simulator, go to downloads and you should see your app loaded there.</li>
+</ul>
+
+<h2 id="done">Done!</h2>
+
+<p>You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide <a href="http://wiki.phonegap.com/w/page/31930982/Getting-Started-with-PhoneGap-BlackBerry-WebWorks">here</a>.</p>
+

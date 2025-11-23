@@ -1,0 +1,180 @@
+<h1 id="capture">Capture</h1>
+
+<blockquote>
+  <p>Provides access to the device’s audio, image, and video capture capabilities.</p>
+</blockquote>
+
+<p><strong>WARNING</strong>: Collection and use of images, video, or
+audio from the device’s camera or microphone raises important privacy
+issues.  Your app’s privacy policy should discuss how the app uses
+such sensors and whether the data recorded is shared with any other
+parties.  In addition, if the app’s use of the camera or microphone is
+not apparent in the user interface, you should provide a just-in-time
+notice before the app accesses the camera or microphone (if the
+device operating system doesn’t do so already). That notice should
+provide the same information noted above, as well as obtaining the
+user’s permission (e.g., by presenting choices for <strong>OK</strong> and <strong>No
+Thanks</strong>).  Note that some app marketplaces may require your app to
+provide just-in-time notice and obtain permission from the user prior
+to accessing the camera or microphone.  For more information, please
+see the <a href="../../../guide/appdev/privacy/index.html">Privacy Guide</a>.</p>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li>Capture</li>
+  <li><a href="captureAudioOptions.html">CaptureAudioOptions</a></li>
+  <li><a href="captureImageOptions.html">CaptureImageOptions</a></li>
+  <li><a href="captureVideoOptions.html">CaptureVideoOptions</a></li>
+  <li>CaptureCallback</li>
+  <li><a href="CaptureErrorCB.html">CaptureErrorCB</a></li>
+  <li><a href="ConfigurationData.html">ConfigurationData</a></li>
+  <li><a href="MediaFile.html">MediaFile</a></li>
+  <li><a href="MediaFileData.html">MediaFileData</a></li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="captureAudio.html">capture.captureAudio</a></li>
+  <li><a href="captureImage.html">capture.captureImage</a></li>
+  <li><a href="captureVideo.html">capture.captureVideo</a></li>
+  <li><a href="[MediaFile](MediaFile.html).getFormatData.html">MediaFile.getFormatData</a></li>
+</ul>
+
+<h2 id="scope">Scope</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">capture</code> object is assigned to the <code class="language-plaintext highlighter-rouge">navigator.device</code> object, and
+therefore has global scope.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The global capture object
+var capture = navigator.device.capture;
+</code></pre></div></div>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>supportedAudioModes</strong>: The audio recording formats supported by the device. (ConfigurationData[])</p>
+  </li>
+  <li>
+    <p><strong>supportedImageModes</strong>: The recording image sizes and formats supported by the device. (ConfigurationData[])</p>
+  </li>
+  <li>
+    <p><strong>supportedVideoModes</strong>: The recording video resolutions and formats supported by the device. (ConfigurationData[])</p>
+  </li>
+</ul>
+
+<h2 id="methods-1">Methods</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">[capture.captureAudio](captureAudio.html)</code>: Launch the device’s audio recording application to record audio clips.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">[capture.captureImage](captureImage.html)</code>: Launch the device’s camera application to take photos.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">[capture.captureVideo](captureVideo.html)</code>: Launch the device’s video recorder application to record videos.</p>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="accessing-the-feature">Accessing the Feature</h2>
+
+<p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
+Use the CLI’s <code class="language-plaintext highlighter-rouge">plugin</code> command, described in The Command-Line
+Interface, to add or remove this feature for a project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.media-capture
+    $ cordova plugin ls
+    [ 'org.apache.cordova.file',
+      'org.apache.cordova.media-capture']
+    $ cordova plugin rm org.apache.cordova.media-capture
+</code></pre></div></div>
+
+<p>These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:</p>
+
+<ul>
+  <li>
+    <p>Amazon Fire OS</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="File"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.file.FileUtils" /&gt;
+  &lt;/feature&gt;
+  &lt;feature name="Capture"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.mediacapture.Capture" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest.xml)   
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+  &lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+  &lt;uses-permission android:name="android.permission.RECORD_VIDEO" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="File"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.file.FileUtils" /&gt;
+  &lt;/feature&gt;
+  &lt;feature name="Capture"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.mediacapture.Capture" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest.xml)
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+  &lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+  &lt;uses-permission android:name="android.permission.RECORD_VIDEO" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry 10</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Capture"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.io.file" required="true" version="1.0.0.0" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in the named application directory’s <code class="language-plaintext highlighter-rouge">config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Capture"&gt;
+      &lt;param name="ios-package" value="CDVCapture" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone (in <code class="language-plaintext highlighter-rouge">Properties/WPAppManifest.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_MEDIALIB" /&gt;
+      &lt;Capability Name="ID_CAP_MICROPHONE" /&gt;
+      &lt;Capability Name="ID_HW_FRONTCAMERA" /&gt;
+      &lt;Capability Name="ID_CAP_ISV_CAMERA" /&gt;
+      &lt;Capability Name="ID_CAP_CAMERA" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Some platforms may support this feature without requiring any special
+configuration.  See <a href="../../../guide/support/index.html">Platform Support</a> for an overview.</p>

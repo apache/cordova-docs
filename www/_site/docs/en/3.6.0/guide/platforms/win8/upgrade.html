@@ -1,0 +1,60 @@
+<h1 id="upgrading-windows-8">Upgrading Windows 8</h1>
+
+<p>This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
+Most of these instructions apply to projects created with an older set
+of command-line tools that precede the <code class="language-plaintext highlighter-rouge">cordova</code> CLI utility. See <a href="../../cli/index.html">The Command-Line Interface</a> for information how to update the
+version of the CLI.</p>
+
+<h2 id="upgrade-to-360-from-310-or-later">Upgrade to 3.6.0 from 3.1.0 or later</h2>
+
+<p>For projects that were created with the cordova CLI:</p>
+
+<ol>
+  <li>
+    <p>Update the <code class="language-plaintext highlighter-rouge">cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">cordova platform update windows8</code>.</p>
+  </li>
+</ol>
+
+<p>For projects not created with the cordova CLI, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin\update &lt;project_path&gt;
+</code></pre></div></div>
+
+<h2 id="upgrade-to-310">Upgrade to 3.1.0</h2>
+
+<p>Cordova CLI support for Windows 8 was introduced in Cordova 3.1.0. To upgrade, we suggest creating a new Cordova CLI project and moving over all necessary assets.</p>
+
+<h2 id="upgrade-to-290-from-280">Upgrade to 2.9.0 from 2.8.0</h2>
+
+<p>The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.</p>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.8.0.js</code> from the project’s <code class="language-plaintext highlighter-rouge">www</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova.js</code> file from the source to the project’s <code class="language-plaintext highlighter-rouge">www</code> directory. (Note that the file no longer contains a version number in the filename.)</p>
+  </li>
+  <li>
+    <p>Build and test!</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-280-from-270">Upgrade to 2.8.0 from 2.7.0</h2>
+
+<p>The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.</p>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.7.0.js</code> from the project’s <code class="language-plaintext highlighter-rouge">www</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova.js</code> file from the source to the project’s <code class="language-plaintext highlighter-rouge">www</code> directory. (Note that the file no longer contains a version number in the filename.)</p>
+  </li>
+  <li>
+    <p>Build and test!</p>
+  </li>
+</ol>

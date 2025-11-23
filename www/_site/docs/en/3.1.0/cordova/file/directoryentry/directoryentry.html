@@ -1,0 +1,515 @@
+<h1 id="directoryentry">DirectoryEntry</h1>
+
+<p>This object represents a directory on a file system, as defined by the
+<a href="http://www.w3.org/TR/file-system-api/">W3C Directories and Systems</a>
+specification.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>isFile</strong>: Always <code class="language-plaintext highlighter-rouge">false</code>. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>isDirectory</strong>: Always <code class="language-plaintext highlighter-rouge">true</code>. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>name</strong>: The name of the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>, excluding the path leading to it. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>fullPath</strong>: The full absolute path from the root to the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>. <em>(DOMString)</em></p>
+  </li>
+</ul>
+
+<p><strong>NOTE:</strong> The following attribute is defined by the W3C specification,
+but is <em>not</em> supported:</p>
+
+<ul>
+  <li><strong>filesystem</strong>: The file system on which the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> resides. <em>(FileSystem)</em></li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<p>The following methods can be invoked on a <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> object:</p>
+
+<ul>
+  <li>
+    <p><strong>getMetadata</strong>: Look up metadata about a directory.</p>
+  </li>
+  <li>
+    <p><strong>setMetadata</strong>: Set metadata on a directory.</p>
+  </li>
+  <li>
+    <p><strong>moveTo</strong>: Move a directory to a different location on the file system.</p>
+  </li>
+  <li>
+    <p><strong>copyTo</strong>: Copy a directory to a different location on the file system.</p>
+  </li>
+  <li>
+    <p><strong>toURL</strong>: Return a URL to help locate a directory.</p>
+  </li>
+  <li>
+    <p><strong>remove</strong>: Delete a directory. The directory must be empty.</p>
+  </li>
+  <li>
+    <p><strong>getParent</strong>: Look up the parent directory.</p>
+  </li>
+  <li>
+    <p><strong>createReader</strong>: Create a new <code class="language-plaintext highlighter-rouge">[DirectoryReader](../directoryreader/directoryreader.html)</code> that can read entries from a directory.</p>
+  </li>
+  <li>
+    <p><strong>getDirectory</strong>: Create or look up a directory.</p>
+  </li>
+  <li>
+    <p><strong>getFile</strong>: Create or look up a file.</p>
+  </li>
+  <li>
+    <p><strong>removeRecursively</strong>: Delete a directory and all of its contents.</p>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="getmetadata">getMetadata</h2>
+
+<p>Look up metadata about a directory.</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>successCallback</strong>: A callback function to execute with a <code class="language-plaintext highlighter-rouge">[Metadata](../metadata/metadata.html)</code> object. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback function to execute if an error occurs when retrieving the <code class="language-plaintext highlighter-rouge">[Metadata](../metadata/metadata.html)</code>. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(metadata) {
+    console.log("Last Modified: " + metadata.modificationTime);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+// Request the metadata object for this entry
+entry.getMetadata(success, fail);
+</code></pre></div></div>
+
+<h2 id="setmetadata">setMetadata</h2>
+
+<p>Sets a directory’s extended attributes, or metadata. <em>Currently works
+only on iOS.</em></p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>successCallback</strong>: A callback that executes when the metadata is successfully set. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes when the metadata fails to be set. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>metadataObject</strong>: An object that contains the metadata’s keys and values. <em>(Object)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success() {
+    console.log("The metadata was successfully set.");
+}
+
+function fail() {
+    alert("There was an error in setting the metadata");
+}
+
+// Set the metadata
+entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+</code></pre></div></div>
+
+<p><strong>iOS Quirk</strong></p>
+
+<ul>
+  <li>Only the <code class="language-plaintext highlighter-rouge">com.apple.MobileBackup</code> extended attribute is supported. Set the value to <code class="language-plaintext highlighter-rouge">1</code> to prevent the directory from being backed up to iCloud. Set the value to <code class="language-plaintext highlighter-rouge">0</code> to re-enable the directory to be backed up to iCloud.</li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
+{
+    var onSetMetadataWin = function() {
+        console.log("success setting metadata")
+    }
+    var onSetMetadataFail = function() {
+        console.log("error setting metadata")
+    }
+
+    var onGetDirectoryWin = function(parent) {
+        var data = {};
+        data[metadataKey] = metadataValue;
+        parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+    }
+    var onGetDirectoryFail = function() {
+        console.log("error getting dir")
+    }
+
+    var onFSWin = function(fileSystem) {
+        fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
+    }
+
+    var onFSFail = function(evt) {
+        console.log(evt.target.error.code);
+    }
+
+    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+}
+
+    setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+</code></pre></div></div>
+
+<h2 id="moveto">moveTo</h2>
+
+<p>Move a directory to a different location on the file system. An error results if the app attempts to:</p>
+
+<ul>
+  <li>
+    <p>move a directory inside itself or to any child at any depth.</p>
+  </li>
+  <li>
+    <p>move a directory into its parent if a name different from its current directory is not provided.</p>
+  </li>
+  <li>
+    <p>move a directory to a path occupied by a file.</p>
+  </li>
+  <li>
+    <p>move a directory to a path occupied by a directory that is not empty.</p>
+  </li>
+</ul>
+
+<p>Moving a directory on top of an existing empty directory attempts to
+delete and replace that directory.</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>parent</strong>: The parent directory to which to move the directory. <em>(DirectoryEntry)</em></p>
+  </li>
+  <li>
+    <p><strong>newName</strong>: The new name of the directory. Defaults to the current name if unspecified. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that executes with the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> object for the new directory. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when attempting to move the directory. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function moveDir(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        newName = document.getElementById('newName').value,
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // move the directory to a new directory and rename it
+    entry.moveTo(parentEntry, newName, success, fail);
+}
+</code></pre></div></div>
+
+<h2 id="copyto">copyTo</h2>
+
+<p>Copy a directory to a different location on the file system.  An error results if the app attempts to:</p>
+
+<ul>
+  <li>
+    <p>copy a directory inside itself at any depth.</p>
+  </li>
+  <li>
+    <p>copy a directory into its parent if a name different from its current directory is not provided.</p>
+  </li>
+</ul>
+
+<p>Directory copies are always recursive, and copy all contents of the directory.</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>parent</strong>: The parent directory to which to copy the directory. <em>(DirectoryEntry)</em></p>
+  </li>
+  <li>
+    <p><strong>newName</strong>: The new name of the directory. Defaults to the current name if unspecified. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that executes with the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> object for the new directory. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when attempting to copy the underlying directory. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(entry) {
+    console.log("New Path: " + entry.fullPath);
+}
+
+function fail(error) {
+    alert(error.code);
+}
+
+function copyDir(entry) {
+    var parent = document.getElementById('parent').value,
+        parentName = parent.substring(parent.lastIndexOf('/')+1),
+        newName = document.getElementById('newName').value,
+        parentEntry = new DirectoryEntry(parentName, parent);
+
+    // copy the directory to a new directory and rename it
+    entry.copyTo(parentEntry, newName, success, fail);
+}
+</code></pre></div></div>
+
+<h2 id="tourl">toURL</h2>
+
+<p>Returns a URL that can be used to locate the directory.</p>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Get the URL for this directory
+var dirURL = entry.toURL();
+console.log(dirURL);
+</code></pre></div></div>
+
+<h2 id="remove">remove</h2>
+
+<p>Deletes a directory. An error results if the app attempts to:</p>
+
+<ul>
+  <li>
+    <p>delete a directory that is not empty.</p>
+  </li>
+  <li>
+    <p>delete the root directory of a filesystem.</p>
+  </li>
+</ul>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>successCallback</strong>: A callback that executes after the directory is deleted.  Invoked with no parameters. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when attempting to delete the directory. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(entry) {
+    console.log("Removal succeeded");
+}
+
+function fail(error) {
+    alert('Error removing directory: ' + error.code);
+}
+
+// remove this directory
+entry.remove(success, fail);
+</code></pre></div></div>
+
+<h2 id="getparent">getParent</h2>
+
+<p>Look up the parent <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> containing the directory.</p>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>successCallback</strong>: A callback that is passed the directory’s parent <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when attempting to retrieve the parent <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(parent) {
+    console.log("Parent Name: " + parent.name);
+}
+
+function fail(error) {
+    alert('Failed to get parent directory: ' + error.code);
+}
+
+// Get the parent DirectoryEntry
+entry.getParent(success, fail);
+</code></pre></div></div>
+
+<h2 id="createreader">createReader</h2>
+
+<p>Creates a new <a href="../directoryreader/directoryreader.html">DirectoryReader</a> to read entries in a directory.</p>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// create a directory reader
+var directoryReader = entry.createReader();
+</code></pre></div></div>
+
+<h2 id="getdirectory">getDirectory</h2>
+
+<p>Creates or looks up an existing directory.  An error results if the app attempts to:</p>
+
+<ul>
+  <li>create a directory whose immediate parent does not yet exist.</li>
+</ul>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>path</strong>: The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>options</strong>: Options to specify whether the directory is to be created if it doesn’t exist.  <em>(Flags)</em></p>
+  </li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that executes with a <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> object. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when creating or looking up the directory. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(dirEntry) {
+    console.log("Directory Name: " + dirEntry.name);
+}
+
+function fail(error) {
+    alert("Unable to create new directory: " + error.code);
+}
+
+// Retrieve an existing directory, or create it if it does not already exist
+entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
+</code></pre></div></div>
+
+<h2 id="getfile">getFile</h2>
+
+<p>Creates or looks up a file.  An error results if the app attempts to:</p>
+
+<ul>
+  <li>create a file whose immediate parent does not yet exist.</li>
+</ul>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>path</strong>: The path to the file to be looked up or created.  Either an absolute path, or a relative path from this <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>options</strong>: Options to specify whether the file is created if it doesn’t exist.  <em>(Flags)</em></p>
+  </li>
+  <li>
+    <p><strong>successCallback</strong>: A callback that is passed a <code class="language-plaintext highlighter-rouge">[FileEntry](../fileentry/fileentry.html)</code> object. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when creating or looking up the file. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(fileEntry) {
+    console.log("File Name: " + fileEntry.name);
+}
+
+function fail(error) {
+    alert("Failed to retrieve file: " + error.code);
+}
+
+// Retrieve an existing file, or create it if it does not exist
+entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);
+</code></pre></div></div>
+
+<h2 id="removerecursively">removeRecursively</h2>
+
+<p>Deletes a directory and all of its contents.  In the event of an error (such as trying to delete
+a directory containing a file that cannot be removed), some of the contents of the directory may
+be deleted.   An error results if the app attempts to:</p>
+
+<ul>
+  <li>delete the root directory of a filesystem.</li>
+</ul>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>successCallback</strong>: A callback that executes after the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code> has been deleted.  Invoked with no parameters. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>errorCallback</strong>: A callback that executes if an error occurs when attempting to delete the <code class="language-plaintext highlighter-rouge">DirectoryEntry</code>. Invoked with a <code class="language-plaintext highlighter-rouge">[FileError](../fileerror/fileerror.html)</code> object. <em>(Function)</em></p>
+  </li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function success(parent) {
+    console.log("Remove Recursively Succeeded");
+}
+
+function fail(error) {
+    alert("Failed to remove directory or it's contents: " + error.code);
+}
+
+// remove the directory and all it's contents
+entry.removeRecursively(success, fail);
+</code></pre></div></div>
+
+<h2 id="blackberry-quirks">BlackBerry Quirks</h2>
+
+<p>May fail with a <code class="language-plaintext highlighter-rouge">ControlledAccessException</code> in the following cases:</p>
+
+<ul>
+  <li>An app attempts to access a directory created by a previous installation of the app.</li>
+</ul>
+
+<blockquote>
+  <p>Solution: ensure temporary directories are cleaned manually, or by the application prior to reinstallation.</p>
+</blockquote>
+
+<ul>
+  <li>If the device is connected by USB.</li>
+</ul>
+
+<blockquote>
+  <p>Solution: disconnect the USB cable from the device and run again.</p>
+</blockquote>

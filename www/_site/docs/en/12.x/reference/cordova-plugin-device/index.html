@@ -1,0 +1,319 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<h1 id="cordova-plugin-device">cordova-plugin-device</h1>
+
+<p><a href="https://github.com/apache/cordova-plugin-device/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-device/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-device/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-device/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-device/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-device/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-device/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-device/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
+
+<p>This plugin defines a global <code class="language-plaintext highlighter-rouge">device</code> object, which describes the device’s hardware and software.
+Although the object is in the global scope, it is not available until after the <code class="language-plaintext highlighter-rouge">deviceready</code> event.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">device</span><span class="p">.</span><span class="nx">cordova</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-device
+</code></pre></div></div>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>device.cordova</li>
+  <li>device.model</li>
+  <li>device.platform</li>
+  <li>device.uuid</li>
+  <li>device.version</li>
+  <li>device.manufacturer</li>
+  <li>device.isVirtual</li>
+  <li>device.serial</li>
+  <li>device.sdkVersion (Android only)</li>
+</ul>
+
+<h2 id="devicecordova">device.cordova</h2>
+
+<p>Returns the Cordova platform’s version that is bundled in the application.</p>
+
+<p>The version information comes from the <code class="language-plaintext highlighter-rouge">cordova.js</code> file.</p>
+
+<p>This property does not display other installed platforms’ version information. Only the respective running platform’s version is displayed.</p>
+
+<p>Example:</p>
+
+<p>If Cordova Android 10.1.1 is installed on the Cordova project, the <code class="language-plaintext highlighter-rouge">cordova.js</code> file, in the Android application, will contain <code class="language-plaintext highlighter-rouge">10.1.1</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">device.cordova</code> property will display <code class="language-plaintext highlighter-rouge">10.1.1</code>.</p>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+  <li>OS X</li>
+</ul>
+
+<h2 id="devicemodel">device.model</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">device.model</code> returns the name of the device’s model or
+product. The value is set by the device manufacturer and may be
+different across versions of the same product.</p>
+
+<h3 id="supported-platforms-1">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+  <li>OS X</li>
+</ul>
+
+<h3 id="quick-example">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android: Pixel 4             returns "Pixel 4"</span>
+<span class="c1">//          Motorola Moto G3    returns "MotoG3"</span>
+<span class="c1">// Browser: Google Chrome       returns "Chrome"</span>
+<span class="c1">//          Safari              returns "Safari"</span>
+<span class="c1">// iOS:     iPad Mini           returns "iPad2,5"</span>
+<span class="c1">//          iPhone 5            returns "iPhone5,1"</span>
+<span class="c1">// See https://www.theiphonewiki.com/wiki/Models</span>
+<span class="c1">// OS X:                        returns "x86_64"</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">model</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">model</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="android-quirks">Android Quirks</h3>
+
+<ul>
+  <li>Gets the <a href="https://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>.</li>
+</ul>
+
+<h3 id="ios-quirks">iOS Quirks</h3>
+
+<p>The model value is based on the identifier that Apple supplies.</p>
+
+<p>If you need the exact device name, e.g. iPhone 13 Pro Max, a mapper needs to be created to convert the known identifiers to the associated device name.</p>
+
+<p>Example: The identifier <code class="language-plaintext highlighter-rouge">iPhone14,3</code> is associated to the device <code class="language-plaintext highlighter-rouge">iPhone 13 Pro Max</code>.</p>
+
+<p>For the full list of all identifiers to device names, see <a href="https://www.theiphonewiki.com/wiki/Models">here</a></p>
+
+<h2 id="deviceplatform">device.platform</h2>
+
+<p>Get the device’s operating system name.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">platform</span><span class="p">;</span>
+</code></pre></div></div>
+<h3 id="supported-platforms-2">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+  <li>OS X</li>
+</ul>
+
+<h3 id="quick-example-1">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Depending on the device, a few examples are:</span>
+<span class="c1">//   - "Android"</span>
+<span class="c1">//   - "browser"</span>
+<span class="c1">//   - "iOS"</span>
+<span class="c1">//   - "WinCE"</span>
+<span class="c1">//   - "Mac OS X"</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">devicePlatform</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">platform</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="deviceuuid">device.uuid</h2>
+
+<p>Get the device’s Universally Unique Identifier (<a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a>).</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">uuid</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="description">Description</h3>
+
+<p>The details of how a UUID is generated are determined by the device manufacturer and are specific to the device’s platform or model.</p>
+
+<h3 id="supported-platforms-3">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
+  <li>OS X</li>
+</ul>
+
+<h3 id="quick-example-2">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android: Returns a random 64-bit integer (as a string, again!)</span>
+<span class="c1">//</span>
+<span class="c1">// iOS: (Paraphrased from the UIDevice Class documentation)</span>
+<span class="c1">//         Returns the [UIDevice identifierForVendor] UUID which is unique and the same for all apps installed by the same vendor. However the UUID can be different if the user deletes all apps from the vendor and then reinstalls it.</span>
+<span class="c1">//</span>
+<span class="c1">// Windows Phone 7 : Returns a hash of device+current user,</span>
+<span class="c1">// if the user is not defined, a guid is generated and will persist until the app is uninstalled</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">deviceID</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">uuid</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="android-quirk">Android Quirk</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">uuid</code> on Android is a 64-bit integer (expressed as a hexadecimal string). The behaviour of this <code class="language-plaintext highlighter-rouge">uuid</code> is different on two different OS versions-</p>
+
+<p><strong>For &lt; Android 8.0 (API level 26)</strong></p>
+
+<p>In versions of the platform lower than Android 8.0, the <code class="language-plaintext highlighter-rouge">uuid</code> is randomly generated when the user first sets up the device and should remain constant for the lifetime of the user’s device.</p>
+
+<p><strong>For Android 8.0 or higher</strong></p>
+
+<p>The above behaviour was changed in Android 8.0. Read it in detail <a href="https://developer.android.com/about/versions/oreo/android-8.0-changes#privacy-all">here</a>.</p>
+
+<p>On Android 8.0 and higher versions, the <code class="language-plaintext highlighter-rouge">uuid</code> will be unique to each combination of app-signing key, user, and device. The value is scoped by signing key and user. The value may change if a factory reset is performed on the device or if an APK signing key changes.</p>
+
+<p>Read more here https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID.</p>
+
+<h3 id="ios-quirk">iOS Quirk</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">uuid</code> on iOS uses the identifierForVendor property. It is unique to the device across the same vendor, but will be different for different vendors and will change if all apps from the vendor are deleted and then reinstalled.
+Refer <a href="https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor">here</a> for details.
+The UUID will be the same if app is restored from a backup or iCloud as it is saved in preferences. Users using older versions of this plugin will still receive the same previous UUID generated by another means as it will be retrieved from preferences.</p>
+
+<h3 id="os-x-quirk">OS X Quirk</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">uuid</code> on OS X is generated automatically if it does not exist yet and is stored in the <code class="language-plaintext highlighter-rouge">standardUserDefaults</code> in the <code class="language-plaintext highlighter-rouge">CDVUUID</code> property.</p>
+
+<h2 id="deviceversion">device.version</h2>
+
+<p>Get the operating system version.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.version;
+</code></pre></div></div>
+
+<h3 id="supported-platforms-4">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+  <li>OS X</li>
+</ul>
+
+<h3 id="quick-example-3">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android:    Froyo OS would return "2.2"</span>
+<span class="c1">//             Eclair OS would return "2.1", "2.0.1", or "2.0"</span>
+<span class="c1">//             Version can also return update level "2.1-update1"</span>
+<span class="c1">//</span>
+<span class="c1">// Browser:    Returns version number for the browser</span>
+<span class="c1">//</span>
+<span class="c1">// iOS:     iOS 3.2 returns "3.2"</span>
+<span class="c1">//</span>
+<span class="c1">// Windows 8: return the current OS version, ex on Windows 8.1 returns 6.3.9600.16384</span>
+<span class="c1">//</span>
+<span class="c1">// OS X:        El Capitan would return "10.11.2"</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">deviceVersion</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="devicemanufacturer">device.manufacturer</h2>
+
+<p>Get the device’s manufacturer.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.manufacturer;
+</code></pre></div></div>
+
+<h3 id="supported-platforms-5">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="quick-example-4">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Android:    Motorola XT1032 would return "motorola"</span>
+<span class="c1">// iOS:     returns "Apple"</span>
+<span class="c1">//</span>
+<span class="kd">var</span> <span class="nx">deviceManufacturer</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">manufacturer</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="deviceisvirtual">device.isVirtual</h2>
+
+<p>whether the device is running on a simulator.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">isSim</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">isVirtual</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="devicesdkversion-android-only">device.sdkVersion (Android only)</h2>
+
+<p>Get the Android device’s SDK version (<a href="https://developer.android.com/reference/android/os/Build.VERSION#SDK_INT">SDK_INT</a>).</p>
+
+<h3 id="supported-platforms-6">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+</ul>
+
+<h3 id="os-x-and-browser-quirk">OS X and Browser Quirk</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">isVirtual</code> property on OS X and Browser always returns false.</p>
+
+<h2 id="deviceserial">device.serial</h2>
+
+<p>Get the device hardware serial number (<a href="https://developer.android.com/reference/android/os/Build.html#SERIAL">SERIAL</a>).</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">serial</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="supported-platforms-7">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>OS X</li>
+</ul>
+
+<h3 id="android-quirk-1">Android Quirk</h3>
+
+<p>As of Android 9, the underlying native API that powered the <code class="language-plaintext highlighter-rouge">uuid</code> property is deprecated and will always return <code class="language-plaintext highlighter-rouge">UNKNOWN</code> without proper permissions. Cordova have never implemented handling the required permissions. As of Android 10, <strong>all</strong> non-resettable device identifiers are no longer readable by normal applications and will always return <code class="language-plaintext highlighter-rouge">UNKNOWN</code>. More information can be <a href="https://developer.android.com/about/versions/10/privacy/changes#non-resettable-device-ids">read here</a>.</p>
+
+<h2 id="deviceisiosapponmac">device.isiOSAppOnMac</h2>
+
+<p>The iOS app is running on the Mac desktop (Apple Silicon ARM64 processor, M1 or newer). 
+This parameter is only returned for iOS V14.0 or later, and is not returned for Android devices.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">boolean</span> <span class="o">=</span> <span class="nx">device</span><span class="p">.</span><span class="nx">isiOSAppOnMac</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="supported-platforms-8">Supported Platforms</h3>
+
+<ul>
+  <li>iOS</li>
+</ul>

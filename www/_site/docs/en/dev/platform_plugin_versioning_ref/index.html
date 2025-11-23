@@ -1,0 +1,289 @@
+<h1 id="version-management">Version Management</h1>
+
+<p>Cordova allows developers to <strong>save</strong> and <strong>restore</strong> platforms and plugins, eliminating the need to check in platform and plugin source code.</p>
+
+<p>When a platform or plugin is added, its version details are automatically saved to the <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
+
+<p>The recommended way to add or remove platforms and plugins is by using the Cordova CLI commands:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cordova platform add|remove ...</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cordova plugin add|remove ...</code></li>
+</ul>
+
+<p>Using these commands helps prevent out-of-sync issues.</p>
+
+<p>While it is technically possible to add a platform or plugin by editing <code class="language-plaintext highlighter-rouge">package.json</code> directly, this is <strong>strongly discouraged</strong>.</p>
+
+<p>The restore process runs automatically when executing <code class="language-plaintext highlighter-rouge">cordova prepare</code>, using the information stored in <code class="language-plaintext highlighter-rouge">package.json</code> and <code class="language-plaintext highlighter-rouge">config.xml</code>. This applies to both platforms and plugins. If a platform or plugin is defined in both files, <code class="language-plaintext highlighter-rouge">package.json</code> takes priority.</p>
+
+<p>One scenario where save/restore capabilities come in handy is in large teams that work on an app, with each team member focusing on a platform or plugin. This feature makes it easier to share the project and reduce the amount of redundant code that is checked in the repository.</p>
+
+<p>The adding and removing mechanisim that Cordova CLI uses for platforms and plugins is controlled by npm CLI. Below we will take a look at the command syntax and examples.</p>
+
+<h2 id="adding-platforms-and-plugins">Adding Platforms and Plugins</h2>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;platform | plugin&gt; add <span class="o">[</span>&lt;package-spec&gt; ...]
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">package-spec</code> argument supports most formats accepted by the npm CLI.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Scoped and non-scoped npm packages</li>
+  <li>Local directory paths</li>
+  <li>Git remote URLs</li>
+  <li>Tarball archives</li>
+  <li><a href="#Cordova-Resolved-Names">Cordova Resolved Names</a> for official Cordova platforms</li>
+</ul>
+
+<p>Additionally, the <code class="language-plaintext highlighter-rouge">--nosave</code> flag could be appended to the command to prevent adding of specified platform and plugins from the <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
+
+<hr />
+
+<p><strong>Quick Overview:</strong></p>
+
+<p>When you add a platform or plugin, <code class="language-plaintext highlighter-rouge">package.json</code> is updated with its dependencies and Cordova-specific metadata.</p>
+
+<p>For example, running the following commands in a Cordova project:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@13.0.0
+cordova plugin add cordova-plugin-device@3.0.0
+</code></pre></div></div>
+
+<p>Would result in <code class="language-plaintext highlighter-rouge">package.json</code> containing the following entries:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"cordova-android"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^13.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cordova-plugin-device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.0"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"android"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"cordova-plugin-device"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>When restoring a Cordova project, this metadata determines which platforms and plugins will be installed.</p>
+
+<hr />
+
+<h3 id="various-add-examples">Various <code class="language-plaintext highlighter-rouge">add</code> Examples</h3>
+
+<ul>
+  <li>
+    <p><strong>Cordova Resolved Names for Platforms:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add android
+</code></pre></div>    </div>
+
+    <p>If no tag or version is specified, the Cordova CLI will fetch the latest release.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add electron@latest
+</code></pre></div>    </div>
+
+    <p>NPM tags are supported and can be appended to the end of the package specification.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add ios@7.1.1
+</code></pre></div>    </div>
+
+    <p>Exact release versions published to the npm registry are also supported and can be appended to the end of the package specification.</p>
+  </li>
+  <li>
+    <p><strong>npm Package:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add cordova-android
+  cordova platform add cordova-android@latest
+  cordova platform add cordova-android@13.0.0
+
+  cordova platform add @cordova/some-platform
+  cordova platform add @cordova/some-platform@latest
+  cordova platform add @cordova/some-platform@1.0.0
+
+  cordova plugin some-cordova-plugin
+  cordova plugin some-cordova-plugin@latest
+
+  cordova plugin add @cordova/some-plugin
+  cordova plugin add @cordova/some-plugin@latest
+  cordova plugin add @cordova/some-plugin@1.0.0
+</code></pre></div>    </div>
+
+    <p>Scoped and non-scope npm packages are supported for both platforms and plugins. Optionally, npm package tags or released versions can be targeted by appending to the end of the package name. (e.g. <code class="language-plaintext highlighter-rouge">package-name@latest</code>).</p>
+
+    <p>Please note that the scoped packages shown above are only examples and do not exist.</p>
+  </li>
+  <li>
+    <p><strong>Git remote URL:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add git://github.com/apache/cordova-android.git
+  cordova platform add git://github.com/apache/cordova-android.git#feature-branch
+  cordova platform add git://github.com/apache/cordova-android.git#rel/13.0.0
+
+  cordova platform add https://github.com/apache/cordova-android.git
+  cordova platform add https://github.com/apache/cordova-android.git#feature-branch
+  cordova platform add https://github.com/apache/cordova-android.git#rel/13.0.0
+
+  cordova platform add https://github.com/apache/cordova-android
+  cordova platform add https://github.com/apache/cordova-android#feature-branch
+  cordova platform add https://github.com/apache/cordova-android#rel/13.0.0
+</code></pre></div>    </div>
+
+    <p>Various Git URL formats are supported for installing platforms and plugins. Optionally, a treeish (branch name, tag, or commit ID) can be specified by appending <code class="language-plaintext highlighter-rouge">#&lt;treeish&gt;</code> to the URL.</p>
+
+    <p>When targeting a treeish, ensure it is production-ready before using it in a production environment. This functionality is useful for testing and reviewing pull requests, future releases, or release votes.</p>
+  </li>
+  <li>
+    <p><strong>Git service short hand:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add github:apache/cordova-android
+  cordova platform add github:apache/cordova-android#feature-branch
+  cordova platform add github:apache/cordova-android#rel/13.0.0
+</code></pre></div>    </div>
+
+    <p>Platforms and plugins can also be checked out from Git repositories using a shorthand format.</p>
+
+    <p>If your repository is hosted on another Git service, such as Bitbucket or GitLab, you can modify the command to target these services.</p>
+
+    <p>Branches and tags can also be targeted using the shorthand format. However, ensure that the specified branch or version is production-ready before using it in production.</p>
+  </li>
+  <li>
+    <p><strong>Tarball Archive:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add ~/path/to/a/tarbal.tgz
+</code></pre></div>    </div>
+
+    <p>Currently, <strong>only platforms</strong> support installation from a tarball package. The supported archive formats are <code class="language-plaintext highlighter-rouge">.tar.gz</code>, <code class="language-plaintext highlighter-rouge">.tgz,</code> and <code class="language-plaintext highlighter-rouge">.tar</code>.</p>
+  </li>
+  <li>
+    <p><strong>Local Directory Path:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add ~/path/to/a/cordova-platform
+  cordova plugin add ~/path/to/a/cordova-plugin
+
+  cordova platform add C:/Path/to/a/cordova-platform
+  cordova plugin add C:/Path/to/a/cordova-plugin
+</code></pre></div>    </div>
+
+    <p>Platforms and plugins can be installed from a local directory path.</p>
+  </li>
+</ul>
+
+<h2 id="removing-platforms-and-plugins">Removing Platforms and Plugins</h2>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;platform | plugin&gt; remove &lt;package-name&gt;
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">remove</code> command also has an alias of <code class="language-plaintext highlighter-rouge">rm</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">package-name</code> argument must be the name of the platform or plugin you want to remove.</p>
+
+<p>For Apache Cordova’s platforms, you <strong>MUST</strong> use the <a href="#Cordova-Resolved-Names">Cordova Resolved Names</a> when removing them.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">--nosave</code> flag could be appended to the command to prevent removal of specified platform and plugins from the <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
+
+<hr />
+
+<h3 id="various-remove-examples">Various <code class="language-plaintext highlighter-rouge">remove</code> Examples</h3>
+
+<ul>
+  <li>
+    <p><strong>Removing platforms:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform remove android
+</code></pre></div>    </div>
+
+    <p>The above command will remove the <code class="language-plaintext highlighter-rouge">cordova-android</code> platform from the project and <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
+
+    <p><em>Note: If the platform definition existed in <code class="language-plaintext highlighter-rouge">config.xml</code> from older version’s of Cordova CLI, it will also be removed from <code class="language-plaintext highlighter-rouge">config.xml</code>.</em></p>
+  </li>
+  <li>
+    <p><strong>Removing plugins:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin remove cordova-plugin-device
+</code></pre></div>    </div>
+
+    <p>The above command will remove the <code class="language-plaintext highlighter-rouge">cordova-plugin-device</code> plugin from the project and <code class="language-plaintext highlighter-rouge">package.json</code> file.</p>
+
+    <p><em>Note: If the plugin definition existed in <code class="language-plaintext highlighter-rouge">config.xml</code> from older version’s of Cordova CLI, it will also be removed from <code class="language-plaintext highlighter-rouge">config.xml</code>.</em></p>
+  </li>
+</ul>
+
+<h2 id="important-notes-on-platform-restoration">Important Notes on Platform Restoration</h2>
+
+<ol>
+  <li>
+    <p>What version is installed when using <code class="language-plaintext highlighter-rouge">cordova platform add android</code> and the platform is defined in <code class="language-plaintext highlighter-rouge">config.xml</code>?</p>
+
+    <p>If the <code class="language-plaintext highlighter-rouge">config.xml</code> file contains the following entry:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span>
+     ...
+     <span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">"13.0.0"</span> <span class="nt">/&gt;</span>
+     ...
+ <span class="nt">&lt;/xml&gt;</span>
+</code></pre></div>    </div>
+
+    <p>When running the <strong><code class="language-plaintext highlighter-rouge">cordova platform add android</code></strong> command with no version provided, it will use the <code class="language-plaintext highlighter-rouge">spec</code> version defined in <code class="language-plaintext highlighter-rouge">config.xml</code>. In this example it would be <code class="language-plaintext highlighter-rouge">13.0.0</code>.</p>
+  </li>
+  <li>
+    <p>What version is restored if a platform is defined in both <code class="language-plaintext highlighter-rouge">config.xml</code> and <code class="language-plaintext highlighter-rouge">package.json</code>?</p>
+
+    <p>Suppose your project has the following configurations:</p>
+
+    <p><strong><code class="language-plaintext highlighter-rouge">config.xml</code></strong>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">“12.0.0”</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p><strong><code class="language-plaintext highlighter-rouge">package.json</code></strong>:</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="s2">"android"</span><span class="w">
+     </span><span class="p">]</span><span class="w">
+ </span><span class="p">}</span><span class="err">,</span><span class="w">
+ </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"cordova-android"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^13.0.0"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p>When <code class="language-plaintext highlighter-rouge">cordova prepare</code> is executed, the version from <code class="language-plaintext highlighter-rouge">package.json</code> has higher priority over <code class="language-plaintext highlighter-rouge">config.xml</code>. It will install version <code class="language-plaintext highlighter-rouge">^13.0.0</code>.</p>
+  </li>
+</ol>
+
+<h2 id="cordova-resolved-names">Cordova Resolved Names</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cordova Resolved Name</th>
+      <th>NPM Package Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">android</code></td>
+      <td><code class="language-plaintext highlighter-rouge">cordova-android</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">electron</code></td>
+      <td><code class="language-plaintext highlighter-rouge">cordova-electron</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ios</code></td>
+      <td><code class="language-plaintext highlighter-rouge">cordova-ios</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">browser</code></td>
+      <td><code class="language-plaintext highlighter-rouge">cordova-browser</code></td>
+    </tr>
+  </tbody>
+</table>

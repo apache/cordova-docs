@@ -1,0 +1,90 @@
+<h1 id="ubuntu-platform-guide">Ubuntu Platform Guide</h1>
+
+<h2 id="initial-release">Initial Release</h2>
+
+<p>Welcome to the initial release of Ubuntu platform support in
+Cordova. With this release, the focus is developing on an Ubuntu
+system and using the cross-platform workflow discussed in the
+<a href="../../overview/index.html">Overview</a>.  This includes adding the Ubuntu platform to your project,
+adding standard Cordova plugins, and building and running apps for the
+Ubuntu platform.</p>
+
+<h3 id="ubuntu-sdk">Ubuntu SDK</h3>
+
+<p>You may also want to install the Ubuntu QtCreator development environment. See
+<a href="http://developer.ubuntu.com">developer.ubuntu.com</a> for more info. (The
+QtCreator SDK is not required to add Ubuntu platform support to your Cordova
+app.)</p>
+
+<h3 id="ubuntu-runtime-platforms">Ubuntu Runtime Platforms</h3>
+
+<p>Ubuntu is well known for its Desktop environment (for laptops, PCs and such).
+Ubuntu Touch extends the Ubuntu OS onto phones and tablets. Ubuntu runtime
+platforms have varying CPU architectures (x86, armhf, etc.). App and plugin
+code must be compiled appropriately. Support for this broad area is rapidly
+evolving in Ubuntu.</p>
+
+<h3 id="latest-information">Latest Information</h3>
+
+<p>For the latest information on Cordova app support for Ubuntu runtime platforms,
+see <a href="http://wiki.ubuntu.com/Cordova">wiki.ubuntu.com/Cordova</a>.</p>
+
+<h2 id="development-platform-requirements">Development Platform Requirements</h2>
+
+<p>For this initial release, the development platform should be an Ubuntu Desktop.
+Ubuntu 13.10 (codename ‘saucy’) or later is required to enjoy the full set of
+supported capabilities.</p>
+
+<p>You can install Cordova on non-Ubuntu systems (using npm), but important
+capabilities are only provided through Ubuntu debian packages at this time.</p>
+
+<h2 id="cordova-installation">Cordova Installation</h2>
+
+<p>Add the Ubuntu Cordova
+<a href="https://launchpad.net/~cordova-ubuntu/+archive/ppa">Personal Package Archive</a>
+to your Ubuntu system:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:cordova-ubuntu/ppa
+$ sudo apt-get update
+</code></pre></div></div>
+
+<p>Install cordova-cli package (and its dependencies):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install cordova-cli
+</code></pre></div></div>
+
+<h2 id="project-workflow">Project Workflow</h2>
+
+<h3 id="create-a-project">Create a project</h3>
+
+<p>Creates an app in a <code class="language-plaintext highlighter-rouge">hello</code> directory whose display name is
+<code class="language-plaintext highlighter-rouge">HelloWorld</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova create hello com.example.hello HelloWorld
+</code></pre></div></div>
+
+<h3 id="move-into-the-project-directory">Move into the Project Directory</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd hello
+</code></pre></div></div>
+
+<h3 id="add-the-ubuntu-platform">Add the Ubuntu Platform</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova platform add ubuntu
+</code></pre></div></div>
+
+<h3 id="build-for-ubuntu">Build for Ubuntu</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova build ubuntu
+</code></pre></div></div>
+
+<h3 id="run-the-app">Run the App</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova run ubuntu
+</code></pre></div></div>
+
+<h3 id="add-the-camera-plugin">Add the Camera Plugin</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova plugin add cordova-plugin-camera
+</code></pre></div></div>
+

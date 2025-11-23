@@ -1,0 +1,86 @@
+<h1 id="devicename">device.name</h1>
+
+<p>Get the device’s model <a href="../storage/parameters/name.html">name</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var string = device.name;
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p><code class="language-plaintext highlighter-rouge">device.name</code> returns the <a href="../storage/parameters/name.html">name</a> of the device’s model or product. This value is set by the device manufacturer and may be different across versions of the same product.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 ( Mango )</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Android:    Nexus One       returns "Passion" (Nexus One code name)
+//             Motorola Droid  returns "voles"
+// BlackBerry: Bold 8900       returns "8900"
+// iPhone:     All devices     returns a name set by iTunes e.g. "Joe's iPhone"
+//
+var name = device.name;
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+
+        element.innerHTML = 'Device Name: '     + device.name     + '&lt;br /&gt;' + 
+                            'Device PhoneGap: ' + device.phonegap + '&lt;br /&gt;' + 
+                            'Device Platform: ' + device.platform + '&lt;br /&gt;' + 
+                            'Device UUID: '     + device.uuid     + '&lt;br /&gt;' + 
+                            'Device Version: '  + device.version  + '&lt;br /&gt;';
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="deviceProperties"&gt;Loading device properties...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>Gets the <a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">product name</a> instead of the <a href="http://developer.android.com/reference/android/os/Build.html#MODEL">model name</a>.
+    <ul>
+      <li>The product name is often the code name given during production.</li>
+      <li>e.g. Nexus One returns “Passion”, Motorola Droid returns “voles”</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="iphone-quirks">iPhone Quirks</h2>
+
+<ul>
+  <li>Gets the <a href="http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13">device’s custom name</a> instead of the <a href="http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1">device model name</a>.
+    <ul>
+      <li>The custom name is set by the owner in iTunes.</li>
+      <li>e.g. “Joe’s iPhone”</li>
+    </ul>
+  </li>
+</ul>

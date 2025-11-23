@@ -1,0 +1,83 @@
+<h1 id="events">Events</h1>
+
+<blockquote>
+  <p>Cordova lifecycle events.</p>
+</blockquote>
+
+<h2 id="event-types">Event Types</h2>
+
+<ul>
+  <li><a href="events.deviceready.html">deviceready</a></li>
+  <li><a href="events.pause.html">pause</a></li>
+  <li><a href="events.resume.html">resume</a></li>
+  <li><a href="events.online.html">online</a></li>
+  <li><a href="events.offline.html">offline</a></li>
+  <li><a href="events.backbutton.html">backbutton</a></li>
+  <li><a href="events.batterycritical.html">batterycritical</a></li>
+  <li><a href="events.batterylow.html">batterylow</a></li>
+  <li><a href="events.batterystatus.html">batterystatus</a></li>
+  <li><a href="events.menubutton.html">menubutton</a></li>
+  <li><a href="events.searchbutton.html">searchbutton</a></li>
+  <li><a href="events.startcallbutton.html">startcallbutton</a></li>
+  <li><a href="events.endcallbutton.html">endcallbutton</a></li>
+  <li><a href="events.volumedownbutton.html">volumedownbutton</a></li>
+  <li><a href="events.volumeupbutton.html">volumeupbutton</a></li>
+</ul>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlpluginsxml">app/res/xml/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Battery" value="org.apache.cordova.BatteryListener" /&gt;
+</code></pre></div></div>
+
+<h4 id="appandroidmanifestxml">app/AndroidManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.BROADCAST_STICKY" /&gt;
+</code></pre></div></div>
+
+<h3 id="bada">Bada</h3>
+
+<h4 id="manifestxml">manifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Privilege&gt;
+    &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
+&lt;/Privilege&gt;
+</code></pre></div></div>
+
+<h3 id="blackberry-webworks">BlackBerry WebWorks</h3>
+
+<h4 id="wwwpluginsxml">www/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Battery" value="org.apache.cordova.battery.Battery" /&gt;
+</code></pre></div></div>
+
+<h4 id="wwwconfigxml">www/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.app"          required="true" version="1.0.0.0" /&gt;
+&lt;feature id="blackberry.app.event"    required="true" version="1.0.0.0" /&gt;
+&lt;feature id="blackberry.system.event" required="true" version="1.0.0.0" /&gt;
+</code></pre></div></div>
+
+<h3 id="ios">iOS</h3>
+
+<h4 id="appsupporting-filescordovaplist">App/Supporting Files/Cordova.plist</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;Battery&lt;/key&gt;
+    &lt;string&gt;CDVBattery&lt;/string&gt;
+&lt;/dict&gt;
+</code></pre></div></div>
+
+<h3 id="webos">webOS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="windows-phone">Windows Phone</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>

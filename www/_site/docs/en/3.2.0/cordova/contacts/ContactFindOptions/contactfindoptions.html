@@ -1,0 +1,99 @@
+<h1 id="contactfindoptions">ContactFindOptions</h1>
+
+<p>Contains properties that can be used to filter the results of a <code class="language-plaintext highlighter-rouge">[contacts.find](../contacts.find.html)</code> operation.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>filter</strong>: The search string used to find contacts. <em>(DOMString)</em> (Default: <code class="language-plaintext highlighter-rouge">""</code>)</p>
+  </li>
+  <li>
+    <p><strong>multiple</strong>: Determines if the find operation returns multiple contacts. <em>(Boolean)</em> (Default: <code class="language-plaintext highlighter-rouge">false</code>)</p>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// success callback
+function onSuccess(contacts) {
+    for (var i=0; i&lt;contacts.length; i++) {
+        alert(contacts[i].displayName);
+    }
+};
+
+// error callback
+function onError(contactError) {
+    alert('onError!');
+};
+
+// specify contact search criteria
+var options = new ContactFindOptions();
+    options.filter="";        // empty search string returns all contacts
+    options.multiple=true;    // return multiple results
+    filter = ["displayName"]; // return contact.displayName field
+
+    // find contacts
+navigator.contacts.find(filter, onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // specify contact search criteria
+        var options = new ContactFindOptions();
+        options.filter = "";      // empty search string returns all contacts
+        options.multiple = true;  // return multiple results
+        filter = ["displayName"]; // return contact.displayName field
+
+        // find contacts
+        navigator.contacts.find(filter, onSuccess, onError, options);
+    }
+
+    // onSuccess: Get a snapshot of the current contacts
+    //
+    function onSuccess(contacts) {
+        for (var i=0; i&lt;contacts.length; i++) {
+            alert(contacts[i].displayName);
+        }
+    };
+
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

@@ -1,0 +1,165 @@
+<h1 id="developing-a-plugin-on-ios">Developing a Plugin on iOS</h1>
+
+<p>A plugin is an Objective-C class that extends the <code class="language-plaintext highlighter-rouge">CDVPlugin</code> class.</p>
+
+<p>Each plugin class must be registered using the config.xml file, as a &lt;plugin&gt; tag under the &lt;plugins&gt; key.</p>
+
+<h2 id="plugin-class-mapping">Plugin Class Mapping</h2>
+
+<p>The JavaScript portion of a plugin always uses the <code class="language-plaintext highlighter-rouge">cordova.exec</code> method as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre></div></div>
+
+<p>This will marshal a request from the UIWebView to the iOS native side, more or less boiling down to calling the <code class="language-plaintext highlighter-rouge">action</code> method on the <code class="language-plaintext highlighter-rouge">service</code> class, with the arguments passed in the <code class="language-plaintext highlighter-rouge">args</code> Array.</p>
+
+<p>Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the <code class="language-plaintext highlighter-rouge">onReset</code> method and stop or clean up those activities. This method is run when the <code class="language-plaintext highlighter-rouge">UIWebView</code> navigates to a new page or refreshes, which reloads the Javascript.</p>
+
+<p>The plugin must be added under the <code class="language-plaintext highlighter-rouge">&lt;plugins&gt;</code> tag of the <code class="language-plaintext highlighter-rouge">config.xml</code> file in your Cordova-iOS application’s project folder.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="service_name" value="PluginClassName" /&gt;
+</code></pre></div></div>
+
+<p>The key <code class="language-plaintext highlighter-rouge">service_name</code> should match what you use in the JavaScript <code class="language-plaintext highlighter-rouge">exec</code> call, and the value will be the name of the Objective-C class of the plugin. Without this added, the plugin may compile but will not be reachable by Cordova.</p>
+
+<h2 id="writing-an-ios-cordova-plugin">Writing an iOS Cordova Plugin</h2>
+
+<p>We have JavaScript fire off a plugin request to the native side. We have the iOS Objective-C plugin mapped properly via the <code class="language-plaintext highlighter-rouge">config.xml</code> file. So what does the final iOS Objective-C Plugin class look like?</p>
+
+<p>What gets dispatched to the plugin via JavaScript’s <code class="language-plaintext highlighter-rouge">exec</code> function gets passed into the corresponding Plugin class’s <code class="language-plaintext highlighter-rouge">action</code> method. A plugin method has this signature:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)myMethod:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSString* myarg = [command.arguments objectAtIndex:0];
+
+    if (myarg != nil) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else { 
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+    }
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+</code></pre></div></div>
+
+<ol>
+  <li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h">CDVInvokedUrlCommand.h</a></li>
+  <li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h">CDVPluginResult.h</a></li>
+  <li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h">CDVCommandDelegate.h</a></li>
+</ol>
+
+<h2 id="plugin-signatures">Plugin Signatures</h2>
+
+<p>The <strong>new signature</strong> supported beginning in <strong>Cordova 2.1.0</strong> is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    - (void)myMethod:(CDVInvokedUrlCommand*)command;
+</code></pre></div></div>
+
+<p>The <strong>old (deprecated)</strong> signature is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    - (void)myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+</code></pre></div></div>
+
+<p>Basically, the options dictionary has been removed for the new signature, and the callbackId is not the 0th index item for the arguments array, but it is now in a separate property.</p>
+
+<h2 id="echo-plugin-ios-plugin">Echo Plugin iOS Plugin</h2>
+
+<p>We would add the following to the <code class="language-plaintext highlighter-rouge">&lt;plugins&gt;</code> tag of the project’s <code class="language-plaintext highlighter-rouge">config.xml</code> file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Echo" value="Echo" /&gt;
+</code></pre></div></div>
+
+<p>Then we would add the following files (<code class="language-plaintext highlighter-rouge">Echo.h</code> and <code class="language-plaintext highlighter-rouge">Echo.m</code>) to the Plugins folder inside our Cordova-iOS
+application folder:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/********* Echo.h Cordova Plugin Header *******/
+
+#import &lt;Cordova/CDV.h&gt;
+
+@interface Echo : CDVPlugin
+
+- (void)echo:(CDVInvokedUrlCommand*)command;
+
+@end
+
+/********* Echo.m Cordova Plugin Implementation *******/
+
+#import "Echo.h"
+#import &lt;Cordova/CDV.h&gt;
+
+@implementation Echo
+
+- (void)echo:(CDVInvokedUrlCommand*)command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSString* echo = [command.arguments objectAtIndex:0];
+
+    if (echo != nil &amp;&amp; [echo length] &gt; 0) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
+
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+@end
+</code></pre></div></div>
+
+<p>Let’s take a look at the code. At the top we have all of the necessary Cordova imports. Our class extends from <code class="language-plaintext highlighter-rouge">CDVPlugin</code> - very important.</p>
+
+<p>This plugin only supports one action, the <code class="language-plaintext highlighter-rouge">echo</code> action. First, we grab the echo string using the <code class="language-plaintext highlighter-rouge">objectAtIndex</code> method on our <code class="language-plaintext highlighter-rouge">args</code>, telling it we want to get the 0th parameter in the arguments array. We do a bit of parameter checking: make sure it is not <code class="language-plaintext highlighter-rouge">nil</code>, and make sure it is not a zero-length string.</p>
+
+<p>If it is, we return a <code class="language-plaintext highlighter-rouge">PluginResult</code> with an <code class="language-plaintext highlighter-rouge">ERROR</code> status. If all of those checks pass, then we return a <code class="language-plaintext highlighter-rouge">PluginResult</code> with an <code class="language-plaintext highlighter-rouge">OK</code> status, and pass in the <code class="language-plaintext highlighter-rouge">echo</code> string we received in the first place as a parameter.</p>
+
+<p>Finally, we send the result to <code class="language-plaintext highlighter-rouge">self.commandDelegate</code>, which will execute the JavaScript that will callback to success or failure callbacks of the exec method on the JavaScript side. If the success callback was called, it will pass the <code class="language-plaintext highlighter-rouge">echo</code> parameter as a parameter.</p>
+
+<h2 id="threading">Threading</h2>
+
+<p>Although UIWebViews run on a dedicated thread, plugin methods are executed on the UI thread. If your plugin requires a non-trivial amount of processing or requires a blocking call, you should make use of a background thread. An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+{
+    // Check command.arguments here.
+    [self.commandDelegate runInBackground:^{
+        NSString* payload = nil;
+        // Some blocking logic...
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+        // The sendPluginResult method is thread-safe.
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
+</code></pre></div></div>
+
+<h2 id="advanced-plugin-functionality">Advanced Plugin Functionality</h2>
+
+<p>See other methods that you can override in:</p>
+
+<ol>
+  <li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h">CDVPlugin.h</a></li>
+  <li><a href="https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m">CDVPlugin.m</a></li>
+</ol>
+
+<p>For example, you can hook into the <a href="../../../cordova/events/events.pause.html">pause</a>, <a href="../../../cordova/events/events.resume.html">resume</a>, app terminate and handleOpenURL events.</p>
+
+<h2 id="debugging-plugins">Debugging Plugins</h2>
+
+<p>To debug the Objective-C side, you would use Xcode’s built in debugger. For JavaScript, on iOS 5.0 you can use <a href="https://github.com/apache/cordova-weinre">Weinre, an Apache Cordova Project</a> or <a href="http://www.iwebinspector.com/">iWebInspector, a third-party utility</a></p>
+
+<p>For iOS 6, you would use Safari 6.0 to simply attach to your app running in the iOS 6 Simulator.</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li>Don’t forget to add your plugin’s mapping to config.xml - if you forgot, an error will be printed to the Xcode console log</li>
+  <li>Don’t forget to add any hosts you connect to in the <a href="guide_whitelist_index.md.html#Domain%20Whitelist%20Guide">whitelist</a> - if you forgot, an error will be printed to the Xcode console log</li>
+</ul>
+
+<h2 id="deprecated-plugin-signature-note">Deprecated Plugin Signature Note</h2>
+
+<p>The <strong>old (deprecated)</strong> signature is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+</code></pre></div></div>
+
+<p>The options parameter for the Objective-C plugin method is being deprecated, and it should not be used. For legacy reasons - the last JavaScript object passed in the args Array will be passed in as the options dictionary of the method in Objective-C. You must make sure that any JavaScript object that is passed in as an element in the args array occurs as the last item in the Array, if not it will throw off the array index of all subsequent parameters of the Array in Objective-C. Only one JavaScript object is supported for the options dictionary, and only the last one encountered will be passed to the native method. It is because of these error-prone reasons that they are being deprecated.</p>

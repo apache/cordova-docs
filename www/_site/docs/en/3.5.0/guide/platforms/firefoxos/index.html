@@ -1,0 +1,70 @@
+<h1 id="firefox-os-platform-guide">Firefox OS Platform Guide</h1>
+
+<p>This guide describes how to set up your development environment to
+create Cordova apps for Firefox OS devices, then test and publish those apps.</p>
+
+<h2 id="requirements-and-support">Requirements and Support</h2>
+
+<p>Firefox OS apps are basically just web apps, with the addition of a manifest.webapp file that defines metadata about the app and allows it to be installed on Firefox OS devices. Any platform that Cordova supports can be used.To find out more about building web apps, consult the <a href="https://developer.mozilla.org/en-US/Apps">App Center</a> on <a href="https://developer.mozilla.org/en-US/">MDN</a>.</p>
+
+<h2 id="installation-and-environment-setup">Installation and Environment Setup</h2>
+
+<p>First install <a href="http://nodejs.org/">Node.js</a>, then install the Cordova package like so:</p>
+
+  	$ npm install -g cordova
+
+<p>Next, create a sample Cordova app then navigate into the newly created directory:</p>
+
+  	$ cordova create test-app
+  	$ cd test-app
+
+<p>Add Firefox OS as a supported platform to the app with the following:</p>
+
+  	$ cordova platform add firefoxos
+
+<p>This creates a Firefox OS app in platforms/firefoxos/www directory, which currently looks the same except that it has a Firefox manifest file (manifest.webapp) inside the www directory.</p>
+
+<h2 id="developing-your-app">Developing your app</h2>
+
+<p>At this point you are ready to go — change the code inside test-app/www to whatever you want your app to be. You can add <a href="">supported plugins</a> to the app using “cordova plugin add”, for example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add org.apache.cordova.device
+cordova plugin add org.apache.cordova.vibration
+</code></pre></div></div>
+
+<p>You also need to add a custom manifest.webapp file into your test-app/www directory, which should include at least the following:</p>
+
+  	{ 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	"launch_path":"/index.html",
+	"installs_allowed_from":["*"],
+	"version":"0.0.1",
+	"name":"My app",
+	"pkgName":"io.cordova.hellocordova",
+	"icons": {
+  		"128": "/img/logo.png"
+	}
+  	}
+</code></pre></div></div>
+
+<p>For more information about Firefox App manifests, read <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest">App manifest</a> on MDN.</p>
+
+<p>When your app code is written, deploy your changes to the Firefox OS app you’ve added to your project with</p>
+
+  	$ cordova prepare
+
+<p>Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled.</p>
+
+<h2 id="testing-and-debugging">Testing and Debugging</h2>
+
+<p>The app can be tested using the Firefox OS <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>.</p>
+
+<p>When you have connected the App Manager to your test device/simulator, select the “Add Packaged App” option, then make sure you point to the test-app/platforms/firefoxos/www/ directory to include the App in the Manager interface.</p>
+
+<p>For here you can install the app on your test device/simulator (with the “Update” button). Using the “Debug” button you can then debug the app and edit its code live.</p>
+
+<p>Note: Before attempting to publish your app you should consider validating it using the <a href="https://marketplace.firefox.com/developers/validator">App validator</a>.</p>
+
+<h2 id="publishing-your-app-on-the-firefox-marketplace">Publishing your app on the Firefox Marketplace</h2>
+
+<p>You can submit your app to the Firefox Marketplace, or publish it yourself. Visit the <a href="https://developer.mozilla.org/en-US/Marketplace">Firefox Marketplace Zone</a> on MDN to find out more about how to do this; <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options">App publishing options</a> is the best place to start.</p>
+

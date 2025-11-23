@@ -1,0 +1,82 @@
+<h1 id="accelerometer">Accelerometer</h1>
+
+<blockquote>
+  <p>Captures device motion in the x, y, and z direction.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="accelerometer.getCurrentAcceleration.html">accelerometer.getCurrentAcceleration</a></li>
+  <li><a href="accelerometer.watchAcceleration.html">accelerometer.watchAcceleration</a></li>
+  <li><a href="accelerometer.clearWatch.html">accelerometer.clearWatch</a></li>
+</ul>
+
+<h2 id="arguments">Arguments</h2>
+
+<ul>
+  <li><a href="parameters/accelerometerSuccess.html">accelerometerSuccess</a></li>
+  <li><a href="parameters/accelerometerError.html">accelerometerError</a></li>
+  <li><a href="parameters/accelerometerOptions.html">accelerometerOptions</a></li>
+</ul>
+
+<h2 id="objects-read-only">Objects (Read-Only)</h2>
+
+<ul>
+  <li><a href="acceleration/acceleration.html">Acceleration</a></li>
+</ul>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlconfigxml">app/res/xml/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Accelerometer" value="org.apache.cordova.AccelListener" /&gt;
+</code></pre></div></div>
+
+<h3 id="bada">Bada</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="blackberry-webworks">BlackBerry WebWorks</h3>
+
+<h4 id="wwwpluginsxml">www/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" /&gt;
+</code></pre></div></div>
+
+<h4 id="wwwconfigxml">www/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.system"  required="true" version="1.0.0.0" /&gt;
+&lt;feature id="org.apache.cordova" required="true" version="1.0.0" /&gt;
+</code></pre></div></div>
+
+<h3 id="ios">iOS</h3>
+
+<h4 id="configxml">config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Accelerometer" value="CDVAccelerometer" /&gt;
+</code></pre></div></div>
+
+<h3 id="webos">webOS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="windows-phone">Windows Phone</h3>
+
+<h4 id="propertieswpappmanifestxml">Properties/WPAppManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
+    &lt;Capability Name="ID_CAP_SENSORS" /&gt;
+&lt;/Capabilities&gt;
+</code></pre></div></div>
+
+<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3 id="tizen">Tizen</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>

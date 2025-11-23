@@ -1,0 +1,29 @@
+<h1 id="capturecb">CaptureCB</h1>
+
+<blockquote>
+  <p>Invoked upon a successful media capture operation.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function captureSuccess( MediaFile[] mediaFiles ) { ... };
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>This function executes after a successful capture operation completes.
+At this point a media file has been captured, and either the user has
+exited the media capture application, or the capture limit has been
+reached.</p>
+
+<p>Each <code class="language-plaintext highlighter-rouge">[MediaFile](MediaFile.html)</code> object describes a captured media file.</p>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
+function captureSuccess(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+</code></pre></div></div>

@@ -1,0 +1,584 @@
+<h1 id="upgrading-windows-phone">Upgrading Windows Phone</h1>
+
+<p>This guide shows how to modify Windows Phone projects, both versions 7
+and 8, to upgrade from older versions of Cordova.  Most of these
+instructions apply to projects created with an older set of
+command-line tools that precede the <code class="language-plaintext highlighter-rouge">cordova</code> CLI utility. See The
+Command-line Interface for information how to update the version of
+the CLI.  The following section shows how to upgrade from non-CLI
+projects.</p>
+
+<h2 id="upgrade-to-310-from-300">Upgrade to 3.1.0 from 3.0.0</h2>
+
+<p>For projects that were created with the cordova CLI:</p>
+
+<ol>
+  <li>Update the <code class="language-plaintext highlighter-rouge">cordova</code> CLI version - see <a href="../../cli/index.html">The Command-line Interface</a></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">cordova platform update wp8</code> (or <code class="language-plaintext highlighter-rouge">wp7</code>, per the platforms you added to your project).</li>
+</ol>
+
+<p>For projects not created with the cordova CLI, run:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">bin\update &lt;project_path&gt;</code></li>
+</ol>
+
+<h2 id="upgrade-to-the-cli-300-from-290">Upgrade to the CLI (3.0.0) from 2.9.0</h2>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms the the cordova project, for example: <code class="language-plaintext highlighter-rouge">cordova
+platform add wp7 wp8</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the project’s <code class="language-plaintext highlighter-rouge">www</code> directory to the <code class="language-plaintext highlighter-rouge">www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy or overwrite any native assets from your original project
+(<code class="language-plaintext highlighter-rouge">SplashScreen</code>, <code class="language-plaintext highlighter-rouge">ApplicationIcon</code>, etc.), making sure to add any
+new files to the <code class="language-plaintext highlighter-rouge">.csproj</code> file. The windows phone project builds
+inside the <code class="language-plaintext highlighter-rouge">platforms\wp7</code> or <code class="language-plaintext highlighter-rouge">platforms\wp8</code> directory.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
+the CLI handles all core APIs as plugins, so they may need to be
+added. Only 3.0.0 plugins are compatible with the CLI.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-300-non-cli-from-290">Upgrade to 3.0.0 (non-CLI) from 2.9.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 3.0.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<p><strong>NOTE:</strong> all core APIs are removed from Cordova version 3.0, and must
+be installed separately as plugins.  For more information on how to
+re-enable these features in a non-CLI workflow, see Using Plugman to
+Manage Plugins.</p>
+
+<h2 id="upgrade-to-290-from-280">Upgrade to 2.9.0 from 2.8.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 2.9.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update the name of <code class="language-plaintext highlighter-rouge">cordova.js</code> in the HTML tag if it’s still using cordova-VERSION.js (should be just <code class="language-plaintext highlighter-rouge">cordova.js</code>).</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the .csproj file.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-280-from-270">Upgrade to 2.8.0 from 2.7.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 2.8.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova.js</code> file. (Note the lack of a version number in the filename.)</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-270-from-260">Upgrade to 2.7.0 from 2.6.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 2.7.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.7.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-260-from-250">Upgrade to 2.6.0 from 2.5.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 2.6.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-250-from-240">Upgrade to 2.5.0 from 2.4.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 2.5.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-240-from-230">Upgrade to 2.4.0 from 2.3.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 or WP8 2.4.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-230-from-220">Upgrade to 2.3.0 from 2.2.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 2.3.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-220-from-210">Upgrade to 2.2.0 from 2.1.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 2.2.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-210-from-200">Upgrade to 2.1.0 from 2.0.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 2.1.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-200-from-190">Upgrade to 2.0.0 from 1.9.0</h2>
+
+<p>There have been considerable changes to the WP7 project structure in Apache Cordova 2.0.0 which make this upgrade a little more involved that the others. Essentially this is not an upgrade but creation of a new project and copy over of existing source files.</p>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP7 2.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-190-from-180">Upgrade to 1.9.0 from 1.8.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.9.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.9.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-180-from-170">Upgrade to 1.8.0 from 1.7.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-170-from-160">Upgrade to 1.7.0 from 1.6.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.7.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.7.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-161-from-160">Upgrade to 1.6.1 from 1.6.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.6.1.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.6.1.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-160-from-150">Upgrade to 1.6.0 from 1.5.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.6.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.6.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-150-from-140">Upgrade to 1.5.0 from 1.4.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.5.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.5.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-140-from-130">Upgrade to 1.4.0 from 1.3.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.4.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.4.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-130-from-120">Upgrade to 1.3.0 from 1.2.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.3.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.3.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-120-from-110">Upgrade to 1.2.0 from 1.1.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> You can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.2.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.2.0.js</code> file.</li>
+</ol>
+
+<h2 id="upgrade-to-110-from-100">Upgrade to 1.1.0 from 1.0.0</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Delete <code class="language-plaintext highlighter-rouge">GapLib/WP7CordovaClassLib.dll</code> from your project.</p>
+  </li>
+  <li>
+    <p>Remove the reference to <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib</code> in the <strong>References</strong> directory.</p>
+  </li>
+  <li>
+    <p>Right-click on <strong>References</strong> and select <strong>Add Reference</strong>.</p>
+  </li>
+  <li>Navigate to the new distribution and add the <code class="language-plaintext highlighter-rouge">WP7CordovaClassLib.dll</code> file.
+    <ul>
+      <li><strong>NOTE:</strong> you can view the DLL’s version by right-clicking on the reference, and selecting <strong>Properties</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.1.0.js</code> into your project. (Be sure it is marked as Content.)</p>
+  </li>
+  <li>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.1.0.js</code> file.</li>
+</ol>

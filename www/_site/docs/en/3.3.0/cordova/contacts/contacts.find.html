@@ -1,0 +1,117 @@
+<h1 id="contactsfind">contacts.find</h1>
+
+<p>Queries the device contacts database and returns one or more <code class="language-plaintext highlighter-rouge">[Contact](Contact/contact.html)</code>
+objects, each containing the fields specified.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">contacts.find</code> method executes asynchronously, querying the
+device contacts database and returning an array of <code class="language-plaintext highlighter-rouge">[Contact](Contact/contact.html)</code> objects.
+The resulting objects are passed to the <code class="language-plaintext highlighter-rouge">[contactSuccess](parameters/contactSuccess.html)</code> callback
+function specified by the <strong>contactSuccess</strong> parameter.</p>
+
+<p>The <strong>contactFields</strong> parameter specifies the fields to be used as a
+search qualifier, and only those results are passed to the
+<strong>contactSuccess</strong> callback function.  A zero-length <strong>contactFields</strong>
+parameter is invalid and results in
+<code class="language-plaintext highlighter-rouge">[ContactError](ContactError/contactError.html).INVALID_ARGUMENT_ERROR</code>. A <strong>contactFields</strong> value of
+<code class="language-plaintext highlighter-rouge">"*"</code> returns all contact fields.</p>
+
+<p>The <strong>contactFindOptions.filter</strong> string can be used as a search
+filter when querying the contacts database.  If provided, a
+case-insensitive, partial value match is applied to each field
+specified in the <strong>contactFields</strong> parameter.  If there’s a match for
+<em>any</em> of the specified fields, the contact is returned.</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<ul>
+  <li>
+    <p><strong>contactFields</strong>: <a href="Contact/contact.html">Contact</a> fields to use as a search qualifier. The resulting <code class="language-plaintext highlighter-rouge">[Contact](Contact/contact.html)</code> object only features values for these fields. <em>(DOMString[])</em> [Required]</p>
+  </li>
+  <li>
+    <p><strong>contactSuccess</strong>: Success callback function invoked with the contacts returned from the database. [Required]</p>
+  </li>
+  <li>
+    <p><strong>contactError</strong>: Error callback function, invoked when an error occurs. [Optional]</p>
+  </li>
+  <li>
+    <p><strong>contactFindOptions</strong>: Search options to filter contacts. [Optional]</p>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
+};
+
+function onError(contactError) {
+    alert('onError!');
+};
+
+// find all contacts with 'Bob' in any name field
+var options      = new ContactFindOptions();
+options.filter   = "Bob";
+options.multiple = true;
+var fields       = ["displayName", "name"];
+navigator.contacts.find(fields, onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Contact Example&lt;/title&gt;
+        &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" charset="utf-8"&gt;
+
+            // Wait for device API libraries to load
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+
+            function onDeviceReady() {
+                // find all contacts with 'Bob' in any name field
+                var options = new ContactFindOptions();
+                options.filter = "Bob";
+                var fields = ["displayName", "name"];
+                navigator.contacts.find(fields, onSuccess, onError, options);
+            }
+
+            // onSuccess: Get a snapshot of the current contacts
+
+            function onSuccess(contacts) {
+                for (var i = 0; i &lt; contacts.length; i++) {
+                    console.log("Display Name = " + contacts[i].displayName);
+                }
+            }
+
+            // onError: Failed to get the contacts
+
+            function onError(contactError) {
+                alert('onError!');
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Example&lt;/h1&gt;
+        &lt;p&gt;Find Contacts&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

@@ -1,0 +1,85 @@
+<h1 id="amazon-fire-os-plugins">Amazon Fire OS Plugins</h1>
+
+<p>Follow the instructions provided in the <a href="../android/plugin.html">Android Plugins</a> Guide for an overview of developing custom plugins.</p>
+
+<h2 id="echo-amazon-fire-os-plugin-example">Echo Amazon Fire OS Plugin Example</h2>
+
+<p>To match the JavaScript interface’s <em>echo</em> feature described in
+Application Plugins, use the <code class="language-plaintext highlighter-rouge">plugin.xml</code> to inject a <code class="language-plaintext highlighter-rouge">feature</code>
+specification to the local platform’s <code class="language-plaintext highlighter-rouge">config.xml</code> file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="amazon-fireos"&gt;
+    &lt;config-file target="config.xml" parent="/*"&gt;
+        &lt;feature name="Echo"&gt;
+            &lt;param name="android-package" value="org.apache.cordova.plugin.Echo"/&gt;
+        &lt;/feature&gt;
+    &lt;/config-file&gt;
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<p>Then add the following to the
+<code class="language-plaintext highlighter-rouge">src/org/apache/cordova/plugin/Echo.java</code> file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package org.apache.cordova.plugin;
+
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * This class echoes a string called from JavaScript.
+ */
+public class Echo extends CordovaPlugin {
+
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        if (action.equals("echo")) {
+            String message = args.getString(0);
+            this.echo(message, callbackContext);
+            return true;
+        }
+        return false;
+    }
+
+    private void echo(String message, CallbackContext callbackContext) {
+        if (message != null &amp;&amp; message.length() &gt; 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
+    }
+}
+</code></pre></div></div>
+
+<p>If you want to reuse Android Plugin code for the Amazon Fire OS platform then modify the plugin.xml to point to the <code class="language-plaintext highlighter-rouge">android</code> specific source file. For example,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="amazon-fireos"&gt;
+    &lt;config-file target="config.xml" parent="/*"&gt;
+        &lt;feature name="Echo"&gt;
+            &lt;param name="android-package" value="org.apache.cordova.plugin.Echo"/&gt;
+        &lt;/feature&gt;
+    &lt;/config-file&gt;
+    &lt;source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" /&gt;
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<p>If you want to write a customized plugin for the Amazon Fire OS platform then create a folder named <code class="language-plaintext highlighter-rouge">amazon</code> under your plugin src/ folder and modify the plugin.xml to point to the <code class="language-plaintext highlighter-rouge">amazon</code> specific source file. For example,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="amazon-fireos"&gt;
+    &lt;config-file target="config.xml" parent="/*"&gt;
+        &lt;feature name="Echo"&gt;
+            &lt;param name="android-package" value="org.apache.cordova.plugin.Echo"/&gt;
+        &lt;/feature&gt;
+    &lt;/config-file&gt;
+    &lt;source-file src="src/amazon/Echo.java" target-dir="src/org/apache/cordova/plugin" /&gt;
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<h2 id="using-amazon-webview-in-your-plugin">Using Amazon WebView in your plugin</h2>
+
+<p>Cordova for Amazon Fire OS makes use of custom Amazon WebView that is built on the open-source Chromium project. It is GPU accelerated and optimized for fluid performance on Kindle Fire.</p>
+
+<p>To understand how to best use Amazon WebView in your project, check out the <a href="https://developer.amazon.com/sdk/fire/IntegratingAWV.html">Amazon Developer Portal</a>.</p>

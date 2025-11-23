@@ -1,0 +1,102 @@
+<h1 id="database">Database</h1>
+
+<p>Contains methods that allow the user to manipulate the Database</p>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>transaction</strong>: Runs a database transaction.</li>
+  <li><strong>changeVersion</strong>: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>A Database object is returned from a call to <code class="language-plaintext highlighter-rouge">window.openDatabase()</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iPhone</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="transaction-quick-example">Transaction Quick <a href="../storage.opendatabase.html">Example</a></h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function populateDB(tx) {
+	 tx.executeSql('DROP TABLE IF EXISTS DEMO');
+	 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+	 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+	 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+}
+
+function errorCB(err) {
+	alert("Error processing SQL: "+err.code);
+}
+
+function successCB() {
+	alert("success!");
+}
+
+var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+db.transaction(populateDB, errorCB, successCB);
+</code></pre></div></div>
+
+<h2 id="change-version-quick-example">Change Version Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+db.changeVersion("1.0", "1.1");
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+		db.transaction(populateDB, errorCB, successCB);
+    }
+	
+	// Populate the database 
+	//
+	function populateDB(tx) {
+		 tx.executeSql('DROP TABLE IF EXISTS DEMO');
+		 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+	}
+	
+	// Transaction error callback
+	//
+	function errorCB(tx, err) {
+		alert("Error processing SQL: "+err);
+	}
+	
+	// Transaction success callback
+	//
+	function successCB() {
+		alert("success!");
+	}
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Database&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

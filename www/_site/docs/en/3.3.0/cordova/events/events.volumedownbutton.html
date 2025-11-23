@@ -1,0 +1,65 @@
+<h1 id="volumedownbutton">volumedownbutton</h1>
+
+<p>The event fires when the user presses the volume down button.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("volumedownbutton", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>If you need to override the default volume down behavior you can
+register an event listener for the <code class="language-plaintext highlighter-rouge">volumedownbutton</code> event.</p>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">[deviceready](events.deviceready.html)</code> event fires.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>BlackBerry 10</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+
+function onVolumeDownKeyDown() {
+    // Handle the volume down button
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Volume Down Button Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+    }
+
+    // Handle the volume down button
+    //
+    function onVolumeDownKeyDown() {
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

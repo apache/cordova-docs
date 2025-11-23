@@ -1,0 +1,109 @@
+<h1 id="notificationprompt">notification.prompt</h1>
+
+<p>Shows a customizable prompt dialog box.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
+</code></pre></div></div>
+
+<ul>
+  <li><strong>message</strong>: Dialog message. <em>(String)</em></li>
+  <li><strong>promptCallback</strong>: Callback to invoke when a button is pressed. <em>(Function)</em></li>
+  <li><strong>title</strong>: Dialog title <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">Prompt</code>)</li>
+  <li><strong>buttonLabels</strong>: Array of strings specifying button labels <em>(Array)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">["OK","Cancel"]</code>)</li>
+  <li><strong>defaultText</strong>: Default textbox input value (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “Default text”)</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">notification.prompt</code> method displays a native dialog box that is
+more customizable than the browser’s <code class="language-plaintext highlighter-rouge">prompt</code> function.</p>
+
+<h2 id="promptcallback">promptCallback</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">promptCallback</code> executes when the user presses one of the buttons
+in the prompt dialog box. The <code class="language-plaintext highlighter-rouge">results</code> object passed to the callback
+contains the following properties:</p>
+
+<ul>
+  <li><strong>buttonIndex</strong>: The index of the pressed button. <em>(Number)</em> Note that the index uses one-based indexing, so the value is <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code>, etc.</li>
+  <li><strong>input1</strong>: The text entered in the prompt dialog box. <em>(String)</em></li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// process the promp dialog results
+function onPrompt(results) {
+    alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+}
+
+// Show a custom prompt dialog
+//
+function showPrompt() {
+    navigator.notification.prompt(
+        'Please enter your name',  // message
+        onPrompt,                  // callback to invoke
+        'Registration',            // title
+        ['Ok','Exit'],             // buttonLabels
+        'Jane Doe'                 // defaultText
+    );
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Prompt Dialog Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // process the promptation dialog result
+    function onPrompt(results) {
+        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+    }
+
+    // Show a custom prompt dialog
+    //
+    function showPrompt() {
+        navigator.notification.prompt(
+            'Please enter your name',  // message
+            onPrompt,                  // callback to invoke
+            'Registration',            // title
+            ['Ok','Exit'],             // buttonLabels
+            'Jane Doe'                 // defaultText
+        );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showPrompt(); return false;"&gt;Show Prompt&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>Android supports a maximum of three buttons, and ignores any more than that.</li>
+  <li>On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.</li>
+</ul>

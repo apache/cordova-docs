@@ -1,0 +1,133 @@
+<h1 id="contactorganization">ContactOrganization</h1>
+
+<p>Contains organization properties of a <code class="language-plaintext highlighter-rouge">[Contact](../Contact/contact.html)</code> object.</p>
+
+<h2 id="properties">Properties</h2>
+<ul>
+  <li><strong>pref:</strong> Set to <code class="language-plaintext highlighter-rouge">true</code> if this <code class="language-plaintext highlighter-rouge">ContactOrganization</code> contains the user’s preferred value. <em>(boolean)</em></li>
+  <li><strong>type:</strong> A string that tells you what type of field this is (example: ‘home’). _(DOMString)</li>
+  <li><strong>name:</strong> The name of the organization. <em>(DOMString)</em></li>
+  <li><strong>department:</strong> The department the contract works for. <em>(DOMString)</em></li>
+  <li><strong>title:</strong> The contacts title at the organization. <em>(DOMString)</em></li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">ContactOrganization</code> object stores a contact’s organization properties.  A <code class="language-plaintext highlighter-rouge">[Contact](../Contact/contact.html)</code> object stores one or more <code class="language-plaintext highlighter-rouge">ContactOrganization</code> objects in an array.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(contacts) {
+	for (var i=0; i&lt;contacts.length; i++) {
+		for (var j=0; j&lt;contacts[i].organizations.length; j++) {
+			alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
+					"Type: " + contacts[i].organizations[j].type + "\n" +
+					"Name: " + contacts[i].organizations[j].name + "\n" + 
+					"Department: "  + contacts[i].organizations[j].department + "\n" + 
+					"Title: "  + contacts[i].organizations[j].title);
+		}
+	}
+};
+
+function onError(contactError) {
+    alert('onError!');
+};
+
+var options = new ContactFindOptions();
+options.filter="";
+filter = ["displayName","organizations"];
+navigator.contacts.find(filter, onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		var options = new [ContactFindOptions](../ContactFindOptions/contactfindoptions.html)();
+		options.filter="";
+		filter = ["displayName","organizations"];
+		navigator.contacts.find(filter, onSuccess, onError, options);
+    }
+
+    // onSuccess: Get a snapshot of the current contacts
+    //
+	function onSuccess(contacts) {
+		for (var i=0; i&lt;contacts.length; i++) {
+			for (var j=0; j&lt;contacts[i].organizations.length; j++) {
+				alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
+						"Type: " + contacts[i].organizations[j].type + "\n" +
+						"Name: " + contacts[i].organizations[j].name + "\n" + 
+						"Department: "  + contacts[i].organizations[j].department + "\n" + 
+						"Title: "  + contacts[i].organizations[j].title);
+			}
+		}
+	};
+
+    // onError: Failed to get the contacts
+    //
+    function onError(contactError) {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Find Contacts&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-2x-quirks">Android 2.X Quirks</h2>
+
+<ul>
+  <li><strong>pref:</strong> This property is not supported by Android 2.X devices and will always return <code class="language-plaintext highlighter-rouge">false</code>.</li>
+</ul>
+
+<h2 id="android-1x-quirks">Android 1.X Quirks</h2>
+
+<ul>
+  <li><strong>pref:</strong> This property is not supported by Android 1.X devices and will always return <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li><strong>type:</strong> This property is not supported by Android 1.X devices and will always return <code class="language-plaintext highlighter-rouge">null</code>.</li>
+  <li><strong>title:</strong> This property is not supported by Android 1.X devices, and will always be returned as <code class="language-plaintext highlighter-rouge">null</code>.</li>
+</ul>
+
+<h2 id="blackberry-webworks-os-50-and-higher-quirks">BlackBerry WebWorks (OS 5.0 and higher) Quirks</h2>
+<ul>
+  <li><strong>pref:</strong> This property is not supported by BlackBerry devices and will always return <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li><strong>type:</strong> This property is not supported by BlackBerry devices and will always return <code class="language-plaintext highlighter-rouge">null</code>.</li>
+  <li><strong>name:</strong> Partially supported.  The first organization name will be stored in the BlackBerry <strong>company</strong> field.</li>
+  <li><strong>department:</strong> This property is not supported, and will always be returned as <code class="language-plaintext highlighter-rouge">null</code>.</li>
+  <li><strong>title:</strong> Partially supported.  The first organization title will be stored in the BlackBerry <strong>jobTitle</strong> field.</li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+<ul>
+  <li><strong>pref:</strong> This property is not supported on iOS devices and will always return <code class="language-plaintext highlighter-rouge">false</code>.</li>
+  <li><strong>type:</strong> This property is not supported on iOS devices and will always return <code class="language-plaintext highlighter-rouge">null</code>.</li>
+  <li><strong>name:</strong> Partially supported.  The first organization name will be stored in the iOS <strong>kABPersonOrganizationProperty</strong> field.</li>
+  <li><strong>department</strong>: Partially supported.  The first department name will be stored in the iOS <strong>kABPersonDepartmentProperty</strong> field.</li>
+  <li><strong>title</strong>: Partially supported.  The first title will be stored in the iOS <strong>kABPersonJobTitleProperty</strong> field.</li>
+</ul>
+

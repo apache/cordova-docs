@@ -1,0 +1,108 @@
+<h1 id="geolocationgetcurrentposition">geolocation.getCurrentPosition</h1>
+
+<p>Returns the device’s current position as a <code class="language-plaintext highlighter-rouge">[Position](Position/position.html)</code> object.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.geolocation.getCurrentPosition(geolocationSuccess, 
+                                         [geolocationError], 
+                                         [geolocationOptions]);
+</code></pre></div></div>
+
+<h2 id="parameters">Parameters</h2>
+
+<ul>
+  <li><strong>geolocationSuccess</strong>: The callback that is called with the current position.</li>
+  <li><strong>geolocationError</strong>: (Optional) The callback that is called if there was an error.</li>
+  <li><strong>geolocationOptions</strong>: (Optional) The geolocation options.</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p><code class="language-plaintext highlighter-rouge">geolocation.getCurrentPositon</code> is an asynchronous function. It returns the device’s current position to the <code class="language-plaintext highlighter-rouge">[geolocationSuccess](parameters/geolocationSuccess.html)</code> callback with a <code class="language-plaintext highlighter-rouge">[Position](Position/position.html)</code> object as the parameter.  If there is an error, the <code class="language-plaintext highlighter-rouge">[geolocationError](parameters/geolocationError.html)</code> callback is invoked with a <code class="language-plaintext highlighter-rouge">[PositionError](PositionError/positionError.html)</code> object.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// onSuccess Callback
+//   This method accepts a `Position` object, which contains
+//   the current GPS coordinates
+//
+var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+};
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '&lt;br /&gt;' +
+                            'Longitude: '          + position.coords.longitude             + '&lt;br /&gt;' +
+                            'Altitude: '           + position.coords.altitude              + '&lt;br /&gt;' +
+                            'Accuracy: '           + position.coords.accuracy              + '&lt;br /&gt;' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '&lt;br /&gt;' +
+                            'Heading: '            + position.coords.heading               + '&lt;br /&gt;' +
+                            'Speed: '              + position.coords.speed                 + '&lt;br /&gt;' +
+                            'Timestamp: '          +                                   position.timestamp          + '&lt;br /&gt;';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="geolocation"&gt;Finding geolocation...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

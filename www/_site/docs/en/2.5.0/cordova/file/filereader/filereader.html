@@ -1,0 +1,181 @@
+<h1 id="filereader">FileReader</h1>
+
+<p>FileReader is an object that allows one to read a file.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>readyState:</strong> One of the three states the reader can be in EMPTY, LOADING or DONE.</li>
+  <li><strong>result:</strong> The contents of the file that has been read. <em>(DOMString)</em></li>
+  <li><strong>error:</strong> An object containing errors. <em>(FileError)</em></li>
+  <li><strong>onloadstart:</strong> Called when the read starts. . <em>(Function)</em></li>
+  <li><strong>onprogress:</strong> Called while reading the file, reports progress (progess.loaded/progress.total). <em>(Function)</em> -NOT SUPPORTED</li>
+  <li><strong>onload:</strong> Called when the read has successfully completed. <em>(Function)</em></li>
+  <li><strong>onabort:</strong> Called when the read has been aborted. For instance, by invoking the abort() method. <em>(Function)</em></li>
+  <li><strong>onerror:</strong> Called when the read has failed. <em>(Function)</em></li>
+  <li><strong>onloadend:</strong> Called when the request has completed (either in success or failure).  <em>(Function)</em></li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>abort</strong>: Aborts reading file.</li>
+  <li><strong>readAsDataURL</strong>: Read file and return data as a base64 encoded data url.</li>
+  <li><strong>readAsText</strong>: Reads text file.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">FileReader</code> object is a way to read files from the devices file system.  Files can be read as text or as a base64 data encoded string.  Users register their own event listeners to receive the loadstart, progress, load, loadend, error and abort events.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="read-as-data-url">Read As Data URL</h2>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+  <li>file - the file object to read</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(file) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+    	console.log("read success");
+        console.log(evt.target.result);
+    };
+	reader.readAsDataURL(file);
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.file(win, fail);
+</code></pre></div></div>
+
+<h2 id="read-as-text">Read As Text</h2>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li>file - the file object to read</li>
+  <li>encoding - the encoding to use to encode the file’s content. Default is UTF8.</li>
+</ul>
+
+<h2 id="quick-example-1">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(file) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+    	console.log("read success");
+        console.log(evt.target.result);
+    };
+	reader.readAsText(file);
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.file(win, fail);
+</code></pre></div></div>
+
+<h2 id="abort-quick-example">Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(file) {
+	var reader = new FileReader();
+	reader.onloadend = function(evt) {
+    	console.log("read success");
+        console.log(evt.target.result);
+    };
+	reader.readAsText(file);
+	reader.abort();
+};
+
+function fail(error) {
+	console.log(error.code);
+}
+
+entry.file(win, fail);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;FileReader Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		window.requestFileSystem([LocalFileSystem](../localfilesystem/localfilesystem.html).PERSISTENT, 0, gotFS, fail);
+    }
+	
+	function gotFS(fileSystem) {
+		fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+	}
+	
+	function gotFileEntry(fileEntry) {
+		fileEntry.file(gotFile, fail);
+	}
+	
+    function gotFile(file){
+		readDataUrl(file);
+		readAsText(file);
+	}
+    
+    function readDataUrl(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("Read as data URL");
+            console.log(evt.target.result);
+        };
+        reader.readAsDataURL(file);
+    }
+    
+    function readAsText(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("Read as text");
+            console.log(evt.target.result);
+        };
+        reader.readAsText(file);
+    }
+    
+    function fail(evt) {
+        console.log(evt.target.error.code);
+    }
+    
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Read File&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+<ul>
+  <li><strong>encoding</strong> parameter is not supported, UTF8 encoding is always used.</li>
+</ul>

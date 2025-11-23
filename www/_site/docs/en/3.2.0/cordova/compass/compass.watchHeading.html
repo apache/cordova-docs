@@ -1,0 +1,134 @@
+<h1 id="compasswatchheading">compass.watchHeading</h1>
+
+<p>At a regular interval, get the compass heading in degrees.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>The compass is a sensor that detects the direction or heading that the
+device is pointed.  It measures the heading in degrees from 0 to
+359.99.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">compass.watchHeading</code> gets the device’s current heading at a
+regular interval. Each time the heading is retrieved, the
+<code class="language-plaintext highlighter-rouge">headingSuccess</code> callback function is executed. Specify the interval
+in milliseconds via the <code class="language-plaintext highlighter-rouge">frequency</code> parameter in the <code class="language-plaintext highlighter-rouge">[compassOptions](parameters/compassOptions.html)</code>
+object.</p>
+
+<p>The returned watch ID references the compass watch interval. The watch
+ID can be used with <code class="language-plaintext highlighter-rouge">[compass.clearWatch](compass.clearWatch.html)</code> to stop watching the compass.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8 (if available in hardware)</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(heading) {
+    var element = document.getElementById('heading');
+    element.innerHTML = 'Heading: ' + heading.magneticHeading;
+};
+
+function onError(compassError) {
+    alert('Compass error: ' + compassError.code);
+};
+
+var options = {
+    frequency: 3000
+}; // Update every 3 seconds
+
+var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Compass Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // The watch id references the current `watchHeading`
+    var watchID = null;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        startWatch();
+    }
+
+    // Start watching the compass
+    //
+    function startWatch() {
+
+        // Update compass every 3 seconds
+        var options = { frequency: 3000 };
+
+        watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    }
+
+    // Stop watching the compass
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.compass.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    // onSuccess: Get the current heading
+    //
+    function onSuccess(heading) {
+        var element = document.getElementById('heading');
+        element.innerHTML = 'Heading: ' + heading.magneticHeading;
+    }
+
+    // onError: Failed to get the heading
+    //
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="heading"&gt;Waiting for heading...&lt;/div&gt;
+    &lt;button onclick="startWatch();"&gt;Start Watching&lt;/button&gt;
+    &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<p>In iOS <code class="language-plaintext highlighter-rouge">compass.watchHeading</code> can also get the device’s current
+heading when it changes by a specified number of degrees. Each time
+the heading changes by the specified number of degrees or more, the
+<code class="language-plaintext highlighter-rouge">headingSuccess</code> callback function executes. Specify the degrees of
+change via the <code class="language-plaintext highlighter-rouge">filter</code> parameter in the <code class="language-plaintext highlighter-rouge">[compassOptions](parameters/compassOptions.html)</code> object.
+Clear the watch as usual by passing the returned watch ID to
+<code class="language-plaintext highlighter-rouge">[compass.clearWatch](compass.clearWatch.html)</code>.  This functionality replaces the previously
+separate, iOS-only <code class="language-plaintext highlighter-rouge">watchHeadingFilter</code> and <code class="language-plaintext highlighter-rouge">clearWatchFilter</code>
+functions, which were removed in version 1.6.</p>
+
+<p>Only one <code class="language-plaintext highlighter-rouge">watchHeading</code> can be in effect at one time in iOS.  If a
+<code class="language-plaintext highlighter-rouge">watchHeading</code> uses a filter, calling <code class="language-plaintext highlighter-rouge">getCurrentHeading</code> or
+<code class="language-plaintext highlighter-rouge">watchHeading</code> uses the existing filter value to specify heading
+changes. Watching heading changes with a filter is more efficient than
+with time intervals.</p>

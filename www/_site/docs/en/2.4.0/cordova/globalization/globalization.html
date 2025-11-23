@@ -1,0 +1,43 @@
+<h1 id="globalization">Globalization</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">globalization</code> object obtains information and performs operations specific to the user’s locale and timezone.</p>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li><a href="GlobalizationError/globalizationerror.html">GlobalizationError</a></li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="globalization.getPreferredLanguage.html">globalization.getPreferredLanguage</a></li>
+  <li><a href="globalization.getLocaleName.html">globalization.getLocaleName</a></li>
+  <li><a href="globalization.dateToString.html">globalization.dateToString</a></li>
+  <li><a href="globalization.stringToDate.html">globalization.stringToDate</a></li>
+  <li><a href="globalization.getDatePattern.html">globalization.getDatePattern</a></li>
+  <li><a href="globalization.getDateNames.html">globalization.getDateNames</a></li>
+  <li><a href="globalization.isDayLightSavingsTime.html">globalization.isDayLightSavingsTime</a></li>
+  <li><a href="globalization.getFirstDayOfWeek.html">globalization.getFirstDayOfWeek</a></li>
+  <li><a href="globalization.numberToString.html">globalization.numberToString</a></li>
+  <li><a href="globalization.stringToNumber.html">globalization.stringToNumber</a></li>
+  <li><a href="globalization.getNumberPattern.html">globalization.getNumberPattern</a></li>
+  <li><a href="globalization.getCurrencyPattern.html">globalization.getCurrencyPattern</a></li>
+</ul>
+
+<h2 id="variable-scope">Variable Scope</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">globalization</code> object is a child of the <code class="language-plaintext highlighter-rouge">navigator</code> object, and therefore has global scope.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// The global globalization object
+var globalization = navigator.globalization;
+</code></pre></div></div>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlconfigxml">app/res/xml/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Globalization" value="org.apache.cordova.Globalization" /&gt;
+</code></pre></div></div>

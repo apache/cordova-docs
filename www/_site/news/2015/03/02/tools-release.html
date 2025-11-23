@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="New versions of cordova tools are now live!">
+
+    <title>
+        
+            
+                Tools Release: March 02, 2015 - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/news/2015/03/02/tools-release.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Tools Release: March 02, 2015</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/stevesgill">Steve Gill</a>
+            
+        </div>
+        <div class="date">02 Mar 2015</div>
+    </header>
+    <section>
+        <div>
+            <p>New versions of cordova tools are now live!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.org/package/cordova-lib">cordova-lib@4.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova">cordova@4.3.0</a></li>
+  <li><a href="https://www.npmjs.org/package/plugman">plugman@0.23.0</a></li>
+  <li><a href="https://www.npmjs.org/package/cordova-js">cordova-js@3.8.0</a></li>
+</ul>
+
+<p>To update your tools:</p>
+
+<ul>
+  <li>
+    <p>If you have <code class="language-plaintext highlighter-rouge">cordova</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If you have <code class="language-plaintext highlighter-rouge">plugman</code> installed:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Release highlights:</p>
+
+<ul>
+  <li><strong>Cordova-iOS</strong> developers will need to update their <code class="language-plaintext highlighter-rouge">iOS-deploy</code> dependency to launch on <strong>iOS</strong> devices. Please run <code class="language-plaintext highlighter-rouge">npm install -g ios-deploy</code> to install the latest version <code class="language-plaintext highlighter-rouge">1.4.0</code>.</li>
+  <li>You can now save your list of installed plugins and platforms using the <code class="language-plaintext highlighter-rouge">--save</code> command when adding platforms and plugins to your project.
+Saved platforms and plugins are automagically restored during prepare.
+Ex. <code class="language-plaintext highlighter-rouge">cordova platform add android --save</code>.
+This should make it easier developing cordova projects among a team.</li>
+  <li>Plugin authors can use the new command <code class="language-plaintext highlighter-rouge">plugman createpackagejson &lt;plugin_path&gt;</code> to add a <code class="language-plaintext highlighter-rouge">package.json</code> file to their plugins.</li>
+  <li>We are preparing to transition our plugin hosting over to npm.  We will be doing a detailed blog post soon.
+<strong>Stay tuned</strong>.</li>
+</ul>
+
+<!--more-->
+<h1 id="changes-include">Changes include:</h1>
+
+<h2 id="platform-updates">Platform updates</h2>
+<p>When adding these platforms to your project, the following versions are now used by default.
+These platform versions were released recently, and the tools’ defaults were updated:</p>
+
+<ul>
+  <li><a href="http://cordova.apache.org/announcements/2015/02/25/cordova-ios-3.8.0.html">Cordova iOS 3.8.0</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/02/27/cordova-windows-3.8.0.html">Cordova Windows 3.8.0</a></li>
+  <li><a href="http://cordova.apache.org/announcements/2015/02/06/cordova-android-3.7.1.html">Cordova Android 3.7.1</a></li>
+</ul>
+
+<h2 id="cordova-lib">cordova-lib</h2>
+<ul>
+  <li>Updated pinned versions of <strong>iOS</strong> to 3.8.0 and <strong>Android</strong> to 3.7.1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8284">CB-8284</a> Revert <code class="language-plaintext highlighter-rouge">npm</code> dependency due to issues with registry</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8524">CB-8524</a> Switched to the latest <strong>Windows</strong> release</li>
+  <li>changed <code class="language-plaintext highlighter-rouge">createpackage.json</code> keyword to <code class="language-plaintext highlighter-rouge">ecosystem:cordova</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8448">CB-8448</a> Add support for activities</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8482">CB-8482</a> Rename: <code class="language-plaintext highlighter-rouge">platformId</code> -&gt; <code class="language-plaintext highlighter-rouge">platformName</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8482">CB-8482</a> Update engine syntax within config.xml</li>
+  <li><code class="language-plaintext highlighter-rouge">--save</code> flag for plugins</li>
+  <li>Restore plugins and platforms on prepare</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8472">CB-8472</a> Can’t find <code class="language-plaintext highlighter-rouge">config.xml</code> error installing browser platform after plugin</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8469">CB-8469</a> <strong>Android</strong>: Call into platform’s <code class="language-plaintext highlighter-rouge">build.js</code> after <code class="language-plaintext highlighter-rouge">plugin add</code> so that <strong>Android Studio</strong> will work without needing an explicit command-line build first</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8123">CB-8123</a> Plugin references can target specific <strong>Windows</strong> platforms</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8420">CB-8420</a> Make <code class="language-plaintext highlighter-rouge">cordova plugin add FOO</code> use version from config.xml</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Fix <code class="language-plaintext highlighter-rouge">cordova platform add PATH</code> when <em>PATH</em> is relative and <em>CWD</em> != <em>project root</em></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8227">CB-8227</a> CB8237 <a href="https://issues.apache.org/jira/browse/CB-8238">CB-8238</a> Add <code class="language-plaintext highlighter-rouge">--save</code> flag and autosave to <code class="language-plaintext highlighter-rouge">cordova platform add</code>, <code class="language-plaintext highlighter-rouge">cordova platform remove</code> and <code class="language-plaintext highlighter-rouge">cordova platform update</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8409">CB-8409</a> <code class="language-plaintext highlighter-rouge">compile</code>: bubble failures</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Fix <code class="language-plaintext highlighter-rouge">cordova platform update</code> should ignore <code class="language-plaintext highlighter-rouge">&lt;cdv:engine&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8390">CB-8390</a> <strong>Android</strong>: Make <code class="language-plaintext highlighter-rouge">&lt;framework custom=false&gt;</code> work with <strong>Gradle</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Updated <code class="language-plaintext highlighter-rouge">plugman publish</code> to temporarily rename existing <code class="language-plaintext highlighter-rouge">package.json</code> files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Added <code class="language-plaintext highlighter-rouge">plugman createpackagejson .</code> command to create a <code class="language-plaintext highlighter-rouge">package.json</code> from <code class="language-plaintext highlighter-rouge">plugin.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8377">CB-8377</a> Fixed <code class="language-plaintext highlighter-rouge">&lt;runs&gt;</code> tag parsing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5696">CB-5696</a> Find <strong>iOS</strong> project directory using the xcode project file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8373">CB-8373</a> <strong>Android</strong>: Add <strong>Gradle</strong> references to project.properties rather than build.gradle</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8370">CB-8370</a> Make <code class="language-plaintext highlighter-rouge">plugman publish</code> without args default to <em>CWD</em></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8366">CB-8366</a> <strong>Android</strong>: Remove empty <code class="language-plaintext highlighter-rouge">&lt;framework&gt;</code> directory upon uninstall</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Enable JSHint for spec-cordova</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8239">CB-8239</a> Add support for git urls to ‘cordova platform add’</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Add <code class="language-plaintext highlighter-rouge">--link</code> for <code class="language-plaintext highlighter-rouge">platform add</code> and <code class="language-plaintext highlighter-rouge">platform update</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6973">CB-6973</a> Remove base rules from individual files in <code class="language-plaintext highlighter-rouge">src</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8354">CB-8354</a> Add –link support for <strong>iOS</strong> source and header files</li>
+  <li>Make all ad-hoc <code class="language-plaintext highlighter-rouge">plugin.xml</code> parsing use <code class="language-plaintext highlighter-rouge">PluginInfo</code> instead</li>
+  <li>Make all usages of <code class="language-plaintext highlighter-rouge">PluginInfo</code> use <code class="language-plaintext highlighter-rouge">PluginInfoProvider</code> instead</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">PluginInfoProvider</code> for better caching of <code class="language-plaintext highlighter-rouge">PluginInfo</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8223">CB-8223</a> Expose <code class="language-plaintext highlighter-rouge">config.xml</code> in the Browser platform</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code class="language-plaintext highlighter-rouge">--list</code> support for cordova-lib</li>
+  <li><strong>FireOS</strong> Improve error message when <code class="language-plaintext highlighter-rouge">&lt;source-file&gt;</code> is missing <code class="language-plaintext highlighter-rouge">target-dir</code></li>
+  <li>Make <code class="language-plaintext highlighter-rouge">addUninstalledPluginToPrepareQueue</code> take <code class="language-plaintext highlighter-rouge">pluginId</code> rather than <code class="language-plaintext highlighter-rouge">dirName</code></li>
+</ul>
+
+<h2 id="cordova-cli">cordova-cli</h2>
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8439">CB-8439</a> Fix <code class="language-plaintext highlighter-rouge">cordova platform update</code> documentation to include <code class="language-plaintext highlighter-rouge">&lt;plat-spec&gt;</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8379">CB-8379</a> Have <code class="language-plaintext highlighter-rouge">--version</code> print out <strong>cordova-lib</strong> version if it’s not the same as CLI’s version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8211">CB-8211</a>, <a href="https://issues.apache.org/jira/browse/CB-8358">CB-8358</a> Update <code class="language-plaintext highlighter-rouge">--link</code> help text</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8168">CB-8168</a> <code class="language-plaintext highlighter-rouge">--list</code> support for CLI</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8227">CB-8227</a> <a href="https://issues.apache.org/jira/browse/CB-8237">CB-8237</a> <a href="https://issues.apache.org/jira/browse/CB-8238">CB-8238</a> Add <code class="language-plaintext highlighter-rouge">--save</code> option to <code class="language-plaintext highlighter-rouge">cordova platform add</code>, <code class="language-plaintext highlighter-rouge">cordova platform remove</code> and <code class="language-plaintext highlighter-rouge">cordova platform update</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5316">CB-5316</a> Spell Cordova as a brand unless it’s a command or script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-7950">CB-7950</a> CLI make <code class="language-plaintext highlighter-rouge">CordovaCliCreate.prototype.run</code> vaguely correct</li>
+</ul>
+
+<h2 id="cordova-js">cordova-js</h2>
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8378">CB-8378</a> <strong>Android</strong>: Deleted <code class="language-plaintext highlighter-rouge">hidekeyboard</code> &amp; <code class="language-plaintext highlighter-rouge">showkeyboard</code> events</li>
+  <li><strong>Android</strong>: Use correct plugin name for <code class="language-plaintext highlighter-rouge">navigator.app</code> <code class="language-plaintext highlighter-rouge">exec()</code> calls</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8158">CB-8158</a> Fixed <code class="language-plaintext highlighter-rouge">symbolList</code> require</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8298">CB-8298</a> <strong>Android</strong>: Execute <code class="language-plaintext highlighter-rouge">exec</code> callbacks within their own stack frames</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8210">CB-8210</a> Remove unused <code class="language-plaintext highlighter-rouge">onDestroy</code> channel</li>
+  <li>Fixed <code class="language-plaintext highlighter-rouge">callbackFromNative</code> method</li>
+</ul>
+
+<h2 id="plugman">plugman</h2>
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8416">CB-8416</a> Added <code class="language-plaintext highlighter-rouge">plugman createpackagejson .</code> command to generate a <code class="language-plaintext highlighter-rouge">package.json</code> file from <code class="language-plaintext highlighter-rouge">plugin.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8370">CB-8370</a> Update documentation for <code class="language-plaintext highlighter-rouge">plugman publish</code> without args</li>
+</ul>
+
+<h2 id="pinned-platform-versions-for-cordova-cli-420">Pinned Platform Versions for Cordova CLI 4.2.0</h2>
+
+<ul>
+  <li>Cordova Amazon-FireOS: 3.6.3</li>
+  <li>Cordova Android: 3.7.1</li>
+  <li>Cordova BlackBerry10: 3.7.0</li>
+  <li>Cordova Browser: 3.6.0</li>
+  <li>Cordova FirefoxOS: 3.6.3</li>
+  <li>Cordova iOS: 3.8.0</li>
+  <li>Cordova Ubuntu: 4.0.0</li>
+  <li>Cordova Windows: 3.8.0</li>
+  <li>Cordova WP8: 3.7.1</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2015/02/27/cordova-windows-3.8.0.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2015/02/27/cordova-windows-3.8.0.html">Apache Cordova Windows 3.8.0</a>
+                    <div class="date"> 27 Feb 2015 - By Sergey Grebnov </div>
+                    <p class="content">
+                        We are happy to announce that Cordova Windows 3.8.0 has been released!...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2015/04/15/cordova-android-4.0.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2015/04/15/cordova-android-4.0.0.html">Apache Cordova Android 4.0.0</a>
+                    <div class="date"> 15 Apr 2015 - By Andrew Grieve </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that Cordova Android 4.0.0 has been released!...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<h1 id="geolocationoptions">geolocationOptions</h1>
+
+<p>Optional parameters to customize the retrieval of the geolocation.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
+</code></pre></div></div>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li><strong>frequency:</strong> How often to retrieve the position in milliseconds. This option is not part of the W3C spec and will be removed in the future. maximumAge should be used instead. <em>(Number)</em> (Default: 10000)</li>
+  <li><strong>enableHighAccuracy:</strong> Provides a hint that the application would like to receive the best possible results. <em>(Boolean)</em></li>
+  <li><strong>timeout:</strong> The maximum length of time (msec) that is allowed to pass from the call to <code class="language-plaintext highlighter-rouge">[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)</code> or <code class="language-plaintext highlighter-rouge">[geolocation.watchPosition](../geolocation.watchPosition.html)</code> until the corresponding <code class="language-plaintext highlighter-rouge">[geolocationSuccess](geolocationSuccess.html)</code> callback is invoked. <em>(Number)</em></li>
+  <li><strong>maximumAge:</strong> Accept a cached position whose age is no greater than the specified time in milliseconds. <em>(Number)</em></li>
+</ul>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<p>The Android 2.x simulators will not return a geolocation result unless the enableHighAccuracy option is set to true.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ enableHighAccuracy: true }
+</code></pre></div></div>
+

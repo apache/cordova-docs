@@ -1,0 +1,100 @@
+<h1 id="geolocation">Geolocation</h1>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">geolocation</code> object provides access to the device’s GPS sensor.</p>
+</blockquote>
+
+<p>Geolocation provides location information for the device, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. No guarantee is given that the API returns the device’s actual location.</p>
+
+<p>This API is based on the <a href="http://dev.w3.org/geo/api/spec-source.html">W3C Geolocation API Specification</a>.  Some devices (Android, BlackBerry, Bada, Windows Phone 7, webOS and Tizen, to be specific) already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova’s implementation.  For devices that don’t have geolocation support, the Cordova implementation adheres to the W3C specification.</p>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="geolocation.getCurrentPosition.html">geolocation.getCurrentPosition</a></li>
+  <li><a href="geolocation.watchPosition.html">geolocation.watchPosition</a></li>
+  <li><a href="geolocation.clearWatch.html">geolocation.clearWatch</a></li>
+</ul>
+
+<h2 id="arguments">Arguments</h2>
+
+<ul>
+  <li><a href="parameters/geolocationSuccess.html">geolocationSuccess</a></li>
+  <li><a href="parameters/geolocationError.html">geolocationError</a></li>
+  <li><a href="parameters/geolocation.options.html">geolocationOptions</a></li>
+</ul>
+
+<h2 id="objects-read-only">Objects (Read-Only)</h2>
+
+<ul>
+  <li><a href="Position/position.html">Position</a></li>
+  <li><a href="PositionError/positionError.html">PositionError</a></li>
+  <li><a href="Coordinates/coordinates.html">Coordinates</a></li>
+</ul>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlpluginsxml">app/res/xml/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Geolocation" value="org.apache.cordova.GeoBroker" /&gt;
+</code></pre></div></div>
+
+<h4 id="appandroidmanifestxml">app/AndroidManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /&gt;
+</code></pre></div></div>
+
+<h3 id="bada">Bada</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="blackberry-webworks">BlackBerry WebWorks</h3>
+
+<h4 id="wwwpluginsxml">www/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Geolocation" value="org.apache.cordova.geolocation.Geolocation" /&gt;
+</code></pre></div></div>
+
+<h4 id="wwwconfigxml">www/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;rim:permissions&gt;
+    &lt;rim:permit&gt;read_geolocation&lt;/rim:permit&gt;
+&lt;/rim:permissions&gt;
+</code></pre></div></div>
+
+<h3 id="ios">iOS</h3>
+
+<h4 id="appsupporting-filescordovaplist">App/Supporting Files/Cordova.plist</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;key&gt;Plugins&lt;/key&gt;
+&lt;dict&gt;
+    &lt;key&gt;Geolocation&lt;/key&gt;
+    &lt;string&gt;CDVLocation&lt;/string&gt;
+&lt;/dict&gt;
+</code></pre></div></div>
+
+<h3 id="webos">webOS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="windows-phone">Windows Phone</h3>
+
+<h4 id="propertieswpappmanifestxml">Properties/WPAppManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
+    &lt;Capability Name="ID_CAP_LOCATION" /&gt;
+&lt;/Capabilities&gt;
+</code></pre></div></div>
+
+<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3 id="tizen">Tizen</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>

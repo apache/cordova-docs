@@ -1,0 +1,87 @@
+<h1 id="pause">pause</h1>
+
+<p>The event fires when an application is put into the background.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("pause", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">pause</code> event fires when the native platform puts the application
+into the background, typically when the user switches to a different
+application.</p>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">[deviceready](events.deviceready.html)</code> event fires.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("pause", onPause, false);
+
+function onPause() {
+    // Handle the pause event
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Pause Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        document.addEventListener("pause", onPause, false);
+    }
+
+    // Handle the pause event
+    //
+    function onPause() {
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<p>In the <code class="language-plaintext highlighter-rouge">pause</code> handler, any calls to the Cordova API or to native
+plugins that go through Objective-C do not work, along with any
+interactive calls, such as alerts or <code class="language-plaintext highlighter-rouge">console.log()</code>. They are only
+processed when the app resumes, on the next run loop.</p>
+
+<p>The iOS-specific <code class="language-plaintext highlighter-rouge">resign</code> event is available as an alternative to
+<code class="language-plaintext highlighter-rouge">pause</code>, and detects when users enable the <strong>Lock</strong> button to lock the
+device with the app running in the foreground.  If the app (and
+device) is enabled for multi-tasking, this is paired with a subsequent
+<code class="language-plaintext highlighter-rouge">pause</code> event, but only under iOS 5. In effect, all locked apps in iOS
+5 that have multi-tasking enabled are pushed to the background.  For
+apps to remain running when locked under iOS 5, disable the app’s
+multi-tasking by setting
+<a href="http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html">UIApplicationExitsOnSuspend</a>
+to <code class="language-plaintext highlighter-rouge">YES</code>. To run when locked on iOS 4, this setting does not matter.</p>

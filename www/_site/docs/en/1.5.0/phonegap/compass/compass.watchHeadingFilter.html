@@ -1,0 +1,102 @@
+<h1 id="compasswatchheadingfilter">compass.watchHeadingFilter</h1>
+
+<p>Get the compass heading in degrees when it changes by at least a certain number of degrees.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.compass.watchHeadingFilter(compassSuccess, compassError, compassOptions);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">compass.watchHeadingFilter</code> gets the device’s current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the <code class="language-plaintext highlighter-rouge">headingSuccess</code> callback function is called. Specify the degrees of change via the <code class="language-plaintext highlighter-rouge">filter</code> parameter in the <code class="language-plaintext highlighter-rouge">[compassOptions](parameters/compassOptions.html)</code> object.</p>
+
+<p>The returned watch ID references references the compass watch interval. The watch ID can be used with <code class="language-plaintext highlighter-rouge">[compass.clearWatchFilter](compass.clearWatchFilter.html)</code> to stop watching the compass via a degree filter.  Only one watchHeadingFilter can be in effect at one time.  If a watchHeadingFilter is in effect, calling getCurrentHeading or watchHeading will use the existing filter value for specifying heading changes. On iOS this method is more efficient than compass.watchFilter() based on the iOS mechanism for monitoring compass heading changes.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>iPhone</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(heading) {
+    var element = document.getElementById('heading');
+    element.innerHTML = 'Heading: ' + heading.magneticHeading;
+};
+
+function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
+};
+
+var options = { filter: 10 };  // Get notified on compass heading changes or 10 degrees or more
+
+var watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Compass Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // The watch id references the current `watchHeading`
+    var watchID = null;
+    
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        startWatch();
+    }
+
+    // Start watching the compass
+    //
+    function startWatch() {
+        
+        // Get notified on compass heading changes or 10 degrees or more
+        var options = { filter: 10 };
+        
+        watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
+    }
+    
+    // Stop watching the compass
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.compass.clearWatchFilter(watchID);
+            watchID = null;
+        }
+    }
+    
+    // onSuccess: Get the current heading
+    //
+    function onSuccess(heading) {
+        var element = document.getElementById('heading');
+        element.innerHTML = 'Heading: ' + heading.magneticHeading;
+    }
+
+    // onError: Failed to get the heading
+    //
+    function onError(compassError) {
+        alert('Compass error: ' + compassError.code);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="heading"&gt;Waiting for heading...&lt;/div&gt;
+    &lt;button onclick="startWatch();"&gt;Start Watching via Filter&lt;/button&gt;
+    &lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

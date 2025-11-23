@@ -1,0 +1,59 @@
+<h1 id="contactscreate">contacts.create</h1>
+
+<p>Returns a new <a href="Contact/contact.html">Contact</a> object.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var contact = navigator.contacts.create(properties);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>contacts.create is a synchronous function that returns a new <code class="language-plaintext highlighter-rouge">[Contact](Contact/contact.html)</code> object.</p>
+
+<p>This method does not persist the <a href="Contact/contact.html">Contact</a> object to the device contacts database.  To persist the <a href="Contact/contact.html">Contact</a> object to the device, invoke the <code class="language-plaintext highlighter-rouge">[Contact](Contact/contact.html).save</code> method.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 1.2 &amp; 2.0</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var myContact = navigator.contacts.create({"displayName": "Test User"});
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Contact Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		var myContact = navigator.contacts.create({"displayName": "Test User"});
+		myContact.note = "This contact has a note.";
+		console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+    }
+
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Create Contact&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

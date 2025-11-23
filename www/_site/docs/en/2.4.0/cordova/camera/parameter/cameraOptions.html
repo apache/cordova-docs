@@ -1,0 +1,125 @@
+<h1 id="cameraoptions">cameraOptions</h1>
+
+<p>Optional parameters to customize the camera settings.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ quality : 75, 
+  destinationType : Camera.DestinationType.DATA_URL, 
+  sourceType : Camera.PictureSourceType.CAMERA, 
+  allowEdit : true,
+  encodingType: Camera.EncodingType.JPEG,
+  targetWidth: 100,
+  targetHeight: 100,
+  popoverOptions: CameraPopoverOptions,
+  saveToPhotoAlbum: false };
+</code></pre></div></div>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li>
+    <p><strong>quality:</strong> Quality of saved image. Range is [0, 100]. (<code class="language-plaintext highlighter-rouge">Number</code>)</p>
+  </li>
+  <li>
+    <p><strong>destinationType:</strong> Choose the format of the return value.  Defined in navigator.camera.DestinationType (<code class="language-plaintext highlighter-rouge">Number</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Camera.DestinationType = {
+          DATA_URL : 0,                // Return image as base64 encoded string
+          FILE_URI : 1                 // Return image file URI
+      };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>sourceType:</strong> Set the source of the picture.  Defined in nagivator.camera.PictureSourceType (<code class="language-plaintext highlighter-rouge">Number</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.PictureSourceType = {
+      PHOTOLIBRARY : 0,
+      CAMERA : 1,
+      SAVEDPHOTOALBUM : 2
+  };
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>allowEdit:</strong> Allow simple editing of image before selection. (<code class="language-plaintext highlighter-rouge">Boolean</code>)</p>
+  </li>
+  <li>
+    <p><strong>encodingType:</strong> Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (<code class="language-plaintext highlighter-rouge">Number</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      Camera.EncodingType = {
+          JPEG : 0,               // Return JPEG encoded image
+          PNG : 1                 // Return PNG encoded image
+      };
+</code></pre></div>    </div>
+  </li>
+  <li><strong>targetWidth:</strong> Width in pixels to scale image. Must be used with targetHeight.  Aspect ratio is maintained. (<code class="language-plaintext highlighter-rouge">Number</code>)</li>
+  <li>
+    <p><strong>targetHeight:</strong> Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (<code class="language-plaintext highlighter-rouge">Number</code>)</p>
+  </li>
+  <li>
+    <p><strong>mediaType:</strong> Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (<code class="language-plaintext highlighter-rouge">Number</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Camera.MediaType = { 
+      PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
+      VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
+      ALLMEDIA : 2			// allow selection from all media types };
+</code></pre></div>    </div>
+  </li>
+  <li><strong>correctOrientation:</strong> Rotate the image to correct for the orientation of the device during capture. (<code class="language-plaintext highlighter-rouge">Boolean</code>)</li>
+  <li><strong>saveToPhotoAlbum:</strong> Save the image to the photo album on the device after capture. (<code class="language-plaintext highlighter-rouge">Boolean</code>)</li>
+  <li><strong>popoverOptions:</strong> iOS only options to specify popover location in iPad.  Defined in <a href="CameraPopoverOptions.html">CameraPopoverOptions</a></li>
+</ul>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">allowEdit</code> parameter.</li>
+  <li><a href="../camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY and <a href="../camera.html">Camera</a>.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.</li>
+</ul>
+
+<h2 id="blackberry-quirks">BlackBerry Quirks</h2>
+
+<ul>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">quality</code> parameter.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">sourceType</code> parameter.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">allowEdit</code> parameter.</li>
+  <li>Application must have key injection permissions to <a href="../../inappbrowser/inappbrowser.html">close</a> native <a href="../camera.html">Camera</a> application after photo is taken.</li>
+  <li>Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).</li>
+  <li><a href="../camera.html">Camera</a>.MediaType is not supported.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">correctOrientation</code> parameter.</li>
+</ul>
+
+<h2 id="webos-quirks">webOS Quirks</h2>
+
+<ul>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">quality</code> parameter.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">sourceType</code> parameter.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">allowEdit</code> parameter.</li>
+  <li><a href="../camera.html">Camera</a>.MediaType is not supported.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">correctOrientation</code> parameter.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">saveToPhotoAlbum</code> parameter.</li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<ul>
+  <li>Set <code class="language-plaintext highlighter-rouge">quality</code> below 50 to avoid memory error on some devices.</li>
+  <li>When <code class="language-plaintext highlighter-rouge">destinationType.FILE_URI</code> is used, photos are saved in the application’s temporary directory.</li>
+</ul>
+
+<h2 id="windows-phone-7-and-8-quirks">Windows Phone 7 and 8 Quirks</h2>
+
+<ul>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">allowEdit</code> parameter.</li>
+  <li>Ignores the <code class="language-plaintext highlighter-rouge">correctOrientation</code> parameter.</li>
+</ul>
+
+<h2 id="bada-12-quirks">Bada 1.2 Quirks</h2>
+<ul>
+  <li>options not supported</li>
+  <li>always returns a FILE URI</li>
+</ul>
+
+<h2 id="tizen-quirks">Tizen Quirks</h2>
+<ul>
+  <li>options not supported</li>
+  <li>always returns a FILE URI</li>
+</ul>

@@ -1,0 +1,82 @@
+<h1 id="batterycritical">batterycritical</h1>
+
+<p>The event fires when the battery has reached the critical level
+threshold.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterycritical", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>The event fires when the percentage of battery charge has reached the
+critical battery threshold. The value is device-specific.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">batterycritical</code> handler is passed an object that contains two
+properties:</p>
+
+<ul>
+  <li>
+    <p><strong>level</strong>: The percentage of battery charge (0-100). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></p>
+  </li>
+</ul>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">window.addEventListener</code> to attach
+an event listener once the <code class="language-plaintext highlighter-rouge">[deviceready](events.deviceready.html)</code> event fires.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterycritical", onBatteryCritical, false);
+
+function onBatteryCritical(info) {
+    // Handle the battery critical event
+    alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Battery Critical Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.addEventListener("batterycritical", onBatteryCritical, false);
+    }
+
+    // Handle the batterycritical event
+    //
+    function onBatteryCritical(info) {
+        alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

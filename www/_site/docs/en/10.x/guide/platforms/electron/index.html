@@ -1,0 +1,700 @@
+<h1 id="electron-platform-guide">Electron Platform Guide</h1>
+
+<p>Electron is a framework that uses web technologies (HTML, CSS, and JS) to build cross-platform desktop applications.</p>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<h3 id="linux">Linux</h3>
+
+<ul>
+  <li><strong>Python</strong> version 2.7.x. It is recommended to check your Python version since some distributions like CentOS 6.x still use Python 2.6.x.</li>
+</ul>
+
+<h3 id="mac">Mac</h3>
+
+<ul>
+  <li><strong>Python</strong> version 2.7.x with support for TLS 1.2.</li>
+  <li><strong>Xcode</strong>, the IDE for macOS, comes bundled with necessary software development tools to code signing and compiling native code for macOS. Version 8.2.1 or higher.</li>
+  <li><strong>RedHat Build Support</strong>
+    <ul>
+      <li><strong>Homebrew</strong>, one of the available macOS package managers, is used for installing additional tools and dependencies. Homebrew is needed to install RPM packaging dependencies. <a href="https://brew.sh/"><strong>Brew Install Step</strong></a></li>
+      <li>
+        <p><strong>RPM</strong>, a standard package manager for multiple Linux distributions, is the tool used for creating the Linux RPM package. To install this tool, use the following <a href="https://brew.sh/"><strong>Homebrew</strong></a> command:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>rpm
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="windows">Windows</h3>
+
+<ul>
+  <li><strong>Python</strong> version 2.7.10 or higher.</li>
+  <li><strong>PowerShell</strong>, for Windows 7 users, must be at version 3.0 or greater for <a href="https://www.electron.build/code-signing#windows">app signing</a>.</li>
+  <li><strong><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/">Debugging Tools for Windows</a></strong> is a toolkit for enhancing debug capabilities. It is recommended to install with the <strong>Windows SDK 10.0.15063.468</strong>.</li>
+</ul>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="create-a-project">Create a Project</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i <span class="nt">-g</span> cordova
+cordova create sampleApp
+<span class="nb">cd </span>sampleApp
+cordova platform add electron
+</code></pre></div></div>
+
+<p><em>Notice: If using Cordova CLI prior to version 9.x, you will need to use the <code class="language-plaintext highlighter-rouge">cordova-electron</code> argument instead of <code class="language-plaintext highlighter-rouge">electron</code> for any command that requires the platform’s name. For example:</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add cordova-electron
+cordova run cordova-electron
+</code></pre></div></div>
+
+<h3 id="preview-a-project">Preview a Project</h3>
+
+<p>It is not necessary to build the Electron application for previewing. Since the building process can be slow, it is recommended to pass in the <code class="language-plaintext highlighter-rouge">--nobuild</code> flag to disable the build process when previewing.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run electron <span class="nt">--nobuild</span>
+</code></pre></div></div>
+
+<h3 id="build-a-project">Build a Project</h3>
+
+<p><strong>Debug Builds</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build electron
+cordova build electron <span class="nt">--debug</span>
+</code></pre></div></div>
+
+<p><strong>Release Builds</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build electron <span class="nt">--release</span>
+</code></pre></div></div>
+
+<h2 id="customizing-the-applications-window-options">Customizing the Application’s Window Options</h2>
+
+<p>Electron provides many options to manipulate the <a href="https://electronjs.org/docs/api/browser-window"><code class="language-plaintext highlighter-rouge">BrowserWindow</code></a>. This section will cover how to configure a few basic options. For a full list of options, please see the <a href="https://electronjs.org/docs/api/browser-window#new-browserwindowoptions">Electron’s Docs - BrowserWindow Options</a>.</p>
+
+<p>Working with a Cordova project, it is recommended to create an Electron settings file within the project’s root directory, and set its the relative path in the preference option <code class="language-plaintext highlighter-rouge">ElectronSettingsFilePath</code>, in the <code class="language-plaintext highlighter-rouge">config.xml</code> file.</p>
+
+<p><strong>Example <code class="language-plaintext highlighter-rouge">config.xml</code>:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"electron"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"ElectronSettingsFilePath"</span> <span class="na">value=</span><span class="s">"res/electron/settings.json"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/platform&gt;</span>
+</code></pre></div></div>
+
+<p>To override or set any BrowserWindow options, in this file the options are added to the  <code class="language-plaintext highlighter-rouge">browserWindow</code> property.</p>
+
+<p><strong>Example <code class="language-plaintext highlighter-rouge">res/electron/settings.json</code>:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"browserWindow"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="how-to-set-the-windows-default-size">How to Set the Window’s Default Size</h3>
+
+<p>By default, the <code class="language-plaintext highlighter-rouge">width</code> is set to <strong>800</strong> and the <code class="language-plaintext highlighter-rouge">height</code> set to <strong>600</strong>. This can be overridden by setting the <code class="language-plaintext highlighter-rouge">width</code> and <code class="language-plaintext highlighter-rouge">height</code> property.</p>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"browserWindow"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">768</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="how-to-disable-the-window-from-being-resizable">How to Disable the Window From Being Resizable</h3>
+
+<p>Setting the <code class="language-plaintext highlighter-rouge">resizable</code> flag property, you can disable the user’s ability to resize your application’s window.</p>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"browserWindow"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resizable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="how-to-make-the-window-fullscreen">How to Make the Window Fullscreen</h3>
+
+<p>Using the <code class="language-plaintext highlighter-rouge">fullscreen</code> flag property, you can force the application to launch in fullscreen.</p>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"browserWindow"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"fullscreen"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="how-to-support-nodejs-and-electron-apis">How to Support Node.js and Electron APIs</h3>
+
+<p>Set the <code class="language-plaintext highlighter-rouge">nodeIntegration</code> flag property to <code class="language-plaintext highlighter-rouge">true</code>.  By default, this property flag is set to <code class="language-plaintext highlighter-rouge">false</code> to support popular libraries that insert symbols with the same names that Node.js and Electron already uses.</p>
+
+<blockquote>
+  <p>You can read more about this at Electron docs: <a href="https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron">I can not use jQuery/RequireJS/Meteor/AngularJS in Electron</a>.</p>
+</blockquote>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"browserWindow"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"webPreferences"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"nodeIntegration"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="customizing-the-electrons-main-process">Customizing the Electron’s Main Process</h2>
+
+<p>If it is necessary to customize the Electron’s main process beyond the scope of the Electron’s configuration settings, changes can be added directly to the <code class="language-plaintext highlighter-rouge">cdv-electron-main.js</code> file located in <code class="language-plaintext highlighter-rouge">{PROJECT_ROOT_DIR}/platform/electron/platform_www/</code>. This is the application’s main process.</p>
+
+<blockquote>
+  <p>❗ However, it is not recommended to modify this file as the upgrade process for <code class="language-plaintext highlighter-rouge">cordova-electron</code> is to remove the old platform before adding the new version.</p>
+</blockquote>
+
+<h2 id="devtools">DevTools</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">--release</code> and <code class="language-plaintext highlighter-rouge">--debug</code> flags control the visibility of the DevTools. DevTools are shown by default on <strong>Debug Builds</strong> (<code class="language-plaintext highlighter-rouge">without a flag</code> or with <code class="language-plaintext highlighter-rouge">--debug</code>). If you want to hide the DevTools pass in the <code class="language-plaintext highlighter-rouge">--release</code> flag when building or running the application.</p>
+
+<blockquote>
+  <p>Note: DevTools can be closed or opened manually with the debug build.</p>
+</blockquote>
+
+<h2 id="build-configurations">Build Configurations</h2>
+
+<h3 id="default-build-configurations">Default Build Configurations</h3>
+
+<p>By default, with no additional configuration, <code class="language-plaintext highlighter-rouge">cordova build electron</code> will build default packages for the host operating system (OS) that triggers the command. Below, are the list of default packages for each OS.</p>
+
+<p><strong>Linux</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th style="text-align: center">Arch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>tar.gz</td>
+      <td style="text-align: center">x64</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Mac</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th style="text-align: center">Arch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dmg</td>
+      <td style="text-align: center">x64</td>
+    </tr>
+    <tr>
+      <td>zip</td>
+      <td style="text-align: center">x64</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Windows</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th style="text-align: center">Arch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nsis</td>
+      <td style="text-align: center">x64</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="customizing-build-configurations">Customizing Build Configurations</h3>
+
+<p>If for any reason you would like to customize the build configurations, modifications are placed within the <code class="language-plaintext highlighter-rouge">build.json</code> file located in the project’s root directory. E.g. <code class="language-plaintext highlighter-rouge">{PROJECT_ROOT_DIR}/build.json</code>. This file contains all build configurations for all platforms (Android, Electron, iOS, Windows).</p>
+
+<p><strong>Example Config Structure</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Since the Electron framework is for creating cross-platform applications, multiple configurations are required for each OS build. The <code class="language-plaintext highlighter-rouge">electron</code> node, in the <code class="language-plaintext highlighter-rouge">build.json</code> file, contains three properties that separate the build configurations for each OS.</p>
+
+<p><strong>Example Config Structure with Each Platform</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"linux"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+        </span><span class="nl">"mac"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+        </span><span class="nl">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Each OS node contains properties that are used to identify what package to generate and how to sign.</p>
+
+<p><strong>OS Properties:</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">package</code> is an array of package formats that will be generated.</li>
+  <li><code class="language-plaintext highlighter-rouge">arch</code> is an array of architectures that each package is built for.</li>
+  <li><code class="language-plaintext highlighter-rouge">signing</code> is an object that contains signing information. See <a href="#signing-configurations">Signing Configurations</a> for more information.</li>
+</ul>
+
+<p>Any properties that are undefined will fallback to default values.</p>
+
+<h4 id="adding-a-package">Adding a <code class="language-plaintext highlighter-rouge">package</code></h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">package</code> property is an array list of packages to be outputted. If the property is defined, the default packages are not used unless added. The order of the packages has no importance.</p>
+
+<p>The configuration example below will generate <code class="language-plaintext highlighter-rouge">tar.gz</code>, <code class="language-plaintext highlighter-rouge">dmg</code> and <code class="language-plaintext highlighter-rouge">zip</code> packages for macOS.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mac"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"dmg"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tar.gz"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"zip"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Available Packages by Operating System</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package Type</th>
+      <th style="text-align: center">Linux</th>
+      <th style="text-align: center">macOS</th>
+      <th style="text-align: center">Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>default</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">dmg</code><br /><code class="language-plaintext highlighter-rouge">zip</code></td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>dmg</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>mas</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>mas-dev</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>pkg</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>7z</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>zip</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>tar.xz</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>tar.lz</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>tar.gz</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>tar.bz2</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>dir</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>nsis</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>nsis-web</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>portable</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>appx</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅ <sup><strong>[1]</strong></sup></td>
+    </tr>
+    <tr>
+      <td>msi</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">✅</td>
+    </tr>
+    <tr>
+      <td>AppImage</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>snap</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>deb</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>rpm</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>freebsd</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>pacman</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>p5p</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td>apk</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>[1]</strong> Only Window 10 can build AppX packages.</li>
+</ul>
+
+<h4 id="setting-the-package-arch">Setting the Package <code class="language-plaintext highlighter-rouge">arch</code></h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">arch</code> property is an array list of architectures that each package is built for. When the property is defined, the default arch is not used unless added.</p>
+
+<blockquote>
+  <p>❗  Not all architectures are available for every operating system. Please review the <a href="https://github.com/electron/electron/releases/">Electron Releases</a> to identify valid combinations. For example, macOS (Darwin) only supports x64.</p>
+</blockquote>
+
+<p><strong>Available Arch</strong></p>
+
+<ul>
+  <li>ia32</li>
+  <li>x64</li>
+  <li>armv7l</li>
+  <li>arm64</li>
+</ul>
+
+<p>The example above will generate an <code class="language-plaintext highlighter-rouge">x64</code> <code class="language-plaintext highlighter-rouge">dmg</code> package.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mac"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"dmg"</span><span class="w"> </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"arch"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"x64"</span><span class="w"> </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="multi-platform-build-support">Multi-Platform Build Support</h3>
+
+<blockquote>
+  <p>❗ Not all platforms support this feature and may have limitations.</p>
+</blockquote>
+
+<p>Building for multiple platforms on a single operating system may possible but has limitations. It is recommended that the builder’s operating system (host OS) matches with the platform that is being built.</p>
+
+<p>The matrix below shows each host OS and for which platforms they are capable of building applications.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Host <sup><strong>[1]</strong></sup></th>
+      <th style="text-align: center">Linux</th>
+      <th style="text-align: center">Mac</th>
+      <th style="text-align: center">Window</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linux</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">❗ <sup><strong>[2]</strong></sup></td>
+    </tr>
+    <tr>
+      <td>Mac <sup><strong>[3]</strong></sup></td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">✅</td>
+      <td style="text-align: center">❗ <sup><strong>[2]</strong></sup></td>
+    </tr>
+    <tr>
+      <td>Window</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Limitations:</strong></p>
+
+<ul>
+  <li><strong>[1]</strong> If the app contains native dependency, it can only be compiled on the targeted platform.</li>
+  <li><strong>[2]</strong> Linux and macOS are unable to build Windows Appx packages for Windows Store.</li>
+  <li><strong>[3]</strong> <a href="https://www.electron.build/multi-platform-build#macos">All required system dependencies, except rpm, will be downloaded automatically on demand. RPM can be installed with brew. (macOS Sierra 10.12+)</a></li>
+</ul>
+
+<p>The example below enables multi-platform build for all OS and uses the default build configurations.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"linux"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+        </span><span class="nl">"mac"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+        </span><span class="nl">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="signing-configurations">Signing Configurations</h2>
+
+<h3 id="macos-signing">macOS Signing</h3>
+
+<p>There are three types of signing targets. (<code class="language-plaintext highlighter-rouge">debug</code>, <code class="language-plaintext highlighter-rouge">release</code>, and <code class="language-plaintext highlighter-rouge">store</code>). Each section has the following properties:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>key</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>entitlements</td>
+      <td>String path value to entitlements file.</td>
+    </tr>
+    <tr>
+      <td>entitlementsInherit</td>
+      <td>String path value to the entitlements file which inherits the security settings.</td>
+    </tr>
+    <tr>
+      <td>identity</td>
+      <td>String value of the name of the certificate.</td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html">requirements</a></td>
+      <td>String path value of requirements file. <br /><br />❗ This is not available for the <code class="language-plaintext highlighter-rouge">mas</code> (store) signing configurations.</td>
+    </tr>
+    <tr>
+      <td>provisioningProfile</td>
+      <td>String path value of the provisioning profile.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example Config:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mac"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"dmg"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"mas"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"mas-dev"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"signing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"APACHE CORDOVA (TEAMID)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"release.mobileprovision"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For macOS signing, there are a few exceptions to how the signing information is used.
+By default, all packages with the exception of <code class="language-plaintext highlighter-rouge">mas</code> and <code class="language-plaintext highlighter-rouge">mas-dev</code>, use the <code class="language-plaintext highlighter-rouge">debug</code> and <code class="language-plaintext highlighter-rouge">release</code> signing configurations.</p>
+
+<p>Using the example config above, let’s go over some use cases to better understand the exceptions.</p>
+
+<p><strong>Use Case 1:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build electron <span class="nt">--debug</span>
+</code></pre></div></div>
+
+<p>The command above will:</p>
+
+<ul>
+  <li>Generate a <code class="language-plaintext highlighter-rouge">dmg</code> build and <code class="language-plaintext highlighter-rouge">mas-dev</code> build using the <code class="language-plaintext highlighter-rouge">debug</code> signing configurations.</li>
+  <li>Ignore the <code class="language-plaintext highlighter-rouge">mas</code> target package.</li>
+</ul>
+
+<p><em>Use Case 2:</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build electron <span class="nt">--release</span>
+</code></pre></div></div>
+
+<p>The command above will:</p>
+
+<ul>
+  <li>Generate a <code class="language-plaintext highlighter-rouge">dmg</code> build using the <code class="language-plaintext highlighter-rouge">release</code> config.</li>
+  <li>Generate a <code class="language-plaintext highlighter-rouge">mas</code> build using the <code class="language-plaintext highlighter-rouge">store</code> config.</li>
+  <li>Ignore the <code class="language-plaintext highlighter-rouge">mas-dev</code> target package.</li>
+</ul>
+
+<h3 id="windows-signing">Windows Signing</h3>
+
+<p>The signing information is comprised of two types. (<code class="language-plaintext highlighter-rouge">debug</code>, <code class="language-plaintext highlighter-rouge">release</code>). Each section has the following properties:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>key</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>certificateFile</td>
+      <td>String path to the certificate file.</td>
+    </tr>
+    <tr>
+      <td>certificatePassword</td>
+      <td>String value of the certificate file’s password.<br /><br /><strong>Alternative</strong>: The password can be set on the environment variable <code class="language-plaintext highlighter-rouge">CSC_KEY_PASSWORD</code>.</td>
+    </tr>
+    <tr>
+      <td>certificateSubjectName</td>
+      <td>String value of the signing certificate’s subject.<br /><br />❗ Required for EV Code Signing and requires Windows</td>
+    </tr>
+    <tr>
+      <td>certificateSha1</td>
+      <td>String value of the SHA1 hash of the signing certificate.<br /><br />❗ Requires Windows</td>
+    </tr>
+    <tr>
+      <td>signingHashAlgorithms</td>
+      <td>Collection of singing algorithms to be used. (<code class="language-plaintext highlighter-rouge">sha1</code>, <code class="language-plaintext highlighter-rouge">sha256</code>)<br /><br />❗ AppX builds only support <code class="language-plaintext highlighter-rouge">sha256</code></td>
+    </tr>
+    <tr>
+      <td>additionalCertificateFile</td>
+      <td>String path to the additional certificate files.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example Config:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"electron"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"windows"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"nsis"</span><span class="w"> </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"signing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"certificateFile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"path_to_files"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"certificatePassword"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="linux-signing">Linux Signing</h3>
+
+<p>There are not signing requirements for Linux builds.</p>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>All browser-based plugins are usable with the Electron platform.</p>
+
+<p>When adding a plugin, if the plugin supports both the <code class="language-plaintext highlighter-rouge">electron</code> and <code class="language-plaintext highlighter-rouge">browser</code> platform, the <code class="language-plaintext highlighter-rouge">electron</code> portion will be used. If the plugin misses <code class="language-plaintext highlighter-rouge">electron</code> but contains the <code class="language-plaintext highlighter-rouge">browser</code> implementation, it will fall back on the <code class="language-plaintext highlighter-rouge">browser</code> implementation.</p>
+
+<p>Internally, Electron is using Chromium (Chrome) as its web view. Some plugins may have conditions written specifically for each different browser. In this case, it may affect the behavior of what is intended. Since Electron may support feature that the browser does not, these plugins would possibly need to be updated for the <code class="language-plaintext highlighter-rouge">electron</code> platform.</p>

@@ -1,0 +1,45 @@
+<h2 id="platform-pinning">Platform Pinning</h2>
+
+<h3 id="cordova-cli-12x--higher">Cordova CLI 12.x &amp; Higher</h3>
+
+<p>Starting from Cordova CLI 12.0.0, the CLI no longer maintains a list of pinned Apache Cordova platforms.</p>
+
+<p>When you run the <code class="language-plaintext highlighter-rouge">cordova platform add &lt;PLATFORM&gt;</code> command, it will always fetch the latest available platform from the npm registry. This ensures immediate access to newly released platforms.</p>
+
+<p>If you want to consistently fetch a specific version, you need to modify the command and include the version pinning. For example, use <code class="language-plaintext highlighter-rouge">cordova platform add &lt;PLATFORM&gt;@&lt;VERSION&gt;</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">cordova platform list</code> command displays the list of platforms without their versions. However, it will continue to show the versions of the installed platforms.</p>
+
+<p><strong>Example Output:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform list
+Installed platforms:
+  android 12.0.0
+Available platforms:
+  browser
+  electron
+  ios
+</code></pre></div></div>
+
+<h3 id="cordova-cli-11x--lower">Cordova CLI 11.x &amp; Lower</h3>
+
+<p>Cordova CLI 11.x and lower versions still use platform pinning but won’t receive further updates since Cordova CLI 12.0.0 has been released. Platforms are pinned with a <code class="language-plaintext highlighter-rouge">^</code> symbol, allowing the CLI to fetch new minor and patch releases for the pinned platforms.</p>
+
+<p>To view the pinned platforms for your CLI version, run the command <code class="language-plaintext highlighter-rouge">cordova platform list</code> in a new project directory.</p>
+
+<p><strong>Example Output:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform list
+Installed platforms:
+
+Available platforms:
+  android ^10.1.1
+  browser ^6.0.0
+  electron ^3.0.0
+  ios ^6.2.0
+  osx ^6.0.0 <span class="o">(</span>deprecated<span class="o">)</span>
+</code></pre></div></div>
+
+<p>Based on the above information, executing <code class="language-plaintext highlighter-rouge">cordova platform add android</code> will fetch the latest minor/patch release version starting from 10.1.1 or higher. If you specify a version, it will fetch the specified version. For example, <code class="language-plaintext highlighter-rouge">cordova platform add ios@5.0.1</code> will fetch Cordova iOS 5.0.1.</p>
+
+<p><em>Note: After installing a platform, the “<strong>Installed platforms:</strong>” section will display the actual installed platform version. The installed platform will no longer appear in the “<strong>Available platforms:</strong>” section until it is removed from the project.</em></p>

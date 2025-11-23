@@ -1,0 +1,61 @@
+<h1 id="android-configuration">Android Configuration</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">config.xml</code> file controls various Cordova settings. These apply
+across the application, and per CordovaWebView instance.</p>
+
+<h2 id="preference"><code class="language-plaintext highlighter-rouge">&lt;preference&gt;</code></h2>
+
+<p>Various other preferences (as <code class="language-plaintext highlighter-rouge">&lt;preference&gt;</code> tags) default on not
+breaking existing apps. The available preferences are:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">useBrowserHistory</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): set to <code class="language-plaintext highlighter-rouge">false</code> if you
+want to use the history shim that was used to work around the
+hashtag error present in Android 3.x prior to the history fix.
+(Note: This setting will be deprecated in April 2013)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">loadingDialog</code>: Display a native loading dialog when loading the
+app. The value’s format is <em>Title, Message</em></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">loadingPageDialog</code>: Display a native loading dialog when loading
+sub-pages. The value’s format is <em>Title, Message</em></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">errorUrl</code>: Set the error page for your application. Should be
+located in your Android project in <code class="language-plaintext highlighter-rouge">file://android_asset/www/</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">backgroundColor</code>: Set the background color for your application.
+Supports a four-byte hex value, with the first byte representing
+alpha value, and the following three bytes with standard RGB
+values. For example, <code class="language-plaintext highlighter-rouge">0x00000000</code> is black.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">loadUrlTimeoutValue</code>: How much time Cordova should wait before
+throwing a timeout error on the application.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">keepRunning</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): Determines whether
+Cordova stays running in the background. Note: setting this to 
+false will not kill the app after a <a href="../../../cordova/events/events.pause.html">pause</a> event, it will only 
+halt execution of code in the cordova webview while the app is 
+in the background.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">splashscreen</code>: The name of the file minus its extension in the
+<code class="language-plaintext highlighter-rouge">res/drawable</code> directory.  If you have multiple assets, they all
+must share this common name in their respective directories.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">disallowOverscroll</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): set to <code class="language-plaintext highlighter-rouge">true</code> to
+disable the glow when a user scrolls beyond the edge of the webview.</p>
+  </li>
+</ul>
+
+<h2 id="plugin"><code class="language-plaintext highlighter-rouge">&lt;plugin&gt;</code></h2>
+
+<p>Android supports using <code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code> as analogues to <code class="language-plaintext highlighter-rouge">&lt;plugin&gt;</code> elements.</p>
+

@@ -1,0 +1,148 @@
+<h1 id="upgrading-cordova-ios">Upgrading Cordova iOS</h1>
+
+<p>Please note that <strong>Xcode 4 is required</strong>. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 5.1. The iOS 5.1 SDK requires Xcode 4.</p>
+
+<h2 id="upgrading-cordova-18x-projects-to-190">Upgrading Cordova 1.8.x projects to 1.9.0</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.9.0</li>
+  <li><strong>Create a new project</strong> - you will have to grab assets from this new project</li>
+  <li><strong>Copy</strong> the <strong>www/cordova-1.9.0.js</strong> file from the new project into your <strong>www</strong> folder, and delete your <strong>www/cordova-1.8.x.js</strong> file</li>
+  <li><strong>Update</strong> the Cordova script reference in your <strong>www/index.html</strong> file (and any other files that contain the script reference) to point to the new <strong>cordova-1.9.0.js</strong> file</li>
+</ol>
+
+<p><strong>Note:</strong></p>
+
+<p>1.9.0 supports the new <strong>“BackupWebStorage”</strong> boolean setting in Cordova.plist. By default, this setting is turned on, set it to “false” to turn it off - especially for iOS 6 - see <a href="https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html">Release Notes - Safari and UIKit Section</a></p>
+
+<h2 id="upgrading-cordova-170-projects-to-18x">Upgrading Cordova 1.7.0 projects to 1.8.x</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.8.0</li>
+  <li><strong>Create a new project</strong> - you will have to grab assets from this new project</li>
+  <li><strong>Copy</strong> the <strong>www/cordova-1.8.0.js</strong> file from the new project into your <strong>www</strong> folder, and delete your <strong>www/cordova-1.7.x.js</strong> file</li>
+  <li><strong>Update</strong> the Cordova script reference in your <strong>www/index.html</strong> file (and any other files that contain the script reference) to point to the new <strong>cordova-1.8.0.js</strong> file</li>
+</ol>
+
+<p>If you intend on using the <strong>Capture API</strong>, you will need the new <strong>iPad retina-display</strong> assets:</p>
+
+<ol>
+  <li><strong>Copy</strong> the <strong>Resources/Capture.bundle</strong> item from the new project into your project folder, over-writing your existing <strong>Resources/Capture.bundle</strong> item</li>
+  <li>In your project, select the <strong>Capture.bundle</strong> item into Xcode into your Project Navigator, and press the <strong>Delete</strong> key, then select <strong>Remove Reference</strong> from the dialog that pops up.</li>
+  <li>Drag the new <strong>Capture.bundle</strong> from Step 1. above into Xcode into your Project Navigator, and select the <strong>Create groups for any added folders</strong> radio-button</li>
+</ol>
+
+<h2 id="upgrading-cordova-16x-projects-to-170">Upgrading Cordova 1.6.x projects to 1.7.0</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.7.0</li>
+  <li><strong>Create a new project</strong> - you will have to grab assets from this new project</li>
+  <li><strong>Copy</strong> the <strong>www/cordova-1.7.0.js</strong> file from the new project into your <strong>www</strong> folder, and delete your <strong>www/cordova-1.6.0.js</strong> file</li>
+  <li><strong>Update</strong> the Cordova script reference in your <strong>www/index.html</strong> file (and any other files that contain the script reference) to point to the new <strong>cordova-1.7.0.js</strong> file</li>
+</ol>
+
+<h2 id="upgrading-cordova-150-projects-to-16x">Upgrading Cordova 1.5.0 projects to 1.6.x</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.6.1</li>
+  <li><strong>Make a backup</strong> of <strong>AppDelegate.m</strong>, <strong>AppDelegate.h</strong>, <strong>MainViewController.m</strong>, <strong>MainViewController.h</strong>, and <strong>Cordova.plist</strong> in your project</li>
+  <li><strong>Create a new project</strong> - you will have to grab assets from this new project</li>
+  <li>
+    <p><strong>Copy</strong> these files from the <strong>new</strong> project into your 1.5.0 based project folder on disk, <strong>replacing</strong> any old files (<strong>backup</strong> your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ Cordova.plist
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Add</strong> all the new <strong>MainViewController</strong> and <strong>AppDelegate</strong> files into your Xcode project</li>
+  <li><strong>Copy</strong> the <strong>www/cordova-1.6.1.js</strong> file from the new project into your <strong>www</strong> folder, and delete your <strong>www/cordova-1.5.0.js</strong> file</li>
+  <li><strong>Update</strong> the Cordova script reference in your <strong>www/index.html</strong> file (and any other files that contain the script reference) to point to the new <strong>cordova-1.6.1.js</strong> file</li>
+  <li><strong>Add</strong> the new <strong>Cordova.plist</strong> file into your project - this is because the core plugin service names needed to be changed to match the ones from Android and BlackBerry, for a unified Cordova JavaScript file (cordova-js).</li>
+  <li><strong>Integrate</strong> any settings, <strong>Plugins</strong> and <strong>ExternalHosts</strong> entries that you had in your <strong>backed-up Cordova.plist</strong> into the new <strong>Cordova.plist</strong></li>
+  <li><strong>Integrate</strong> any project specific code that you have in your <strong>backed-up AppDelegate.h and AppDelegate.m</strong> into the new AppDelegate files. Any <strong>UIWebViewDelegate</strong> or <strong>CDVCommandDelegate</strong> code in <strong>AppDelegate.m</strong> will need to go into MainViewController.m now (see commented out sections in that file)</li>
+  <li><strong>Integrate</strong> any project specific code that you have in your <strong>backed-up MainViewController.h and MainViewController.m</strong> into the new MainViewController files</li>
+  <li>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Project</strong>, then select the <strong>“Build Settings”</strong> tab</li>
+  <li>Enter <strong>“Compiler for C/C++/Objective-C”</strong> in the search field</li>
+  <li>Select the <strong>“Apple LLVM Compiler 3.1”</strong> value</li>
+</ol>
+
+<h2 id="upgrading-cordova-14x-projects-to-150">Upgrading Cordova 1.4.x projects to 1.5.0</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.5.0</li>
+  <li><strong>Create a new project</strong> and run it once - you will have to grab assets from this new project</li>
+  <li><strong>Copy</strong> the <strong>www/cordova-1.5.0.js</strong> file from the new project into your <strong>www</strong> folder, and delete your <strong>www/phonegap-1.4.x.js</strong> file</li>
+  <li><strong>Update</strong> the Cordova script reference in your <strong>www/index.html</strong> file (and any other files that contain the script reference) to point to the new Cordova <strong>cordova-1.5.0.js</strong> file</li>
+  <li>Find <strong>“PhoneGap.framework”</strong> in your Project Navigator, select it</li>
+  <li>Press the <strong>Delete</strong> key and delete the <strong>“PhoneGap.framework”</strong> reference in the Project Navigator</li>
+  <li>Press the key combination <strong>Option-Command-A</strong>, which should drop down a sheet to add files to your project (the <strong>“Add Files…” sheet</strong>). Make sure the <strong>“Created groups for any added folders”</strong> radio-button is selected</li>
+  <li>Press the key combination <strong>Shift-Command-G</strong>, which should drop down another sheet for you to go to a folder (the <strong>“Go to the folder:” sheet</strong>)</li>
+  <li>Enter <strong>“/Users/Shared/Cordova/Frameworks/Cordova.framework”</strong> in the <strong>“Go to the folder:” sheet</strong> and then press the <strong>“Go”</strong> button</li>
+  <li>Press the <strong>“Add”</strong> button in the <strong>“Add Files…” sheet</strong></li>
+  <li><strong>Select “Cordova.framework”</strong> in the Project Navigator</li>
+  <li>Press the key combination <strong>Option-Command-1</strong> to show the <strong>File Inspector</strong></li>
+  <li>Choose <strong>“Absolute Path”</strong> in the <strong>File Inspector</strong> for the drop-down menu for <strong>Location</strong></li>
+  <li>Press the key combination <strong>Option-Command-A</strong>, which should drop down a sheet to add files to your project (the <strong>“Add Files…” sheet</strong>). Make sure the <strong>“Created groups for any added folders”</strong> radio-button is selected</li>
+  <li>Press the key combination <strong>Shift-Command-G</strong>, which should drop down another sheet for you to go to a folder (the <strong>“Go to the folder:” sheet</strong>)</li>
+  <li>Enter <strong>”~/Documents/CordovaLib/Classes/deprecated”</strong> in the <strong>“Go to the folder:” sheet</strong> and then press the <strong>“Go”</strong> button</li>
+  <li>Press the <strong>“Add”</strong> button in the <strong>“Add Files…” sheet</strong></li>
+  <li>
+    <p>In your <strong>AppDelegate.h, AppDelegate.m, and MainViewController.h</strong> files - replace the whole <strong>#ifdef PHONEGAP_FRAMEWORK</strong> block with:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#import "CDVDeprecated.h"
+</code></pre></div>    </div>
+  </li>
+  <li>Click on the <strong>project icon</strong> in the Project Navigator, select your <strong>Target</strong>, then select the <strong>“Build Settings”</strong> tab</li>
+  <li>Search for <strong>“Framework Search Paths”</strong></li>
+  <li>Replace the existing value with <strong>“/Users/Shared/Cordova/Frameworks”</strong></li>
+  <li>Search for <strong>“Preprocessor Macros”</strong></li>
+  <li>For the first (combined) value, replace the value with <strong>“CORDOVA_FRAMEWORK=YES”</strong></li>
+  <li>Select the <strong>“Build Phases”</strong> tab</li>
+  <li>Expand <strong>“Run Script”</strong></li>
+  <li>Replace any occurrences of <strong>PhoneGap</strong> with <strong>Cordova</strong></li>
+  <li>Find your <strong>“PhoneGap.plist”</strong> file in the Project Navigator, and click on the filename once to enter name edit mode</li>
+  <li>Rename <strong>“PhoneGap.plist”</strong> to <strong>“Cordova.plist”</strong></li>
+  <li>Right-click on <strong>“Cordova.plist”</strong> and choose <strong>“Open As” –&gt; “Source Code”</strong></li>
+  <li>Press <strong>Option-Command-F</strong>, choose <strong>“Replace”</strong> from the drop-down on the top left of the Source window</li>
+  <li>Enter <strong>com.phonegap</strong> for the Find string, and <strong>org.apache.cordova</strong> for the Replace string - then press the <strong>“Replace All”</strong> button</li>
+  <li>Enter <strong>PG</strong> for the Find string, and <strong>CDV</strong> for the Replace string - then press the <strong>“Replace All”</strong> button</li>
+  <li>Press <strong>Command-B</strong> to build, you will still have deprecations that you can get rid of in the future (see <strong>CDVDeprecated.h</strong> - replace classes in your code that use PG* to CDV*, for example)</li>
+</ol>
+
+<h2 id="upgrading-cordova-140-projects-to-141">Upgrading Cordova 1.4.0 projects to 1.4.1</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.4.1</li>
+  <li><strong>Make a backup</strong> of <strong>MainViewController.m</strong></li>
+  <li><strong>Create a new project</strong> - you will have to grab assets from this new project</li>
+  <li><strong>Copy</strong> the <strong>MainViewController.m</strong> file from the <strong>new</strong> project into your 1.4.0 based project folder on disk, <strong>replacing</strong> the old file (<strong>backup</strong> your files first from step 2 above).</li>
+  <li><strong>Add</strong> the <strong>MainViewController.m</strong> file into your Xcode project</li>
+  <li><strong>Integrate</strong> any project specific code that you have in your <strong>backed-up MainViewController.m</strong> into the new file</li>
+  <li>Updating the phonegap-X.X.X.js file is optional, nothing has changed in the JavaScript between 1.4.0 and 1.4.1</li>
+</ol>
+
+<h2 id="upgrading-cordova-130-projects-to-140">Upgrading Cordova 1.3.0 projects to 1.4.0</h2>
+
+<ol>
+  <li><strong>Install</strong> Cordova 1.4.0</li>
+  <li><strong>Make a backup</strong> of <strong>AppDelegate.m</strong> and <strong>AppDelegate.h</strong> in your project</li>
+  <li><strong>Create a new project</strong> - you will have to grab assets from this new project</li>
+  <li>
+    <p><strong>Copy</strong> these files from the <strong>new</strong> project into your 1.3.0 based project folder on disk, <strong>replacing</strong> any old files (<strong>backup</strong> your files first from step 2 above):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> AppDelegate.h
+ AppDelegate.m
+ MainViewController.h
+ MainViewController.m
+ MainViewController.xib
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Add</strong> all the <strong>MainViewController</strong> files into your Xcode project</li>
+  <li><strong>Copy</strong> the <strong>www/phonegap-1.4.0.js</strong> file from the new project into your <strong>www</strong> folder, and delete your <strong>www/phonegap-1.3.0.js</strong> file</li>
+  <li><strong>Update</strong> the Cordova script reference in your <strong>www/index.html</strong> file (and any other files that contain the script reference) to point to the new <strong>phonegap-1.4.0.js</strong> file</li>
+  <li><strong>Add</strong> a new entry under <strong>Plugins</strong> in your <strong>PhoneGap.plist</strong> file - key is <strong>com.phonegap.battery</strong> and the value is <strong>PGBattery</strong></li>
+  <li><strong>Integrate</strong> any project specific code that you have in your <strong>backed-up AppDelegate.h and AppDelegate.m</strong> into the new AppDelegate files</li>
+</ol>

@@ -1,0 +1,58 @@
+<h1 id="notification">Notification</h1>
+
+<blockquote>
+  <p>Visual, audible, and tactile device notifications.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">[notification.alert](notification.alert.html)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">[notification.confirm](notification.confirm.html)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">[notification.prompt](notification.prompt.html)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">[notification.beep](notification.beep.html)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">[notification.vibrate](notification.vibrate.html)</code></li>
+</ul>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlconfigxml">app/res/xml/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Notification" value="org.apache.cordova.Notification"/&gt;
+</code></pre></div></div>
+
+<h4 id="appandroidmanifestxml">app/AndroidManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
+</code></pre></div></div>
+
+<h3 id="blackberry-webworks">BlackBerry WebWorks</h3>
+
+<h4 id="wwwpluginsxml">www/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Notification" value="org.apache.cordova.notification.Notification" /&gt;
+</code></pre></div></div>
+
+<h4 id="wwwconfigxml">www/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature id="blackberry.ui.dialog" /&gt;
+</code></pre></div></div>
+
+<h3 id="ios">iOS</h3>
+
+<h4 id="configxml">config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Notification" value="CDVNotification" /&gt;
+</code></pre></div></div>
+
+<h3 id="windows-phone">Windows Phone</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="tizen">Tizen</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>

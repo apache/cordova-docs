@@ -1,0 +1,91 @@
+<h1 id="os-x-configuration">OS X Configuration</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">config.xml</code> file controls an app’s basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to OS X builds. See <a href="../../../config_ref/index.html#The%20config.xml%20File">The config.xml
+File</a> for information on global configuration options.</p>
+
+<h2 id="overview">Overview</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Default</th>
+      <th>Version</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">HideMousePointer</code></td>
+      <td><em>disabled</em></td>
+      <td>4.0.0</td>
+      <td>Sets the timeout for hiding the mouse pointer</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OSXLocalStoragePath</code></td>
+      <td><code class="language-plaintext highlighter-rouge">~/Library/Application Support/{bundle.id}</code></td>
+      <td>4.0.0</td>
+      <td>Sets the local storage path</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">WindowSize</code></td>
+      <td><code class="language-plaintext highlighter-rouge">auto</code></td>
+      <td>4.0.0</td>
+      <td>Sets the size of the application window.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">EnableWebGL</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>4.0.0</td>
+      <td>Enables WebGL on the web view.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="details">Details</h2>
+
+<h3 id="hidemousepointer">HideMousePointer</h3>
+<p>(integer, defaults to <em>disabled</em>)
+Idle duration in seconds after which the mouse pointer should be hidden.
+Set it to <code class="language-plaintext highlighter-rouge">0</code> for immediate.</p>
+
+<p>Example: hide mouse pointer after 5 seconds:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"HideMousePointer"</span> <span class="na">value=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3 id="osxlocalstoragepath">OSXLocalStoragePath</h3>
+<p>(string, defaults to <code class="language-plaintext highlighter-rouge">~/Library/Application Support/{bundle.id}</code>)
+Sets the directory for the local storage path.</p>
+
+<p>Example: use custom path:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"OSXLocalStoragePath"</span> <span class="na">value=</span><span class="s">"~/.myapp/database"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3 id="windowsize">WindowSize</h3>
+<p>(string, defaults to <code class="language-plaintext highlighter-rouge">auto</code>)
+Defines the size of the application window in the format <code class="language-plaintext highlighter-rouge">WxH</code> or the special values <code class="language-plaintext highlighter-rouge">auto</code> and
+<code class="language-plaintext highlighter-rouge">fullscreen</code>. The latter will open a borderless window spanning the entire desktop area. Please note,
+that this is different from the <em>normal</em> OS X fullscreen mode, which would never span multiple displays.</p>
+
+<p>Example: set the window size to 800 x 400:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"WindowSize"</span> <span class="na">value=</span><span class="s">"800x400"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note</strong>: The global cordova <code class="language-plaintext highlighter-rouge">fullscreen</code> preference is not supported.</p>
+</blockquote>
+
+<h3 id="enablewebgl">EnableWebGL</h3>
+<p>(boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>)
+If set to <code class="language-plaintext highlighter-rouge">true</code> it enables WebGL on the webview.</p>
+
+<p>Example: enable WebGL</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"EnableWebGL"</span> <span class="na">value=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+

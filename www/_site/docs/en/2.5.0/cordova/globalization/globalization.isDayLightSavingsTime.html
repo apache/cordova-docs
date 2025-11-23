@@ -1,0 +1,60 @@
+<h1 id="globalizationisdaylightsavingstime">globalization.isDayLightSavingsTime</h1>
+
+<p>Returns whether daylight savings time is in effect for a given date using the client’s time zone and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.isDayLightSavingsTime(date, successCB, errorCB);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>It returns whether or not daylight savings time is in effect to the successCB callback with a properties object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">dst</code> property with a Boolean value. The value ‘true’ indicates that daylight savings time is in effect for the given date, and ‘false’ indicates that it is not.</p>
+
+<p>The inbound parameter <code class="language-plaintext highlighter-rouge">date</code> should be of type <code class="language-plaintext highlighter-rouge">Date</code>.</p>
+
+<p>If there is an error reading the date, then the errorCB callback is invoked. The expected code for this error is <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>In the case during the summer when the browser is set to a DST-enabled timezone, this should display a popup dialog with text similar to “dst: true”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.isDayLightSavingsTime(
+  new Date(),
+  function (date) {alert('dst: ' + date.dst + '\n');},
+  function () {alert('Error getting names\n');}
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+    
+    function checkDayLightSavings() {
+      navigator.globalization.isDayLightSavingsTime(
+        new Date(),
+        function (date) {alert('dst: ' + date.dst + '\n');},
+        function () {alert('Error getting names\n');}
+      );
+    }
+                                         
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDayLightSavings()"&gt;Click for daylight savings&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

@@ -1,0 +1,103 @@
+<h1 id="localstorage">localStorage</h1>
+
+<p>Provides access to a <a href="http://dev.w3.org/html5/webstorage/#the-localstorage-attribute">W3C [Storage](../storage.html) interface</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var storage = window.localStorage;
+</code></pre></div></div>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>key</strong>: Returns the name of the key at the specified position.</li>
+  <li><strong>getItem</strong>: Returns the item identified by the specified key.</li>
+  <li><strong>setItem</strong>: Assigns a keyed item’s value.</li>
+  <li><strong>removeItem</strong>: Removes the item identified by the specified key.</li>
+  <li><strong>clear</strong>: Removes all of the key/value pairs.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">window.localStorage</code> interface is based on the W3C Web <a href="../storage.html">Storage</a>
+interface.  An app can use it to save persistent data using key-value
+pairs.  The <code class="language-plaintext highlighter-rouge">window.sessionStorage</code> interface works the same way, but
+all data is cleared each time the app closes.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+</ul>
+
+<h2 id="key-quick-example">Key Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var keyName = window.localStorage.key(0);
+</code></pre></div></div>
+
+<h2 id="set-item-quick-example">Set Item Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.localStorage.setItem("key", "value");
+</code></pre></div></div>
+
+<h2 id="get-item-quick-example">Get Item Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    var value = window.localStorage.getItem("key");
+    // value is now equal to "value"
+</code></pre></div></div>
+
+<h2 id="remove-item-quick-example">Remove Item Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    window.localStorage.removeItem("key");
+</code></pre></div></div>
+
+<h2 id="clear-quick-example">Clear Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    window.localStorage.clear();
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.localStorage.setItem("key", "value");
+        var keyname = window.localStorage.key(i);
+        // keyname is now equal to "key"
+        var value = window.localStorage.getItem("key");
+        // value is now equal to "value"
+        window.localStorage.removeItem("key");
+        window.localStorage.setItem("key2", "value2");
+        window.localStorage.clear();
+        // localStorage is now empty
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;localStorage&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-7-quirks">Windows Phone 7 Quirks</h2>
+
+<p>Dot notation is <em>not</em> available on Windows Phone 7. Be sure to use
+<code class="language-plaintext highlighter-rouge">setItem</code> or <code class="language-plaintext highlighter-rouge">getItem</code>, rather than accessing keys directly from the
+storage object, such as <code class="language-plaintext highlighter-rouge">window.localStorage.someKey</code>.</p>
+

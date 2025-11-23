@@ -1,0 +1,146 @@
+<h1 id="sqlresultset">SQLResultSet</h1>
+
+<p>When a <code class="language-plaintext highlighter-rouge">[SQLTransaction](../sqltransaction/sqltransaction.html)</code> object’s <code class="language-plaintext highlighter-rouge">executeSql</code> method is called, the
+specified callback executes with a <code class="language-plaintext highlighter-rouge">SQLResultSet</code> parameter.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>insertId</strong>: The row ID of the row that the <code class="language-plaintext highlighter-rouge">SQLResultSet</code> object’s SQL statement inserted into the database.</p>
+  </li>
+  <li>
+    <p><strong>rowsAffected</strong>: The number of rows changed by the SQL statement, zero if the statement did not affect any rows.</p>
+  </li>
+  <li>
+    <p><strong>rows</strong>: a <code class="language-plaintext highlighter-rouge">[SQLResultSetRowList](../sqlresultsetrowlist/sqlresultsetrowlist.html)</code> representing the rows returned, empty if no rows are returned.</p>
+  </li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>When a <code class="language-plaintext highlighter-rouge">[SQLTransaction](../sqltransaction/sqltransaction.html)</code> object’s <code class="language-plaintext highlighter-rouge">executeSql</code> method is called, the
+specified callback executes with a <code class="language-plaintext highlighter-rouge">SQLResultSet</code> parameter containing
+three properties:</p>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">insertId</code> returns the row number of a successly SQL insertion
+statement.  If the SQL does not insert any rows, the <code class="language-plaintext highlighter-rouge">insertId</code> is
+not set.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">rowsAffected</code> is always <code class="language-plaintext highlighter-rouge">0</code> for a SQL <code class="language-plaintext highlighter-rouge">select</code> statement.  For
+<code class="language-plaintext highlighter-rouge">insert</code> or <code class="language-plaintext highlighter-rouge">update</code> statements it returns the number of modified
+rows.</p>
+  </li>
+  <li>
+    <p>The final <code class="language-plaintext highlighter-rouge">SQLResultSetList</code> contains the data returned from a SQL
+select statement.</p>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="execute-sql-quick-example">Execute SQL Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function queryDB(tx) {
+    tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+}
+
+function querySuccess(tx, results) {
+    console.log("Returned rows = " + results.rows.length);
+    // this will be true since it was a select statement and so rowsAffected was 0
+    if (!results.rowsAffected) {
+        console.log('No rows affected!');
+        return false;
+    }
+    // for an insert statement, this property will return the ID of the last inserted row
+    console.log("Last inserted row ID = " + results.insertId);
+}
+
+function errorCB(err) {
+    alert("Error processing SQL: "+err.code);
+}
+
+var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+db.transaction(queryDB, errorCB);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Populate the database
+    //
+    function populateDB(tx) {
+        tx.executeSql('DROP TABLE IF EXISTS DEMO');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
+
+    // Query the database
+    //
+    function queryDB(tx) {
+        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+    }
+
+    // Query the success callback
+    //
+    function querySuccess(tx, results) {
+        console.log("Returned rows = " + results.rows.length);
+        // this will be true since it was a select statement and so rowsAffected was 0
+        if (!results.rowsAffected) {
+            console.log('No rows affected!');
+            return false;
+        }
+        // for an insert statement, this property will return the ID of the last inserted row
+        console.log("Last inserted row ID = " + results.insertId);
+    }
+
+    // Transaction error callback
+    //
+    function errorCB(err) {
+        console.log("Error processing SQL: "+err.code);
+    }
+
+    // Transaction success callback
+    //
+    function successCB() {
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(queryDB, errorCB);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(populateDB, errorCB, successCB);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Database&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

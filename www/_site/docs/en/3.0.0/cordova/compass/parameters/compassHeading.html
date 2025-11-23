@@ -1,0 +1,46 @@
+<h1 id="compassheading">compassHeading</h1>
+
+<p>A <code class="language-plaintext highlighter-rouge">CompassHeading</code> object is returned to the <code class="language-plaintext highlighter-rouge">[compassSuccess](compassSuccess.html)</code> callback function.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>magneticHeading</strong>: The heading in degrees from 0-359.99 at a single moment in time. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>trueHeading</strong>: The heading relative to the geographic North Pole in degrees 0-359.99 at a single moment in time. A negative value indicates that the true heading cannot be determined.  <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>headingAccuracy</strong>: The deviation in degrees between the reported heading and the true heading. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>timestamp</strong>: The time at which this heading was determined.  <em>(milliseconds)</em></p>
+  </li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">CompassHeading</code> object is returned to the <code class="language-plaintext highlighter-rouge">[compassSuccess](compassSuccess.html)</code> callback function.</p>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">trueHeading</code> is not supported, but reports the same value as <code class="language-plaintext highlighter-rouge">magneticHeading</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">headingAccuracy</code> is always 0 because there is no difference between the <code class="language-plaintext highlighter-rouge">magneticHeading</code> and <code class="language-plaintext highlighter-rouge">trueHeading</code>.</p>
+  </li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">trueHeading</code> is only returned when location services are enabled via <code class="language-plaintext highlighter-rouge">navigator.geolocation.watchLocation()</code></p>
+  </li>
+  <li>
+    <p>For iOS 4 devices and above, heading factors in the device’s current orientation, not in reference to its absolute position, for apps that supports that orientation.</p>
+  </li>
+</ul>

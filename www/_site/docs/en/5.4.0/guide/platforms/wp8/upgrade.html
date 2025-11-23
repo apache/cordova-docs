@@ -1,0 +1,120 @@
+<h1 id="upgrading-windows-phone-8">Upgrading Windows Phone 8</h1>
+
+<p>This guide shows how to modify Windows Phone 8 projects, to upgrade from older versions of Cordova. Some of these
+instructions apply to projects created with an older set of
+command-line tools that precede the <code class="language-plaintext highlighter-rouge">cordova</code> CLI utility. See The
+Command-Line Interface for information how to update the version of
+the CLI.  The following section shows how to upgrade from non-CLI and
+CLI projects.</p>
+
+<h2 id="upgrading-360-projects-to-400">Upgrading 3.6.0 Projects to 4.0.0</h2>
+
+<p>For non-CLI projects, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin/update path/to/project
+</code></pre></div></div>
+
+<p>For CLI projects:</p>
+
+<ol>
+  <li>
+    <p>Update the <code class="language-plaintext highlighter-rouge">cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">cordova platform update wp8</code> in your existing projects.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-320-from-310">Upgrade to 3.2.0 from 3.1.0</h2>
+
+<p>For projects that were created with the cordova CLI:</p>
+
+<ol>
+  <li>
+    <p>Update the <code class="language-plaintext highlighter-rouge">cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">cordova platform update wp8</code></p>
+  </li>
+</ol>
+
+<p>For projects not created with the cordova CLI, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin\update &lt;project_path&gt;
+</code></pre></div></div>
+
+<h2 id="upgrade-to-310-from-300">Upgrade to 3.1.0 from 3.0.0</h2>
+
+<p>For projects that were created with the cordova CLI:</p>
+
+<ol>
+  <li>
+    <p>Update the <code class="language-plaintext highlighter-rouge">cordova</code> CLI version. See <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">cordova platform update wp8</code></p>
+  </li>
+</ol>
+
+<p>For projects not created with the cordova CLI, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bin\update &lt;project_path&gt;
+</code></pre></div></div>
+
+<h2 id="upgrade-to-the-cli-300-from-290">Upgrade to the CLI (3.0.0) from 2.9.0</h2>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-Line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms to the cordova project, for example: <code class="language-plaintext highlighter-rouge">cordova
+platform add wp8</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the project’s <code class="language-plaintext highlighter-rouge">www</code> directory to the <code class="language-plaintext highlighter-rouge">www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy or overwrite any native assets from your original project
+(<code class="language-plaintext highlighter-rouge">SplashScreen</code>, <code class="language-plaintext highlighter-rouge">ApplicationIcon</code>, etc.), making sure to add any
+new files to the <code class="language-plaintext highlighter-rouge">.csproj</code> file. The windows phone project builds
+inside the <code class="language-plaintext highlighter-rouge">platforms\wp8</code> directory.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
+the CLI handles all core APIs as plugins, so they may need to be
+added. Only 3.0.0 plugins are compatible with the CLI.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-300-non-cli-from-2x">Upgrade to 3.0.0 (non-CLI) from 2.x</h2>
+
+<p>In Visual Studio’s Solution Explorer window:</p>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova WP8 3.0.0 Project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of the <code class="language-plaintext highlighter-rouge">www</code> directory to the new project, and be sure these items are added to the VS project.</p>
+  </li>
+  <li>
+    <p>Copy and overwrite any splash screen, or icon images.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins from the <code class="language-plaintext highlighter-rouge">plugins</code> directory to the new project and ensure that they are also added to the VS project.</p>
+  </li>
+  <li>
+    <p>Build and test.</p>
+  </li>
+</ol>
+
+<p><strong>NOTE</strong>: all core APIs are removed from Cordova version 3.0, and must
+be installed separately as plugins.  For more information on how to
+re-enable these features in a non-CLI workflow, see Using Plugman to
+Manage Plugins.</p>

@@ -1,0 +1,25 @@
+<h2 id="platform-pinning">Platform Pinning</h2>
+
+<p>Cordova CLI pins the supported platform version in conjunction with the version of CLI that is being used.</p>
+
+<p>To see the pinned platforms for your CLI version, execute the command <code class="language-plaintext highlighter-rouge">cordova platform list</code>  in a brand new project directory.</p>
+
+<p><strong>Example (Cordova CLI 9.x):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform list
+Installed platforms:
+
+Available platforms:
+  android ^8.0.0
+  browser ^6.0.0
+  electron ^1.0.0
+  ios ^5.0.0
+  osx ^5.0.0
+  windows ^7.0.0
+</code></pre></div></div>
+
+<p><em>Note: When a platform is installed, the “<strong>Installed platforms:</strong>” section will display the actual installed platform version. The installed platform will no longer display in the “<strong>Available platforms:</strong>” section until it is removed from the project.</em></p>
+
+<p>Starting from <strong>Cordova CLI 9</strong> and up, all platforms are pinned with an caret (<code class="language-plaintext highlighter-rouge">^</code>). It means that by installing a platform without a specified version, Cordova will fetch the latest version up to a minor release.</p>
+
+<p>In <strong>Cordova CLI 8</strong> and below, all platforms are pinned with a tilde (<code class="language-plaintext highlighter-rouge">~</code>). It means that by installing a platform without a specified version, Cordova will fetch the latest version up to a patch release.</p>

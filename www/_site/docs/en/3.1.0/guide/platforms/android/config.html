@@ -1,0 +1,66 @@
+<h1 id="android-configuration">Android Configuration</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">config.xml</code> file controls an app’s basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to Android builds. See The
+config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> for information on global configuration options.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">KeepRunning</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): Determines whether the
+application stays running in the background even after a <a href="../../../cordova/events/events.pause.html"><code class="language-plaintext highlighter-rouge">pause</code></a>
+event fires. Note: setting this to false will not kill the app after
+a <a href="../../../cordova/events/events.pause.html">pause</a> event, it will only halt execution of code in the cordova
+webview while the app is in the background.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="KeepRunning" value="false"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ErrorUrl</code>: Specifies an error page that displays in response to
+standard HTTP errors in the 400-500 range. Place the specified file
+in the top-level directory containing the home page and other web
+assets.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ErrorUrl" value="error.html"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LoadingDialog</code>: Display a native dialog when loading the app. The
+value’s format is <em>Title, Message</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingDialog" value="Please wait, the app is loading"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LoadingPageDialog</code>: Display a native dialog when loading sub-pages
+within an app. The value’s format is <em>Title, Message</em></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingPageDialog" value="Please wait, the data is loading"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LoadUrlTimeoutValue</code> (number, default is <code class="language-plaintext highlighter-rouge">20000</code>): When loading a
+page, the amount of time to wait before throwing a timeout error.
+This example specifies 10 seconds rather than 20:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadUrlTimeoutValue" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SplashScreen</code>: The name of the file minus its extension in the
+<code class="language-plaintext highlighter-rouge">res/drawable</code> directory.  Various assets must share this common
+name in various subdirectories.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreen" value="splash"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SplashScreenDelay</code> (number, defaults to <code class="language-plaintext highlighter-rouge">5000</code>): The amount of
+time the splash screen image displays.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreenDelay" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+

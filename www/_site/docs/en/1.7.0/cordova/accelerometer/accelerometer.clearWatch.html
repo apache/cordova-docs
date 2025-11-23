@@ -1,0 +1,96 @@
+<h1 id="accelerometerclearwatch">accelerometer.clearWatch</h1>
+
+<p>Stop watching the <code class="language-plaintext highlighter-rouge">[Acceleration](acceleration/acceleration.html)</code> referenced by the watch ID parameter.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.accelerometer.clearWatch(watchID);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>watchID</strong>: The ID returned by <code class="language-plaintext highlighter-rouge">[accelerometer.watchAcceleration](accelerometer.watchAcceleration.html)</code>.</li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 (Mango)</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+
+// ... later on ...
+
+navigator.accelerometer.clearWatch(watchID);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Acceleration Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // The watch id references the current `watchAcceleration`
+    var watchID = null;
+    
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        startWatch();
+    }
+
+    // Start watching the acceleration
+    //
+    function startWatch() {
+        
+        // Update acceleration every 3 seconds
+        var options = { frequency: 3000 };
+        
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+    
+    // Stop watching the acceleration
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+	    
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '&lt;br /&gt;' +
+                            'Acceleration Y: ' + acceleration.y + '&lt;br /&gt;' +
+                            'Acceleration Z: ' + acceleration.z + '&lt;br /&gt;' + 
+                            'Timestamp: '      + acceleration.timestamp + '&lt;br /&gt;';
+    }
+
+    // onError: Failed to get the acceleration
+    //
+    function onError() {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="accelerometer"&gt;Waiting for accelerometer...&lt;/div&gt;
+	&lt;button onclick="stopWatch();"&gt;Stop Watching&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

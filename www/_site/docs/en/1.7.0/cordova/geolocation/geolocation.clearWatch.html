@@ -1,0 +1,95 @@
+<h1 id="geolocationclearwatch">geolocation.clearWatch</h1>
+
+<p>Stop watching for changes to the device’s location referenced by the <code class="language-plaintext highlighter-rouge">watchID</code> parameter.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.geolocation.clearWatch(watchID);
+</code></pre></div></div>
+
+<h2 id="parameters">Parameters</h2>
+
+<ul>
+  <li><strong>watchID:</strong> The id of the <code class="language-plaintext highlighter-rouge">watchPosition</code> interval to clear. (String)</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>Function <code class="language-plaintext highlighter-rouge">geolocation.clearWatch</code> stops watching changes to the device’s location by clearing the <code class="language-plaintext highlighter-rouge">[geolocation.watchPosition](geolocation.watchPosition.html)</code> referenced by <code class="language-plaintext highlighter-rouge">watchID</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 ( Mango )</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Options: retrieve the location every 3 seconds
+//
+var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
+
+// ...later on...
+
+navigator.geolocation.clearWatch(watchID);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    var watchID = null;
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Update every 3 seconds
+        var options = { frequency: 3000 };
+        watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '&lt;br /&gt;' +
+                            'Longitude: ' + position.coords.longitude     + '&lt;br /&gt;' +
+                            '&lt;hr /&gt;'      + element.innerHTML;
+    }
+
+    // clear the watch that was started earlier
+    // 
+    function clearWatch() {
+        if (watchID != null) {
+            navigator.geolocation.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    // onError Callback receives a [PositionError](PositionError/positionError.html) object
+    //
+    function onError(error) {
+      alert('code: '    + error.code    + '\n' +
+            'message: ' + error.message + '\n');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="geolocation"&gt;Watching geolocation...&lt;/p&gt;
+	&lt;button onclick="clearWatch();"&gt;Clear Watch&lt;/button&gt;     
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

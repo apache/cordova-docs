@@ -1,0 +1,325 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">AppVeyor</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-network-information"><img src="https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-network-information?branch=master" alt="Build status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-network-information"><img src="https://travis-ci.org/apache/cordova-plugin-network-information.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cordova-plugin-network-information">cordova-plugin-network-information</h1>
+
+<p>This plugin provides an implementation of an old version of the
+<a href="http://www.w3.org/TR/2011/WD-netinfo-api-20110607/">Network Information API</a>.
+It provides information about the device’s cellular and
+wifi connection, and whether the device has an internet connection.</p>
+
+<blockquote>
+  <p>To get a few ideas how to use the plugin, check out the <a href="#sample">sample</a> at the bottom of this page or go straight to the <a href="#reference">reference</a> content.</p>
+</blockquote>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-network-information
+</code></pre></div></div>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h1 id="connection">Connection</h1>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">connection</code> object, exposed via <code class="language-plaintext highlighter-rouge">navigator.connection</code>,  provides information about the device’s cellular and wifi connection.</p>
+</blockquote>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>connection.type</li>
+</ul>
+
+<h2 id="constants">Constants</h2>
+
+<ul>
+  <li>Connection.UNKNOWN</li>
+  <li>Connection.ETHERNET</li>
+  <li>Connection.WIFI</li>
+  <li>Connection.CELL_2G</li>
+  <li>Connection.CELL_3G</li>
+  <li>Connection.CELL_4G</li>
+  <li>Connection.CELL</li>
+  <li>Connection.NONE</li>
+</ul>
+
+<h2 id="connectiontype">connection.type</h2>
+
+<p>This property offers a fast way to determine the device’s network
+connection state, and type of connection.</p>
+
+<h3 id="quick-example">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">checkConnection</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">networkState</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">connection</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">states</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">UNKNOWN</span><span class="p">]</span>  <span class="o">=</span> <span class="dl">'</span><span class="s1">Unknown connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">ETHERNET</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Ethernet connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">WIFI</span><span class="p">]</span>     <span class="o">=</span> <span class="dl">'</span><span class="s1">WiFi connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL_2G</span><span class="p">]</span>  <span class="o">=</span> <span class="dl">'</span><span class="s1">Cell 2G connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL_3G</span><span class="p">]</span>  <span class="o">=</span> <span class="dl">'</span><span class="s1">Cell 3G connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL_4G</span><span class="p">]</span>  <span class="o">=</span> <span class="dl">'</span><span class="s1">Cell 4G connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">CELL</span><span class="p">]</span>     <span class="o">=</span> <span class="dl">'</span><span class="s1">Cell generic connection</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">states</span><span class="p">[</span><span class="nx">Connection</span><span class="p">.</span><span class="nx">NONE</span><span class="p">]</span>     <span class="o">=</span> <span class="dl">'</span><span class="s1">No network connection</span><span class="dl">'</span><span class="p">;</span>
+
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Connection type: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">states</span><span class="p">[</span><span class="nx">networkState</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="nx">checkConnection</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="api-change">API Change</h3>
+
+<p>Until Cordova 2.3.0, the <code class="language-plaintext highlighter-rouge">Connection</code> object was accessed via
+<code class="language-plaintext highlighter-rouge">navigator.network.connection</code>, after which it was changed to
+<code class="language-plaintext highlighter-rouge">navigator.connection</code> to match the W3C specification.  It’s still
+available at its original location, but is deprecated and will
+eventually be removed.</p>
+
+<h3 id="ios-quirks">iOS Quirks</h3>
+
+<ul>
+  <li>&lt;iOS7 can’t detect the type of cellular network connection.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">navigator.connection.type</code> is set to <code class="language-plaintext highlighter-rouge">Connection.CELL</code> for all cellular data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="windows-quirks">Windows Quirks</h3>
+
+<ul>
+  <li>When running in the Phone 8.1 emulator, always detects <code class="language-plaintext highlighter-rouge">navigator.connection.type</code> as <code class="language-plaintext highlighter-rouge">Connection.ETHERNET</code>.</li>
+</ul>
+
+<h3 id="browser-quirks">Browser Quirks</h3>
+
+<ul>
+  <li>Browser can’t detect the type of network connection.
+<code class="language-plaintext highlighter-rouge">navigator.connection.type</code> is always set to <code class="language-plaintext highlighter-rouge">Connection.UNKNOWN</code> when online.</li>
+</ul>
+
+<h1 id="network-related-events">Network-related Events</h1>
+
+<h2 id="offline">offline</h2>
+
+<p>The event fires when an application goes offline, and the device is
+not connected to the Internet.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("offline", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h3 id="details">Details</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">offline</code> event fires when a previously connected device loses a
+network connection so that an application can no longer access the
+Internet.  It relies on the same information as the Connection API,
+and fires when the value of <code class="language-plaintext highlighter-rouge">connection.type</code> becomes <code class="language-plaintext highlighter-rouge">NONE</code>.</p>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">deviceready</code> event fires.</p>
+
+<h3 id="quick-example-1">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">offline</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onOffline</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">onOffline</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Handle the offline event</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="ios-quirks-1">iOS Quirks</h3>
+
+<p>During initial startup, the first offline event (if applicable) takes at least a second to fire.</p>
+
+<h2 id="online">online</h2>
+
+<p>This event fires when an application goes online, and the device
+becomes connected to the Internet.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("online", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h3 id="details-1">Details</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">online</code> event fires when a previously unconnected device receives
+a network connection to allow an application access to the Internet.
+It relies on the same information as the Connection API,
+and fires when the <code class="language-plaintext highlighter-rouge">connection.type</code> changes from <code class="language-plaintext highlighter-rouge">NONE</code> to any other
+value.</p>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">deviceready</code> event fires.</p>
+
+<h3 id="quick-example-2">Quick Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">online</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onOnline</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">onOnline</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Handle the online event</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="ios-quirks-2">iOS Quirks</h3>
+
+<p>During initial startup, the first <code class="language-plaintext highlighter-rouge">online</code> event (if applicable) takes
+at least a second to fire, prior to which <code class="language-plaintext highlighter-rouge">connection.type</code> is
+<code class="language-plaintext highlighter-rouge">UNKNOWN</code>.</p>
+
+<h2 id="sample-upload-a-file-depending-on-your-network-state-">Sample: Upload a File Depending on your Network State <a name="sample"></a></h2>
+
+<p>The code examples in this section show examples of changing app behavior using the online and offline events and your network connection status.</p>
+
+<p>To start with, create a new FileEntry object (data.txt) to use for sample data. Call this function from the <code class="language-plaintext highlighter-rouge">deviceready</code> handler.</p>
+
+<blockquote>
+  <p><em>Note</em> This code example requires the File plugin.</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">dataFileEntry</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">createSomeData</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+        <span class="c1">// Creates a new file or returns an existing file.</span>
+        <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="dl">"</span><span class="s2">data.txt</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+
+          <span class="nx">dataFileEntry</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">;</span>
+
+        <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
+
+    <span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Next, add listeners for the online and offline events in the <code class="language-plaintext highlighter-rouge">deviceready</code> handler.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">offline</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onOffline</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">online</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onOnline</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The app’s <code class="language-plaintext highlighter-rouge">onOnline</code> function handles the online event. In the event handler, check the current network state. In this app, treat any connection type as good except Connection.NONE. If you have a connection, you try to upload a file.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onOnline</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Handle the online event</span>
+    <span class="kd">var</span> <span class="nx">networkState</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">connection</span><span class="p">.</span><span class="nx">type</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">networkState</span> <span class="o">!==</span> <span class="nx">Connection</span><span class="p">.</span><span class="nx">NONE</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">dataFileEntry</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">tryToUploadFile</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">display</span><span class="p">(</span><span class="dl">'</span><span class="s1">Connection type: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">networkState</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>When the online event fires in the preceding code, call the app’s <code class="language-plaintext highlighter-rouge">tryToUploadFile</code> function.</p>
+
+<p>If the FileTransfer object’s upload function fails, call the app’s <code class="language-plaintext highlighter-rouge">offlineWrite</code> function to save the current data somewhere.</p>
+
+<blockquote>
+  <p><em>Note</em> This example requires the FileTransfer plugin.</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">tryToUploadFile</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// !! Assumes variable fileURL contains a valid URL to a text file on the device,</span>
+    <span class="kd">var</span> <span class="nx">fileURL</span> <span class="o">=</span> <span class="nx">getDataFileEntry</span><span class="p">().</span><span class="nx">toURL</span><span class="p">();</span>
+
+    <span class="kd">var</span> <span class="nx">success</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Response = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+        <span class="nx">display</span><span class="p">(</span><span class="dl">"</span><span class="s2">Uploaded. Response: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">r</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">fail</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">An error has occurred: Code = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+        <span class="nx">offlineWrite</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed to upload: some offline data</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileUploadOptions</span><span class="p">();</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">fileKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">file</span><span class="dl">"</span><span class="p">;</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">fileName</span> <span class="o">=</span> <span class="nx">fileURL</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="nx">options</span><span class="p">.</span><span class="nx">mimeType</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text/plain</span><span class="dl">"</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">ft</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileTransfer</span><span class="p">();</span>
+    <span class="c1">// Make sure you add the domain of your server URL to the</span>
+    <span class="c1">// Content-Security-Policy &lt;meta&gt; element in index.html.</span>
+    <span class="nx">ft</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span><span class="nx">fileURL</span><span class="p">,</span> <span class="nb">encodeURI</span><span class="p">(</span><span class="nx">SERVER</span><span class="p">),</span> <span class="nx">success</span><span class="p">,</span> <span class="nx">fail</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Here is the code for the <code class="language-plaintext highlighter-rouge">offlineWrite</code> function.</p>
+
+<blockquote>
+  <p><em>Note</em> This code examples requires the File plugin.</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">offlineWrite</span><span class="p">(</span><span class="nx">offlineData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Create a FileWriter object for our FileEntry.</span>
+    <span class="nx">dataFileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwriteend</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">display</span><span class="p">(</span><span class="nx">offlineData</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="p">};</span>
+
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">offlineData</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If the offline event occurs, just do something like notify the user (for this example, just log it).</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onOffline</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Handle the offline event</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">lost connection</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+

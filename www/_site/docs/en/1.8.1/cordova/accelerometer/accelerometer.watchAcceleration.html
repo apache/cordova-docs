@@ -1,0 +1,121 @@
+<h1 id="accelerometerwatchacceleration">accelerometer.watchAcceleration</h1>
+
+<p>At a regular interval, get the acceleration along the x, y, and z axis.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
+                                                       accelerometerError,
+                                                       [accelerometerOptions]);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">accelerometer.watchAcceleration</code> gets the device’s current acceleration at a regular interval. Each time the <code class="language-plaintext highlighter-rouge">[Acceleration](acceleration/acceleration.html)</code> is retrieved, the <code class="language-plaintext highlighter-rouge">[accelerometerSuccess](parameters/accelerometerSuccess.html)</code> callback function is executed. Specify the interval in milliseconds via the <code class="language-plaintext highlighter-rouge">frequency</code> parameter in the <code class="language-plaintext highlighter-rouge">acceleratorOptions</code> object.</p>
+
+<p>The returned watch ID references references the accelerometer watch interval. The watch ID can be used with <code class="language-plaintext highlighter-rouge">[accelerometer.clearWatch](accelerometer.clearWatch.html)</code> to stop watching the accelerometer.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 (Mango)</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(acceleration) {
+    alert('Acceleration X: ' + acceleration.x + '\n' +
+          'Acceleration Y: ' + acceleration.y + '\n' +
+          'Acceleration Z: ' + acceleration.z + '\n' +
+          'Timestamp: '      + acceleration.timestamp + '\n');
+};
+
+function onError() {
+    alert('onError!');
+};
+
+var options = { frequency: 3000 };  // Update every 3 seconds
+
+var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Acceleration Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // The watch id references the current `watchAcceleration`
+    var watchID = null;
+    
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        startWatch();
+    }
+
+    // Start watching the acceleration
+    //
+    function startWatch() {
+        
+        // Update acceleration every 3 seconds
+        var options = { frequency: 3000 };
+        
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+    
+    // Stop watching the acceleration
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+    
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '&lt;br /&gt;' +
+                            'Acceleration Y: ' + acceleration.y + '&lt;br /&gt;' +
+                            'Acceleration Z: ' + acceleration.z + '&lt;br /&gt;' +
+                            'Timestamp: '      + acceleration.timestamp + '&lt;br /&gt;';
+    }
+
+    // onError: Failed to get the acceleration
+    //
+    function onError() {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="accelerometer"&gt;Waiting for accelerometer...&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="iphone-quirks">iPhone Quirks</h2>
+
+<ul>
+  <li>At the interval requested, Cordova will call the success callback function and pass the accelerometer results.</li>
+  <li>However, in requests to the device Cordova restricts the interval to minimum of every 40ms and a maximum of every 1000ms.
+    <ul>
+      <li>For example, if you request an interval of 3 seconds (3000ms), Cordova will request an interval of 1 second from the device but invoke the success callback at the requested interval of 3 seconds.</li>
+    </ul>
+  </li>
+</ul>

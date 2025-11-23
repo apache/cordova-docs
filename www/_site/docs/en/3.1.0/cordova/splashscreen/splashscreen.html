@@ -1,0 +1,106 @@
+<h1 id="splashscreen">Splashscreen</h1>
+
+<blockquote>
+  <p>Displays and hides the application’s splash screen.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="splashscreen.show.html">splashscreen.show</a></li>
+  <li><a href="splashscreen.hide.html">splashscreen.hide</a></li>
+</ul>
+
+<h2 id="accessing-the-feature">Accessing the Feature</h2>
+
+<p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
+Use the CLI’s <code class="language-plaintext highlighter-rouge">plugin</code> command, described in The Command-line
+Interface, to add or remove this feature for a project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.splashscreen
+    $ cordova plugin ls
+    [ 'org.apache.cordova.splashscreen' ]
+    $ cordova plugin rm org.apache.cordova.splashscreen
+</code></pre></div></div>
+
+<p>These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:</p>
+
+<ul>
+  <li>
+    <p>Android (in <code class="language-plaintext highlighter-rouge">app/res/xml/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="SplashScreen"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in <code class="language-plaintext highlighter-rouge">config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="SplashScreen"&gt;
+      &lt;param name="ios-package" value="CDVSplashScreen" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Some platforms may support this feature without requiring any special
+configuration.  See <em>Platform Support</em> in the <a href="../../guide/overview/index.html">Overview</a> section.</p>
+
+<h2 id="setup">Setup</h2>
+
+<h3 id="android">Android</h3>
+
+<ol>
+  <li>
+    <p>Copy the splash screen image into the Android project’s <code class="language-plaintext highlighter-rouge">res/drawable</code> directory. The size for each image should be:</p>
+
+    <ul>
+      <li>xlarge (xhdpi): at least 960 × 720</li>
+      <li>large (hdpi): at least 640 × 480</li>
+      <li>medium (mdpi): at least 470 × 320</li>
+      <li>small (ldpi): at least 426 × 320</li>
+    </ul>
+
+    <p>You should use a <a href="https://developer.android.com/tools/help/draw9patch.html">9-patch image</a> for your splash screen.</p>
+  </li>
+  <li>
+    <p>In config.xml, add the following preferences:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;preference name="splashscreen" value="splash" /&gt;
+ &lt;preference name="splashScreenDelay" value="10000" /&gt;
+</code></pre></div>    </div>
+
+    <p>The first line sets the image to display as the splash screen. If you name your image anything other than <code class="language-plaintext highlighter-rouge">splash.png</code>, you need to modify this line.
+ The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the <code class="language-plaintext highlighter-rouge">deviceready</code> event, call the <code class="language-plaintext highlighter-rouge">navigator.splashscreen.hide()</code> method.</p>
+  </li>
+</ol>
+
+<h3 id="ios">iOS</h3>
+
+<p>Copy your splash screen images into the iOS project’s
+<code class="language-plaintext highlighter-rouge">Resources/splash</code> directory. Only add the images for the devices you
+want to support, such as iPad or iPhone. The size of each image
+should be:</p>
+
+<ul>
+  <li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
+  <li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
+  <li>Default-Landscape~ipad.png (1024x748 pixels)</li>
+  <li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
+  <li>Default-Portrait~ipad.png (768x1004 pixels)</li>
+  <li>Default@2x~iphone.png (640x960 pixels)</li>
+  <li>Default~iphone.png (320x480 pixels)</li>
+</ul>
+
+<h3 id="blackberry-10">BlackBerry 10</h3>
+
+<p>Copy your splash screen images into the project’s
+‘res/screen/blackberry10’ directory. The file names should be:</p>
+
+<ul>
+  <li>splash-1280x768.png (1280x768 pixels)</li>
+  <li>splash-720x720.png (720x720 pixels)</li>
+  <li>splash-768x1280.png (768x1280 pixels)</li>
+</ul>

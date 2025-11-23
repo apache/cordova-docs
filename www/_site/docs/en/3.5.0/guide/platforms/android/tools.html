@@ -1,0 +1,109 @@
+<h1 id="android-shell-tool-guide">Android Shell Tool Guide</h1>
+
+<p>This guide shows how to use Cordova’s set of platform-centered shell
+tools to develop Android apps. This development path, discussed in the
+<a href="../../overview/index.html">Overview</a>, may offer you a greater range of development options than
+the cross-platform CLI tool described in <a href="../../cli/index.html">The Command-Line Interface</a>.
+For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components.  Before using either
+development path, you must first configure the Android SDK environment
+as described in the <a href="index.html">Android Platform Guide</a>.</p>
+
+<p>To enable shell tools for Android, download Cordova from
+<a href="http://cordova.apache.org">cordova.apache.org</a>. The download contains
+separate archives for each platform. Expand each you wish to target,
+<code class="language-plaintext highlighter-rouge">android</code> in this case. The relevant tools are typically available in
+the top-level <code class="language-plaintext highlighter-rouge">bin</code> directory, otherwise consult the <strong>README</strong> file
+for more detailed directions.</p>
+
+<p>These tools allow you to create, build, and run Android apps.  For
+information on the additional command-line interface that enables
+plugin features across all platforms, see Using Plugman to Manage
+Plugins. See Application Plugins for details on how to develop
+plugins.</p>
+
+<h2 id="create-a-project">Create a Project</h2>
+
+<p>Run the <code class="language-plaintext highlighter-rouge">create</code> command, specifying the existing path to the project,
+the reverse-domain-style package identifier, and the app’s display
+name.  Here is the syntax for both Mac/Linux and Windows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+
+    C:\&gt;\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
+</code></pre></div></div>
+
+<h2 id="build">Build</h2>
+
+<p>This cleans then builds a project.</p>
+
+<p>Debug, on Mac/Linux or Windows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --debug
+
+    C:\&gt;\path\to\project\cordova\build.bat --debug
+</code></pre></div></div>
+
+<p>Release, on Mac/Linux or Windows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/build --release
+
+    C:\&gt;\path\to\project\cordova\build.bat --release
+</code></pre></div></div>
+
+<h2 id="run-the-app">Run the App</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">run</code> command accepts the following <em>optional</em> parameters:</p>
+
+<ul>
+  <li>
+    <p>Target specification. This includes <code class="language-plaintext highlighter-rouge">--emulator</code>, <code class="language-plaintext highlighter-rouge">--device</code>, or <code class="language-plaintext highlighter-rouge">--target=&lt;targetID&gt;</code>.</p>
+  </li>
+  <li>
+    <p>Build specification. This includes <code class="language-plaintext highlighter-rouge">--debug</code>, <code class="language-plaintext highlighter-rouge">--release</code>, or <code class="language-plaintext highlighter-rouge">--nobuild</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/project/cordova/run [Target] [Build]
+
+C:\&gt;\path\to\project\cordova\run.bat [Target] [Build]
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Make sure you create at least one Android Virtual Device, otherwise
+you’re prompted to do so with the <code class="language-plaintext highlighter-rouge">android</code> command.  If more than one
+AVD is available as a target, you’re prompted to select one. By
+default the <code class="language-plaintext highlighter-rouge">run</code> command detects a connected device, or a currently
+running emulator if no device is found.</p>
+
+<h2 id="logging">Logging</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/log
+
+    C:\&gt;\path\to\project\cordova\log.bat
+</code></pre></div></div>
+
+<h2 id="cleaning">Cleaning</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ /path/to/project/cordova/clean
+
+    C:\&gt;\path\to\project\cordova\clean.bat
+</code></pre></div></div>
+
+<h2 id="manual-use-of-ant">Manual Use of Ant</h2>
+
+<p>If you wish to call Ant directly from the command line such as
+<code class="language-plaintext highlighter-rouge">ant debug install</code>, you need to specify additional parameters to the ant
+command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+</code></pre></div></div>
+
+<p>This is because the directories used by Cordova’s Ant scripts are different
+than the default. This is done to avoid conflicts when Ant is run from the
+command line versus inside Eclipse/ADT.</p>
+
+<p>These additional parameters are automatically added for you when using
+the <code class="language-plaintext highlighter-rouge">cordova/build</code> and <code class="language-plaintext highlighter-rouge">cordova/run</code> scripts described above. For this
+reason it is recommended to use the <code class="language-plaintext highlighter-rouge">cordova/build</code> and <code class="language-plaintext highlighter-rouge">cordova/run</code> scripts
+instead of calling Ant directly from the command line.</p>
+

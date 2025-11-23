@@ -1,0 +1,65 @@
+<h1 id="globalizationgetlocalename">globalization.getLocaleName</h1>
+
+<p>Get the string identifier for the client’s current locale setting.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getLocaleName(successCallback, errorCallback);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Returns the locale identifier string to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a
+<code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code>
+property with a <code class="language-plaintext highlighter-rouge">String</code> value.</p>
+
+<p>If there is an error getting the locale, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale, this displays a popup
+dialog with the text <code class="language-plaintext highlighter-rouge">locale: en\_US</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getLocaleName(
+    function (locale) {alert('locale: ' + locale.value + '\n');},
+    function () {alert('Error getting locale\n');}
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getLocaleName Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkLocale() {
+      navigator.globalization.getLocaleName(
+        function (locale) {alert('locale: ' + locale.value + '\n');},
+        function () {alert('Error getting locale\n');}
+      );
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkLocale()"&gt;Click for locale&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h2>
+
+<ul>
+  <li>Returns the two-letter code defined in ISO 3166 for the current country/region.</li>
+</ul>

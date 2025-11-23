@@ -1,0 +1,102 @@
+<h1 id="notificationbeep">notification.beep</h1>
+
+<p>The device plays a beep sound.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.beep(times);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>times</strong>: The number of times to repeat the beep. <em>(Number)</em></li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Beep twice!
+navigator.notification.beep(2);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href="#" onclick="playBeep(); return false;"&gt;Play Beep&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href="#" onclick="vibrate(); return false;"&gt;Vibrate&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>Android plays the default <strong>Notification ringtone</strong> specified under the <strong>Settings/Sound &amp; Display</strong> panel.</li>
+</ul>
+
+<h2 id="windows-phone-7-and-8-quirks">Windows Phone 7 and 8 Quirks</h2>
+
+<ul>
+  <li>Relies on a generic beep file from the Cordova distribution.</li>
+</ul>
+
+<h2 id="tizen-quirks">Tizen Quirks</h2>
+
+<ul>
+  <li>
+    <p>Tizen implements beeps by playing an audio file via the media API.</p>
+  </li>
+  <li>
+    <p>The beep file must be short, must be located in a <code class="language-plaintext highlighter-rouge">sounds</code> subdirectory of the application’s root directory, and must be named <code class="language-plaintext highlighter-rouge">beep.wav</code>.</p>
+  </li>
+</ul>
+

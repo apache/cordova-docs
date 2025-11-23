@@ -1,0 +1,40 @@
+<h1 id="fileuploadoptions">FileUploadOptions</h1>
+
+<p>A <code class="language-plaintext highlighter-rouge">FileUploadOptions</code> object can be passed to the <code class="language-plaintext highlighter-rouge">[FileTransfer](../filetransfer/filetransfer.html)</code>
+object’s <code class="language-plaintext highlighter-rouge">upload()</code> method to specify additional parameters to the
+upload script.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>fileKey</strong>: The name of the form element.  Defaults to <code class="language-plaintext highlighter-rouge">file</code>. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>fileName</strong>: The file name to use when saving the file on the server.  Defaults to <code class="language-plaintext highlighter-rouge">image.jpg</code>. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>mimeType</strong>: The mime type of the data to upload.  Defaults to <code class="language-plaintext highlighter-rouge">image/jpeg</code>. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>params</strong>: A set of optional key/value pairs to pass in the HTTP request. (Object)</p>
+  </li>
+  <li>
+    <p><strong>chunkedMode</strong>: Whether to upload the data in chunked streaming mode. Defaults to <code class="language-plaintext highlighter-rouge">true</code>. (Boolean)</p>
+  </li>
+  <li>
+    <p><strong>headers</strong>: A map of header name/header values. Use an array to specify more than one value. (Object)</p>
+  </li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>A <code class="language-plaintext highlighter-rouge">FileUploadOptions</code> object can be passed to the <code class="language-plaintext highlighter-rouge">[FileTransfer](../filetransfer/filetransfer.html)</code>
+object’s <code class="language-plaintext highlighter-rouge">upload()</code> method to specify additional parameters to the
+upload script.</p>
+
+<h2 id="wp7-quirk">WP7 Quirk</h2>
+
+<ul>
+  <li><strong>chunkedMode:</strong>: Ignored on WP7.</li>
+</ul>

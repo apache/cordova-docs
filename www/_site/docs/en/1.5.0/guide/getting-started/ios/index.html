@@ -1,0 +1,92 @@
+<h1 id="getting-started-with-ios">Getting Started with iOS</h1>
+
+<h2 id="video-tutorials">Video Tutorials:</h2>
+
+<ul>
+  <li><a href="http://www.youtube.com/v/R9zktJUN7AI?autoplay=1">PhoneGap Installer - Xcode 4 Template</a></li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="requirements">Requirements</h2>
+    <ul>
+      <li>Intel-based computer with Mac OS X Snow Leopard (10.6)</li>
+      <li>Necessary for Installing on <a href="../../../phonegap/device/device.html">Device</a>:</li>
+    </ul>
+    <ul>
+      <li>An Apple iOS device (iPhone, iPad, iPod Touch)</li>
+      <li>iOS developer certification</li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="install-sdk--phonegap">Install SDK + PhoneGap</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Download and install Xcode from <a href="http://developer.apple.com">Apple Developer Portal</a> (Membership required)&lt;/p&gt;</li>
+  <li>Download the latest copy of <a href="http://phonegap.com/download">PhoneGap</a> and extract its contents. We will be working with the Android directory.</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="setup-new-project">Setup New Project</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Launch Xcode, then under the <a href="../../../phonegap/file/fileobj/fileobj.html">File</a> menu select <strong>New</strong> and then <strong>New Project…</strong></li>
+  <li>
+    <p>Select <strong>PhoneGap-based Application</strong> from the list of templates</p>
+
+    <p><img src="/static/img/guide/platforms/ios/XCode4-templates.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Select the <strong>Next</strong> button, Fill in the “Product Name” &amp; “Company Identifier” for your app</p>
+
+    <p><img src="/static/img/guide/platforms/ios/xcode4-name_your_app.png" alt="" /></p>
+  </li>
+  <li>Choose a directory to store your app</li>
+  <li>You should see your project in Xcode 4 now. Press the <strong>Run</strong> button in the top left corner. Your build should succeed and launch in the simulator</li>
+  <li>You should see a error in your simulator informing you index.html was not found</li>
+  <li>To fix this, we need to copy the <strong>www</strong> directory into the project. Right click on the project in the left navigation window and click show in finder</li>
+  <li>In Finder, you should see the <strong>www</strong> directory beside your project</li>
+  <li>
+    <p>Next step is <strong>IMPORTANT</strong>! Drag the <strong>www</strong> folder into Xcode 4. You can’t just drag the www folder into your app’s folder. It needs to be dragged into Xcode 4!! In my case I would drag it and drop it on HiWorld shown below.</p>
+
+    <p><img src="/static/img/guide/platforms/ios/project.jpg" alt="" /></p>
+  </li>
+  <li>After you drag, you should see a prompt with a few options. Make sure to select <strong>Create folder references for any added folders</strong>. Click Finish</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="hello-world"><a href="../webos/index.html">Hello World</a></h2>
+  </li>
+</ol>
+
+<p>Open the folder named <strong>www</strong> and type <code class="language-plaintext highlighter-rouge">&lt;h1&gt;[Hello World](../webos/index.html)&lt;/h1&gt;</code> after the <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> tag in <strong>index.html</strong>. You can also add any associated Javascript and CSS files there as well.</p>
+
+<h2 id="5a-deploy-to-simulator">5A. Deploy to Simulator</h2>
+
+<ul>
+  <li>Make sure to change the Active SDK in the top left menu to <strong>Simulator+version#</strong>.</li>
+  <li>Hit <strong>Run</strong> in your project window header.</li>
+</ul>
+
+<h2 id="5b-deploy-to-device">5B. Deploy to <a href="../../../phonegap/device/device.html">Device</a></h2>
+
+<ul>
+  <li>Open [AppName]-Info.plist and change <strong>BundleIdentifier</strong> to the identifier provided by Apple. If you have a developer license, you can access and run the Assistant at <a href="http://developer.apple.com/iphone/manage/overview/index.action">here</a> and register your App.</li>
+  <li>Make sure to change the Active SDK in the top left menu to <strong>Device+version#</strong>.</li>
+  <li>
+    <p>Hit <strong>Run</strong> in your project window header.</p>
+
+    <p><img src="/static/img/guide/platforms/ios/HelloWorldiPhone4.png" alt="" /></p>
+  </li>
+</ul>
+
+<h2 id="done">Done!</h2>
+
+<p>You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide <a href="http://wiki.phonegap.com/w/page/39991939/Getting-Started-with-PhoneGap-iOS-using-Xcode-4-%28Template-Version%29">here</a>.</p>
+

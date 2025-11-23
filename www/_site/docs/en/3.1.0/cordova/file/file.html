@@ -1,0 +1,111 @@
+<h1 id="file">File</h1>
+
+<blockquote>
+  <p>An API to read, write and navigate file system hierarchies, based on the <a href="http://www.w3.org/TR/FileAPI">w3c file api</a>.</p>
+</blockquote>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li><a href="directoryentry/directoryentry.html">DirectoryEntry</a></li>
+  <li><a href="directoryreader/directoryreader.html">DirectoryReader</a></li>
+  <li><a href="fileobj/fileobj.html">File</a></li>
+  <li><a href="fileentry/fileentry.html">FileEntry</a></li>
+  <li><a href="fileerror/fileerror.html">FileError</a></li>
+  <li><a href="filereader/filereader.html">FileReader</a></li>
+  <li><a href="filesystem/filesystem.html">FileSystem</a></li>
+  <li><a href="filetransfer/filetransfer.html">FileTransfer</a></li>
+  <li><a href="filetransfererror/filetransfererror.html">FileTransferError</a></li>
+  <li><a href="fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a></li>
+  <li><a href="fileuploadresult/fileuploadresult.html">FileUploadResult</a></li>
+  <li><a href="filewriter/filewriter.html">FileWriter</a></li>
+  <li><a href="flags/flags.html">Flags</a></li>
+  <li><a href="localfilesystem/localfilesystem.html">LocalFileSystem</a></li>
+  <li><a href="metadata/metadata.html">Metadata</a></li>
+</ul>
+
+<h2 id="accessing-the-feature">Accessing the Feature</h2>
+
+<p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
+Use the CLI’s <code class="language-plaintext highlighter-rouge">plugin</code> command, described in The Command-line
+Interface, to add or remove this feature for a project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.file
+    $ cordova plugin ls
+    [ 'org.apache.cordova.file' ]
+    $ cordova plugin rm org.apache.cordova.file
+</code></pre></div></div>
+
+<p>To use the file-transfer plugin you must add that separately. Do not add the file plugin manually because it will be automatically added as a dependency plugin by the CLI.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.file-transfer
+    $ cordova plugin ls
+    [ 'org.apache.cordova.file',
+      'org.apache.cordova.file-transfer' ]
+    $ cordova plugin rm org.apache.cordova.file-transfer
+</code></pre></div></div>
+
+<p>These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:</p>
+
+<ul>
+  <li>
+    <p>Android</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (after adding just the file plugin)
+  (in app/res/xml/config.xml)
+  &lt;feature name="File"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.FileUtils" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest.xml)
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+
+  (after adding just the file-transfer plugin)
+  (in app/res/xml/config.xml)
+  &lt;feature name="File"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.FileUtils" /&gt;
+  &lt;/feature&gt;
+  &lt;feature name="FileTransfer"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest.xml)
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="File"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.file.FileManager" /&gt;
+  &lt;/feature&gt;
+  &lt;feature name="FileTransfer"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.io.file" required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.utils"   required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.io.dir"  required="true" version="1.0.0.0" /&gt;
+  &lt;rim:permissions&gt;
+      &lt;rim:permit&gt;access_shared&lt;/rim:permit&gt;
+  &lt;/rim:permissions&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in <code class="language-plaintext highlighter-rouge">config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="File"&gt;
+      &lt;param name="ios-package" value="CDVFile" /&gt;
+  &lt;/feature&gt;
+  &lt;feature name="FileTransfer"&gt;
+      &lt;param name="ios-package" value="CDVFileTransfer" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Some platforms may support this feature without requiring any special
+configuration.  See <em>Platform Support</em> in the <a href="../../guide/overview/index.html">Overview</a> section.</p>

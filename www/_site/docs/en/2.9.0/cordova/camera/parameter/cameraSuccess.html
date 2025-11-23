@@ -1,0 +1,24 @@
+<h1 id="camerasuccess">cameraSuccess</h1>
+
+<p>onSuccess callback function that provides the image data.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function(imageData) {
+    // Do something with the image
+}
+</code></pre></div></div>
+
+<h2 id="parameters">Parameters</h2>
+
+<ul>
+  <li><strong>imageData</strong>: Base64 encoding of the image data, <em>or</em> the image file URI, depending on <code class="language-plaintext highlighter-rouge">[cameraOptions](cameraOptions.html)</code> in effect. <em>(String)</em></li>
+</ul>
+
+<h2 id="example"><a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Show image
+//
+function cameraCallback(imageData) {
+    var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+</code></pre></div></div>

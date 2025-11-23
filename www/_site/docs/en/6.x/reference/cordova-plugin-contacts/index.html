@@ -1,0 +1,1120 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!---
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Android</th>
+      <th style="text-align: center">iOS</th>
+      <th style="text-align: center">Windows 8.1 Store</th>
+      <th style="text-align: center">Windows 8.1 Phone</th>
+      <th style="text-align: center">Windows 10 Store</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-contacts/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-contacts" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-contacts/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-contacts" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-contacts/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-contacts" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-contacts/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-contacts" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-contacts/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-contacts" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-contacts"><img src="https://travis-ci.org/apache/cordova-plugin-contacts.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cordova-plugin-contacts">cordova-plugin-contacts</h1>
+
+<p>This plugin defines a global <code class="language-plaintext highlighter-rouge">navigator.contacts</code> object, which provides access to the device contacts database.</p>
+
+<p>Although the object is attached to the global scoped <code class="language-plaintext highlighter-rouge">navigator</code>, it is not available until after the <code class="language-plaintext highlighter-rouge">deviceready</code> event.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>WARNING</strong>: Collection and use of contact data raises
+important privacy issues.  Your app’s privacy policy should discuss
+how the app uses contact data and whether it is shared with any other
+parties.  Contact information is considered sensitive because it
+reveals the people with whom a person communicates.  Therefore, in
+addition to the app’s privacy policy, you should strongly consider
+providing a just-in-time notice before the app accesses or uses
+contact data, if the device operating system doesn’t do so
+already. That notice should provide the same information noted above,
+as well as obtaining the user’s permission (e.g., by presenting
+choices for <strong>OK</strong> and <strong>No Thanks</strong>).  Note that some app
+marketplaces may require the app to provide a just-in-time notice and
+obtain the user’s permission before accessing contact data.  A
+clear and easy-to-understand user experience surrounding the use of
+contact data helps avoid user confusion and perceived misuse of
+contact data.  For more information, please see the <a href="http://cordova.apache.org/docs/en/latest/guide/appdev/privacy/index.html">Privacy Guide</a>.</p>
+
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Contacts%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>This requires cordova 5.0+ ( current stable v1.0.0 )</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-contacts Older versions of cordova can still install via the __deprecated__ id ( stale v0.2.16 )
+
+cordova plugin add org.apache.cordova.contacts It is also possible to install via repo url directly ( unstable )
+
+cordova plugin add https://github.com/apache/cordova-plugin-contacts.git
+</code></pre></div></div>
+
+<h3 id="ios-quirks">iOS Quirks</h3>
+
+<p>Since iOS 10 it’s mandatory to add a <code class="language-plaintext highlighter-rouge">NSContactsUsageDescription</code> entry in the info.plist.</p>
+
+<p><code class="language-plaintext highlighter-rouge">NSContactsUsageDescription</code> describes the reason that the app accesses the user’s contacts. When the system prompts the user to allow access, this string is displayed as part of the dialog box. To add this entry you can pass the variable <code class="language-plaintext highlighter-rouge">CONTACTS_USAGE_DESCRIPTION</code> on plugin install.</p>
+
+<p>Example:
+<code class="language-plaintext highlighter-rouge">cordova plugin add cordova-plugin-contacts --variable CONTACTS_USAGE_DESCRIPTION="your usage message"</code></p>
+
+<p>If you don’t pass the variable, the plugin will add an empty string as value.</p>
+
+<h3 id="firefox-os-quirks">Firefox OS Quirks</h3>
+
+<p>Create <strong>www/manifest.webapp</strong> as described in
+<a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest">Manifest Docs</a>.
+Add relevant permisions.
+There is also a need to change the webapp type to “privileged”  - <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#type">Manifest Docs</a>.
+<strong>WARNING</strong>: All privileged apps enforce <a href="https://developer.mozilla.org/en-US/Apps/CSP">Content Security Policy</a> which forbids inline script. Initialize your application in another way.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"privileged"</span><span class="err">,</span><span class="w">
+</span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+	</span><span class="nl">"contacts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nl">"access"</span><span class="p">:</span><span class="w"> </span><span class="s2">"readwrite"</span><span class="p">,</span><span class="w">
+		</span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Describe why there is a need for such permission"</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<h3 id="windows-quirks">Windows Quirks</h3>
+
+<p><strong>Prior to Windows 10:</strong> Any contacts returned from <code class="language-plaintext highlighter-rouge">find</code> and <code class="language-plaintext highlighter-rouge">pickContact</code> methods are readonly, so your application cannot modify them.
+<code class="language-plaintext highlighter-rouge">find</code> method available only on Windows Phone 8.1 devices.</p>
+
+<p><strong>Windows 10 and above:</strong> Contacts may be saved and will be saved to app-local contacts storage.  Contacts may also be deleted.</p>
+
+<h3 id="windows-8-quirks">Windows 8 Quirks</h3>
+
+<p>Windows 8 Contacts are readonly. Via the Cordova API Contacts are not queryable/searchable, you should inform the user to pick a contact as a call to contacts.pickContact which will open the ‘People’ app where the user must choose a contact.
+Any contacts returned are readonly, so your application cannot modify them.</p>
+
+<h2 id="navigatorcontacts">navigator.contacts</h2>
+
+<h3 id="methods">Methods</h3>
+
+<ul>
+  <li>navigator.contacts.create</li>
+  <li>navigator.contacts.find</li>
+  <li>navigator.contacts.pickContact</li>
+</ul>
+
+<h3 id="objects">Objects</h3>
+
+<ul>
+  <li>Contact</li>
+  <li>ContactName</li>
+  <li>ContactField</li>
+  <li>ContactAddress</li>
+  <li>ContactOrganization</li>
+  <li>ContactFindOptions</li>
+  <li>ContactError</li>
+  <li>ContactFieldType</li>
+</ul>
+
+<h2 id="navigatorcontactscreate">navigator.contacts.create</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">navigator.contacts.create</code> method is synchronous, and returns a new <code class="language-plaintext highlighter-rouge">Contact</code> object.</p>
+
+<p>This method does not retain the Contact object in the device contacts
+database, for which you need to invoke the <code class="language-plaintext highlighter-rouge">Contact.save</code> method.</p>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">var</span> <span class="nx">myContact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="dl">"</span><span class="s2">displayName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Test User</span><span class="dl">"</span><span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="navigatorcontactsfind">navigator.contacts.find</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">navigator.contacts.find</code> method executes asynchronously, querying the
+device contacts database and returning an array of <code class="language-plaintext highlighter-rouge">Contact</code> objects.
+The resulting objects are passed to the <code class="language-plaintext highlighter-rouge">contactSuccess</code> callback
+function specified by the <strong>contactSuccess</strong> parameter.</p>
+
+<p>The <strong>contactFields</strong> parameter specifies the fields to be used as a
+search qualifier.  A zero-length <strong>contactFields</strong> parameter is invalid and results in
+<code class="language-plaintext highlighter-rouge">ContactError.INVALID_ARGUMENT_ERROR</code>. A <strong>contactFields</strong> value of
+<code class="language-plaintext highlighter-rouge">"*"</code> searches all contact fields.</p>
+
+<p>The <strong>contactFindOptions.filter</strong> string can be used as a search
+filter when querying the contacts database.  If provided, a
+case-insensitive, partial value match is applied to each field
+specified in the <strong>contactFields</strong> parameter.  If there’s a match for
+<em>any</em> of the specified fields, the contact is returned. Use <strong>contactFindOptions.desiredFields</strong>
+parameter to control which contact properties must be returned back.</p>
+
+<p>Supported values for both <strong>contactFields</strong> and <strong>contactFindOptions.desiredFields</strong> parameters are enumerated in <a href="#contactfieldtype"><code class="language-plaintext highlighter-rouge">ContactFieldType</code></a> object.</p>
+
+<h3 id="parameters">Parameters</h3>
+
+<ul>
+  <li>
+    <p><strong>contactFields</strong>: Contact fields to use as a search qualifier. <em>(DOMString[])</em> [Required]</p>
+  </li>
+  <li>
+    <p><strong>contactSuccess</strong>: Success callback function invoked with the array of Contact objects returned from the database. [Required]</p>
+  </li>
+  <li>
+    <p><strong>contactError</strong>: Error callback function, invoked when an error occurs. [Optional]</p>
+  </li>
+  <li>
+    <p><strong>contactFindOptions</strong>: Search options to filter navigator.contacts. [Optional]</p>
+
+    <p>Keys include:</p>
+
+    <ul>
+      <li>
+        <p><strong>filter</strong>: The search string used to find navigator.contacts. <em>(DOMString)</em> (Default: <code class="language-plaintext highlighter-rouge">""</code>)</p>
+      </li>
+      <li>
+        <p><strong>multiple</strong>: Determines if the find operation returns multiple navigator.contacts. <em>(Boolean)</em> (Default: <code class="language-plaintext highlighter-rouge">false</code>)</p>
+      </li>
+      <li>
+        <p><strong>desiredFields</strong>: Contact fields to be returned back. If specified, the resulting <code class="language-plaintext highlighter-rouge">Contact</code> object only features values for these fields. <em>(DOMString[])</em> [Optional]</p>
+      </li>
+      <li>
+        <p><strong>hasPhoneNumber</strong>(Android only): Filters the search to only return contacts with a phone number informed. <em>(Boolean)</em> (Default: <code class="language-plaintext highlighter-rouge">false</code>)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-1">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows (Windows Phone 8.1 and Windows 10)</li>
+</ul>
+
+<h3 id="example-1">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Found </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> contacts.</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">onError!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// find all contacts with 'Bob' in any name field</span>
+<span class="kd">var</span> <span class="nx">options</span>      <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactFindOptions</span><span class="p">();</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">filter</span>   <span class="o">=</span> <span class="dl">"</span><span class="s2">Bob</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">multiple</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">desiredFields</span> <span class="o">=</span> <span class="p">[</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">fieldType</span><span class="p">.</span><span class="nx">id</span><span class="p">];</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">hasPhoneNumber</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">fields</span>       <span class="o">=</span> <span class="p">[</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">fieldType</span><span class="p">.</span><span class="nx">displayName</span><span class="p">,</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">fieldType</span><span class="p">.</span><span class="nx">name</span><span class="p">];</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">fields</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="windows-quirks-1">Windows Quirks</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__contactFields__</code> is not supported and will be ignored. <code class="language-plaintext highlighter-rouge">find</code> method will always attempt to match the name, email address, or phone number of a contact.</li>
+</ul>
+
+<h2 id="navigatorcontactspickcontact">navigator.contacts.pickContact</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">navigator.contacts.pickContact</code> method launches the Contact Picker to select a single contact.
+The resulting object is passed to the <code class="language-plaintext highlighter-rouge">contactSuccess</code> callback
+function specified by the <strong>contactSuccess</strong> parameter.</p>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<ul>
+  <li>
+    <p><strong>contactSuccess</strong>: Success callback function invoked with the single Contact object. [Required]</p>
+  </li>
+  <li>
+    <p><strong>contactError</strong>: Error callback function, invoked when an error occurs. [Optional]</p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-2">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-2">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">pickContact</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">contact</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">The following contact has been selected:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">contact</span><span class="p">));</span>
+    <span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Error: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+    <span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="android-quirks">Android Quirks</h3>
+
+<p>This plugin launches an external Activity for picking contacts. See the
+<a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#lifecycle-guide">Android Lifecycle Guide</a>
+for an explanation of how this affects your application. If the plugin returns
+its result in the <code class="language-plaintext highlighter-rouge">resume</code> event, then you must first wrap the returned object
+in a <code class="language-plaintext highlighter-rouge">Contact</code> object before using it. Here is an example:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onResume</span><span class="p">(</span><span class="nx">resumeEvent</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">resumeEvent</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">resumeEvent</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">pluginStatus</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">contact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">resumeEvent</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">successCallback</span><span class="p">(</span><span class="nx">contact</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">failCallback</span><span class="p">(</span><span class="nx">resumeEvent</span><span class="p">.</span><span class="nx">pendingResult</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="contact">Contact</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Contact</code> object represents a user’s contact.  Contacts can be
+created, stored, or removed from the device contacts database.
+Contacts can also be retrieved (individually or in bulk) from the
+database by invoking the <code class="language-plaintext highlighter-rouge">navigator.contacts.find</code> method.</p>
+
+<p><strong>NOTE</strong>: Not all of the contact fields listed above are supported on
+every device platform.  Please check each platform’s <em>Quirks</em> section
+for details.</p>
+
+<h3 id="properties">Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>id</strong>: A globally unique identifier. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>displayName</strong>: The name of this Contact, suitable for display to end users. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>name</strong>: An object containing all components of a persons name. <em>(ContactName)</em></p>
+  </li>
+  <li>
+    <p><strong>nickname</strong>: A casual name by which to address the contact. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>phoneNumbers</strong>: An array of all the contact’s phone numbers. <em>(ContactField[])</em></p>
+  </li>
+  <li>
+    <p><strong>emails</strong>: An array of all the contact’s email addresses. <em>(ContactField[])</em></p>
+  </li>
+  <li>
+    <p><strong>addresses</strong>: An array of all the contact’s addresses. <em>(ContactAddress[])</em></p>
+  </li>
+  <li>
+    <p><strong>ims</strong>: An array of all the contact’s IM addresses. <em>(ContactField[])</em></p>
+  </li>
+  <li>
+    <p><strong>organizations</strong>: An array of all the contact’s organizations. <em>(ContactOrganization[])</em></p>
+  </li>
+  <li>
+    <p><strong>birthday</strong>: The birthday of the contact. <em>(Date)</em></p>
+  </li>
+  <li>
+    <p><strong>note</strong>: A note about the contact. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>photos</strong>: An array of the contact’s photos. <em>(ContactField[])</em></p>
+  </li>
+  <li>
+    <p><strong>categories</strong>:  An array of all the user-defined categories associated with the contact. <em>(ContactField[])</em></p>
+  </li>
+  <li>
+    <p><strong>urls</strong>:  An array of web pages associated with the contact. <em>(ContactField[])</em></p>
+  </li>
+</ul>
+
+<h3 id="methods-1">Methods</h3>
+
+<ul>
+  <li>
+    <p><strong>clone</strong>: Returns a new <code class="language-plaintext highlighter-rouge">Contact</code> object that is a deep copy of the calling object, with the <code class="language-plaintext highlighter-rouge">id</code> property set to <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>remove</strong>: Removes the contact from the device contacts database, otherwise executes an error callback with a <code class="language-plaintext highlighter-rouge">ContactError</code> object.</p>
+  </li>
+  <li>
+    <p><strong>save</strong>: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same <strong>id</strong> already exists.</p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-3">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="save-example">Save Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contact</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Save Success</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">contactError</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// create a new contact object</span>
+<span class="kd">var</span> <span class="nx">contact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">displayName</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Plumber</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">nickname</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Plumber</span><span class="dl">"</span><span class="p">;</span>            <span class="c1">// specify both to support all devices</span>
+
+<span class="c1">// populate some fields</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactName</span><span class="p">();</span>
+<span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Jane</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">name</span><span class="p">.</span><span class="nx">familyName</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+
+<span class="c1">// save to device</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span><span class="nx">onError</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="clone-example">Clone Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// clone the contact object</span>
+<span class="kd">var</span> <span class="nx">clone</span> <span class="o">=</span> <span class="nx">contact</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
+<span class="nx">clone</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Original contact name = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">contact</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Cloned contact name = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">clone</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="remove-example">Remove Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Removal Success</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Error = </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">contactError</span><span class="p">.</span><span class="nx">code</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// remove the contact from the device</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span><span class="nx">onError</span><span class="p">);</span>
+</code></pre></div></div>
+<h3 id="removing-phone-numbers-from-a-saved-contact">Removing phone number(s) from a saved contact</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example to create a contact with 3 phone numbers and then remove</span>
+<span class="c1">// 2 phone numbers. This example is for illustrative purpose only</span>
+<span class="kd">var</span> <span class="nx">myContact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="dl">"</span><span class="s2">displayName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Test User</span><span class="dl">"</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">phoneNumbers</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactField</span><span class="p">(</span><span class="dl">'</span><span class="s1">work</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">768-555-1234</span><span class="dl">'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactField</span><span class="p">(</span><span class="dl">'</span><span class="s1">mobile</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">999-555-5432</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// preferred number</span>
+<span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactField</span><span class="p">(</span><span class="dl">'</span><span class="s1">home</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">203-555-7890</span><span class="dl">'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<span class="nx">myContact</span><span class="p">.</span><span class="nx">phoneNumbers</span> <span class="o">=</span> <span class="nx">phoneNumbers</span><span class="p">;</span>
+<span class="nx">myContact</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">contact_obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">contactObjToModify</span> <span class="o">=</span> <span class="nx">contact_obj</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
+    <span class="nx">contact_obj</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">phoneNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="nx">contactObjToModify</span><span class="p">.</span><span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]];</span>
+        <span class="nx">contactObjToModify</span><span class="p">.</span><span class="nx">phoneNumbers</span> <span class="o">=</span> <span class="nx">phoneNumbers</span><span class="p">;</span>
+        <span class="nx">contactObjToModify</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">c_obj</span><span class="p">){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">All Done</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Not able to save the cloned object: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Contact Remove Operation failed: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">contactError</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="android-2x-quirks">Android 2.X Quirks</h3>
+
+<ul>
+  <li><strong>categories</strong>:  Not supported on Android 2.X devices, returning <code class="language-plaintext highlighter-rouge">null</code>.</li>
+</ul>
+
+<h3 id="blackberry-10-quirks">BlackBerry 10 Quirks</h3>
+
+<ul>
+  <li><strong>id</strong>: Assigned by the device when saving the contact.</li>
+</ul>
+
+<h3 id="firefoxos-quirks">FirefoxOS Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>categories</strong>: Partially supported. Fields <strong>pref</strong> and <strong>type</strong> are returning <code class="language-plaintext highlighter-rouge">null</code></p>
+  </li>
+  <li>
+    <p><strong>ims</strong>: Not supported</p>
+  </li>
+  <li>
+    <p><strong>photos</strong>: Not supported</p>
+  </li>
+</ul>
+
+<h3 id="ios-quirks-1">iOS Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>displayName</strong>: Not supported on iOS, returning <code class="language-plaintext highlighter-rouge">null</code> unless there is no <code class="language-plaintext highlighter-rouge">ContactName</code> specified, in which case it returns the composite name, <strong>nickname</strong> or <code class="language-plaintext highlighter-rouge">""</code>, respectively.</p>
+  </li>
+  <li>
+    <p><strong>birthday</strong>: Must be input as a JavaScript <code class="language-plaintext highlighter-rouge">Date</code> object, the same way it is returned.</p>
+  </li>
+  <li>
+    <p><strong>photos</strong>: Returns a File URL to the image, which is stored in the application’s temporary directory.  Contents of the temporary directory are removed when the application exits.</p>
+  </li>
+  <li>
+    <p><strong>categories</strong>:  This property is currently not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+</ul>
+
+<h3 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>displayName</strong>: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.</p>
+  </li>
+  <li>
+    <p><strong>urls</strong>: When creating a contact, users can input and save more than one web address, but only one is available when searching the contact.</p>
+  </li>
+  <li>
+    <p><strong>phoneNumbers</strong>: The <em>pref</em> option is not supported. The <em>type</em> is not supported in a <em>find</em> operation. Only one <code class="language-plaintext highlighter-rouge">phoneNumber</code> is allowed for each <em>type</em>.</p>
+  </li>
+  <li>
+    <p><strong>emails</strong>: The <em>pref</em> option is not supported. Home and personal references same email entry. Only one entry is allowed for each <em>type</em>.</p>
+  </li>
+  <li>
+    <p><strong>addresses</strong>: Supports only work, and home/personal <em>type</em>. The home and personal <em>type</em> reference the same address entry. Only one entry is allowed for each <em>type</em>.</p>
+  </li>
+  <li>
+    <p><strong>organizations</strong>: Only one is allowed, and does not support the <em>pref</em>, <em>type</em>, and <em>department</em> attributes.</p>
+  </li>
+  <li>
+    <p><strong>note</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>ims</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>birthdays</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>categories</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>remove</strong>: Method is not supported</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-2">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>photos</strong>: Returns a File URL to the image, which is stored in the application’s temporary directory.</p>
+  </li>
+  <li>
+    <p><strong>birthdays</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>categories</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>remove</strong>: Method is only supported in Windows 10 or above.</p>
+  </li>
+</ul>
+
+<h2 id="contactaddress">ContactAddress</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">ContactAddress</code> object stores the properties of a single address
+of a contact.  A <code class="language-plaintext highlighter-rouge">Contact</code> object may include more than one address in
+a <code class="language-plaintext highlighter-rouge">ContactAddress[]</code> array.</p>
+
+<h3 id="properties-1">Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Set to <code class="language-plaintext highlighter-rouge">true</code> if this <code class="language-plaintext highlighter-rouge">ContactAddress</code> contains the user’s preferred value. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>type</strong>: A string indicating what type of field this is, <em>home</em> for example. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: The full address formatted for display. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>streetAddress</strong>: The full street address. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>locality</strong>: The city or locality. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>region</strong>: The state or region. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>postalCode</strong>: The zip code or postal code. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>country</strong>: The country name. <em>(DOMString)</em></p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-4">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-3">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// display the address information for all contacts</span>
+
+<span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Pref: </span><span class="dl">"</span>         <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">pref</span>          <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Type: </span><span class="dl">"</span>           <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">type</span>          <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Formatted: </span><span class="dl">"</span>      <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">formatted</span>     <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Street Address: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">streetAddress</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Locality: </span><span class="dl">"</span>       <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">locality</span>      <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Region: </span><span class="dl">"</span>         <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">region</span>        <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Postal Code: </span><span class="dl">"</span>    <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">postalCode</span>    <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Country: </span><span class="dl">"</span>        <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">addresses</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">country</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">onError!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// find all contacts</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactFindOptions</span><span class="p">();</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">filter</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">multiple</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">filter</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">displayName</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">addresses</span><span class="dl">"</span><span class="p">];</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="android-2x-quirks-1">Android 2.X Quirks</h3>
+
+<ul>
+  <li><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code> on Android 2.X devices.</li>
+</ul>
+
+<h3 id="blackberry-10-quirks-1">BlackBerry 10 Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported on BlackBerry devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Partially supported.  Only one each of <em>Work</em> and <em>Home</em> type addresses can be stored per contact.</p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: Partially supported.  Returns a concatenation of all BlackBerry address fields.</p>
+  </li>
+  <li>
+    <p><strong>streetAddress</strong>: Supported.  Returns a concatenation of BlackBerry <strong>address1</strong> and <strong>address2</strong> address fields.</p>
+  </li>
+  <li>
+    <p><strong>locality</strong>: Supported.  Stored in BlackBerry <strong>city</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>region</strong>: Supported.  Stored in BlackBerry <strong>stateProvince</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>postalCode</strong>: Supported.  Stored in BlackBerry <strong>zipPostal</strong> address field.</p>
+  </li>
+  <li>
+    <p><strong>country</strong>: Supported.</p>
+  </li>
+</ul>
+
+<h3 id="firefoxos-quirks-1">FirefoxOS Quirks</h3>
+
+<ul>
+  <li><strong>formatted</strong>: Currently not supported</li>
+</ul>
+
+<h3 id="ios-quirks-2">iOS Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported on iOS devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>formatted</strong>: Currently not supported.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-3">Windows Quirks</h3>
+
+<ul>
+  <li><strong>pref</strong>: Not supported</li>
+</ul>
+
+<h2 id="contacterror">ContactError</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">ContactError</code> object is returned to the user through the
+<code class="language-plaintext highlighter-rouge">contactError</code> callback function when an error occurs.</p>
+
+<h3 id="properties-2">Properties</h3>
+
+<ul>
+  <li><strong>code</strong>: One of the predefined error codes listed below.</li>
+</ul>
+
+<h3 id="constants">Constants</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.UNKNOWN_ERROR</code> (code 0)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.INVALID_ARGUMENT_ERROR</code> (code 1)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.TIMEOUT_ERROR</code> (code 2)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.PENDING_OPERATION_ERROR</code> (code 3)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.IO_ERROR</code> (code 4)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.NOT_SUPPORTED_ERROR</code> (code 5)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.OPERATION_CANCELLED_ERROR</code> (code 6)</li>
+  <li><code class="language-plaintext highlighter-rouge">ContactError.PERMISSION_DENIED_ERROR</code> (code 20)</li>
+</ul>
+
+<h2 id="contactfield">ContactField</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">ContactField</code> object is a reusable component that represents
+contact fields generically.  Each <code class="language-plaintext highlighter-rouge">ContactField</code> object contains a
+<code class="language-plaintext highlighter-rouge">value</code>, <code class="language-plaintext highlighter-rouge">type</code>, and <code class="language-plaintext highlighter-rouge">pref</code> property.  A <code class="language-plaintext highlighter-rouge">Contact</code> object stores
+several properties in <code class="language-plaintext highlighter-rouge">ContactField[]</code> arrays, such as phone numbers
+and email addresses.</p>
+
+<p>In most instances, there are no pre-determined values for a
+<code class="language-plaintext highlighter-rouge">ContactField</code> object’s <strong>type</strong> attribute.  For example, a phone
+number can specify <strong>type</strong> values of <em>home</em>, <em>work</em>, <em>mobile</em>,
+<em>iPhone</em>, or any other value that is supported by a particular device
+platform’s contact database.  However, for the <code class="language-plaintext highlighter-rouge">Contact</code> <strong>photos</strong>
+field, the <strong>type</strong> field indicates the format of the returned image:
+<strong>url</strong> when the <strong>value</strong> attribute contains a URL to the photo
+image, or <em>base64</em> when the <strong>value</strong> contains a base64-encoded image
+string.</p>
+
+<h3 id="properties-3">Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>type</strong>: A string that indicates what type of field this is, <em>home</em> for example. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>value</strong>: The value of the field, such as a phone number or email address. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>pref</strong>: Set to <code class="language-plaintext highlighter-rouge">true</code> if this <code class="language-plaintext highlighter-rouge">ContactField</code> contains the user’s preferred value. <em>(boolean)</em></p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-5">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-4">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create a new contact</span>
+<span class="kd">var</span> <span class="nx">contact</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">create</span><span class="p">();</span>
+
+<span class="c1">// store contact phone numbers in ContactField[]</span>
+<span class="kd">var</span> <span class="nx">phoneNumbers</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactField</span><span class="p">(</span><span class="dl">'</span><span class="s1">work</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">212-555-1234</span><span class="dl">'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactField</span><span class="p">(</span><span class="dl">'</span><span class="s1">mobile</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">917-555-5432</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span> <span class="c1">// preferred number</span>
+<span class="nx">phoneNumbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactField</span><span class="p">(</span><span class="dl">'</span><span class="s1">home</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">203-555-7890</span><span class="dl">'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">phoneNumbers</span> <span class="o">=</span> <span class="nx">phoneNumbers</span><span class="p">;</span>
+
+<span class="c1">// save the contact</span>
+<span class="nx">contact</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="android-quirks-1">Android Quirks</h3>
+
+<ul>
+  <li><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code>.</li>
+</ul>
+
+<h3 id="blackberry-10-quirks-2">BlackBerry 10 Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>type</strong>: Partially supported.  Used for phone numbers.</p>
+  </li>
+  <li>
+    <p><strong>value</strong>: Supported.</p>
+  </li>
+  <li>
+    <p><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+</ul>
+
+<h3 id="ios-quirks-3">iOS Quirks</h3>
+
+<ul>
+  <li><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code>.</li>
+</ul>
+
+<h3 id="windows-quirks-4">Windows Quirks</h3>
+
+<ul>
+  <li><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code>.</li>
+</ul>
+
+<h2 id="contactname">ContactName</h2>
+
+<p>Contains different kinds of information about a <code class="language-plaintext highlighter-rouge">Contact</code> object’s name.</p>
+
+<h3 id="properties-4">Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>formatted</strong>: The complete name of the contact. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>familyName</strong>: The contact’s family name. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>givenName</strong>: The contact’s given name. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>middleName</strong>: The contact’s middle name. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>honorificPrefix</strong>: The contact’s prefix (example <em>Mr.</em> or <em>Dr.</em>) <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>honorificSuffix</strong>: The contact’s suffix (example <em>Esq.</em>). <em>(DOMString)</em></p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-6">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-5">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Formatted: </span><span class="dl">"</span>  <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">.</span><span class="nx">formatted</span>       <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+            <span class="dl">"</span><span class="s2">Family Name: </span><span class="dl">"</span>  <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">.</span><span class="nx">familyName</span>      <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+            <span class="dl">"</span><span class="s2">Given Name: </span><span class="dl">"</span>   <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">.</span><span class="nx">givenName</span>       <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+            <span class="dl">"</span><span class="s2">Middle Name: </span><span class="dl">"</span>  <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">.</span><span class="nx">middleName</span>      <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+            <span class="dl">"</span><span class="s2">Suffix: </span><span class="dl">"</span>       <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">.</span><span class="nx">honorificSuffix</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+            <span class="dl">"</span><span class="s2">Prefix: </span><span class="dl">"</span>       <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">.</span><span class="nx">honorificSuffix</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">onError!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactFindOptions</span><span class="p">();</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">filter</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">multiple</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">filter</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">displayName</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">];</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="android-quirks-2">Android Quirks</h3>
+
+<ul>
+  <li><strong>formatted</strong>: Partially supported, and read-only.  Returns a concatenation of <code class="language-plaintext highlighter-rouge">honorificPrefix</code>, <code class="language-plaintext highlighter-rouge">givenName</code>, <code class="language-plaintext highlighter-rouge">middleName</code>, <code class="language-plaintext highlighter-rouge">familyName</code>, and <code class="language-plaintext highlighter-rouge">honorificSuffix</code>.</li>
+</ul>
+
+<h3 id="blackberry-10-quirks-3">BlackBerry 10 Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>formatted</strong>: Partially supported.  Returns a concatenation of BlackBerry <strong>firstName</strong> and <strong>lastName</strong> fields.</p>
+  </li>
+  <li>
+    <p><strong>familyName</strong>: Supported.  Stored in BlackBerry <strong>lastName</strong> field.</p>
+  </li>
+  <li>
+    <p><strong>givenName</strong>: Supported.  Stored in BlackBerry <strong>firstName</strong> field.</p>
+  </li>
+  <li>
+    <p><strong>middleName</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>honorificPrefix</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>honorificSuffix</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+</ul>
+
+<h3 id="firefoxos-quirks-2">FirefoxOS Quirks</h3>
+
+<ul>
+  <li><strong>formatted</strong>: Partially supported, and read-only.  Returns a concatenation of <code class="language-plaintext highlighter-rouge">honorificPrefix</code>, <code class="language-plaintext highlighter-rouge">givenName</code>, <code class="language-plaintext highlighter-rouge">middleName</code>, <code class="language-plaintext highlighter-rouge">familyName</code>, and <code class="language-plaintext highlighter-rouge">honorificSuffix</code>.</li>
+</ul>
+
+<h3 id="ios-quirks-4">iOS Quirks</h3>
+
+<ul>
+  <li><strong>formatted</strong>: Partially supported.  Returns iOS Composite Name, but is read-only.</li>
+</ul>
+
+<h3 id="windows-quirks-5">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>formatted</strong>: This is the only name property, and is identical to <code class="language-plaintext highlighter-rouge">displayName</code>, and <code class="language-plaintext highlighter-rouge">nickname</code></p>
+  </li>
+  <li>
+    <p><strong>familyName</strong>: not supported</p>
+  </li>
+  <li>
+    <p><strong>givenName</strong>: not supported</p>
+  </li>
+  <li>
+    <p><strong>middleName</strong>: not supported</p>
+  </li>
+  <li>
+    <p><strong>honorificPrefix</strong>: not supported</p>
+  </li>
+  <li>
+    <p><strong>honorificSuffix</strong>: not supported</p>
+  </li>
+</ul>
+
+<h2 id="contactorganization">ContactOrganization</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">ContactOrganization</code> object stores a contact’s organization
+properties.  A <code class="language-plaintext highlighter-rouge">Contact</code> object stores one or more
+<code class="language-plaintext highlighter-rouge">ContactOrganization</code> objects in an array.</p>
+
+<h3 id="properties-5">Properties</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Set to <code class="language-plaintext highlighter-rouge">true</code> if this <code class="language-plaintext highlighter-rouge">ContactOrganization</code> contains the user’s preferred value. <em>(boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>type</strong>: A string that indicates what type of field this is, <em>home</em> for example. _(DOMString)</p>
+  </li>
+  <li>
+    <p><strong>name</strong>: The name of the organization. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>department</strong>: The department the contract works for. <em>(DOMString)</em></p>
+  </li>
+  <li>
+    <p><strong>title</strong>: The contact’s title at the organization. <em>(DOMString)</em></p>
+  </li>
+</ul>
+
+<h3 id="supported-platforms-7">Supported Platforms</h3>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows (Windows 8.1 and Windows Phone 8.1 devices only)</li>
+</ul>
+
+<h3 id="example-6">Example</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">contacts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Pref: </span><span class="dl">"</span>      <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">pref</span>       <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Type: </span><span class="dl">"</span>        <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">type</span>       <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Name: </span><span class="dl">"</span>        <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">name</span>       <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Department: </span><span class="dl">"</span>  <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">department</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span> <span class="o">+</span>
+                <span class="dl">"</span><span class="s2">Title: </span><span class="dl">"</span>       <span class="o">+</span> <span class="nx">contacts</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">organizations</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">title</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">contactError</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">onError!</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ContactFindOptions</span><span class="p">();</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">filter</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+<span class="nx">options</span><span class="p">.</span><span class="nx">multiple</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">filter</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">displayName</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">organizations</span><span class="dl">"</span><span class="p">];</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="android-2x-quirks-2">Android 2.X Quirks</h3>
+
+<ul>
+  <li><strong>pref</strong>: Not supported by Android 2.X devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</li>
+</ul>
+
+<h3 id="blackberry-10-quirks-4">BlackBerry 10 Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported by BlackBerry devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Not supported by BlackBerry devices, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>name</strong>: Partially supported.  The first organization name is stored in the BlackBerry <strong>company</strong> field.</p>
+  </li>
+  <li>
+    <p><strong>department</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Partially supported.  The first organization title is stored in the BlackBerry <strong>jobTitle</strong> field.</p>
+  </li>
+</ul>
+
+<h3 id="firefox-os-quirks-1">Firefox OS Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Not supported</p>
+  </li>
+  <li>
+    <p><strong>department</strong>: Not supported</p>
+  </li>
+  <li>
+    <p>Fields <strong>name</strong> and <strong>title</strong> stored in <strong>org</strong> and <strong>jobTitle</strong>.</p>
+  </li>
+</ul>
+
+<h3 id="ios-quirks-5">iOS Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported on iOS devices, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Not supported on iOS devices, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+  <li>
+    <p><strong>name</strong>: Partially supported.  The first organization name is stored in the iOS <strong>kABPersonOrganizationProperty</strong> field.</p>
+  </li>
+  <li>
+    <p><strong>department</strong>: Partially supported.  The first department name is stored in the iOS <strong>kABPersonDepartmentProperty</strong> field.</p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Partially supported.  The first title is stored in the iOS <strong>kABPersonJobTitleProperty</strong> field.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-6">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p><strong>pref</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">false</code>.</p>
+  </li>
+  <li>
+    <p><strong>type</strong>: Not supported, returning <code class="language-plaintext highlighter-rouge">null</code>.</p>
+  </li>
+</ul>
+
+<h2 id="contactfieldtype">ContactFieldType</h2>
+<p>The <code class="language-plaintext highlighter-rouge">ContactFieldType</code> object is an enumeration of possible field types, such as <code class="language-plaintext highlighter-rouge">'phoneNumbers'</code> or <code class="language-plaintext highlighter-rouge">'emails'</code>, that could be used to control which contact properties must be returned back from <code class="language-plaintext highlighter-rouge">contacts.find()</code> method (see <code class="language-plaintext highlighter-rouge">contactFindOptions.desiredFields</code>), or to specify fields to search in (through <code class="language-plaintext highlighter-rouge">contactFields</code> parameter). Possible values are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.addresses</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.birthday</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.categories</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.country</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.department</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.displayName</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.emails</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.familyName</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.formatted</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.givenName</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.honorificPrefix</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.honorificSuffix</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.id</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.ims</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.locality</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.middleName</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.name</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.nickname</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.note</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.organizations</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.phoneNumbers</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.photos</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.postalCode</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.region</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.streetAddress</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.title</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.contacts.fieldType.urls</code></li>
+</ul>

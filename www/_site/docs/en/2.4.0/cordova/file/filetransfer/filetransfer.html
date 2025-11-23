@@ -1,0 +1,283 @@
+<h1 id="filetransfer">FileTransfer</h1>
+
+<p>FileTransfer is an object that allows you to upload files to a server or download files from a server.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>onprogress:</strong> Called with a ProgressEvent whenever a new chunk of data is transferred. <em>(Function)</em></li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>upload</strong>: sends a file to a server.</li>
+  <li><strong>download</strong>: downloads a file from server.</li>
+  <li><strong>abort</strong>: Aborts an in-progress transfer.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">FileTransfer</code> object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a <a href="../fileuploadoptions/fileuploadoptions.html">FileUploadOptions</a> object to the upload method.  On successful upload, the success callback will be called with a <a href="../fileuploadresult/fileuploadresult.html">FileUploadResult</a> object.  If an error occurs, the error callback will be invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object.
+It is also possible to download a file from remote and save it on the device (only iOS and Android).</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="upload">upload</h2>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>filePath</strong> - Full path of the file on the device</li>
+  <li><strong>server</strong> - URL of the server to receive the file (must already be encoded using encodeURI())</li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../metadata/metadata.html">Metadata</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object. <em>(Function)</em></li>
+  <li><strong>options</strong> - Optional parameters such as file name and mimetype</li>
+  <li><strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em></li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// !! Assumes variable fileURI contains a valid URI to a text file on the device
+</code></pre></div></div>
+
+  	var win = function(r) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    console.log("Code = " + r.responseCode);
+    console.log("Response = " + r.response);
+    console.log("Sent = " + r.bytesSent);
+}
+
+var fail = function(error) {
+    alert("An error has occurred: Code = " + error.code);
+    console.log("upload error source " + error.source);
+    console.log("upload error target " + error.target);
+}
+
+var options = new [FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)();
+options.fileKey="file";
+options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+options.mimeType="text/plain";
+</code></pre></div></div>
+
+<p>var params = {};
+	params.value1 = “test”;
+	params.value2 = “param”;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>options.params = params;
+
+var ft = new FileTransfer();
+ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+</code></pre></div></div>
+
+<p><strong>Full Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;File Transfer Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+        
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+            
+            // Retrieve image file location from specified source
+            navigator.camera.getPicture(uploadPhoto,
+                                        function(message) { alert('get picture failed'); },
+                                        { quality: 50, 
+                                        destinationType: navigator.camera.DestinationType.FILE_URI,
+                                        sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
+                                        );
+            
+        }
+        
+        function uploadPhoto(imageURI) {
+            var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+            
+            var params = {};
+            params.value1 = "test";
+            params.value2 = "param";
+            
+            options.params = params;
+            
+            var ft = new FileTransfer();
+            ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+        }
+        
+        function win(r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Response = " + r.response);
+            console.log("Sent = " + r.bytesSent);
+        }
+        
+        function fail(error) {
+            alert("An error has occurred: Code = " + error.code);
+            console.log("upload error source " + error.source);
+            console.log("upload error target " + error.target);
+        }
+        
+        &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Upload File&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p><strong>Setting Upload Headers</strong></p>
+
+<p>Supported on Android and iOS</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(r) {
+    console.log("Code = " + r.responseCode);
+    console.log("Response = " + r.response);
+    console.log("Sent = " + r.bytesSent);
+}
+
+function fail(error) {
+    alert("An error has occurred: Code = " + error.code);
+    console.log("upload error source " + error.source);
+    console.log("upload error target " + error.target);
+}
+
+var uri = encodeURI("http://some.server.com/upload.php");
+
+var options = new FileUploadOptions();
+options.fileKey="file";
+options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+options.mimeType="text/plain";
+    
+var headers={'headerParam':'headerValue'};
+
+options.headers = headers;
+
+var ft = new FileTransfer();
+ft.upload(fileURI, uri, win, fail, options);    
+</code></pre></div></div>
+
+<p><strong>Android Quirks</strong></p>
+
+<p>If you experience problems uploading to a Nginx server then make sure you have the chunkedMode option set to false.</p>
+
+<h2 id="download">download</h2>
+
+<p><strong>Parameters:</strong></p>
+
+<ul>
+  <li><strong>source</strong> - URL of the server to download the file (must already be encoded using encodeURI())</li>
+  <li><strong>target</strong> - Full path of the file on the device</li>
+  <li><strong>successCallback</strong> - A callback that is called with a <a href="../fileentry/fileentry.html">FileEntry</a> object. <em>(Function)</em></li>
+  <li><strong>errorCallback</strong> - A callback that is called if an error occurs retrieving the <a href="../metadata/metadata.html">Metadata</a>. Invoked with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object. <em>(Function)</em></li>
+  <li><strong>trustAllHosts</strong> - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. <em>(boolean)</em></li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// !! Assumes filePath is a valid path on the device
+
+var fileTransfer = new FileTransfer();
+var uri = encodeURI("http://some.server.com/download.php");
+
+fileTransfer.download(
+    uri,
+    filePath,
+    function(entry) {
+        console.log("download complete: " + entry.fullPath);
+    },
+    function(error) {
+        console.log("download error source " + error.source);
+        console.log("download error target " + error.target);
+        console.log("upload error code" + error.code);
+    }
+);
+</code></pre></div></div>
+
+<h2 id="abort">abort</h2>
+
+<p>Aborts an in-progress transfer. The onerror callback will be called with a <a href="../filetransfererror/filetransfererror.html">FileTransferError</a> object which has an error code of <a href="../filetransfererror/filetransfererror.html">FileTransferError</a>.ABORT_ERR.</p>
+
+<p><strong>Supported Platforms</strong></p>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Quick Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// !! Assumes variable fileURI contains a valid URI to a text file on the device
+</code></pre></div></div>
+
+  	var win = function(r) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    console.log("Code = " + r.responseCode);
+    console.log("Response = " + r.response);
+    console.log("Sent = " + r.bytesSent);
+}
+
+var fail = function(error) {
+    alert("An error has occurred: Code = " + error.code);
+    console.log("upload error source " + error.source);
+    console.log("upload error target " + error.target);
+}
+
+var options = new [FileUploadOptions](../fileuploadoptions/fileuploadoptions.html)();
+options.fileKey="file";
+options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+options.mimeType="text/plain";
+
+var params = {};
+params.value1 = "test";
+params.value2 = "param";
+	
+options.params = params;
+
+var ft = new FileTransfer();
+ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+ft.abort(win, fail);
+</code></pre></div></div>
+
+<h2 id="onprogress">onprogress</h2>
+
+<p>Called with a ProgressEvent whenever a new chunk of data is transferred.</p>
+
+<p><strong>Supported Platforms</strong></p>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fileTransfer.onprogress = function(progressEvent) {
+    if (progressEvent.lengthComputable) {
+      loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+    } else {
+      loadingStatus.increment();
+    }
+};
+fileTransfer.download(...); // or fileTransfer.upload(...);
+</code></pre></div></div>
+
+<p><strong>Quirks</strong></p>
+<ul>
+  <li>On both Android an iOS, lengthComputable is false for downloads that use gzip encoding.</li>
+</ul>

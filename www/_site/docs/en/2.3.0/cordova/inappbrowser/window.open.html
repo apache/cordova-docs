@@ -1,0 +1,71 @@
+<h1 id="windowopen">window.open</h1>
+
+<p>Opens a URL in a new <a href="inappbrowser.html">InAppBrowser</a> instance, the current browser instance, or the system browser.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open(url, target, options);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>ref:</strong> reference to the <a href="inappbrowser.html">InAppBrowser</a> window (<code class="language-plaintext highlighter-rouge">[InAppBrowser](inappbrowser.html)</code>)</li>
+  <li><strong>url:</strong> the URL to load (<code class="language-plaintext highlighter-rouge">String</code>). Call encodeURI() on this if you have Unicode characters in your URL.</li>
+  <li>
+    <p><strong>target:</strong> the target to load the URL in (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “_self”)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  _self - opens in the Cordova WebView if url is in the white-list, else it opens in the InAppBrowser 
+  _blank - always open in the InAppBrowser 
+  _system - always open in the system web browser 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>options:</strong> options for the <a href="inappbrowser.html">InAppBrowser</a> (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “location=yes”)</p>
+
+    <p>The options string must not contain any blank space, each feature name and value must be separated by a comma. Only the value below is supported:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      location - set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
+var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;window.open Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // external url
+        var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
+        // relative document
+        ref = window.open('next.html', '_self');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

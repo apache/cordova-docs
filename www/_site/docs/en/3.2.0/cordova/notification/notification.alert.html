@@ -1,0 +1,114 @@
+<h1 id="notificationalert">notification.alert</h1>
+
+<p>Shows a custom alert or dialog box.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.alert(message, alertCallback, [title], [buttonName])
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>message</strong>: Dialog message. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>alertCallback</strong>: Callback to invoke when alert dialog is dismissed. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Dialog title. <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">Alert</code>)</p>
+  </li>
+  <li>
+    <p><strong>buttonName</strong>: Button name. <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">OK</code>)</p>
+  </li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>Most Cordova implementations use a native dialog box for this feature,
+but some platforms use the browser’s <code class="language-plaintext highlighter-rouge">alert</code> function, which is
+typically less customizable.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks 5.0+</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Amazon Fire OS / Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+//
+function alertDismissed() {
+    // do something
+}
+
+navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // alert dialog dismissed
+        function alertDismissed() {
+            // do something
+        }
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showAlert(); return false;"&gt;Show Alert&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-7-and-8-quirks">Windows Phone 7 and 8 Quirks</h2>
+
+<ul>
+  <li>
+    <p>There is no built-in browser alert, but you can bind one as follows to call <code class="language-plaintext highlighter-rouge">alert()</code> in the global scope:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  window.alert = navigator.notification.alert;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Both <code class="language-plaintext highlighter-rouge">alert</code> and <code class="language-plaintext highlighter-rouge">confirm</code> are non-blocking calls, results of which are only available asynchronously.</p>
+  </li>
+</ul>
+

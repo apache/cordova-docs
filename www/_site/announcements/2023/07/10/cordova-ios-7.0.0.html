@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 7.0.0! This is one of Cordova’s supported platforms for building iOS applications.">
+
+    <title>
+        
+            
+                Cordova iOS 7.0.0 Released! - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/announcements/2023/07/10/cordova-ios-7.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova iOS 7.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">10 Jul 2023</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code class="language-plaintext highlighter-rouge">Cordova iOS 7.0.0</code>! This is one of Cordova’s supported platforms for building iOS applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@7.0.0</a></li>
+</ul>
+
+<p><strong>Upgrade steps:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@7.0.0
+</code></pre></div></div>
+
+<p><strong>New install steps:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@7.0.0
+</code></pre></div></div>
+
+<h2 id="release-highlights">Release Highlights</h2>
+
+<h3 id="breaking-changes">Breaking Changes</h3>
+
+<ul>
+  <li>
+    <p><strong>Removal of <code class="language-plaintext highlighter-rouge">podspec</code> type from <code class="language-plaintext highlighter-rouge">framework</code> tag</strong></p>
+
+    <p>Since Cordova-iOS 5.0.0, the new <code class="language-plaintext highlighter-rouge">podspec</code> tag was added to improve the readability and support of features that CocoaPods provided.</p>
+
+    <p>This release officially removes the old <code class="language-plaintext highlighter-rouge">type="podspec"</code> implementation of the <code class="language-plaintext highlighter-rouge">framework</code> tag. If you maintain plugins and still using the <code class="language-plaintext highlighter-rouge">framework</code> tag to load pod specs, it is recommended to migrate to the newer implementation.</p>
+
+    <p>For implementation specifications, please see our <a href="https://cordova.apache.org/docs/en/dev/plugin_ref/spec.html#podspec-">Apache Cordova - Podspec</a> docs.</p>
+  </li>
+  <li>
+    <p><strong>Removed default <code class="language-plaintext highlighter-rouge">CONFIGURATION_BUILD_DIR</code> overrides</strong></p>
+
+    <p>This will change the location of where the output files are generated.</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">build/emulator</code> will become <code class="language-plaintext highlighter-rouge">build/Debug-iphonesimulator</code></li>
+      <li><code class="language-plaintext highlighter-rouge">build/device</code> will become <code class="language-plaintext highlighter-rouge">build/Release-iphoneos</code></li>
+    </ul>
+
+    <p>This will help ensure that debug and release files are never mixed up in the same directory and improves support for macOS <code class="language-plaintext highlighter-rouge">maccatalyst</code> builds.</p>
+  </li>
+  <li>
+    <p><strong>Update supported NodeJS versions</strong></p>
+
+    <p>We have dropped support for NodeJS 14.x and increase the minimum NodeJS requirement to greater than or equal to 16.13.0.</p>
+  </li>
+  <li>
+    <p><strong>Dropped Platform Binaries</strong></p>
+
+    <p>We no longer supply or package platform-centric workflow binaries in the <code class="language-plaintext highlighter-rouge">cordova-ios</code> npm package or GitHub repository.</p>
+
+    <p>Please use the <code class="language-plaintext highlighter-rouge">cordova</code> CLI tool for managing your Cordova project plugins and platform configuration.</p>
+  </li>
+  <li>
+    <p><strong>Rename <code class="language-plaintext highlighter-rouge">Images.xcassets</code> to <code class="language-plaintext highlighter-rouge">Assets.xcassets</code></strong></p>
+  </li>
+  <li><strong>Remove deprecated API <code class="language-plaintext highlighter-rouge">colorFromColorString</code> from <code class="language-plaintext highlighter-rouge">CDVViewController</code></strong></li>
+  <li><strong>Remove the <code class="language-plaintext highlighter-rouge">CDVCommandDelegateImpl</code> class from public API</strong></li>
+</ul>
+
+<h3 id="new-features">New Features</h3>
+
+<ul>
+  <li>
+    <p><strong>Added <code class="language-plaintext highlighter-rouge">LimitsNavigationsToAppBoundDomains</code> preference configuration</strong></p>
+
+    <p>This preference allows you to use cookie authentication or browser APIs but requires the value to be set to <code class="language-plaintext highlighter-rouge">YES</code>. The default value is <code class="language-plaintext highlighter-rouge">NO</code>.</p>
+  </li>
+  <li>
+    <p><strong>Support Apple Cloud Distribution Signing</strong></p>
+
+    <p>Apple Cloud Distribution Signing allows using AppStore Connect API keys to automatically manage the distribution signing certificate and provisioning profiles. With Cordova-iOS 7.0.0, you can specify AppStore Connect API credentials in <code class="language-plaintext highlighter-rouge">build.json</code> or as command-line parameters to the <code class="language-plaintext highlighter-rouge">cordova</code> tool.</p>
+
+    <p>These options are <code class="language-plaintext highlighter-rouge">authenticationKeyPath</code>, <code class="language-plaintext highlighter-rouge">authenticationKeyID</code>, and <code class="language-plaintext highlighter-rouge">authenticationKeyIssuerID</code>, and they work in combination with the existing <code class="language-plaintext highlighter-rouge">automaticProvisioning</code> option.</p>
+  </li>
+  <li>
+    <p><strong>Enable Mac Catalyst Support</strong></p>
+
+    <p>Apps built with Cordova-iOS can now target macOS using the Catalyst runtime. This can be enabled by checking the “macOS - Catalyst” checkbox in the Xcode project settings and then building for the macOS target in Xcode.</p>
+
+    <p>Currently, building for Catalyst from Cordova’s command-line tool is not supported.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-ios/issues">Cordova-iOS</a> GitHub issue tracker!</p>
+
+<!--more-->
+<h2 id="change-log">Change Log</h2>
+
+<p><strong>Breaking:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1340">GH-1340</a> chore!: Remove <code class="language-plaintext highlighter-rouge">podspec</code> support from <code class="language-plaintext highlighter-rouge">framework</code> tag</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1310">GH-1310</a> feat!: Remove some Xcode build dir overrides</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1305">GH-1305</a> dep!: bump all possible dependencies w/ node engine requirement update <code class="language-plaintext highlighter-rouge">&gt;=16.13.0</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">semver@7.4.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">plist@3.0.6</code></li>
+      <li><code class="language-plaintext highlighter-rouge">fs-extra@11.1.1</code></li>
+      <li><code class="language-plaintext highlighter-rouge">cordova-common@5.0.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">nopt@7.1.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">which@3.0.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">@cordova/eslint-config@5.0.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">jasmine@4.6.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">rewire@6.0.0</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1180">GH-1180</a> refactor!: drop platform binaries</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1169">GH-1169</a> chore!: Rename <code class="language-plaintext highlighter-rouge">Images.xcassets</code> to <code class="language-plaintext highlighter-rouge">Assets.xcassets</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1161">GH-1161</a> chore!: Breaking API cleanups</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1182">GH-1182</a> dep(dev)!: bump eslint w/ corrections</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1181">GH-1181</a> dep!: use latest dependencies
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">nyc@^15.1.0</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1249">GH-1249</a> feat: Add <code class="language-plaintext highlighter-rouge">LimitsNavigationsToAppBoundDomains</code> configuration key</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1320">GH-1320</a> feat: add <code class="language-plaintext highlighter-rouge">listTarget</code> api &amp; revert original bin file location</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1266">GH-1266</a> feat(plugman): support <code class="language-plaintext highlighter-rouge">framework</code> <code class="language-plaintext highlighter-rouge">link</code> attribute</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1276">GH-1276</a> feat: Support Apple Cloud Distribution signing</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1210">GH-1210</a> feat: support extending export options</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1251">GH-1251</a> feat: support multiple provisioning profiles</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1186">GH-1186</a> feat(versions): print error messages, not error objects</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1168">GH-1168</a> feat(catalyst): Enable Mac Catalyst support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1050">GH-1050</a> feat: add <code class="language-plaintext highlighter-rouge">CDVWebViewEngineConfigurationDelegate</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1154">GH-1154</a> feat: Swift Package Manager support for CordovaLib</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1354">GH-1354</a> fix: Various ObjC/template cleanups</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1341">GH-1341</a> fix: Try updating <code class="language-plaintext highlighter-rouge">Podfile</code> deployment target on prepare</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1343">GH-1343</a> fix: Apply new Xcode flags consistently across test projects</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1126">GH-1126</a> fix: replace of <code class="language-plaintext highlighter-rouge">podspec</code> variables in <code class="language-plaintext highlighter-rouge">Podfile</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1336">GH-1336</a> fix: Xcode 15 Beta</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1337">GH-1337</a> fix: make the WebView the first responder when it loads</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1326">GH-1326</a> fix: memory leak when removing the <code class="language-plaintext highlighter-rouge">CDVViewController</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1312">GH-1312</a> fix(create): Ensure unix paths in Xcode project file</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1315">GH-1315</a> fix(splashscreen): positioning after rotation</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1295">GH-1295</a> fix(<code class="language-plaintext highlighter-rouge">CDVPlugin</code>): swift init</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1255">GH-1255</a> fix: import type definitions from obsolete <code class="language-plaintext highlighter-rouge">cordova-plugin-splashscreen</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1170">GH-1170</a> fix(bin/create): set failing exit code on failure</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1171">GH-1171</a> fix(spec/create): handle <code class="language-plaintext highlighter-rouge">createAndBuild</code> promises</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1140">GH-1140</a> fix: split xcode project location by env separator</li>
+</ul>
+
+<p><strong>Refactors:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1206">GH-1206</a> refactor: platform version logic</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1204">GH-1204</a> refactor: move cordova minimum template</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1203">GH-1203</a> refactor!: do not copy JS lib to platform project</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1202">GH-1202</a> refactor: do not infer project root from script location</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1201">GH-1201</a> refactor(create): convert main implementation to class</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1200">GH-1200</a> refactor(create): sort functions in breadth-first call order</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1199">GH-1199</a> refactor(create): further cleanup</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1198">GH-1198</a> refactor(create): cleanup createProject</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1196">GH-1196</a> refactor: move project template out of bin w/ code changes</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1195">GH-1195</a> refactor(create): cleanup <code class="language-plaintext highlighter-rouge">copyTemplateFiles</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1194">GH-1194</a> refactor(create)!: move apple_* binaries &amp; cleanup <code class="language-plaintext highlighter-rouge">copyScripts</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1193">GH-1193</a> refactor: cleanup create script</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1190">GH-1190</a> refactor: replace superspawn with execa</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1188">GH-1188</a> refactor: hide implementation of build &amp; run</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1189">GH-1189</a> refactor(run): code cleanup</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1185">GH-1185</a> refactor(versions): DRY version binary code</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1167">GH-1167</a> refactor: Api class</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1158">GH-1158</a> refactor: replace <code class="language-plaintext highlighter-rouge">copy-www-build-step</code> script with build phase</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1032">GH-1032</a> refactor: update allow list name</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1116">GH-1116</a> refactor(projectFile): drop dependency on underscore</li>
+</ul>
+
+<p><strong>Chores:</strong></p>
+
+<ul>
+  <li>chore(rat): add auto generated xcode files to ignore list</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1339">GH-1339</a> chore: Remove unused <code class="language-plaintext highlighter-rouge">BackupWebStorage</code> preference</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1308">GH-1308</a> chore: remove long-unused <code class="language-plaintext highlighter-rouge">codeSignResourceRules</code> option</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1183">GH-1183</a> chore: remove unused and outdated <code class="language-plaintext highlighter-rouge">listStartedEmulators</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1174">GH-1174</a> chore: remove stale coffeescript tests</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1173">GH-1173</a> chore: Remove unused imports from template</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1160">GH-1160</a> chore(swiftpm): Fix up CordovaLib Swift Package</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1034">GH-1034</a> chore: remove more deprecated <code class="language-plaintext highlighter-rouge">UIWebView</code> things</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1145">GH-1145</a> chore: <code class="language-plaintext highlighter-rouge">npmrc</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1129">GH-1129</a> chore: rebuild <code class="language-plaintext highlighter-rouge">package-lock.json</code> to address reported npm audit vulnerabilities</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1105">GH-1105</a> chore: add undeclared dependency <code class="language-plaintext highlighter-rouge">underscore</code></li>
+</ul>
+
+<p><strong>Others:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1197">GH-1197</a> build: build <code class="language-plaintext highlighter-rouge">cordova.js</code> during npm prepare</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1317">GH-1317</a> ci: add node 20.x</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1307">GH-1307</a> ci: Drop NodeJS 14 tests for non-darwin jobs</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1277">GH-1277</a> ci(workflow): update dependencies</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1271">GH-1271</a> ci: remove Node 10-12 &amp; add Node 16-18.</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1237">GH-1237</a> dep: bump <code class="language-plaintext highlighter-rouge">simple-plist</code> from 1.3.0 to 1.3.1</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1208">GH-1208</a> dep: bump <code class="language-plaintext highlighter-rouge">jasmine@^3.10.0</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1187">GH-1187</a> test(version): merge two test suites into one</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1184">GH-1184</a> test(create): further increase timeouts to avoid false negatives</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1177">GH-1177</a> test(create): waste less time on name variants</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1179">GH-1179</a> test: simpler killing of running simulators</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1178">GH-1178</a> test(versions): increase test timeout when invoking pod</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1176">GH-1176</a> test(create): increase test timeout</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1133">GH-1133</a> doc: <code class="language-plaintext highlighter-rouge">README</code> improvements (cleaup, xcode debugging, etc)</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2023/05/22/cordova-cli-12.0.0.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2023/05/22/cordova-cli-12.0.0.html">Cordova CLI 12.0.0 & Internal Packages Released!</a>
+                    <div class="date"> 22 May 2023 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that we have just released a major...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2023/07/11/file-plugin-8.0.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2023/07/11/file-plugin-8.0.0.html">File Plugin 8.0.0 Released!</a>
+                    <div class="date"> 11 Jul 2023 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released an update...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

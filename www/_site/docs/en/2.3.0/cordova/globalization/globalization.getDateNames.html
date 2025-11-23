@@ -1,0 +1,72 @@
+<h1 id="globalizationgetdatenames">globalization.getDateNames</h1>
+
+<p>Returns an array of either the names of the months or days of the week according to the client’s user preferences and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDateNames(successCB, errorCB, options);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>It returns the array of names to the successCB callback with a properties object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code> property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.</p>
+
+<p>If there is an error obtaining the names, then the errorCB callback is invoked with a <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.UNKNOWN_ERROR.</p>
+
+<p><code class="language-plaintext highlighter-rouge">options.type</code> can be ‘narrow’, or ‘wide’.
+<code class="language-plaintext highlighter-rouge">options.item</code> can be ‘months’, or ‘days’.</p>
+
+<p>The default options are <code class="language-plaintext highlighter-rouge">{type:'wide', item:'months'}</code>.
+The options parameter is optional.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a series of 12 popup dialogs, one per month, with text similar to “month: January”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDateNames(
+  function (names) {
+    for (var i=0; i&lt;names.value.length; i++) {
+      alert('month: ' + names.value[i] + '\n');
+    }
+  },
+  function () {alert('Error getting names\n');},
+  {type:'wide', item:'months'}
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+              
+    function checkDateNames() {
+      navigator.globalization.getDateNames(
+        function (names) {
+          for (var i=0; i&lt;names.value.length; i++) {
+            alert('month: ' + names.value[i] + '\n');
+          }
+        },
+        function () {alert('Error getting names\n');},
+        {type:'wide', item:'months'}
+      );
+    }
+                                        
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDateNames()"&gt;Click for date names&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

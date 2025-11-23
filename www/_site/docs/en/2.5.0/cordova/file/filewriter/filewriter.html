@@ -1,0 +1,177 @@
+<h1 id="filewriter">FileWriter</h1>
+
+<p>FileWriter is an object that allows one to write a file.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>readyState:</strong> One of the three states the reader can be in INIT, WRITING or DONE.</li>
+  <li><strong>fileName:</strong> The name of the file to be written. <em>(DOMString)</em></li>
+  <li><strong>length:</strong> The length of the file to be written. <em>(long)</em></li>
+  <li><strong>position:</strong> The current position of the file pointer. <em>(long)</em></li>
+  <li><strong>error:</strong> An object containing errors. <em>(FileError)</em></li>
+  <li><strong>onwritestart:</strong> Called when the write starts. . <em>(Function)</em></li>
+  <li><strong>onprogress:</strong> Called while writing the file, reports progress (progress.loaded/progress.total). <em>(Function)</em> -NOT SUPPORTED</li>
+  <li><strong>onwrite:</strong> Called when the request has completed successfully.  <em>(Function)</em></li>
+  <li><strong>onabort:</strong> Called when the write has been aborted. For instance, by invoking the abort() method. <em>(Function)</em></li>
+  <li><strong>onerror:</strong> Called when the write has failed. <em>(Function)</em></li>
+  <li><strong>onwriteend:</strong> Called when the request has completed (either in success or failure).  <em>(Function)</em></li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>abort</strong>: Aborts writing file.</li>
+  <li><strong>seek</strong>: Moves the file pointer to the byte specified.</li>
+  <li><strong>truncate</strong>: Shortens the file to the length specified.</li>
+  <li><strong>write</strong>: Writes data to the file with a UTF-8 encoding.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">FileWriter</code> object is a way to write files to the device file system (UTF-8 encoded).  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.</p>
+
+<p>A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file’s position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter’s constructor to begin writing to the end of the file.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="seek-quick-example">Seek Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+	// fast forwards file pointer to end of file
+	writer.seek(writer.length);	
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="truncate-quick-example">Truncate Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+	writer.truncate(10);	
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="write-quick-example">Write Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+	writer.onwrite = function(evt) {
+    	console.log("write success");
+    };
+	writer.write("some sample text");
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="append-quick-example">Append Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+	writer.onwrite = function(evt) {
+    	console.log("write success");
+    };
+    writer.seek(writer.length);
+	writer.write("appended text");
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="abort-quick-example">Abort Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function win(writer) {
+	writer.onwrite = function(evt) {
+    	console.log("write success");
+    };
+	writer.write("some sample text");
+	writer.abort();
+};
+
+var fail = function(evt) {
+	console.log(error.code);
+};
+
+entry.createWriter(win, fail);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;FileWriter Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+    }
+
+    function gotFS(fileSystem) {
+        fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+    }
+
+    function gotFileEntry(fileEntry) {
+        fileEntry.createWriter(gotFileWriter, fail);
+    }
+
+    function gotFileWriter(writer) {
+        writer.onwriteend = function(evt) {
+            console.log("contents of file now 'some sample text'");
+            writer.truncate(11);  
+            writer.onwriteend = function(evt) {
+                console.log("contents of file now 'some sample'");
+                writer.seek(4);
+                writer.write(" different text");
+                writer.onwriteend = function(evt){
+                    console.log("contents of file now 'some different text'");
+                }
+            };
+        };
+        writer.write("some sample text");
+    }
+
+    function fail(error) {
+        console.log(error.code);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Write File&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

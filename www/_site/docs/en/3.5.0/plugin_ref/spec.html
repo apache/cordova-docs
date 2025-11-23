@@ -1,0 +1,655 @@
+<h1 id="plugin-specification">Plugin Specification</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin.xml</code> file is an XML document in the <code class="language-plaintext highlighter-rouge">plugins</code> namespace:
+<code class="language-plaintext highlighter-rouge">http://apache.org/cordova/ns/plugins/1.0</code>. It contains a top-level
+<code class="language-plaintext highlighter-rouge">plugin</code> element that defines the plugin, and children that define the
+structure of the plugin.</p>
+
+<p>A sample plugin element:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.alunny.foo"
+    version="1.0.2"&gt;
+</code></pre></div></div>
+
+<h2 id="plugin-element"><em>plugin</em> Element</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin</code> element is the plugin manifest’s top-level element. It
+features the following attributes:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">xmlns</code> (required):
+The plugin namespace, <code class="language-plaintext highlighter-rouge">http://apache.org/cordova/ns/plugins/1.0</code>. If
+the document contains XML from other namespaces, such as tags to be
+added to the <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> file, those namespaces should
+also be included in the top-level element.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">id</code> (required):
+A reverse-domain style identifier for the plugin, such as
+<code class="language-plaintext highlighter-rouge">com.alunny.foo</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">version</code> (required):
+A version number for the plugin, that matches the following
+major-minor-patch style regular expression:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ^\d+[.]\d+[.]\d+$
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="engines-and-engine-elements"><em>engines</em> and <em>engine</em> Elements</h2>
+
+<p>The child elements of the <code class="language-plaintext highlighter-rouge">&lt;engines&gt;</code> element specify versions of
+Apache Cordova-based frameworks that this plugin supports. An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
+    &lt;engine name="cordova" version="1.7.0" /&gt;
+    &lt;engine name="cordova" version="1.8.1" /&gt;
+    &lt;engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/&gt;
+&lt;/engines&gt;
+</code></pre></div></div>
+
+<p>Similar to the <code class="language-plaintext highlighter-rouge">&lt;plugin&gt;</code> element’s <code class="language-plaintext highlighter-rouge">version</code> attribute, the specified
+version string should match a major-minor-patch string conforming to
+the regular expression:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ^\d+[.]\d+[.]\d+$
+</code></pre></div></div>
+
+<p>Engine elements may also specify fuzzy matches to avoid repetition,
+and to reduce maintenance when the underlying platform is updated.
+Tools should support a minimum of <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;</code> and <code class="language-plaintext highlighter-rouge">&lt;=</code>, for
+example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
+    &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
+    &lt;engine name="cordova" version="&lt;1.8.1" /&gt;
+&lt;/engines&gt;
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;engine&gt;</code> tags also has default support for all of the main platforms Cordova exists on. 
+Specifying the <code class="language-plaintext highlighter-rouge">cordova</code> engine tag means that all versions of Cordova on any platform must
+satisfy the engine version attribute. You may also list specific platforms and their versions
+in order to override the catch-all <code class="language-plaintext highlighter-rouge">cordova</code> engine:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
+    &lt;engine name="cordova" version="&gt;=1.7.0" /&gt;
+    &lt;engine name="cordova-android" version="&gt;=1.8.0" /&gt;
+    &lt;engine name="cordova-ios" version="&gt;=1.7.1" /&gt;
+&lt;/engines&gt;
+</code></pre></div></div>
+
+<p>Here’s a list of the default engines that the ‘<engine>' tag supports:</engine></p>
+<ul>
+  <li>‘cordova’</li>
+  <li>‘cordova-plugman’</li>
+  <li>‘cordova-amazon-fireos’</li>
+  <li>‘cordova-android’</li>
+  <li>‘cordova-ios’</li>
+  <li>‘cordova-blackberry10’</li>
+  <li>‘cordova-wp8’</li>
+  <li>‘cordova-windows8’</li>
+  <li>‘android-sdk’ // returns the highest Android api level installed</li>
+  <li>‘apple-xcode’ // returns the xcode version</li>
+  <li>‘apple-ios’ // returns the highest iOS version installed</li>
+  <li>‘apple-osx’ // returns the OSX version</li>
+  <li>‘blackberry-ndk’ // returns the native blackberry SDK version</li>
+</ul>
+
+<p>Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;engines&gt;
+    &lt;engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/&gt;
+    &lt;engine name="another_framework" version="&gt;0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/&gt;
+    &lt;engine name="even_more_framework" version="&gt;=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/&gt;
+&lt;/engines&gt;
+</code></pre></div></div>
+
+<p>A custom Apache Cordova-based framework requires that an engine element includes the following attributes: 
+<code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">version</code>, <code class="language-plaintext highlighter-rouge">scriptSrc</code>, and <code class="language-plaintext highlighter-rouge">platform</code>.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">name</code> (required): A human-readable name for your custom framework.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">version</code> (required): The version that your framework must have in order to install.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">scriptSrc</code> (required): The script file that tells plugman what version of the custom framework is. 
+Ideally, this file should be within the top level directory of your plugin directory.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">platform</code> (required): Which platforms that your framework supports. You may use the wildcard <code class="language-plaintext highlighter-rouge">*</code>
+to say supported for all platforms, specify multiple with a pipe character like <code class="language-plaintext highlighter-rouge">android|ios|blackberry10</code> 
+or just a single platform like <code class="language-plaintext highlighter-rouge">android</code>.</p>
+  </li>
+</ul>
+
+<p>plugman aborts with a non-zero code for any plugin whose target
+project does not meet the engine’s constraints.</p>
+
+<p>If no <code class="language-plaintext highlighter-rouge">&lt;engine&gt;</code> tags are specified, plugman attempts to install into
+the specified cordova project directory blindly.</p>
+
+<h2 id="name-element"><em>name</em> Element</h2>
+
+<p>A human-readable name for the plugin, whose text content contains the
+name of the plugin. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;name&gt;Foo&lt;/name&gt;
+</code></pre></div></div>
+
+<p>This element does not (yet) handle localization.</p>
+
+<h2 id="description-element"><em>description</em> Element</h2>
+
+<p>A human-readable description for the plugin. The text content of the element contains
+the description of the plugin. An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;description&gt;Foo plugin description&lt;/description&gt;
+</code></pre></div></div>
+
+<p>This element does not (yet) handle localization.</p>
+
+<h2 id="author-element"><em>author</em> Element</h2>
+
+<p>Plugin author name. The text content of the element contains
+the name of the plugin author. An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;author&gt;Foo plugin description&lt;/author&gt;
+</code></pre></div></div>
+
+<h2 id="keywords-element"><em>keywords</em> Element</h2>
+
+<p>Plugin keywords. The text content of the element contains comma separated keywords to describe the plugin. An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;keywords&gt;foo,bar&lt;/keywords&gt;
+</code></pre></div></div>
+
+<h2 id="license-element"><em>license</em> Element</h2>
+
+<p>Plugin license. The text content of the element contains the plugin license. An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;license&gt;Apache 2.0 License&lt;/license&gt;
+</code></pre></div></div>
+
+<h2 id="asset-element"><em>asset</em> Element</h2>
+
+<p>One or more elements listing the files or directories to be copied
+into a Cordova app’s <code class="language-plaintext highlighter-rouge">www</code> directory. Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- a single file, to be copied in the root directory --&gt;
+&lt;asset src="www/foo.js" target="foo.js" /&gt;
+&lt;!-- a directory, also to be copied in the root directory --&gt;
+&lt;asset src="www/foo" target="foo" /&gt;
+</code></pre></div></div>
+
+<p>All <code class="language-plaintext highlighter-rouge">&lt;asset&gt;</code> tags require both <code class="language-plaintext highlighter-rouge">src</code> and <code class="language-plaintext highlighter-rouge">target</code> attributes.
+Web-only plugins contains mostly <code class="language-plaintext highlighter-rouge">&lt;asset&gt;</code> elements. Any <code class="language-plaintext highlighter-rouge">&lt;asset&gt;</code>
+elements that are nested within <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> elements specify
+platform-specific web assets, as described below. Attributes include:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">src</code> (required): 
+Where the file or directory is located in the plugin package,
+relative to the <code class="language-plaintext highlighter-rouge">plugin.xml</code> document.  If a file does not exist at
+the specified <code class="language-plaintext highlighter-rouge">src</code> location, plugman stops and reverses the
+installation process, issues a notification about the conflict, and
+exits with a non-zero code.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">target</code> (required):</p>
+
+    <p>Where the file or directory should be located in the Cordova app,
+relative to the <code class="language-plaintext highlighter-rouge">www</code> directory.
+Assets can be targeted to subdirectories, for example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;asset src="www/new-foo.js" target="js/experimental/foo.js" /&gt;
+</code></pre></div>    </div>
+
+    <p>creates the <code class="language-plaintext highlighter-rouge">js/experimental</code> directory within the <code class="language-plaintext highlighter-rouge">www</code> directory,
+unless already present, then copies the <code class="language-plaintext highlighter-rouge">new-foo.js</code> file and
+renames it <code class="language-plaintext highlighter-rouge">foo.js</code>.  If a file already exists at the target
+location, plugman stops and reverses the installation process,
+issues a notification about the conflict, and exits with a non-zero
+code.</p>
+  </li>
+</ul>
+
+<h2 id="js-module-element"><em>js-module</em> Element</h2>
+
+<p>Most plugins include one or more JavaScript files.  Each <code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code>
+tag corresponds to a JavaScript file, and prevents the plugin’s users
+from having to add a <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag for each file.  While <code class="language-plaintext highlighter-rouge">&lt;asset&gt;</code>
+tags simply copy a file from the plugin subdirectory into <code class="language-plaintext highlighter-rouge">www</code>,
+<code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code> tags are much more sophisticated. They look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;js-module src="socket.js" name="Socket"&gt;
+    &lt;clobbers target="chrome.socket" /&gt;
+&lt;/js-module&gt;
+</code></pre></div></div>
+
+<p>When installing a plugin with the example above, <code class="language-plaintext highlighter-rouge">socket.js</code> is copied
+to <code class="language-plaintext highlighter-rouge">www/plugins/my.plugin.id/socket.js</code>, and added as an entry to
+<code class="language-plaintext highlighter-rouge">www/cordova_plugins.js</code>. At load time, code in <code class="language-plaintext highlighter-rouge">cordova.js</code> uses XHR
+to read each file and inject a <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag into HTML. It adds a
+mapping to clobber or merge as appropriate, as described below.</p>
+
+<p><em>Do not</em> wrap the file with <code class="language-plaintext highlighter-rouge">cordova.define</code>, as it is added
+automatically. The module is wrapped in a closure, with <code class="language-plaintext highlighter-rouge">module</code>,
+<code class="language-plaintext highlighter-rouge">exports</code>, and <code class="language-plaintext highlighter-rouge">require</code> in scope, as is normal for AMD modules.</p>
+
+<p>Details for the <code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code> tag:</p>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">src</code> references a file in the plugin directory relative to the
+<code class="language-plaintext highlighter-rouge">plugin.xml</code> file.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">name</code> provides the last part of the module name. It can
+generally be whatever you like, and it only matters if you want to
+use <code class="language-plaintext highlighter-rouge">cordova.require</code> to import other parts of your plugins in your
+JavaScript code. The module name for a <code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code> is your
+plugin’s <code class="language-plaintext highlighter-rouge">id</code> followed by the value of <code class="language-plaintext highlighter-rouge">name</code>. For the example
+above, with an <code class="language-plaintext highlighter-rouge">id</code> of <code class="language-plaintext highlighter-rouge">chrome.socket</code>, the module name is
+<code class="language-plaintext highlighter-rouge">chrome.socket.Socket</code>.</p>
+  </li>
+  <li>
+    <p>Three tags are allowed within <code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code>:</p>
+
+    <ul>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">&lt;clobbers target="some.value"/&gt;</code> indicates that the
+<code class="language-plaintext highlighter-rouge">module.exports</code> is inserted into the <code class="language-plaintext highlighter-rouge">window</code> object as
+<code class="language-plaintext highlighter-rouge">window.some.value</code>. You can have as many <code class="language-plaintext highlighter-rouge">&lt;clobbers&gt;</code> as you
+like. Any object not available on <code class="language-plaintext highlighter-rouge">window</code> is created.</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">&lt;merges target="some.value"/&gt;</code> indicates that the module
+should be merged with any existing value at <code class="language-plaintext highlighter-rouge">window.some.value</code>.
+If any key already exists, the module’s version overrides the
+original. You can have as many <code class="language-plaintext highlighter-rouge">&lt;merges&gt;</code> as you like. Any
+object not available on <code class="language-plaintext highlighter-rouge">window</code> is created.</p>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">&lt;runs/&gt;</code> means that your code should be specified with
+<code class="language-plaintext highlighter-rouge">cordova.require</code>, but not installed on the <code class="language-plaintext highlighter-rouge">window</code>
+object. This is useful when initializing the module, attaching
+event handlers or otherwise. You can only have up to one
+<code class="language-plaintext highlighter-rouge">&lt;runs/&gt;</code> tag. Note that including a <code class="language-plaintext highlighter-rouge">&lt;runs/&gt;</code> with
+<code class="language-plaintext highlighter-rouge">&lt;clobbers/&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;merges/&gt;</code> is redundant, since they also
+<code class="language-plaintext highlighter-rouge">cordova.require</code> your module.</p>
+      </li>
+      <li>
+        <p>An empty <code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code> still loads and can be accessed in other
+modules via <code class="language-plaintext highlighter-rouge">cordova.require</code>.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>If <code class="language-plaintext highlighter-rouge">src</code> does not resolve to an existing file, plugman stops and
+reverses the installation, issues a notification of the problem, and
+exits with a non-zero code.</p>
+
+<p>Nesting <code class="language-plaintext highlighter-rouge">&lt;js-module&gt;</code> elements within <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> declares
+platform-specific JavaScript module bindings.</p>
+
+<h2 id="dependency-element"><em>dependency</em> Element</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;dependency&gt;</code> tag allows you to specify other plugins on which the
+current plugin depends. While future versions will access them from
+plugin repositories, in the short term plugins are directly referenced
+as URLs by <code class="language-plaintext highlighter-rouge">&lt;dependency&gt;</code> tags. They are formatted as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" /&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">id</code>: provides the ID of the plugin. It should be globally unique,
+and expressed in reverse-domain style. While neither of these
+restrictions is currently enforced, they may be in the future.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">url</code>: A URL for the plugin. This should reference a git repository,
+which plugman attempts to clone.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">commit</code>: This is any git reference understood by <code class="language-plaintext highlighter-rouge">git checkout</code>: a
+branch or tag name (e.g., <code class="language-plaintext highlighter-rouge">master</code>, <code class="language-plaintext highlighter-rouge">0.3.1</code>), or a commit hash (e.g.,
+<code class="language-plaintext highlighter-rouge">975ddb228af811dd8bb37ed1dfd092a3d05295f9</code>).</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">subdir</code>: Specifies that the targeted plugin dependency exists as a
+subdirectory of the git repository. This is helpful because it
+allows the repository to contain several related plugins, each
+specified individually.</p>
+  </li>
+</ul>
+
+<p>In the future, version constraints will be introduced, and a plugin
+repository will exist to support fetching by name instead of explicit
+URLs.</p>
+
+<h3 id="relative-dependency-paths">Relative Dependency Paths</h3>
+
+<p>If you set the <code class="language-plaintext highlighter-rouge">url</code> of a <code class="language-plaintext highlighter-rouge">&lt;dependency&gt;</code> tag to <code class="language-plaintext highlighter-rouge">"."</code> and provide a
+<code class="language-plaintext highlighter-rouge">subdir</code>, the dependent plugin is installed from the same local or
+remote git repository as the parent plugin that specifies the
+<code class="language-plaintext highlighter-rouge">&lt;dependency&gt;</code> tag.</p>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">subdir</code> always specifies a path relative to the <em>root</em>
+of the git repository, not the parent plugin. This is true even if you
+installed the plugin with a local path directly to it. Plugman finds
+the root of the git repository and then finds the other plugin from
+there.</p>
+
+<h2 id="platform-element"><em>platform</em> Element</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> tag identifies platforms that have associated native
+code or require modifications to their configuration files. Tools
+using this specification can identify supported platforms and install
+the code into Cordova projects.</p>
+
+<p>Plugins without <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> tags are assumed to be JavaScript-only,
+and therefore installable on any and all platforms.</p>
+
+<p>A sample platform tag:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="android"&gt;
+    &lt;!-- android-specific elements --&gt;
+&lt;/platform&gt;
+&lt;platform name="ios"&gt;
+    &lt;!-- ios-specific elements --&gt;
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<p>The required <code class="language-plaintext highlighter-rouge">name</code> attribute identifies a platform as supported,
+associating the element’s children with that platform.</p>
+
+<p>Platform names should be lowercase. Platform names, as arbitrarily
+chosen, are listed:</p>
+
+<ul>
+  <li>amazon-fireos</li>
+  <li>android</li>
+  <li>blackberry10</li>
+  <li>ios</li>
+  <li>wp8</li>
+</ul>
+
+<h2 id="source-file-element"><em>source-file</em> Element</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;source-file&gt;</code> element identifies executable source code that
+should be installed into a project. Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- android --&gt;
+&lt;source-file src="src/android/Foo.java"
+                target-dir="src/com/alunny/foo" /&gt;
+&lt;!-- ios --&gt;
+&lt;source-file src="src/ios/CDVFoo.m" /&gt;
+&lt;source-file src="src/ios/someLib.a" framework="true" /&gt;
+&lt;source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" /&gt;
+</code></pre></div></div>
+
+<p>It supports the following attributes:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">src</code> (required):
+Location of the file relative to <code class="language-plaintext highlighter-rouge">plugin.xml</code>.  If the <code class="language-plaintext highlighter-rouge">src</code> file
+can’t be found, plugman stops and reverses the installation, issues
+a notification about the problem, and exits with a non-zero code.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">target-dir</code>:
+A directory into which the files should be copied, relative to the
+root of the Cordova project.  In practice, this is most important
+for Java-based platforms, where a file in the <code class="language-plaintext highlighter-rouge">com.alunny.foo</code>
+package must be located within the <code class="language-plaintext highlighter-rouge">com/alunny/foo</code> directory. For
+platforms where the source directory is not important, this
+attribute should be omitted.</p>
+
+    <p>As with assets, if the <code class="language-plaintext highlighter-rouge">target</code> of a <code class="language-plaintext highlighter-rouge">source-file</code> would overwrite
+an existing file, plugman stops and reverses the installation,
+issues a notification about the problem, and exits with a non-zero
+code.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">framework</code> (iOS only):
+If set to <code class="language-plaintext highlighter-rouge">true</code>, also adds the specified file as a framework to the
+project.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">compiler-flags</code> (iOS only):
+If set, assigns the specified compiler flags for the particular
+source file.</p>
+  </li>
+</ul>
+
+<h2 id="config-file-element"><em>config-file</em> Element</h2>
+
+<p>Identifies an XML-based configuration file to be modified, where in
+that document the modification should take place, and what should be
+modified.</p>
+
+<p>Two file types that have been tested for modification with this
+element are <code class="language-plaintext highlighter-rouge">xml</code> and <code class="language-plaintext highlighter-rouge">plist</code> files.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">config-file</code> element only allows you to append new children to an
+XML document tree. The children are XML literals to be inserted in the
+target document.</p>
+
+<p>Example for XML:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="AndroidManifest.xml" parent="/manifest/application"&gt;
+    &lt;activity android:name="com.foo.Foo" android:label="@string/app_name"&gt;
+        &lt;intent-filter&gt;
+        &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+&lt;/config-file&gt;
+</code></pre></div></div>
+
+<p>Example for <code class="language-plaintext highlighter-rouge">plist</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="*-Info.plist" parent="CFBundleURLTypes"&gt;
+    &lt;array&gt;
+        &lt;dict&gt;
+            &lt;key&gt;PackageName&lt;/key&gt;
+            &lt;string&gt;$PACKAGE_NAME&lt;/string&gt;
+        &lt;/dict&gt;
+    &lt;/array&gt;
+&lt;/config-file&gt;
+</code></pre></div></div>
+
+<p>It supports the following attributes:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">target</code>:</p>
+
+    <p>The file to be modified, and the path relative to the root of the
+Cordova project.</p>
+
+    <p>The target can include wildcard (<code class="language-plaintext highlighter-rouge">*</code>) elements. In this case,
+plugman recursively searches through the project directory structure
+and uses the first match.</p>
+
+    <p>On iOS, the location of configuration files relative to the project
+directory root is not known, so specifying a target of <code class="language-plaintext highlighter-rouge">config.xml</code>
+resolves to <code class="language-plaintext highlighter-rouge">cordova-ios-project/MyAppName/config.xml</code>.</p>
+
+    <p>If the specified file does not exist, the tool ignores the
+configuration change and continues installation.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">parent</code>: An XPath selector referencing the parent of the elements
+to be added to the config file. If you use absolute selectors, you
+can use a wildcard (<code class="language-plaintext highlighter-rouge">*</code>) to specify the root element,
+e.g., <code class="language-plaintext highlighter-rouge">/*/plugins</code>.</p>
+
+    <p>For <code class="language-plaintext highlighter-rouge">plist</code> files, the <code class="language-plaintext highlighter-rouge">parent</code> determines under what parent key the
+specified XML should be inserted.</p>
+
+    <p>If the selector does not resolve to a child of the specified
+document, the tool stops and reverses the installation process,
+issues a warning, and exits with a non-zero code.</p>
+  </li>
+</ul>
+
+<h2 id="plugins-plist-element"><em>plugins-plist</em> Element</h2>
+
+<p>This is <em>outdated</em> as it only applies to cordova-ios 2.2.0 and
+below. Use the <code class="language-plaintext highlighter-rouge">&lt;config-file&gt;</code> tag for newer versions of Cordova.</p>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;config-file target="config.xml" parent="/widget/plugins"&gt;
+    &lt;feature name="ChildBrowser"&gt;
+        &lt;param name="ios-package" value="ChildBrowserCommand"/&gt;
+    &lt;/feature&gt;
+&lt;/config-file&gt;
+</code></pre></div></div>
+
+<p>Specifies a key and value to append to the correct <code class="language-plaintext highlighter-rouge">AppInfo.plist</code>
+file in an iOS Cordova project. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugins-plist key="Foo" string="CDVFoo" /&gt;
+</code></pre></div></div>
+
+<h2 id="resource-file-and-header-file-elements"><em>resource-file</em> and <em>header-file</em> Elements</h2>
+
+<p>Like source files, but specifically for platforms such as iOS that
+distinguish between source files, headers, and resources. iOS Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;resource-file src="CDVFoo.bundle" /&gt;
+&lt;resource-file src="CDVFooViewController.xib" /&gt;
+&lt;header-file src="CDVFoo.h" /&gt;
+</code></pre></div></div>
+
+<p>Android example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" /&gt;
+</code></pre></div></div>
+
+<h2 id="lib-file-element"><em>lib-file</em> Element</h2>
+
+<p>Like source, resource, and header files, but specifically for
+platforms such as BlackBerry 10 that use user-generated libraries.
+Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" /&gt;
+&lt;lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" /&gt;
+</code></pre></div></div>
+
+<p>Supported attributes:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">src</code> (required):
+The location of the file relative to <code class="language-plaintext highlighter-rouge">plugin.xml</code>.
+If <code class="language-plaintext highlighter-rouge">src</code> can’t be found, plugman stops and reverses the
+installation, issues a warning about the problem, and exits with a
+non-zero code.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">arch</code>: The architecture for which the <code class="language-plaintext highlighter-rouge">.so</code> file has been built,
+either <code class="language-plaintext highlighter-rouge">device</code> or <code class="language-plaintext highlighter-rouge">simulator</code>.</p>
+  </li>
+</ul>
+
+<h2 id="framework-element"><em>framework</em> Element</h2>
+
+<p>Identifies a framework (usually part of the OS/platform) on which the plugin depends.</p>
+
+<p>Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;framework src="libsqlite3.dylib" /&gt;
+&lt;framework src="social.framework" weak="true" /&gt;
+&lt;framework src="relative/path/to/my.framework" custom="true" /&gt;
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">src</code> attribute identifies the framework, which plugman attempts
+to add to the Cordova project, in the correct fashion for a given
+platform.</p>
+
+<p>The optional <code class="language-plaintext highlighter-rouge">weak</code> attribute is a boolean indicating whether the
+framework should be weakly linked. The default is <code class="language-plaintext highlighter-rouge">false</code>.</p>
+
+<p>The optional <code class="language-plaintext highlighter-rouge">custom</code> attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is <code class="language-plaintext highlighter-rouge">false</code>.</p>
+
+<h2 id="info-element"><em>info</em> Element</h2>
+
+<p>Additional information provided to users. This is useful when you
+require extra steps that can’t be easily automated or are beyond
+plugman’s scope.  Examples:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;info&gt;
+You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
+
+You need to add the following line to the `local.properties`:
+    
+android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+&lt;/info&gt;
+</code></pre></div></div>
+
+<h2 id="variables">Variables</h2>
+
+<p>In certain cases, a plugin may need to make configuration changes
+dependent on the target application. For example, to register for C2DM
+on Android, an app whose package id is <code class="language-plaintext highlighter-rouge">com.alunny.message</code> would
+require a permission such as:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission
+android:name="com.alunny.message.permission.C2D_MESSAGE"/&gt;
+</code></pre></div></div>
+
+<p>In such cases where the content inserted from the <code class="language-plaintext highlighter-rouge">plugin.xml</code> file is
+not known ahead of time, variables can be indicated by a dollar-sign
+followed by a series of capital letters, digits, or underscores. For
+the above example, the <code class="language-plaintext highlighter-rouge">plugin.xml</code> file would include this tag:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission
+android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/&gt;
+</code></pre></div></div>
+
+<p>plugman replaces variable references with the specified value, or the
+empty string if not found. The value of the variable reference may be
+detected (in this case, from the <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> file) or
+specified by the user of the tool; the exact process is dependent on
+the particular tool.</p>
+
+<p>plugman can request users to specify a plugin’s required
+variables. For example, API keys for C2M and Google Maps can be
+specified as a command-line argument:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+</code></pre></div></div>
+
+<p>To make the variable mandatory, the <code class="language-plaintext highlighter-rouge">&lt;platform&gt;</code> tag needs to contain
+a <code class="language-plaintext highlighter-rouge">&lt;preference&gt;</code> tag. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="API_KEY" /&gt;
+</code></pre></div></div>
+
+<p>plugman checks that these required preferences are passed in.  If not,
+it should warn the user how to pass the variable in and exit with a
+non-zero code.</p>
+
+<p>Certain variable names should be reserved, as listed below.</p>
+
+<h2 id="package_name">$PACKAGE_NAME</h2>
+
+<p>The reverse-domain style unique identifier for the package,
+corresponding to the <code class="language-plaintext highlighter-rouge">CFBundleIdentifier</code> on iOS or the <code class="language-plaintext highlighter-rouge">package</code>
+attribute of the top-level <code class="language-plaintext highlighter-rouge">manifest</code> element in an
+<code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> file.</p>

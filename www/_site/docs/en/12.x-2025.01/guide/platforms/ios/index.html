@@ -1,0 +1,393 @@
+<h1 id="ios-platform-guide">iOS Platform Guide</h1>
+
+<p>This guide shows how to set up your SDK development environment to
+deploy Cordova apps for iOS devices such as iPhone and iPad,
+and how to optionally use iOS-centered command-line tools in your
+development workflow. You need to install the SDK tools regardless of
+whether you want to use these platform-centered shell tools
+or cross-platform Cordova CLI for development. For a comparison of the two
+development paths, see the <a href="../../overview/index.html#development-paths">Overview</a>.
+For details on the CLI, see <a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a>.</p>
+
+<h2 id="requirements-and-support">Requirements and Support</h2>
+
+<p>Apple® tools used for building iOS applications can only operate within the macOS environment. Xcode®, the primary tool for iOS application development, incorporates the iOS SDK (Software Development Kit). For submission to the Apple App Store℠, apps must be built using the most recent versions of these Apple tools.</p>
+
+<p>You can evaluate many Cordova features by utilizing the iOS simulator integrated with the iOS SDK and Xcode. However, testing all of an app’s device-specific functionalities requires an actual device before final submission to the App Store.</p>
+
+<p>The table below outlines Cordova-iOS’s prerequisites by version. Additionally, Xcode has its own set of system requirements and it is advisable to refer to the <a href="https://developer.apple.com/support/xcode/#:~:text=Minimum%20requirements%20and%20supported%C2%A0SDKs">Minimum requirements and supported SDKs</a> documentation for verification.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Cordova-iOS Version</th>
+            <th>iOS Minimum-Support</th>
+            <th>Tooling Version</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>7.x</td>
+            <td>11.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: &gt;=1.8.0</li>
+                    <li>ios-deploy: &gt;=1.9.2</li>
+                    <li>Node: &gt;=16.13.0</li>
+                    <li>Xcode (xcodebuild): &gt;=11.0.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>6.x</td>
+            <td>11.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: &gt;=1.8.0</li>
+                    <li>ios-deploy: &gt;=1.9.2</li>
+                    <li>Node: &gt;=10.0.0</li>
+                    <li>Xcode (xcodebuild): &gt;=11.0.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>5.x</td>
+            <td>10.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: &gt;=1.0.1</li>
+                    <li>ios-deploy: &gt;=1.9.2</li>
+                    <li>Node: &gt;=6.0.0</li>
+                    <li>Xcode (xcodebuild): &gt;=10.0.0</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="installing-the-requirements">Installing the Requirements</h2>
+
+<h3 id="xcode">Xcode</h3>
+
+<p>There are two ways to download Xcode:</p>
+
+<ul>
+  <li>
+    <p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
+available by searching for “Xcode” in the <strong>App Store</strong> application.</p>
+  </li>
+  <li>
+    <p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
+which requires registration as an Apple Developer.</p>
+  </li>
+</ul>
+
+<p>Once Xcode is installed, several command-line tools need to be enabled
+for Cordova to run. From the command line, run:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcode-select <span class="nt">--install</span>
+</code></pre></div></div>
+
+<h3 id="deployment-tools">Deployment Tools</h3>
+
+<p>The <a href="https://www.npmjs.org/package/ios-deploy">ios-deploy</a> tools allow you
+to launch iOS apps on an iOS Device from the command-line.</p>
+
+<p>Install ios-deploy via <a href="https://brew.sh/">Homebrew</a> by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>ios-deploy
+</code></pre></div></div>
+
+<h3 id="cocoapods">CocoaPods</h3>
+
+<p>The <a href="https://cocoapods.org/#install">CocoaPods</a> tools are needed to build iOS apps. A minimum version of 1.8.0 is required but the latest release is always recommended.</p>
+
+<p>To install CocoaPods, run the following from command-line terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>cocoapods
+</code></pre></div></div>
+
+<h2 id="project-configuration">Project Configuration</h2>
+
+<p>Installing Xcode will mostly set everything needed to get started with the native side of things.
+You should now be able to create and build a cordova project.
+For more details on installing and using the CLI, refer to <a href="../../cli/index.html">Create your first app</a> guide.</p>
+
+<h3 id="deploying-to-simulator">Deploying to Simulator</h3>
+
+<p>To preview the app in the iOS simulator:</p>
+
+<ol>
+  <li>
+    <p>Open the workspace file (<code class="language-plaintext highlighter-rouge">platforms/ios/HelloWorld.xcworkspace</code>) from Xcode, <em>or</em> from the command line:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>open ./platforms/ios/HelloWorld.xcworkspace/
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Make sure the <code class="language-plaintext highlighter-rouge">HelloWorld</code> project is selected in the left panel (1).</p>
+
+    <p><img src="/static/img/guide/platforms/ios/xcode10-run-project.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Select the intended device from the toolbar’s <strong>Scheme</strong> menu, such
+as the iPhone XR Simulator as highlighted in (2)</p>
+  </li>
+  <li>
+    <p>Press the <strong>Run</strong> button (3) in the same toolbar to the
+left of the <strong>Scheme</strong>. That builds, deploys, and runs the
+application in the simulator. A separate simulator application opens
+to display the app:</p>
+
+    <p><img src="/static/img/guide/platforms/ios/HelloWorld-running-xr.png" alt="" /></p>
+
+    <p>Only one simulator may run at a time, so if you want to test the app
+in a different simulator, you need to quit the simulator application
+and run a different target within Xcode.</p>
+  </li>
+</ol>
+
+<p>Xcode comes bundled with simulators for the latest versions of iPhone
+and iPad. Older versions may be available from the <strong>Xcode →
+Preferences… → Components</strong> panel.</p>
+
+<h3 id="deploying-to-device">Deploying to Device</h3>
+
+<p>For details about various requirements to deploy to a device, refer
+to the <em>Launch Your App On Devices</em> section of
+Apple’s
+<a href="https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html">About App Distribution Workflows</a>.
+Briefly, you need to do the following before deploying:</p>
+
+<ol>
+  <li>
+    <p>Create a <em>Provisioning Profile</em> within the
+<a href="https://developer.apple.com/ios/manage/overview/index.action">iOS Provisioning Portal</a>.
+You can use its <em>Development Provisioning Assistant</em> to create and
+install the profile and certificate Xcode requires.</p>
+  </li>
+  <li>
+    <p>Verify that the <em>Code Signing Identity</em> setting within the <em>Code Signing</em> section
+within the build settings is set to your provisioning profile
+name.</p>
+  </li>
+</ol>
+
+<p>To deploy to the device:</p>
+
+<ol>
+  <li>
+    <p>Use the USB cable to plug the device into your Mac.</p>
+  </li>
+  <li>
+    <p>Select the name of the project in the Xcode window’s <strong>Scheme</strong>
+drop-down list.</p>
+  </li>
+  <li>
+    <p>Select your device from the <strong>Device</strong> drop-down list. If it is
+plugged in via USB but still does not appear, press the
+<strong>Organizer</strong> button to resolve any errors.</p>
+  </li>
+  <li>
+    <p>Press the <strong>Run</strong> button to build, deploy and run the application
+on your device.</p>
+  </li>
+</ol>
+
+<h2 id="signing-an-app">Signing an App</h2>
+
+<p>First, you should read through the <a href="https://developer.apple.com/support/code-signing/">Code Signing Support Page</a>
+and the <a href="https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html">App Distribution Workflows</a>.</p>
+
+<h3 id="using-flags">Using Flags</h3>
+
+<p>To sign an app, you need the following parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Flag</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Code Sign Identity</td>
+      <td><code class="language-plaintext highlighter-rouge">--codeSignIdentity</code></td>
+      <td>Code signing identity to use for signing. It can be created with Xcode and added to your keychain. Starting with Xcode 8 you should use <code class="language-plaintext highlighter-rouge">--codeSignIdentity="iPhone Developer"</code> both for <code class="language-plaintext highlighter-rouge">debug</code> and <code class="language-plaintext highlighter-rouge">release</code>.</td>
+    </tr>
+    <tr>
+      <td>Development Team</td>
+      <td><code class="language-plaintext highlighter-rouge">--developmentTeam</code></td>
+      <td>The development team (<a href="https://developer.apple.com/account/#/membership/">Team ID</a>) to use for code signing. You would use this setting and a simplified Code Sign Identity (i.e. just ‘iPhone Developer’) to sign your apps, you do not need to provide a Provisioning Profile.</td>
+    </tr>
+    <tr>
+      <td>Packaging Type</td>
+      <td><code class="language-plaintext highlighter-rouge">--packageType</code></td>
+      <td>This will determine what type of build is generated by Xcode. Valid options are <code class="language-plaintext highlighter-rouge">development</code> (the default), <code class="language-plaintext highlighter-rouge">enterprise</code>, <code class="language-plaintext highlighter-rouge">ad-hoc</code>, and <code class="language-plaintext highlighter-rouge">app-store</code>.</td>
+    </tr>
+    <tr>
+      <td>Provisioning Profile</td>
+      <td><code class="language-plaintext highlighter-rouge">--provisioningProfile</code></td>
+      <td>(Optional) GUID of the provisioning profile to be used for manual signing. It is copied here on your Mac: <code class="language-plaintext highlighter-rouge">~/Library/MobileDevice/Provisioning\ Profiles/</code>. Opening it in a text editor, you can find the GUID which needs to be specified here if using manual signing.</td>
+    </tr>
+    <tr>
+      <td>Automatic Provisioning</td>
+      <td><code class="language-plaintext highlighter-rouge">--automaticProvisioning</code></td>
+      <td>(Optional) Enable to allow Xcode to automatically manage provisioning profiles. Valid options are <code class="language-plaintext highlighter-rouge">false</code> (the default) and <code class="language-plaintext highlighter-rouge">true</code>.</td>
+    </tr>
+    <tr>
+      <td>Authentication Key Path</td>
+      <td><code class="language-plaintext highlighter-rouge">--authenticationKeyPath</code></td>
+      <td>(Optional) The absolute path to an <a href="https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api">App Store Connect API</a> p8 key file, for automatic distribution signing. A relative path will not work.</td>
+    </tr>
+    <tr>
+      <td>Authentication Key ID</td>
+      <td><code class="language-plaintext highlighter-rouge">--authenticationKeyID</code></td>
+      <td>(Optional) The key ID for the App Store Connect API key file, for automatic distribution signing.</td>
+    </tr>
+    <tr>
+      <td>Authentication Key Issuer ID</td>
+      <td><code class="language-plaintext highlighter-rouge">--authenticationKeyIssuerID</code></td>
+      <td>(Optional) The issuer ID value for the App Store Connect API credentials,for automatic distribution signing.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>These parameters can be specified using the command line arguments above to the Cordova CLI <code class="language-plaintext highlighter-rouge">build</code> or <code class="language-plaintext highlighter-rouge">run</code> commands.</p>
+
+<p><strong>Note</strong>: You should use double <code class="language-plaintext highlighter-rouge">--</code> to indicate that these are platform-specific arguments, for example:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development</code>.</p>
+
+<h3 id="using-buildjson">Using build.json</h3>
+
+<p>Alternatively, you could specify these flags in a build configuration file (default: <code class="language-plaintext highlighter-rouge">build.json</code> or add the <code class="language-plaintext highlighter-rouge">--buildConfig</code> flag to the same commands, so you can also use other file names e.g. <code class="language-plaintext highlighter-rouge">cordova build ios --buildConfig=../customBuild.json</code>). Here’s a sample of a build configuration file:</p>
+
+<p>For automatic signing, where provisioning profiles are managed automatically by Xcode (recommended):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ios"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Developer"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"automaticProvisioning"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authenticationKeyPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/absolute/path/to/AuthKey_D383SF739.p8"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authenticationKeyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"D383SF739"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authenticationKeyIssuerID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6053b7fe-68a8-4acb-89be-165aa6465141"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For manual signing, specifying the provisioning profiles by UUID:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"ios"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Development"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"926c2bd6-8de9-4c2f-8407-1016d2d12954"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"release"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"codeSignIdentity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iPhone Distribution"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provisioningProfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70f699ad-faf1-4adE-8fea-9d84738fb306"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"developmentTeam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FG35JLLMXX4A"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"packageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app-store"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>There is also support to mix and match command line arguments and parameters in <code class="language-plaintext highlighter-rouge">build.json</code>. Values from the command line arguments will get precedence.</p>
+
+<h2 id="xcode-build-flags">Xcode Build Flags</h2>
+
+<p>If you have a custom situation where you need to pass additional build flags to Xcode you would use one or more <code class="language-plaintext highlighter-rouge">--buildFlag</code> options to pass these flags to <code class="language-plaintext highlighter-rouge">xcodebuild</code>. If you use an <code class="language-plaintext highlighter-rouge">xcodebuild</code> built-in flag, it will show a warning.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
+cordova run --device --buildFlag="DEVELOPMENT_TEAM=FG35JLLMXX4A" --buildFlag="-scheme TestSchemeFlag"
+</code></pre></div></div>
+
+<p>You can also specify a <code class="language-plaintext highlighter-rouge">buildFlag</code> option in <a href="#using-buildjson"><code class="language-plaintext highlighter-rouge">build.json</code> above</a> (the value for the <code class="language-plaintext highlighter-rouge">buildFlag</code> key is a string or an array of strings).</p>
+
+<h2 id="debugging">Debugging</h2>
+
+<p>For details on the debugging tools that come with Xcode, see this <a href="https://developer.apple.com/support/debugging">article</a>
+and this <a href="https://developer.apple.com/videos/play/wwdc2014-413/">video</a>.</p>
+
+<h3 id="open-a-project-within-xcode">Open a Project within Xcode</h3>
+
+<p>Cordova for iOS projects can be opened in Xcode. This can be useful if
+you wish to use Xcode built in debugging/profiling tools or if you are
+developing iOS plugins. Please note that when opening your project in Xcode,
+it is recommended that you do NOT edit your code in the IDE. This will edit the code
+in the <code class="language-plaintext highlighter-rouge">platforms</code> folder of your project (not <code class="language-plaintext highlighter-rouge">www</code>), and changes are liable to be overwritten.
+Instead, edit the <code class="language-plaintext highlighter-rouge">www</code> folder and copy over your changes by running <code class="language-plaintext highlighter-rouge">cordova build</code>.</p>
+
+<p>Plugin developers wishing to edit their native code in the IDE should use the <code class="language-plaintext highlighter-rouge">--link</code> flag when adding their
+plugin to the project via cordova plugin add. This will link the files so that changes to the plugin files in the
+platforms folder are reflected in your plugin’s source folder (and vice versa).</p>
+
+<p>Once the ios platform is added to your project and built using <code class="language-plaintext highlighter-rouge">cordova build</code>, you can open it from
+within Xcode. Double-click to open the <code class="language-plaintext highlighter-rouge">${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcworkspace</code>
+file or open Xcode from your terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>open <span class="nt">-a</span> Xcode platforms/ios
+</code></pre></div></div>
+
+<p>The screen should look like this:</p>
+
+<p><img src="/static/img/guide/platforms/ios/xcode10-review-settings.png" alt="" /></p>
+
+<h2 id="platform-centered-workflow">Platform Centered Workflow</h2>
+
+<p>cordova-ios includes a number of scripts that allow the platform to be used
+without the full Cordova CLI. This development path may offer you a greater
+range of development options in certain situations than the cross-platform cordova CLI.
+For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components. Before using this
+development path, you must still configure the SDK environment
+as described in <a href="#link-requirements-and-support">Requirements and Support</a>
+above.</p>
+
+<p>For each of the scripts discussed below, refer to
+ <a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a> for more information on their
+arguments and usage. Each script has a name that matches the corresponding CLI
+command. For example, <code class="language-plaintext highlighter-rouge">cordova-ios/bin/create</code> is equivalent to
+<code class="language-plaintext highlighter-rouge">cordova create</code>.</p>
+
+<p>To get started, either download the cordova-ios package from
+<a href="https://www.npmjs.com/package/cordova-ios">npm</a> or
+<a href="https://github.com/apache/cordova-ios">Github</a>.</p>
+
+<p>To create a project using this package, run the <code class="language-plaintext highlighter-rouge">create</code> script in the <code class="language-plaintext highlighter-rouge">bin</code>
+folder:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-ios/bin/create ...
+</code></pre></div></div>
+
+<p>To run the app, use the <code class="language-plaintext highlighter-rouge">run</code> script in the <code class="language-plaintext highlighter-rouge">bin</code> folder:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-ios/bin/run
+</code></pre></div></div>
+
+<p>The created project will have a folder named <code class="language-plaintext highlighter-rouge">cordova</code> inside that contains
+scripts for the project-specific Cordova commands (e.g. <code class="language-plaintext highlighter-rouge">run</code>, <code class="language-plaintext highlighter-rouge">build</code>, etc.).</p>
+
+<p>To install plugins in this project, use the <a href="../../../plugin_ref/plugman.html">Cordova Plugman Utility</a>.</p>
+
+<h2 id="upgrading">Upgrading</h2>
+
+<p>Refer to <a href="./upgrade.html">this</a> article for instructions to upgrade your <code class="language-plaintext highlighter-rouge">cordova-ios</code> version.</p>
+
+<p>(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
+

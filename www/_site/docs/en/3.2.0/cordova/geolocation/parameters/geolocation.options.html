@@ -1,0 +1,26 @@
+<h1 id="geolocationoptions">geolocationOptions</h1>
+
+<p>Optional parameters to customize the retrieval of the geolocation
+<code class="language-plaintext highlighter-rouge">[Position](../Position/position.html)</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
+</code></pre></div></div>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li>
+    <p><strong>enableHighAccuracy</strong>: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a <code class="language-plaintext highlighter-rouge">[Position](../Position/position.html)</code> using network-based methods. Setting this property to <code class="language-plaintext highlighter-rouge">true</code> tells the framework to use more accurate methods, such as satellite positioning. <em>(Boolean)</em></p>
+  </li>
+  <li>
+    <p><strong>timeout</strong>: The maximum length of time (milliseconds) that is allowed to pass from the call to <code class="language-plaintext highlighter-rouge">[geolocation.getCurrentPosition](../geolocation.getCurrentPosition.html)</code> or <code class="language-plaintext highlighter-rouge">[geolocation.watchPosition](../geolocation.watchPosition.html)</code> until the corresponding <code class="language-plaintext highlighter-rouge">[geolocationSuccess](geolocationSuccess.html)</code> callback executes. If the <code class="language-plaintext highlighter-rouge">[geolocationSuccess](geolocationSuccess.html)</code> callback is not invoked within this time, the <code class="language-plaintext highlighter-rouge">[geolocationError](geolocationError.html)</code> callback is passed a <code class="language-plaintext highlighter-rouge">[PositionError](../PositionError/positionError.html).TIMEOUT</code> error code. (Note that when used in conjunction with <code class="language-plaintext highlighter-rouge">[geolocation.watchPosition](../geolocation.watchPosition.html)</code>, the <code class="language-plaintext highlighter-rouge">[geolocationError](geolocationError.html)</code> callback could be called on an interval every <code class="language-plaintext highlighter-rouge">timeout</code> milliseconds!) <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>maximumAge</strong>: Accept a cached position whose age is no greater than the specified time in milliseconds. <em>(Number)</em></p>
+  </li>
+</ul>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<p>Android 2.x emulators do not return a geolocation result unless the <code class="language-plaintext highlighter-rouge">enableHighAccuracy</code> option is set to <code class="language-plaintext highlighter-rouge">true</code>.</p>
+

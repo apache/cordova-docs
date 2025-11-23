@@ -1,0 +1,115 @@
+<h1 id="using-plugman-to-manage-plugins">Using Plugman to Manage Plugins</h1>
+
+<p>From version 3.0 onward, Cordova implements all device APIs as
+plugins, and leaves them disabled by default.  It also supports two
+different ways to add and remove plugins. The first is by using the
+<code class="language-plaintext highlighter-rouge">cordova</code> CLI described in <a href="../guide/cli/index.html">The Command-line Interface</a>. The second is
+by using a lower-level
+<a href="https://github.com/apache/cordova-plugman/">plugman</a>
+command-line interface. This guide concentrates on the second
+approach, which may be useful for developers who want to upgrade their
+version of Cordova, but who haven’t yet adopted the Cordova CLI in
+their workflow.</p>
+
+<p>For more information on plugman, see
+<a href="https://github.com/apache/cordova-plugman/blob/master/README.md">the README file in its repository</a>.</p>
+
+<h2 id="basic-commands">Basic Commands</h2>
+
+<p>To install plugman, you must have <a href="http://nodejs.org/">node</a> installed
+on your machine:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g plugman
+</code></pre></div></div>
+
+<p>Here is the syntax to add a plugin for each platform:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;name|url|path&gt; [--plugins_dir &lt;directory&gt;] [--www &lt;directory&gt;] [--variable &lt;name&gt;=&lt;value&gt; [--variable &lt;name&gt;=&lt;value&gt; ...]]
+</code></pre></div></div>
+
+<p>To uninstall a plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugman --uninstall --platform &lt;ios|android|blackberry10|wp7|wp8&gt; --project &lt;directory&gt; --plugin &lt;id&gt; [--www &lt;directory&gt;] [--plugins_dir &lt;directory&gt;]
+</code></pre></div></div>
+
+<h2 id="installing-core-plugins">Installing Core Plugins</h2>
+
+<p>The examples below <a href="../cordova/inappbrowser/inappbrowser.html">show</a> how to add plugins as needed so that any
+Cordova APIs you use in your project still work after you upgrade to
+version 3.0.  For each command, you need to select the target
+platform, and reference the platform’s project directory.</p>
+
+<ul>
+  <li>
+    <p>cordova-plugin-battery-status
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-camera
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-console
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-contacts
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-device
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-device-motion (accelerometer)
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-device-orientation (compass)
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-dialogs
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-file
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-file-transfer
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-geolocation
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-globalization
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-inappbrowser
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-media
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-media-capture
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-network-information
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-splashscreen
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git</directory></p>
+  </li>
+  <li>
+    <p>cordova-plugin-vibration
+  plugman –platform &lt;ios|android|blackberry10|wp7|wp8&gt; –project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git</directory></p>
+  </li>
+</ul>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-media-capture!">
+
+    <title>
+        
+            
+                Media-Capture Plugin 5.0.0 Released! - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/news/2023/08/18/media-capture-plugin-5.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Media-Capture Plugin 5.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">18 Aug 2023</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released an update for <code class="language-plaintext highlighter-rouge">cordova-plugin-media-capture</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media-capture">cordova-plugin-media-capture@5.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-media-capture
+cordova plugin add cordova-plugin-media-capture@5.0.0
+</code></pre></div></div>
+
+<h2 id="release-highlights">Release Highlights</h2>
+
+<h3 id="breaking-changes">Breaking Changes</h3>
+
+<ul>
+  <li>
+    <p><strong>Android 13+ Support</strong></p>
+
+    <p>Beginning from Android 13 (SDK 33), the <code class="language-plaintext highlighter-rouge">READ_EXTERNAL_STORAGE</code> permission no longer has any effect. Instead, this permission has been replaced with more granular permissions: <code class="language-plaintext highlighter-rouge">READ_MEDIA_IMAGES</code>, <code class="language-plaintext highlighter-rouge">READ_MEDIA_VIDEO</code>, and <code class="language-plaintext highlighter-rouge">READ_MEDIA_AUDIO</code>. Also the <code class="language-plaintext highlighter-rouge">WRITE_EXTERNAL_STORAGE</code> has <a href="https://developer.android.com/reference/android/Manifest.permission#WRITE_EXTERNAL_STORAGE">stopped providing write access starting from API level 30 and above</a>.</p>
+
+    <p>To adapt to this change, we have introduced these three new permissions. This ensures that the existing functionality and behavior related to reading various media file are maintained for Android 13 and higher versions.</p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">READ_EXTERNAL_STORAGE</code> and  <code class="language-plaintext highlighter-rouge">WRITE_EXTERNAL_STORAGE</code> permissions are still defined but has declared the <code class="language-plaintext highlighter-rouge">maxSdkVersion</code> attribute with the value of <code class="language-plaintext highlighter-rouge">32</code> to ensure that the are not used in API 33 of higher.</p>
+
+    <p>Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for <code class="language-plaintext highlighter-rouge">cordova-android</code> to version <code class="language-plaintext highlighter-rouge">12.0.0</code>. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.</p>
+  </li>
+</ul>
+
+<h3 id="features--fixes">Features &amp; Fixes</h3>
+
+<ul>
+  <li>
+    <p><strong>Added video <code class="language-plaintext highlighter-rouge">quality</code> option for iOS</strong></p>
+
+    <p>You can now change the quality of the video that is being captured for iOS. By default, it will capture the highest quality.</p>
+  </li>
+  <li>
+    <p><strong>Fixes for various iOS crashes</strong></p>
+
+    <p>Various fixes were implemented to enhance stability and user experience on iOS. Here are some example changes:</p>
+
+    <ol>
+      <li>Implement an alert dialog to guide users to enable necessary permissions if they had previously denied them. This will occur when users attempt to use the capture feature.</li>
+      <li>Improve the layout of the audio capture interface to fit and use the entire device screen.</li>
+      <li>Implement safeguards to prevent application crashes in scenarios where audio data is unavailable ensuring a smoother and more reliable user experience.</li>
+      <li>Implement measures to maintain the functionality of the capture feature even when users dismiss the capture window by swiping, ensuring consistent and uninterrupted functionality.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>Please report any issues you find by following the this <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+<!--more-->
+<h2 id="changes-log">Changes Log</h2>
+
+<p><strong>Breaking Changes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/274">GH-274</a> feat(android)!: bump file &amp; <strong>Android</strong> requirements</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/262">GH-262</a> feat(android)!: support API 33+ permissions</li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/214">GH-214</a> feat(ios): support capture ‘<code class="language-plaintext highlighter-rouge">quality</code>’ param for videos</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/256">GH-256</a> feat(ios): improve <code class="language-plaintext highlighter-rouge">Localizable.strings</code> &amp; add <code class="language-plaintext highlighter-rouge">FR</code></li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/184">GH-184</a> fix(ios): UI issues with main thread and added alert for permission.</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/279">GH-279</a> fix(ios): UI sizing of the audio capture controller according to parent view size</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/278">GH-278</a> fix(ios): <code class="language-plaintext highlighter-rouge">CAPTURE_APPLICATION_BUSY</code> error when dismissing modal by swipe</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/197">GH-197</a> fix(ios): set type attribute for captured audio</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/232">GH-232</a> fix(android): prevent app crash caused by NPE on intent data or <code class="language-plaintext highlighter-rouge">mediaFile</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/195">GH-195</a> fix(MediaFiles): return missing ‘<code class="language-plaintext highlighter-rouge">lastModified</code>’ and ‘<code class="language-plaintext highlighter-rouge">end</code>’ attributes</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/212">GH-212</a> fix: use single version in <code class="language-plaintext highlighter-rouge">cordovaDependencies</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/269">GH-269</a> fix(ios): set category before creating <code class="language-plaintext highlighter-rouge">AVAudioRecorder</code></li>
+</ul>
+
+<p><strong>Other Changes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/276">GH-276</a> dep: bump <code class="language-plaintext highlighter-rouge">@cordova/eslint-config@^5.0.0</code> w/ lint fix &amp; <code class="language-plaintext highlighter-rouge">package-lock</code> rebuild</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/270">GH-270</a> chore: Update <code class="language-plaintext highlighter-rouge">SUPPORT_QUESTION.md</code> template</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/252">GH-252</a> chore(npm): rebuilt <code class="language-plaintext highlighter-rouge">package-lock</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/273">GH-273</a> ci: sync github action workflow w/ paramedic base configs</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/254">GH-254</a> ci: sync workflow with paramedic</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media-capture/pull/251">GH-251</a> ci(android): update java requirement for <code class="language-plaintext highlighter-rouge">cordova-android@11</code></li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2023/07/11/file-plugin-8.0.0.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2023/07/11/file-plugin-8.0.0.html">File Plugin 8.0.0 Released!</a>
+                    <div class="date"> 11 Jul 2023 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that we have just released an update...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2023/08/28/cordova-android-12.0.1.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2023/08/28/cordova-android-12.0.1.html">Cordova Android 12.0.1 Released!</a>
+                    <div class="date"> 28 Aug 2023 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released Cordova Android...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

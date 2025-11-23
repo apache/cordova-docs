@@ -1,0 +1,41 @@
+<h1 id="blackberry-configuration">BlackBerry Configuration</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">config.xml</code> file controls an app’s basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to BlackBerry 10 builds. See The
+config.xml <a href="../../../cordova/file/fileobj/fileobj.html">File</a> for information on global configuration options.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ChildBrowser</code> (<code class="language-plaintext highlighter-rouge">disable</code> or the default <code class="language-plaintext highlighter-rouge">enable</code>): Disables child
+browser windows. By default, apps launch a secondary browser window
+to display resources accessed via <code class="language-plaintext highlighter-rouge">[window.open](../../../cordova/inappbrowser/window.open.html)()</code> or by specifying a
+<code class="language-plaintext highlighter-rouge">_blank</code> anchor target. Specify <code class="language-plaintext highlighter-rouge">disable</code> to override this default
+behavior.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ChildBrowser" value="disable"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">PopupBlocker</code> (<code class="language-plaintext highlighter-rouge">enable</code> or the default <code class="language-plaintext highlighter-rouge">disable</code>): Enables the
+popup blocker, which prevents calls to <code class="language-plaintext highlighter-rouge">[window.open](../../../cordova/inappbrowser/window.open.html)()</code>. By default,
+popups display in a child browser window. Setting the preference to
+<code class="language-plaintext highlighter-rouge">enable</code> prevents it from displaying at all.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="PopupBlocker" value="enable"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">WebSecurity</code> (<code class="language-plaintext highlighter-rouge">disable</code> or the default <code class="language-plaintext highlighter-rouge">enable</code>): Set to <code class="language-plaintext highlighter-rouge">disable</code>
+to override web security settings, allowing access to remote content
+from unknown sources. This preference is intended as a development
+convenience only, so remove it before packaging your app for
+distribution.  For the released app, all URIs should be known and
+whitelisted using the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> element, described in the Domain
+<a href="../../appdev/whitelist/index.html">Whitelist Guide</a>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="WebSecurity" value="disable"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+

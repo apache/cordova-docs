@@ -1,0 +1,75 @@
+<h1 id="deviceready">deviceready</h1>
+
+<p>The event fires when Cordova is fully loaded.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>This event is essential to any application. It signals that Cordova’s
+device APIs have loaded and are ready to access.</p>
+
+<p>Cordova consists of two code bases: native and JavaScript. While the
+native code loads, a custom loading image displays. However,
+JavaScript only loads once the DOM loads. This means your web
+application may potentially call a Cordova JavaScript function before
+the corresponding native code is available.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">deviceready</code> event fires once Cordova has fully loaded. Once the
+event fires, you can safely make calls to Cordova APIs.  Applications
+typically attach an event listener with <code class="language-plaintext highlighter-rouge">document.addEventListener</code>
+once the HTML document’s DOM has loaded.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">deviceready</code> event behaves somewhat differently from others.  Any
+event handler registered after the <code class="language-plaintext highlighter-rouge">deviceready</code> event fires has its
+callback function called immediately.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    // Now safe to use device APIs
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Ready Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Now safe to use device APIs
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

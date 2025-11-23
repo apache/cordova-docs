@@ -1,0 +1,92 @@
+<h1 id="deviceready">deviceready</h1>
+
+<p>This is an event that fires when PhoneGap is fully loaded.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>This is a very important event that every PhoneGap application should use.</p>
+
+<p>PhoneGap consists of two code bases: native and JavaScript. While the native code is loading, a custom loading image is displayed. However, JavaScript is only loaded once the DOM loads. This means your web application could, potentially, call a PhoneGap JavaScript function before it is loaded.</p>
+
+<p>The PhoneGap <code class="language-plaintext highlighter-rouge">deviceready</code> event fires once PhoneGap has fully loaded. After the device has fired, you can safely make calls to PhoneGap function.</p>
+
+<p>Typically, you will want to attach an event listener with <code class="language-plaintext highlighter-rouge">document.addEventListener</code> once the HTML document’s DOM has loaded.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    // Now safe to use the PhoneGap API
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;PhoneGap Device Ready Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but cordova-1.5.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+        // Now safe to use the PhoneGap API
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="blackberry-os-46-quirks">BlackBerry (OS 4.6) Quirks</h2>
+
+<p>Custom events are not supported in the RIM BrowserField (web browser view), so the <code class="language-plaintext highlighter-rouge">deviceready</code> event will never fire.</p>
+
+<p>A workaround is to manually query <code class="language-plaintext highlighter-rouge">PhoneGap.available</code> until PhoneGap has fully loaded.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onLoad() {
+    // BlackBerry OS 4 browser does not support events.
+    // So, manually wait until PhoneGap is available.
+    //
+    var intervalID = window.setInterval(
+      function() {
+          if (PhoneGap.available) {
+              window.clearInterval(intervalID);
+              onDeviceReady();
+          }
+      },
+      500
+    );
+}
+
+function onDeviceReady() {
+    // Now safe to use the PhoneGap API
+}
+</code></pre></div></div>

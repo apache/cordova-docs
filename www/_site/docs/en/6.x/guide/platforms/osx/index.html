@@ -1,0 +1,138 @@
+<h1 id="os-x-platform-guide">OS X Platform Guide</h1>
+
+<p>This guide shows how to set up your SDK development environment to
+deploy Cordova apps for OS X computers. See the
+following for more detailed platform-specific information:</p>
+
+<ul>
+  <li><a href="config.html">OS X Configuration</a></li>
+  <li><a href="plugin.html">OS X Plugins</a></li>
+</ul>
+
+<p>The command-line tools above refer to versions prior to Cordova 3.0.
+See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
+current interface.</p>
+
+<h2 id="requirements-and-support">Requirements and Support</h2>
+
+<p>Apple® tools required to build OS X applications run only on the OS X
+operating system on Intel-based Macs. Xcode® 6.0 (the minimum required
+version) runs only on OS X version 10.9 (Mavericks) or greater, and
+includes the OS X SDK (Software Development Kit). To submit apps to
+the Apple App Store℠ requires the latest versions of the Apple tools.</p>
+
+<p>You can test all of the Cordova features using the XCode or any other
+IDE such as <a href="https://www.jetbrains.com/objc/">JetBrain’s AppCode</a>, but
+you need to use XCode to sign before submitting to the
+App Store. To sign the apps, you must also be a member of Apple’s
+<a href="https://developer.apple.com/osx/">OS X Developer Program</a>.</p>
+
+<h2 id="install-the-sdk">Install the SDK</h2>
+
+<p>There are two ways to download Xcode:</p>
+
+<ul>
+  <li>
+    <p>from the <a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12">App Store</a>,
+available by searching for “Xcode” in the <strong>App Store</strong> application.</p>
+  </li>
+  <li>
+    <p>from <a href="https://developer.apple.com/downloads/index.action">Apple Developer Downloads</a>,
+which requires registration as an Apple Developer.</p>
+  </li>
+</ul>
+
+<p>Once Xcode is installed, several command-line tools need to be enabled
+for Cordova to run. From the <strong>Xcode</strong> menu, select <strong>Preferences</strong>,
+then the <strong>Downloads</strong> tab. From the <strong>Components</strong> panel, press the
+<strong>Install</strong> button next to the <strong>Command Line Tools</strong> listing.</p>
+
+<h2 id="create-a-new-project">Create a New Project</h2>
+
+<p>Use the <code class="language-plaintext highlighter-rouge">cordova</code> utility to set up a new project, as described in The
+Cordova <a href="../../cli/index.html">The Command-Line Interface</a>. For example, in a source-code directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova create hello com.example.hello <span class="s2">"HelloWorld"</span>
+<span class="nv">$ </span><span class="nb">cd </span>hello
+<span class="nv">$ </span>cordova platform add osx
+<span class="nv">$ </span>cordova prepare              <span class="c"># or "cordova build"</span>
+</code></pre></div></div>
+
+<h2 id="run-the-app">Run the app</h2>
+
+<p>To run the app on your desktop:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova run
+</code></pre></div></div>
+
+<p>And you should see a bordered window with the example app:</p>
+
+<p><img src="/static/img/guide/platforms/osx/helloworld_run.png" alt="" /></p>
+
+<p>You can also use <strong>cordova run –help</strong> to see additional build and run
+options.</p>
+
+<h2 id="open-a-project-in-the-sdk">Open a Project in the SDK</h2>
+
+<p>Once osx platform is added to your project, you can open it from
+within Xcode. Double-click to open the <code class="language-plaintext highlighter-rouge">hello/platforms/osx/HelloWorld.xcodeproj</code>
+file. The screen should look like this:</p>
+
+<p><img src="/static/img/guide/platforms/osx/helloworld_project.png" alt="" /></p>
+
+<blockquote>
+  <p><strong>TIP</strong>
+You can also use the <code class="language-plaintext highlighter-rouge">open</code> command to open the XCode project directly
+from the command line:</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ open platforms/osx/HelloWorld.xcodeproj
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="common-problems">Common Problems</h2>
+
+<p><strong>Deprecation Warnings</strong>: When an application programming interface
+(API) is changed or replaced by another API, it is marked as
+<em>deprecated</em>.  The API still works in the near term, but is eventually
+removed.  Some of these deprecated interfaces are reflected in Apache
+Cordova, and Xcode issues warnings about them when you build and
+deploy an application.</p>
+
+<p><strong>Missing Headers</strong>: Compilation errors relating to missing headers
+result from problems with the build location, and can be fixed
+via Xcode preferences:</p>
+
+<ol>
+  <li>
+    <p>Select <strong>Xcode → Preferences → Locations</strong>.</p>
+  </li>
+  <li>
+    <p>In the <strong>Derived Data</strong> section, press the <strong>Advanced</strong> button and
+select <strong>Unique</strong> as the <strong>Build Location</strong> as shown here:</p>
+
+    <p><img src="/static/img/guide/platforms/ios/xcode_build_location.png" alt="" /></p>
+  </li>
+</ol>
+
+<p>This is the default setting for a new Xcode install, but it may be set
+differently following an upgrade from an older version of Xcode.</p>
+
+<p>For further information, consult Apple’s documentation:</p>
+
+<ul>
+  <li>
+    <p><a href="https://developer.apple.com/membercenter/index.action">Member Center home page</a>
+ provides links to several OS X technical resources including
+ technical resources, the provisioning portal, distribution guides
+ and community forums.</p>
+  </li>
+  <li>
+    <p><a href="http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215">Xcode User Guide</a></p>
+  </li>
+  <li>
+    <p>The <a href="http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html">xcode-select command</a>,
+which helps specify the correct version of Xcode if more than one is installed.</p>
+  </li>
+</ul>
+
+<p>(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
+

@@ -1,0 +1,650 @@
+<h1 id="upgrading-android">Upgrading Android</h1>
+
+<p>This guide shows how to modify Android projects to upgrade from older versions of Cordova.
+Most of these instructions apply to projects created with an older set
+of command-line tools that precede the <code class="language-plaintext highlighter-rouge">cordova</code> CLI utility. See <a href="../../cli/index.html">The Command-line Interface</a> for information how to update the
+version of the CLI.</p>
+
+<h2 id="upgrading-to-310-from-300">Upgrading to 3.1.0 from 3.0.0</h2>
+
+<p>For projects that were created with the cordova CLI:</p>
+
+<ol>
+  <li>Update the <code class="language-plaintext highlighter-rouge">cordova</code> CLI version - see <a href="../../cli/index.html">The Command-line Interface</a></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">cordova platform update android</code></li>
+</ol>
+
+<p>For projects not created with the cordova CLI, run:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">bin/update &lt;project_path&gt;</code></li>
+</ol>
+
+<h2 id="upgrade-to-the-cli-300-from-290">Upgrade to the CLI (3.0.0) from 2.9.0</h2>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+described in <a href="../../cli/index.html">The Command-line Interface</a>.</p>
+  </li>
+  <li>
+    <p>Add your platforms the the cordova project, for example: <code class="language-plaintext highlighter-rouge">cordova
+platform add android</code>.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your project’s <code class="language-plaintext highlighter-rouge">www</code> directory to the <code class="language-plaintext highlighter-rouge">www</code> directory
+at the root of the cordova project you just created.</p>
+  </li>
+  <li>
+    <p>Copy any native assets from your old project into the appropriate
+directories under <code class="language-plaintext highlighter-rouge">platforms/android</code>: this directory is where your
+native cordova-android project exists.</p>
+  </li>
+  <li>
+    <p>Use the cordova CLI tool to install any plugins you need. Note that
+the CLI handles all core APIs as plugins, so they may need to be
+added. Only 3.0.0 plugins are compatible with the CLI.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-300-from-290">Upgrade to 3.0.0 from 2.9.0</h2>
+
+<ol>
+  <li>
+    <p>Create a new Apache Cordova Android project.</p>
+  </li>
+  <li>
+    <p>Copy the contents of your <code class="language-plaintext highlighter-rouge">www</code> directory to the new project.</p>
+  </li>
+  <li>
+    <p>Copy any native Android assets from your <code class="language-plaintext highlighter-rouge">res</code> directory to the new project.</p>
+  </li>
+  <li>
+    <p>Copy over any plugins you installed from the <code class="language-plaintext highlighter-rouge">src</code> subdirectories into the new project.</p>
+  </li>
+  <li>
+    <p>Make sure to upgrade any deprecated <code class="language-plaintext highlighter-rouge">&lt;plugin&gt;</code> references from your old <code class="language-plaintext highlighter-rouge">config.xml</code> file to the new <code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code> specification.</p>
+  </li>
+  <li>
+    <p>Update any references to the <code class="language-plaintext highlighter-rouge">org.apache.cordova.api</code> package to be <code class="language-plaintext highlighter-rouge">org.apache.cordova</code>.</p>
+  </li>
+</ol>
+
+<ul>
+  <li><strong>NOTE:</strong> all core APIs have been removed and must be installed as plugins. Please see the <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> Guide for details.</li>
+</ul>
+
+<h2 id="upgrade-to-290-from-280">Upgrade to 2.9.0 from 2.8.0</h2>
+
+<ol>
+  <li>Run <code class="language-plaintext highlighter-rouge">bin/update &lt;project_path&gt;</code>.</li>
+</ol>
+
+<h2 id="upgrade-to-280-from-270">Upgrade to 2.8.0 from 2.7.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.7.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.8.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> file to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-270-from-260">Upgrade to 2.7.0 from 2.6.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.6.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.7.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.7.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.7.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-260-from-250">Upgrade to 2.6.0 from 2.5.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.5.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.6.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.6.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<p>Run <code class="language-plaintext highlighter-rouge">bin/update &lt;project&gt;</code> with the project path listed in the Cordova Source directory.</p>
+
+<h2 id="upgrade-to-250-from-240">Upgrade to 2.5.0 from 2.4.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.4.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.5.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.5.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code> to have similar settings as it did previously.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-240-from-230">Upgrade to 2.4.0 from 2.3.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.3.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.4.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.4.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-230-from-220">Upgrade to 2.3.0 from 2.2.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.2.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.3.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.3.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.3.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-220-from-210">Upgrade to 2.2.0 from 2.1.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.1.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.2.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.2.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-210-from-200">Upgrade to 2.1.0 from 2.0.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-2.0.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.1.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.1.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+  <li>
+    <p>Copy files from <code class="language-plaintext highlighter-rouge">bin/templates/cordova</code> to the project’s <code class="language-plaintext highlighter-rouge">cordova</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-200-from-190">Upgrade to 2.0.0 from 1.9.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.9.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-2.0.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-2.0.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-2.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/config.xml</code>.</p>
+  </li>
+</ol>
+
+<h3 id="notes-about-200-release">Notes about 2.0.0 release</h3>
+
+<p><code class="language-plaintext highlighter-rouge">config.xml</code> will be replacing <code class="language-plaintext highlighter-rouge">cordova.xml</code> and <code class="language-plaintext highlighter-rouge">plugins.xml</code>.  This
+new file is a combination of the previous two.  However, the old files
+are deprecated, and while currently still work, will cease working in
+a future release.</p>
+
+<h2 id="upgrade-to-190-from-181">Upgrade to 1.9.0 from 1.8.1</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.8.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.9.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.9.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.9.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h3 id="notes-about-190-release">Notes about 1.9.0 release</h3>
+
+<p>Due to the introduction of the <code class="language-plaintext highlighter-rouge">CordovaWebView</code>, third-Party plugins
+may not work.  These plugins need to get a context from the
+<code class="language-plaintext highlighter-rouge">CordovaInterface</code> using <code class="language-plaintext highlighter-rouge">getContext()</code> or <code class="language-plaintext highlighter-rouge">getActivity()</code>.  If you
+are not an experienced Android developer, please contact the plugin
+maintainer and add this task to their bug tracker.</p>
+
+<h2 id="upgrade-to-180-from-180">Upgrade to 1.8.0 from 1.8.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.8.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.8.1.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.8.1.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.8.1.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-180-from-170">Upgrade to 1.8.0 from 1.7.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.7.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.8.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-180-from-170-1">Upgrade to 1.8.0 from 1.7.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.7.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.8.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.8.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-170-from-161">Upgrade to 1.7.0 from 1.6.1</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.6.1.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.7.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.7.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-161-from-160">Upgrade to 1.6.1 from 1.6.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.6.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.6.1.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.6.1.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-160-from-150">Upgrade to 1.6.0 from 1.5.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">cordova-1.5.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.6.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.6.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.6.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Replace <code class="language-plaintext highlighter-rouge">res/xml/phonegap.xml</code> with <code class="language-plaintext highlighter-rouge">res/xml/cordova.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/cordova.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-150-from-140">Upgrade to 1.5.0 from 1.4.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">phonegap-1.4.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">cordova-1.5.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">cordova-1.5.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">cordova-1.5.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Replace <code class="language-plaintext highlighter-rouge">res/xml/phonegap.xml</code> with <code class="language-plaintext highlighter-rouge">res/xml/cordova.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/cordova.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-140-from-130">Upgrade to 1.4.0 from 1.3.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">phonegap-1.3.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">phonegap-1.4.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">phonegap-1.4.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">phonegap-1.4.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/phonegap.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/phonegap.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-130-from-120">Upgrade to 1.3.0 from 1.2.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">phonegap-1.2.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">phonegap-1.3.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">phonegap-1.3.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">phonegap-1.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/phonegap.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/phonegap.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-120-from-110">Upgrade to 1.2.0 from 1.1.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">phonegap-1.1.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">phonegap-1.2.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">phonegap-1.2.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">phonegap-1.2.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/phonegap.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/phonegap.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-110-from-100">Upgrade to 1.1.0 from 1.0.0</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">phonegap-1.0.0.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">phonegap-1.1.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">phonegap-1.1.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">phonegap-1.1.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Update <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+
+<h2 id="upgrade-to-100-from-096">Upgrade to 1.0.0 from 0.9.6</h2>
+
+<ol>
+  <li>
+    <p>Remove <code class="language-plaintext highlighter-rouge">phonegap-0.9.6.jar</code> from the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">phonegap-1.0.0.jar</code> to the project’s <code class="language-plaintext highlighter-rouge">libs</code> directory.</p>
+  </li>
+  <li>
+    <p>If you are using Eclipse, please refresh your eclipse project and do a clean.</p>
+  </li>
+  <li>
+    <p>Copy the new <code class="language-plaintext highlighter-rouge">phonegap-1.0.0.js</code> into your project.</p>
+  </li>
+  <li>
+    <p>Update your HTML to use the new <code class="language-plaintext highlighter-rouge">phonegap-1.0.0.js</code> file.</p>
+  </li>
+  <li>
+    <p>Add the <code class="language-plaintext highlighter-rouge">res/xml/plugins.xml</code> to match <code class="language-plaintext highlighter-rouge">framework/res/xml/plugins.xml</code>.</p>
+  </li>
+</ol>
+

@@ -1,0 +1,38 @@
+<h1 id="captureaudiooptions">CaptureAudioOptions</h1>
+
+<blockquote>
+  <p>Encapsulates audio capture configuration options.</p>
+</blockquote>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>limit:</strong> The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).</li>
+  <li><strong>duration:</strong> The maximum duration of an audio sound clip, in seconds.</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// limit capture operation to 3 media files, no longer than 10 seconds each
+var options = { limit: 3, duration: 10 };
+
+navigator.device.capture.captureAudio(captureSuccess, captureError, options);
+</code></pre></div></div>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>The <strong>duration</strong> parameter is not supported.  Recording lengths cannot be limited programmatically.</li>
+</ul>
+
+<h2 id="blackberry-webworks-quirks">BlackBerry WebWorks Quirks</h2>
+
+<ul>
+  <li>The <strong>duration</strong> parameter is not supported.  Recording lengths cannot be limited programmatically.</li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<ul>
+  <li>The <strong>limit</strong> parameter is not supported. One recording can be created for each invocation.</li>
+</ul>

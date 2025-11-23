@@ -1,0 +1,82 @@
+<h1 id="amazon-fire-os-configuration">Amazon Fire OS Configuration</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">config.xml</code> file controls an app’s basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to  Amazon Fire OS builds. See <a href="config_ref_index.md.html#The%20config.xml%20File">The config.xml
+File</a> for information on global configuration options.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">KeepRunning</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">true</code>): Determines whether the
+application stays running in the background even after a <a href="../../../cordova/events/events.pause.html"><code class="language-plaintext highlighter-rouge">pause</code></a>
+event fires. Setting this to <code class="language-plaintext highlighter-rouge">false</code> does not kill the app after a
+<a href="../../../cordova/events/events.pause.html"><code class="language-plaintext highlighter-rouge">pause</code></a> event, but simply halts execution of code within the cordova
+webview while the app is in the background.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="KeepRunning" value="false"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ErrorUrl</code> (URL, defaults to <code class="language-plaintext highlighter-rouge">null</code>):
+If set, will display the referenced page upon an error in the application
+instead of a dialog with the title “Application Error”.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ErrorUrl" value="error.html"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LoadingDialog</code> (string, defaults to <code class="language-plaintext highlighter-rouge">null</code>): If set, displays a dialog with
+the specified title and message, and a spinner, when loading the first
+page of an application. The title and message are separated by a comma
+in this value string, and that comma is removed before the dialog is
+displayed.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingDialog" value="Please wait, the app is loading"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LoadingPageDialog</code> (string, defaults to <code class="language-plaintext highlighter-rouge">null</code>): The same as <code class="language-plaintext highlighter-rouge">LoadingDialog</code>,
+but for loading every page after the first page in the application.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadingPageDialog" value="Please wait, the data is loading"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LoadUrlTimeoutValue</code> (number, default is <code class="language-plaintext highlighter-rouge">20000</code>): When loading a
+page, the amount of time to wait before throwing a timeout error.
+This example specifies 10 seconds rather than 20:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LoadUrlTimeoutValue" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SplashScreen</code>: The name of the file minus its extension in the
+<code class="language-plaintext highlighter-rouge">res/drawable</code> directory.  Various assets must share this common
+name in various subdirectories.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreen" value="splash"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SplashScreenDelay</code> (number, defaults to <code class="language-plaintext highlighter-rouge">5000</code>): The amount of
+time the splash screen image displays.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="SplashScreenDelay" value="10000"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ShowTitle</code> (boolean, defaults to <code class="language-plaintext highlighter-rouge">false</code>): Show the title at the top
+of the screen.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="ShowTitle" value="true"/&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">LogLevel</code> (string, defaults to <code class="language-plaintext highlighter-rouge">ERROR</code>): Sets the minimum log level
+through which log messages from your application will be filtered. Valid
+values are <code class="language-plaintext highlighter-rouge">ERROR</code>, <code class="language-plaintext highlighter-rouge">WARN</code>, <code class="language-plaintext highlighter-rouge">INFO</code>, <code class="language-plaintext highlighter-rouge">DEBUG</code>, and <code class="language-plaintext highlighter-rouge">VERBOSE</code>.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="LogLevel" value="VERBOSE"/&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>

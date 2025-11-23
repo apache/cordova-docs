@@ -1,0 +1,245 @@
+<h1 id="hooks-guide">Hooks Guide</h1>
+
+<p>Cordova Hooks represent special scripts which could be added by application and
+plugin developers or even by your own build system  to customize cordova commands.
+Hook scripts could be defined by adding them to the special predefined folder 
+(<code class="language-plaintext highlighter-rouge">/hooks</code>) or via configuration files (<code class="language-plaintext highlighter-rouge">config.xml</code> and <code class="language-plaintext highlighter-rouge">plugin.xml</code>) and run
+serially in the following order:</p>
+
+<ul>
+  <li>Application hooks from <code class="language-plaintext highlighter-rouge">/hooks</code>;</li>
+  <li>Application hooks from <code class="language-plaintext highlighter-rouge">config.xml</code>;</li>
+  <li>Plugin hooks from <code class="language-plaintext highlighter-rouge">plugins/.../plugin.xml</code>.</li>
+</ul>
+
+<p><strong>Note</strong>: <code class="language-plaintext highlighter-rouge">/hooks</code> directory is considered deprecated in favor of the hook elements
+in config.xml and plugin.xml.</p>
+
+<h2 id="supported-hook-types">Supported hook types</h2>
+<p>The following hook types are supported:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>after_build
+after_compile
+after_clean
+after_docs
+after_emulate
+after_platform_add
+after_platform_rm
+after_platform_ls
+after_plugin_add
+after_plugin_ls
+after_plugin_rm
+after_plugin_search
+after_plugin_install // Plugin hooks in plugin.xml are executed for a plugin being installed only
+after_prepare
+after_run
+after_serve
+before_build
+before_clean
+before_compile
+before_docs
+before_emulate
+before_platform_add
+before_platform_rm/
+before_platform_ls
+before_plugin_add
+before_plugin_ls
+before_plugin_rm
+before_plugin_search/
+before_plugin_install // Plugin hooks in plugin.xml are executed for a plugin being installed only
+before_plugin_uninstall // Plugin hooks in plugin.xml are executed for a plugin being uninstalled only
+before_prepare
+before_run
+before_serve
+pre_package // Windows and Windows Phone only
+</code></pre></div></div>
+
+<h2 id="ways-to-define-hooks">Ways to define hooks</h2>
+<h3 id="via-hooks-directory">Via <code class="language-plaintext highlighter-rouge">/hooks</code> directory</h3>
+
+<p><strong>Note</strong>: this method is considered deprecated in favor of the hook elements in config.xml and plugin.xml.</p>
+
+<p>To execute custom action when corresponding hook type is fired, use hook type as a name for a subfolder inside ‘hooks’ directory and place you script file here, for example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># script file will be automatically executed after each build
+hooks/after_build/after_build_custom_action.js
+</code></pre></div></div>
+
+<p>When using these hooks, they will always be run as executable files, not as loadable JavaScript modules.
+<strong>Remember</strong>: Make your scripts executable in this case.</p>
+
+<h3 id="configxml">Config.xml</h3>
+
+<p>Hooks can be defined in project’s <code class="language-plaintext highlighter-rouge">config.xml</code> using <code class="language-plaintext highlighter-rouge">&lt;hook&gt;</code> elements, for example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;hook type="before_build" src="scripts/appBeforeBuild.bat" /&gt;
+&lt;hook type="before_build" src="scripts/appBeforeBuild.js" /&gt;
+&lt;hook type="before_plugin_install" src="scripts/appBeforePluginInstall.js" /&gt;
+
+&lt;platform name="wp8"&gt;
+    &lt;hook type="before_build" src="scripts/wp8/appWP8BeforeBuild.bat" /&gt;
+    &lt;hook type="before_build" src="scripts/wp8/appWP8BeforeBuild.js" /&gt;
+    &lt;hook type="before_plugin_install" src="scripts/wp8/appWP8BeforePluginInstall.js" /&gt;
+    ...
+&lt;/platform&gt;
+
+&lt;platform name="windows8"&gt;
+    &lt;hook type="before_build" src="scripts/windows8/appWin8BeforeBuild.bat" /&gt;
+    &lt;hook type="before_build" src="scripts/windows8/appWin8BeforeBuild.js" /&gt;
+    &lt;hook type="before_plugin_install" src="scripts/windows8/appWin8BeforePluginInstall.js" /&gt;
+    ...
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<h3 id="plugin-hooks-pluginxml">Plugin hooks (plugin.xml)</h3>
+
+<p>As a plugin developer you can define hook scripts using <code class="language-plaintext highlighter-rouge">&lt;hook&gt;</code> elements in a <code class="language-plaintext highlighter-rouge">plugin.xml</code> like that:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;hook type="before_plugin_install" src="scripts/beforeInstall.js" /&gt;
+&lt;hook type="after_build" src="scripts/afterBuild.js" /&gt;
+
+&lt;platform name="wp8"&gt;
+    &lt;hook type="before_plugin_install" src="scripts/wp8BeforeInstall.js" /&gt;
+    &lt;hook type="before_build" src="scripts/wp8BeforeBuild.js" /&gt;
+    ...
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">before_plugin_install</code>, <code class="language-plaintext highlighter-rouge">after_plugin_install</code>, <code class="language-plaintext highlighter-rouge">before_plugin_uninstall</code> plugin hooks will be fired exclusively for the plugin being installed/uninstalled.</p>
+
+<h2 id="script-interface">Script Interface</h2>
+
+<h3 id="javascript">Javascript</h3>
+
+<p>If you are writing hooks using Node.js you should use the following module definition:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You can make your scipts async using Q:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">Q</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">requireCordovaModule</span><span class="p">(</span><span class="dl">'</span><span class="s1">q</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">deferral</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Q</span><span class="p">.</span><span class="nx">defer</span><span class="p">();</span>
+
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">hook.js&gt;&gt; end</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">deferral</span><span class="p">.</span><span class="nx">resolve</span><span class="p">();</span>
+    <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">deferral</span><span class="p">.</span><span class="nx">promise</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">context</code> object contains hook type, executed script full path, hook options, command-line arguments passed to Cordova and top-level “cordova” object:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"hook"</span><span class="p">:</span><span class="w"> </span><span class="s2">"before_plugin_install"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scriptLocation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c:</span><span class="se">\\</span><span class="s2">script</span><span class="se">\\</span><span class="s2">full</span><span class="se">\\</span><span class="s2">path</span><span class="se">\\</span><span class="s2">appBeforePluginInstall.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cmdLine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The</span><span class="se">\\</span><span class="s2">exact</span><span class="se">\\</span><span class="s2">command</span><span class="se">\\</span><span class="s2">cordova</span><span class="se">\\</span><span class="s2">run</span><span class="se">\\</span><span class="s2">with arguments"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"opts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"projectRoot"</span><span class="p">:</span><span class="s2">"C:</span><span class="se">\\</span><span class="s2">path</span><span class="se">\\</span><span class="s2">to</span><span class="se">\\</span><span class="s2">the</span><span class="se">\\</span><span class="s2">project"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"wp8"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"com.plugin.withhooks"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.21.7-dev"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"plugin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com.plugin.withhooks"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"pluginInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wp8"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"dir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C:</span><span class="se">\\</span><span class="s2">path</span><span class="se">\\</span><span class="s2">to</span><span class="se">\\</span><span class="s2">the</span><span class="se">\\</span><span class="s2">project</span><span class="se">\\</span><span class="s2">plugins</span><span class="se">\\</span><span class="s2">com.plugin.withhooks"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">context.opts.plugin</code> object will only be passed to plugin hooks scripts.</p>
+
+<p>You can also require additional Cordova modules in your script using <code class="language-plaintext highlighter-rouge">context.requireCordovaModule</code> in the following way:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Q</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">requireCordovaModule</span><span class="p">(</span><span class="dl">'</span><span class="s1">q</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><strong>Note</strong>:  new module loader script interface is used for the <code class="language-plaintext highlighter-rouge">.js</code> files defined via <code class="language-plaintext highlighter-rouge">config.xml</code> or <code class="language-plaintext highlighter-rouge">plugin.xml</code> only.
+For compatibility reasons hook files specified via <code class="language-plaintext highlighter-rouge">/hooks</code> folders are run via Node child_process spawn, see ‘Non-javascript’ section below.</p>
+
+<h3 id="non-javascript">Non-javascript</h3>
+
+<p><strong>Note</strong>: we highly recommend writing your hooks using Node.js so that they are cross-platform, see ‘Javascript’ section above.</p>
+
+<p>Non-javascript scripts are run via Node child_process spawn from the project’s root directory and have the root directory passes as the first argument. All other options are passed to the script using environment variables:</p>
+
+<ul>
+  <li>CORDOVA_VERSION - The version of the Cordova-CLI.</li>
+  <li>CORDOVA_PLATFORMS - Comma separated list of platforms that the command applies to (e.g.: android, ios).</li>
+  <li>CORDOVA_PLUGINS - Comma separated list of plugin IDs that the command applies to (e.g.: org.apache.cordova.file, org.apache.cordova.file-transfer)</li>
+  <li>CORDOVA_HOOK - Path to the hook that is being executed.</li>
+  <li>CORDOVA_CMDLINE - The exact command-line arguments passed to cordova (e.g.: cordova run ios –emulate)</li>
+</ul>
+
+<p>If a script returns a non-zero exit code, then the parent cordova command will be aborted.</p>
+
+<p>Also, note that even if you are working on Windows, and in case your hook scripts aren’t bat files (which is recommended, if you want your scripts to work in non-Windows operating systems) Cordova CLI will expect a shebang line as the first line for it to know the interpreter it needs to use to launch the script. The shebang line should match the following example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env [name_of_interpreter_executable]
+</code></pre></div></div>
+
+<h2 id="sample-usage">Sample Usage</h2>
+
+<p>This sample demonstrates Cordova hooks usage to trace to the console output the
+size of generated .apk file for Android platform.</p>
+
+<p>Create blank Cordova app and add the following definition to <code class="language-plaintext highlighter-rouge">config.xml</code> to
+tell Cordova to run <code class="language-plaintext highlighter-rouge">afterBuild.js</code> script after each platform build.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;hook type="after_build" src="scripts/afterBuild.js" /&gt;
+</code></pre></div></div>
+
+<p>Create <code class="language-plaintext highlighter-rouge">scripts/afterBuild.js</code> file and add the following implementation. 
+We use async version of <code class="language-plaintext highlighter-rouge">fs.stat</code> method to demonstrate how async functionality
+could be done via hooks.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = function(ctx) {
+    // make sure android platform is part of build 
+    if (ctx.opts.platforms.indexOf('android') &lt; 0) {
+        return;
+    }
+    var fs = ctx.requireCordovaModule('fs'),
+        path = ctx.requireCordovaModule('path'),
+        deferral = ctx.requireCordovaModule('q').defer();
+
+    var platformRoot = path.join(ctx.opts.projectRoot, 'platforms/android');
+    var apkFileLocation = path.join(platformRoot, 'build/outputs/apk/android-debug.apk');
+
+    fs.stat(apkFileLocation, function(err,stats) {
+        if (err) {
+             deferral.reject('Operation failed');
+        } else {
+            console.log('Size of ' + apkFileLocation + ' is ' + stats.size +' bytes');
+            deferral.resolve();
+        }
+    });
+
+    return deferral.promise;
+};
+</code></pre></div></div>
+
+<p>Parameter <code class="language-plaintext highlighter-rouge">ctx</code> in example above is passed by Cordova and represents execution
+context such as script full path, target platform, command-line arguments, etc and
+also exposes additional helper functionality. See <code class="language-plaintext highlighter-rouge">Script Interface</code> section above
+for more details.</p>
+
+<p>You can now add android platform and execute build.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android
+..
+cordova build
+..
+Size of path\to\app\platforms\android\build\outputs\apk\android-debug.apk is 1821193 bytes
+</code></pre></div></div>
+
+<p>More good usage examples could be found here:</p>
+
+<p><a href="http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/">http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/</a></p>

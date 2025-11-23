@@ -1,0 +1,89 @@
+<h1 id="project-structure">Project Structure</h1>
+
+<h2 id="clis-default-directory-structure">CLI’s Default Directory Structure</h2>
+
+<p>A project created with Cordova CLI comes with the follow directory structure by default:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>myapp/
+├── config.xml
+├── node_modules/
+├── package.json
+├── platforms/
+├── plugins/
+└── www
+</code></pre></div></div>
+
+<h3 id="packagejson"><code class="language-plaintext highlighter-rouge">package.json</code></h3>
+
+<p>A manifest declaring what JavaScript package dependencies are used by your project, including Cordova, the added platforms, and any added plugins. This is also where plugin variable values are stored.</p>
+
+<p>Your project might already have a <code class="language-plaintext highlighter-rouge">package.json</code> file with its own dependencies, or one generated from a framework. Cordova will simply add what it needs to the <code class="language-plaintext highlighter-rouge">package.json</code> file without interfering with other tools or dependencies.</p>
+
+<h3 id="configxml"><code class="language-plaintext highlighter-rouge">config.xml</code></h3>
+
+<p>Contains the preferences and configuration options for your Cordova application and allows you to customize the behavior of your project.</p>
+
+<p>See also <a href="../../config_ref/index.html"><code class="language-plaintext highlighter-rouge">config.xml</code> reference documentation</a>.</p>
+
+<h3 id="www"><code class="language-plaintext highlighter-rouge">www/</code></h3>
+
+<p>Contains the project’s web artifacts, such as HTML, CSS, JavaScript, and other resource asset files.</p>
+
+<p>As a Cordova application developer, most of your code and assets will go here. They will be copied on a <code class="language-plaintext highlighter-rouge">cordova prepare</code> to each platform’s <code class="language-plaintext highlighter-rouge">www</code> directory. The <code class="language-plaintext highlighter-rouge">www</code> source directory is reproduced within each platform’s subdirectory, appearing for example in <code class="language-plaintext highlighter-rouge">platforms/ios/www</code> or <code class="language-plaintext highlighter-rouge">platforms/android/assets/www</code>. Because the CLI constantly copies over files from the source <code class="language-plaintext highlighter-rouge">www</code> folder, you should only edit these files and not the ones located under the platforms subdirectories.</p>
+
+<p>If you use a JavaScript build tool, you should set it to output your production distribution files to the <code class="language-plaintext highlighter-rouge">www</code> folder.
+If you are developing code in the <code class="language-plaintext highlighter-rouge">www</code> folder directly, you should add this folder to your version control system.</p>
+
+<h3 id="node_modules"><code class="language-plaintext highlighter-rouge">node_modules/</code></h3>
+
+<p>This directory contains all of the JavaScript dependency packages from the npm JavaScript registry for Cordova and its tools, along with any dependencies of your project (as specified in <code class="language-plaintext highlighter-rouge">package.json</code>).</p>
+
+<p>When adding a Cordova platform or plugin with the <code class="language-plaintext highlighter-rouge">cordova platform add</code> and <code class="language-plaintext highlighter-rouge">cordova plugin add</code> command, these platforms and plugins are fetched from the npmjs registry and downloaded into the <code class="language-plaintext highlighter-rouge">node_modules/</code> directory.</p>
+
+<p>Cordova will then copy the necessary Cordova platform and plugin  source code from the <code class="language-plaintext highlighter-rouge">node_modules</code> directory and place them into the appropriate location for Cordova to function.</p>
+
+<p>It also contain scripts that is used during the <code class="language-plaintext highlighter-rouge">cordova prepare</code> and <code class="language-plaintext highlighter-rouge">cordova build</code> for each platform.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">node_modules</code> directory is  the original unedited source of truth and nothing should be edited in this directory. Additionally, this directory should not be checked into any version control system.</p>
+
+<p>For more details, see <a href="https://docs.npmjs.com/cli/v10/configuring-npm/folders#node-modules">npmjs folders documentation</a>.</p>
+
+<h3 id="platforms"><code class="language-plaintext highlighter-rouge">platforms/</code></h3>
+
+<p>Contains all the source code and build scripts for the platforms that you add to your project.</p>
+
+<blockquote>
+  <p><strong>WARNING:</strong> When using the CLI to build your application, you should not edit any files in the /platforms/ directory unless you know what you are doing, or if documentation specifies otherwise. The files in this directory are routinely overwritten when preparing applications for building, or when plugins are re-installed.</p>
+</blockquote>
+
+<h3 id="plugins"><code class="language-plaintext highlighter-rouge">plugins/</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugins</code> directory is used as a staging area where installed plugins are copied before being applied to the <code class="language-plaintext highlighter-rouge">platforms</code> directory.</p>
+
+<p>This directory should not be committed to version control.</p>
+
+<p>If you’ve created custom, in-house or modified plugins and want to store them within the project, it’s recommended <strong>not</strong> to store them in the <code class="language-plaintext highlighter-rouge">plugins</code> directory.</p>
+
+<h3 id="version-control">Version control</h3>
+
+<p>It is recommended not to check in <code class="language-plaintext highlighter-rouge">platforms/</code> and <code class="language-plaintext highlighter-rouge">plugins/</code> directories into version control as they are considered a build artifact. Your platforms and plugins will be saved in <code class="language-plaintext highlighter-rouge">package.json</code> automatically. These platforms/plugins will be downloaded when <code class="language-plaintext highlighter-rouge">cordova prepare</code> is invoked.</p>
+
+<h2 id="optional-directories">Optional Directories</h2>
+
+<h3 id="merges"><code class="language-plaintext highlighter-rouge">merges/</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">merges/</code> directory is not included by default when creating a Cordova project through the CLI. The use of this directory is generally discouraged but still supported.</p>
+
+<p>Platform-specific web assets (HTML, CSS and JavaScript files) are contained within appropriate subfolders in this directory. These are deployed during a <code class="language-plaintext highlighter-rouge">prepare</code> to the appropriate native directory.  Files placed under <code class="language-plaintext highlighter-rouge">merges/</code> will override matching files in the <code class="language-plaintext highlighter-rouge">www/</code> folder for the relevant platform. A quick example, assuming a project structure of:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>myapp/
+├── merges
+│   ├── android/
+│   │   └── android.js
+│   └── ios/
+│       └── app.js
+└── www/
+    └── app.js
+</code></pre></div></div>
+
+<p>After building the Android and iOS projects, the Android application will contain both <code class="language-plaintext highlighter-rouge">app.js</code> and <code class="language-plaintext highlighter-rouge">android.js</code>. However, the iOS application will only contain an <code class="language-plaintext highlighter-rouge">app.js</code>, and it will be the one from <code class="language-plaintext highlighter-rouge">merges/ios/app.js</code>, overriding the “common” <code class="language-plaintext highlighter-rouge">app.js</code> located inside <code class="language-plaintext highlighter-rouge">www/</code>.</p>

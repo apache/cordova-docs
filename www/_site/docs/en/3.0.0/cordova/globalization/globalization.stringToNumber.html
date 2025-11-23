@@ -1,0 +1,75 @@
+<h1 id="globalizationstringtonumber">globalization.stringToNumber</h1>
+
+<p>Parses a number formatted as a string according to the client’s user
+preferences and returns the corresponding number.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Returns the number to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object
+as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code> property with a
+<code class="language-plaintext highlighter-rouge">Number</code> value.</p>
+
+<p>If there is an error parsing the number string, then the
+<code class="language-plaintext highlighter-rouge">errorCallback</code> executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a
+parameter. The error’s expected code is
+<code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).PARSING\_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and defaults to the following
+values:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'decimal'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">decimal</code>, <code class="language-plaintext highlighter-rouge">percent</code>, or <code class="language-plaintext highlighter-rouge">currency</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale, this should display a
+popup dialog with text similar to <code class="language-plaintext highlighter-rouge">number: 1234.56</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.stringToNumber(
+    '1234.56',
+    function (number) {alert('number: ' + number.value + '\n');},
+    function () {alert('Error getting number\n');},
+    {type:'decimal'}
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;stringToNumber Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkNumber() {
+      navigator.globalization.stringToNumber(
+        '1234.56',
+        function (number) {alert('number: ' + number.value + '\n');},
+        function () {alert('Error getting number\n');},
+        {type:'decimal'}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkNumber()"&gt;Click for parsed number&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

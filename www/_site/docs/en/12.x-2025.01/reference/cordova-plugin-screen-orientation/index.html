@@ -1,0 +1,125 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<h1 id="cordova-screen-orientation-plugin">Cordova Screen Orientation Plugin</h1>
+
+<p><a href="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-screen-orientation/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
+
+<p>Cordova plugin to set/lock the screen orientation in a common way for iOS, Android, and windows-uwp.  This plugin is based on <a href="http://www.w3.org/TR/screen-orientation/">Screen Orientation API</a> so the api matches the current spec.</p>
+
+<p>The plugin adds the following to the screen object (<code class="language-plaintext highlighter-rouge">window.screen</code>):</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// lock the device orientation</span>
+<span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">portrait</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="c1">// unlock the orientation</span>
+<span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">()</span>
+
+<span class="c1">// current orientation</span>
+<span class="p">.</span><span class="nx">orientation</span>
+</code></pre></div></div>
+
+<h2 id="install">Install</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-screen-orientation
+</code></pre></div></div>
+
+<h2 id="supported-orientations">Supported Orientations</h2>
+
+<h4 id="portrait-primary">portrait-primary</h4>
+<blockquote>
+  <p>The orientation is in the primary portrait mode.</p>
+</blockquote>
+
+<h4 id="portrait-secondary">portrait-secondary</h4>
+<blockquote>
+  <p>The orientation is in the secondary portrait mode.</p>
+</blockquote>
+
+<h4 id="landscape-primary">landscape-primary</h4>
+<blockquote>
+  <p>The orientation is in the primary landscape mode.</p>
+</blockquote>
+
+<h4 id="landscape-secondary">landscape-secondary</h4>
+<blockquote>
+  <p>The orientation is in the secondary landscape mode.</p>
+</blockquote>
+
+<h4 id="portrait">portrait</h4>
+<blockquote>
+  <p>The orientation is either portrait-primary or portrait-secondary (sensor).</p>
+</blockquote>
+
+<h4 id="landscape">landscape</h4>
+<blockquote>
+  <p>The orientation is either landscape-primary or landscape-secondary (sensor).</p>
+</blockquote>
+
+<h4 id="any">any</h4>
+<blockquote>
+  <p>orientation is  unlocked - all orientations are supported.</p>
+</blockquote>
+
+<h2 id="usage">Usage</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// set to either landscape</span>
+<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">landscape</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// allow user rotate</span>
+<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">();</span>
+
+<span class="c1">// access current orientation</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Orientation is </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="events">Events</h2>
+
+<p>Both android and iOS will fire the orientationchange event on the window object.
+For this version of the plugin use the window object if you require notification.</p>
+
+<h3 id="example-usage">Example usage</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">orientationchange</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="c1">// e.g. portrait</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>The ‘change’ event listener has also been added to the screen.orientation object.</p>
+
+<h3 id="example-usage-1">Example usage</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="c1">// e.g. portrait</span>
+<span class="p">});</span>
+    <span class="c1">// OR</span>
+
+<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+<h2 id="android-notes">Android Notes</h2>
+
+<p>The <strong>screen.orientation</strong> property will not update when the phone is <a href="http://www.quirksmode.org/dom/events/orientationchange.html">rotated 180 degrees</a>.</p>
+
+<h2 id="windows-uwp-notes">Windows UWP Notes</h2>
+
+<p>Windows store apps (windows-uwp) will only display orientation changes if the device has some sort of accelerometer.  The internal state of the “orientation” will still be kept, but the actual screen won’t rotate unless the device supports it.</p>

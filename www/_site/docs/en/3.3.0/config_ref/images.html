@@ -1,0 +1,193 @@
+<h1 id="icons-and-splash-screens">Icons and Splash Screens</h1>
+
+<p>This section shows how to configure an app’s icon and optional splash
+screen for various platforms, both when working in the Cordova CLI
+(described in The Command-Line Interface) or using platform-specific
+SDK tools (detailed in the Platform Guides).</p>
+
+<h2 id="configuring-icons-in-the-cli">Configuring Icons in the CLI</h2>
+
+<p>When working in the CLI, icon source files are located within various
+platform-specific subdirectories within the project’s <code class="language-plaintext highlighter-rouge">www/res/icons</code>
+directory. Newly created projects come with a default set of Cordova
+icons for you to replace for the platforms you wish to target.</p>
+
+<p>Android specifies icons for low, medium, high, and extra-high resolutions:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    android/icon-36-ldpi.png
+    android/icon-48-mdpi.png
+    android/icon-72-hdpi.png
+    android/icon-96-xhdpi.png
+</code></pre></div></div>
+
+<p>The iOS platform specifies 72-pixel-square icons for iPads, and
+57-pixel icons for iPhones and iPods, with high-resolution <em>2x</em>
+variants for retina displays:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ios/icon-57-2x.png
+    ios/icon-57.png
+    ios/icon-72-2x.png
+    ios/icon-72.png
+</code></pre></div></div>
+
+<p>Windows Phone specifies a default 48-pixel icon, along with various
+devices’ background tiling images used when representing applications:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    windows-phone/icon-48.png
+    windows-phone/icon-62-tile.png
+    windows-phone/icon-173-tile.png
+</code></pre></div></div>
+
+<p>BlackBerry 10 requires an icon element in config.xml:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;icon src="blackberry10/icon-86.png" /&gt;
+</code></pre></div></div>
+
+<p>See BlackBerry’s documentation for tareting multiple sizes and locales.</p>
+
+<p>[http://developer.blackberry.com/html5/documentation/icon_element.html]</p>
+
+<p>Tizen requires an 128-pixel icon:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tizen/icon-128.png
+</code></pre></div></div>
+
+<h2 id="configuring-splash-screens-in-the-cli">Configuring Splash Screens in the CLI</h2>
+
+<p>Use the <a href="../cordova/splashscreen/splashscreen.html">Splashscreen</a> API to enable display of an app’s introductory
+splash screen on many platforms.  When working in the CLI, splash
+screen source files are located within the project’s <code class="language-plaintext highlighter-rouge">www/res/screens</code>
+subdirectory.</p>
+
+<p>Android specifies both portrait- and landscape-oriented splash screen
+images for low, medium, high, and extra-high resolutions:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    android/screen-hdpi-landscape.png
+    android/screen-hdpi-portrait.png
+    android/screen-ldpi-landscape.png
+    android/screen-ldpi-portrait.png
+    android/screen-mdpi-landscape.png
+    android/screen-mdpi-portrait.png
+    android/screen-xhdpi-landscape.png
+    android/screen-xhdpi-portrait.png
+</code></pre></div></div>
+
+<p>The iOS platform specifies variants for iPhone/iPod and iPad, with
+variants for retina displays and different orientations. The <em>568h</em>
+file applies to the iPhone 5’s taller screen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ios/screen-ipad-landscape-2x.png
+    ios/screen-ipad-landscape.png
+    ios/screen-ipad-portrait-2x.png
+    ios/screen-ipad-portrait.png
+    ios/screen-iphone-landscape-2x.png
+    ios/screen-iphone-landscape.png
+    ios/screen-iphone-portrait-2x.png
+    ios/screen-iphone-portrait.png
+    ios/screen-iphone-portrait-568h-2x.png
+</code></pre></div></div>
+
+<p>Windows Phone specifies a single splash screen image:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    windows-phone/screen-portrait.jpg
+</code></pre></div></div>
+
+<p>The following sections detail how to set up splash screens when
+working with SDKs and related command-line tools described in Platform
+Guides.</p>
+
+<p>Don’t forget to install the SplashScreen plugin before trying to use the
+<code class="language-plaintext highlighter-rouge">navigator.splashscreen.hide()</code> or <code class="language-plaintext highlighter-rouge">navigator.splashscreen.show()</code> methods.</p>
+
+<h2 id="splash-screens-for-the-android-platform">Splash Screens for the Android Platform</h2>
+
+<p>Place <a href="https://developer.android.com/tools/help/draw9patch.html">9-patch image</a>
+files in the Android project’s <code class="language-plaintext highlighter-rouge">platforms/android/res/drawable*</code> directories.</p>
+
+<p>The size for each should be:</p>
+
+<ul>
+  <li>xlarge (xhdpi): at least 960 × 720</li>
+  <li>large (hdpi): at least 640 × 480</li>
+  <li>medium (mdpi): at least 470 × 320</li>
+  <li>small (ldpi): at least 426 × 320</li>
+</ul>
+
+<p>If you want to use
+the default splash screen images provided in Cordova, you’ll need to copy the
+png files from <code class="language-plaintext highlighter-rouge">platforms/android/www/res/screen/android</code> to
+<code class="language-plaintext highlighter-rouge">platforms/android/res/drawable*/</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd platforms/android/res
+mkdir drawable-port-ldpi
+cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
+mkdir drawable-land-ldpi
+cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
+mkdir drawable-port-mdpi
+cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
+mkdir drawable-land-mdpi
+cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
+mkdir drawable-port-hdpi
+cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
+mkdir drawable-land-hdpi
+cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
+mkdir drawable-port-xhdpi
+cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
+mkdir drawable-land-xhdpi
+cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">drawable</code> directory names must follow the Android conventions for
+supporting
+<a href="http://developer.android.com/guide/practices/screens_support.html">screen sizes</a> and
+<a href="http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources">alternate resources</a>.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">config.xml</code> in the project’s <code class="language-plaintext highlighter-rouge">www</code> directory, add the following preferences:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;preference name="SplashScreen" value="splash" /&gt;
+&lt;preference name="SplashScreenDelay" value="10000" /&gt;
+</code></pre></div></div>
+
+<p>The first line sets the image to display as the splash screen. This is the
+file name of the png in the <code class="language-plaintext highlighter-rouge">drawable*</code> directories. If you
+name the image anything other than <code class="language-plaintext highlighter-rouge">splash.png</code>, you need to modify
+this line. Do not include the filename extension (i.e., <code class="language-plaintext highlighter-rouge">.png</code>).
+If you want to use the default splash screens provided in
+Cordova as listed above, use the value <code class="language-plaintext highlighter-rouge">screen</code>.</p>
+
+<p>The second line sets the default delay of how long the splashscreen appears in
+milliseconds. This should be the maximum expected start time.
+The default value for SplashScreenDelay is 3000 ms.</p>
+
+<p>Finally, the splash screen should be present only as long as necessary. When
+your app has started and the webview has loaded, your app should hide the
+splash screen so that your main view is visible. Because the app start time
+will vary quite a bit due to a number of factors, it is recommended that your
+app explicitly invoke <code class="language-plaintext highlighter-rouge">navigator.splashscreen.hide()</code> in the Javascript
+method that responds to the <code class="language-plaintext highlighter-rouge">[deviceready](../cordova/events/events.deviceready.html)</code> event. Otherwise the splash screen
+will be visible for the SplashScreenDelay value that you configured above.
+This event-driven approach is highly recommended versus having the splash
+screen visible for always a fixed duration.</p>
+
+<h2 id="splash-screens-for-the-ios-platform">Splash Screens for the iOS Platform</h2>
+
+<p>Copy splash screen images into the iOS project’s <code class="language-plaintext highlighter-rouge">Resources/splash</code>
+directory. Only add those images for the devices you want to support,
+such as iPad or iPhone. The size of each image should be:</p>
+
+<ul>
+  <li>Default-568h@2x~iphone.png (640x1136 pixels)</li>
+  <li>Default-Landscape@2x~ipad.png (2048x1496 pixels)</li>
+  <li>Default-Landscape~ipad.png (1024x748 pixels)</li>
+  <li>Default-Portrait@2x~ipad.png (1536x2008 pixels)</li>
+  <li>Default-Portrait~ipad.png (768x1004 pixels)</li>
+  <li>Default@2x~iphone.png (640x960 pixels)</li>
+  <li>Default~iphone.png (320x480 pixels)</li>
+</ul>
+
+<h2 id="splash-screens-for-the-blackberry-10-platform">Splash Screens for the BlackBerry 10 Platform</h2>
+
+<p>Add a rim:splash element to config.xml for each resolution and locale you wish
+to support:</p>
+
+<p><a href="http://developer.blackberry.com/html5/documentation/rim_splash_element.html">http://developer.blackberry.com/html5/documentation/rim_splash_element.html</a></p>

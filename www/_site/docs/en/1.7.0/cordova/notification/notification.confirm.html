@@ -1,0 +1,126 @@
+<h1 id="notificationconfirm">notification.confirm</h1>
+
+<p>Shows a customizable confirmation dialog box.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
+</code></pre></div></div>
+
+<ul>
+  <li><strong>message:</strong> Dialog message (<code class="language-plaintext highlighter-rouge">String</code>)</li>
+  <li><strong>confirmCallback:</strong> - Callback to invoke with index of button pressed (1, 2 or 3). (<code class="language-plaintext highlighter-rouge">Number</code>)</li>
+  <li><strong>title:</strong> Dialog title (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “Confirm”)</li>
+  <li><strong>buttonLabels:</strong> Comma separated string with button labels (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “OK,Cancel”)</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>Function <code class="language-plaintext highlighter-rouge">notification.confirm</code> displays a native dialog box that is more customizable than the browser’s <code class="language-plaintext highlighter-rouge">confirm</code> function.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 ( Mango )</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// process the confirmation dialog result
+function onConfirm(button) {
+	alert('You selected button ' + button);
+}
+
+// Show a custom confirmation dialog
+//
+function showConfirm() {
+    navigator.notification.confirm(
+        'You are the winner!',  // message
+		onConfirm,				// callback to invoke with index of button pressed
+        'Game Over',            // title
+        'Restart,Exit'          // buttonLabels
+    );
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+	// process the confirmation dialog result
+	function onConfirm(button) {
+		alert('You selected button ' + button);
+	}
+
+    // Show a custom confirmation dialog
+    //
+    function showConfirm() {
+        navigator.notification.confirm(
+	        'You are the winner!',  // message
+			onConfirm,				// callback to invoke with index of button pressed
+	        'Game Over',            // title
+	        'Restart,Exit'          // buttonLabels
+        );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showConfirm(); return false;"&gt;Show Confirm&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-7-quirks">Windows Phone 7 Quirks</h2>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Ignores button names, always ‘OK</td>
+          <td>Cancel’</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>There is no built in browser confirm, so if you want to just write alert(‘foo’); you can assign window.confirm = navigator.notification.confirm;</li>
+  <li>alert + confirm calls are non-blocking, and result is only available asynchronously.</li>
+</ul>
+
+<h2 id="bada-2x-quirks">Bada 2.x Quirks</h2>
+<ul>
+  <li>confirm uses javascript alert</li>
+</ul>
+
+<h2 id="bada-12-quirks">Bada 1.2 Quirks</h2>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Ignore button names, always ‘OK</td>
+          <td>Cancel’</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>

@@ -1,0 +1,121 @@
+<h1 id="getting-started-with-ios">Getting Started with iOS</h1>
+
+<p>This guide describes how to set up your development environment for Apache Cordova and run a sample Apache Cordova application.</p>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>Xcode 4.5+</li>
+  <li>Xcode Command Line Tools</li>
+  <li>Intel-based computer with Mac OS X Lion or greater (10.7+)</li>
+  <li>Necessary for installing on device:
+    <ul>
+      <li>Apple iOS device (iPhone, iPad, iPod Touch)</li>
+      <li>iOS developer certificate</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-the-ios-sdk-and-apache-cordova">Install the iOS SDK and Apache Cordova</h2>
+
+<ul>
+  <li>Install <strong>Xcode</strong> from the <a href="http://itunes.apple.com/us/app/xcode/id497799835?mt=12">Mac App Store</a> or <a href="http://developer.apple.com/downloads">Apple Developer Downloads</a></li>
+  <li>Install the <strong>Xcode Command Line Tools</strong> (<strong>Xcode Preferences -&gt; Downloads -&gt; Components -&gt; Command Line Tools -&gt; Install</strong>).</li>
+  <li>Download the latest release of <a href="http://phonegap.com/download">Apache Cordova</a>
+    <ul>
+      <li>extract its contents</li>
+      <li>Apache Cordova iOS is found under <code class="language-plaintext highlighter-rouge">lib/ios</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-cordovalib">Install CordovaLib</h2>
+
+<ol>
+  <li><strong>Download</strong> the Cordova source</li>
+  <li><strong>Extract</strong> the source to their final permanent location on your hard drive (for example, to ~/Documents/Cordova-2.X.X)</li>
+  <li>There is no step 3</li>
+</ol>
+
+<h2 id="create-a-new-project">Create a New Project</h2>
+
+<ul>
+  <li>Launch <strong>Terminal.app</strong></li>
+  <li>Drag the <strong>bin</strong> folder (located in the permanent folder location of Cordova, from the <strong>“Install CordovaLib”</strong> section above) to the <strong>Terminal.app</strong> icon in your Dock, it should launch a new Terminal window</li>
+  <li>
+    <p>Type in <code class="language-plaintext highlighter-rouge">./create &lt;project_folder_path&gt; &lt;package_name&gt; &lt;project_name&gt;</code> then press <strong>“Enter”</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;project_folder_path&gt; is the path to your new Cordova iOS project (it must be empty if it exists)
+  &lt;package_name&gt; is the package name, following reverse-domain style convention
+  &lt;project_name&gt; is the project name
+</code></pre></div>    </div>
+
+    <p><img src="/static/img/guide/platforms/ios/bin_create_project.png" alt="" /></p>
+  </li>
+  <li><strong>Locate</strong> your new project folder that you just created</li>
+  <li><strong>Launch</strong> the .xcodeproj file in the folder</li>
+</ul>
+
+<p><strong>Note:</strong>
+Starting with Cordova 2.2, the project will have a copy of CordovaLib within it instead of having
+a dependency on the copy of CordovaLib from your Cordova installation.</p>
+
+<p>If you would like your project to depend directly on your Cordova installation’s version of CordovaLib, you can use:
+<code class="language-plaintext highlighter-rouge">./create --shared</code>, or change the project reference after creation using:
+<code class="language-plaintext highlighter-rouge">./update_cordova_subproject path/to/you/project</code>.</p>
+
+<h2 id="deploy-to-simulator">Deploy to Simulator</h2>
+
+<ul>
+  <li>Change the <strong>Target</strong> in the <strong>Scheme</strong> drop-down menu on the toolbar to <strong>“HelloWorld”</strong> (your project name)</li>
+  <li>
+    <p>Change the <strong>Active SDK</strong> in the <strong>Scheme</strong> drop-down menu on the toolbar to <strong>iOS [version] Simulator</strong></p>
+
+    <p><img src="/static/img/guide/platforms/ios/active_scheme_simulator.png" alt="" /></p>
+  </li>
+  <li>Select the <strong>Run</strong> button in your project window’s toolbar</li>
+</ul>
+
+<h2 id="deploy-to-device">Deploy to <a href="../../../cordova/device/device.html">Device</a></h2>
+
+<ul>
+  <li>Open <code class="language-plaintext highlighter-rouge">HelloWorld-Info.plist</code>, under the <strong>Resources</strong> group</li>
+  <li>Change <strong>BundleIdentifier</strong> to the identifier provided by Apple or your own bundle identifier
+    <ul>
+      <li>If you have a developer license, you can run the <a href="http://developer.apple.com/iphone/manage/overview/index.action">Assistant</a> to register your app</li>
+    </ul>
+  </li>
+  <li>Change the <strong>Target</strong> in the <strong>Scheme</strong> drop-down menu on the toolbar to <strong>“HelloWorld”</strong> (your project name)</li>
+  <li>Change the <strong>Active SDK</strong> in the Scheme drop-down menu on the toolbar to <strong>[Your <a href="../../../cordova/device/device.html">Device</a> Name]</strong>
+    <ul>
+      <li>You will need to have your device connected via USB</li>
+    </ul>
+
+    <p><img src="/static/img/guide/platforms/ios/active_scheme_device.png" alt="" /></p>
+  </li>
+  <li>Select the <strong>Run</strong> button in your project window’s toolbar</li>
+</ul>
+
+<h2 id="results">Results</h2>
+<ul>
+  <li>
+    <p>You should see the screen below, with a pulsating green <strong>“device is ready”</strong> message</p>
+
+    <p><img src="/static/img/guide/platforms/ios/HelloWorldStandard.png" alt="" /></p>
+  </li>
+</ul>
+
+<h2 id="problems-in-xcode">Problems in Xcode</h2>
+<p>If you have compilation problems related to missing headers, the build products should <strong>build into the same build directory</strong>. You may need to set the preference <strong>“Xcode Preferences -&gt; Locations -&gt; Derived Data -&gt; Advanced…”</strong> to <strong>“Unique”</strong>. This is the default setting for Xcode on a fresh new install, if you upgraded from older versions of Xcode, you might have a legacy preference in there that you need to update.</p>
+
+<h2 id="build-your-app">Build Your App</h2>
+
+<p>You now have an Xcode project setup and you can build and run on the Simulator and device.
+It is important to understand that you do not need to use Xcode to write your web application.
+You can use your favourite text editor and simply rebuild your project using Xcode, or the <a href="guide_command-line_index.md.html#Command-Line%20Usage">command-line tools</a> in your project folder (under the <strong>cordova</strong> sub-folder)
+Xcode will automatically detect the files that are changed in <code class="language-plaintext highlighter-rouge">www</code>.</p>
+
+<h2 id="problems-in-the-command-line-tools">Problems in the Command Line Tools</h2>
+<p>If you see this error: <strong>“Error: No developer directory found at /Developer. Run /usr/bin/xcode-select to update the developer directory path.”</strong> Run this to set your Developer folder:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
+</code></pre></div></div>

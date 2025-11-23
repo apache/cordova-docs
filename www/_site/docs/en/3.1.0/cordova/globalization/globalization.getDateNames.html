@@ -1,0 +1,84 @@
+<h1 id="globalizationgetdatenames">globalization.getDateNames</h1>
+
+<p>Returns an array of the names of the months or days of the week,
+depending on the client’s user preferences and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDateNames(successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Returns the array of names to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a
+<code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object contains a <code class="language-plaintext highlighter-rouge">value</code>
+property with an <code class="language-plaintext highlighter-rouge">Array</code> of <code class="language-plaintext highlighter-rouge">String</code> values. The array features names
+starting from either the first month in the year or the first day of
+the week, depending on the option selected.</p>
+
+<p>If there is an error obtaining the names, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and its default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'wide', item:'months'}
+</code></pre></div></div>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">narrow</code> or <code class="language-plaintext highlighter-rouge">wide</code>.</p>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">options.item</code> can be <code class="language-plaintext highlighter-rouge">months</code> or <code class="language-plaintext highlighter-rouge">days</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale, this example displays
+a series of twelve popup dialogs, one per month, with text similar to
+<code class="language-plaintext highlighter-rouge">month: January</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDateNames(
+    function (names) {
+        for (var i = 0; i &lt; names.value.length; i++) {
+            alert('month: ' + names.value[i] + '\n');
+        }
+    },
+    function () { alert('Error getting names\n'); },
+    { type: 'wide', item: 'months' }
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getDateNames Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkDateNames() {
+      navigator.globalization.getDateNames(
+        function (names) {
+          for (var i=0; i&lt;names.value.length; i++) {
+            alert('month: ' + names.value[i] + '\n');
+          }
+        },
+        function () {alert('Error getting names\n');},
+        {type:'wide', item:'months'}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDateNames()"&gt;Click for date names&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

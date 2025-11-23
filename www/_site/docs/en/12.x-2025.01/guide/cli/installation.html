@@ -1,0 +1,71 @@
+<h1 id="installation">Installation</h1>
+
+<p>The Cordova command-line tool (CLI) is distributed as an npm package.</p>
+
+<p>To install the <code class="language-plaintext highlighter-rouge">cordova</code> CLI tool, follow these steps:</p>
+
+<ol>
+  <li>
+    <p>Download and install <a href="https://nodejs.org/en/download/">Node.js</a>. On installation you should be able to invoke <code class="language-plaintext highlighter-rouge">node</code> and <code class="language-plaintext highlighter-rouge">npm</code> on your line.</p>
+  </li>
+  <li>
+    <p>(Optional) Download and install a <a href="http://git-scm.com/downloads">git client</a>, if you don’t already have one. Following installation, you should be able to invoke the <code class="language-plaintext highlighter-rouge">git</code> command in your command promt (terminal). The Cordova cli and npm invokes the git command when download assets that were referenced with a git repo url.</p>
+  </li>
+  <li>
+    <p>Install the <code class="language-plaintext highlighter-rouge">cordova</code> module using <code class="language-plaintext highlighter-rouge">npm</code> utility of Node.js. The <code class="language-plaintext highlighter-rouge">cordova</code> module will automatically be downloaded by the <code class="language-plaintext highlighter-rouge">npm</code> utility.</p>
+
+    <ul>
+      <li>
+        <p>on macOS and Linux:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm <span class="nb">install</span> <span class="nt">-g</span> cordova
+</code></pre></div>        </div>
+
+        <p>For macOS and Linux users, you might need to use the <code class="language-plaintext highlighter-rouge">sudo</code> prefix when running the <code class="language-plaintext highlighter-rouge">npm</code> command to install this utility in restricted directories like <code class="language-plaintext highlighter-rouge">/usr/local/share</code>. However, if you are using the optional nvm/nave tool or have write access to the installation directory, you may be able to omit the <code class="language-plaintext highlighter-rouge">sudo</code> prefix.</p>
+
+        <p>It is also worth noting that it is generally recommended to avoid using <code class="language-plaintext highlighter-rouge">sudo</code> with <code class="language-plaintext highlighter-rouge">npm</code> to prevent potential issues with permissions and package installations.</p>
+
+        <p>Instead, it’s recommended to use a version manager like nvm (Node Version Manager) or nave to manage Node.js and npm installations, which typically avoids the need for <code class="language-plaintext highlighter-rouge">sudo</code> when installing packages.</p>
+      </li>
+      <li>
+        <p>on Windows:</p>
+
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> C:<span class="se">\&gt;</span>npm <span class="nb">install</span> <span class="nt">-g</span> cordova
+</code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p>The <code class="language-plaintext highlighter-rouge">-g</code> flag above tells <code class="language-plaintext highlighter-rouge">npm</code> to install <code class="language-plaintext highlighter-rouge">cordova</code> globally. Otherwise it will be installed in the <code class="language-plaintext highlighter-rouge">node_modules</code> subdirectory of the current working directory.</p>
+
+    <p>Following installation, you should be able to run <code class="language-plaintext highlighter-rouge">cordova</code> on the command line with no arguments and it should print help text.</p>
+  </li>
+</ol>
+
+<h2 id="requirements-and-support">Requirements and Support</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Cordova CLI Version</th>
+            <th>Node.js Supported Version</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>12.x</td>
+            <td>&gt;=16.13.0</td>
+        </tr>
+        <tr>
+            <td>11.x</td>
+            <td>&gt;=12.0.0</td>
+        </tr>
+        <tr>
+            <td>10.x</td>
+            <td>&gt;=10.0.0</td>
+        </tr>
+        <tr>
+            <td>9.x</td>
+            <td>&gt;=6.0.0</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,121 @@
+<h1 id="notificationconfirm">notification.confirm</h1>
+
+<p>Shows a customizable confirmation dialog box.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
+</code></pre></div></div>
+
+<ul>
+  <li><strong>message:</strong> Dialog message (<code class="language-plaintext highlighter-rouge">String</code>)</li>
+  <li><strong>confirmCallback:</strong> - Callback to invoke with index of button pressed (1, 2 or 3) or when the dialog is dismissed without a button press (0), (<code class="language-plaintext highlighter-rouge">Function</code>)</li>
+  <li><strong>title:</strong> Dialog title (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “Confirm”)</li>
+  <li><strong>buttonLabels:</strong> Comma separated string with button labels (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: “OK,Cancel”)</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>Function <code class="language-plaintext highlighter-rouge">notification.confirm</code> displays a native dialog box that is more customizable than the browser’s <code class="language-plaintext highlighter-rouge">confirm</code> function.</p>
+
+<h2 id="confirmcallback">confirmCallback</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">confirmCallback</code> is called when the user has pressed one of the buttons on the confirmation dialog box.</p>
+
+<p>The callback takes the argument <code class="language-plaintext highlighter-rouge">buttonIndex</code> (<code class="language-plaintext highlighter-rouge">Number</code>), which is the index of the pressed button. It’s important to note that the index uses one-based indexing, so the value will be <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code>, etc.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry OS 5 - 7 and BlackBerry 10</li>
+  <li>iPhone</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+  <li>Tizen</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// process the confirmation dialog result
+function onConfirm(buttonIndex) {
+	alert('You selected button ' + buttonIndex);
+}
+
+// Show a custom confirmation dialog
+//
+function showConfirm() {
+    navigator.notification.confirm(
+        'You are the winner!',  // message
+		onConfirm,				// callback to invoke with index of button pressed
+        'Game Over',            // title
+        'Restart,Exit'          // buttonLabels
+    );
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Notification Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+	// process the confirmation dialog result
+	function onConfirm(buttonIndex) {
+		alert('You selected button ' + buttonIndex);
+	}
+
+    // Show a custom confirmation dialog
+    //
+    function showConfirm() {
+        navigator.notification.confirm(
+	        'You are the winner!',  // message
+			onConfirm,				// callback to invoke with index of button pressed
+	        'Game Over',            // title
+	        'Restart,Exit'          // buttonLabels
+        );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;a href="#" onclick="showConfirm(); return false;"&gt;Show Confirm&lt;/a&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-7-and-8-quirks">Windows Phone 7 and 8 Quirks</h2>
+
+<ul>
+  <li>There is no built-in browser function for <code class="language-plaintext highlighter-rouge">window.confirm</code>
+    <ul>
+      <li>You can bind <code class="language-plaintext highlighter-rouge">window.confirm</code> by assigning <code class="language-plaintext highlighter-rouge">window.confirm = navigator.notification.confirm;</code>.</li>
+    </ul>
+  </li>
+  <li>Calls to <code class="language-plaintext highlighter-rouge">alert</code> and <code class="language-plaintext highlighter-rouge">confirm</code> are non-blocking and result is only available asynchronously.</li>
+</ul>
+
+<h2 id="bada-2x-quirks">Bada 2.x Quirks</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">confirm</code> uses the browser’s built-in <code class="language-plaintext highlighter-rouge">alert</code> function.</li>
+</ul>
+
+<h2 id="bada-12-quirks">Bada 1.2 Quirks</h2>
+
+<ul>
+  <li>Ignore button names, always <code class="language-plaintext highlighter-rouge">'OK|Cancel'</code>.</li>
+</ul>

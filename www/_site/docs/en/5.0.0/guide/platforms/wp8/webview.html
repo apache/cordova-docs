@@ -1,0 +1,44 @@
+<h1 id="windows-phone-80-webviews">Windows Phone 8.0 WebViews</h1>
+
+<p>This guide shows how to embed a Cordova-enabled WebView component
+within a larger Windows Phone 8.0 application.</p>
+
+<p>To follow these instructions, make sure you have the latest Cordova 
+distribution. Download it from 
+<a href="http://cordova.apache.org">cordova.apache.org</a> and unzip its 
+Windows Phone 8.0 package (cordova-wp8-*.zip).</p>
+
+<ol>
+  <li>
+    <p>Navigate to the package’s <code class="language-plaintext highlighter-rouge">wp8/framework</code> directory and build
+<code class="language-plaintext highlighter-rouge">WPCordovaClassLib.sln</code>. 
+It creates the <code class="language-plaintext highlighter-rouge">Bin\Debug[Release]\WPCordovaClassLib.dll</code>.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">WPCordovaClassLib.dll</code> file into the Windows Phone 8 project’s
+ <code class="language-plaintext highlighter-rouge">/libs</code> directory and include <code class="language-plaintext highlighter-rouge">WPCordovaClassLib.dll</code> to your
+ project via <code class="language-plaintext highlighter-rouge">Project-&gt;References-&gt;Add Reference</code>.
+ Alternatively, you can directly reference the
+ <code class="language-plaintext highlighter-rouge">wp8/framework/WPCordovaClassLib.csproj</code> file.</p>
+  </li>
+  <li>
+    <p>Add <code class="language-plaintext highlighter-rouge">CordovaView</code> component to your page (for example, <code class="language-plaintext highlighter-rouge">MainPage.xaml</code>).</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> xmlns:my="clr-namespace:WPCordovaClassLib;assembly=WPCordovaClassLib"&gt;
+ ...
+ &lt;my:CordovaView HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+ StartPageUri="html/index.html" x:Name="CordovaView" VerticalAlignment="Stretch" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Copy <code class="language-plaintext highlighter-rouge">common/www/cordova.js</code> along with the application’s HTML 
+ and JavaScript files to the Windows Phone 8 project’s <code class="language-plaintext highlighter-rouge">html</code> directory
+ and include new files to the project.</p>
+  </li>
+  <li>
+    <p>Copy the <code class="language-plaintext highlighter-rouge">wp8/template/config.xml</code>to the project’s root directory and</p>
+  </li>
+</ol>
+
+<p>Instructions above will link core Cordova components only, 
+see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a> in order to link Cordova plugins.</p>

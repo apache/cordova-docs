@@ -1,0 +1,136 @@
+<h1 id="getting-started-with-android">Getting Started with Android</h1>
+
+<h2 id="video-tutorials">Video Tutorials:</h2>
+
+<ul>
+  <li><a href="http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1">PhoneGap and Android Quick Start Video Using Eclipse</a></li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="requirements">Requirements</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Eclipse 3.4+</li>
+</ul>
+
+<p>There is also a <a href="http://wiki.phonegap.com/w/page/30864168/phonegap-android-terminal-quickstart">Terminal</a> of this tutorial that doesn’t use Eclipse.</p>
+
+<ol>
+  <li>
+    <h2 id="install-sdk--phonegap">Install SDK + PhoneGap</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Download and install <a href="http://www.eclipse.org/downloads/">Eclipse Classic</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/index.html">Android SDK</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/eclipse-adt.html#installing">ADT Plugin</a></li>
+  <li>Download the latest copy of <a href="http://phonegap.com/download">PhoneGap</a> and extract its contents. We will be working with the Android directory.</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="setup-new-project">Setup New Project</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>
+    <p>Launch Eclipse, then under the menu select <strong>New &gt; Android Project</strong></p>
+
+    <p><img src="/static/img/guide/platforms/android/new_android_project.jpeg" alt="" /></p>
+  </li>
+  <li>In the root directory of the project, create two new directories:
+    <ul>
+      <li><strong>/libs</strong></li>
+      <li><strong>assets/www</strong></li>
+    </ul>
+  </li>
+  <li>Copy <strong>cordova-1.5.0.js</strong> from your PhoneGap download earlier to <strong>assets/www</strong></li>
+  <li>Copy <strong>cordova-1.5.0.jar</strong> from your PhoneGap download earlier to <strong>/libs</strong></li>
+  <li>Copy <strong>xml</strong> folder from your PhoneGap download earlier to <strong>/res</strong></li>
+  <li>Make a few adjustments too the project’s main Java file found in the <strong>src</strong> folder in Eclipse: (view image below)
+    <ul>
+      <li>Change the class’s extend from <strong>Activity</strong> to <strong>DroidGap</strong></li>
+      <li>Replace the <strong>setContentView()</strong> line with <strong>super.loadUrl(“file:///android_asset/www/index.html”);</strong></li>
+      <li>Add <strong>import com.phonegap.*;</strong></li>
+      <li>Remove <strong>import android.app.Activity;</strong></li>
+    </ul>
+
+    <p><img src="/static/img/guide/platforms/android/javaSrc.jpg" alt="" /></p>
+  </li>
+  <li>You might experience an error here, where Eclipse can’t find cordova-1.5.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.5.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.</li>
+  <li>Right click on AndroidManifest.xml and select <strong>Open With &gt; Text Editor</strong></li>
+  <li>
+    <p>Paste the following permissions under versionName: (view image below)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:resizeable="true" android:anyDensity="true" /&gt;
+  &lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+  &lt;uses-permission android:name="android.permission.VIBRATE" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /&gt;
+  &lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
+  &lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+  &lt;uses-permission android:name="android.permission.RECEIVE_SMS" /&gt;
+  &lt;uses-permission android:name="android.permission.RECORD_AUDIO" /&gt;
+  &lt;uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /&gt;
+  &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+  &lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
+  &lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt; &lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
+  &lt;uses-permission android:name="android.permission.BROADCAST_STICKY" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Add <code class="language-plaintext highlighter-rouge">android:configChanges="orientation|keyboardHidden"</code> to the activity tag in AndroidManifest. (view image below)</li>
+  <li>
+    <p>Add a second activity under you application tag in AndroidManifest. (view image below)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"&gt; &lt;intent-filter&gt; &lt;/intent-filter&gt; &lt;/activity&gt;
+</code></pre></div>    </div>
+
+    <p><img src="/static/img/guide/platforms/android/manifest.jpg" alt="" /></p>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="hello-world"><a href="../webos/index.html">Hello World</a></h2>
+  </li>
+</ol>
+
+<p>Now create and open a new file named <strong>index.html</strong> in the <strong>assets/www</strong> directory. Paste the following code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;PhoneGap&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="5a-deploy-to-simulator">5A. Deploy to Simulator</h2>
+
+<ul>
+  <li>Right click the project and go to <strong>Run As</strong> and click <strong>Android Application</strong></li>
+  <li>Eclipse will ask you to select an appropriate AVD. If there isn’t one, then you’ll need to create it.</li>
+</ul>
+
+<h2 id="5b-deploy-to-device">5B. Deploy to <a href="../../../phonegap/device/device.html">Device</a></h2>
+
+<ul>
+  <li>Make sure USB debugging is enabled on your device and plug it into your system. (Settings &gt; Applications &gt; Development)</li>
+  <li>Right click the project and go to <strong>Run As</strong> and click <strong>Android Application</strong></li>
+</ul>
+
+<h2 id="done">Done!</h2>
+
+<p>You can also checkout more detailed <a href="../../../phonegap/storage/parameters/version.html">version</a> of this guide <a href="http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart">here</a>.</p>
+

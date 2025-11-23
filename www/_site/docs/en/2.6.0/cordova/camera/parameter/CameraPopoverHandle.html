@@ -1,0 +1,51 @@
+<h1 id="camerapopoverhandle">CameraPopoverHandle</h1>
+
+<p>A handle to the popover dialog created by <code class="language-plaintext highlighter-rouge">[camera.getPicture](../camera.getPicture.html)</code>.</p>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>setPosition:</strong> Set the position of the popover.</li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>iOS</li>
+</ul>
+
+<h2 id="setposition">setPosition</h2>
+
+<p>Set the position of the popover.</p>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+  <li>cameraPopoverOptions - the <a href="CameraPopoverOptions.html">CameraPopoverOptions</a> specifying the new position</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+ cameraPopoverHandle.setPosition(cameraPopoverOptions);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> function onSuccess(imageData) {
+      // Do stuff with the image!
+ }
+
+ function onFail(message) {
+     alert('Failed to get the picture: ' + message);
+ }
+
+ var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+     { destinationType: Camera.DestinationType.FILE_URI,
+       sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
+
+ // Reposition the popover if the orientation changes.
+ window.onorientationchange = function() {
+     var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+     cameraPopoverHandle.setPosition(cameraPopoverOptions);
+ }
+</code></pre></div></div>

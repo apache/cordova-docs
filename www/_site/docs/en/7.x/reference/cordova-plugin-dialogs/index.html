@@ -1,0 +1,385 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Android 4.4</th>
+      <th style="text-align: center">Android 5.1</th>
+      <th style="text-align: center">Android 6.0</th>
+      <th style="text-align: center">iOS 9.3</th>
+      <th style="text-align: center">iOS 10.0</th>
+      <th style="text-align: center">Windows 10 Store</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-dialogs/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-dialogs" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-dialogs/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-dialogs" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-dialogs/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-dialogs" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-dialogs/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-dialogs" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-dialogs/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-dialogs" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-dialogs/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-dialogs" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-dialogs"><img src="https://travis-ci.org/apache/cordova-plugin-dialogs.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cordova-plugin-dialogs">cordova-plugin-dialogs</h1>
+
+<p>This plugin provides access to some native dialog UI elements
+via a global <code class="language-plaintext highlighter-rouge">navigator.notification</code> object.</p>
+
+<p>Although the object is attached to the global scoped <code class="language-plaintext highlighter-rouge">navigator</code>, it is not available until after the <code class="language-plaintext highlighter-rouge">deviceready</code> event.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.notification);
+}
+</code></pre></div></div>
+
+<p>Report issues on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Dialogs%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-dialogs
+</code></pre></div></div>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">navigator.notification.alert</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.notification.confirm</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.notification.prompt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">navigator.notification.beep</code></li>
+</ul>
+
+<h2 id="navigatornotificationalert">navigator.notification.alert</h2>
+
+<p>Shows a custom alert or dialog box.  Most Cordova implementations use a native
+dialog box for this feature, but some platforms use the browser’s <code class="language-plaintext highlighter-rouge">alert</code>
+function, which is typically less customizable.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.alert(message, alertCallback, [title], [buttonName])
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>message</strong>: Dialog message. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>alertCallback</strong>: Callback to invoke when alert dialog is dismissed. <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Dialog title. <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">Alert</code>)</p>
+  </li>
+  <li>
+    <p><strong>buttonName</strong>: Button name. <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">OK</code>)</p>
+  </li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function alertDismissed() {
+    // do something
+}
+
+navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
+</code></pre></div></div>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="windows-phone-7-and-8-quirks">Windows Phone 7 and 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p>There is no built-in browser alert, but you can bind one as follows to call <code class="language-plaintext highlighter-rouge">alert()</code> in the global scope:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  window.alert = navigator.notification.alert;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Both <code class="language-plaintext highlighter-rouge">alert</code> and <code class="language-plaintext highlighter-rouge">confirm</code> are non-blocking calls, results of which are only available asynchronously.</p>
+  </li>
+</ul>
+
+<h3 id="firefox-os-quirks">Firefox OS Quirks:</h3>
+
+<p>Both native-blocking <code class="language-plaintext highlighter-rouge">window.alert()</code> and non-blocking <code class="language-plaintext highlighter-rouge">navigator.notification.alert()</code> are available.</p>
+
+<h3 id="blackberry-10-quirks">BlackBerry 10 Quirks</h3>
+<p><code class="language-plaintext highlighter-rouge">navigator.notification.alert('text', callback, 'title', 'text')</code> callback parameter is passed the number 1.</p>
+
+<h2 id="navigatornotificationconfirm">navigator.notification.confirm</h2>
+
+<p>Displays a customizable confirmation dialog box.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>message</strong>: Dialog message. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>confirmCallback</strong>: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Dialog title. <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">Confirm</code>)</p>
+  </li>
+  <li>
+    <p><strong>buttonLabels</strong>: Array of strings specifying button labels. <em>(Array)</em>  (Optional, defaults to [<code class="language-plaintext highlighter-rouge">OK,Cancel</code>])</p>
+  </li>
+</ul>
+
+<h3 id="confirmcallback">confirmCallback</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">confirmCallback</code> executes when the user presses one of the
+buttons in the confirmation dialog box.</p>
+
+<p>The callback takes the argument <code class="language-plaintext highlighter-rouge">buttonIndex</code> <em>(Number)</em>, which is the
+index of the pressed button. Note that the index uses one-based
+indexing, so the value is <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code>, etc.</p>
+
+<h3 id="example-1">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onConfirm(buttonIndex) {
+    alert('You selected button ' + buttonIndex);
+}
+
+navigator.notification.confirm(
+    'You are the winner!', // message
+     onConfirm,            // callback to invoke with index of button pressed
+    'Game Over',           // title
+    ['Restart','Exit']     // buttonLabels
+);
+</code></pre></div></div>
+
+<h3 id="supported-platforms-1">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="windows-phone-7-and-8-quirks-1">Windows Phone 7 and 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p>There is no built-in browser function for <code class="language-plaintext highlighter-rouge">window.confirm</code>, but you can bind it by assigning:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  window.confirm = navigator.notification.confirm;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Calls to <code class="language-plaintext highlighter-rouge">alert</code> and <code class="language-plaintext highlighter-rouge">confirm</code> are non-blocking, so the result is only available asynchronously.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p>On Windows8/8.1 it is not possible to add more than three buttons to MessageDialog instance.</p>
+  </li>
+  <li>
+    <p>On Windows Phone 8.1 it’s not possible to show dialog with more than two buttons.</p>
+  </li>
+</ul>
+
+<h3 id="firefox-os-quirks-1">Firefox OS Quirks:</h3>
+
+<p>Both native-blocking <code class="language-plaintext highlighter-rouge">window.confirm()</code> and non-blocking <code class="language-plaintext highlighter-rouge">navigator.notification.confirm()</code> are available.</p>
+
+<h2 id="navigatornotificationprompt">navigator.notification.prompt</h2>
+
+<p>Displays a native dialog box that is more customizable than the browser’s <code class="language-plaintext highlighter-rouge">prompt</code> function.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>message</strong>: Dialog message. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>promptCallback</strong>: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). <em>(Function)</em></p>
+  </li>
+  <li>
+    <p><strong>title</strong>: Dialog title <em>(String)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">Prompt</code>)</p>
+  </li>
+  <li>
+    <p><strong>buttonLabels</strong>: Array of strings specifying button labels <em>(Array)</em> (Optional, defaults to <code class="language-plaintext highlighter-rouge">["OK","Cancel"]</code>)</p>
+  </li>
+  <li>
+    <p><strong>defaultText</strong>: Default textbox input value (<code class="language-plaintext highlighter-rouge">String</code>) (Optional, Default: empty string)</p>
+  </li>
+</ul>
+
+<h3 id="promptcallback">promptCallback</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">promptCallback</code> executes when the user presses one of the buttons
+in the prompt dialog box. The <code class="language-plaintext highlighter-rouge">results</code> object passed to the callback
+contains the following properties:</p>
+
+<ul>
+  <li>
+    <p><strong>buttonIndex</strong>: The index of the pressed button. <em>(Number)</em> Note that the index uses one-based indexing, so the value is <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code>, etc.</p>
+  </li>
+  <li>
+    <p><strong>input1</strong>: The text entered in the prompt dialog box. <em>(String)</em></p>
+  </li>
+</ul>
+
+<h3 id="example-2">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onPrompt(results) {
+    alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+}
+
+navigator.notification.prompt(
+    'Please enter your name',  // message
+    onPrompt,                  // callback to invoke
+    'Registration',            // title
+    ['Ok','Exit'],             // buttonLabels
+    'Jane Doe'                 // defaultText
+);
+</code></pre></div></div>
+
+<h3 id="supported-platforms-2">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="android-quirks">Android Quirks</h3>
+
+<ul>
+  <li>
+    <p>Android supports a maximum of three buttons, and ignores any more than that.</p>
+  </li>
+  <li>
+    <p>On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-1">Windows Quirks</h3>
+
+<ul>
+  <li>On Windows prompt dialog is html-based due to lack of such native api.</li>
+</ul>
+
+<h3 id="firefox-os-quirks-2">Firefox OS Quirks:</h3>
+
+<p>Both native-blocking <code class="language-plaintext highlighter-rouge">window.prompt()</code> and non-blocking <code class="language-plaintext highlighter-rouge">navigator.notification.prompt()</code> are available.</p>
+
+<h2 id="navigatornotificationbeep">navigator.notification.beep</h2>
+
+<p>The device plays a beep sound.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.notification.beep(times);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>times</strong>: The number of times to repeat the beep. <em>(Number)</em></li>
+</ul>
+
+<h3 id="example-3">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Beep twice!
+navigator.notification.beep(2);
+</code></pre></div></div>
+
+<h3 id="supported-platforms-3">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Browser</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h3 id="amazon-fire-os-quirks">Amazon Fire OS Quirks</h3>
+
+<ul>
+  <li>Amazon Fire OS plays the default <strong>Notification Sound</strong> specified under the <strong>Settings/Display &amp; Sound</strong> panel.</li>
+</ul>
+
+<h3 id="android-quirks-1">Android Quirks</h3>
+
+<ul>
+  <li>Android plays the default <strong>Notification ringtone</strong> specified under the <strong>Settings/Sound &amp; Display</strong> panel.</li>
+</ul>
+
+<h3 id="windows-phone-7-and-8-quirks-2">Windows Phone 7 and 8 Quirks</h3>
+
+<ul>
+  <li>Relies on a generic beep file from the Cordova distribution.</li>
+</ul>
+
+<h3 id="tizen-quirks">Tizen Quirks</h3>
+
+<ul>
+  <li>
+    <p>Tizen implements beeps by playing an audio file via the media API.</p>
+  </li>
+  <li>
+    <p>The beep file must be short, must be located in a <code class="language-plaintext highlighter-rouge">sounds</code> subdirectory of the application’s root directory, and must be named <code class="language-plaintext highlighter-rouge">beep.wav</code>.</p>
+  </li>
+</ul>

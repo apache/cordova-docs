@@ -1,0 +1,21 @@
+<h1 id="fileuploadresult">FileUploadResult</h1>
+
+<p>A <code class="language-plaintext highlighter-rouge">FileUploadResult</code> object is returned via the success callback of the <a href="../filetransfer/filetransfer.html">FileTransfer</a> upload method.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>bytesSent:</strong> The number of bytes sent to the server as part of the upload. (long)</li>
+  <li><strong>responseCode:</strong> The HTTP response code returned by the server. (long)</li>
+  <li><strong>response:</strong> The HTTP response returned by the server. (DOMString)</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">FileUploadResult</code> object is returned via the success callback of the <a href="../filetransfer/filetransfer.html">FileTransfer</a> upload method.</p>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+<ul>
+  <li>iOS does not include values for responseCode nor bytesSent in the success callback FileUploadResult object.</li>
+</ul>
+

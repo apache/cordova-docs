@@ -1,0 +1,165 @@
+<h1 id="whitelist-guide">Whitelist Guide</h1>
+
+<p>Domain whitelisting is a security model that controls access to
+external domains over which your application has no control. Cordova
+provides a configurable security policy to define which external sites may be
+accessed.  By default, new apps are configured to allow access to any site.
+Before moving your application to production, you should formulate a whitelist
+and allow access to specific network domains and subdomains.</p>
+
+<p>For Android (as of its 4.0 release), Cordova’s security policy is extensible via a plugin
+interface.  Your app should use the <a href="../../../reference/cordova-plugin-whitelist/">cordova-plugin-whitelist</a>, as it provides
+better security and configurability than earlier versions of Cordova.  While
+it is possible to implement your own whitelist plugin, it is not recommended
+unless your app has very specific security policy needs.  See the
+<a href="../../../reference/cordova-plugin-whitelist/">cordova-plugin-whitelist</a> for details on usage and configuration.</p>
+
+<p>For other platforms, Cordova adheres to the <a href="http://www.w3.org/TR/widgets-access/">W3C Widget Access</a> specification,
+which relies on the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> element within the app’s <code class="language-plaintext highlighter-rouge">config.xml</code> file to
+enable network access to specific domains. For projects that rely on
+the CLI workflow described in <a href="../../cli/index.html">The Command-Line Interface</a>, this file is
+located in the project’s top-level directory. Otherwise for
+platform-specific development paths, locations are listed in the
+sections below.</p>
+
+<p>The following examples demonstrate <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> whitelist syntax:</p>
+
+<ul>
+  <li>
+    <p>Access to <a href="http://google.com">google.com</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the secure <a href="https://google.com">google.com</a> (<code class="language-plaintext highlighter-rouge">https://</code>):</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"https://google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://maps.google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
+<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://*.google.com"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
+<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p>This is the default value for newly created CLI projects.</p>
+  </li>
+</ul>
+
+<p>Be aware that some websites may automatically redirect from their home page to
+a different url, such as using https protocol or to a country-specific
+domain. For example <code class="language-plaintext highlighter-rouge">http://www.google.com</code> will redirect to use SSL/TLS at
+<code class="language-plaintext highlighter-rouge">https://www.google.com</code>, and then may further redirect to a geography such as
+<code class="language-plaintext highlighter-rouge">https://www.google.co.uk</code>. Such scenarios may require modified or additional
+whitelist entries beyond your initial requirement. Please consider this
+as you are building your whitelist.</p>
+
+<p>Note that the whitelist applies only to the main Cordova webview, and does not
+apply to an InAppBrowser webview or opening links in the system web browser.</p>
+
+<h2 id="android-whitelisting">Android Whitelisting</h2>
+
+<p>As above, see <a href="../../../reference/cordova-plugin-whitelist/">cordova-plugin-whitelist</a> for details.  For cordova-android
+prior to 4.0.0, see older versions of this documentation.</p>
+
+<h2 id="ios-whitelisting">iOS Whitelisting</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Cordova-ios</code> version 4.0 and greater does <strong>not</strong> require the <a href="../../../reference/cordova-plugin-whitelist/">cordova-plugin-whitelist</a> plugin to be installed, however its configuration details apply to iOS too. The <code class="language-plaintext highlighter-rouge">&lt;allow-intent&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;allow-navigation&gt;</code> tags are <em>new</em> for cordova-ios 4.x and greater, see the <a href="../../../reference/cordova-plugin-whitelist/">cordova-plugin-whitelist</a> documentation for details on the usage of these tags.</p>
+
+<p>For cordova-ios versions prior to 4.0.0, see the older versions of this documentation.</p>
+
+<p><a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33">Application Transport Security (ATS)</a> is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cordova cli will automatically convert <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;allow-navigation&gt;</code> tags to the appropriate ATS directives.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;allow-navigation&gt;</code> tags support these three attributes below, which have their equivalents in ATS:</p>
+
+<ol>
+  <li>minimum-tls-version (String, defaults to ‘TLSv1.2’)</li>
+  <li>requires-forward-secrecy (Boolean, defaults to ‘true’)</li>
+  <li>requires-certificate-transparency (Boolean, defaults to ‘false’, new in iOS 10)</li>
+</ol>
+
+<ul>
+  <li>
+    <p>example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'https://cordova.apache.org'</span> <span class="na">minimum-tls-version=</span><span class="s">'TLSv1.1'</span> <span class="na">requires-forward-secrecy=</span><span class="s">'false'</span> <span class="na">requires-certificate-transparency=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>In iOS 10 and above, the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> tag supports these three attributes below, when paired with the origin wildcard <code class="language-plaintext highlighter-rouge">*</code>. These attributes also have their equivalents in ATS:</p>
+
+<ol>
+  <li>allows-arbitrary-loads-for-media (Boolean, defaults to ‘false’, new in iOS 10. New in cordova-ios@4.5.0, fixed to use the proper attribute name). The old attribute <code class="language-plaintext highlighter-rouge">allows-arbitrary-loads-in-media</code> is now deprecated.</li>
+  <li>allows-arbitrary-loads-in-web-content (Boolean, defaults to ‘false’, new in iOS 10)</li>
+  <li>allows-local-networking (Boolean, defaults to ‘false’, new in iOS 10)</li>
+</ol>
+
+<ul>
+  <li>
+    <p>example:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'*'</span> <span class="na">allows-arbitrary-loads-for-media=</span><span class="s">'true'</span> <span class="na">allows-arbitrary-loads-in-web-content=</span><span class="s">'true'</span> <span class="na">allows-local-networking=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>See the <a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33">ATS Technote</a> for more details.</p>
+
+<h2 id="blackberry-10-whitelisting">BlackBerry 10 Whitelisting</h2>
+
+<p>The whitelisting rules are found in <code class="language-plaintext highlighter-rouge">www/config.xml</code>.</p>
+
+<p>BlackBerry 10’s use of wildcards differs from other platforms in two
+ways:</p>
+
+<ul>
+  <li>
+    <p>Any content accessed by <code class="language-plaintext highlighter-rouge">XMLHttpRequest</code> must be declared
+explicitly. Setting <code class="language-plaintext highlighter-rouge">origin="*"</code> does not work in this case.
+Alternatively, all web security may be disabled using the
+<code class="language-plaintext highlighter-rouge">WebSecurity</code> preference described in BlackBerry Configuration:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"websecurity"</span> <span class="na">value=</span><span class="s">"disable"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>As an alternative to setting <code class="language-plaintext highlighter-rouge">*.domain</code>, set an additional
+<code class="language-plaintext highlighter-rouge">subdomains</code> attribute to <code class="language-plaintext highlighter-rouge">true</code>. It should be set to <code class="language-plaintext highlighter-rouge">false</code> by
+default.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">&lt;!-- Narrows access to google.com --&gt;</span>
+  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="na">subdomains=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
+
+  <span class="c">&lt;!-- Allows access to maps.google.com and docs.google.com --&gt;</span>
+  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="na">subdomains=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+
+  <span class="c">&lt;!-- Allows access to all domains, including the local `file://` protocol --&gt;</span>
+  <span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="na">subdomains=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>For more information on support, see BlackBerry’s documentation on the
+<a href="https://developer.blackberry.com/html5/documentation/v1_0/access_element_834677_11.html">access element</a>.</p>
+
+<h2 id="windows-phone-whitelisting">Windows Phone Whitelisting</h2>
+
+<p>The whitelisting rules for Windows Phone 8 are found in the
+app’s <code class="language-plaintext highlighter-rouge">config.xml</code> file.</p>
+

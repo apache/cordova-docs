@@ -1,0 +1,87 @@
+<h1 id="connection">Connection</h1>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">connection</code> object gives access to the device’s cellular and wifi connection information.</p>
+</blockquote>
+
+<p>This object is exposed as <code class="language-plaintext highlighter-rouge">navigator.connection</code>.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><a href="connection.type.html">connection.type</a></li>
+</ul>
+
+<h2 id="constants">Constants</h2>
+
+<ul>
+  <li>Connection.UNKNOWN</li>
+  <li>Connection.ETHERNET</li>
+  <li>Connection.WIFI</li>
+  <li>Connection.CELL_2G</li>
+  <li>Connection.CELL_3G</li>
+  <li>Connection.CELL_4G</li>
+  <li>Connection.NONE</li>
+</ul>
+
+<h2 id="permissions">Permissions</h2>
+
+<h3 id="android">Android</h3>
+
+<h4 id="appresxmlconfigxml">app/res/xml/config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" /&gt;
+</code></pre></div></div>
+
+<h4 id="appandroidmanifestxml">app/AndroidManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt;
+&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
+</code></pre></div></div>
+
+<h3 id="bada">Bada</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Privilege&gt;
+    &lt;Name&gt;SYSTEM_SERVICE&lt;/Name&gt;
+&lt;/Privilege&gt;
+</code></pre></div></div>
+
+<h3 id="blackberry-webworks">BlackBerry WebWorks</h3>
+
+<h4 id="wwwpluginsxml">www/plugins.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="Network Status" value="org.apache.cordova.network.Network" /&gt;
+</code></pre></div></div>
+
+<h3 id="ios">iOS</h3>
+
+<h4 id="configxml">config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin name="NetworkStatus" value="CDVConnection" /&gt;
+</code></pre></div></div>
+
+<h3 id="webos">webOS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No permissions are required.
+</code></pre></div></div>
+
+<h3 id="windows-phone">Windows Phone</h3>
+
+<h4 id="propertieswpappmanifestxml">Properties/WPAppManifest.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Capabilities&gt;
+    &lt;Capability Name="ID_CAP_NETWORKING" /&gt;
+&lt;/Capabilities&gt;
+</code></pre></div></div>
+
+<p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+
+<h3 id="tizen">Tizen</h3>
+
+<h4 id="configxml-1">config.xml</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature name="http://tizen.org/api/systeminfo" required="true"/&gt;
+</code></pre></div></div>
+
+<p>Reference: <a href="https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures">Application Manifest for Tizen Web Application</a></p>

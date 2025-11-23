@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that Apache Cordova 3.5 has been released!">
+
+    <title>
+        
+            
+                Apache Cordova 3.5.0 - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/announcements/2014/05/23/cordova-350.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Apache Cordova 3.5.0</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/stevesgill">Steve Gill</a>
+            
+        </div>
+        <div class="date">23 May 2014</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that <code class="language-plaintext highlighter-rouge">Apache Cordova 3.5</code> has been released!</p>
+
+<p>Most notable changes include:</p>
+
+<ul>
+  <li>Common code between <code class="language-plaintext highlighter-rouge">cordova-cli</code> &amp; <code class="language-plaintext highlighter-rouge">cordova-plugman</code> has been moved into its own repo named <code class="language-plaintext highlighter-rouge">cordova-lib</code>.</li>
+  <li>Each platform now has a <code class="language-plaintext highlighter-rouge">package.json</code> file and has been uploaded to <code class="language-plaintext highlighter-rouge">npm</code>. Future updates to the <code class="language-plaintext highlighter-rouge">cordova-cli</code> will make use of <code class="language-plaintext highlighter-rouge">npm</code> instead of <code class="language-plaintext highlighter-rouge">git</code> for loading platforms.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4863">CB-4863</a> - Drop <strong>iOS</strong> 5.0 support, and support <code class="language-plaintext highlighter-rouge">arm64</code>. New projects are built as a universal binary (64 and 32-bit), and require a minimum deployment target of iOS 6.0.</li>
+  <li>This is the last release with support for <strong>WP7</strong></li>
+  <li>Added Chrome devtools support for debug builds for <strong>amazon-fireos</strong></li>
+</ul>
+
+<p>To upgrade: (replace <code class="language-plaintext highlighter-rouge">android</code> with the platform you want to update):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+cd my_project
+cordova platform update android
+</code></pre></div></div>
+
+<p>For non-CLI projects or for pre-3.0 projects, refer to the <a href="http://cordova.apache.org/docs/en/3.5.0/guide_platforms_index.md.html">upgrade guides</a>.</p>
+
+<p>Other changes include:
+<!--more--></p>
+
+<h2 id="whats-new-in-android">What’s new in Android</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6552">CB-6552</a> added top level <code class="language-plaintext highlighter-rouge">package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6543">CB-6543</a> Fix <code class="language-plaintext highlighter-rouge">cordova/run</code> failure when no <code class="language-plaintext highlighter-rouge">custom_rules.xml</code> available</li>
+  <li><code class="language-plaintext highlighter-rouge">defaults.xml</code>: Add <code class="language-plaintext highlighter-rouge">AndroidLaunchMode</code> preference</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">JavaDoc</code> for <code class="language-plaintext highlighter-rouge">CordovaResourceApi</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6388">CB-6388</a> Handle binary data correctly in <code class="language-plaintext highlighter-rouge">LOAD_URL</code> bridge</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6048">CB-6048</a> Set <code class="language-plaintext highlighter-rouge">launchMode=singleTop</code> so tapping app icon does not always restart app</li>
+  <li>Remove incorrect usage of <code class="language-plaintext highlighter-rouge">AlertDialog.Builder.create</code></li>
+  <li>Catch uncaught exceptions in from plugins and turn them into error responses.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6047">CB-6047</a> Fix online sometimes getting in a bad state on page transitions.</li>
+  <li>Add another convenience overload for <code class="language-plaintext highlighter-rouge">CordovaResourceApi.copyResource</code></li>
+  <li>Update framework’s .classpath to what <strong>Eclipse</strong> wants it to be.</li>
+  <li>README.md: <code class="language-plaintext highlighter-rouge">android update</code> to <code class="language-plaintext highlighter-rouge">android-19</code>.</li>
+  <li>Fix NPE when POLLING bridge mode is used.</li>
+  <li>Updating NOTICE to include <em>Square</em> for <code class="language-plaintext highlighter-rouge">OkHttp</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5398">CB-5398</a> Apply <code class="language-plaintext highlighter-rouge">KitKat</code> content URI fix to all content URIs</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5398">CB-5398</a> Work-around for <code class="language-plaintext highlighter-rouge">KitKat</code> content: URLs not rendering in <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tags</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5908">CB-5908</a> add splashscreen images to template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5395">CB-5395</a> Make scheme and host (but not path) case-insensitive in whitelist</li>
+  <li>Ignore multiple <code class="language-plaintext highlighter-rouge">onPageFinished()</code> callbacks &amp; <code class="language-plaintext highlighter-rouge">onReceivedError</code> due to <code class="language-plaintext highlighter-rouge">stopLoading()</code></li>
+  <li>Removing <code class="language-plaintext highlighter-rouge">addJavascriptInterface</code> support from all <strong>Android</strong> versions lower than 4.2 due to security vulnerability</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4984">CB-4984</a> Don’t create on <code class="language-plaintext highlighter-rouge">CordovaActivity</code> name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5917">CB-5917</a> Add a <code class="language-plaintext highlighter-rouge">loadUrlIntoView</code> overload that doesn’t recreate plugins.</li>
+  <li>Use thread pool for load timeout.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5715">CB-5715</a> For CLI, hide <code class="language-plaintext highlighter-rouge">assets/www</code> and <code class="language-plaintext highlighter-rouge">res/xml/config.xml</code> by default</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5793">CB-5793</a> ant builds: Rename <code class="language-plaintext highlighter-rouge">AndroidManifest</code> during -post-build to avoid <strong>Eclipse</strong> detecting <code class="language-plaintext highlighter-rouge">ant-build/</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5889">CB-5889</a> Make update script find project name instead of using <code class="language-plaintext highlighter-rouge">null</code> for <code class="language-plaintext highlighter-rouge">CordovaLib</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5889">CB-5889</a> Add a message in the update script about needing to import <code class="language-plaintext highlighter-rouge">CordovaLib</code> when using an IDE.</li>
+</ul>
+
+<h2 id="whats-new-in-ios">What’s new in iOS</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6638">CB-6638</a> - Convert <code class="language-plaintext highlighter-rouge">CordovaLibTests</code> to <code class="language-plaintext highlighter-rouge">XCTests</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6579">CB-6579</a> - <code class="language-plaintext highlighter-rouge">CDVWebViewDelegateTests</code> are failing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6580">CB-6580</a> - <code class="language-plaintext highlighter-rouge">CDVWhitelistTests</code> are failing</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6578">CB-6578</a> - Fix <code class="language-plaintext highlighter-rouge">CordovaLibTests</code> not building</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6553">CB-6553</a> added top-level <code class="language-plaintext highlighter-rouge">package.json</code> file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6500">CB-6500</a> - Cordova requires <code class="language-plaintext highlighter-rouge">arm64</code> architecture.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6383">CB-6383</a> Fix <code class="language-plaintext highlighter-rouge">copy-www-build-step.sh</code> when user has macports installed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6327">CB-6327</a> Allow ‘.’ in plugin feature names (and therefore callback ids)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6287">CB-6287</a> - Add build script support for <code class="language-plaintext highlighter-rouge">arm64</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6340">CB-6340</a> - Adding rebroadcast capabilities to remote notification registration within <code class="language-plaintext highlighter-rouge">AppDelegate</code> (closes #94)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6217">CB-6217</a> <strong>iOS</strong> simulator targets not consistent across scripts</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5286">CB-5286</a> - Fix warnings when compiled under <code class="language-plaintext highlighter-rouge">arm64</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4863">CB-4863</a> - Drop <strong>iOS</strong> 5.0 support, and support <code class="language-plaintext highlighter-rouge">arm64</code>. New projects are built as a universal binary (64 and 32-bit), and require a minimum deployment target of iOS 6.0.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6149">CB-6149</a> - <code class="language-plaintext highlighter-rouge">AppDelegate</code> uses deprecated <code class="language-plaintext highlighter-rouge">handleOpenURL</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6150">CB-6150</a> - <code class="language-plaintext highlighter-rouge">objc_msgSend</code> causes <code class="language-plaintext highlighter-rouge">EXC_BAD_ACCESS</code> with plugins on <code class="language-plaintext highlighter-rouge">arm64</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5018">CB-5018</a> - <code class="language-plaintext highlighter-rouge">bin/create</code> on <strong>iOS</strong> should use <code class="language-plaintext highlighter-rouge">--arc</code> by default</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5943">CB-5943</a> - Update/remove obsolete items in <code class="language-plaintext highlighter-rouge">cordova-ios</code> repo</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5395">CB-5395</a> Make scheme and host (but not path) case-insensitive in whitelist</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5991">CB-5991</a> Fix <code class="language-plaintext highlighter-rouge">whitelist</code> path matching for trailing slashes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5967">CB-5967</a> Fix <code class="language-plaintext highlighter-rouge">isTopLevelNavigation</code> not being set correctly in rare cases.</li>
+  <li>Validate that callback IDs are always well-formed</li>
+  <li>Removed obsolete <code class="language-plaintext highlighter-rouge">.gitmodules</code></li>
+  <li>Update <strong>Xcode</strong> <code class="language-plaintext highlighter-rouge">.pbxproj</code> files according to <strong>Xcode</strong> 5.1 recommendations</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">NSLog</code> notification for beginning backup to <code class="language-plaintext highlighter-rouge">iCloud</code> (closes #96)</li>
+</ul>
+
+<h2 id="whats-new-in-windows-phone-7--8">What’s new in Windows Phone 7 &amp; 8</h2>
+
+<ul>
+  <li>Update release-notes, and state that <strong>WP7</strong> support is about to disappear</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6558">CB-6558</a> added <code class="language-plaintext highlighter-rouge">package.json</code> file for <strong>WP8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6450">CB-6450</a> added support for local <code class="language-plaintext highlighter-rouge">XHR.responseXML getter</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6341">CB-6341</a> don’t rely on <code class="language-plaintext highlighter-rouge">msbuild</code> being in the path.</li>
+  <li>applied Sergey’s SpecificVersion flag fix to the <strong>WP7</strong> template also <a href="https://issues.apache.org/jira/browse/CB-6103">CB-6103</a></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6103">CB-6103</a> <strong>WP8</strong> <code class="language-plaintext highlighter-rouge">CordovaDeploy</code> potential build issue</li>
+  <li>applied <a href="https://issues.apache.org/jira/browse/CB-6268">CB-6268</a> <code class="language-plaintext highlighter-rouge">backgroundcolor</code> to <code class="language-plaintext highlighter-rouge">WP7</code> also</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6268">CB-6268</a> <strong>WP8</strong>. Apply <code class="language-plaintext highlighter-rouge">BackgroundColor</code> from <code class="language-plaintext highlighter-rouge">config.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5965">CB-5965</a> support set responseType, get response</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6299">CB-6299</a> Strip protocol and leading slashes from <code class="language-plaintext highlighter-rouge">XHRLOCAL URL</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6091">CB-6091</a> <strong>Windows</strong> Build fails if application path contains whitespace</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6041">CB-6041</a> <code class="language-plaintext highlighter-rouge">createTemplates</code> should install them for <code class="language-plaintext highlighter-rouge">VS-2013</code> as well</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5219">CB-5219</a> <code class="language-plaintext highlighter-rouge">weinre</code> disconnects when <code class="language-plaintext highlighter-rouge">history.replaceState</code> is used</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5951">CB-5951</a> Added <code class="language-plaintext highlighter-rouge">namespace</code> to <code class="language-plaintext highlighter-rouge">config.xml</code></li>
+  <li>Removed <strong>WP7</strong> template ref to non-existent file</li>
+</ul>
+
+<h2 id="whats-new-in-windows-8">What’s new in Windows 8</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6684">CB-6684</a> [3.5.0rc]<strong>Windows8</strong> Splash screen setting breaks the build</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6686">CB-6686</a> [3.5.0rc]<strong>Windows8</strong> Build  error if path contains whitespace</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6557">CB-6557</a> added <code class="language-plaintext highlighter-rouge">package.json</code> to <strong>Windows8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6309">CB-6309</a> <strong>Windows8</strong>. Add Splash Screen img support via <code class="language-plaintext highlighter-rouge">config.xml</code> preference, <a href="https://issues.apache.org/jira/browse/CB-6544">CB-6544</a> <code class="language-plaintext highlighter-rouge">SplashScreenBack</code></li>
+  <li>Fix for when <code class="language-plaintext highlighter-rouge">background-color</code> and/or <code class="language-plaintext highlighter-rouge">content-src </code>aren’t specified in <code class="language-plaintext highlighter-rouge">config.xml</code></li>
+  <li>Background color now applied to <strong>Windows8</strong> project config during build process.</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">build/deploy</code> errors when path to project contains spaces</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6435">CB-6435</a> <code class="language-plaintext highlighter-rouge">./VERSION</code> &amp; <code class="language-plaintext highlighter-rouge">/template/VERSION</code> updated</li>
+  <li>Modify execution policy restrictions removal logic. Using PS native cmdlet to remove restrictions.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6397">CB-6397</a> <strong>Windows8</strong> Use the latest version of <code class="language-plaintext highlighter-rouge">MSBuild Tools</code> installed to build the app</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6256">CB-6256</a> <a href="https://issues.apache.org/jira/browse/CB-6266">CB-6266</a> Add support for domain whitelist and start page settings to <strong>Windows8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2970">CB-2970</a> <a href="https://issues.apache.org/jira/browse/CB-2953">CB-2953</a> log unsupported methods and exit with code 1</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2978">CB-2978</a> <code class="language-plaintext highlighter-rouge">list-devices</code> not supported on <strong>Windows 8</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6091">CB-6091</a> <strong>Windows</strong> Build fails if application path contains whitespace</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6083">CB-6083</a> <strong>Windows8</strong> Use registry to read <code class="language-plaintext highlighter-rouge">msbuild</code> tools path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6042">CB-6042</a> <strong>Windows8</strong> <code class="language-plaintext highlighter-rouge">Cordova emulate</code> fails if no developer certificate is installed</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5951">CB-5951</a> Added <code class="language-plaintext highlighter-rouge">namespace</code> to <code class="language-plaintext highlighter-rouge">config.xml</code></li>
+  <li>Remove template file after create by name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-4533">CB-4533</a> return error code 2 on fail, <a href="https://issues.apache.org/jira/browse/CB-5359">CB-5359</a> get tools version from the registry</li>
+</ul>
+
+<h2 id="whats-new-in-blackberry-10">What’s new in BlackBerry 10</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6554">CB-6554</a> updated <code class="language-plaintext highlighter-rouge">package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6522">CB-6522</a> Disallow space in target name</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Move config logic to its own module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6398">CB-6398</a> Support additional commands in <code class="language-plaintext highlighter-rouge">blackberry10.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Switch to grunt as task runner</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> <code class="language-plaintext highlighter-rouge">chmod -x *.bat</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Remove <code class="language-plaintext highlighter-rouge">scripts/lib</code> dir</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Move <code class="language-plaintext highlighter-rouge">utils.js</code> from bin to template</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Remove <code class="language-plaintext highlighter-rouge">+x</code> from <code class="language-plaintext highlighter-rouge">.bat</code> files</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> create - use <code class="language-plaintext highlighter-rouge">shelljs</code> rather than custom copy function</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Move <code class="language-plaintext highlighter-rouge">create.js</code> to <code class="language-plaintext highlighter-rouge">lib</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Remove <code class="language-plaintext highlighter-rouge">check_reqs.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6440">CB-6440</a> Move <code class="language-plaintext highlighter-rouge">signing-utils</code> out of <code class="language-plaintext highlighter-rouge">bin</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6416">CB-6416</a> Ensure target dictionary exists in properties object</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6410">CB-6410</a> Allow deployment when debug token cannot be generated</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6409">CB-6409</a> Allow detection of devices which have not yet set password</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6346">CB-6346</a> Remove <code class="language-plaintext highlighter-rouge">npm</code> warning from <code class="language-plaintext highlighter-rouge">README.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6376">CB-6376</a> <code class="language-plaintext highlighter-rouge">backgroundColor</code> in <code class="language-plaintext highlighter-rouge">user.js</code> is missing quotes</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6346">CB-6346</a> - Add <code class="language-plaintext highlighter-rouge">node_modules</code> to source control</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6326">CB-6326</a> Fix inconsistency between manually added vs auto-detected emulators</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6326">CB-6326</a> (cordova-blackberry) <code class="language-plaintext highlighter-rouge">target-utils.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6303">CB-6303</a> Remove titles from non-content web views</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6303">CB-6303</a> Add <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> to controller webview body</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6241">CB-6241</a> Default to prompting for passwords (replace <code class="language-plaintext highlighter-rouge">--query</code> with <code class="language-plaintext highlighter-rouge">--no-query</code>)</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6222">CB-6222</a> Various updates for the <strong>BlackBerry 10</strong> documentation</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6058">CB-6058</a> - Options file removed from output bar. Now in build directory</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6021">CB-6021</a> Add <code class="language-plaintext highlighter-rouge">--release</code> to run command</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5723">CB-5723</a> Build script should accept <code class="language-plaintext highlighter-rouge">-l</code> param as it does <code class="language-plaintext highlighter-rouge">--loglevel</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6019">CB-6019</a> Supply default value of <code class="language-plaintext highlighter-rouge">--device</code> to the run script</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5660">CB-5660</a> use <code class="language-plaintext highlighter-rouge">enabledelayedexpansion</code> to handle )s in path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5909">CB-5909</a> Fixed issue where <code class="language-plaintext highlighter-rouge">check-reqs</code> skipped checking logic on second pass-through</li>
+</ul>
+
+<h2 id="whats-new-in-firefox-os">What’s new in Firefox OS</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5816">CB-5816</a> <strong>Firefox OS</strong> - add build script</li>
+  <li>Remove unused elements from <code class="language-plaintext highlighter-rouge">defaults.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6555">CB-6555</a> updated top level <code class="language-plaintext highlighter-rouge">package.json</code> file</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5416">CB-5416</a> Need to auto generate manifest.webapp with appropriate plugin permissions</li>
+</ul>
+
+<h2 id="whats-new-in-ubuntu-touch">What’s new in Ubuntu (touch)</h2>
+
+<ul>
+  <li>allow inter plugin communication</li>
+  <li>add <code class="language-plaintext highlighter-rouge">.editorconfig</code></li>
+  <li>check requirements before build</li>
+  <li><code class="language-plaintext highlighter-rouge">bin/build</code>: fixes for <code class="language-plaintext highlighter-rouge">--nobuild</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bin/build</code>: specify framework instead of series for click <code class="language-plaintext highlighter-rouge">chroot</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bin/build</code>: switch to async shelljs.exec</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6559">CB-6559</a> added top level <code class="language-plaintext highlighter-rouge">package.json</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+</ul>
+
+<h2 id="whats-new-in-amazon-fireos">What’s new in Amazon FireOS</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6644">CB-6644</a> Add a check for webview being null in template code. Added a check and some comments to guide devs.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6487">CB-6487</a> Fixed WebView not found in Chrome remote debugging</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6636">CB-6636</a> Need to destroy webview properly. Added <code class="language-plaintext highlighter-rouge">destroy()</code> call in webview’s <code class="language-plaintext highlighter-rouge">handleDestroy()</code> method.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6543">CB-6543</a> Fix <code class="language-plaintext highlighter-rouge">cordova/run</code> failure when no <code class="language-plaintext highlighter-rouge">custom_rules.xml</code> available</li>
+  <li>defaults.xml: Add <code class="language-plaintext highlighter-rouge">AndroidLaunchMode</code> preference</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">JavaDoc</code> for <code class="language-plaintext highlighter-rouge">CordovaResourceApi</code></li>
+  <li>Updated log statement - <code class="language-plaintext highlighter-rouge">android=&gt;amazon-fireos</code>.</li>
+  <li>Added <strong>Amazon</strong> <code class="language-plaintext highlighter-rouge">xmlns</code> to project’s template <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code>.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6392">CB-6392</a> Adding <strong>amazon-fireos</strong> platform fails with not so good error reporting</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6556">CB-6556</a> added top level <code class="language-plaintext highlighter-rouge">package.json</code> file</li>
+  <li>Adding a safety check to prevent applications from calling init twice Changes to address thread safety concerns in <code class="language-plaintext highlighter-rouge">Cordova</code> plugin management</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6388">CB-6388</a> Handle binary data correctly in <code class="language-plaintext highlighter-rouge">LOAD_URL</code> bridge</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6048">CB-6048</a> Set <code class="language-plaintext highlighter-rouge">launchMode=singleTop</code> so tapping app icon does not always restart app</li>
+  <li>Fixing back button issue by utilizing <code class="language-plaintext highlighter-rouge">onBackPressed</code> instead of <code class="language-plaintext highlighter-rouge">onKeyUp</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5744">CB-5744</a> Unable to build Hello World application for Kindle Fire HDX tablet using <strong>Cordova</strong> 3.3.0</li>
+  <li>Added overloaded constructor for <code class="language-plaintext highlighter-rouge">CordovaWebView</code> with Bundle as parameter.</li>
+  <li>Catch uncaught exceptions in from plugins and turn them into error responses.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6047">CB-6047</a> Fix online sometimes getting in a bad state on page transitions.</li>
+  <li>Add another convenience overload for <code class="language-plaintext highlighter-rouge">CordovaResourceApi.copyResource</code></li>
+  <li>Update framework’s .classpath to what <strong>Eclipse</strong> wants it to be.</li>
+  <li>Updated <strong>Android</strong> target to <code class="language-plaintext highlighter-rouge">android-19</code>.</li>
+  <li>README.md: <code class="language-plaintext highlighter-rouge">android update</code> to <code class="language-plaintext highlighter-rouge">android-19</code>.</li>
+  <li>Fix NPE when POLLING bridge mode is used.</li>
+  <li>Updating NOTICE to include <code class="language-plaintext highlighter-rouge">Square</code> for <code class="language-plaintext highlighter-rouge">OkHttp</code></li>
+</ul>
+
+<h2 id="whats-new-in-cordova-cli">What’s new in Cordova-CLI</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5941">CB-5941</a> Update link to <code class="language-plaintext highlighter-rouge">hooks-README.md</code> file from <code class="language-plaintext highlighter-rouge">README.md</code></li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">cordova help</code> command</li>
+  <li>Fixing failing CLI tests by removing ‘experimental’ key</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6649">CB-6649</a> Removing experimental flag from positional arguments</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6648">CB-6648</a> Adding a flag for experimental features</li>
+  <li>Fix require paths to use <code class="language-plaintext highlighter-rouge">cordova-lib</code></li>
+  <li>Update <code class="language-plaintext highlighter-rouge">package.json</code> to use <code class="language-plaintext highlighter-rouge">cordova-lib</code></li>
+  <li>Split out <code class="language-plaintext highlighter-rouge">cordova-lib</code>: move <code class="language-plaintext highlighter-rouge">cordova-cli</code> files</li>
+  <li><strong>Windows8</strong> re-added <code class="language-plaintext highlighter-rouge">BOM</code> : <a href="https://issues.apache.org/jira/browse/CB-5421">CB-5421</a> Add <code class="language-plaintext highlighter-rouge">BOM</code> to all html, js, css files to ensure app can pass <strong>Windows</strong> Store Certification</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6491">CB-6491</a> add <code class="language-plaintext highlighter-rouge">CONTRIBUTING.md</code></li>
+  <li><code class="language-plaintext highlighter-rouge">android-parser</code>: Add <code class="language-plaintext highlighter-rouge">AndroidLaunchMode</code> preference</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">CLI</code> tests to work with <code class="language-plaintext highlighter-rouge">node</code> v0.11</li>
+  <li>Update version of jasmine-node. Fixes test warnings util.print with node 0.11</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2606">CB-2606</a> <strong>Android</strong> icon - do not attempt copy to undefined path</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-2606">CB-2606</a> Icons support for <strong>iOS</strong>, <strong>Android</strong>, <strong>BB10</strong>, <strong>WP8</strong>, <strong>Win8</strong>, <strong>FxOS</strong></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6329">CB-6329</a> Delete unused <code class="language-plaintext highlighter-rouge">info-utils.js</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6329">CB-6329</a> improve <code class="language-plaintext highlighter-rouge">cordova info</code> command</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5847">CB-5847</a> <code class="language-plaintext highlighter-rouge">strictSSL</code> is no longer ignored</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6432">CB-6432</a> <code class="language-plaintext highlighter-rouge">pre_package</code> hook does not populate <code class="language-plaintext highlighter-rouge">%CORDOVA_PLATFORMS%</code></li>
+  <li>Revert “CB-6267 <strong>Windows8</strong>. Apply <code class="language-plaintext highlighter-rouge">BackgroundColor</code> from <code class="language-plaintext highlighter-rouge">config.xml</code>”</li>
+  <li>Recreate “platforms” dir if it was deleted.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-5093">CB-5093</a> Add <code class="language-plaintext highlighter-rouge">versionCode</code> and <code class="language-plaintext highlighter-rouge">CFBundleVersion</code> during prepare</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6312">CB-6312</a> Use <code class="language-plaintext highlighter-rouge">landscape</code> instead of <code class="language-plaintext highlighter-rouge">userLandscape</code> in <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code></li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6421">CB-6421</a> Move tests from <code class="language-plaintext highlighter-rouge">e2e</code> to <code class="language-plaintext highlighter-rouge">spec</code> - cli test</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-6377">CB-6377</a> <code class="language-plaintext highlighter-rouge">superspawn</code>: always wrap non <code class="language-plaintext highlighter-rouge">.exe</code> with spaces to <code class="language-plaintext highlighter-rouge">cmd</code> with /s /c</li>
+</ul>
+
+<h2 id="whats-new-in-cordova-plugman">What’s new in Cordova-Plugman</h2>
+
+<ul>
+  <li>Update <code class="language-plaintext highlighter-rouge">plugman cli</code> to use <code class="language-plaintext highlighter-rouge">cordova-lib</code></li>
+  <li>Split out <code class="language-plaintext highlighter-rouge">cordova-lib</code>: move <code class="language-plaintext highlighter-rouge">cordova-plugman</code> files</li>
+</ul>
+
+<h2 id="plugin-versions-tested-with-this-release">Plugin versions tested with this release</h2>
+
+<ul>
+  <li>cordova-plugin-battery-status: 0.2.8</li>
+  <li>cordova-plugin-camera: 0.2.9</li>
+  <li>cordova-plugin-console: 0.2.8</li>
+  <li>cordova-plugin-contacts: 0.2.10</li>
+  <li>cordova-plugin-device: 0.2.9</li>
+  <li>cordova-plugin-device-motion: 0.2.7</li>
+  <li>cordova-plugin-device-orientation: 0.3.6</li>
+  <li>cordova-plugin-dialogs: 0.2.6</li>
+  <li>cordova-plugin-file: 1.1.0</li>
+  <li>cordova-plugin-file-transfer: 0.4.3</li>
+  <li>cordova-plugin-geolocation: 0.3.7</li>
+  <li>cordova-plugin-globalization: 0.2.7</li>
+  <li>cordova-plugin-inappbrowser: 0.4.0</li>
+  <li>cordova-plugin-media: 0.2.10</li>
+  <li>cordova-plugin-media-capture: 0.3.0</li>
+  <li>cordova-plugin-network-information: 0.2.8</li>
+  <li>cordova-plugin-splashscreen: 0.3.0</li>
+  <li>cordova-plugin-statusbar: 0.1.3</li>
+  <li>cordova-plugin-vibration: 0.3.8</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/news/2014/04/23/plugins.release.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2014/04/23/plugins.release.html">Plugins Release: April 23, 2014</a>
+                    <div class="date"> 23 Apr 2014 - By Ian Clelland </div>
+                    <p class="content">
+                        The following plugins were updated today:
+
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2014/06/12/plugins-release.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2014/06/12/plugins-release.html">Plugins Release: June 12, 2014</a>
+                    <div class="date"> 12 Jun 2014 - By Steve Gill </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        The following plugins were updated today:
+
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

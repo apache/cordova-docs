@@ -1,0 +1,201 @@
+<h1 id="cameragetpicture">camera.getPicture</h1>
+
+<p>Takes a photo using the camera or retrieves a photo from the device’s album.  The image is returned as a base64 encoded <code class="language-plaintext highlighter-rouge">String</code> or as the URI of an image file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Function <code class="language-plaintext highlighter-rouge">camera.getPicture</code> opens the device’s default camera application so that the user can take a picture (if <code class="language-plaintext highlighter-rouge">[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.CAMERA</code>, which is the default). Once the photo is taken, the camera application closes and your application is restored.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">[Camera](camera.html).sourceType = [Camera](camera.html).PictureSourceType.PHOTOLIBRARY</code> or <code class="language-plaintext highlighter-rouge">[Camera](camera.html).PictureSourceType.SAVEDPHOTOALBUM</code>, then a photo chooser dialog is shown, from which a photo from the album can be selected.</p>
+
+<p>The return value will be sent to the <code class="language-plaintext highlighter-rouge">[cameraSuccess](parameter/cameraSuccess.html)</code> function, in one of the following formats, depending on the <code class="language-plaintext highlighter-rouge">[cameraOptions](parameter/cameraOptions.html)</code> you specify:</p>
+
+<ul>
+  <li>A <code class="language-plaintext highlighter-rouge">String</code> containing the Base64 encoded photo image.</li>
+  <li>A <code class="language-plaintext highlighter-rouge">String</code> representing the image file location on local storage (default).</li>
+</ul>
+
+<p>You can do whatever you want with the encoded image or URI, for example:</p>
+
+<ul>
+  <li>Render the image in an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tag <em>(see example below)</em></li>
+  <li>Save the data locally (<code class="language-plaintext highlighter-rouge">LocalStorage</code>, <a href="http://brianleroux.github.com/lawnchair/">Lawnchair</a>, etc)</li>
+  <li>Post the data to a remote server</li>
+</ul>
+
+<p><strong>Note:</strong> The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  <strong><em>Encoding such images using Base64 has caused memory issues on many newer devices.  Therefore, using FILE_URI as the ‘<a href="camera.html">Camera</a>.destinationType’ is highly recommended.</em></strong></p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 1.2</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<p>Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully <a href="../inappbrowser/inappbrowser.html">close</a> before the alert is displayed:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setTimeout(function() { 
+    // do your thing here!
+}, 0);
+</code></pre></div></div>
+
+<h2 id="windows-phone-7-quirks">Windows Phone 7 Quirks</h2>
+
+<p>Invoking the native camera application while your device is connected
+via Zune will not work, and the error callback will be triggered.</p>
+
+<h2 id="tizen-quirks">Tizen Quirks</h2>
+
+<p>Only ‘destinationType: <a href="camera.html">Camera</a>.DestinationType.FILE_URI’ and ‘sourceType: <a href="camera.html">Camera</a>.PictureSourceType.PHOTOLIBRARY’ are supported.</p>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>Take photo and retrieve Base64-encoded image:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL
+ }); 
+
+function onSuccess(imageData) {
+    var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+</code></pre></div></div>
+
+<p>Take photo and retrieve image file location:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+    destinationType: Camera.DestinationType.FILE_URI }); 
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Capture Photo&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value 
+    
+    // Wait for Cordova to connect with the device
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // Cordova is ready to be used!
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64 encoded image data
+      // console.log(imageData);
+  
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+  
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+  
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI 
+      // console.log(imageURI);
+  
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+  
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+  
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    // 
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="capturePhoto();"&gt;Capture Photo&lt;/button&gt; &lt;br&gt;
+    &lt;button onclick="capturePhotoEdit();"&gt;Capture Editable Photo&lt;/button&gt; &lt;br&gt;
+    &lt;button onclick="getPhoto(pictureSource.PHOTOLIBRARY);"&gt;From Photo Library&lt;/button&gt;&lt;br&gt;
+    &lt;button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"&gt;From Photo Album&lt;/button&gt;&lt;br&gt;
+    &lt;img style="display:none;width:60px;height:60px;" id="smallImage" src="" /&gt;
+    &lt;img style="display:none;" id="largeImage" src="" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

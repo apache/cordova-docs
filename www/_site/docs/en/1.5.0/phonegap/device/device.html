@@ -1,0 +1,25 @@
+<h1 id="device">Device</h1>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">device</code> object describes the device’s hardware and software.</p>
+</blockquote>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><a href="device.name.html">device.name</a></li>
+  <li><a href="device.phonegap.html">device.phonegap</a></li>
+  <li><a href="device.platform.html">device.platform</a></li>
+  <li><a href="device.uuid.html">device.uuid</a></li>
+  <li><a href="device.version.html">device.version</a></li>
+</ul>
+
+<h2 id="variable-scope">Variable Scope</h2>
+
+<p>Since <code class="language-plaintext highlighter-rouge">device</code> is assigned to the <code class="language-plaintext highlighter-rouge">window</code> object, it is implicitly in the global scope.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// These reference the same `device`
+//
+var phoneName = window.device.name;
+var phoneName = device.name;
+</code></pre></div></div>

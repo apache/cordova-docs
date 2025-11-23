@@ -1,0 +1,82 @@
+<h1 id="globalizationgetdatepattern">globalization.getDatePattern</h1>
+
+<p>Returns a pattern string for formatting and parsing dates according to the client’s user preferences.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDatePattern(successCB, errorCB, options);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:</p>
+
+<ul>
+  <li>pattern {String}: The date and time pattern for formatting and parsing dates.  The patterns follow Unicode Technical Standard #35. <a href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a></li>
+  <li>timezone {String}: The abbreviated name of the time zone on the client</li>
+  <li>utc_offset {Number}: The current difference in seconds between the client’s time zone and coordinated universal time.</li>
+  <li>dst_offset {Number}: The current daylight saving time offset in seconds between the client’s non-daylight saving’s time zone and the client’s daylight saving’s time zone.</li>
+</ul>
+
+<p>If there is an error obtaining the pattern, then the errorCB callback is invokedwith a <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a> object as a parameter. The expected code for this error is <a href="GlobalizationError/globalizationerror.html">GlobalizationError</a>.PATTERN_ERROR.</p>
+
+<p><code class="language-plaintext highlighter-rouge">options.formatLength</code> can be ‘short’, ‘medium’, ‘long’, or ‘full’.
+<code class="language-plaintext highlighter-rouge">options.selector</code> can be ‘date’, ‘time’ or ‘date and time’.</p>
+
+<p>The default options are <code class="language-plaintext highlighter-rouge">{formatLength:'short', selector:'date and time'}</code>.
+The options parameter is optional.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iPhone</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>In the case when the browser is set to the en_US locale, this should display a popup dialog with text similar to “pattern: M/d/yyyy h:mm a”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkDatePattern() {
+  navigator.globalization.getDatePattern(
+    function (date) {alert('pattern: ' + date.pattern + '\n');},
+    function () {alert('Error getting pattern\n');},
+    {formatLength:'short', selector:'date and time'}
+  );
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+                  
+    function checkDatePattern() {
+      navigator.globalization.getDatePattern(
+        function (date) {alert('pattern: ' + date.pattern + '\n');},
+        function () {alert('Error getting pattern\n');},
+        {formatLength:'short', selector:'date and time'}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkDatePattern()"&gt;Click for pattern&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">formatLength</code> option supports only short and full values.</li>
+  <li><code class="language-plaintext highlighter-rouge">pattern</code> property for <code class="language-plaintext highlighter-rouge">date and time</code> pattern returns only full datetime format.</li>
+  <li><code class="language-plaintext highlighter-rouge">timezone</code> property returns full time zone name</li>
+  <li><code class="language-plaintext highlighter-rouge">dst_offset</code> returned property is not supported and always returns zero.</li>
+</ul>
+

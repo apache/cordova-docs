@@ -1,0 +1,132 @@
+<h1 id="connectiontype">connection.type</h1>
+
+<p>Checks the active network connection that is being used.</p>
+
+<h2 id="description">Description</h2>
+
+<p>This property is a fast way to determine the device’s network connection state, and type of connection.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 2.x</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkConnection() {
+    var networkState = navigator.connection.type;
+    
+    var states = {};
+    states[Connection.UNKNOWN]	= 'Unknown connection';
+    states[Connection.ETHERNET]	= 'Ethernet connection';
+    states[Connection.WIFI]   	= 'WiFi connection';
+    states[Connection.CELL_2G]	= 'Cell 2G connection';
+    states[Connection.CELL_3G]	= 'Cell 3G connection';
+    states[Connection.CELL_4G]	= 'Cell 4G connection';
+    states[Connection.NONE]   	= 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
+}
+
+checkConnection();
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;navigator.connection.type Example&lt;/title&gt;
+    
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+        
+    // Wait for Cordova to load
+    // 
+    document.addEventListener("deviceready", onDeviceReady, false);
+    
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+        checkConnection();
+    }
+    
+    function checkConnection() {
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[Connection.UNKNOWN]	= 'Unknown connection';
+        states[Connection.ETHERNET]	= 'Ethernet connection';
+        states[Connection.WIFI]   	= 'WiFi connection';
+        states[Connection.CELL_2G]	= 'Cell 2G connection';
+        states[Connection.CELL_3G]	= 'Cell 3G connection';
+        states[Connection.CELL_4G]	= 'Cell 4G connection';
+        states[Connection.NONE]   	= 'No network connection';
+
+        alert('[Connection](connection.html) type: ' + states[networkState]);
+    }
+    
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;A dialog box will report the network state.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="api-change">API Change</h2>
+<p>Before Cordova 2.3.0, the <a href="connection.html">Connection</a> object existed at: <code class="language-plaintext highlighter-rouge">navigator.network.connection</code>.</p>
+
+<p>To match the spec, this was changed to <code class="language-plaintext highlighter-rouge">navigator.connection</code> in 2.3.0.</p>
+
+<p><code class="language-plaintext highlighter-rouge">navigator.network.connection</code> still exists, but is now deprecated and will be removed in a future release.</p>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<ul>
+  <li>iOS cannot detect the type of cellular network connection.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">navigator.connection.type</code> is set to <code class="language-plaintext highlighter-rouge">Connection.CELL_2G</code> for all cellular data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="bada-quirks">Bada Quirks</h2>
+
+<ul>
+  <li>Bada can only detect a WiFi or cellular connection.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">navigator.connection.type</code> is set to <code class="language-plaintext highlighter-rouge">Connection.CELL_2G</code> for all cellular data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="webos-quirks">webOS Quirks</h2>
+
+<ul>
+  <li>Only shows that a connection is available, but not which type.</li>
+</ul>
+
+<h2 id="windows-phone-quirks">Windows Phone Quirks</h2>
+
+<ul>
+  <li>When running in the emulator, always detects <code class="language-plaintext highlighter-rouge">navigator.connection.type</code> as <code class="language-plaintext highlighter-rouge">[Connection](connection.html).UNKNOWN</code>.</li>
+</ul>
+
+<h2 id="tizen-quirks">Tizen Quirks</h2>
+
+<ul>
+  <li>Tizen can only detect a WiFi or cellular connection.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">navigator.connection.type</code> is set to <code class="language-plaintext highlighter-rouge">Connection.CELL_2G</code> for all cellular data.</li>
+    </ul>
+  </li>
+</ul>

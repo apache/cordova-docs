@@ -1,0 +1,93 @@
+<h1 id="compass">Compass</h1>
+
+<blockquote>
+  <p>Obtains the direction that the device is pointing.</p>
+</blockquote>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="compass.getCurrentHeading.html">compass.getCurrentHeading</a></li>
+  <li><a href="compass.watchHeading.html">compass.watchHeading</a></li>
+  <li><a href="compass.clearWatch.html">compass.clearWatch</a></li>
+  <li><a href="compass.watchHeadingFilter.html">compass.watchHeadingFilter</a> (obsolete)</li>
+  <li><a href="compass.clearWatchFilter.html">compass.clearWatchFilter</a>   (obsolete)</li>
+</ul>
+
+<h2 id="arguments">Arguments</h2>
+
+<ul>
+  <li><a href="parameters/compassSuccess.html">compassSuccess</a></li>
+  <li><a href="parameters/compassError.html">compassError</a></li>
+  <li><a href="parameters/compassOptions.html">compassOptions</a></li>
+  <li><a href="parameters/compassHeading.html">compassHeading</a></li>
+</ul>
+
+<h2 id="accessing-the-feature">Accessing the Feature</h2>
+
+<p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
+Use the CLI’s <code class="language-plaintext highlighter-rouge">plugin</code> command, described in The Command-Line
+Interface, to add or remove this feature for a project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.device-orientation
+    $ cordova plugin ls
+    [ 'org.apache.cordova.device-orientation' ]
+    $ cordova plugin rm org.apache.cordova.device-orientation
+</code></pre></div></div>
+
+<p>These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:</p>
+
+<ul>
+  <li>
+    <p>Amazon Fire OS</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in `app/res/xml/config.xml`)
+
+  &lt;feature name="Compass"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest)
+
+  &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Android</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in `app/res/xml/config.xml`)
+
+  &lt;feature name="Compass"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest)
+
+  &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in the named application directory’s <code class="language-plaintext highlighter-rouge">config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Compass"&gt;
+      &lt;param name="ios-package" value="CDVLocation" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone (in <code class="language-plaintext highlighter-rouge">Properties/WPAppManifest.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_SENSORS" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+  </li>
+</ul>
+
+<p>Some platforms may support this feature without requiring any special
+configuration.  See <a href="../../guide/support/index.html">Platform Support</a> for an overview.</p>

@@ -1,0 +1,58 @@
+<h1 id="project-settings">Project Settings</h1>
+
+<p>You can set various application configuration parameters using a platform-agnostic configuration file, <code class="language-plaintext highlighter-rouge">config.xml</code>.
+This file is based on the W3C <a href="http://www.w3.org/TR/widgets/">Packaged Web Apps (Widgets)</a> specification.</p>
+
+<p>The location of the <code class="language-plaintext highlighter-rouge">config.xml</code> file is different depending on the platform. The contents, in general, are not.</p>
+
+<h2 id="platform-specific-properties">Platform-Specific Properties</h2>
+
+<p>As with any abstraction layer, Apache Cordova cannot be a perfect silver bullet. As such, some native and platform-specific
+properties, characteristics and behaviours are encapsulated as much as possible as <code class="language-plaintext highlighter-rouge">&lt;preference&gt;</code> elements inside the
+<code class="language-plaintext highlighter-rouge">config.xml</code> file. The following sub-sections linked to are guides which go into more details about these preferences.</p>
+
+<ul>
+  <li><a href="ios/index.html">Project Settings for iOS</a></li>
+  <li><a href="android/index.html">Project Settings for Android</a></li>
+  <li><a href="blackberry/index.html">Project Settings for BlackBerry</a></li>
+  <li><a href="wp7/index.html">Project Settings for Windows Phone 7</a></li>
+  <li><a href="wp8/index.html">Project Settings for Windows Phone 8</a></li>
+  <li><a href="windows8/index.html">Project Settings for Windows 8</a></li>
+  <li><a href="webos/index.html">Project Settings for webOS</a></li>
+  <li><a href="bada/index.html">Project Settings for Bada</a></li>
+  <li><a href="firefoxos/index.html">Project Settings for FirefoxOS</a></li>
+</ul>
+
+<h2 id="configxml-elements">config.xml Elements</h2>
+
+<p>The <a href="http://cordova.io">Apache Cordova</a> project strives abstract away native platform specifics via web-inspired and web-based
+abstractions that are heavily standards driven and adopted by the web community. Please take a few minutes to familiarize
+yourself with the <a href="http://www.w3.org/TR/widgets/">config.xml specification</a>, to understand the type of application metadata the
+Apache Cordova project aims to abstract and provide simple entry points for.</p>
+
+<p>An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;widget&gt;
+        &lt;preference name="MySetting" value="true" /&gt;
+        &lt;plugins&gt;
+            &lt;plugin name="MyPlugin" value="MyPluginClass" /&gt;
+        &lt;/plugins&gt;
+        &lt;access origin="*" /&gt;
+    &lt;/widget&gt;
+</code></pre></div></div>
+
+<p>A list of supported elements across major platforms which are supported in Apache Cordova follow.</p>
+
+<h3 id="plugin"><code class="language-plaintext highlighter-rouge">&lt;plugin&gt;</code></h3>
+
+<p>These elements map to native APIs that the application will be able to access. At runtime, the Apache Cordova framework checks
+the <code class="language-plaintext highlighter-rouge">&lt;plugin&gt;</code> elements and maps them to native code to enable your Cordova application to access device APIs otherwise
+unavailable to typical web-based applications.</p>
+
+<h3 id="access"><code class="language-plaintext highlighter-rouge">&lt;access&gt;</code></h3>
+
+<p>These elements define how your whitelist works. Please see the <a href="../whitelist/index.html">Domain Whitelist Guide</a> for more information.</p>
+
+<h3 id="content"><code class="language-plaintext highlighter-rouge">&lt;content&gt;</code></h3>
+
+<p>This element defines the start page of your application, relative to the project’s standard web assets root folder. The default is “index.html”.</p>

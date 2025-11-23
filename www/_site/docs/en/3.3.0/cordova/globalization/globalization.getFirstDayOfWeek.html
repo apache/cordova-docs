@@ -1,0 +1,63 @@
+<h1 id="globalizationgetfirstdayofweek">globalization.getFirstDayOfWeek</h1>
+
+<p>Returns the first day of the week according to the client’s user
+preferences and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>The days of the week are numbered starting from 1, where 1 is assumed
+to be Sunday.  Returns the day to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a
+<code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code>
+property with a <code class="language-plaintext highlighter-rouge">Number</code> value.</p>
+
+<p>If there is an error obtaining the pattern, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).UNKNOWN\_ERROR</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale, this displays a
+popup dialog with text similar to <code class="language-plaintext highlighter-rouge">day: 1</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getFirstDayOfWeek(
+    function (day) {alert('day: ' + day.value + '\n');},
+    function () {alert('Error getting day\n');}
+);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getFirstDayOfWeek Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkFirstDay() {
+      navigator.globalization.getFirstDayOfWeek(
+        function (day) {alert('day: ' + day.value + '\n');},
+        function () {alert('Error getting day\n');}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkFirstDay()"&gt;Click for first day of week&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

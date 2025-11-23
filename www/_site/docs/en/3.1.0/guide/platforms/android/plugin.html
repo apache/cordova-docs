@@ -1,0 +1,221 @@
+<h1 id="android-plugins">Android Plugins</h1>
+
+<p>Writing a plugin requires an understanding of the architecture of
+Cordova-Android. Cordova-Android consists of an Android WebView with
+hooks attached to it. These plugins are represented as class mappings
+in the <code class="language-plaintext highlighter-rouge">config.xml</code> file.</p>
+
+<p>A plugin consists of at least one Java class that extends the
+<code class="language-plaintext highlighter-rouge">CordovaPlugin</code> class. A plugin must override one of the <code class="language-plaintext highlighter-rouge">execute</code>
+methods from <code class="language-plaintext highlighter-rouge">CordovaPlugin</code>.  As best practice, the plugin should
+handle <a href="../../../cordova/events/events.pause.html"><code class="language-plaintext highlighter-rouge">pause</code></a> and <a href="../../../cordova/events/events.resume.html"><code class="language-plaintext highlighter-rouge">resume</code></a> events, and any message passing between
+plugins.  Plugins with long-running requests, background activity such
+as media playback, listeners, or internal state should implement the
+<code class="language-plaintext highlighter-rouge">onReset()</code> method as well. It executes when the <code class="language-plaintext highlighter-rouge">WebView</code> navigates to
+a new page or refreshes, which reloads the JavaScript.</p>
+
+<h2 id="plugin-class-mapping">Plugin Class Mapping</h2>
+
+<p>The JavaScript portion of a plugin always uses the <code class="language-plaintext highlighter-rouge">cordova.exec</code> method as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exec(&lt;successFunction&gt;, &lt;failFunction&gt;, &lt;service&gt;, &lt;action&gt;, [&lt;args&gt;]);
+</code></pre></div></div>
+
+<p>This marshals a request from the WebView to the Android native side,
+more or less boiling down to calling the <code class="language-plaintext highlighter-rouge">action</code> method on the
+<code class="language-plaintext highlighter-rouge">service</code> class, with the arguments passed in the <code class="language-plaintext highlighter-rouge">args</code> Array.</p>
+
+<p>Whether you distribute your plugin as Java file or as a JAR of its
+own, the plugin must be added to the <code class="language-plaintext highlighter-rouge">config.xml</code> file in your
+Cordova-Android application’s <code class="language-plaintext highlighter-rouge">res/xml/</code> directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature name="&lt;service_name&gt;"&gt;
+    &lt;param name="android-package" value="&lt;full_name_including_namespace&gt;" /&gt;
+&lt;/feature&gt;
+</code></pre></div></div>
+
+<p>The service name should match the one used in the JavaScript <code class="language-plaintext highlighter-rouge">exec</code>
+call, and the value is the Java classes full name, including the
+namespace.  Otherwise the plugin may compile but still be unreachable
+by Cordova.</p>
+
+<h2 id="plugin-initialization-and-lifetime">Plugin Initialization and Lifetime</h2>
+
+<p>One instance of a plugin object is created for the life of each
+<code class="language-plaintext highlighter-rouge">WebView</code>. Plugins are not instantiated until they are first
+referenced by a call from JavaScript, unless <code class="language-plaintext highlighter-rouge">&lt;param&gt;</code> with an <code class="language-plaintext highlighter-rouge">onload</code>
+<code class="language-plaintext highlighter-rouge">name</code> attribute is set to <code class="language-plaintext highlighter-rouge">"true"</code> in <code class="language-plaintext highlighter-rouge">config.xml</code>. E.g.:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature name="Echo"&gt;
+    &lt;param name="android-package" value="&lt;full_name_including_namespace&gt;" /&gt;
+    &lt;param name="onload" value="true" /&gt;
+&lt;/feature&gt;
+</code></pre></div></div>
+
+<p>Plugins should use the <code class="language-plaintext highlighter-rouge">initialize</code> method for their start-up logic.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+  super.initialize(cordova, webView);
+  // your init code here
+}
+</code></pre></div></div>
+
+<h2 id="writing-an-android-java-plugin">Writing an Android Java Plugin</h2>
+
+<p>JavaScript fires off a plugin request to the native side.  The Android
+Java plugin is mapped properly via the <code class="language-plaintext highlighter-rouge">config.xml</code> file.  So what
+does the final Android Java Plugin class look like?</p>
+
+<p>What gets dispatched to the plugin via JavaScript’s <code class="language-plaintext highlighter-rouge">exec</code> function gets
+passed into the Plugin class’s <code class="language-plaintext highlighter-rouge">execute</code> method. Most <code class="language-plaintext highlighter-rouge">execute</code>
+implementations look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    if ("beep".equals(action)) {
+        this.beep(args.getLong(0));
+        callbackContext.success();
+        return true;
+    }
+    return false;  // Returning false results in a "MethodNotFound" error.
+}
+</code></pre></div></div>
+
+<p>We compare the value of the <code class="language-plaintext highlighter-rouge">action</code> parameter, and dispatch the
+request off to a (private) method in the class, optionally passing
+some of the parameters to the method.</p>
+
+<p>When catching exceptions and returning errors, it’s important for the
+sake of clarity that errors returned to JavaScript match Java’s
+exception names as much as possible.</p>
+
+<h3 id="threading">Threading</h3>
+
+<p>JavaScript in the WebView does <em>not</em> run on the UI thread. It runs on
+the WebCore thread. The <code class="language-plaintext highlighter-rouge">execute</code> method also runs on the WebCore thread.</p>
+
+<p>If you need to interact with the UI, you should use the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+    if ("beep".equals(action)) {
+        final long duration = args.getLong(0);
+        cordova.getActivity().runOnUiThread(new Runnable() {
+            public void run() {
+                ...
+                callbackContext.success(); // Thread-safe.
+            }
+        });
+        return true;
+    }
+    return false;
+}
+</code></pre></div></div>
+
+<p>If you do not need to run on the UI thread, but do not want to block the WebCore thread:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
+public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+    if ("beep".equals(action)) {
+        final long duration = args.getLong(0);
+        cordova.getThreadPool().execute(new Runnable() {
+            public void run() {
+                ...
+                callbackContext.success(); // Thread-safe.
+            }
+        });
+        return true;
+    }
+    return false;
+}
+</code></pre></div></div>
+
+<h3 id="echo-android-plugin-example">Echo Android Plugin Example</h3>
+
+<p>Add the following to our <code class="language-plaintext highlighter-rouge">config.xml</code> file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;feature name="Echo"&gt;
+    &lt;param name="android-package" value="org.apache.cordova.plugin.Echo" /&gt;
+&lt;/feature&gt;
+</code></pre></div></div>
+
+<p>Then add the following file to
+<code class="language-plaintext highlighter-rouge">src/org/apache/cordova/plugin/Echo.java</code> inside our Cordova-Android
+application:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package org.apache.cordova.plugin;
+
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * This class echoes a string called from JavaScript.
+ */
+public class Echo extends CordovaPlugin {
+
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        if (action.equals("echo")) {
+            String message = args.getString(0);
+            this.echo(message, callbackContext);
+            return true;
+        }
+        return false;
+    }
+
+    private void echo(String message, CallbackContext callbackContext) {
+        if (message != null &amp;&amp; message.length() &gt; 0) {
+            callbackContext.success(message);
+        } else {
+            callbackContext.error("Expected one non-empty string argument.");
+        }
+    }
+}
+</code></pre></div></div>
+
+<p>Let’s take a look at the code. The necessary <code class="language-plaintext highlighter-rouge">imports</code> are at
+the top. Our class extends from <code class="language-plaintext highlighter-rouge">CordovaPlugin</code>. We override the
+execute() method in order to recieve messages from exec(). Our method
+first compares against <code class="language-plaintext highlighter-rouge">action</code>: this plugin only supports one action,
+the <code class="language-plaintext highlighter-rouge">echo</code> action. Any other action returns <code class="language-plaintext highlighter-rouge">false</code>, which results in an
+error of type <code class="language-plaintext highlighter-rouge">INVALID_ACTION</code>, which translates into an error
+callback invocation on the JavaScript side. Next, we grab the echo
+string using the <code class="language-plaintext highlighter-rouge">getString</code> method on our <code class="language-plaintext highlighter-rouge">args</code>, telling it we want
+to get the 0th parameter in the parameter array. We do a bit of
+parameter checking: make sure it is not <code class="language-plaintext highlighter-rouge">null</code>, and make sure it is
+not a zero-length string. If it is, we call <code class="language-plaintext highlighter-rouge">callbackContext.error()</code>
+(which, by now, you should know invokes the error callback). If all of
+those checks pass, then we call <code class="language-plaintext highlighter-rouge">callbackContext.success()</code> and pass
+in the <code class="language-plaintext highlighter-rouge">message</code> string we received as a parameter. This finally
+translates into a success callback invocation on the JavaScript
+side. It also passes the <code class="language-plaintext highlighter-rouge">message</code> parameter as a parameter into the
+JavaScript success callback function.</p>
+
+<h2 id="debugging-plugins">Debugging Plugins</h2>
+
+<p>Eclipse can be used to debug an Android project, and the plugins can be debugged if the Java source is included in the project. Only the latest version of the Android Developer Tools is known to allow source code attachment to JAR dependencies, so this is not fully supported at this time.</p>
+
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+
+<ul>
+  <li>
+    <p>Plugins have access to a <code class="language-plaintext highlighter-rouge">CordovaInterface</code> object. This object has access to the Android <code class="language-plaintext highlighter-rouge">Activity</code> that is running the application. This is the <code class="language-plaintext highlighter-rouge">Context</code> required to launch
+a new Android <code class="language-plaintext highlighter-rouge">Intent</code>. The <code class="language-plaintext highlighter-rouge">CordovaInterface</code> allows plugins to start an <code class="language-plaintext highlighter-rouge">Activity</code> for a result, and to set the callback plugin for when the <code class="language-plaintext highlighter-rouge">Intent</code> comes back to the application. This is important, since the
+<code class="language-plaintext highlighter-rouge">Intent</code>s system is how Android communicates between processes.</p>
+  </li>
+  <li>
+    <p>Plugins do not have direct access to the <code class="language-plaintext highlighter-rouge">Context</code> as they have in the past. The legacy <code class="language-plaintext highlighter-rouge">ctx</code> member is deprecated, and will be removed six months after 2.0 is released. All of <code class="language-plaintext highlighter-rouge">ctx</code> methods exist on the <code class="language-plaintext highlighter-rouge">Context</code>, so both <code class="language-plaintext highlighter-rouge">getContext()</code> and <code class="language-plaintext highlighter-rouge">getActivity()</code> are capable of returning the proper object required.</p>
+  </li>
+</ul>
+
+<h2 id="use-the-source">Use the Source</h2>
+
+<p>One of the best ways to prepare yourself to write your own plugin is to
+<a href="https://github.com/search?q=%40apache+cordova-plugin">look over existing plugins</a>.</p>
+
+<p>You should also read through the comments in <a href="https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java">CordovaPlugin.java</a>.</p>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that Cordova Windows 4.0.0 has been released!">
+
+    <title>
+        
+            
+                Apache Cordova Windows 4.0.0 release - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/announcements/2015/06/03/windows-release.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Apache Cordova Windows 4.0.0 release</div>
+        <div class="author">By:
+            
+              <a href="https://twitter.com/nikhilkh">Nikhil Khandelwal</a>
+            
+        </div>
+        <div class="date">03 Jun 2015</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that Cordova Windows 4.0.0 has been released!</p>
+
+<h2 id="key-features">Key features</h2>
+<ul>
+  <li>The default Windows target version is now 8.1. Windows 8.0 support is deprecated and a warning will be issued when building for Windows 8.0. The support for Windows 8.0 will be removed in 6 months. If you have <code class="language-plaintext highlighter-rouge">windows-target-version</code> preference in config.xml set to 8.0, you will see this warning and you should consider changing it to 8.1.</li>
+  <li><code class="language-plaintext highlighter-rouge">windows8</code> platform keyword is deprecated. For all plugins, use <code class="language-plaintext highlighter-rouge">windows</code> as the platform keyword.</li>
+  <li>Support for Windows 10 Insider Preview and building using Visual Studio 2015 RC. More details can be found below. This support will evolve as Windows 10 release comes along.</li>
+  <li>Support for specifying parameters for signing Windows apps - like signing certificate, publisher identity etc. More details can be found in <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_win8_packaging.md.html#Windows%20Plugins">docs</a></li>
+</ul>
+
+<h2 id="whats-new-in-windows-10">What’s new in Windows 10</h2>
+<ul>
+  <li>Windows 10 Insider Preview introduces the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn894631.aspx">Universal Windows Platform (UWP)</a> which provides a guaranteed core API layer across devices. You can create a single app package that can be installed onto a wide range of devices. A single store makes it easy to publish apps across all device types - desktop, mobile, Xbox, iOT.</li>
+  <li>In Windows 8 and 8.1, the app was loaded in the ms-appx  context. In Windows 10 for Cordova, by default the app is loaded in ms-appx-web  and have access to most Windows Runtime APIs. This allows you to <a href="https://msdn.microsoft.com/en-us/library/windows/apps/dn705792.aspx">host remote content</a> in your Windows Cordova app. More details on how to customize this behavior can be found <a href="http://cordova.apache.org/docs/en/dev/guide_platforms_win8_win10-support.md.html#Cordova%20for%20Windows%2010">here</a>.</li>
+  <li>Some JavaScript libraries could not run in Windows 8/8.1 due to the safeHTML restriction and we needed to use winstore-jscompat. In Windows 10 Cordova apps, the security can be applied using <a href="http://content-security-policy.com/">Content Security Policies</a>.</li>
+</ul>
+
+<!--more-->
+<h2 id="install">Install</h2>
+<p>You will need to update to cordova-cli 5.1.1 or higher to use this version of the Windows platform:</p>
+
+<p>To add it to an existing project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+cordova platform update windows
+</code></pre></div></div>
+
+<p>Alternatively, to add it to a new project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g cordova
+cordova platform add windows
+</code></pre></div></div>
+
+<h2 id="changes-include">Changes include:</h2>
+
+<ul>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8954">CB-8954</a> Adds <code class="language-plaintext highlighter-rouge">requirements</code> command support to check_reqs module</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-9073">CB-9073</a> Fixes build error when path to project contains <code class="language-plaintext highlighter-rouge">&amp;</code> symbol</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8889">CB-8889</a> Persist app/package name and product ID during platform update.</li>
+  <li>Updating appx manifest to a large extent now happens in the <code class="language-plaintext highlighter-rouge">prepare</code> step as opposed to the <code class="language-plaintext highlighter-rouge">build</code> step. This change implies that cordova-windows 4.0.0 can only work with with cordova CLI &gt; 5.0</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8486">CB-8486</a> Support for creating signed package and build.json for Windows</li>
+  <li>Add preview support for Windows 10 Universal Apps. To target Windows 10, add <code class="language-plaintext highlighter-rouge">&lt;preference name="windows-target-version" value="10.0" /&gt;</code> to config.xml.</li>
+  <li>The default windows target version is now 8.1.</li>
+  <li>Support for <code class="language-plaintext highlighter-rouge">--appx</code> command line argument to override the windows target version</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8946">CB-8946</a>: Added the <code class="language-plaintext highlighter-rouge">WindowsToastCapable</code> preference to indicate that the app can support toasts.  This is to support the Local Notifications plugin.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8856">CB-8856</a> Fix ‘Id’ attribute is invalid when creating Windows Store submission build</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8307">CB-8307</a>: Adding a 25-year expiration temporary certificate.</li>
+  <li><a href="https://issues.apache.org/jira/browse/CB-8760">CB-8760</a> platform list doesn’t show version for windows platform.</li>
+</ul>
+
+<h2 id="known-issues-with-400-and-windows-10">Known Issues with 4.0.0 and Windows 10</h2>
+
+<ul>
+  <li>Windows 10 Insider Preview does not have a command-line compatible emulator deployment scenario.  To deploy to an emulator, open your solution file in Visual Studio.</li>
+  <li>The Windows SDK included with Visual Studio 2015 RC does not include a tool to deploy to a Windows 10 Phone.  To deploy to a phone, open your solution file in Visual Studio.</li>
+  <li>WinJS is included inline in the package.  In the future, it might be migrated to an NPM dependency. WinJS UI functionality is not included and should be add by you. (see <a href="http://github.com/winjs/winjs">WinJS on Github</a>)</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2015/05/26/android-402.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2015/05/26/android-402.html">Apache Cordova Android 4.0.2 and 3.7.2 released</a>
+                    <div class="date"> 26 May 2015 - By Joe Bowser </div>
+                    <p class="content">
+                        A major Security issue were discovered in the Android platform of Cordova....
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2015/06/04/tools-release.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2015/06/04/tools-release.html">Tools Release 4.3.1</a>
+                    <div class="date"> 04 Jun 2015 - By Tim Barham </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        Cordova tools 4.3.1 has been released to pin version 3.7.2 of the...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

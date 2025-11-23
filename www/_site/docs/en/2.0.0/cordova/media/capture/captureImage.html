@@ -1,0 +1,149 @@
+<h1 id="capturecaptureimage">capture.captureImage</h1>
+
+<blockquote>
+  <p>Start the camera application and return information about captured image file(s).</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.device.capture.captureImage( 
+    [CaptureCB](CaptureCB.html) captureSuccess, [CaptureErrorCB](CaptureErrorCB.html) captureError, [CaptureImageOptions options]
+);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>This method starts an asynchronous operation to capture images using the device camera application.  The operation allows the device user to capture multiple images in a single session.</p>
+
+<p>The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the <strong>limit</strong> parameter in <a href="captureImageOptions.html">CaptureImageOptions</a>, has been reached.  If no value is provided for the <strong>limit</strong> parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.</p>
+
+<p>When the capture operation is finished, it will invoke the <a href="CaptureCB.html">CaptureCB</a> callback with an array of <a href="MediaFile.html">MediaFile</a> objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the <a href="CaptureErrorCB.html">CaptureErrorCB</a> callback will be invoked with a <a href="CaptureError.html">CaptureError</a> object with the <a href="CaptureError.html">CaptureError</a>.<code class="language-plaintext highlighter-rouge">CAPTURE_NO_MEDIA_FILES</code> error code.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 ( Mango )</li>
+  <li>Bada 2.x</li>
+</ul>
+
+<h2 id="windows-phone-7-quirks">Windows Phone 7 Quirks</h2>
+
+<p>Invoking the native camera application while your device is connected
+via Zune will not work, and the error callback will be triggered.</p>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+// start image capture
+navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Capture Image&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="json2.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Called when capture operation is finished
+    //
+    function captureSuccess(mediaFiles) {
+        var i, len;
+        for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+            uploadFile(mediaFiles[i]);
+        }	    
+    }
+
+    // Called if something bad happens.
+    // 
+    function captureError(error) {
+        var msg = 'An error occurred during capture: ' + error.code;
+        navigator.notification.alert(msg, null, 'Uh oh!');
+    }
+
+    // A button will call this function
+    //
+    function captureImage() {
+        // Launch device camera application, 
+        // allowing user to capture up to 2 images
+        navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
+    }
+
+    // Upload files to server
+    function uploadFile(mediaFile) {
+        var ft = new FileTransfer(),
+            path = mediaFile.fullPath,
+            name = mediaFile.name;
+
+        ft.upload(path,
+            "http://my.domain.com/upload.php",
+            function(result) {
+                console.log('Upload success: ' + result.responseCode);
+                console.log(result.bytesSent + ' bytes sent');
+            },
+            function(error) {
+                console.log('Error uploading file ' + path + ': ' + error.code);
+            },
+            { fileName: name });   
+    }
+
+    &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button onclick="captureImage();"&gt;Capture Image&lt;/button&gt; &lt;br&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="bada-quirks">Bada Quirks</h2>
+
+<p>Bada supports <em>captureImage</em> just like the other platforms. However there is <em>another</em> mode where you can capture a video or an image straight in the webview without launching any camera app. In order to do that you need to:</p>
+
+<ol>
+  <li>
+    <p>create a <em>&#60;div&#62;</em> element somewhere in your document and give it an id (such as “preview”).</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;div id="preview"&gt;&lt;/div&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Initialize the camera preview with the following method</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> navigator.camera.showPreview("preview");
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Once you get the preview you can</p>
+
+    <p>3.1 Capture an image with</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> var options = { destinationFilename: "images/cam01.jpg", highRes: false};
+ navigator.capture.captureImage(success, fail, options);
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Hide the camera preview with the following method</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> navigator.camera.hidePreview("preview");
+</code></pre></div>    </div>
+  </li>
+</ol>
+

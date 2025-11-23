@@ -1,0 +1,127 @@
+<h1 id="windows-phone-7-platform-guide">Windows Phone 7 Platform Guide</h1>
+
+<p>This guide shows how to set up your SDK development environment to
+deploy Cordova apps for Windows Phone 7 devices.  Apps also run on
+Windows Phone 8 devices using the same APIs, but version 7 lacks some
+of IE10’s advanced features available on Windows Phone 8. Windows
+Phone 8 apps do <em>not</em> run on Windows Phone 7 devices.</p>
+
+<p>See the following for more detailed platform-specific information that
+applies to both versions:</p>
+
+<ul>
+  <li><a href="../wp8/upgrading.html">Upgrading Windows Phone</a></li>
+  <li><a href="../wp8/plugin.html">Windows Phone Plugins</a></li>
+  <li><a href="../wp8/tools.html">Windows Phone Shell Tool Guide</a></li>
+</ul>
+
+<p>The command-line tools above refer to versions prior to Cordova 3.0.
+See <a href="../../cli/index.html">The Command-Line Interface</a> for information about the
+current interface.</p>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<p>Use Windows 7 or Windows 8 (Pro) or Windows Vista with SP2.  The
+64-bit version (x64) of Windows is required for the SDK.  The Pro
+version is recommended for running a device emulator.</p>
+
+<p>Register and pay for a <a href="http://dev.windowsphone.com/en-us/publish">Windows Phone Dev
+Center</a> account if you want
+to install an app on a real device or submit it to Market Place.</p>
+
+<p><strong>NOTE</strong>: Running the SDK in Virtual Machine may present challenges.
+Read <a href="http://aka.ms/BuildaWP8apponaMac">Windows Phone on a Mac</a> for
+insights on developing solutions.</p>
+
+<h2 id="install-sdk-and-cordova">Install SDK and Cordova</h2>
+
+<p>Download and install the <a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570">Windows Phone
+SDK</a>.</p>
+
+<p>Download and extract the latest copy of
+<a href="http://phonegap.com/download">Cordova</a>. You need to work in the
+<code class="language-plaintext highlighter-rouge">lib\windows-phone-8\wp7</code> subdirectory, <code class="language-plaintext highlighter-rouge">lib\windows-phone-8\wp8</code>
+contains the Windwos Phone 8 version of Cordova.</p>
+
+<p>Copy the <code class="language-plaintext highlighter-rouge">CordovaWP7_x_x_x.zip</code> file to the <code class="language-plaintext highlighter-rouge">\My Documents\Visual
+Studio 2012\Templates\ProjectTemplates\</code> directory.</p>
+
+<h2 id="building-the-template">Building the Template</h2>
+
+<p><strong>NOTE</strong>: Skip this step if the <code class="language-plaintext highlighter-rouge">lib\windows-phone</code> directory already
+contains a <code class="language-plaintext highlighter-rouge">CordovaWP7_x_x_x.zip</code> file.</p>
+
+<p>To simplify development, Cordova bundles a script to build Visual
+Studio templates. These allow you to rapidly generate Cordova apps,
+and you can modify them if necessary.  The steps below <a href="../../../cordova/inappbrowser/inappbrowser.html">show</a> how to
+generate it.</p>
+
+<h3 id="run-the-batch-file-to-create-and-install-the-templates">Run the Batch File to Create and Install the Templates</h3>
+
+<p>The root of the repo contains a <code class="language-plaintext highlighter-rouge">createTemplates.bat</code> file.
+Double-clicking this file generates two <code class="language-plaintext highlighter-rouge">.zip</code> files:
+<code class="language-plaintext highlighter-rouge">CordovaWP7_x_x_x.zip</code> and <code class="language-plaintext highlighter-rouge">CordovaWP8_x_x_x.zip</code>, where <em>3.3.0</em> is
+the current version number. To use these files easily in Visual
+Studio, copy them to the <code class="language-plaintext highlighter-rouge">My Documents\Visual Studio
+2012\Templates\ProjectTemplates\</code> subdirectory. You are then able to
+create new <strong>Apache Cordova Windows Phone_ apps from Visual Studio’s
+__File → New Project</strong> menu.</p>
+
+<p>If you run the batch file from the command line, you can also call
+with a parameter to install automatically:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &gt;createTemplates.bat -install
+</code></pre></div></div>
+
+<h2 id="set-up-a-new-project">Set up a New Project</h2>
+
+<ul>
+  <li>
+    <p>Open Visual Studio Express for Windows Phone and choose <strong>New
+Project</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>CordovaWP7</strong>. The version number displays in the template
+description.</p>
+  </li>
+  <li>
+    <p>Give the project a name, and select <strong>OK</strong>.</p>
+  </li>
+</ul>
+
+<h2 id="review-the-project-structure">Review the Project Structure</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">www</code> directory features <code class="language-plaintext highlighter-rouge">html</code>, <code class="language-plaintext highlighter-rouge">js</code>, and <code class="language-plaintext highlighter-rouge">css</code> subdirectories
+and any other resources the app requires.
+Any additional content needs to be a part of the Visual Studio
+project, and it must be set as content.</p>
+
+<p>The following sample structure represents a 2.3.0 project, but may
+vary depending on installed version:</p>
+
+<p><img src="/static/img/guide/platforms/wp8/projectStructure.png" alt="" /></p>
+
+<h2 id="build-the-project-for-the-device">Build the Project for the Device</h2>
+
+<p>Before testing your application on a device, the device must be
+registered. Consult
+<a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105\).aspx">Microsoft’s documentation</a>
+for details on how to deploy and test on Windows Phone 7. These are
+the basic steps:</p>
+
+<ul>
+  <li>
+    <p>Make sure your phone is connected, and the screen is unlocked.</p>
+  </li>
+  <li>
+    <p>In Visual Studio, select <strong>Device</strong> from the drop-down menu at the top.</p>
+  </li>
+  <li>
+    <p>Press the green <strong>play</strong> button next to the main drop-down menu to
+start debugging, or else type <strong>F5</strong>.</p>
+  </li>
+</ul>
+
+<p><img src="/static/img/guide/platforms/wp7/wpd.png" alt="" /></p>
+
+<p>At this point, you’re done.</p>

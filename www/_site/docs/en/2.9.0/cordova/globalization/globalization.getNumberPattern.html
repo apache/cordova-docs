@@ -1,0 +1,111 @@
+<h1 id="globalizationgetnumberpattern">globalization.getNumberPattern</h1>
+
+<p>Returns a pattern string to format and parse numbers according to the client’s user preferences.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>Returns the pattern to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object
+as a parameter. That object contains the following properties:</p>
+
+<ul>
+  <li><strong>pattern</strong>: The number pattern to format and parse numbers.  The patterns follow Unicode Technical Standard #35. <a href="http://unicode.org/reports/tr35/tr35-4.html">http://unicode.org/reports/tr35/tr35-4.html</a>. <em>(String)</em></li>
+  <li><strong>symbol</strong>: The symbol to use when formatting and parsing, such as a percent or currency symbol. <em>(String)</em></li>
+  <li><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting numbers. <em>(Number)</em></li>
+  <li><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></li>
+  <li><strong>positive</strong>: The symbol to use for positive numbers when parsing and formatting. <em>(String)</em></li>
+  <li><strong>negative</strong>: The symbol to use for negative numbers when parsing and formatting. <em>(String)</em></li>
+  <li><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></li>
+  <li><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></li>
+</ul>
+
+<p>If there is an error obtaining the pattern, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html)</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">[GlobalizationError](GlobalizationError/globalizationerror.html).PATTERN\_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'decimal'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">decimal</code>, <code class="language-plaintext highlighter-rouge">percent</code>, or <code class="language-plaintext highlighter-rouge">currency</code>.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en\_US</code> locale, this should display a
+popup dialog with text similar to the results that follow:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getNumberPattern(
+    function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                              'symbol: '   + pattern.symbol   + '\n' +
+                              'fraction: ' + pattern.fraction + '\n' +
+                              'rounding: ' + pattern.rounding + '\n' +
+                              'positive: ' + pattern.positive + '\n' +
+                              'negative: ' + pattern.negative + '\n' +
+                              'decimal: '  + pattern.decimal  + '\n' +
+                              'grouping: ' + pattern.grouping);},
+    function () {alert('Error getting pattern\n');},
+    {type:'decimal'}
+);
+</code></pre></div></div>
+
+<p>Results:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern: #,##0.###
+symbol: .
+fraction: 0
+rounding: 0
+positive:
+negative: -
+decimal: .
+grouping: ,
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;getNumberPattern Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    function checkPattern() {
+      navigator.globalization.getNumberPattern(
+        function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                  'symbol: '   + pattern.symbol   + '\n' +
+                                  'fraction: ' + pattern.fraction + '\n' +
+                                  'rounding: ' + pattern.rounding + '\n' +
+                                  'positive: ' + pattern.positive + '\n' +
+                                  'negative: ' + pattern.negative + '\n' +
+                                  'decimal: '  + pattern.decimal  + '\n' +
+                                  'grouping: ' + pattern.grouping);},
+        function () {alert('Error getting pattern\n');},
+        {type:'decimal'}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkPattern()"&gt;Click for pattern&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h2>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">pattern</code> property is not supported, and retuens an empty string.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">fraction</code> property is not supported, and returns zero.</li>
+</ul>

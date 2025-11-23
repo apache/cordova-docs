@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released Cordova Electron 3.0.0! This is one of Cordova’s supported platforms for building Electron applications.">
+
+    <title>
+        
+            
+                Cordova Electron 3.0.0 Released! - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/announcements/2021/09/06/cordova-electron-release-3.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova Electron 3.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">06 Sep 2021</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code class="language-plaintext highlighter-rouge">Cordova Electron 3.0.0</code>! This is one of Cordova’s supported platforms for building Electron applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-electron">cordova-electron@3.0.0</a></li>
+</ul>
+
+<h2 id="release-highlights">Release Highlights</h2>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove electron
+cordova platform add electron@3.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add electron@3.0.0
+</code></pre></div></div>
+
+<p>Some of the notable breaking changes &amp; new features in this release are:</p>
+
+<ul>
+  <li>The <strong>Electron</strong> core dependencies have been updated.
+    <ul>
+      <li><strong>Electron</strong>: 14.0.0</li>
+      <li><strong>Chromium</strong>: 93.0.4577.58</li>
+      <li><strong>Node</strong>: v14.17.0</li>
+      <li><strong>V8</strong>: v9.3</li>
+    </ul>
+  </li>
+  <li><strong>Node.js</strong> 10 is no longer supported. This release requires the development environment to have <strong>Node.js</strong> 12.x or higher. It is recommended to use the current LTS, which is <code class="language-plaintext highlighter-rouge">14.17.6</code> at the time of this release.</li>
+  <li>
+    <p><strong>Cordova Plugin Support</strong></p>
+
+    <p>In the earlier releases of Cordova Electron, we didn’t have a proper plugin system in place.</p>
+
+    <p>There was a temporary workaround solution, <code class="language-plaintext highlighter-rouge">nodeIntegration</code>, that allowed app developers and plugin developers to have access to node modules. This was meant to be temporary and is not highly recommended because it can lead to <a href="https://www.electronjs.org/docs/latest/tutorial/security#2-do-not-enable-nodejs-integration-for-remote-content">security issues</a>.</p>
+
+    <p>With the new support, the plugin will be preloaded and runs in a separate context from the web app. This feature is known as <a href="https://www.electronjs.org/docs/latest/tutorial/context-isolation/">Context Isolation</a>.</p>
+
+    <p>Additionally, this system follows our pre-existing plugin structure. This means the app code does not need to make any special calls for Electron vs any other platform.</p>
+  </li>
+</ul>
+
+<p>For a quick start guide and in-depth configuration setup, please check out our <a href="https://github.com/apache/cordova-electron/blob/rel/2.0.0/DOCUMENTATION.md">Cordova Electron Documentation</a>!</p>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+<!--more-->
+<h1 id="changes-include">Changes include:</h1>
+
+<h4 id="project-dependencies">Project Dependencies</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">cordova-common@^4.0.2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">electron@14.0.0</code></li>
+  <li><code class="language-plaintext highlighter-rouge">electron-builder@^22.11.7</code></li>
+  <li><code class="language-plaintext highlighter-rouge">electron-devtools-installer@^3.2.0</code></li>
+  <li><code class="language-plaintext highlighter-rouge">execa@^5.1.1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">fs-extra@^10.0.0</code></li>
+</ul>
+
+<h4 id="breaking-changes">Breaking Changes</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/205">GH-205</a> feat!(Api): remove unused locations data</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/203">GH-203</a> feat!(electron): bump to <code class="language-plaintext highlighter-rouge">14.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/202">GH-202</a> feat!: remove old VERSION file</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/199">GH-199</a> feat!: update node support</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/198">GH-198</a> feat!(dependencies): update other packages
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">execa@5.1.1</code></li>
+      <li><code class="language-plaintext highlighter-rouge">fs-extra@10.0.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">jasmine@3.9.0</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/197">GH-197</a> feat!(dependencies): bump <strong>Electron</strong> packages
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">electron-builder@22.11.7</code></li>
+      <li><code class="language-plaintext highlighter-rouge">electron-devtools-installer@3.2.0</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/175">GH-175</a> breaking: add plugin support</li>
+</ul>
+
+<h4 id="features">Features</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/200">GH-200</a> feat: update supported platform options</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/184">GH-184</a> feat: forward <strong>Electron</strong>’s process <code class="language-plaintext highlighter-rouge">stdio</code> to terminal</li>
+</ul>
+
+<h4 id="fixes">Fixes</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/183">GH-183</a> fix(npm): change prepack script to prepare</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/180">GH-180</a> fix(windows): <strong>Electron</strong> window not displaying</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/182">GH-182</a> fix: restrict deep merging on reserved keys</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/172">GH-172</a> fix(pkg): typo in field “<code class="language-plaintext highlighter-rouge">keywords</code>”</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/169">GH-169</a> fix(Api): do not depend on globals</li>
+</ul>
+
+<h4 id="refactor-changes">Refactor Changes</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/181">GH-181</a> refactor: use class static</li>
+</ul>
+
+<h4 id="chores">Chores</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/201">GH-201</a> chore(asf-license): add to header</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/171">GH-171</a> chore: clean up <code class="language-plaintext highlighter-rouge">package.json</code></li>
+</ul>
+
+<h4 id="test--other-changes">Test &amp; Other Changes</h4>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-electron/pull/194">GH-194</a> build: build <code class="language-plaintext highlighter-rouge">cordova.js</code> on <code class="language-plaintext highlighter-rouge">prepare</code></li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/204">GH-204</a> test: cleanup and remove unneeded code</li>
+  <li><a href="https://github.com/apache/cordova-electron/pull/90">GH-90</a> test(create): fix, clean up &amp; extend</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2021/08/25/translations.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2021/08/25/translations.html">Declaring Translation Bankruptcy</a>
+                    <div class="date"> 25 Aug 2021 - By Jesse MacFadyen </div>
+                    <p class="content">
+                        It has been talked about for years, and even though we agreed...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2021/09/15/cordova-android-release-10.1.1.html">Cordova Android 10.1.1 Released!</a>
+                    <div class="date"> 15 Sep 2021 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released Cordova Android...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

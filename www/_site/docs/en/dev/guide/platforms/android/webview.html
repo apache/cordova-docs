@@ -1,0 +1,242 @@
+<h1 id="android-webviews">Android WebViews</h1>
+
+<p>This guide shows how to embed a Cordova-enabled WebView component
+within a larger Android application. For details on how these
+components can communicate with each other, see Application Plugins.</p>
+
+<p>If you’re unfamiliar with Android, you should first familiarize
+yourself with the <a href="index.html">Android Platform Guide</a> and have the latest Android
+SDK installed before you attempt the more unusual development option
+of embedding a WebView.  Starting with Cordova 1.9, the Android
+platform relies on a <code class="language-plaintext highlighter-rouge">CordovaWebView</code> component, which builds on a
+legacy <code class="language-plaintext highlighter-rouge">CordovaActivity</code> component that pre-dates the 1.9 release.</p>
+
+<ol>
+  <li>
+    <p>Create a new or open an exisiting native application.</p>
+  </li>
+  <li>
+    <p>Add the Cordova-Android framework dependency to your app module’s build configuration.</p>
+
+    <p>If your build configuration uses Groovy DSL, update <code class="language-plaintext highlighter-rouge">app/build.gradle</code> with the following:</p>
+
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">dependencies</span> <span class="o">{</span>
+     <span class="n">implementation</span> <span class="s1">'org.apache.cordova:framework:14.0.1'</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>If your build configuration uses Kotlin DSL, update <code class="language-plaintext highlighter-rouge">app/build.gradle.kts</code> with the following:</p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nf">dependencies</span> <span class="p">{</span>
+     <span class="nf">implementation</span><span class="p">(</span><span class="s">"org.apache.cordova:framework:14.0.1"</span><span class="p">)</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>After making any changes to your build configuration file, make sure to “<strong>Sync Project with Gradle Files</strong>” so it will checkout the framework.</p>
+
+    <p><strong>Note:</strong> Your build configuration may already includes a <code class="language-plaintext highlighter-rouge">dependencies</code> block, so simply add the <code class="language-plaintext highlighter-rouge">implementation</code> line within the existing block.</p>
+
+    <p><strong>Note:</strong> You can find a list of available versions of released Cordova-Android framework on <a href="https://central.sonatype.com/artifact/org.apache.cordova/framework/versions">Sonatype Maven Central Repository</a> or any other mirror of the Maven Central Repository.</p>
+  </li>
+  <li>
+    <p>Modify the layout file of the activity that shall host the Cordova view e.g.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;org.apache.cordova.engine.SystemWebView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/cordovaWebView"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Modify your activity to extend <code class="language-plaintext highlighter-rouge">CordovaActivity</code> and override the <code class="language-plaintext highlighter-rouge">onCreate</code>, <code class="language-plaintext highlighter-rouge">makeWebView</code> and <code class="language-plaintext highlighter-rouge">createViews</code> to use your defined layout:</p>
+
+    <p><strong>Kotlin Example:</strong></p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">org.apache.cordova.testapp</span>
+
+<span class="k">import</span> <span class="nn">android.os.Bundle</span>
+<span class="k">import</span> <span class="nn">android.view.View</span>
+<span class="k">import</span> <span class="nn">androidx.activity.enableEdgeToEdge</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaActivity</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebViewImpl</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebViewEngine</span>
+
+<span class="kd">class</span> <span class="nc">TestActivity</span> <span class="p">:</span> <span class="nc">CordovaActivity</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="nf">enableEdgeToEdge</span><span class="p">()</span>
+        <span class="nf">setContentView</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_test</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">makeWebView</span><span class="p">():</span> <span class="nc">CordovaWebView</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">appView</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">View</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">cordovaWebView</span><span class="p">)</span> <span class="k">as</span> <span class="nc">SystemWebView</span>
+        <span class="k">return</span> <span class="nc">CordovaWebViewImpl</span><span class="p">(</span><span class="nc">SystemWebViewEngine</span><span class="p">(</span><span class="n">appView</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">createViews</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// leave empty so the layout is used</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>Java Example:</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">org.apache.cordova.testapp</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.activity.enableEdgeToEdge</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaWebView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaWebViewImpl</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.engine.SystemWebView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.engine.SystemWebViewEngine</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestActivity</span> <span class="kd">extends</span> <span class="nc">CordovaActivity</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_test</span><span class="o">);</span> <span class="c1">// layout file for your activity</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+        <span class="n">loadUrl</span><span class="o">(</span><span class="n">launchUrl</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="nc">CordovaWebView</span> <span class="nf">makeWebView</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">SystemWebView</span> <span class="n">appView</span> <span class="o">=</span> <span class="o">(</span><span class="nc">SystemWebView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">cordovaWebView</span><span class="o">);</span>  <span class="c1">// id for the SystemWebView in previous step</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">CordovaWebViewImpl</span><span class="o">(</span><span class="k">new</span> <span class="nc">SystemWebViewEngine</span><span class="o">(</span><span class="n">appView</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">createViews</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// leave empty so the layout is used</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set up your activity’s style to comply with Cordova</p>
+
+    <p>By default, <code class="language-plaintext highlighter-rouge">CordovaActivity</code> shows an initial splash screen. If this is the desired behavior, your custom activity should define a style in the <code class="language-plaintext highlighter-rouge">android:theme</code> attribute that inherits from <code class="language-plaintext highlighter-rouge">Theme.SplashScreen.IconBackground</code>.</p>
+
+    <p>Below is an example of what your <code class="language-plaintext highlighter-rouge">&lt;activity&gt;</code> might look like in <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code>:</p>
+
+    <p><strong>Sample <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> <code class="language-plaintext highlighter-rouge">&lt;activity&gt;</code>:</strong></p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;activity</span>
+     <span class="na">android:name=</span><span class="s">".TestActivity"</span>
+     <span class="na">android:exported=</span><span class="s">"false"</span>
+     <span class="na">android:theme=</span><span class="s">"@style/Theme.MyCordovaAppSplashScreen"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p>Here’s the corresponding style in <code class="language-plaintext highlighter-rouge">themes.xml</code> to match the <code class="language-plaintext highlighter-rouge">android:theme</code> value. Feel free to rename the style to suit your app.</p>
+
+    <p><strong>Sample <code class="language-plaintext highlighter-rouge">themes.xml</code> <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code>:</strong></p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+ <span class="nt">&lt;resources</span> <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span><span class="nt">&gt;</span>
+     <span class="c">&lt;!-- Theme for the activity that hosts Cordova --&gt;</span>
+     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Theme.MyCordovaAppSplashScreen"</span> <span class="na">parent=</span><span class="s">"Theme.SplashScreen.IconBackground"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"windowSplashScreenBackground"</span><span class="nt">&gt;</span>@color/black<span class="nt">&lt;/item&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"windowSplashScreenAnimatedIcon"</span><span class="nt">&gt;</span>@drawable/ic_launcher_foreground<span class="nt">&lt;/item&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"windowSplashScreenAnimationDuration"</span><span class="nt">&gt;</span>200<span class="nt">&lt;/item&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"postSplashScreenTheme"</span><span class="nt">&gt;</span>@style/Theme.MyCordovaApp<span class="nt">&lt;/item&gt;</span>
+     <span class="nt">&lt;/style&gt;</span>
+
+     <span class="c">&lt;!-- Theme applied after the splash screen --&gt;</span>
+     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Theme.MyCordovaApp"</span> <span class="na">parent=</span><span class="s">"Theme.AppCompat.DayNight.NoActionBar"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;/resources&gt;</span>
+</code></pre></div>    </div>
+
+    <blockquote>
+      <p><strong>Note:</strong> Since <code class="language-plaintext highlighter-rouge">CordovaActivity</code> extends <code class="language-plaintext highlighter-rouge">AppCompatActivity</code>, the <code class="language-plaintext highlighter-rouge">postSplashScreenTheme</code> must inherit from a <code class="language-plaintext highlighter-rouge">Theme.AppCompat.*</code> style (e.g., <code class="language-plaintext highlighter-rouge">Theme.AppCompat.DayNight.NoActionBar</code> or a custom variant).</p>
+    </blockquote>
+
+    <p>If you <strong>don’t</strong> want the initial splash screen to appear, override the <code class="language-plaintext highlighter-rouge">showInitialSplashScreen</code> method in your activity:</p>
+
+    <p><strong>Kotlin example:</strong></p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">override</span> <span class="k">fun</span> <span class="nf">showInitialSplashScreen</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
+     <span class="k">return</span> <span class="k">false</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <blockquote>
+      <p><strong>Note:</strong> If the splash screen is disabled, make sure the <code class="language-plaintext highlighter-rouge">android:theme</code> points directly to a theme based on <code class="language-plaintext highlighter-rouge">Theme.AppCompat.*</code>. Avoid using <code class="language-plaintext highlighter-rouge">Theme.SplashScreen.*</code>.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Copy your application’s web assets (HTML, CSS, JavaScript) to the Android project’s <code class="language-plaintext highlighter-rouge">&lt;app-root-directory&gt;/app/src/main/assets/www/</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy your <code class="language-plaintext highlighter-rouge">config.xml</code> file to your Android project’s <code class="language-plaintext highlighter-rouge">&lt;app-root-directory&gt;/app/src/main/res/xml/</code> directory.</p>
+  </li>
+</ol>
+
+<h2 id="bonus-jetpack-compose">Bonus: Jetpack Compose</h2>
+
+<p>If your native Android application uses Jetpack Compose instead of XML layouts, you can still integrate the Cordova WebView by writing your Activity like this:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">org.apache.cordova.testapp</span>
+
+<span class="k">import</span> <span class="nn">android.os.Bundle</span>
+<span class="k">import</span> <span class="nn">androidx.activity.compose.setContent</span>
+<span class="k">import</span> <span class="nn">androidx.activity.enableEdgeToEdge</span>
+<span class="k">import</span> <span class="nn">androidx.compose.foundation.layout.fillMaxSize</span>
+<span class="k">import</span> <span class="nn">androidx.compose.runtime.Composable</span>
+<span class="k">import</span> <span class="nn">androidx.compose.ui.Modifier</span>
+<span class="k">import</span> <span class="nn">androidx.compose.ui.viewinterop.AndroidView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.testapp.ui.theme.TestAppTheme</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaActivity</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebViewImpl</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebViewEngine</span>
+
+<span class="kd">class</span> <span class="nc">TestActivity</span> <span class="p">:</span> <span class="nc">CordovaActivity</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">cordovaWebView</span><span class="p">:</span> <span class="nc">CordovaWebView</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="nf">enableEdgeToEdge</span><span class="p">()</span>
+
+        <span class="c1">// Set up the Cordova WebView manually</span>
+        <span class="kd">val</span> <span class="py">systemWebView</span> <span class="p">=</span> <span class="nc">SystemWebView</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+        <span class="n">cordovaWebView</span> <span class="p">=</span> <span class="nc">CordovaWebViewImpl</span><span class="p">(</span><span class="nc">SystemWebViewEngine</span><span class="p">(</span><span class="n">systemWebView</span><span class="p">))</span>
+
+        <span class="nf">setContent</span> <span class="p">{</span>
+            <span class="c1">// Make sure to change "TestAppTheme" with your app's custom Jetpack Compose theme function.</span>
+            <span class="nc">TestAppTheme</span> <span class="p">{</span>
+                <span class="nc">CordovaWebViewContainer</span><span class="p">(</span><span class="n">systemWebView</span> <span class="p">=</span> <span class="n">systemWebView</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="nf">loadUrl</span><span class="p">(</span><span class="n">launchUrl</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">makeWebView</span><span class="p">():</span> <span class="nc">CordovaWebView</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">cordovaWebView</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">createViews</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// leave empty so the layout is used</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">CordovaWebViewContainer</span><span class="p">(</span><span class="n">systemWebView</span><span class="p">:</span> <span class="nc">SystemWebView</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">AndroidView</span><span class="p">(</span>
+        <span class="n">factory</span> <span class="p">=</span> <span class="p">{</span> <span class="n">systemWebView</span> <span class="p">},</span>
+        <span class="n">modifier</span> <span class="p">=</span> <span class="nc">Modifier</span><span class="p">.</span><span class="nf">fillMaxSize</span><span class="p">()</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>

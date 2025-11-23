@@ -1,0 +1,104 @@
+<h1 id="windowopen">window.open</h1>
+
+<p>Opens a URL in a new <code class="language-plaintext highlighter-rouge">[InAppBrowser](inappbrowser.html)</code> instance, the current browser
+instance, or the system browser.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open(url, target, options);
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>ref</strong>: Reference to the <code class="language-plaintext highlighter-rouge">[InAppBrowser](inappbrowser.html)</code> window. <em>(InAppBrowser)</em></p>
+  </li>
+  <li>
+    <p><strong>url</strong>: The URL to load <em>(String)</em>. Call <code class="language-plaintext highlighter-rouge">encodeURI()</code> on this if the URL contains Unicode characters.</p>
+  </li>
+  <li>
+    <p><strong>target</strong>: The target in which to load the URL, an optional parameter that defaults to <code class="language-plaintext highlighter-rouge">_self</code>. <em>(String)</em></p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">_self</code>: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">_blank</code>: Opens in the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">_system</code>: Opens in the system’s web browser.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>options</strong>: Options for the <code class="language-plaintext highlighter-rouge">[InAppBrowser](inappbrowser.html)</code>. Optional, defaulting to: <code class="language-plaintext highlighter-rouge">location=yes</code>. <em>(String)</em></p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">options</code> string must not contain any blank space, and each feature’s name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:</p>
+
+    <ul>
+      <li><strong>location</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to turn the <code class="language-plaintext highlighter-rouge">InAppBrowser</code>’s location bar on or off.</li>
+    </ul>
+
+    <p>Android only:</p>
+
+    <ul>
+      <li><strong>closebuttoncaption</strong>: set to a string to use as the <strong>Done</strong> button’s caption.</li>
+      <li><strong>hidden</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to create the browser and load the page, but not show it. The load event fires when loading is complete. Omit or set to <code class="language-plaintext highlighter-rouge">no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>clearcache</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to have the browser’s cookie cache cleared before the new window is opened</li>
+      <li><strong>clearsessioncache</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to have the session cookie cache cleared before the new window is opened</li>
+    </ul>
+
+    <p>iOS only:</p>
+
+    <ul>
+      <li><strong>closebuttoncaption</strong>: set to a string to use as the <strong>Done</strong> button’s caption. Note that you need to localize this value yourself.</li>
+      <li><strong>hidden</strong>: set to <code class="language-plaintext highlighter-rouge">yes</code> to create the browser and load the page, but not show it. The load event fires when loading is complete. Omit or set to <code class="language-plaintext highlighter-rouge">no</code> (default) to have the browser open and load normally.</li>
+      <li><strong>toolbar</strong>:  set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to turn the toolbar on or off for the InAppBrowser (defaults to <code class="language-plaintext highlighter-rouge">yes</code>)</li>
+      <li><strong>enableViewportScale</strong>:  Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to prevent viewport scaling through a meta tag (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>mediaPlaybackRequiresUserAction</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to prevent HTML5 audio or video from autoplaying (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>allowInlineMediaPlayback</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML’s <code class="language-plaintext highlighter-rouge">video</code> element must also include the <code class="language-plaintext highlighter-rouge">webkit-playsinline</code> attribute (defaults to <code class="language-plaintext highlighter-rouge">no</code>)</li>
+      <li><strong>keyboardDisplayRequiresUserAction</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to open the keyboard when form elements receive focus via JavaScript’s <code class="language-plaintext highlighter-rouge">focus()</code> call (defaults to <code class="language-plaintext highlighter-rouge">yes</code>).</li>
+      <li><strong>suppressesIncrementalRendering</strong>: Set to <code class="language-plaintext highlighter-rouge">yes</code> or <code class="language-plaintext highlighter-rouge">no</code> to wait until all new view content is received before being rendered (defaults to <code class="language-plaintext highlighter-rouge">no</code>).</li>
+      <li><strong>presentationstyle</strong>:  Set to <code class="language-plaintext highlighter-rouge">pagesheet</code>, <code class="language-plaintext highlighter-rouge">formsheet</code> or <code class="language-plaintext highlighter-rouge">fullscreen</code> to set the <a href="http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle">presentation style</a> (defaults to <code class="language-plaintext highlighter-rouge">fullscreen</code>).</li>
+      <li><strong>transitionstyle</strong>: Set to <code class="language-plaintext highlighter-rouge">fliphorizontal</code>, <code class="language-plaintext highlighter-rouge">crossdissolve</code> or <code class="language-plaintext highlighter-rouge">coververtical</code> to set the <a href="http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle">transition style</a> (defaults to <code class="language-plaintext highlighter-rouge">coververtical</code>).</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var ref = window.open('http://apache.org', '_blank', 'location=yes');
+var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;window.open Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // external url
+        var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
+        // relative document
+        ref = window.open('next.html', '_self');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

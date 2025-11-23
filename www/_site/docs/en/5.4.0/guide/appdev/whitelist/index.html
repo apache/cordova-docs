@@ -1,0 +1,177 @@
+<h1 id="whitelist-guide">Whitelist Guide</h1>
+
+<p>Domain whitelisting is a security model that controls access to
+external domains over which your application has no control. Cordova
+provides a configurable security policy to define which external sites may be
+accessed.  By default, new apps are configured to allow access to any site.
+Before moving your application to production, you should formulate a whitelist
+and allow access to specific network domains and subdomains.</p>
+
+<p>For Android and iOS (as of their 4.0 releases), Cordova’s security policy is extensible via a plugin
+interface.  Your app should use the <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a>, as it provides
+better security and configurability than earlier versions of Cordova.  While
+it is possible to implement your own whitelist plugin, it is not recommended
+unless your app has very specific security policy needs.  See the
+<a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a> for details on usage and configuration.</p>
+
+<p>For other platforms, Cordova adheres to the <a href="http://www.w3.org/TR/widgets-access/">W3C Widget Access</a> specification,
+which relies on the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> element within the app’s <code class="language-plaintext highlighter-rouge">config.xml</code> file to
+enable network access to specific domains. For projects that rely on
+the CLI workflow described in <a href="../../cli/index.html">The Command-Line Interface</a>, this file is
+located in the project’s top-level directory. Otherwise for
+platform-specific development paths, locations are listed in the
+sections below. (See the various <a href="../../platforms/index.html">Platform Guides</a> for more information
+on each platform.)</p>
+
+<p>The following examples demonstrate <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> whitelist syntax:</p>
+
+<ul>
+  <li>
+    <p>Access to <a href="http://google.com">google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the secure <a href="https://google.com">google.com</a> (<code class="language-plaintext highlighter-rouge">https://</code>):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="https://google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to the subdomain <a href="http://maps.google.com">maps.google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://maps.google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to all the subdomains on <a href="http://google.com">google.com</a>, for example
+<a href="http://mail.google.com">mail.google.com</a> and <a href="http://docs.google.com">docs.google.com</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://*.google.com" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access to <em>all</em> domains, for example, <a href="http://google.com">google.com</a> and
+<a href="http://developer.mozilla.org">developer.mozilla.org</a>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="*" /&gt;
+</code></pre></div>    </div>
+
+    <p>This is the default value for newly created CLI projects.</p>
+  </li>
+</ul>
+
+<p>Be aware that some websites may automatically redirect from their home page to
+a different url, such as using https protocol or to a country-specific
+domain. For example http://www.google.com will redirect to use SSL/TLS at
+https://www.google.com, and then may further redirect to a geography such as
+https://www.google.co.uk. Such scenarios may require modified or additional
+whitelist entries beyond your initial requirement. Please consider this
+as you are building your whitelist.</p>
+
+<p>Note that the whitelist applies only to the main Cordova webview, and does not
+apply to an InAppBrowser webview or opening links in the system web browser.</p>
+
+<h2 id="amazon-fire-os-whitelisting">Amazon Fire OS Whitelisting</h2>
+
+<p>Platform-specific whitelisting rules are found in
+<code class="language-plaintext highlighter-rouge">res/xml/config.xml</code>.</p>
+
+<h2 id="android-whitelisting">Android Whitelisting</h2>
+
+<p>As above, see <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a> for details.  For cordova-android
+prior to 4.0.0, see older versions of this documentation.</p>
+
+<h2 id="ios-whitelisting">iOS Whitelisting</h2>
+
+<p>As above, see <a href="https://github.com/apache/cordova-plugin-whitelist">cordova-plugin-whitelist</a> for details.  For cordova-ios
+prior to 4.0.0, see older versions of this documentation.</p>
+
+<p><a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/">Application Transport Security (ATS)</a> is new in iOS 9 (Xcode 7). This new feature acts as a whitelist for your app. The cli will automatically convert &lt;access&gt; and &lt;allow-navigation&gt; tags to the appropriate ATS directives.</p>
+
+<p>The two tags mentioned above support these two new attributes below, which have their equivalents in ATS:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. minimum-tls-version (String, defaults to 'TLSv1.2')
+2. requires-forward-secrecy (Boolean, defaults to 'true')
+</code></pre></div></div>
+
+<p>See the <a href="https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/">ATS Technote</a> for details.</p>
+
+<h2 id="blackberry-10-whitelisting">BlackBerry 10 Whitelisting</h2>
+
+<p>The whitelisting rules are found in <code class="language-plaintext highlighter-rouge">www/config.xml</code>.</p>
+
+<p>BlackBerry 10’s use of wildcards differs from other platforms in two
+ways:</p>
+
+<ul>
+  <li>
+    <p>Any content accessed by <code class="language-plaintext highlighter-rouge">XMLHttpRequest</code> must be declared
+explicitly. Setting <code class="language-plaintext highlighter-rouge">origin="*"</code> does not work in this case.
+Alternatively, all web security may be disabled using the
+<code class="language-plaintext highlighter-rouge">WebSecurity</code> preference described in BlackBerry Configuration:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;preference name="websecurity" value="disable" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>As an alternative to setting <code class="language-plaintext highlighter-rouge">*.domain</code>, set an additional
+<code class="language-plaintext highlighter-rouge">subdomains</code> attribute to <code class="language-plaintext highlighter-rouge">true</code>. It should be set to <code class="language-plaintext highlighter-rouge">false</code> by
+default. For example, the following allows access to <code class="language-plaintext highlighter-rouge">google.com</code>,
+<code class="language-plaintext highlighter-rouge">maps.google.com</code>, and <code class="language-plaintext highlighter-rouge">docs.google.com</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" subdomains="true" /&gt;
+</code></pre></div>    </div>
+
+    <p>The following narrows access to <code class="language-plaintext highlighter-rouge">google.com</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="http://google.com" subdomains="false" /&gt;
+</code></pre></div>    </div>
+
+    <p>Specify access to all domains, including the local <code class="language-plaintext highlighter-rouge">file://</code>
+protocol:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;access origin="*" subdomains="true" /&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>(For more information on support, see BlackBerry’s documentation on the
+<a href="https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html">access element</a>.)</p>
+
+<h2 id="firefox-os">Firefox OS</h2>
+
+<p>In Firefox OS there is no concept of whitelisting a specific domain. Instead
+there is a special permission called 
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Permissions">SystemXHR</a>.
+There is a need to add this permission to <code class="language-plaintext highlighter-rouge">config.xml</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;platform name="firefoxos"&gt;
+	&lt;permission name="systemXHR" privileged="true" description="load data from server" /&gt;
+&lt;/platform&gt;
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">XMLHttpRequest</code> object needs to be instantiated with two parameters 
+<code class="language-plaintext highlighter-rouge">mozAnon</code> and <code class="language-plaintext highlighter-rouge">mozSystem</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var request = new XMLHttpRequest({
+	mozAnon: true,
+	mozSystem: true});
+</code></pre></div></div>
+
+<p>This solution is transparent so there is no difference for other platforms.</p>
+
+<h2 id="windows-phone-whitelisting">Windows Phone Whitelisting</h2>
+
+<p>The whitelisting rules for Windows Phone 8 are found in the
+app’s <code class="language-plaintext highlighter-rouge">config.xml</code> file.</p>
+
+<h2 id="tizen-whitelisting">Tizen Whitelisting</h2>
+
+<p>Whitelisting rules are found in the app’s <code class="language-plaintext highlighter-rouge">config.xml</code> file. The
+platform relies on the same <code class="language-plaintext highlighter-rouge">subdomains</code> attribute as the BlackBerry
+platform.
+(For more information on support, see Tizen’s documentation on the
+<a href="https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm">access element</a>.)</p>
+

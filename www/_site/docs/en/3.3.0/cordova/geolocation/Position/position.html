@@ -1,0 +1,104 @@
+<h1 id="position">Position</h1>
+
+<p>Contains <code class="language-plaintext highlighter-rouge">Position</code> coordinates and timestamp, created by the geolocation API.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>coords</strong>: A set of geographic coordinates. <em>(Coordinates)</em></p>
+  </li>
+  <li>
+    <p><strong>timestamp</strong>: Creation timestamp for <code class="language-plaintext highlighter-rouge">coords</code>. <em>(Date)</em></p>
+  </li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Position</code> object is created and populated by Cordova, and returned to the user through a callback function.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// onSuccess Callback
+//
+var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+};
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '          + position.coords.latitude         + '&lt;br /&gt;' +
+                            'Longitude: '         + position.coords.longitude        + '&lt;br /&gt;' +
+                            'Altitude: '          + position.coords.altitude         + '&lt;br /&gt;' +
+                            'Accuracy: '          + position.coords.accuracy         + '&lt;br /&gt;' +
+                            'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '&lt;br /&gt;' +
+                            'Heading: '           + position.coords.heading          + '&lt;br /&gt;' +
+                            'Speed: '             + position.coords.speed            + '&lt;br /&gt;' +
+                            'Timestamp: '         + position.timestamp               + '&lt;br /&gt;';
+    }
+
+        // onError Callback receives a PositionError object
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="geolocation"&gt;Finding geolocation...&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 7.1.0! This is one of Cordova’s supported platforms for building iOS applications.">
+
+    <title>
+        
+            
+                Cordova iOS 7.1.0 Released! - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/announcements/2024/04/03/cordova-ios-7.1.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova iOS 7.1.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">03 Apr 2024</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code class="language-plaintext highlighter-rouge">Cordova iOS 7.1.0</code>! This is one of Cordova’s supported platforms for building iOS applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@7.1.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@7.1.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@7.1.0
+</code></pre></div></div>
+
+<h2 id="release-highlights">Release Highlights</h2>
+
+<h3 id="features">Features</h3>
+
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">SplashScreenBackgroundColor</code> preference support</strong></p>
+
+    <p>This preference allows you to set the splashscreen’s background colour. If no <code class="language-plaintext highlighter-rouge">SplashScreenBackgroundColor</code> is provided, it will fall back to the <code class="language-plaintext highlighter-rouge">BackgroundColor</code>, which is the current behavior, and then fallback to the system background colour when nothing is defined.</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">privacy-manifest</code> Support</strong></p>
+
+    <p>This release supplies the templated blank privacy manifest file, <code class="language-plaintext highlighter-rouge">PrivacyInfo.xcprivacy</code> which can be configured from <code class="language-plaintext highlighter-rouge">config.xml</code>.</p>
+
+    <p>This release focuses specifically on providing support for app developers to set this configuration, while a later release will introduce support for plugin developers.</p>
+
+    <p>It is recommended that plugin developers help app developers by providing in their plugin documentation the necessary configuration setup.</p>
+
+    <p>Below is an example config.xml entry that app developers can define to configure the privacy manifest file.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"ios"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;privacy-manifest&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyTracking<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;true/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyCollectedDataTypes<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyAccessedAPITypes<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+          <span class="nt">&lt;key&gt;</span>NSPrivacyTrackingDomains<span class="nt">&lt;/key&gt;</span>
+          <span class="nt">&lt;array/&gt;</span>
+      <span class="nt">&lt;/privacy-manifest&gt;</span>
+  <span class="nt">&lt;/platform&gt;</span>
+</code></pre></div>    </div>
+
+    <p>The contents and values of <code class="language-plaintext highlighter-rouge">NSPrivacyTracking</code>, <code class="language-plaintext highlighter-rouge">NSPrivacyCollectedDataTypes</code>, <code class="language-plaintext highlighter-rouge">NSPrivacyAccessedAPITypes</code>, and <code class="language-plaintext highlighter-rouge">NSPrivacyTrackingDomains</code> will depend on the specific native APIs being utilized.</p>
+
+    <p>It is recommended to read the Apple Developer documentation to better understand these parameters.</p>
+
+    <ul>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files">Privacy manifest files</a></li>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api">Describing use of required reason API</a></li>
+      <li><a href="https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_data_use_in_privacy_manifests">Describing data use in privacy manifests</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+
+<ul>
+  <li>
+    <p><strong>Use <code class="language-plaintext highlighter-rouge">PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</strong></p>
+
+    <p>Allows you to use either the UUID or name value from the provisioning profile for the build flag <code class="language-plaintext highlighter-rouge">provisioningProfile</code> in either the <code class="language-plaintext highlighter-rouge">build.json</code> configuration file or via the CLI command.</p>
+  </li>
+  <li>
+    <p><strong>WASM MIME type error</strong></p>
+
+    <p>Enables WebAssembly support in Cordova WebView.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find on our <a href="https://github.com/apache/cordova-iOS/issues">Cordova-iOS</a> GitHub issue tracker!</p>
+
+<!--more-->
+<h1 id="changes-include">Changes include:</h1>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1411">GH-1411</a> feat: <code class="language-plaintext highlighter-rouge">SplashScreenBackgroundColor</code> preference support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1406">GH-1406</a> feat: add <code class="language-plaintext highlighter-rouge">privacy-manifest</code> config support</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1383">GH-1383</a> feat: add PrivacyInfo.xcprivacy for CordovaLib &amp; app template</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1405">GH-1405</a> fix: use <code class="language-plaintext highlighter-rouge">PROVISIONING_PROFILE_SPECIFIER</code> for manual codesigning</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1374">GH-1374</a> fix: WASM MIME type error by specifying it in Info.plist template</li>
+</ul>
+
+<p><strong>Chores:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1413">GH-1413</a> chore(deps): Modernize some dependencies</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1404">GH-1404</a> chore: update package &amp; package-lock</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1382">GH-1382</a> chore(deps-dev): bump <code class="language-plaintext highlighter-rouge">@babel/traverse</code> from 7.21.4 to 7.23.2</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1380">GH-1380</a> chore: Update Slack signup link in SUPPORT_QUESTION.md</li>
+</ul>
+
+<p><strong>CI:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1412">GH-1412</a> ci: Fix ObjC testing with latest Xcode</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1408">GH-1408</a> ci(gh-action): add Apache RAT &amp; package license checker workflow w/ license header additions</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2024/03/11/cordova-electron-release-4.0.0.html">Cordova Electron 4.0.0 Released!</a>
+                    <div class="date"> 11 Mar 2024 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that we have just released Cordova Electron...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2024/05/23/cordova-android-13.0.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2024/05/23/cordova-android-13.0.0.html">Cordova Android 13.0.0 Released!</a>
+                    <div class="date"> 23 May 2024 - By Bryan Ellis </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released Cordova Android...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<h1 id="coordinates">Coordinates</h1>
+
+<p>A set of properties that describe the geographic coordinates of a position.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>latitude</strong>: Latitude in decimal degrees. <em>(Number)</em></li>
+  <li><strong>longitude</strong>: Longitude in decimal degrees. <em>(Number)</em></li>
+  <li><strong>altitude</strong>: Height of the position in meters above the ellipsoid. <em>(Number)</em></li>
+  <li><strong>accuracy</strong>: Accuracy level of the latitude and longitude coordinates in meters. <em>(Number)</em></li>
+  <li><strong>altitudeAccuracy</strong>: Accuracy level of the altitude coordinate in meters. <em>(Number)</em></li>
+  <li><strong>heading</strong>: Direction of travel, specified in degrees counting clockwise relative to the true north. <em>(Number)</em></li>
+  <li><strong>speed</strong>: Current ground speed of the device, specified in meters per second. <em>(Number)</em></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Coordinates</code> object is created and populated by Cordova, and attached to the <code class="language-plaintext highlighter-rouge">[Position](../Position/position.html)</code> object. The <code class="language-plaintext highlighter-rouge">[Position](../Position/position.html)</code> object is then returned to the user through a callback function.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Bada 1.2 &amp; 2.x</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// onSuccess Callback
+//
+var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+};
+
+// onError Callback
+//
+var onError = function() {
+    alert('onError!');
+};
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Geolocation Position Example&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Set an event to wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is loaded and Ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // Display `Position` properties from the geolocation
+    //
+    function onSuccess(position) {
+        var div = document.getElementById('myDiv');
+    
+        div.innerHTML = 'Latitude: '             + position.coords.latitude  + '&lt;br/&gt;' +
+                        'Longitude: '            + position.coords.longitude + '&lt;br/&gt;' +
+                        'Altitude: '             + position.coords.altitude  + '&lt;br/&gt;' +
+                        'Accuracy: '             + position.coords.accuracy  + '&lt;br/&gt;' +
+                        'Altitude Accuracy: '    + position.coords.altitudeAccuracy  + '&lt;br/&gt;' +
+                        'Heading: '              + position.coords.heading   + '&lt;br/&gt;' +
+                        'Speed: '                + position.coords.speed     + '&lt;br/&gt;';
+    }
+
+    // Show an alert if there is a problem getting the geolocation
+    //
+    function onError() {
+        alert('onError!');
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="myDiv"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<p><strong>altitudeAccuracy:</strong> This property is not support by Android devices, it will always return null.</p>

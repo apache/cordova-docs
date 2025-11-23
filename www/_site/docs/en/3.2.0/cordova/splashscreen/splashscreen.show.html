@@ -1,0 +1,65 @@
+<h1 id="splashscreenshow">splashscreen.show</h1>
+
+<p>Displays the splash screen.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.splashscreen.show();
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>This method displays the application’s splash screen.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.splashscreen.show();
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Splashscreen Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.show();
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>Your application can not call <code class="language-plaintext highlighter-rouge">navigator.splashscreen.show()</code> until
+the app has started and the <code class="language-plaintext highlighter-rouge">[deviceready](../events/events.deviceready.html)</code> event has fired. But since
+typically the
+splash screen is meant to be visible before your app has started, that would
+seem to defeat the purpose of the splash screen.
+Providing some configuration in <code class="language-plaintext highlighter-rouge">config.xml</code> will automatically <code class="language-plaintext highlighter-rouge">[show](../inappbrowser/inappbrowser.html)</code> the
+splash screen immediately after your app launch and before it has fully
+started and received the <code class="language-plaintext highlighter-rouge">[deviceready](../events/events.deviceready.html)</code> event. See <a href="../../config_ref/images.html">Icons and Splash Screens</a>
+for more information on doing this configuration. For this reason, it is
+unlikely you need to call <code class="language-plaintext highlighter-rouge">navigator.splashscreen.show()</code> to make the
+splash screen visible for app startup.</p>

@@ -1,0 +1,49 @@
+<h1 id="ios-command-line-tools">iOS Command-line Tools</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">cordova</code> command-line utility is a high-level tool that allows
+you to build applications across several platforms at once. An older
+version of the Cordova framework provides sets of command-line tools
+specific to each platform. To use them as an alternative to the CLI,
+you need to download this version of Cordova from
+<a href="http://cordova.apache.org">cordova.apache.org</a>. The download contains
+separate archives for each platform. Expand the platform you wish to
+target. The tools described here are typically available in the
+top-level <code class="language-plaintext highlighter-rouge">bin</code> directory, otherwise consult the <strong>README</strong> file for
+more detailed directions.</p>
+
+<p>The iOS command-line tools are built upon shell scripts and rely on
+Xcode command-line tools such as <code class="language-plaintext highlighter-rouge">xcode-select</code> and <code class="language-plaintext highlighter-rouge">xcodebuild</code>.</p>
+
+<p>For information on the low-level command-line interface that enables
+plugins, see <a href="../../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>. See Application Plugins
+for an overview.</p>
+
+<h2 id="create-a-project">Create a Project</h2>
+
+<p>Run the <code class="language-plaintext highlighter-rouge">create</code> command, specifying the existing path to the project,
+the reverse-domain-style package identifier, and the app’s display
+name.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+</code></pre></div></div>
+
+<h2 id="build-a-project">Build a Project</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_project/cordova/build
+</code></pre></div></div>
+
+<h2 id="run-app-on-an-emulator">Run App on an Emulator</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_project/cordova/run
+</code></pre></div></div>
+
+<h2 id="releasing">Releasing</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_project/cordova/release
+</code></pre></div></div>
+
+<h2 id="logging">Logging</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /path/to/my_new_project/cordova/log
+</code></pre></div></div>
+

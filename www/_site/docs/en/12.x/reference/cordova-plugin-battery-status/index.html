@@ -1,0 +1,116 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<h1 id="cordova-plugin-battery-status">cordova-plugin-battery-status</h1>
+
+<p><a href="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-battery-status/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
+
+<p>This plugin provides an implementation of an old version of the <a href="https://www.w3.org/TR/battery-status/">Battery Status Events API</a>. It adds the following three events to the <code class="language-plaintext highlighter-rouge">window</code> object:</p>
+
+<ul>
+  <li>batterystatus</li>
+  <li>batterycritical</li>
+  <li>batterylow</li>
+</ul>
+
+<p>Applications may use <code class="language-plaintext highlighter-rouge">window.addEventListener</code> to attach an event listener for any of the above events after the <code class="language-plaintext highlighter-rouge">deviceready</code> event fires.</p>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-battery-status
+</code></pre></div></div>
+
+<h2 id="status-object">Status object</h2>
+
+<p>All events in this plugin return an object with the following properties:</p>
+
+<ul>
+  <li><strong>level</strong>: The battery charge percentage (0-100). <em>(Number)</em></li>
+  <li><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></li>
+</ul>
+
+<h2 id="batterystatus-event">batterystatus event</h2>
+
+<p>Fires when the battery charge percentage changes by at least 1 percent, or when the device is plugged in or unplugged. Returns an <a href="#status-object">object</a> containing battery status.</p>
+
+<h3 id="example">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterystatus", onBatteryStatus, false);
+
+function onBatteryStatus(status) {
+    console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
+}
+</code></pre></div></div>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>Browser (Chrome, Firefox, Opera)</li>
+</ul>
+
+<h3 id="quirks-android">Quirks: Android</h3>
+
+<p><strong>Warning</strong>: the Android implementation is greedy and prolonged use will drain the device’s battery.</p>
+
+<h2 id="batterylow-event">batterylow event</h2>
+
+<p>Fires when the battery charge percentage reaches the low charge threshold. This threshold value is device-specific. Returns an <a href="#status-object">object</a> containing battery status.</p>
+
+<h3 id="example-1">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterylow", onBatteryLow, false);
+
+function onBatteryLow(status) {
+    alert("Battery Level Low " + status.level + "%");
+}
+</code></pre></div></div>
+
+<h3 id="supported-platforms-1">Supported Platforms</h3>
+
+<ul>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>Browser (Chrome, Firefox, Opera)</li>
+</ul>
+
+<h2 id="batterycritical-event">batterycritical event</h2>
+
+<p>Fires when the battery charge percentage reaches the critical charge threshold. This threshold value is device-specific. Returns an <a href="#status-object">object</a> containing battery status.</p>
+
+<h3 id="example-2">Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterycritical", onBatteryCritical, false);
+
+function onBatteryCritical(status) {
+    alert("Battery Level Critical " + status.level + "%\nRecharge Soon!");
+}
+</code></pre></div></div>
+
+<h3 id="supported-platforms-2">Supported Platforms</h3>
+
+<ul>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>Browser (Chrome, Firefox, Opera)</li>
+</ul>
+

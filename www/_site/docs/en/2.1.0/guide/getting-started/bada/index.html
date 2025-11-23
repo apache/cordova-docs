@@ -1,0 +1,104 @@
+<h1 id="getting-started-with-bada">Getting Started with Bada</h1>
+
+<p>This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.</p>
+
+<ol>
+  <li>
+    <h2 id="requirements">Requirements</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Windows</li>
+  <li>You need the bada 1.2 SDK to use cordova-bada (which is no longer available on Samsung's website)</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="install-sdk--cordova">Install SDK + Cordova</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Download and install the <a href="http://developer.bada.com">Bada SDK</a> (Windows only).</li>
+  <li>Donwload the latest copy of <a href="http://phonegap.com/download">Cordova</a> and extract its contents. We will be working with the bada directory.</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="setup-new-project">Setup New Project</h2>
+    <ul>
+      <li>In Bada IDE, select <em>File</em> -&gt; Import project -&gt; Bada C++ / Flash Project.</li>
+    </ul>
+    <ul>
+      <li>Note: Bada 1.2 select “Bada Application Project”</li>
+    </ul>
+
+    <p><img src="/static/img/guide/platforms/bada/import_bada_project.png" alt="" /></p>
+  </li>
+</ol>
+
+<ul>
+  <li>Make sure “Select root directory is checked” and then click Browse</li>
+  <li>
+    <p>Browse to Cordova bada project folder (bada for 1.2 and bada-wac for 2.x) and select it. Make sure “Copy projects into workspace is checked”</p>
+
+    <p><img src="/static/img/guide/platforms/bada/import_bada_project.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Click “Finish”</p>
+
+    <p><img src="/static/img/guide/platforms/bada/bada_project.png" alt="" /></p>
+  </li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="hello-world"><a href="../webos/index.html">Hello World</a></h2>
+  </li>
+</ol>
+
+<p><strong>Bada 2.x</strong>: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the &lt;head&gt; section.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" /&gt;
+    &lt;script type="text/javascript" src="osp://webapp/js/webapp_core.js"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p><strong>Bada 1.2</strong>: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following line.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;script type="text/javascript" src="cordova/cordova.js"&gt; &lt;/script&gt;
+</code></pre></div></div>
+
+<h2 id="5a-deploy-to-simulator">5A. Deploy to Simulator</h2>
+
+<ul>
+  <li>
+    <p><strong>Bada 2.x</strong>: Right click on your project s folder and select Run As -&gt; bada Emulator Web Application</p>
+
+    <p><img src="/static/img/guide/platforms/bada/bada_1_run.png" alt="" /></p>
+  </li>
+  <li>
+    <p><strong>Bada 1.2</strong>: Right click on your project' folder and select Build configurations -&gt; Set Active -&gt; Simulator-Debug</p>
+
+    <p><img src="/static/img/guide/platforms/bada/bada_set_target.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Right click on your project's folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!</p>
+  </li>
+</ul>
+
+<h2 id="5b-deploy-to-device">5B. Deploy to <a href="../../../cordova/device/device.html">Device</a></h2>
+
+<ul>
+  <li>Make sure your device is properly configured</li>
+</ul>
+
+<p><strong>Bada 2.x</strong>: Right click on your project's folder and select Run As -&gt; bada Target Web Application</p>
+
+<p><strong>Bada 1.2</strong>:</p>
+<ul>
+  <li>Right click on your project's folder and select Build configurations -&gt; Set Active -&gt; Target-Debug</li>
+  <li>Right click on your project's folder and select Run As -&gt; bada Target Application. You need to close the emulator every time you update your app!</li>
+</ul>
+
+<h2 id="done">Done!</h2>

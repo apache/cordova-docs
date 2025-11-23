@@ -1,0 +1,1164 @@
+<!-- WARNING: This file is generated. See fetch_docs.js. -->
+
+<!--
+# license: Licensed to the Apache Software Foundation (ASF) under one
+#         or more contributor license agreements.  See the NOTICE file
+#         distributed with this work for additional information
+#         regarding copyright ownership.  The ASF licenses this file
+#         to you under the Apache License, Version 2.0 (the
+#         "License"); you may not use this file except in compliance
+#         with the License.  You may obtain a copy of the License at
+#
+#           http://www.apache.org/licenses/LICENSE-2.0
+#
+#         Unless required by applicable law or agreed to in writing,
+#         software distributed under the License is distributed on an
+#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#         KIND, either express or implied.  See the License for the
+#         specific language governing permissions and limitations
+#         under the License.
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Android</th>
+      <th style="text-align: center">iOS</th>
+      <th style="text-align: center">Windows 8.1 Store</th>
+      <th style="text-align: center">Windows 8.1 Phone</th>
+      <th style="text-align: center">Windows 10 Store</th>
+      <th style="text-align: center">Travis CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-globalization/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-globalization" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-globalization/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-globalization" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-globalization/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-globalization" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-globalization/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-globalization" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-globalization/"><img src="http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-globalization" alt="Build Status" /></a></td>
+      <td style="text-align: center"><a href="https://travis-ci.org/apache/cordova-plugin-globalization"><img src="https://travis-ci.org/apache/cordova-plugin-globalization.svg?branch=master" alt="Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="cordova-plugin-globalization">cordova-plugin-globalization</h1>
+
+<p>This plugin obtains information and performs operations specific to the user’s
+locale, language, and timezone. Note the difference between locale and language:
+locale controls how numbers, dates, and times are displayed for a region, while
+language determines what language text appears as, independently of locale settings.
+Often developers use locale to set both settings, but there is no reason a user
+couldn’t set her language to “English” but locale to “French”, so that text is
+displayed in English but dates, times, etc., are displayed as they are in France.
+Unfortunately, most mobile platforms currently do not make a distinction between
+these settings.</p>
+
+<p>This plugin defines global <code class="language-plaintext highlighter-rouge">navigator.globalization</code> object.</p>
+
+<p>Although in the global scope, it is not available until after the <code class="language-plaintext highlighter-rouge">deviceready</code> event.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.globalization);
+}
+</code></pre></div></div>
+
+<p>Report issues with this plugin on the <a href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Globalization%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC">Apache Cordova issue tracker</a></p>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-globalization
+</code></pre></div></div>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li>GlobalizationError</li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li>navigator.globalization.getPreferredLanguage</li>
+  <li>navigator.globalization.getLocaleName</li>
+  <li>navigator.globalization.dateToString</li>
+  <li>navigator.globalization.stringToDate</li>
+  <li>navigator.globalization.getDatePattern</li>
+  <li>navigator.globalization.getDateNames</li>
+  <li>navigator.globalization.isDayLightSavingsTime</li>
+  <li>navigator.globalization.getFirstDayOfWeek</li>
+  <li>navigator.globalization.numberToString</li>
+  <li>navigator.globalization.stringToNumber</li>
+  <li>navigator.globalization.getNumberPattern</li>
+  <li>navigator.globalization.getCurrencyPattern</li>
+</ul>
+
+<h2 id="navigatorglobalizationgetpreferredlanguage">navigator.globalization.getPreferredLanguage</h2>
+
+<p>Get the BCP 47 language tag for the client’s current language.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
+</code></pre></div></div>
+
+<h3 id="description">Description</h3>
+
+<p>Returns the BCP-47 compliant language identifier tag to the <code class="language-plaintext highlighter-rouge">successCallback</code>
+with a <code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code>
+property with a <code class="language-plaintext highlighter-rouge">String</code> value.</p>
+
+<p>If there is an error getting the language, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3 id="supported-platforms">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en-US</code> language, this should display a
+popup dialog with the text <code class="language-plaintext highlighter-rouge">language: en-US</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getPreferredLanguage(
+    function (language) {alert('language: ' + language.value + '\n');},
+    function () {alert('Error getting language\n');}
+);
+</code></pre></div></div>
+
+<h3 id="android-quirks">Android Quirks</h3>
+
+<ul>
+  <li>Returns the ISO 639-1 two-letter language code, upper case ISO 3166-1
+country code and variant separated by hyphens. Examples: “en”, “en-US”, “US”</li>
+</ul>
+
+<h3 id="windows-phone-8-quirks">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>Returns the ISO 639-1 two-letter language code and ISO 3166-1 country code
+of the regional variant corresponding to the “Language” setting, separated by
+a hyphen.</li>
+  <li>Note that the regional variant is a property of the “Language” setting and
+not determined by the unrelated “Country/Region” setting on Windows Phone.</li>
+</ul>
+
+<h3 id="windows-quirks">Windows Quirks</h3>
+
+<ul>
+  <li>Returns the ISO 639-1 two-letter language code and ISO 3166-1 country code
+of the regional variant corresponding to the “Language” setting, separated by
+a hyphen.</li>
+</ul>
+
+<h3 id="browser-quirks">Browser Quirks</h3>
+
+<ul>
+  <li>Falls back on getLocaleName</li>
+</ul>
+
+<h2 id="navigatorglobalizationgetlocalename">navigator.globalization.getLocaleName</h2>
+
+<p>Returns the BCP 47 compliant tag for the client’s current locale setting.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getLocaleName(successCallback, errorCallback);
+</code></pre></div></div>
+
+<h3 id="description-1">Description</h3>
+
+<p>Returns the BCP 47 compliant locale identifier string to the <code class="language-plaintext highlighter-rouge">successCallback</code>
+with a <code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code>
+property with a <code class="language-plaintext highlighter-rouge">String</code> value. The locale tag will consist of a two-letter lower
+case language code, two-letter upper case country code, and (unspecified) variant
+code, separated by a hyphen.</p>
+
+<p>If there is an error getting the locale, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3 id="supported-platforms-1">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-1">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en-US</code> locale, this displays a popup
+dialog with the text <code class="language-plaintext highlighter-rouge">locale: en-US</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getLocaleName(
+    function (locale) {alert('locale: ' + locale.value + '\n');},
+    function () {alert('Error getting locale\n');}
+);
+</code></pre></div></div>
+
+<h3 id="android-quirks-1">Android Quirks</h3>
+
+<ul>
+  <li>Java does not distinguish between a set “langauge” and set “locale,” so this
+method is essentially the same as <code class="language-plaintext highlighter-rouge">navigator.globalization.getPreferredLanguage()</code>.</li>
+</ul>
+
+<h3 id="windows-phone-8-quirks-1">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>Returns the ISO 639-1 two-letter language code and ISO 3166-1 country code
+of the regional variant corresponding to the “Regional Format” setting, separated
+by a hyphen.</li>
+</ul>
+
+<h3 id="windows-quirks-1">Windows Quirks</h3>
+
+<ul>
+  <li>Locale setting can be changed in Control Panel -&gt; Clock, Language and Region
+-&gt; Region -&gt; Formats -&gt; Format,
+and in Settings -&gt; Region -&gt; Regional Format on Windows Phone 8.1.</li>
+</ul>
+
+<h3 id="browser-quirks-1">Browser Quirks</h3>
+
+<ul>
+  <li>IE returns the locale of operating system. Chrome and Firefox return browser language tag.</li>
+</ul>
+
+<h2 id="navigatorglobalizationdatetostring">navigator.globalization.dateToString</h2>
+
+<p>Returns a date formatted as a string according to the client’s locale and timezone.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.dateToString(date, successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-2">Description</h3>
+
+<p>Returns the formatted date <code class="language-plaintext highlighter-rouge">String</code> via a <code class="language-plaintext highlighter-rouge">value</code> property accessible
+from the object passed as a parameter to the <code class="language-plaintext highlighter-rouge">successCallback</code>.</p>
+
+<p>The inbound <code class="language-plaintext highlighter-rouge">date</code> parameter should be of type <code class="language-plaintext highlighter-rouge">Date</code>.</p>
+
+<p>If there is an error formatting the date, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.FORMATTING_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and its default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{formatLength:'short', selector:'date and time'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.formatLength</code> can be <code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">medium</code>, <code class="language-plaintext highlighter-rouge">long</code>, or <code class="language-plaintext highlighter-rouge">full</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.selector</code> can be <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">time</code> or <code class="language-plaintext highlighter-rouge">date and time</code>.</p>
+
+<h3 id="supported-platforms-2">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-2">Example</h3>
+
+<p>If the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this displays a popup
+dialog with text similar to <code class="language-plaintext highlighter-rouge">date: 9/25/2012 4:21PM</code> using the default
+options:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.dateToString(
+    new Date(),
+    function (date) { alert('date: ' + date.value + '\n'); },
+    function () { alert('Error getting dateString\n'); },
+    { formatLength: 'short', selector: 'date and time' }
+); ### Android Quirks - `formatLength` options are a subset of Unicode   [UTS #35](http://unicode.org/reports/tr35/tr35-4.html). The default option   `short` depends on a user selected date format within   `Settings -&gt; System -&gt; Date &amp; time -&gt; Choose date format`,   which provide a `year` pattern only with 4 digits, not 2 digits.   This means that it is not completely aligned with   [ICU](http://demo.icu-project.org/icu-bin/locexp?d_=en_US&amp;_=en_US).
+</code></pre></div></div>
+
+<h3 id="windows-phone-8-quirks-2">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">formatLength</code> option supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</p>
+  </li>
+  <li>
+    <p>The pattern for ‘date and time’ selector is always a full datetime format.</p>
+  </li>
+  <li>
+    <p>The returned value may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-2">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">formatLength</code> option supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</p>
+  </li>
+  <li>
+    <p>The pattern for ‘date and time’ selector is always a full datetime format.</p>
+  </li>
+  <li>
+    <p>The returned value may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+</ul>
+
+<h3 id="browser-quirks-2">Browser Quirks</h3>
+
+<ul>
+  <li>
+    <p>Only 79 locales are supported because moment.js is used in this method.</p>
+  </li>
+  <li>
+    <p>The returned value may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">time</code> selector supports <code class="language-plaintext highlighter-rouge">full</code> and <code class="language-plaintext highlighter-rouge">short</code> formatLength only.</p>
+  </li>
+</ul>
+
+<h3 id="firefox-os-quirks">Firefox OS Quirks</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">formatLength</code> is not distinguishing <code class="language-plaintext highlighter-rouge">long</code> and <code class="language-plaintext highlighter-rouge">full</code></li>
+  <li>only one method of displaying date (no <code class="language-plaintext highlighter-rouge">long</code> or <code class="language-plaintext highlighter-rouge">full</code> version)</li>
+</ul>
+
+<h2 id="navigatorglobalizationgetcurrencypattern">navigator.globalization.getCurrencyPattern</h2>
+
+<p>Returns a pattern string to format and parse currency values according
+to the client’s user preferences and ISO 4217 currency code.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
+</code></pre></div></div>
+
+<h3 id="description-3">Description</h3>
+
+<p>Returns the pattern to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object
+as a parameter. That object should contain the following properties:</p>
+
+<ul>
+  <li>
+    <p><strong>pattern</strong>: The currency pattern to format and parse currency values.  The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>code</strong>: The ISO 4217 currency code for the pattern. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting currency. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+</ul>
+
+<p>The inbound <code class="language-plaintext highlighter-rouge">currencyCode</code> parameter should be a <code class="language-plaintext highlighter-rouge">String</code> of one of
+the ISO 4217 currency codes, for example ‘USD’.</p>
+
+<p>If there is an error obtaining the pattern, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.FORMATTING_ERROR</code>.</p>
+
+<h3 id="supported-platforms-3">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-3">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale and the selected
+currency is United States Dollars, this example displays a popup
+dialog with text similar to the results that follow:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getCurrencyPattern(
+    'USD',
+    function (pattern) {
+        alert('pattern: '  + pattern.pattern  + '\n' +
+              'code: '     + pattern.code     + '\n' +
+              'fraction: ' + pattern.fraction + '\n' +
+              'rounding: ' + pattern.rounding + '\n' +
+              'decimal: '  + pattern.decimal  + '\n' +
+              'grouping: ' + pattern.grouping);
+    },
+    function () { alert('Error getting pattern\n'); }
+);
+</code></pre></div></div>
+
+<p>Expected result:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern: $#,##0.##;($#,##0.##)
+code: USD
+fraction: 2
+rounding: 0
+decimal: .
+grouping: ,
+</code></pre></div></div>
+
+<h3 id="windows-quirks-3">Windows Quirks</h3>
+
+<ul>
+  <li>Only ‘code’ and ‘fraction’ properties are supported</li>
+</ul>
+
+<h2 id="navigatorglobalizationgetdatenames">navigator.globalization.getDateNames</h2>
+
+<p>Returns an array of the names of the months or days of the week,
+depending on the client’s user preferences and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDateNames(successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-4">Description</h3>
+
+<p>Returns the array of names to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a
+<code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object contains a <code class="language-plaintext highlighter-rouge">value</code>
+property with an <code class="language-plaintext highlighter-rouge">Array</code> of <code class="language-plaintext highlighter-rouge">String</code> values. The array features names
+starting from either the first month in the year or the first day of
+the week, depending on the option selected.</p>
+
+<p>If there is an error obtaining the names, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and its default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'wide', item:'months'}
+</code></pre></div></div>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">narrow</code> or <code class="language-plaintext highlighter-rouge">wide</code>.</p>
+
+<p>The value of <code class="language-plaintext highlighter-rouge">options.item</code> can be <code class="language-plaintext highlighter-rouge">months</code> or <code class="language-plaintext highlighter-rouge">days</code>.</p>
+
+<h3 id="supported-platforms-4">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-4">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this example displays
+a series of twelve popup dialogs, one per month, with text similar to
+<code class="language-plaintext highlighter-rouge">month: January</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDateNames(
+    function (names) {
+        for (var i = 0; i &lt; names.value.length; i++) {
+            alert('month: ' + names.value[i] + '\n');
+        }
+    },
+    function () { alert('Error getting names\n'); },
+    { type: 'wide', item: 'months' }
+);
+</code></pre></div></div>
+
+<h3 id="firefox-os-quirks-1">Firefox OS Quirks</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">options.type</code> supports a <code class="language-plaintext highlighter-rouge">genitive</code> value, important for some languages.</li>
+</ul>
+
+<h3 id="windows-phone-8-quirks-3">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>The array of months contains 13 elements.</li>
+  <li>The returned array may be not completely aligned with ICU depending on a user locale.</li>
+</ul>
+
+<h3 id="windows-quirks-4">Windows Quirks</h3>
+
+<ul>
+  <li>The array of months contains 12 elements.</li>
+  <li>The returned array may be not completely aligned with ICU depending on a user locale.</li>
+</ul>
+
+<h3 id="browser-quirks-3">Browser Quirks</h3>
+
+<ul>
+  <li>Date names are not completely aligned with ICU.</li>
+  <li>The array of months contains 12 elements.</li>
+</ul>
+
+<h2 id="navigatorglobalizationgetdatepattern">navigator.globalization.getDatePattern</h2>
+
+<p>Returns a pattern string to format and parse dates according to the
+client’s user preferences.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getDatePattern(successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-5">Description</h3>
+
+<p>Returns the pattern to the <code class="language-plaintext highlighter-rouge">successCallback</code>. The object passed in as
+a parameter contains the following properties:</p>
+
+<ul>
+  <li>
+    <p><strong>pattern</strong>: The date and time pattern to format and parse dates. The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>timezone</strong>: The abbreviated name of the time zone on the client. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>utc_offset</strong>: The current difference in seconds between the client’s time zone and coordinated universal time. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>dst_offset</strong>: The current daylight saving time offset in seconds between the client’s non-daylight saving’s time zone and the client’s daylight saving’s time zone. <em>(Number)</em></p>
+  </li>
+</ul>
+
+<p>If there is an error obtaining the pattern, the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.PATTERN_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and defaults to the following values:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{formatLength:'short', selector:'date and time'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.formatLength</code> can be <code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">medium</code>, <code class="language-plaintext highlighter-rouge">long</code>, or
+<code class="language-plaintext highlighter-rouge">full</code>.  The <code class="language-plaintext highlighter-rouge">options.selector</code> can be <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">time</code> or <code class="language-plaintext highlighter-rouge">date and
+time</code>.</p>
+
+<h3 id="supported-platforms-5">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-5">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this example displays
+a popup dialog with text such as <code class="language-plaintext highlighter-rouge">pattern: M/d/yyyy h:mm a</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkDatePattern() {
+    navigator.globalization.getDatePattern(
+        function (date) { alert('pattern: ' + date.pattern + '\n'); },
+        function () { alert('Error getting pattern\n'); },
+        { formatLength: 'short', selector: 'date and time' }
+    );
+}
+</code></pre></div></div>
+
+<h3 id="windows-phone-8-quirks-4">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">formatLength</code> supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">pattern</code> for <code class="language-plaintext highlighter-rouge">date and time</code> pattern returns only full datetime format.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">timezone</code> returns the full time zone name.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">dst_offset</code> property is not supported, and always returns zero.</p>
+  </li>
+  <li>
+    <p>The pattern may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-5">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">formatLength</code> supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">pattern</code> for <code class="language-plaintext highlighter-rouge">date and time</code> pattern returns only full datetime format.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">timezone</code> returns the full time zone name.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">dst_offset</code> property is not supported, and always returns zero.</p>
+  </li>
+  <li>
+    <p>The pattern may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+</ul>
+
+<h3 id="browser-quirks-4">Browser Quirks</h3>
+
+<ul>
+  <li>
+    <p>The ‘pattern’ property is not supported and returns empty string.</p>
+  </li>
+  <li>
+    <p>Only Chrome returns ‘timezone’ property. Its format is “Part of the world/{City}”.
+Other browsers return empty string.</p>
+  </li>
+</ul>
+
+<h2 id="navigatorglobalizationgetfirstdayofweek">navigator.globalization.getFirstDayOfWeek</h2>
+
+<p>Returns the first day of the week according to the client’s user
+preferences and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
+</code></pre></div></div>
+
+<h3 id="description-6">Description</h3>
+
+<p>The days of the week are numbered starting from 1, where 1 is assumed
+to be Sunday.  Returns the day to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a
+<code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code>
+property with a <code class="language-plaintext highlighter-rouge">Number</code> value.</p>
+
+<p>If there is an error obtaining the pattern, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3 id="supported-platforms-6">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-6">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this displays a
+popup dialog with text similar to <code class="language-plaintext highlighter-rouge">day: 1</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getFirstDayOfWeek(
+    function (day) {alert('day: ' + day.value + '\n');},
+    function () {alert('Error getting day\n');}
+);
+</code></pre></div></div>
+
+<h3 id="windows-quirks-6">Windows Quirks</h3>
+
+<ul>
+  <li>On Windows 8.0/8.1 the value depends on user’ calendar preferences. On Windows Phone 8.1
+the value depends on current locale.</li>
+</ul>
+
+<h3 id="browser-quirks-5">Browser Quirks</h3>
+
+<ul>
+  <li>Only 79 locales are supported because moment.js is used in this method.</li>
+</ul>
+
+<h2 id="navigatorglobalizationgetnumberpattern">navigator.globalization.getNumberPattern</h2>
+
+<p>Returns a pattern string to format and parse numbers according to the client’s user preferences.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-7">Description</h3>
+
+<p>Returns the pattern to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object
+as a parameter. That object contains the following properties:</p>
+
+<ul>
+  <li>
+    <p><strong>pattern</strong>: The number pattern to format and parse numbers.  The patterns follow <a href="http://unicode.org/reports/tr35/tr35-4.html">Unicode Technical Standard #35</a>. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>symbol</strong>: The symbol to use when formatting and parsing, such as a percent or currency symbol. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>fraction</strong>: The number of fractional digits to use when parsing and formatting numbers. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>rounding</strong>: The rounding increment to use when parsing and formatting. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>positive</strong>: The symbol to use for positive numbers when parsing and formatting. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>negative</strong>: The symbol to use for negative numbers when parsing and formatting. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>decimal</strong>: The decimal symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+  <li>
+    <p><strong>grouping</strong>: The grouping symbol to use for parsing and formatting. <em>(String)</em></p>
+  </li>
+</ul>
+
+<p>If there is an error obtaining the pattern, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.PATTERN_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'decimal'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">decimal</code>, <code class="language-plaintext highlighter-rouge">percent</code>, or <code class="language-plaintext highlighter-rouge">currency</code>.</p>
+
+<h3 id="supported-platforms-7">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-7">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this should display a
+popup dialog with text similar to the results that follow:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.getNumberPattern(
+    function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                              'symbol: '   + pattern.symbol   + '\n' +
+                              'fraction: ' + pattern.fraction + '\n' +
+                              'rounding: ' + pattern.rounding + '\n' +
+                              'positive: ' + pattern.positive + '\n' +
+                              'negative: ' + pattern.negative + '\n' +
+                              'decimal: '  + pattern.decimal  + '\n' +
+                              'grouping: ' + pattern.grouping);},
+    function () {alert('Error getting pattern\n');},
+    {type:'decimal'}
+);
+</code></pre></div></div>
+
+<p>Results:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pattern: #,##0.###
+symbol: .
+fraction: 0
+rounding: 0
+positive:
+negative: -
+decimal: .
+grouping: ,
+</code></pre></div></div>
+
+<h3 id="windows-phone-8-quirks-5">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">pattern</code> property is not supported, and returns an empty string.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">fraction</code> property is not supported, and returns zero.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-7">Windows Quirks</h3>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">pattern</code> property is not supported, and returns an empty string.</li>
+</ul>
+
+<h3 id="browser-quirks-6">Browser Quirks</h3>
+
+<ul>
+  <li>getNumberPattern is supported in Chrome only; the only defined property is <code class="language-plaintext highlighter-rouge">pattern</code>.</li>
+</ul>
+
+<h2 id="navigatorglobalizationisdaylightsavingstime">navigator.globalization.isDayLightSavingsTime</h2>
+
+<p>Indicates whether daylight savings time is in effect for a given date
+using the client’s time zone and calendar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
+</code></pre></div></div>
+
+<h3 id="description-8">Description</h3>
+
+<p>Indicates whether or not daylight savings time is in effect to the
+<code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object
+should have a <code class="language-plaintext highlighter-rouge">dst</code> property with a <code class="language-plaintext highlighter-rouge">Boolean</code> value. A <code class="language-plaintext highlighter-rouge">true</code> value
+indicates that daylight savings time is in effect for the given date,
+and <code class="language-plaintext highlighter-rouge">false</code> indicates that it is not.</p>
+
+<p>The inbound parameter <code class="language-plaintext highlighter-rouge">date</code> should be of type <code class="language-plaintext highlighter-rouge">Date</code>.</p>
+
+<p>If there is an error reading the date, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes. The error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.UNKNOWN_ERROR</code>.</p>
+
+<h3 id="supported-platforms-8">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-8">Example</h3>
+
+<p>During the summer, and if the browser is set to a DST-enabled
+timezone, this should display a popup dialog with text similar to
+<code class="language-plaintext highlighter-rouge">dst: true</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.isDayLightSavingsTime(
+    new Date(),
+    function (date) {alert('dst: ' + date.dst + '\n');},
+    function () {alert('Error getting names\n');}
+);
+</code></pre></div></div>
+
+<h2 id="navigatorglobalizationnumbertostring">navigator.globalization.numberToString</h2>
+
+<p>Returns a number formatted as a string according to the client’s user preferences.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.numberToString(number, successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-9">Description</h3>
+
+<p>Returns the formatted number string to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a
+<code class="language-plaintext highlighter-rouge">properties</code> object as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code>
+property with a <code class="language-plaintext highlighter-rouge">String</code> value.</p>
+
+<p>If there is an error formatting the number, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.FORMATTING_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and its default values are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'decimal'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">decimal</code>, <code class="language-plaintext highlighter-rouge">percent</code>, or <code class="language-plaintext highlighter-rouge">currency</code>.</p>
+
+<h3 id="supported-platforms-9">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-9">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this displays a popup
+dialog with text similar to <code class="language-plaintext highlighter-rouge">number: 3.142</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.numberToString(
+    3.1415926,
+    function (number) {alert('number: ' + number.value + '\n');},
+    function () {alert('Error getting number\n');},
+    {type:'decimal'}
+);
+</code></pre></div></div>
+
+<h3 id="windows-quirks-8">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p>Windows 8.0 does not support number rounding, therefore values will not be rounded automatically.</p>
+  </li>
+  <li>
+    <p>On Windows 8.1 and Windows Phone 8.1 fractional part is being truncated instead of rounded in case of <code class="language-plaintext highlighter-rouge">percent</code> number type therefore fractional digits count is set to 0.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">percent</code> numbers are not grouped as they can’t be parsed in stringToNumber if grouped.</p>
+  </li>
+</ul>
+
+<h3 id="browser-quirks-7">Browser Quirks</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">currency</code> type is not supported.</li>
+</ul>
+
+<h2 id="navigatorglobalizationstringtodate">navigator.globalization.stringToDate</h2>
+
+<p>Parses a date formatted as a string, according to the client’s user
+preferences and calendar using the time zone of the client, and
+returns the corresponding date object.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-10">Description</h3>
+
+<p>Returns the date to the success callback with a <code class="language-plaintext highlighter-rouge">properties</code> object as
+a parameter. That object should have the following properties:</p>
+
+<ul>
+  <li>
+    <p><strong>year</strong>: The four digit year. <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>month</strong>: The month from (0-11). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>day</strong>: The day from (1-31). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>hour</strong>: The hour from (0-23). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>minute</strong>: The minute from (0-59). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>second</strong>: The second from (0-59). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>millisecond</strong>: The milliseconds (from 0-999), not available on all platforms. <em>(Number)</em></p>
+  </li>
+</ul>
+
+<p>The inbound <code class="language-plaintext highlighter-rouge">dateString</code> parameter should be of type <code class="language-plaintext highlighter-rouge">String</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and defaults to the following
+values:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{formatLength:'short', selector:'date and time'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.formatLength</code> can be <code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">medium</code>, <code class="language-plaintext highlighter-rouge">long</code>, or
+<code class="language-plaintext highlighter-rouge">full</code>.  The <code class="language-plaintext highlighter-rouge">options.selector</code> can be <code class="language-plaintext highlighter-rouge">date</code>, <code class="language-plaintext highlighter-rouge">time</code> or <code class="language-plaintext highlighter-rouge">date and
+time</code>.</p>
+
+<p>If there is an error parsing the date string, then the <code class="language-plaintext highlighter-rouge">errorCallback</code>
+executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a parameter. The
+error’s expected code is <code class="language-plaintext highlighter-rouge">GlobalizationError.PARSING_ERROR</code>.</p>
+
+<h3 id="supported-platforms-10">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+  <li>Browser</li>
+</ul>
+
+<h3 id="example-10">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this displays a
+popup dialog with text similar to <code class="language-plaintext highlighter-rouge">month:8 day:25 year:2012</code>. Note
+that the month integer is one less than the string, as the month
+integer represents an array index.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.stringToDate(
+    '9/25/2012',
+    function (date) {alert('month:' + date.month +
+                           ' day:'  + date.day   +
+                           ' year:' + date.year  + '\n');},
+    function () {alert('Error getting date\n');},
+    {selector: 'date'}
+);
+</code></pre></div></div>
+
+<h3 id="windows-phone-8-quirks-6">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">formatLength</code> option supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</p>
+  </li>
+  <li>
+    <p>The pattern for ‘date and time’ selector is always a full datetime format.</p>
+  </li>
+  <li>
+    <p>The inbound <code class="language-plaintext highlighter-rouge">dateString</code> parameter should be formed in compliance with a pattern returned by getDatePattern.
+This pattern may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+</ul>
+
+<h3 id="windows-quirks-9">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">formatLength</code> option supports only <code class="language-plaintext highlighter-rouge">short</code> and <code class="language-plaintext highlighter-rouge">full</code> values.</p>
+  </li>
+  <li>
+    <p>The pattern for ‘date and time’ selector is always a full datetime format.</p>
+  </li>
+  <li>
+    <p>The inbound <code class="language-plaintext highlighter-rouge">dateString</code> parameter should be formed in compliance with a pattern returned by getDatePattern.
+This pattern may be not completely aligned with ICU depending on a user locale.</p>
+  </li>
+</ul>
+
+<h3 id="browser-quirks-8">Browser Quirks</h3>
+
+<ul>
+  <li>
+    <p>Only 79 locales are supported because moment.js is used in this method.</p>
+  </li>
+  <li>
+    <p>Inbound string should be aligned with <code class="language-plaintext highlighter-rouge">dateToString</code> output format and may not completely aligned with ICU depending on a user locale.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">time</code> selector supports <code class="language-plaintext highlighter-rouge">full</code> and <code class="language-plaintext highlighter-rouge">short</code> formatLength only.</p>
+  </li>
+</ul>
+
+<h2 id="navigatorglobalizationstringtonumber">navigator.globalization.stringToNumber</h2>
+
+<p>Parses a number formatted as a string according to the client’s user
+preferences and returns the corresponding number.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
+</code></pre></div></div>
+
+<h3 id="description-11">Description</h3>
+
+<p>Returns the number to the <code class="language-plaintext highlighter-rouge">successCallback</code> with a <code class="language-plaintext highlighter-rouge">properties</code> object
+as a parameter. That object should have a <code class="language-plaintext highlighter-rouge">value</code> property with a
+<code class="language-plaintext highlighter-rouge">Number</code> value.</p>
+
+<p>If there is an error parsing the number string, then the
+<code class="language-plaintext highlighter-rouge">errorCallback</code> executes with a <code class="language-plaintext highlighter-rouge">GlobalizationError</code> object as a
+parameter. The error’s expected code is
+<code class="language-plaintext highlighter-rouge">GlobalizationError.PARSING_ERROR</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">options</code> parameter is optional, and defaults to the following
+values:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{type:'decimal'}
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">options.type</code> can be <code class="language-plaintext highlighter-rouge">decimal</code>, <code class="language-plaintext highlighter-rouge">percent</code>, or <code class="language-plaintext highlighter-rouge">currency</code>.</p>
+
+<h3 id="supported-platforms-11">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-11">Example</h3>
+
+<p>When the browser is set to the <code class="language-plaintext highlighter-rouge">en_US</code> locale, this should display a
+popup dialog with text similar to <code class="language-plaintext highlighter-rouge">number: 1234.56</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>navigator.globalization.stringToNumber(
+    '1234.56',
+    function (number) {alert('number: ' + number.value + '\n');},
+    function () {alert('Error getting number\n');},
+    {type:'decimal'}
+);
+</code></pre></div></div>
+
+<h3 id="windows-phone-8-quirks-7">Windows Phone 8 Quirks</h3>
+
+<ul>
+  <li>In case of <code class="language-plaintext highlighter-rouge">percent</code> type the returned value is not divided by 100.</li>
+</ul>
+
+<h3 id="windows-quirks-10">Windows Quirks</h3>
+
+<ul>
+  <li>
+    <p>The string must strictly conform to the locale format. For example, percent symbol should be
+separated by space for ‘en-US’ locale if the type parameter is ‘percent’.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">percent</code> numbers must not be grouped to be parsed correctly.</p>
+  </li>
+</ul>
+
+<h2 id="globalizationerror">GlobalizationError</h2>
+
+<p>An object representing a error from the Globalization API.</p>
+
+<h3 id="properties">Properties</h3>
+
+<ul>
+  <li><strong>code</strong>:  One of the following codes representing the error type <em>(Number)</em>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">GlobalizationError.UNKNOWN_ERROR</code>: 0</li>
+      <li><code class="language-plaintext highlighter-rouge">GlobalizationError.FORMATTING_ERROR</code>: 1</li>
+      <li><code class="language-plaintext highlighter-rouge">GlobalizationError.PARSING_ERROR</code>: 2</li>
+      <li><code class="language-plaintext highlighter-rouge">GlobalizationError.PATTERN_ERROR</code>: 3</li>
+    </ul>
+  </li>
+  <li><strong>message</strong>:  A text message that includes the error’s explanation and/or details. <em>(String)</em></li>
+</ul>
+
+<h3 id="description-12">Description</h3>
+
+<p>This object is created and populated by Cordova, and returned to a callback in the case of an error.</p>
+
+<h3 id="supported-platforms-12">Supported Platforms</h3>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>iOS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows</li>
+</ul>
+
+<h3 id="example-12">Example</h3>
+
+<p>When the following error callback executes, it displays a
+popup dialog with the text similar to <code class="language-plaintext highlighter-rouge">code: 3</code> and <code class="language-plaintext highlighter-rouge">message:</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function errorCallback(error) {
+    alert('code: ' + error.code + '\n' +
+          'message: ' + error.message + '\n');
+};
+</code></pre></div></div>

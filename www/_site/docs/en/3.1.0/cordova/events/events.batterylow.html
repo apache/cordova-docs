@@ -1,0 +1,80 @@
+<h1 id="batterylow">batterylow</h1>
+
+<p>The event fires when the battery has reached the low level threshold.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterylow", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>The event fires when the percentage of battery charge has reached the
+low battery threshold, device-specific value.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">batterylow</code> handler is passed an object that contains two
+properties:</p>
+
+<ul>
+  <li>
+    <p><strong>level</strong>: The percentage of battery charge (0-100). <em>(Number)</em></p>
+  </li>
+  <li>
+    <p><strong>isPlugged</strong>: A boolean that indicates whether the device is plugged in. <em>(Boolean)</em></p>
+  </li>
+</ul>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">[deviceready](events.deviceready.html)</code> event fires.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>iOS</li>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>window.addEventListener("batterylow", onBatteryLow, false);
+
+function onBatteryLow(info) {
+    // Handle the battery low event
+    alert("Battery Level Low " + info.level + "%");
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Ready Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.addEventListener("batterylow", onBatteryLow, false);
+    }
+
+    // Handle the batterylow event
+    //
+    function onBatteryLow(info) {
+        alert("Battery Level Low " + info.level + "%");
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

@@ -1,0 +1,77 @@
+<h1 id="globalizationerror">GlobalizationError</h1>
+
+<p>An object representing a error from the <a href="../globalization.html">Globalization</a> API.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>code:</strong>  One of the following codes representing the error type (<code class="language-plaintext highlighter-rouge">Number</code>)
+    <ul>
+      <li>GlobalizationError.UNKNOWN_ERROR: 0</li>
+      <li>GlobalizationError.FORMATTING_ERROR: 1</li>
+      <li>GlobalizationError.PARSING_ERROR: 2</li>
+      <li>GlobalizationError.PATTERN_ERROR: 3</li>
+    </ul>
+  </li>
+  <li><strong>message:</strong>  A text message that includes the error explanation and/or details (<code class="language-plaintext highlighter-rouge">String</code>)</li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>This object is created and populated by Cordova, and returned to a callback in the case of an error.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<p>When the following error callback is invoked, it should display a popup dialog with the text similar to “code: 3” and “message: “.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function errorCB(error) {
+    alert('code: ' + error.code + '\n' +
+          'message: ' + error.message + '\n');
+};
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Cordova&lt;/title&gt;
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+                  
+    function successCB(date) {
+      alert('month:' + date.month +
+            ' day:' + date.day + 
+            ' year:' + date.year + '\n');
+    }
+                                        
+    function errorCB(error) {
+      alert('code: ' + error.code + '\n' +
+            'message: ' + error.message + '\n');
+    };
+                                                              
+    function checkError() {
+      navigator.globalization.stringToDate(
+        'notADate',
+        successCB,
+        errorCB,
+        {selector:'foobar'}
+      );
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button onclick="checkError()"&gt;Click for error&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+

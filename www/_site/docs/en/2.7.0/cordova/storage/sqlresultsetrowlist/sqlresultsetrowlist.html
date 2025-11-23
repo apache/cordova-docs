@@ -1,0 +1,119 @@
+<h1 id="sqlresultsetrowlist">SQLResultSetRowList</h1>
+
+<p>One of the properties of the <a href="../sqlresultset/sqlresultset.html">SQLResultSet</a> containing the rows returned from a SQL query.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>length</strong>: the number of rows returned by the SQL query</li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><strong>item</strong>: returns the row at the specified index represented by a JavaScript object.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>The SQLResultSetRowList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the <code class="language-plaintext highlighter-rouge">item</code> method specifying an index.  The item method returns a JavaScript Object who’s properties are the columns of the database the select statement was executed against.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iPhone</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="execute-sql-quick-example">Execute SQL Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function queryDB(tx) {
+	tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+}
+
+function querySuccess(tx, results) {
+	var len = results.rows.length;
+   	console.log("DEMO table: " + len + " rows found.");
+   	for (var i=0; i&lt;len; i++){
+        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+	}
+}
+
+function errorCB(err) {
+	alert("Error processing SQL: "+err.code);
+}
+
+var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
+db.transaction(queryDB, errorCB);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+	// Populate the database 
+	//
+	function populateDB(tx) {
+		tx.executeSql('DROP TABLE IF EXISTS DEMO');
+		tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+	}
+
+	// Query the database
+	//
+	function queryDB(tx) {
+		tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+	}
+
+	// Query the success callback
+	//
+	function querySuccess(tx, results) {
+		var len = results.rows.length;
+		console.log("DEMO table: " + len + " rows found.");
+		for (var i=0; i&lt;len; i++){
+			console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+		}
+	}
+
+	// Transaction error callback
+	//
+	function errorCB(err) {
+		console.log("Error processing SQL: "+err.code);
+	}
+
+	// Transaction success callback
+	//
+	function successCB() {
+		var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
+		db.transaction(queryDB, errorCB);
+	}
+
+	// Cordova is ready
+	//
+	function onDeviceReady() {
+		var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
+		db.transaction(populateDB, errorCB, successCB);
+	}
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Database&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

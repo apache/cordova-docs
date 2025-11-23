@@ -1,0 +1,169 @@
+<h1 id="blackberry-10-platform-guide">BlackBerry 10 Platform Guide</h1>
+
+<p>Apache Cordova is an application development platform that allows you to use common web technologies, primarily HTML5, JavaScript, and CSS, to create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Cordova for BlackBerry has the following software requirements:</p>
+
+<ul>
+  <li>Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+</li>
+  <li>node.js (&gt; 0.9.9) <a href="http://nodejs.org/">Download node.js now</a></li>
+  <li>BlackBerry 10 Native SDK. <a href="http://developer.blackberry.com/native/download/">Download the BlackBerry 10 Native SDK now.</a></li>
+</ul>
+
+<h2 id="setting-up-your-signing-keys">Setting up your signing keys</h2>
+
+<p>Before starting development, you’ll need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World. The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself; if you supply the keystore password, the build script will create and install the debug token for you.</p>
+
+<ul>
+  <li><a href="https://www.blackberry.com/SignedKeys/codesigning.html">Register for your code signing key now.</a></li>
+  <li><a href="http://developer.blackberry.com/html5/documentation/set_up_for_signing.html">Set your computer up for code signing. </a></li>
+  <li><a href="http://developer.blackberry.com/html5/documentation/running_your_bb10_app_2008471_11.html">Learn more about debug tokens.</a></li>
+</ul>
+
+<h2 id="creating-your-project">Creating your project</h2>
+
+<p>To create a new project, you use the <code class="language-plaintext highlighter-rouge">create</code> command to set up the folder structure for your app.</p>
+
+<ol>
+  <li>On the command line, navigate to the folder where you extracted Cordova.</li>
+  <li>Run the <code class="language-plaintext highlighter-rouge">create</code> command using the following syntax:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/create &lt;path-to-project&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.</path-to-project></p>
+
+<h2 id="adding-and-managing-targets">Adding and managing targets</h2>
+
+<p>A target refers to a BlackBerry device or simulator that you will use to test your app. Targets are added directly to your project; you can add multiple targets to your project, each with a unique name. Then, when you want to deploy your app to a particular target, you can simply refer to that target by name when you run your script.</p>
+
+<h3 id="add-a-target">Add a target</h3>
+
+<p>To add a target, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  add  &lt;name&gt;  &lt;ip-address&gt;  [-t &lt;device | simulator&gt;]  [-p | --password &lt;password&gt;]  [--pin &lt;device-pin&gt;]
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;name&gt;</code>  specifies a unique name for the target.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;ip-address&gt;</code>  specifies the ip address of the BlackBerry device or simulator.</li>
+  <li><code class="language-plaintext highlighter-rouge">-t &lt;device | simulator&gt;</code> specifies the target type. If not provided, the default value is device.</li>
+  <li><code class="language-plaintext highlighter-rouge">-p|--password &lt;password&gt;</code>  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.</li>
+  <li><code class="language-plaintext highlighter-rouge">--pin &lt;device-pin&gt;</code>  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.</li>
+</ul>
+
+<h3 id="remove-a-target">Remove a target</h3>
+
+<p>To remove a target, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  remove  &lt;name&gt;
+</code></pre></div></div>
+
+<h3 id="set-a-target-as-the-default">Set a target as the default</h3>
+
+<p>To specify a specific target as the default, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/target  default  &lt;name&gt;
+</code></pre></div></div>
+
+<h2 id="building-your-app">Building your app</h2>
+
+<p>To build your app, run the build script. You can build the app in either release mode or in debug mode.</p>
+
+<ul>
+  <li>When you build the app in release mode, you are preparing it for distribution through BlackBerry World. The script packages your app resources and plugins together in a .bar file, then signs the app.</li>
+  <li>
+    <p>When you build the app in debug mode, you are preparing it to be tested. The script packages your app resources and plugins together in a .bar file, but does not sign it. The script can also deploy the app onto a previously defined target. If you have not already created and installed a debug token, you can supply the keystore password, and the build script will create and install the debug token for you as well.</p>
+
+    <p>Debug mode also enables Web Inspector for the app, which allows you to remotely inspect the source code. A prompt displays the URL that you can use to connect to and inspect your app. For more information on using Web Inspector, see <a href="http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html">Debugging using Web Inspector</a>.</p>
+  </li>
+</ul>
+
+<h3 id="build-your-app-in-release-mode">Build your app in release mode</h3>
+
+<p>To build your app in release mode, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build  release  -k|--keystorepass &lt;password&gt;  [-b|--buildId &lt;number&gt;]  [-p|--params &lt;params-JSON-file&gt;]
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-k|--keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications.</li>
+  <li><code class="language-plaintext highlighter-rouge">-b|--buildId &lt;number&gt;</code>  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.</li>
+  <li><code class="language-plaintext highlighter-rouge">-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.</li>
+</ul>
+
+<h3 id="build-your-app-in-debug-mode">Build your app in debug mode</h3>
+
+<p>To build your app in release mode, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build  debug  [&lt;target&gt;]  [-k|--keystorepass &lt;password&gt;]  [-p|--params &lt;params-JSON-file&gt;]  [-ll|--loglevel &lt;error|warn|verbose&gt;]
+</code></pre></div></div>
+
+<p>where</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;target&gt;</code>  specifies the name of a previously added target. If <code class="language-plaintext highlighter-rouge">&lt;target&gt;</code>  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or simulator and you have not created a default target. Additionally, if <code class="language-plaintext highlighter-rouge">&lt;target&gt;</code>  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</li>
+  <li><code class="language-plaintext highlighter-rouge">-k|--keystorepass &lt;password&gt;</code>  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.</li>
+  <li><code class="language-plaintext highlighter-rouge">-p|--params &lt;params-JSON-file&gt;</code>  specifies a JSON file containing additional parameters to pass to downstream tools.</li>
+  <li><code class="language-plaintext highlighter-rouge">-ll|--loglevel &lt;level&gt;</code>  specifies the log level. The log level may be one of <code class="language-plaintext highlighter-rouge">error</code>, <code class="language-plaintext highlighter-rouge">warn</code>, or <code class="language-plaintext highlighter-rouge">verbose</code>.</li>
+</ul>
+
+<p>Note that all of these parameters are optional. If you have previously defined a default target (and installed a debug token, if that target is a BlackBerry device), you can run the script with no arguments, and the script will package your app and deploy it to the default target. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/build debug
+</code></pre></div></div>
+
+<h2 id="deploying-an-app">Deploying an app</h2>
+
+<p>You can test your app using either a BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to.</p>
+
+<p>The run script will first build  your app. If you intend to deploy an app to a physical device for testing, you must first install a debug token on that device. If you specify the <code class="language-plaintext highlighter-rouge">--keystorepass &lt;password&gt;</code> argument when running the run script, the script will create and install the debug token for you. You do not need a debug token to test your app on a simulator, even if that app is unsigned.</p>
+
+<p>To deploy your app to a device or simulator, on a command line type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/run &lt;target&gt; [--no-build]
+</code></pre></div></div>
+
+<p>where</p>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;target&gt;</code>  specifies the name of a previously added target. If <code class="language-plaintext highlighter-rouge">&lt;target&gt;</code>  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-no--build</code> will use the most recently built version of the application rather than re-building. This is useful to test an application in release mode.</p>
+  </li>
+</ul>
+
+<h2 id="adding-and-managing-plugins">Adding and managing plugins</h2>
+
+<p>To add additional functionality that is outside of the core features of Cordova, you’ll need to add plugins. A plugin represents a set of APIs that provide access to additional features of the platform.</p>
+
+<p>In order to use a plugin, you must first add it into your project. Once added into your project, the plugin will be bundled with your project during the build process, to ensure that your app has access to all the APIs it needs.</p>
+
+<h3 id="add-a-plugin">Add a plugin</h3>
+
+<p>To add a plugin, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin add &lt;path to plugin&gt;
+</code></pre></div></div>
+
+<h3 id="remove-a-plugin">Remove a plugin</h3>
+
+<p>To remove a plugin, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin rm &lt;name&gt;
+</code></pre></div></div>
+
+<h3 id="view-a-list-of-installed-plugins">View a list of installed plugins</h3>
+
+<p>To view a list of installed plugins, on the command line, type the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;path-to-project&gt;/cordova/plugin ls
+</code></pre></div></div>

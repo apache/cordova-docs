@@ -1,0 +1,23 @@
+<h1 id="upgrading-phonegap-webos">Upgrading PhoneGap webOS</h1>
+
+<p>This document is for people who need to upgrade their Cordova versions from an older <a href="../../../phonegap/storage/parameters/version.html">version</a> to a current <a href="../../../phonegap/storage/parameters/version.html">version</a> of Cordova.</p>
+
+<h2 id="upgrade-to-150-from-141">Upgrade to 1.5.0 from 1.4.1</h2>
+
+<ol>
+  <li>
+    <p>remove phonegap-1.4.1.js from your project</p>
+  </li>
+  <li>
+    <p>update the following line in your index.html:</p>
+
+    <p>change this:
+ <script type="text/javascript" src="phonegap-1.4.1.js"></script></p>
+
+    <p>to:
+ <script type="text/javascript" src="phonegap-1.5.0.js"></script></p>
+  </li>
+  <li>
+    <p>run the makefile to generate the newest <a href="../../../phonegap/storage/parameters/version.html">version</a> of the phonegap-1.5.0.js file</p>
+  </li>
+</ol>

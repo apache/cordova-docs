@@ -1,0 +1,55 @@
+<h1 id="opendatabase">openDatabase</h1>
+
+<p>Returns a new <a href="database/database.html">Database</a> object.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>window.openDatabase returns a new <a href="database/database.html">Database</a> object.</p>
+
+<p>This method will create a new SQL Lite <a href="database/database.html">Database</a> and return a <a href="database/database.html">Database</a> object.  Use the <a href="database/database.html">Database</a> Object to manipulate the data.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iPhone</li>
+  <li>webOS</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+		var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+    }
+	
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Open Database&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

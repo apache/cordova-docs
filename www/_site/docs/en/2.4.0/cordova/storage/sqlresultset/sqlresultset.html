@@ -1,0 +1,121 @@
+<h1 id="sqlresultset">SQLResultSet</h1>
+
+<p>When the executeSql method of a <a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> is called it will invoke it’s callback with a SQLResultSet.</p>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li><strong>insertId</strong>: the row ID of the row that the SQLResultSet object’s SQL statement inserted into the database</li>
+  <li><strong>rowsAffected</strong>: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0.</li>
+  <li><strong>rows</strong>: a <a href="../sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a> representing the rows returned.  If no rows are returned the object will be empty.</li>
+</ul>
+
+<h2 id="details">Details</h2>
+
+<p>When you call the <a href="../sqltransaction/sqltransaction.html">SQLTransaction</a> executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the <code class="language-plaintext highlighter-rouge">insertId</code> which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the <code class="language-plaintext highlighter-rouge">insertId</code> is not set.  The <code class="language-plaintext highlighter-rouge">rowsAffected</code> is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 6.0 and higher)</li>
+  <li>iPhone</li>
+  <li>webOS</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="execute-sql-quick-example">Execute SQL Quick <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function queryDB(tx) {
+	tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+}
+
+function querySuccess(tx, results) {
+console.log("Returned rows = " + results.rows.length);
+// this will be true since it was a select statement and so rowsAffected was 0
+if (!resultSet.rowsAffected) {
+  console.log('No rows affected!');
+  return false;
+}
+// for an insert statement, this property will return the ID of the last inserted row
+console.log("Last inserted row ID = " + results.insertId);
+}
+
+function errorCB(err) {
+	alert("Error processing SQL: "+err.code);
+}
+
+var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
+db.transaction(queryDB, errorCB);
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Storage Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+	// Populate the database 
+	//
+	function populateDB(tx) {
+		tx.executeSql('DROP TABLE IF EXISTS DEMO');
+		tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+		tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+	}
+
+	// Query the database
+	//
+	function queryDB(tx) {
+		tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+	}
+
+	// Query the success callback
+	//
+	function querySuccess(tx, results) {
+  console.log("Returned rows = " + results.rows.length);
+  // this will be true since it was a select statement and so rowsAffected was 0
+  if (!results.rowsAffected) {
+    console.log('No rows affected!');
+    return false;
+  }
+  // for an insert statement, this property will return the ID of the last inserted row
+  console.log("Last inserted row ID = " + results.insertId);
+	}
+
+	// Transaction error callback
+	//
+	function errorCB(err) {
+		console.log("Error processing SQL: "+err.code);
+	}
+
+	// Transaction success callback
+	//
+	function successCB() {
+		var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
+		db.transaction(queryDB, errorCB);
+	}
+
+	// Cordova is ready
+	//
+	function onDeviceReady() {
+		var db = window.openDatabase("[Database](../database/database.html)", "1.0", "Cordova Demo", 200000);
+		db.transaction(populateDB, errorCB, successCB);
+	}
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Example&lt;/h1&gt;
+    &lt;p&gt;Database&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>

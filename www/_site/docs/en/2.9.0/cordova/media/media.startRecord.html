@@ -1,0 +1,143 @@
+<h1 id="mediastartrecord">media.startRecord</h1>
+
+<p>Starts recording an audio file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>media.startRecord();
+</code></pre></div></div>
+
+<h2 id="description">Description</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">media.startRecord</code> method executes synchronously, starts a
+recording for an audio file.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry WebWorks (OS 5.0 and higher)</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Record audio
+//
+function recordAudio() {
+    var src = "myrecording.mp3";
+    var mediaRec = new Media(src,
+        // success callback
+        function() {
+            console.log("recordAudio():Audio Success");
+        },
+
+        // error callback
+        function(err) {
+            console.log("recordAudio():Audio Error: "+ err.code);
+        });
+
+    // Record audio
+    mediaRec.startRecord();
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full <a href="../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Device Properties Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Record audio
+    //
+    function recordAudio() {
+        var src = "myrecording.amr";
+        var mediaRec = new Media(src, onSuccess, onError);
+
+        // Record audio
+        mediaRec.startRecord();
+
+        // Stop recording after 10 sec
+        var recTime = 0;
+        var recInterval = setInterval(function() {
+            recTime = recTime + 1;
+            setAudioPosition(recTime + " sec");
+            if (recTime &gt;= 10) {
+                clearInterval(recInterval);
+                mediaRec.stopRecord();
+            }
+        }, 1000);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        recordAudio();
+    }
+
+    // onSuccess Callback
+    //
+    function onSuccess() {
+        console.log("recordAudio():Audio Success");
+    }
+
+    // onError Callback
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    // Set audio position
+    //
+    function setAudioPosition(position) {
+        document.getElementById('audio_position').innerHTML = position;
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="media"&gt;Recording audio...&lt;/p&gt;
+    &lt;p id="audio_position"&gt;&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="android-quirks">Android Quirks</h2>
+
+<ul>
+  <li>Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a <em>.amr</em> extension.</li>
+</ul>
+
+<h2 id="blackberry-webworks-quirks">BlackBerry WebWorks Quirks</h2>
+
+<ul>
+  <li>BlackBerry devices record audio in Adaptive Multi-Rate format. The specified file must end with a <em>.amr</em> extension.</li>
+</ul>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<ul>
+  <li>iOS only records to files of type <em>.wav</em> and returns an error if the file name extension is not correct.</li>
+  <li>If a full path is not provided, the recording is placed in the application’s <em>documents/tmp</em> directory. This can be accessed via the <code class="language-plaintext highlighter-rouge">[File](../file/fileobj/fileobj.html)</code> API using <code class="language-plaintext highlighter-rouge">[LocalFileSystem](../file/localfilesystem/localfilesystem.html).TEMPORARY</code>. Any subdirectory specified at record time must already exist.</li>
+  <li>
+    <p>Files can be recorded and played back using the documents URI:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  var myMedia = new Media("documents://beer.mp3")
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="tizen-quirks">Tizen Quirks</h2>
+
+<ul>
+  <li>Not supported on Tizen devices.</li>
+</ul>

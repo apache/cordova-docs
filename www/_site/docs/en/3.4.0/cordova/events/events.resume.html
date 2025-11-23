@@ -1,0 +1,106 @@
+<h1 id="resume">resume</h1>
+
+<p>The event fires when an application is retrieved from the background.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("resume", yourCallbackFunction, false);
+</code></pre></div></div>
+
+<h2 id="details">Details</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">resume</code> event fires when the native platform pulls the
+application out from the background.</p>
+
+<p>Applications typically should use <code class="language-plaintext highlighter-rouge">document.addEventListener</code> to
+attach an event listener once the <code class="language-plaintext highlighter-rouge">[deviceready](events.deviceready.html)</code> event fires.</p>
+
+<h2 id="supported-platforms">Supported Platforms</h2>
+
+<ul>
+  <li>Amazon Fire OS</li>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Windows Phone 7 and 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="quick-example">Quick Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("resume", onResume, false);
+
+function onResume() {
+    // Handle the resume event
+}
+</code></pre></div></div>
+
+<h2 id="full-example">Full Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Resume Example&lt;/title&gt;
+
+    &lt;script type="text/javascript" charset="utf-8" src="cordova.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" charset="utf-8"&gt;
+
+    // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        document.addEventListener("resume", onResume, false);
+    }
+
+    // Handle the resume event
+    //
+    function onResume() {
+    }
+
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body onload="onLoad()"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="ios-quirks">iOS Quirks</h2>
+
+<p>Any interactive functions called from a <a href="events.pause.html"><code class="language-plaintext highlighter-rouge">pause</code></a> event handler execute
+later when the app resumes, as signaled by the <code class="language-plaintext highlighter-rouge">resume</code> event. These
+include alerts, <code class="language-plaintext highlighter-rouge">console.log()</code>, and any calls from plugins or the
+Cordova API, which go through Objective-C.</p>
+
+<ul>
+  <li>
+    <p><strong>active</strong> event</p>
+
+    <p>The iOS-specific <code class="language-plaintext highlighter-rouge">active</code> event is available as an alternative to
+<code class="language-plaintext highlighter-rouge">resume</code>, and detects when users disable the <strong>Lock</strong> button to unlock
+the device with the app running in the foreground.  If the app (and
+device) is enabled for multi-tasking, this is paired with a subsequent
+<code class="language-plaintext highlighter-rouge">resume</code> event, but only under iOS 5. In effect, all locked apps in
+iOS 5 that have multi-tasking enabled are pushed to the background.
+For apps to remain running when locked under iOS 5, disable the app’s
+multi-tasking by setting <a href="http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html">UIApplicationExitsOnSuspend</a>
+to <code class="language-plaintext highlighter-rouge">YES</code>. To run when locked on iOS 4, this setting does not matter.</p>
+  </li>
+  <li>
+    <p><strong>resume</strong> event</p>
+
+    <p>When called from a <code class="language-plaintext highlighter-rouge">resume</code> event handler, interactive functions such
+as <code class="language-plaintext highlighter-rouge">alert()</code> need to be wrapped in a <code class="language-plaintext highlighter-rouge">setTimeout()</code> call with a
+timeout value of zero, or else the app hangs. For example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  document.addEventListener("resume", onResume, false);
+  function onResume() {
+     setTimeout(function() {
+            // TODO: do your thing!
+          }, 0);
+  }
+</code></pre></div>    </div>
+  </li>
+</ul>

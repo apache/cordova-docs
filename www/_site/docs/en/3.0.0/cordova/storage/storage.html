@@ -1,0 +1,82 @@
+<h1 id="storage">Storage</h1>
+
+<blockquote>
+  <p>Provides access to the device’s storage options.</p>
+</blockquote>
+
+<p>This API offers storage options based on two different W3C
+specifications:</p>
+
+<ul>
+  <li>
+    <p>The
+<a href="http://dev.w3.org/html5/webstorage/">Web Storage API Specification</a>
+allows you to access data via simple key/value pairs.  See the
+section on <a href="localstorage/localstorage.html">localStorage</a> for complete details on this interface.</p>
+  </li>
+  <li>
+    <p>The
+<a href="http://dev.w3.org/html5/webdatabase/">Web SQL [Database](database/database.html) Specification</a>
+offers more full-featured database tables accessed via SQL queries.
+A summary of this interface appears immediately below.</p>
+  </li>
+</ul>
+
+<p>Cordova provides access to both interfaces for the minority of devices
+that don’t already support them. Otherwise the built-in
+implementations apply.</p>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="storage.opendatabase.html">openDatabase</a></li>
+</ul>
+
+<h2 id="arguments">Arguments</h2>
+
+<ul>
+  <li><a href="parameters/name.html">database_name</a></li>
+  <li><a href="parameters/version.html">database_version</a></li>
+  <li><a href="parameters/display_name.html">database_displayname</a></li>
+  <li><a href="parameters/size.html">database_size</a></li>
+</ul>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li><a href="database/database.html">Database</a></li>
+  <li><a href="sqltransaction/sqltransaction.html">SQLTransaction</a></li>
+  <li><a href="sqlresultset/sqlresultset.html">SQLResultSet</a></li>
+  <li><a href="sqlresultsetrowlist/sqlresultsetrowlist.html">SQLResultSetRowList</a></li>
+  <li><a href="sqlerror/sqlerror.html">SQLError</a></li>
+</ul>
+
+<h2 id="accessing-the-feature">Accessing the Feature</h2>
+
+<p>As of version 3.0, access to Storage APIs is built into Cordova, and
+does not require using the CLI to add plugins as described in The
+Command-line Interface.</p>
+
+<p>If you are using the older set of Cordova tools that precede the CLI,
+the following platform-specific configuration settings are still
+required:</p>
+
+<ul>
+  <li>
+    <p>Android (in <code class="language-plaintext highlighter-rouge">app/res/xml/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Storage"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.Storage" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks (in <code class="language-plaintext highlighter-rouge">www/config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature id="blackberry.widgetcache" required="true" version="1.0.0.0" /&gt;
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.</p>

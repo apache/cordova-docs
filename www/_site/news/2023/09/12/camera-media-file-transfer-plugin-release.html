@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released an update for the following plugins!">
+
+    <title>
+        
+            
+                Camera 7.0.0, Media 7.0.0 & File-Transfer 2.0.0 Released! - 
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="http://localhost:4000/news/2023/09/12/camera-media-file-transfer-plugin-release.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en//">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Camera 7.0.0, Media 7.0.0 & File-Transfer 2.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">12 Sep 2023</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released an update for the following plugins!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-camera">cordova-plugin-camera@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-media">cordova-plugin-media@7.0.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-file-transfer">cordova-plugin-file-transfer@2.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-camera
+cordova plugin add cordova-plugin-camera@7.0.0
+
+cordova plugin remove cordova-plugin-media
+cordova plugin add cordova-plugin-media@7.0.0
+
+cordova plugin remove cordova-plugin-file-transfer
+cordova plugin add cordova-plugin-file-transfer@2.0.0
+</code></pre></div></div>
+
+<h2 id="release-highlights">Release Highlights</h2>
+
+<h3 id="cordova-plugin-camera"><code class="language-plaintext highlighter-rouge">cordova-plugin-camera</code></h3>
+
+<ul>
+  <li>
+    <p><strong>Android 13 Support</strong></p>
+
+    <p>In this release of the <code class="language-plaintext highlighter-rouge">camera</code> plugin, the <code class="language-plaintext highlighter-rouge">maxSdkTarget</code> for the <code class="language-plaintext highlighter-rouge">WRITE_EXTERNAL_STORAGE</code> permission has been set to <code class="language-plaintext highlighter-rouge">32</code>. This change was made as the permission has been deprecated and replaced by Android 13’s more granular permissions, <code class="language-plaintext highlighter-rouge">READ_MEDIA_IMAGES</code> and <code class="language-plaintext highlighter-rouge">READ_MEDIA_VIDEO</code>. Additionally, the <code class="language-plaintext highlighter-rouge">getPermissions</code> method has been improved to accurately fetch the required permissions based on the Android version. If Android 13 and above, it will also fetch based on media type.</p>
+
+    <p>Furthermore, to support the new granular permissions on Android 13 (SDK 33), we have raised the minimum requirement for <code class="language-plaintext highlighter-rouge">cordova-android</code> to version <code class="language-plaintext highlighter-rouge">12.0.0</code>. This version of Cordova-Android specifically includes the necessary updates to handle Android 13 and compile your project with the new permissions successfully.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated Platforms</strong></p>
+
+    <p>As the Cordova-Windows and Cordova-OSX platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.</p>
+  </li>
+  <li>
+    <p><strong>Retain Image Exif Data from Photo Library (iOS)</strong></p>
+
+    <p>This release contains a fix to preserve image’s EXIF data for iOS.</p>
+  </li>
+</ul>
+
+<h3 id="cordova-plugin-media"><code class="language-plaintext highlighter-rouge">cordova-plugin-media</code></h3>
+
+<ul>
+  <li>
+    <p><strong>Android 13 Support</strong></p>
+
+    <p>In this release of the <code class="language-plaintext highlighter-rouge">media</code> plugin, the dependency of the file plugin has been bumped to <code class="language-plaintext highlighter-rouge">8.0.0</code> which introduced Android 13 support. This support includes the Android 13’s more granular permissions <code class="language-plaintext highlighter-rouge">READ_MEDIA_IMAGES</code>, <code class="language-plaintext highlighter-rouge">READ_MEDIA_VIDEO</code>, and <code class="language-plaintext highlighter-rouge">READ_MEDIA_AUDIO</code>.</p>
+
+    <p>Additionally we have raised the minimum requirement for <code class="language-plaintext highlighter-rouge">cordova-android</code> to version <code class="language-plaintext highlighter-rouge">12.0.0</code>.</p>
+
+    <p>For more information, check out the <a href="https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html">Cordova’s File Plugin 8.0.0 release blog post</a>.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated Windows Platforms</strong></p>
+
+    <p>As the Cordova-Windows platform has been deprecated, the supporting logic for that platform has been removed from this plugin.</p>
+  </li>
+  <li>
+    <p><strong>Ability to load files from custom scheme and leading slash directory paths</strong></p>
+
+    <p>The file plugin can now accept URL constructed with a custom scheme or a leading slash.</p>
+
+    <p><strong>Custom Scheme Example:</strong></p>
+
+    <p>By default, iOS uses the following custom scheme <code class="language-plaintext highlighter-rouge">app://localhost/</code>. You can now pass in <code class="language-plaintext highlighter-rouge">app://localhost/file.mp4</code> to prepresent a media file located in the root directory of which the app content is loaded from, <code class="language-plaintext highlighter-rouge">www</code>.</p>
+
+    <p><strong>Leading Slash Example:</strong></p>
+
+    <p>It can also load the same file <code class="language-plaintext highlighter-rouge">file.mp4</code> from the above example if the provided URL was <code class="language-plaintext highlighter-rouge">/file.mp4</code>. It will navigate from the root directory of which the app content is loaded from, <code class="language-plaintext highlighter-rouge">www</code>.</p>
+  </li>
+  <li>
+    <p><strong>Increased Android’s Audio Quality</strong></p>
+
+    <p>From this plugin’s version and onward, the Android’s captured audio quality has been increased significantly. This was achieved by increasing the bit rate to 96 Kbps and the sampling rate to 44.1 kHz.</p>
+
+    <blockquote>
+      <p><strong>PR’s Note:</strong> This plugin uses the AAC encoder, which generally provides better quality audio at a lower bitrate compared against MP3 encoder. While researching acceptable bitrate of AAC compared against MP3, some suggest using 96 Kbps for AAC while MP3 would be 128 Kbps. But this does not mean it is identical. In terms of quality, it will always depend on the source and underlying equipment.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="cordova-plugin-file-transfer"><code class="language-plaintext highlighter-rouge">cordova-plugin-file-transfer</code></h3>
+
+<ul>
+  <li>
+    <p><strong>Bumped File Dependecy for Android 13 Support</strong></p>
+
+    <p>In this release of the <code class="language-plaintext highlighter-rouge">file-transfer</code> plugin, the dependency on the file plugin has been updated to version <code class="language-plaintext highlighter-rouge">8.0.0</code>, enabling Android 13 support. Consequently, the minimum requirement for <code class="language-plaintext highlighter-rouge">cordova-android</code> has been raised to version <code class="language-plaintext highlighter-rouge">12.0.0</code> to align with the updated file plugin.</p>
+
+    <p>For more information, check out the <a href="https://cordova.apache.org/news/2023/07/11/file-plugin-8.0.0.html">Cordova’s File Plugin 8.0.0 release blog post</a>.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated Platforms</strong></p>
+
+    <p>As the Cordova Windows/WP8, OSX, Amazon Fire OS, Blackberry 10, Windows Phone &amp; Firefox OS platform has been deprecated, the supporting logic for these platforms has been removed from this plugin.</p>
+  </li>
+  <li>
+    <p><strong>Removed Deprecated <code class="language-plaintext highlighter-rouge">whitelist</code> Plugin</strong></p>
+
+    <p>The legacy <code class="language-plaintext highlighter-rouge">whitelist</code> plugin has been deprecated for a long time and is no longer needed in the <code class="language-plaintext highlighter-rouge">file-transfer</code> plugin. This plugin will continue call and check against the <code class="language-plaintext highlighter-rouge">shouldAllowRequest</code> method which is apart of the platform core coding.</p>
+
+    <p>Refer to the <a href="https://cordova.apache.org/docs/en/12.x/guide/appdev/allowlist/index.html">Allow List</a> page of the Cordova Documentation for more information in how to configure the list.</p>
+  </li>
+  <li>
+    <p><strong>Fixed Download Functionality for Android Q+</strong></p>
+  </li>
+  <li>
+    <p><strong>Removed Hardcoded <code class="language-plaintext highlighter-rouge">X-Requested-With</code> Header</strong></p>
+
+    <p>This hardcoded header was removed from the Android platform. This header was also not set in any other platform. It is up to the app developer to set the header if it is desired to ‘disguise’ the HTTP call as an XMLHttpRequest.</p>
+  </li>
+  <li>
+    <p><strong>Fixed Missing Headers on File Upload</strong></p>
+
+    <p>In iOS, header data was not properly being set during file upload. In this release, the <code class="language-plaintext highlighter-rouge">applyRequestHeaders</code> method was updated to ensure that the headers were being applied.</p>
+  </li>
+  <li>
+    <p><strong>Re-implemented UserAgent Overwrites</strong></p>
+
+    <p>In iOS, the ability to overwrite the UserAgent using the <code class="language-plaintext highlighter-rouge">navigator.userAgent</code> value from the WebView was re-implemented.</p>
+  </li>
+</ul>
+
+<p>Please report any issues you find at <a href="http://issues.cordova.io/">issues.cordova.io</a>!</p>
+
+<!--more-->
+<h1 id="changes-include">Changes include:</h1>
+
+<h2 id="cordova-plugin-camera-1">cordova-plugin-camera</h2>
+
+<p><strong>Breaking Changes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/848">GH-848</a> fix!: remove deprecated platforms</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/844">GH-844</a> feat(android)!: Android 13 support</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/827">GH-827</a> fix(android): set <code class="language-plaintext highlighter-rouge">applicationId</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/810">GH-810</a> fix(browser): use <code class="language-plaintext highlighter-rouge">navigator.mediaDevices.getUserMedia</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/712">GH-712</a> fix(ios): preserving <code class="language-plaintext highlighter-rouge">EXIF</code> data</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/780">GH-780</a> fix(android): update queries in <code class="language-plaintext highlighter-rouge">plugin.xml</code></li>
+</ul>
+
+<p><strong>Chores, Dependencies, Docs:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/850">GH-850</a> chore: remove windows/osx from <code class="language-plaintext highlighter-rouge">plugin.xml</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/849">GH-849</a> chore: Update <code class="language-plaintext highlighter-rouge">SUPPORT_QUESTION.md</code> template</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/831">GH-831</a> chore(android): Cleanup obsolete <code class="language-plaintext highlighter-rouge">BuildConfig</code> comments</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/846">GH-846</a> dep(dev)!: bump <code class="language-plaintext highlighter-rouge">@cordova/eslint-config@5.0</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/800">GH-800</a> dep(npm): bump package-lock v2 w/ rebuild</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/808">GH-808</a> docs(README): Document <code class="language-plaintext highlighter-rouge">ANDROIDX_CORE_VERSION</code> variable</li>
+</ul>
+
+<p><strong>CI:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/851">GH-851</a> ci(gh-action): sync with <code class="language-plaintext highlighter-rouge">paramedic</code> configs</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/835">GH-835</a> ci(android): Drop API 22 &amp; 31. Added API 24 &amp; 33</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/804">GH-804</a> ci: sync workflow with <code class="language-plaintext highlighter-rouge">paramedic</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/798">GH-798</a> ci(android): update java requirement for <code class="language-plaintext highlighter-rouge">cordova-android@11</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/770">GH-770</a> ci(ios): update workflow w/ iOS 15</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/766">GH-766</a> ci: remove old ci workflow</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/765">GH-765</a> ci: add action-badge</li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/764">GH-764</a> ci: remove <code class="language-plaintext highlighter-rouge">travis</code> &amp; <code class="language-plaintext highlighter-rouge">appveyor</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-camera/pull/762">GH-762</a> ci: add <code class="language-plaintext highlighter-rouge">gh-actions</code> workflows</li>
+</ul>
+
+<h2 id="cordova-plugin-media-1">cordova-plugin-media</h2>
+
+<p><strong>Breaking Changes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/384">GH-384</a> fix!: remove deprecated <code class="language-plaintext highlighter-rouge">windows</code> platform</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/378">GH-378</a> feat(android)!: bump file &amp; <strong>Android</strong> requirements</li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/362">GH-362</a> feat(ios): load media files with custom scheme+hostname and leading directory paths</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/383">GH-383</a> feat(android): increase audio encoding bitrate and sampling rate</li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/382">GH-382</a> feat(android): support Android 13 permission checks and requests</li>
+</ul>
+
+<p><strong>Others:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/381">GH-381</a> dep(dev)!: bump <code class="language-plaintext highlighter-rouge">@cordova/eslint-config@5.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-media/pull/377">GH-377</a> ci: sync github action workflow w/ paramedic base configs</li>
+</ul>
+
+<h2 id="cordova-plugin-file-transfer-1">cordova-plugin-file-transfer</h2>
+
+<p><strong>Breaking Changes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/360">GH-360</a> feat(android)!: bump <code class="language-plaintext highlighter-rouge">cordova-plugin-file@8.0.0</code> &amp; <code class="language-plaintext highlighter-rouge">cordova-android &gt;= 12.0.0</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/346">GH-346</a> feat(windows)!: remove deprecated platform Windows</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/307">GH-307</a> feat!: remove deprecated <code class="language-plaintext highlighter-rouge">whitelist</code> usage</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/270">GH-270</a> feat!: remove deprecated platforms (Amazon Fire OS, BlackBerry, Windows Phone, Firefox OS, Windows 8)</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/370">GH-370</a> dep(server)!: bump <code class="language-plaintext highlighter-rouge">forever@4.0.3</code>, <code class="language-plaintext highlighter-rouge">iconv@3.0.1</code>, <code class="language-plaintext highlighter-rouge">busboy@1.6.0</code> &amp; rebuilt <code class="language-plaintext highlighter-rouge">package-lock</code></li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/372">GH-372</a> fix(tests): Use <code class="language-plaintext highlighter-rouge">https</code> on file urls</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/371">GH-371</a> fix(tests): change default server port</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/361">GH-361</a> fix: test version</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/310">GH-310</a> fix(android): enable download functionality with <strong>Android</strong> Q</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/313">GH-313</a> fix: incorrect asset file paths in test</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/287">GH-287</a> fix(ios): remove hardcoded <code class="language-plaintext highlighter-rouge">X-Requested-With</code> header</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/284">GH-284</a> fix(ios): headers are not being sent</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/268">GH-268</a> fix(ios): re-implement user agent overwrite</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/199">GH-199</a> fix(windows): js error “The parameter is incorrect”</li>
+</ul>
+
+<p><strong>Chores:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/373">GH-373</a> chore: add missing license header</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/368">GH-368</a> chore: remove windows leftovers</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/335">GH-335</a> chore: remove use-permission <code class="language-plaintext highlighter-rouge">WRITE_EXTERNAL_STORAGE</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/324">GH-324</a> chore: <code class="language-plaintext highlighter-rouge">package-lock</code> upgrade</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/323">GH-323</a> chore: .npmrc</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/299">GH-299</a> chore: bump ‘protective’ entry for major release 2.0 to come</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/274">GH-274</a> chore: adds <code class="language-plaintext highlighter-rouge">package-lock</code> file</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/272">GH-272</a> chore: package cleanup</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/269">GH-269</a> chore(npm): adds ignore list</li>
+</ul>
+
+<p><strong>Dependencies, CI, and Doc:</strong></p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/369">GH-369</a> dep: bump <code class="language-plaintext highlighter-rouge">@cordova/eslint-config@5.0.0</code> &amp; rebuilt <code class="language-plaintext highlighter-rouge">package-lock</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/344">GH-344</a> dep(npm): bump <code class="language-plaintext highlighter-rouge">package-lock</code> v2 &amp; rebuilt</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/341">GH-341</a> dep(server): bump <code class="language-plaintext highlighter-rouge">i</code> from <code class="language-plaintext highlighter-rouge">0.3.6</code> to <code class="language-plaintext highlighter-rouge">0.3.7</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/329">GH-329</a> dep: bump <code class="language-plaintext highlighter-rouge">minimist</code> from <code class="language-plaintext highlighter-rouge">1.2.5</code> to <code class="language-plaintext highlighter-rouge">1.2.6</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/362">GH-362</a> ci: sync github action workflow w/ paramedic base configs</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/348">GH-348</a> ci: sync workflow with paramedic</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/343">GH-343</a> ci(android): update java requirement for <code class="language-plaintext highlighter-rouge">cordova-android@11</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/318">GH-318</a> ci(ios): update workflow w/ <strong>iOS</strong> 15</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/315">GH-315</a> ci: add action-badge</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/314">GH-314</a> ci: remove <code class="language-plaintext highlighter-rouge">travis</code> &amp; <code class="language-plaintext highlighter-rouge">appveyor</code></li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/311">GH-311</a> ci: add <code class="language-plaintext highlighter-rouge">gh-actions</code> workflows</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/280">GH-280</a> doc: Improve <code class="language-plaintext highlighter-rouge">progressEvent</code> documentation</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/267">GH-267</a> doc: undeprecate the plugin</li>
+  <li><a href="https://github.com/apache/cordova-plugin-file-transfer/pull/211">GH-211</a> doc: remove outdated translations</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2023/09/06/cordova-ios-7.0.1.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2023/09/06/cordova-ios-7.0.1.html">Cordova iOS 7.0.1 Released!</a>
+                    <div class="date"> 06 Sep 2023 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that we have just released Cordova iOS...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+                    <a href="/news/2023/09/21/geolocation-plugin-5.0.0.html">Next</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/news/2023/09/21/geolocation-plugin-5.0.0.html">Geolocation Plugin 5.0.0 Released!</a>
+                    <div class="date"> 21 Sep 2023 - By Norman Breau </div>
+                    <p class="content">
+                        <!--
+                            NOTE:
+                                the markdownify filter is used here
+                                because posts are rendered in sequence;
+                                that is, the next post's content isn't
+                                yet rendered at the time that this post
+                                is being rendered, so page.next.excerpt
+                                is still in Markdown and not HTML
+
+                            Reference: https://github.com/jekyll/jekyll/issues/2860
+                        -->
+                        We are happy to announce that we have just released an update...
+                    </p>
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

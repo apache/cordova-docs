@@ -1,0 +1,61 @@
+<h1 id="configuration-reference">Configuration Reference</h1>
+
+<p>Many aspects of an application’s behavior can be controlled with a
+platform-agnostic configuration file, <code class="language-plaintext highlighter-rouge">config.xml</code>, which is formatted
+based on the W3C’s
+<a href="http://www.w3.org/TR/widgets/">Packaged Web Apps (Widgets)</a>
+specification.</p>
+
+<p>For projects created with the Cordova CLI (described in The
+Command-line Interface), this file can be found in the top-level <code class="language-plaintext highlighter-rouge">www</code>
+directory.  Using the CLI to build projects regenerates versions of
+this file in various subdirectories within <code class="language-plaintext highlighter-rouge">platforms</code>. For non-CLI
+projects, each platform-specific file serves as a source.</p>
+
+<p>While the location of the <code class="language-plaintext highlighter-rouge">config.xml</code> file may change depending on
+the platform, its contents generally do not. Some platform-specific
+features are also specified in the same configuration file. Details
+are listed below:</p>
+
+<ul>
+  <li><a href="../guide/platforms/ios/config.html">iOS Configuration</a></li>
+  <li><a href="../guide/platforms/android/config.html">Android Configuration</a></li>
+  <li><a href="../guide/platforms/blackberry/config.html">BlackBerry Configuration</a></li>
+</ul>
+
+<h2 id="configxml-elements">config.xml Elements</h2>
+
+<p>The <a href="http://cordova.io">Apache Cordova</a> project strives abstract away native platform specifics via web-inspired and web-based
+abstractions that are heavily standards driven and adopted by the web community. Please take a few minutes to familiarize
+yourself with the <a href="http://www.w3.org/TR/widgets/">config.xml specification</a>, to understand the type of application metadata the
+Apache Cordova project aims to abstract and provide simple entry points for.</p>
+
+<p>An example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;widget&gt;
+        &lt;preference name="MySetting" value="true" /&gt;
+        &lt;feature name="MyPlugin" value="MyPluginClass" /&gt;
+        &lt;access origin="*" /&gt;
+        &lt;content src="index.html" /&gt;
+    &lt;/widget&gt;
+</code></pre></div></div>
+
+<p>A list of supported elements across major platforms which are supported in Apache Cordova follow.</p>
+
+<h3 id="feature"><code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code></h3>
+
+<p>These elements map to native APIs that the application accesses. At
+runtime, the Apache Cordova framework maps <code class="language-plaintext highlighter-rouge">&lt;feature&gt;</code> elements to
+native code to enable your Cordova application to access device APIs
+otherwise unavailable to typical web-based applications.</p>
+
+<h3 id="access"><code class="language-plaintext highlighter-rouge">&lt;access&gt;</code></h3>
+
+<p>These elements define how your whitelist works. Please see the
+<a href="../guide/appdev/whitelist/index.html">Domain Whitelist Guide</a> for more information.</p>
+
+<h3 id="content"><code class="language-plaintext highlighter-rouge">&lt;content&gt;</code></h3>
+
+<p>This element defines your application’s start page relative to the
+project’s standard web assets root directory. This element is optional,
+the default is <code class="language-plaintext highlighter-rouge">index.html</code>.</p>

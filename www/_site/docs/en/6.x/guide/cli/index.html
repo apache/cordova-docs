@@ -1,0 +1,305 @@
+<h1 id="create-your-first-cordova-app">Create your first Cordova app</h1>
+
+<p>This guide shows you how to create  a JS/HTML Cordova application and deploy them to
+various native mobile platforms using the <code class="language-plaintext highlighter-rouge">cordova</code> command-line
+interface (CLI). For detailed reference on Cordova command-line, review the <a href="../../reference/cordova-cli/index.html">CLI reference</a></p>
+
+<h2 id="installing-the-cordova-cli">Installing the Cordova CLI</h2>
+
+<p>The Cordova command-line tool is distributed as an npm package.</p>
+
+<p>To install the <code class="language-plaintext highlighter-rouge">cordova</code> command-line tool, follow these steps:</p>
+
+<ol>
+  <li>
+    <p>Download and install <a href="https://nodejs.org/en/download/">Node.js</a>. On
+installation you should be able to invoke <code class="language-plaintext highlighter-rouge">node</code> and <code class="language-plaintext highlighter-rouge">npm</code> on your
+command line.</p>
+  </li>
+  <li>
+    <p>(Optional) Download and install a <a href="http://git-scm.com/downloads">git client</a>, if you don’t
+already have one. Following installation, you should be able to invoke <code class="language-plaintext highlighter-rouge">git</code>
+on your command line. The CLI uses it to download assets when they are referenced using a url to a git repo.</p>
+  </li>
+  <li>
+    <p>Install the <code class="language-plaintext highlighter-rouge">cordova</code> module using <code class="language-plaintext highlighter-rouge">npm</code> utility of Node.js. The <code class="language-plaintext highlighter-rouge">cordova</code>
+module will automatically be downloaded by the <code class="language-plaintext highlighter-rouge">npm</code> utility.</p>
+
+    <ul>
+      <li>on OS X and Linux:
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span><span class="nb">sudo </span>npm <span class="nb">install</span> <span class="nt">-g</span> cordova
+</code></pre></div>        </div>
+
+        <p>On OS X and Linux, prefixing the <code class="language-plaintext highlighter-rouge">npm</code> command with
+  <code class="language-plaintext highlighter-rouge">sudo</code> may be necessary to install this development utility in
+  otherwise restricted directories such as
+  <code class="language-plaintext highlighter-rouge">/usr/local/share</code>. If you are using the optional
+  nvm/nave tool or have write access to the install directory,
+  you may be able to omit the <code class="language-plaintext highlighter-rouge">sudo</code> prefix. There are
+  <a href="http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears">more tips</a>
+  available on using <code class="language-plaintext highlighter-rouge">npm</code> without <code class="language-plaintext highlighter-rouge">sudo</code>, if you desire to do that.</p>
+      </li>
+      <li>on Windows:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  C:\&gt;npm install -g cordova
+</code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p>The <code class="language-plaintext highlighter-rouge">-g</code> flag above tells <code class="language-plaintext highlighter-rouge">npm</code> to install <code class="language-plaintext highlighter-rouge">cordova</code> globally. Otherwise
+it will be installed in the <code class="language-plaintext highlighter-rouge">node_modules</code> subdirectory of the current
+working directory.</p>
+
+    <p>Following installation, you should be able to run
+<code class="language-plaintext highlighter-rouge">cordova</code> on the command line with no arguments and it should
+print help text.</p>
+  </li>
+</ol>
+
+<h2 id="create-the-app">Create the App</h2>
+
+<p>Go to the directory where you maintain your source code, and create a cordova project:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova create hello com.example.hello HelloWorld
+</code></pre></div></div>
+
+<p>This creates the required directory structure for your cordova app. By default, the <code class="language-plaintext highlighter-rouge">cordova create</code> script generates a skeletal web-based application whose home page is the project’s <code class="language-plaintext highlighter-rouge">www/index.html</code> file.</p>
+
+<h3 id="see-also">See Also</h3>
+<ul>
+  <li><a href="../../reference/cordova-cli/index.html#cordova-create-command">Cordova create command reference documentation</a></li>
+  <li><a href="../../reference/cordova-cli/index.html#directory-structure">Cordova project directory structure</a></li>
+  <li><a href="../../guide/cli/template.html#">Cordova project templates</a></li>
+</ul>
+
+<h2 id="add-platforms">Add Platforms</h2>
+
+<p>All subsequent commands need to be run within the project’s directory,
+or any subdirectories:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>hello
+</code></pre></div></div>
+
+<p>Add the platforms that you want to target your app. We will add the ‘ios’ and ‘android’ platform and ensure they get saved to <code class="language-plaintext highlighter-rouge">config.xml</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform add ios <span class="nt">--save</span>
+<span class="nv">$ </span>cordova platform add android <span class="nt">--save</span>
+</code></pre></div></div>
+
+<p>To check your current set of platforms:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform <span class="nb">ls</span>
+</code></pre></div></div>
+
+<p>Running commands to add or remove platforms affects the contents of
+the project’s <em>platforms</em> directory, where each specified platform
+appears as a subdirectory.</p>
+
+<blockquote>
+  <p>Note: When using the CLI to build your application, you should
+<em>not</em> edit any files in the <code class="language-plaintext highlighter-rouge">/platforms/</code> directory. The files
+in this directory are routinely overwritten when preparing
+applications for building, or when plugins are re-installed.</p>
+</blockquote>
+
+<h3 id="see-also-1">See Also</h3>
+<ul>
+  <li><a href="../../reference/cordova-cli/index.html#cordova-platform-command">Cordova platform command reference documentation</a></li>
+</ul>
+
+<h2 id="install-pre-requisites-for-building">Install pre-requisites for building</h2>
+<p>To build and run apps, you need to install SDKs for each platform you wish to target. Alternatively, if you are using browser for development you can use <code class="language-plaintext highlighter-rouge">browser</code> platform which does not require any platform SDKs.</p>
+
+<p>To check if you satisfy requirements for building the platform:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova requirements
+Requirements check results for android:
+Java JDK: installed .
+Android SDK: installed
+Android target: installed android-19,android-21,android-22,android-23,Google Inc.:Google APIs:19,Google Inc.:Google APIs (x86 System Image):19,Google Inc.:Google APIs:23
+Gradle: installed
+
+Requirements check results for ios:
+Apple OS X: not installed
+Cordova tooling for iOS requires Apple OS X
+Error: Some of requirements check failed
+</code></pre></div></div>
+
+<h3 id="see-also-2">See Also</h3>
+<ul>
+  <li><a href="../../guide/platforms/android/index.html#requirements-and-support">Android platform requirements</a></li>
+  <li><a href="../../guide/platforms/ios/index.html#requirements-and-support">iOS platform requirements</a></li>
+  <li><a href="../../guide/platforms/win8/index.html#requirements-and-support">Windows platform requirements</a></li>
+</ul>
+
+<h2 id="build-the-app">Build the App</h2>
+
+<p>By default, <code class="language-plaintext highlighter-rouge">cordova create</code> script generates a skeletal web-based application whose start page is the project’s <code class="language-plaintext highlighter-rouge">www/index.html</code> file. Any
+initialization should be specified as part of the <a href="../../cordova/events/events.html#deviceready">deviceready</a> event handler defined in <code class="language-plaintext highlighter-rouge">www/js/index.js</code>.</p>
+
+<p>Run the following command to build the project for <em>all</em> platforms:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova build
+</code></pre></div></div>
+
+<p>You can optionally limit the scope of each build to specific platforms - ‘ios’ in this case:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova build ios
+</code></pre></div></div>
+
+<h3 id="see-also-3">See Also</h3>
+<ul>
+  <li><a href="../../reference/cordova-cli/index.html#cordova-build-command">Cordova build command reference documentation</a></li>
+</ul>
+
+<h2 id="test-the-app">Test the App</h2>
+
+<p>SDKs for mobile platforms often come bundled with emulators that
+execute a device image, so that you can launch the app from the home
+screen and see how it interacts with many platform features.  Run a
+command such as the following to rebuild the app and view it within a
+specific platform’s emulator:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova emulate android
+</code></pre></div></div>
+
+<p><img src="/static/img/guide/cli/android_emulate_init.png" alt="" /></p>
+
+<p>Following up with the <code class="language-plaintext highlighter-rouge">cordova emulate</code> command refreshes the emulator
+image to display the latest application, which is now available for
+launch from the home screen:</p>
+
+<p><img src="/static/img/guide/cli/android_emulate_install.png" alt="" /></p>
+
+<p>Alternately, you can plug the handset into your computer and test the
+app directly:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova run android
+</code></pre></div></div>
+
+<p>Before running this command, you need to set up the device for
+testing, following procedures that vary for each platform.</p>
+
+<h3 id="see-also-4">See Also</h3>
+<ul>
+  <li><a href="../../guide/platforms/android/index.html#setting-up-an-emulator">Setting up Android emulator</a></li>
+  <li><a href="../../reference/cordova-cli/index.html#cordova-run-command">Cordova run command reference documentation</a></li>
+  <li><a href="../../reference/cordova-cli/index.html#cordova-emulate-command">Cordova emulate command reference documentation</a></li>
+</ul>
+
+<h2 id="add-plugins">Add Plugins</h2>
+
+<p>You can modify the default generated app to take advantage of standard web technologies,
+but for the app to access device-level features, you need to add plugins.</p>
+
+<p>A <em>plugin</em> exposes a Javascript API for native SDK functionality. Plugins are typically hosted on
+npm and you can search for them on the <a href="/plugins/">plugin search page</a>. Some key APIs are provided by the Apache Cordova open source project and these are referred to as <a href="../../guide/support/index.html#core-plugin-apis">Core Plugin APIs</a>. You can also use the CLI to launch the search page:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova plugin search camera
+</code></pre></div></div>
+
+<p>To add the camera plugin, we will specify the npm package name for the camera plugin:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova plugin add cordova-plugin-camera
+Fetching plugin "cordova-plugin-camera@~2.1.0" via npm
+Installing "cordova-plugin-camera" for android
+Installing "cordova-plugin-camera" for ios
+</code></pre></div></div>
+
+<p>Plugins can also be added using a directory or a git repo.</p>
+
+<blockquote>
+  <p><strong>NOTE</strong>: The CLI adds plugin code as appropriate for each platform.
+If you want to develop with lower-level shell tools or platform SDKs
+as discussed in the <a href="../overview/index.html">Overview</a>, you need to run the Plugman utility to
+add plugins separately for each platform. (For more information, see
+<a href="../../plugin_ref/plugman.html">Using Plugman to Manage Plugins</a>.)</p>
+</blockquote>
+
+<p>Use <code class="language-plaintext highlighter-rouge">plugin ls</code> (or <code class="language-plaintext highlighter-rouge">plugin list</code>, or <code class="language-plaintext highlighter-rouge">plugin</code> by itself) to view
+currently installed plugins. Each displays by its identifier:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cordova plugin ls
+cordova-plugin-camera 2.1.0 "Camera"
+cordova-plugin-whitelist 1.2.1 "Whitelist"
+</code></pre></div></div>
+
+<h3 id="see-also-5">See Also</h3>
+<ul>
+  <li><a href="../../reference/cordova-cli/index.html#cordova-plugin-command">Cordova plugin command reference documentation</a></li>
+  <li><a href="/plugins/">Cordova plugin search page</a></li>
+  <li><a href="../../guide/support/index.html#core-plugin-apis">Core Plugin APIs</a></li>
+</ul>
+
+<h2 id="using-merges-to-customize-each-platform">Using <em>merges</em> to Customize Each Platform</h2>
+
+<p>While Cordova allows you to easily deploy an app for many different
+platforms, sometimes you need to add customizations.  In that case,
+you don’t want to modify the source files in various <code class="language-plaintext highlighter-rouge">www</code> directories
+within the top-level <code class="language-plaintext highlighter-rouge">platforms</code> directory, because they’re regularly
+replaced with the top-level <code class="language-plaintext highlighter-rouge">www</code> directory’s cross-platform source.</p>
+
+<p>Instead, the top-level <code class="language-plaintext highlighter-rouge">merges</code> directory offers a place to specify
+assets to deploy on specific platforms. Each platform-specific
+subdirectory within <code class="language-plaintext highlighter-rouge">merges</code> mirrors the directory structure of the
+<code class="language-plaintext highlighter-rouge">www</code> source tree, allowing you to override or add files as needed.
+For example, here is how you might uses <code class="language-plaintext highlighter-rouge">merges</code> to boost the default
+font size for Android devices:</p>
+
+<ul>
+  <li>
+    <p>Edit the <code class="language-plaintext highlighter-rouge">www/index.html</code> file, adding a link to an additional CSS
+file, <code class="language-plaintext highlighter-rouge">overrides.css</code> in this case:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/overrides.css"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Optionally create an empty <code class="language-plaintext highlighter-rouge">www/css/overrides.css</code> file, which would
+apply for all non-Android builds, preventing a missing-file error.</p>
+  </li>
+  <li>
+    <p>Create a <code class="language-plaintext highlighter-rouge">css</code> subdirectory within <code class="language-plaintext highlighter-rouge">merges/android</code>, then add a
+corresponding <code class="language-plaintext highlighter-rouge">overrides.css</code> file. Specify CSS that overrides the
+12-point default font size specified within <code class="language-plaintext highlighter-rouge">www/css/index.css</code>, for
+example:</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">body</span> <span class="p">{</span> <span class="nl">font-size</span><span class="p">:</span><span class="m">14px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>When you rebuild the project, the Android version features the custom
+font size, while others remain unchanged.</p>
+
+<p>You can also use <code class="language-plaintext highlighter-rouge">merges</code> to add files not present in the original
+<code class="language-plaintext highlighter-rouge">www</code> directory. For example, an app can incorporate a <em>back button</em>
+graphic into the iOS interface, stored in
+<code class="language-plaintext highlighter-rouge">merges/ios/img/back_button.png</code>, while the Android version can
+instead capture <a href="../../cordova/events/events.html#backbutton">backbutton</a> events from the corresponding hardware
+button.</p>
+
+<h2 id="updating-cordova-and-your-project">Updating Cordova and Your Project</h2>
+
+<p>After installing the <code class="language-plaintext highlighter-rouge">cordova</code> utility, you can always update it to
+the latest version by running the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>npm update <span class="nt">-g</span> cordova
+</code></pre></div></div>
+
+<p>Use this syntax to install a specific version:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>npm <span class="nb">install</span> <span class="nt">-g</span> cordova@3.1.0-0.2.0
+</code></pre></div></div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">cordova -v</code> to see which version is currently running. To find the latest released cordova version, you can run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm info cordova version
+</code></pre></div></div>
+
+<p>To update platform that you’re targeting:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform update android <span class="nt">--save</span>
+<span class="nv">$ </span>cordova platform update ios <span class="nt">--save</span>
+...etc.
+</code></pre></div></div>
+

@@ -1,0 +1,53 @@
+<h1 id="configurationdata">ConfigurationData</h1>
+
+<blockquote>
+  <p>Encapsulates a set of media capture parameters that a device supports.</p>
+</blockquote>
+
+<h2 id="description">Description</h2>
+
+<p>Describes media capture modes supported by the device.  The
+configuration data includes the MIME type, and capture dimensions for
+video or image capture.</p>
+
+<p>The MIME types should adhere to <a href="http://www.ietf.org/rfc/rfc2046.txt">RFC2046</a>.  Examples:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">video/3gpp</code></li>
+  <li><code class="language-plaintext highlighter-rouge">video/quicktime</code></li>
+  <li><code class="language-plaintext highlighter-rouge">image/jpeg</code></li>
+  <li><code class="language-plaintext highlighter-rouge">audio/amr</code></li>
+  <li><code class="language-plaintext highlighter-rouge">audio/wav</code></li>
+</ul>
+
+<h2 id="properties">Properties</h2>
+
+<ul>
+  <li>
+    <p><strong>type</strong>: The ASCII-encoded lowercase string representing the media type. (DOMString)</p>
+  </li>
+  <li>
+    <p><strong>height</strong>: The height of the image or video in pixels.  The value is zero for sound clips. (Number)</p>
+  </li>
+  <li>
+    <p><strong>width</strong>: The width of the image or video in pixels.  The value is zero for sound clips. (Number)</p>
+  </li>
+</ul>
+
+<h2 id="quick-example">Quick <a href="../../storage/storage.opendatabase.html">Example</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// retrieve supported image modes
+var imageModes = navigator.device.capture.supportedImageModes;
+
+// Select mode that has the highest horizontal resolution
+var width = 0;
+var selectedmode;
+for each (var mode in imageModes) {
+    if (mode.width &gt; width) {
+        width = mode.width;
+        selectedmode = mode;
+    }
+}
+</code></pre></div></div>
+
+<p>Not supported by any platform.  All configuration data arrays are empty.</p>

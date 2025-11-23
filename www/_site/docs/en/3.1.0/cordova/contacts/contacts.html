@@ -1,0 +1,119 @@
+<h1 id="contacts">Contacts</h1>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">contacts</code> object provides access to the device contacts database.</p>
+</blockquote>
+
+<p><strong>Important privacy note:</strong> Collection and use of contact data raises
+important privacy issues.  Your app’s privacy policy should discuss
+how the app uses contact data and whether it is shared with any other
+parties.  <a href="Contact/contact.html">Contact</a> information is considered sensitive because it
+reveals the people with whom a person communicates.  Therefore, in
+addition to your app’s privacy policy, you should strongly consider
+providing a just-in-time notice prior to your app accessing or using
+contact data (if the device operating system doesn’t do so
+already). That notice should provide the same information noted above,
+as well as obtaining the user’s permission (e.g., by presenting
+choices for <strong>OK</strong> and <strong>No Thanks</strong>).  Note that some app
+marketplaces may require your app to provide just-in-time notice and
+obtain permission from the user prior to accessing contact data.  A
+clear and easy-to-understand user experience surrounding the use of
+contact data will help avoid user confusion and perceived misuse of
+contact data.  For more information, please see the <a href="../../guide/appdev/privacy/index.html">Privacy Guide</a>.</p>
+
+<h2 id="methods">Methods</h2>
+
+<ul>
+  <li><a href="contacts.create.html">contacts.create</a></li>
+  <li><a href="contacts.find.html">contacts.find</a></li>
+</ul>
+
+<h2 id="arguments">Arguments</h2>
+
+<ul>
+  <li><a href="parameters/contactFields.html">contactFields</a></li>
+  <li><a href="parameters/contactSuccess.html">contactSuccess</a></li>
+  <li><a href="parameters/contactError.html">contactError</a></li>
+  <li><a href="parameters/contactFindOptions.html">contactFindOptions</a></li>
+</ul>
+
+<h2 id="objects">Objects</h2>
+
+<ul>
+  <li><a href="Contact/contact.html">Contact</a></li>
+  <li><a href="ContactName/contactname.html">ContactName</a></li>
+  <li><a href="ContactField/contactfield.html">ContactField</a></li>
+  <li><a href="ContactAddress/contactaddress.html">ContactAddress</a></li>
+  <li><a href="ContactOrganization/contactorganization.html">ContactOrganization</a></li>
+  <li><a href="ContactFindOptions/contactfindoptions.html">ContactFindOptions</a></li>
+  <li><a href="ContactError/contactError.html">ContactError</a></li>
+</ul>
+
+<h2 id="accessing-the-feature">Accessing the Feature</h2>
+
+<p>As of version 3.0, Cordova implements device-level APIs as <em>plugins</em>.
+Use the CLI’s <code class="language-plaintext highlighter-rouge">plugin</code> command, described in The Command-line
+Interface, to add or remove this feature for a project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova plugin add org.apache.cordova.contacts
+    $ cordova plugin ls
+    [ 'org.apache.cordova.contacts' ]
+    $ cordova plugin rm org.apache.cordova.contacts
+</code></pre></div></div>
+
+<p>These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:</p>
+
+<ul>
+  <li>
+    <p>Android</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in app/res/xml/config.xml)
+  &lt;feature name="Contacts"&gt;
+      &lt;param name="android-package" value="org.apache.cordova.contacts.ContactManager" /&gt;
+  &lt;/feature&gt;
+
+  (in app/AndroidManifest.xml)
+  &lt;uses-permission android:name="android.permission.READ_CONTACTS" /&gt;
+  &lt;uses-permission android:name="android.permission.WRITE_CONTACTS" /&gt;
+  &lt;uses-permission android:name="android.permission.GET_ACCOUNTS" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BlackBerry WebWorks</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in www/plugins.xml)
+  &lt;feature name="Contact"&gt;
+      &lt;param name="blackberry-package" value="org.apache.cordova.pim.Contact" /&gt;
+  &lt;/feature&gt;
+
+  (in www/config.xml)
+  &lt;feature id="blackberry.find"        required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.identity"    required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.pim.Address" required="true" version="1.0.0.0" /&gt;
+  &lt;feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" /&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>iOS (in <code class="language-plaintext highlighter-rouge">config.xml</code>)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;feature name="Contacts"&gt;
+      &lt;param name="ios-package" value="CDVContacts" /&gt;
+  &lt;/feature&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Windows Phone</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  (in Properties/WPAppManifest.xml)
+  &lt;Capabilities&gt;
+      &lt;Capability Name="ID_CAP_CONTACTS" /&gt;
+  &lt;/Capabilities&gt;
+</code></pre></div>    </div>
+
+    <p>Reference: <a href="http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx">Application Manifest for Windows Phone</a></p>
+  </li>
+</ul>
+
+<p>Some platforms may support this feature without requiring any special
+configuration.  See <em>Platform Support</em> in the <a href="../../guide/overview/index.html">Overview</a> section.</p>

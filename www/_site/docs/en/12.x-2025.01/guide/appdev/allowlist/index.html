@@ -1,0 +1,180 @@
+<h1 id="allow-list">Allow List</h1>
+
+<p>Domain allow listing is a security model that controls access to external domains over which your application has no control. Cordova provides a configurable security policy to define which external sites may be accessed.</p>
+
+<p>By default, new apps are configured to allow access to any site. Before moving your application to production, you should formulate an allow list to provide access to specific network domains and subdomains.</p>
+
+<p>While it is possible to implement your own allow list plugin, it is not recommended unless your app needs a very specific security policy.</p>
+
+<h2 id="network-request-allow-list">Network Request Allow List</h2>
+
+<p>Cordova adheres to the <a href="https://www.w3.org/TR/widgets-access/">W3C Widget Access</a> specification, which relies on the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> element within the app’s <code class="language-plaintext highlighter-rouge">config.xml</code> file, which is located in the project’s top-level directory.</p>
+
+<p>This controls which network requests (images, XHRs, etc) are allowed to be made to specific domains (via cordova native hooks).</p>
+
+<p>Note: It is suggested to use a <a href="#Content-Security-Policy-(CSP)">Content Security Policy (CSP)</a> (see below), which is more secure. This network request allow list is mostly historical for webviews which do not support CSP.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">config.xml</code>, add <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> tags, like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Allow images, xhrs, etc. to google.com --&gt;</span>
+<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://google.com"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"https://google.com"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Access to the subdomain maps.google.com --&gt;</span>
+<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://maps.google.com"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Access to all the subdomains on google.com --&gt;</span>
+<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"http://*.google.com"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Enable requests to content: URLs --&gt;</span>
+<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"content:///*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Don't block any requests --&gt;</span>
+<span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Without any <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> tags, only requests to the location where the app content is served are allowed.</p>
+
+<p>Note: Allow List cannot block network redirects from a allow listed remote website (i.e. <code class="language-plaintext highlighter-rouge">http</code> or <code class="language-plaintext highlighter-rouge">https</code>) to a non-allowlisted website. Use CSP rules to mitigate redirects to non-allowlisted websites for webviews that support CSP.</p>
+
+<p>Be aware that some websites may automatically redirect from their home page to a different url. Example scenarios could be, but not limited to:</p>
+
+<ul>
+  <li>Redirecting <code class="language-plaintext highlighter-rouge">http</code> protocol requests to the secure <code class="language-plaintext highlighter-rouge">https</code> SSL/TSL protocol.</li>
+  <li>Redirecting to country-specific domain. E.g. <code class="language-plaintext highlighter-rouge">https://www.google.com</code> to redirect to <code class="language-plaintext highlighter-rouge">https://www.google.co.uk</code> based on device geography.</li>
+</ul>
+
+<p>Such scenarios may require modified or adding to the allow list additional entries beyond your initial requirement. Please consider this when building the app’s allow list.</p>
+
+<p>Quirk: Android also allows requests to https://ssl.gstatic.com/accessibility/javascript/android/ by default, since this is required for TalkBack to function properly.</p>
+
+<h2 id="navigation-allow-list">Navigation Allow List</h2>
+
+<p>This controls which URLs the WebView itself can be navigated to. It applies only to top-level navigations.</p>
+
+<p>By default navigations are only allowed to <code class="language-plaintext highlighter-rouge">file://</code> URLs. To allow others URLs, you must add <code class="language-plaintext highlighter-rouge">&lt;allow-navigation&gt;</code> tags to your <code class="language-plaintext highlighter-rouge">config.xml</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Allow links to example.com --&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"http://example.com/*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Wildcards are allowed for the protocol, as a prefix
+     to the host, or as a suffix to the path --&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"*://*.example.com/*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- 
+    A wildcard can be used to allow the entire network, over HTTP and HTTPS.
+    This is *NOT RECOMMENDED*
+--&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- The above is equivalent to these three declarations --&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"data:*"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Quirks: on Android it also applies to iframes for non-http(s) schemes.</p>
+
+<h2 id="intent-allow-list">Intent Allow List</h2>
+
+<p>This controls which URLs the app is allowed to ask the system to open.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">config.xml</code>, add <code class="language-plaintext highlighter-rouge">&lt;allow-intent&gt;</code> tags, like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Allow links to web pages to open in a browser --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://*/*"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"https://*/*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Allow links to example.com to open in a browser --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"http://example.com/*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Wildcards are allowed for the protocol, as a prefix
+     to the host, or as a suffix to the path --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"*://*.example.com/*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Allow SMS links to open messaging app --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"sms:*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Allow tel: links to open the dialer --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"tel:*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Allow geo: links to open maps --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"geo:*"</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- Allow all unrecognized URLs to open installed apps
+     *NOT RECOMMENDED* --&gt;</span>
+<span class="nt">&lt;allow-intent</span> <span class="na">href=</span><span class="s">"*"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Without any <code class="language-plaintext highlighter-rouge">&lt;allow-intent&gt;</code> tags, no requests to external URLs are allowed. However, the default Cordova application includes a quite liberal set of <code class="language-plaintext highlighter-rouge">allow-intent</code> entries by default. It is advised to narrow this down based on each app’s needs.</p>
+
+<p>On Android, this equates to sending an intent of type <strong>BROWSEABLE</strong>.</p>
+
+<p>This allow list applies only to the main Cordova webview, and does not apply to any plugins, for example the InAppBrowser webview, or opening links in the system web browser. It is only aplied to <strong>hyperlinks</strong> and calls to <code class="language-plaintext highlighter-rouge">window.open()</code>.</p>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">allow-navigation</code> takes precedence over <code class="language-plaintext highlighter-rouge">allow-intent</code>. Allowing navigation to all URLs with <code class="language-plaintext highlighter-rouge">&lt;allow-navigation href="*" /&gt;</code> for example has the side effect of “capturing” all intents, so the webview navigates to them instead of triggering e.g. external apps.</p>
+
+<h2 id="content-security-policy-csp">Content Security Policy (CSP)</h2>
+
+<p>Controls which network requests (images, XHRs, etc) are allowed to be made (via webview directly).</p>
+
+<p>On Android and iOS, the network request allow list (see above) is not able to filter all types of requests (e.g. <code class="language-plaintext highlighter-rouge">&lt;video&gt;</code> &amp; WebSockets are not blocked). So, in addition to the allow list, you should use a <a href="http://content-security-policy.com/">Content Security Policy</a> <code class="language-plaintext highlighter-rouge">&lt;meta&gt;</code> tag on all of your pages.</p>
+
+<p>Here are some example CSP declarations for your <code class="language-plaintext highlighter-rouge">.html</code> pages:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Good default declaration:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+--&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' data: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Allow everything but only from the same origin and foo.com --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' foo.com"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that 
+    * CSS only from the same origin and inline styles,
+    * scripts only from the same origin and inline styles, and eval()
+--&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Allows XHRs only over HTTPS on the same domain. --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' https:"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Allow iframe to https://cordova.apache.org/ --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self'; frame-src 'self' https://cordova.apache.org"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="other-notes">Other Notes</h2>
+
+<p><a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33">Application Transport Security (ATS)</a> is new in iOS 9 (Xcode 7). This new feature acts as an allow list for your app. Cordova CLI will automatically convert the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;allow-navigation&gt;</code> tags to the appropriate ATS directives.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;allow-navigation&gt;</code> tags support these three attributes below, which have their equivalents in ATS:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">minimum-tls-version</code> (String, defaults to ‘TLSv1.2’)</li>
+  <li><code class="language-plaintext highlighter-rouge">requires-forward-secrecy</code> (Boolean, defaults to ‘true’)</li>
+  <li><code class="language-plaintext highlighter-rouge">requires-certificate-transparency</code> (Boolean, defaults to ‘false’, new in iOS 10)</li>
+</ol>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'https://cordova.apache.org'</span> <span class="na">minimum-tls-version=</span><span class="s">'TLSv1.1'</span> <span class="na">requires-forward-secrecy=</span><span class="s">'false'</span> <span class="na">requires-certificate-transparency=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>In iOS 10 and above, the <code class="language-plaintext highlighter-rouge">&lt;access&gt;</code> tag also supports these three attributes, described below, when paired with the origin wildcard <code class="language-plaintext highlighter-rouge">*</code>. These attributes also have their equivalents in ATS:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">allows-arbitrary-loads-for-media</code> (Boolean, defaults to ‘false’, new in iOS 10. New in cordova-ios@4.5.0, fixed to use the proper attribute name). The old attribute <code class="language-plaintext highlighter-rouge">allows-arbitrary-loads-in-media</code> is now deprecated.</li>
+  <li><code class="language-plaintext highlighter-rouge">allows-arbitrary-loads-in-web-content</code> (Boolean, defaults to ‘false’, new in iOS 10)</li>
+  <li><code class="language-plaintext highlighter-rouge">allows-local-networking</code> (Boolean, defaults to ‘false’, new in iOS 10)</li>
+</ol>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;access</span> <span class="na">origin=</span><span class="s">'*'</span> <span class="na">allows-arbitrary-loads-for-media=</span><span class="s">'true'</span> <span class="na">allows-arbitrary-loads-in-web-content=</span><span class="s">'true'</span> <span class="na">allows-local-networking=</span><span class="s">'true'</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>See the <a href="https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33">ATS Technote</a> for more details.</p>
+

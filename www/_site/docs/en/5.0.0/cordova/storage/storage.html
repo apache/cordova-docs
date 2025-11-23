@@ -1,0 +1,54 @@
+<h1 id="storage">Storage</h1>
+
+<blockquote>
+  <p>An overview of storage options for Cordova.</p>
+</blockquote>
+
+<p>Several storage APIs are available for Cordova applications.
+See
+<a href="http://www.html5rocks.com/en/features/storage">html5rocks</a>.
+for a more complete overview and examples.</p>
+
+<h2 id="localstorage">LocalStorage</h2>
+
+<p>Also known as <em>web storage</em>, <em>simple storage</em>, or by its alternate
+<em>session storage</em> interface, this API provides synchronous key/value
+pair storage, and is available in underlying WebView implementations.
+Refer to <a href="http://www.w3.org/TR/webstorage/">the W3C spec</a> for details.</p>
+
+<h2 id="websql">WebSQL</h2>
+
+<p>This API is available in the underlying WebView.
+The <a href="http://dev.w3.org/html5/webdatabase/">Web SQL Database Specification</a>
+offers more full-featured database tables accessed via SQL queries.</p>
+
+<p>The following platforms support WebSQL:</p>
+
+<ul>
+  <li>Android</li>
+  <li>BlackBerry 10</li>
+  <li>iOS</li>
+  <li>Tizen</li>
+</ul>
+
+<h2 id="indexeddb">IndexedDB</h2>
+
+<p>This API is available in the underlying WebView.
+<a href="http://www.w3.org/TR/IndexedDB/">Indexed DB</a> offers more features
+than LocalStorage but fewer than WebSQL.</p>
+
+<p>The following platforms support IndexedDB:</p>
+
+<ul>
+  <li>BlackBerry 10</li>
+  <li>Firefox OS</li>
+  <li>Windows Phone 8</li>
+  <li>Windows 8</li>
+</ul>
+
+<h2 id="plugin-based-options">Plugin-Based Options</h2>
+
+<p>In addition to the storage APIs listed above, the
+<a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">File API</a>
+allows you to cache data on the local file system.  Other
+<a href="http://plugins.cordova.io/">Cordova plugins</a> provide similar storage options.</p>
