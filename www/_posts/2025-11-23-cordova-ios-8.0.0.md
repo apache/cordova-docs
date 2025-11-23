@@ -69,4 +69,4 @@ For plugin authors, we've written a guide about [Upgrading Plugins to Cordova iO
     * Added nullability annotations to several classes and API methods.
     * New [API documentation](https://apache.github.io/cordova-ios/) is published for the CordovaLib classes.
 
-The full changelog is available to read [here](https://github.com/apache/cordova-ios/blob/rel/8.0.0/RELEASENOTES.md). Please report any issues you find on our [Cordova-iOS](https://github.com/apache/cordova-iOS/issues) GitHub issue tracker!
+The full changelog is available to read [here](https://github.com/apache/cordova-ios/blob/rel/8.0.0/RELEASENOTES.md). Please report any issues you find on our [Cordova-iOS](https://github.com/apache/cordova-ios/issues) GitHub issue tracker!
