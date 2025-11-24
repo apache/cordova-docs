@@ -56,7 +56,7 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
                 <ul>
                     <li>Cocoapods: >=1.16.0</li>
                     <li>ios-deploy: >=1.12.2</li>
-                    <li>Node: >=20.5.0</li>
+                    <li>Node: >=20.17.0</li>
                     <li>Xcode (xcodebuild): >=15.0.0</li>
                 </ul>
             </td>
@@ -114,7 +114,7 @@ There are two ways to download Xcode:
 
 Once Xcode is installed, several command-line tools need to be enabled
 for Cordova to run. From the command line, run:
-```bash
+```zsh
 $ xcode-select --install
 ```
 
@@ -125,7 +125,7 @@ to launch iOS apps on an iOS Device from the command-line.
 
 Install ios-deploy via [Homebrew](https://brew.sh/) by running:
 
-```bash
+```zsh
 $ brew install ios-deploy
 ```
 
@@ -135,7 +135,7 @@ The [CocoaPods](https://cocoapods.org/#install) tools are needed to build iOS ap
 
 To install CocoaPods, run the following from command-line terminal:
 
-```bash
+```zsh
 $ brew install cocoapods
 ```
 
@@ -149,15 +149,15 @@ For more details on installing and using the CLI, refer to [Create your first ap
 
 To preview the app in the iOS simulator:
 
-1. Open the workspace file (`platforms/ios/HelloWorld.xcworkspace`) from Xcode, _or_ from the command line:
+1. Open the workspace file (`platforms/ios/App.xcworkspace`) from Xcode, _or_ from the command line:
 
-    ```bash
-    $ open ./platforms/ios/HelloWorld.xcworkspace/
+    ```zsh
+    $ open ./platforms/ios/App.xcworkspace/
     ```
 
 2. Make sure the `HelloWorld` project is selected in the left panel (1).
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode10-run-project.png)
+   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode26-helloworld-run-project.png)
 
 3. Select the intended device from the toolbar's __Scheme__ menu, such
    as the iPhone XR Simulator as highlighted in (2)
@@ -167,7 +167,7 @@ To preview the app in the iOS simulator:
    application in the simulator. A separate simulator application opens
    to display the app:
 
-   ![]({{ site.baseurl }}/static/img/guide/platforms/ios/HelloWorld-running-xr.png)
+   <img src="{{ site.baseurl }}/static/img/guide/platforms/ios/xcode26-helloworld-running-simulator.png" alt="iOS Simulator" width="400"/>
 
    Only one simulator may run at a time, so if you want to test the app
    in a different simulator, you need to quit the simulator application
@@ -290,8 +290,10 @@ There is also support to mix and match command line arguments and parameters in 
 
 If you have a custom situation where you need to pass additional build flags to Xcode you would use one or more `--buildFlag` options to pass these flags to `xcodebuild`. If you use an `xcodebuild` built-in flag, it will show a warning.
 
-    cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
-    cordova run --device --buildFlag="DEVELOPMENT_TEAM=FG35JLLMXX4A" --buildFlag="-scheme TestSchemeFlag"
+```zsh
+cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
+cordova run --device --buildFlag="DEVELOPMENT_TEAM=FG35JLLMXX4A" --buildFlag="-scheme TestSchemeFlag"
+```
 
 You can also specify a `buildFlag` option in [`build.json` above](#using-buildjson) (the value for the `buildFlag` key is a string or an array of strings).
 
@@ -306,69 +308,29 @@ Cordova for iOS projects can be opened in Xcode. This can be useful if
 you wish to use Xcode built in debugging/profiling tools or if you are
 developing iOS plugins. Please note that when opening your project in Xcode,
 it is recommended that you do NOT edit your code in the IDE. This will edit the code
-in the ```platforms``` folder of your project (not ```www```), and changes are liable to be overwritten.
-Instead, edit the ```www``` folder and copy over your changes by running ```cordova build```.
+in the `platforms` folder of your project (not `www`), and changes are liable to be overwritten.
+Instead, edit the `www` folder and copy over your changes by running `cordova build`.
 
-Plugin developers wishing to edit their native code in the IDE should use the ```--link``` flag when adding their
+Plugin developers wishing to edit their native code in the IDE should use the `--link` flag when adding their
 plugin to the project via cordova plugin add. This will link the files so that changes to the plugin files in the
 platforms folder are reflected in your plugin's source folder (and vice versa).
 
-Once the ios platform is added to your project and built using ```cordova build```, you can open it from
-within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcworkspace`
+Once the ios platform is added to your project and built using `cordova build`, you can open it from
+within Xcode. Double-click to open the `${PROJECT_NAME}/platforms/ios/App.xcworkspace`
 file or open Xcode from your terminal:
 
-```bash
-$ open -a Xcode platforms/ios
+```zsh
+$ open -a Xcode platforms/ios/App.xcworkspace
 ```
 
 The screen should look like this:
 
-![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode10-review-settings.png)
-
-## Platform Centered Workflow
-
-cordova-ios includes a number of scripts that allow the platform to be used
-without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform cordova CLI.
-For example, you need to use shell tools when deploying a custom
-Cordova WebView alongside native components. Before using this
-development path, you must still configure the SDK environment
-as described in [Requirements and Support](#link-requirements-and-support)
-above.
-
-For each of the scripts discussed below, refer to
- [Cordova CLI Reference][cli] for more information on their
-arguments and usage. Each script has a name that matches the corresponding CLI
-command. For example, `cordova-ios/bin/create` is equivalent to
-`cordova create`.
-
-To get started, either download the cordova-ios package from
-[npm](https://www.npmjs.com/package/cordova-ios) or
-[Github](https://github.com/apache/cordova-ios).
-
-To create a project using this package, run the `create` script in the `bin`
-folder:
-
-```bash
-$ cordova-ios/bin/create ...
-```
-
-To run the app, use the `run` script in the `bin` folder:
-
-```bash
-$ cordova-ios/bin/run
-```
-
-The created project will have a folder named `cordova` inside that contains
-scripts for the project-specific Cordova commands (e.g. `run`, `build`, etc.).
-
-To install plugins in this project, use the [Cordova Plugman Utility](../../../plugin_ref/plugman.html).
+![]({{ site.baseurl }}/static/img/guide/platforms/ios/xcode26-helloworld-general-settings.png)
 
 ## Upgrading
 
 Refer to [this](./upgrade.html) article for instructions to upgrade your ```cordova-ios``` version.
 
-
-(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
+(macOS®, Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
 
 [cli]: ../../../reference/cordova-cli/index.html
