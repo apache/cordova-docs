@@ -24,268 +24,100 @@ description: Develop your own Cordova plugin.
 
 # Create a Plugin
 
-A _plugin_ is a package of injected code that allows the Cordova webview within
-which the app renders to communicate with the native platform on
-which it runs.  Plugins provide access to device and platform
-functionality that is ordinarily unavailable to web-based apps. All
-the main Cordova API features are implemented as plugins, and many
-others are available that enable features such as bar code scanners,
-NFC communication, or to tailor calendar interfaces. You can search for available plugins
-on [Cordova Plugin Search page](/plugins/).
+- [Create a Plugin](#create-a-plugin)
+  - [Creating an npm Package](#creating-an-npm-package)
+    - [Updating the npm Package for Cordova](#updating-the-npm-package-for-cordova)
+      - [Adding the plugin's `id`](#adding-the-plugins-id)
+      - [Specifying supported platforms](#specifying-supported-platforms)
+      - [Adding keywords for discoverability](#adding-keywords-for-discoverability)
+      - [Adding engine requirements](#adding-engine-requirements)
+        - [Upper Bounds](#upper-bounds)
+  - [Creating the `plugin.xml` file](#creating-the-pluginxml-file)
+  - [Adding a Front-End JavaScript API](#adding-a-front-end-javascript-api)
+    - [`cordova.exec` Command Syntax](#cordovaexec-command-syntax)
+    - [Creating the `www/api.js` File](#creating-the-wwwapijs-file)
+    - [Injecting the JavaScript API to the `window` Object](#injecting-the-javascript-api-to-the-window-object)
+  - [Implementing Native Interfaces](#implementing-native-interfaces)
+  - [Testing a Plugin during development](#testing-a-plugin-during-development)
+  - [Publishing Plugins](#publishing-plugins)
 
-Plugins comprise a single JavaScript interface along with
-corresponding native code libraries for each supported platform.  In essence
-this hides the various native code implementations behind a common
-JavaScript interface.
+A Cordova _plugin_ is a package that enables the Cordova apps to access native device features and functionality that is ordinarily unavailable to web-based apps. All of the core Cordova API features are implemented as plugins. Many third-party plugins are also available to provide additional capabilities such as barcode scanning, near-field communication (NFC), push notification, or even customizing interfaces.
 
-This section steps through a simple _echo_ plugin that passes a string from
-JavaScript to the native platform and back, one that you can use as a
-model to build far more complex features.  This section discusses the
-basic plugin structure and the outward-facing JavaScript interface.
-For each corresponding native interface, see the list at the end of
-this section.
+Check out these locations for Cordova plugins:
 
-In addition to these instructions, when preparing to write a plugin it
-is best to look over [existing plugins](https://cordova.apache.org/contribute)
-for guidance.
+- Official Apache Cordova plugins on the [Cordova Plugin page](/plugins/).
+- Third-party plugins on the [npmjs registry](https://www.npmjs.com/search?q=keywords:ecosystem:cordova).
 
-## Building a Plugin
+Plugins usually consist of a JavaScript interface paired with corresponding platform-native code. In essence, this hides the platform-specific native implementations behind a common JavaScript interface.
 
-Application developers use the CLI's [plugin add command][cdv_plugin] to add a plugin to a project. The
-command takes the URL for a _git_ repository containing
-the plugin code as an argument.  This example implements Cordova's Device API:
+This page will walk through the steps to create a basic _echo_ plugin that passes a string from the front-end JavaScript to the native platform and back. The purpose of this guide is to provide a model for how to build and publish a Cordova plugin. It focuses on the fundamentals of plugin structure and the outward-facing JavaScript interface.
 
-```bash
-cordova plugin add https://github.com/apache/cordova-plugin-device
+For the corresponding native implementations, see the list at the end of this section.
+
+In addition to following these instructions, it is recommended to review [existing plugins](https://cordova.apache.org/contribute) for further guidance.
+
+## Creating an npm Package
+
+In essence, a Cordova plugin is an extension of an npm package. By leveraging the npm ecosystem, plugin developers can easily publish their plugins to the npm registry, allowing app developers to install them into their Cordova apps using the Cordova CLI.
+
+Even if you don't plan to publish your plugin publicly, you still need to structure it as an npm package for installation purposes. The [`cordova plugin add`][cdv_plugin] command relies on npm under the hood to fetch and install plugins.
+
+First, we'll create the directory for our `echo` plugin and change to this newly created directory:
+
+```zsh
+mkdir cordova-plugin-echo
+cd cordova-plugin-echo
 ```
 
-If the plugin is published to _npm_, the command can also receive the package name as the argument:
+Next, we'll initialize it as an npm package using the `npm init` command. In this example, we'll accept all default values for the initialization process by appending the `-y` flag. If you want to customize the values, you can omit the flag or change the values later by editing the `package.json` file.
 
-```bash
-cordova plugin add cordova-plugin-device
+```zsh
+npm init -y
 ```
 
-The plugin repository must feature a top-level `plugin.xml` manifest
-file. There are many ways to configure this file, details for which
-are available in the [Plugin Specification](../../../plugin_ref/spec.html).
+**One important note:** the directory name `cordova-plugin-echo` will be used as the default package name and will be published as such to the npm registry. If the name is already taken, you'll need to choose a different name or use [scoped packages](https://docs.npmjs.com/cli/v10/using-npm/scope).
 
-This abbreviated version of the `Device` plugin provides a simple example to use as a model:
+### Updating the npm Package for Cordova
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-device" version="0.2.3">
-    <name>Device</name>
-    <description>Cordova Device Plugin</description>
-    <license>Apache 2.0</license>
-    <keywords>cordova,device</keywords>
-    <js-module src="www/device.js" name="device">
-        <clobbers target="device" />
-    </js-module>
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Device">
-                <param name="ios-package" value="CDVDevice"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/CDVDevice.h" />
-        <source-file src="src/ios/CDVDevice.m" />
-    </platform>
-</plugin>
+In addition to the standard properties that the `package.json` file includes for npm, Cordova-specific properties will also be added. These are necessary to define the plugin's ID, supported platforms, relevant keywords for discoverability, and engine requirements.
+
+#### Adding the plugin's `id`
+
+This uniquely identifies your plugin within the Cordova ecosystem. It's generally recommended to match the plugin ID with the npm package name so that when a Cordova project is restored using the `cordova prepare` command, the package can be easily located in the npm registry.
+
+```zsh
+npm pkg set cordova.id=cordova-plugin-echo
 ```
 
-- The top-level `plugin` tag's `id` attribute usually follows the `cordova-plugin-{plugin name}` schema and matches the plugin's npm package name.
-- The `js-module` tag specifies the path to the [common
-JavaScript interface](#the-javascript-interface).
-- The `platform` tag specifies a corresponding
-set of native code, for the `ios` platform in this case.
-- The `config-file` tag encapsulates a `feature` tag that is injected into
-the platform-specific `config.xml` file to make the platform aware of
-the additional code library.
-- The `header-file` and `source-file` tags
-specify the path to the library's component files.
+#### Specifying supported platforms
 
-## The JavaScript Interface
+The following example shows how to add support for both Android and iOS. You can modify this to include only the platforms your plugin supports.
 
-The JavaScript interface provides the front-facing interface, making it perhaps
-the most important part of the plugin.  You can structure your
-plugin's JavaScript however you like, but you need to call
-`cordova.exec` to communicate with the native platform, using the
-following syntax:
-
-```javascript
-cordova.exec(function(winParam) {},
-             function(error) {},
-             "service",
-             "action",
-             ["firstArgument", "secondArgument", 42, false]);
+```zsh
+npm pkg set "cordova.platforms[]=android"
+npm pkg set "cordova.platforms[]=ios"
 ```
 
-Here is how each parameter works:
+#### Adding keywords for discoverability
 
-- `function(winParam) {}`: A success callback function. Assuming your
-  `exec` call completes successfully, this function executes along
-  with any parameters you pass to it.
+Keywords help others find your plugin via search.
 
-- `function(error) {}`: An error callback function. If the operation
-  does not complete successfully, this function executes with an
-  optional error parameter.
-
-- `"service"`: The service name to call on the native side. This
-  corresponds to a native class, for which more information is
-  available in the native guides listed below.
-
-- `"action"`: The action name to call on the native side. This
-  generally corresponds to the native class method. See the native
-  guides listed below.
-
-- `[/* arguments */]`: An array of arguments to pass into the native
-  environment.
-
-## Sample JavaScript
-
-This example shows one way to implement the plugin's JavaScript
-interface:
-
-```javascript
-window.echo = function(str, callback) {
-    cordova.exec(callback, function(err) {
-        callback('Nothing to echo.');
-    }, "Echo", "echo", [str]);
-};
+```zsh
+npm pkg set "keywords[]=cordova"
+npm pkg set "keywords[]=echosystem:cordova"
+npm pkg set "keywords[]=cordova-android"
+npm pkg set "keywords[]=cordova-ios"
 ```
 
-In this example, the plugin attaches itself to the `window` object as
-the `echo` function, which plugin users would call as follows:
+#### Adding engine requirements
 
-```javascript
-window.echo("echome", function(echoValue) {
-    alert(echoValue == "echome"); // should alert true.
-});
-```
+**Cordova 6.1.0** added support for specifying the Cordova-related dependencies of a plugin as part of the plugin's `package.json` file. Plugins may list the dependencies for multiple releases to provide guidance to the Cordova CLI when it is selecting the version of a plugin to fetch from npm. The CLI will choose the latest release of a plugin that is compatible with the local project's installed platforms and plugins as well as the the local Cordova CLI version. If no releases of the plugin are compatible, the CLI will warn the user about the failed requirements and fall back to the old behavior of fetching the latest release.
 
-Look at the last three arguments passed to the `cordova.exec` function. The
-first calls the `Echo` _service_, a class name. The second requests
-the `echo` _action_, a method within that class. The third is an array
-of arguments containing the echo string, which is the `window.echo`
-function's first parameter.
+This feature is intended to eventually replace the [engines element](../../../plugin_ref/spec.html#engines-and-engine) in `plugin.xml`.
 
-The success callback passed into `exec` is simply a reference to the
-callback function of `window.echo`. If the native platform fires
-the error callback, it simply calls the success callback and passes it
-a default string.
+Listing dependencies is a good way to ensure that your plugin will not appear broken or cause build errors when fetched from npm. If the latest release of the plugin is not compatible with a project, the CLI will give the app developer a list of unmet project requirements so that they are aware of incompatibilites and can update their project to support your plugin. This allows your plugin to respond to breaking changes without fear of confusing devlopers who are building against old platforms and plugins.
 
-## Native Interfaces
-
-Once you define JavaScript for your plugin, you need to complement it
-with at least one native implementation. Details for each platform are
-listed below, and each builds on the simple Echo Plugin example above:
-
-- [Android Plugins](../../platforms/android/plugin.html)
-- [iOS Plugins](../../platforms/ios/plugin.html)
-
-## Testing a Plugin during development
-
-The simplest way to manually test a plugin during development is to create a
-Cordova app as usual and add the plugin with the `--link` option:
-
-```bash
-cordova plugin add ../path/to/my/plugin/relative/to/project --link
-```
-
-This creates a symbolic link instead of copying the plugin files, which enables you to work on your plugin and then simply rebuild the app to use your changes. The plugin should be added after the platform, or the link will not work. The link will also be lost if you re-add the platform or [restore the project](../../../platform_plugin_versioning_ref/index.md) with `cordova prepare`. In that case, you'll need to re-add the plugin to restore the link.
-
-## Validating a Plugin using Plugman
-
-You can use the `plugman` utility to check whether the plugin installs
-correctly for each platform.  Install `plugman` with the following
-[node](https://nodejs.org/) command:
-
-```bash
-npm install -g plugman
-```
-
-You need a valid app source directory, such as the top-level `www`
-directory included in a default CLI-generated project, as described in the
-[Create your first app](../../cli/index.html) guide.
-
-Then run a command such as the following to test whether iOS
-dependencies load properly:
-
-```bash
-plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
-```
-
-For details on `plugman` options, see [Using Plugman to Manage Plugins](../../../plugin_ref/plugman.html). For information on how to actually _debug_ plugins, see [each platform's native interface listed above](#native-interfaces).
-
-## Publishing Plugins
-
-You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [npm registry](https://www.npmjs.com). Other developers can install your plugin automatically using either `plugman` or the Cordova CLI.
-
-To publish a plugin to npm you need to follow these steps:
-
-  * install the `plugman` CLI:
-
-    ```bash
-    $ npm install -g plugman
-    ```
-
-  * create a `package.json` file for your plugin:
-
-    ```bash
-    $ plugman createpackagejson /path/to/your/plugin
-    ```
-
-  * publish it:
-
-    ```bash
-    $ npm adduser # that is if you don't have an account yet
-    $ npm publish /path/to/your/plugin
-    ```
-
-For more details on npm usage, refer to [Publishing npm Packages](https://docs.npmjs.com/getting-started/publishing-npm-packages) on the npm documentation site.
-
-## Integrating with Plugin Search
-
-To surface the plugin in [Cordova Plugin Search](/plugins/), add the `ecosystem:cordova` keyword to the `package.json` file of your plugin before publishing.
-
-To indicate support for a particular platform, add a keyword in the format `cordova-<platformName>` to the list of keywords in `package.json`.
-Plugman's `createpackagejson` command does this for you, but if you did not use it to generate your `package.json`, you should manually edit it as shown below.
-
-For example, for a plugin that supports Android & iOS the keywords in `package.json` should include:
-
-```json
-"keywords": [
-    "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios"
-]
-```
-
-For a more detailed example of a package.json, review the [package.json file of cordova-plugin-device](https://github.com/apache/cordova-plugin-device/blob/master/package.json).
-
-## Specifying Cordova Dependencies
-
-**Cordova 6.1.0** added support for specifying the Cordova-related dependencies of a plugin
-as part of the plugin's `package.json` file. Plugins may list the dependencies for multiple
-releases to provide guidance to the Cordova CLI when it is selecting the version of a
-plugin to fetch from npm. The CLI will choose the latest release of a plugin that is
-compatible with the local project's installed platforms and plugins as well as the
-the local Cordova CLI version. If no releases of the plugin are compatible, the CLI will warn
-the user about the failed requirements and fall back to the old behavior of fetching the
-latest release.
-
-This feature is intended to eventually replace the [engines element](../../../plugin_ref/spec.html#engines-and-engine) in plugin.xml.
-Listing dependencies is a good way to ensure that your plugin will not appear broken or cause
-build errors when fetched from npm. If the latest release of the plugin is not compatible with
-a project, the CLI will give the app developer a list of unmet project requirements so that
-they are aware of incompatibilites and can update their project to support your plugin. This
-allows your plugin to respond to breaking changes without fear of confusing devlopers who
-are building against old platforms and plugins.
-
-To specify Cordova-related dependencies for a plugin, alter the `engines` element in
-`package.json` to include a `cordovaDependencies` object with the following
-structure:
+To specify Cordova-related dependencies for a plugin, alter the `engines` element in `package.json` to include a `cordovaDependencies` object with the following structure:
 
 ```javascript
 "engines": {
@@ -307,14 +139,9 @@ structure:
     * Another Cordova plugin: `"cordova-plugin-camera"`, etc.
 * `SEMVER_RANGE` should adhere to the syntax for a range as defined by [npm's semver package][npm-semver]
 
-**NOTE:** A Cordova platform `DEPENDENCY` refers to the Cordova platform and not
-the OS, i.e. `cordova-android` rather than the Android OS.
+**NOTE:** A Cordova platform `DEPENDENCY` refers to the Cordova platform and not the OS, i.e. `cordova-android` rather than the Android OS.
 
-Your `cordovaDependencies` may list any number of `PLUGIN_VERSION` requirements
-and any number of `DEPENDENCY` constraints. Versions of your plugin
-that do not have their dependencies listed will be assumed to have the same
-dependency information as the highest `PLUGIN_VERSION` listed below them. For
-example, consider the following entry:
+Your `cordovaDependencies` may list any number of `PLUGIN_VERSION` requirements and any number of `DEPENDENCY` constraints. Versions of your plugin that do not have their dependencies listed will be assumed to have the same dependency information as the highest `PLUGIN_VERSION` listed below them. For example, consider the following entry:
 
 ```javascript
 "engines": {
@@ -324,22 +151,12 @@ example, consider the following entry:
     }
 }
 ```
-All plugin versions below the lowest entry (1.0.0 in this example) are assumed
-to have no dependencies. Any version of the plugin between 1.0.0 and 2.1.0 is
-assumed to have the same dependencies as version 1.0.0 (a cordova-android
-version less than 3.0.0). This lets you only update your `cordovaDependencies`
+All plugin versions below the lowest entry (1.0.0 in this example) are assumed to have no dependencies. Any version of the plugin between 1.0.0 and 2.1.0 is assumed to have the same dependencies as version 1.0.0 (a cordova-android version less than 3.0.0). This lets you only update your `cordovaDependencies`
 information when there are breaking changes.
 
-### Upper Bounds
+##### Upper Bounds
 
-In addition to a single version, a `PLUGIN_VERSION` in `cordovaDependencies`
-may also specify an upper bound to amend entries for older releases
-of your plugin. This is useful when a breaking change occurs in a `DEPENDENCY`
-and a new constraint must be added for all older versions of a plugin that do
-not support it. These bounds should be written as a `<` followed by a single
-[semver][npm-semver] version (**Not an arbitrary range!**). This will apply
-whatever `DEPENDENCY` values are given to all versions of the plugin below the
-specified version. For example, consider the following entry:
+In addition to a single version, a `PLUGIN_VERSION` in `cordovaDependencies` may also specify an upper bound to amend entries for older releases of your plugin. This is useful when a breaking change occurs in a `DEPENDENCY` and a new constraint must be added for all older versions of a plugin that do not support it. These bounds should be written as a `<` followed by a single [semver][npm-semver] version (**Not an arbitrary range!**). This will apply whatever `DEPENDENCY` values are given to all versions of the plugin below the specified version. For example, consider the following entry:
 
 ```javascript
 "engines": {
@@ -351,18 +168,134 @@ specified version. For example, consider the following entry:
 }
 ```
 
-Here we specify one plugin version (0.0.1) and two upper bounds (<1.0.0 and <2.0.0)
-that constrain cordova-ios. The two upper bounds do not override the constraint
-of 0.0.1, they are combined via AND at evaluation time. When the CLI checks the
-cordova-ios version of the project, the constraint that will be evaluated for
-plugin version 0.0.1 will be the combination of these three:
+Here we specify one plugin version (0.0.1) and two upper bounds (<1.0.0 and <2.0.0) that constrain cordova-ios. The two upper bounds do not override the constraint of 0.0.1, they are combined via AND at evaluation time. When the CLI checks the cordova-ios version of the project, the constraint that will be evaluated for plugin version 0.0.1 will be the combination of these three:
 
-```
-    cordova-ios >1.0.0 AND cordova-ios <2.0.0 AND cordova-ios <5.0.0
+> cordova-ios >1.0.0 AND cordova-ios <2.0.0 AND cordova-ios <5.0.0
+
+Please note that the only `PLUGIN_VERSION` values allowed are single versions or upper bounds; no other semver ranges are supported.
+
+## Creating the `plugin.xml` file
+
+Plugins must also be paired with a top-level `plugin.xml` manifest file. This file is used for configuring the plugin. See the [Plugin.xml Specification](../../../plugin_ref/spec.html) for more information of the elements that can be defined.
+
+Below is a simple example of the `plugin.xml` file that will be used for the `Echo` plugin and a model to follow for creating your own plugins.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-echo"
+    version="1.0.0">
+    <name>Echo</name>
+    <description>Cordova Echo Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugin,echo</keywords>
+</plugin>
 ```
 
-Please note that the only `PLUGIN_VERSION` values allowed are single versions or
-upper bounds; no other semver ranges are supported.
+> Note: The top-level `plugin` tag's `id` attribute usually follows the `cordova-plugin-{plugin name}` schema and matches the plugin's npm package name.
+
+## Adding a Front-End JavaScript API
+
+Plugin developers typically include a front-end JavaScript API. The primary purpose is to abstract away Cordova's internal APIs, eliminate the need for app developers to understand the specific naming of your plugin's service or methods, and simplify the overall usage of the plugin.
+
+### `cordova.exec` Command Syntax
+
+```javascript
+exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+```
+
+The `cordova.exec` method is what triggeres the request from the front-end WebView to the native side of the platform, invoking an action method on the specified service class with the provided arguments. Depending on the outcome, either the success or failure callback will be triggered.
+
+- **`successCallback`**: The first argument is the success callback. If the native operation completes successfully, this function is invoked with any returned data.
+- **`failCallback`**: The second argument is the error callback. If the operation fails, this function is called with an error object or message.
+- **`service`**: A string representing the service name on the native side. This typically matches a native class defined in your plugin.
+- **`action`**: A string representing the method name to invoke on the native service.
+- **`[arguments]`**: An array of arguments to be passed to the native method.
+
+### Creating the `www/api.js` File
+
+In this example, we'll create a folder named `www` in the plugin's root directory and add a file named `api.js`.
+
+> Note: The directory and file names are customizable and do not need to follow this exact structure. However, if you choose to rename the directory or file, be sure to update the corresponding `js-module` path in the `plugin.xml` file accordingly.
+
+The `www/api.js` file will contain the front-end JavaScript API. For this example, the contents of the Echo plugin will be as follows:
+
+```javascript
+const exec = require('cordova/exec');
+const serviceName = 'Echo';
+
+const Echo = function () { };
+
+Echo.prototype.echo = function (message) {
+    return new Promise((resolve, reject) => {
+        const _successCb = function (result) {
+            resolve(result);
+        };
+
+        const _errorCb = function (err) {
+            reject(new Error(err));
+        };
+
+        exec(_successCb, _errorCb, serviceName, 'echo', [message]);
+    });
+};
+
+module.exports = new Echo();
+```
+
+This example demonstrates how to build a front-end plugin API that returns a Promise, offering a modern and user-friendly interface for app developers.
+
+### Injecting the JavaScript API to the `window` Object
+
+To make the Echo JavaScript API available on the WebView's `window` object, we need to update the `plugin.xml` to add the injection our API using the `<js-module>` element.
+
+```xml
+<js-module src="www/api.js" name="Echo">
+    <clobbers target="Echo" />
+</js-module>
+```
+
+The above wil take the `www/api.js` and clobber it onto the `window` object as `window.Echo`.
+
+Usually, when supporting multiple platforms, all platforms has the same JavaScript API. In this case, the above XML does not need to be posted inside the `<platform>` element. If there was a case where each platform has their own own JavaScript file, then the `<js-module>` should be added to the `<platform>` element.
+
+## Implementing Native Interfaces
+
+Once you created the core structure of the plugin with the above section, we can how complement it with at least one native implementation.
+
+Details for each platform are listed below, and each section is a continuation of the simple Echo Plugin:
+
+- [Android Plugin Development Guide](../../platforms/android/plugin.html)
+- [iOS Plugin Development Guide](../../platforms/ios/plugin.html)
+
+## Testing a Plugin during development
+
+Usually, the simplest way to manually test a plugin during development is to create a Cordova app and add the plugin with the `--link` option:
+
+```zsh
+cordova plugin add ../path/to/my/plugin/relative/to/project --link
+```
+
+This will creates a symbolic link instead of copying the plugin files, which enables you to work on your plugin and then simply rebuild the app to use your changes. The plugin should be added after the platform, or the link will not work. The link will also be lost if you re-add the platform or [restore the project](../../../platform_plugin_versioning_ref/index.md) with `cordova prepare`. In that case, you'll need to re-add the plugin to restore the link.
+
+## Publishing Plugins
+
+You can publish your plugin to any `npmjs`-based registry, but the recommended one is the [npm registry](https://www.npmjs.com). This allows other developers to easily install your plugin using the Cordova CLI.
+
+To publish,
+
+```zsh
+$ npm adduser # that is if you don't have an account yet
+$ npm publish /path/to/your/plugin
+```
+
+If you do not plan to publish your plugin publicly, it is recommended to set the `private` flag in the `package.json` to `true` to prevent accidental publication.
+
+```zsh
+npm pkg set private=true --json
+```
+
+For more details on npm usage, refer to [Contributing packages to the registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) on the npm documentation site.
 
 [cdv_plugin]: ../../../reference/cordova-cli/index.html#cordova-plugin-command
 [npm-semver]: https://www.npmjs.com/package/semver

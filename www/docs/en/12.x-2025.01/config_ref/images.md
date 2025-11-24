@@ -45,19 +45,11 @@ width         | *Optional* <br/> Icon width in pixels
 height        | *Optional* <br/> Icon height in pixels
 target        | *Optional* <br/> {% cdv_platform electron %} <br/> Set target to supply unique icons for `app` and `installer`
 
-The following configuration can be used to define a single default icon
-which will be used for all platforms.
-```xml
-    <icon src="res/icon.png" />
-```
-For each platform, you can also define a pixel-perfect icon set to fit
-different screen resolutions.
-
 ## Android
 
-Instead of using a single image for an icon, you can use two images (background and foreground) to create an **Adaptive Icon**. To use Adaptive Icons in Cordova, at minimum **Cordova CLI** 9.0.0 and **Cordova-Android** 8.0.0 is required.
+Android's **Adaptive Icons** feature enables you to create separate foreground and background layers for your App Icons. To use Adaptive Icons in Cordova, you need at least **Cordova CLI** 9.0.0 and **Cordova-Android** 8.0.0.
 
-Android 13 has introduced themed icons which are monochrome images appended to the existing **Adaptive Icons**. To use Themed Icon in Cordova, at minimum **Cordova CLI** 12.0.0 and **Cordova-Android** 12.0.0 is required.
+With Android 13, Google introduced **Themed Icons**, which are monochrome variations of **Adaptive Icons** that integrate seamlessly with the system's color scheme. To use **Themed Icons** in Cordova, you'll need at least **Cordova CLI** 12.0.0 and **Cordova-Android** 12.0.0.
 
 Attributes    | Description
 --------------|--------------------------------------------------------------------------------
@@ -71,6 +63,7 @@ density       | *Required* <br/> Specified icon density
 To use the adaptive icons the `background`, `foreground` and optionally `monochrome` attributes must be defined in place of the `src` attribute. The `src` attribute is not used for adaptive icons.
 
 #### Adaptive Icon with Images:
+
 ```xml
 <platform name="android">
   <icon monochrome="res/icon/android/ldpi-monochrome.png" background="res/icon/android/ldpi-background.png" density="ldpi" foreground="res/icon/android/ldpi-foreground.png" />
@@ -85,6 +78,7 @@ To use the adaptive icons the `background`, `foreground` and optionally `monochr
 **Note:** In this example, the foreground image will also be used as the fallback icon for Android devices that do not support the adaptive icons. The fallback icon can be overridden by setting the src attribute.
 
 #### Adaptive Icon with Vectors:
+
 ```xml
 <platform name="android">
   <icon monochrome="res/icon/android/ldpi-monochrome.png" background="res/icon/android/ldpi-background.xml" density="ldpi" foreground="res/icon/android/ldpi-foreground.xml" src="res/android/ldpi.png" />
@@ -99,6 +93,7 @@ To use the adaptive icons the `background`, `foreground` and optionally `monochr
 **Note:** In this example, the src attribute must be defined when then foreground attribute is defined with a vector or color.
 
 #### Adaptive Icon with Colors:
+
 Create a `res/values/colors.xml` resource file in your project directory to store the app's color definitions.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -143,7 +138,8 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
     </platform>
 ```
 
-### See Also
+**See Also:**
+
 - [Android icon guide](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
 - [Android Adaptive icons - User theming](https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming)
 - [Android - Supporting multiple screens](https://developer.android.com/guide/practices/screens_support.html)
@@ -152,43 +148,54 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 Icons are not applicable to the Browser platform.
 
 ## iOS
+
 ```xml
     <platform name="ios">
-        <!-- iOS 8.0+ -->
-        <!-- iPhone 6 Plus  -->
-        <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
-        <!-- iOS 7.0+ -->
-        <!-- iPhone / iPod Touch  -->
-        <icon src="res/ios/icon-60.png" width="60" height="60" />
-        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
-        <!-- iPad -->
-        <icon src="res/ios/icon-76.png" width="76" height="76" />
-        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
-        <!-- Spotlight Icon -->
-        <icon src="res/ios/icon-40.png" width="40" height="40" />
+        <!-- Notifications on iPhone, iPad Pro, iPad, iPad mini -->
+        <icon src="res/ios/icon-38@2x.png" width="76" height="76" />
+        <icon src="res/ios/icon-38@3x.png" width="114" height="114" />
+
+        <!-- Settings on iPhone, iPad Pro, iPad, iPad mini -->
+        <icon src="res/ios/icon-29@1x.png" width="29" height="29" />
+        <icon src="res/ios/icon-29@2x.png" width="58" height="58" />
+        <icon src="res/ios/icon-29@3x.png" width="87" height="87" />
+
+        <!-- Spotlight on iPhone, iPad Pro, iPad, iPad mini -->
+        <icon src="res/ios/icon-40@1x.png" width="40" height="40" />
         <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
-        <!-- iOS 6.1 -->
-        <!-- iPhone / iPod Touch -->
-        <icon src="res/ios/icon.png" width="57" height="57" />
-        <icon src="res/ios/icon@2x.png" width="114" height="114" />
-        <!-- iPad -->
-        <icon src="res/ios/icon-72.png" width="72" height="72" />
-        <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
-        <!-- iPad Pro -->
-        <icon src="res/ios/icon-167.png" width="167" height="167" />
-        <!-- iPhone Spotlight and Settings Icon -->
-        <icon src="res/ios/icon-small.png" width="29" height="29" />
-        <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
-        <icon src="res/ios/icon-small@3x.png" width="87" height="87" />
-        <!-- iPad Spotlight and Settings Icon -->
-        <icon src="res/ios/icon-50.png" width="50" height="50" />
-        <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
-        <!-- iTunes Marketing Image -->
+
+        <!-- Home Screen on iPad, iPad mini -->
+        <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+
+        <!-- Home Screen on iPad Pro -->
+        <icon src="res/ios/icon-83.5@2x.png" width="167" height="167" />
+
+        <!-- Home Screen on iPhone -->
+        <icon src="res/ios/icon-60@1x.png" width="60" height="60" />
+        <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+        <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+
+        <!-- macOS app icons -->
+        <icon src="res/ios/icon-16.png" width="16" height="16" />
+        <icon src="res/ios/icon-32.png" width="32" height="32" />
+        <icon src="res/ios/icon-64.png" width="64" height="64" />
+        <icon src="res/ios/icon-128.png" width="128" height="128" />
+        <icon src="res/ios/icon-256.png" width="256" height="256" />
+        <icon src="res/ios/icon-512.png" width="512" height="512" />
+
+        <!-- App Store Icon and another macOS app icons -->
         <icon src="res/ios/icon-1024.png" width="1024" height="1024" />
     </platform>
 ```
-### See Also
-- [App Icons on iPad and iPhone](https://developer.apple.com/library/content/qa/qa1686/_index.html)
+
+**Notes:**
+
+- Alpha channel is not supported for any iOS icons.
+
+**References:**
+
+- [Apple Developer - Configuring your app icon](https://developer.apple.com/documentation/xcode/configuring-your-app-icon/)
+- [Apple Developer - Human Interface Guidelines > App icons](https://developer.apple.com/design/human-interface-guidelines/app-icons)
 
 [splashscreen_plugin]: ../reference/cordova-plugin-splashscreen/
 

@@ -51,7 +51,6 @@ cordova plugin add cordova-plugin-vibration
 ## Supported Platforms
 
 - iOS
-- Windows Phone
 - Android  
   The Android webview (API level 19 and up) supports the [W3C Vibration API](https://www.w3.org/TR/vibration/) natively, so no Android specific implementation in this plugin is necessary.
 
@@ -91,14 +90,6 @@ navigator.vibrate([3000]);
 
     ```javascript
     navigator.vibrate(3000); // 3000 is ignored
-    ```
-
-##### Windows Phone Quirks
-
-- __time__: Max time is 5000ms (5s) and min time is 1ms
-
-    ```javascript
-    navigator.vibrate(8000); // will be truncated to 5000
     ```
 
 ##### Android Quirks

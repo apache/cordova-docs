@@ -89,7 +89,6 @@ function, which is typically less customizable.
 - Android
 - Browser
 - iOS
-- Windows
 
 ## navigator.notification.confirm
 
@@ -133,19 +132,12 @@ indexing, so the value is `1`, `2`, `3`, etc.
 - Android
 - Browser
 - iOS
-- Windows
 
 ### Android Quirks
 
 - Android supports a maximum of three buttons, and ignores any more than that.
 
 - Android dialog title cannot exceed 2 lines of content, it will ignore any more than this.
-
-### Windows Quirks
-
-- On Windows8/8.1 it is not possible to add more than three buttons to MessageDialog instance.
-
-- On Windows Phone 8.1 it's not possible to show dialog with more than two buttons.
 
 ## navigator.notification.prompt
 
@@ -194,17 +186,12 @@ contains the following properties:
 - Android
 - Browser
 - iOS
-- Windows
 
 ### Android Quirks
 
 - Android supports a maximum of three buttons, and ignores any more than that.
 
 - On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.
-
-### Windows Quirks
-
-- On Windows prompt dialog is html-based due to lack of such native api.
 
 ## navigator.notification.beep
 
@@ -224,7 +211,6 @@ The device plays a beep sound.
 - Android
 - Browser
 - iOS
-- Windows 8
 
 ### Android Quirks
 
