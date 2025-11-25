@@ -6,9 +6,125 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Nov 2025 01:20:56 +0000</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2025 01:20:56 +0000</lastBuildDate>
+    <pubDate>Tue, 25 Nov 2025 08:10:14 +0000</pubDate>
+    <lastBuildDate>Tue, 25 Nov 2025 08:10:14 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova CLI 13.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova@13.0.0&lt;/code&gt; has been released! This is the latest version of the Cordova command-line interface (CLI) used for creating and building Cordova apps.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova/v/13.0.0&quot;&gt;cordova@13.0.0 on npm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade a global installation:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm uninstall &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; cordova
+npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; cordova@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note: If you are installing Cordova locally in a project (not globally), simply omit the &lt;code&gt;-g&lt;/code&gt; flag.&lt;/p&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;The most notable changes in this major release include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Updated npm dependencies.&lt;/li&gt;
+  &lt;li&gt;Increased Node.js engine requirement to &lt;code&gt;&amp;gt;=20.17.0 || &amp;gt;=22.9.0&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Removed &lt;code&gt;telemetry&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One of the main dependencies that was updated is &lt;strong&gt;cordova-lib&lt;/strong&gt;, which for provides the core CLI functionality for managing platforms and plugins, including adding and removing them. Among the breaking changes in this release, the &lt;code&gt;cordova serve&lt;/code&gt; command has been removed.&lt;/p&gt;
+
+&lt;p&gt;We recommend checking out the following blog posts for updates on related packages that also apply to Cordova CLI:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/11/05/cordova-lib-13.0.0.html&quot;&gt;Cordova Lib 13.0.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/10/22/cordova-create-6.0.0.html&quot;&gt;Cordova Create 6.0.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html&quot;&gt;Cordova Fetch 5.0.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html&quot;&gt;Cordova App Hello World 7.0.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html&quot;&gt;Cordova Common 6.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/issues&quot;&gt;Cordova CLI - Issue Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/issues&quot;&gt;Cordova Lib - Issue Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/issues&quot;&gt;Cordova Create - Issue Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/issues&quot;&gt;Cordova Fetch - Issue Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/issues&quot;&gt;Cordova Serve - Issue Tracker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/issues&quot;&gt;Cordova Common - Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/678&quot;&gt;GH-678&lt;/a&gt; feat!: bump dependencies &amp;amp; node engine requirement&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/633&quot;&gt;GH-633&lt;/a&gt; feat!: remove telemetry feature&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/672&quot;&gt;GH-672&lt;/a&gt; chore(npm)!: bump various npm packages&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/666&quot;&gt;GH-666&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/642&quot;&gt;GH-642&lt;/a&gt; chore!: Prepare for next major&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/662&quot;&gt;GH-662&lt;/a&gt; fix: bump @babel/helpers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/640&quot;&gt;GH-640&lt;/a&gt; fix: remove potential error when setting exit code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/679&quot;&gt;GH-679&lt;/a&gt; chore: update release audit workflow &amp;amp; license headers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/677&quot;&gt;GH-677&lt;/a&gt; chore(deps-dev): bump js-yaml from 4.1.0 to 4.1.1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/676&quot;&gt;GH-676&lt;/a&gt; chore(deps): bump glob from 10.4.5 to 10.5.0&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/673&quot;&gt;GH-673&lt;/a&gt; chore: license headers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/671&quot;&gt;GH-671&lt;/a&gt; chore(deps): bump tmp from 0.2.3 to 0.2.4&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/668&quot;&gt;GH-668&lt;/a&gt; chore(coverage): Move from nyc to c8 for code coverage&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/667&quot;&gt;GH-667&lt;/a&gt; chore(deps): bump on-headers and compression&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/665&quot;&gt;GH-665&lt;/a&gt; chore(deps-dev): bump brace-expansion from 1.1.11 to 1.1.12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/658&quot;&gt;GH-658&lt;/a&gt; chore(deps): bump systeminformation from 5.22.11 to 5.23.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/657&quot;&gt;GH-657&lt;/a&gt; chore(deps): bump path-to-regexp and express&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/654&quot;&gt;GH-654&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/655&quot;&gt;GH-655&lt;/a&gt; chore(ci): Add code scanning &amp;amp; fix dependabot failures&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/646&quot;&gt;GH-646&lt;/a&gt; chore(deps): bump micromatch from 4.0.7 to 4.0.8&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/652&quot;&gt;GH-652&lt;/a&gt; chore(deps): bump cookie and express&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/643&quot;&gt;GH-643&lt;/a&gt; chore: Update dependencies&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/637&quot;&gt;GH-637&lt;/a&gt; chore(deps): bump express from 4.18.2 to 4.19.2&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/639&quot;&gt;GH-639&lt;/a&gt; chore(deps): bump tar from 6.2.0 to 6.2.1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/641&quot;&gt;GH-641&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/635&quot;&gt;GH-635&lt;/a&gt; chore(deps): bump ip from 2.0.0 to 2.0.1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/631&quot;&gt;GH-631&lt;/a&gt; chore: Rolled dependencies to the latest non-breaking versions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/670&quot;&gt;GH-670&lt;/a&gt; ci: various workflow improvements&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/669&quot;&gt;GH-669&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/656&quot;&gt;GH-656&lt;/a&gt; ci: use apache-rat-action@v1 (tag)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/638&quot;&gt;GH-638&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/636&quot;&gt;GH-636&lt;/a&gt; ci: update release audit workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/630&quot;&gt;GH-630&lt;/a&gt; ci(gh-action): add Apache RAT &amp;amp; package license checker workflow&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/554&quot;&gt;GH-554&lt;/a&gt; doc(create): update default values&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/428&quot;&gt;GH-428&lt;/a&gt; doc: update &lt;code&gt;README&lt;/code&gt;.md&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/616&quot;&gt;GH-616&lt;/a&gt; doc: update &amp;amp; refactor cli reference&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2025/11/25/cordova-cli-13.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/25/cordova-cli-13.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova iOS 8.0.0 is now available!</title>
@@ -838,53 +954,6 @@ cordova plugin add cordova-plugin-media-capture@6.0.0
         <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Common 5.0.1 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@5.0.1&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable changes in this patch release were updates to the dependencies used by this tool. Some dependencies were replaced with Node internals, reducing the overall dependency requirements.&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/222&quot;&gt;GH-222&lt;/a&gt; chore: bump npm dependencies to current minor revisions&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/217&quot;&gt;GH-217&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/214&quot;&gt;GH-214&lt;/a&gt; chore(deps): bump micromatch from 4.0.5 to 4.0.8&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/211&quot;&gt;GH-211&lt;/a&gt; chore: Minor test fixes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/210&quot;&gt;GH-210&lt;/a&gt; chore: Don&amp;#39;t list dev dependencies in NOTICE&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/208&quot;&gt;GH-208&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/203&quot;&gt;GH-203&lt;/a&gt; chore(deps): Modernize some dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/204&quot;&gt;GH-204&lt;/a&gt; chore: fix typo in license checker&amp;#39;s ignored-packages config&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/218&quot;&gt;GH-218&lt;/a&gt; ci: Fix dependabot PR failures&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/207&quot;&gt;GH-207&lt;/a&gt; ci: Add NodeJS 22 to CI matrix&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/206&quot;&gt;GH-206&lt;/a&gt; ci: Set up CodeQL analysis&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/205&quot;&gt;GH-205&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/202&quot;&gt;GH-202&lt;/a&gt; ci: add release audit workflow&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/02/cordova-common-5.0.1.html</guid>
         
         <category>news</category>
         

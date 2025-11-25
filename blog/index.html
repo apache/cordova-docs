@@ -123,6 +123,75 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Tue, 25 Nov 2025 00:00:00 +0000"></div>
+                    <h2 class="title">
+                        <a href="/announcements/2025/11/25/cordova-cli-13.0.0.html">Cordova CLI 13.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">25 Nov 2025</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that <code>cordova@13.0.0</code> has been released! This is the latest version of the Cordova command-line interface (CLI) used for creating and building Cordova apps.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova/v/13.0.0">cordova@13.0.0 on npm</a></li>
+</ul>
+
+<p><strong>To upgrade a global installation:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm uninstall <span class="nt">-g</span> cordova
+npm <span class="nb">install</span> <span class="nt">-g</span> cordova@latest
+</code></pre></div></div>
+
+<p>Note: If you are installing Cordova locally in a project (not globally), simply omit the <code>-g</code> flag.</p>
+
+<h2>Release Highlights</h2>
+
+<p>The most notable changes in this major release include:</p>
+
+<ul>
+  <li>Updated npm dependencies.</li>
+  <li>Increased Node.js engine requirement to <code>&gt;=20.17.0 || &gt;=22.9.0</code>.</li>
+  <li>Removed <code>telemetry</code>.</li>
+</ul>
+
+<p>One of the main dependencies that was updated is <strong>cordova-lib</strong>, which for provides the core CLI functionality for managing platforms and plugins, including adding and removing them. Among the breaking changes in this release, the <code>cordova serve</code> command has been removed.</p>
+
+<p>We recommend checking out the following blog posts for updates on related packages that also apply to Cordova CLI:</p>
+
+<ul>
+  <li><a href="https://cordova.apache.org/announcements/2025/11/05/cordova-lib-13.0.0.html">Cordova Lib 13.0.0</a></li>
+  <li><a href="https://cordova.apache.org/announcements/2025/10/22/cordova-create-6.0.0.html">Cordova Create 6.0.0</a></li>
+  <li><a href="https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html">Cordova Fetch 5.0.0</a></li>
+  <li><a href="https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html">Cordova App Hello World 7.0.0</a></li>
+  <li><a href="https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html">Cordova Common 6.0.0</a></li>
+</ul>
+
+<p>Please report any issues you find by following the <a href="https://github.com/apache/cordova#filing-a-bug">How to File a Bug</a> guide!</p>
+
+<ul>
+  <li><a href="https://github.com/apache/cordova-cli/issues">Cordova CLI - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-lib/issues">Cordova Lib - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-create/issues">Cordova Create - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-fetch/issues">Cordova Fetch - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-serve/issues">Cordova Serve - Issue Tracker</a></li>
+  <li><a href="https://github.com/apache/cordova-common/issues">Cordova Common - Issue Tracker</a></li>
+</ul>
+
+</p>
+                    <div><a href="/announcements/2025/11/25/cordova-cli-13.0.0.html">More...</a></div>
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Sun, 23 Nov 2025 00:00:00 +0000"></div>
                     <h2 class="title">
                         <a href="/announcements/2025/11/23/cordova-ios-8.0.0.html">Cordova iOS 8.0.0 is now available!</a>
@@ -15031,7 +15100,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Sun, 23 Nov 2025 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Tue, 25 Nov 2025 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
