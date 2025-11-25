@@ -273,8 +273,8 @@ Examples:
 <source-file src="src/android/Foo.java" target-dir="src/com/alunny/foo" />
 <!-- ios -->
 <source-file src="src/ios/CDVFoo.m" />
+<source-file src="src/ios/CDVFoo.m" compiler-flags="-fno-objc-arc" />
 <source-file src="src/ios/someLib.a" framework="true" />
-<source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" />
 ```
 
 ## header-file

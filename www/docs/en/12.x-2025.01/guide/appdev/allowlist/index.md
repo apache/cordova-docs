@@ -85,7 +85,7 @@ By default navigations are only allowed to `file://` URLs. To allow others URLs,
      to the host, or as a suffix to the path -->
 <allow-navigation href="*://*.example.com/*" />
 
-<!-- 
+<!--
     A wildcard can be used to allow the entire network, over HTTP and HTTPS.
     This is *NOT RECOMMENDED*
 -->
@@ -141,9 +141,53 @@ Note: `allow-navigation` takes precedence over `allow-intent`. Allowing navigati
 
 ## Content Security Policy (CSP)
 
-Controls which network requests (images, XHRs, etc) are allowed to be made (via webview directly).
+The [**Content Security Policy (CSP)**](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) `<meta>` tag is a very powerful mechanism that allows you to control trusted sources of content. You can restrict various content types and domains from which content can be loaded from. Unsafe and risky HTML and JavaScript can also be disabled to further increase the security of your app.
+
+The CSP `<meta>` tag should be placed in your app's index.html file.
 
 On Android and iOS, the network request allow list (see above) is not able to filter all types of requests (e.g. `<video>` & WebSockets are not blocked). So, in addition to the allow list, you should use a [Content Security Policy](http://content-security-policy.com/) `<meta>` tag on all of your pages.
+
+> **Note**: If your app has multiple HTML files and navigates between them using the browser's navigation features, you should include the CSP in each file. If your app is a single-page application, you only need to include the CSP on `index.html`.
+
+### Cordova's Default Template Content Security Policy
+
+The CSP that Cordova's default template uses looks like this (indented for clarity):
+
+```html
+<meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval';
+             style-src 'self' 'unsafe-inline';
+             media-src *;
+             img-src 'self' data: content:;">
+```
+
+The above snippet enforces the following:
+
+**Default Source (`default-src`):**
+
+As a fallback, all other network requests are restricted to:
+
+* The same origin as the app itself (`'self'`).
+* Resources loaded via `data:` URIs.
+* Resources from the specified external domain `https://ssl.gstatic.com`.
+* JavaScript methods such as `eval()` (and similar) are permitted with `'unsafe-eval'`.
+
+**Style Source (`style-src`):**
+
+* Styles can only be loaded from the same origin (`'self'`).
+* Inline styles (`'unsafe-inline'`) are also allowed, meaning styles can be directly applied using the `style` attribute on elements or within `<style>` tags.
+
+**Media Source (`media-src`):**
+
+* Media can be loaded from any source.
+
+**Image Source (`img-src`):**
+
+* Images can only be loaded from the same origin (`'self'`).
+* Allows loading images from `data:` URIs.
+* Allows loading images from `content:` URIs, typically used within the Android ecosystem.
+
+### Example Content Security Policy Declarations
 
 Here are some example CSP declarations for your `.html` pages:
 
@@ -159,7 +203,7 @@ Here are some example CSP declarations for your `.html` pages:
 <!-- Allow everything but only from the same origin and foo.com -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' foo.com">
 
-<!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that 
+<!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that
     * CSS only from the same origin and inline styles,
     * scripts only from the same origin and inline styles, and eval()
 -->
@@ -171,6 +215,14 @@ Here are some example CSP declarations for your `.html` pages:
 <!-- Allow iframe to https://cordova.apache.org/ -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://cordova.apache.org">
 ```
+
+You should fully understand the CSP tag and the various directives that can be specified. More documentation is available at [Content Security Policy](https://web.dev/articles/csp) (via Google Developers) and Mozilla's [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) article.
+
+> **Tip**: If you're using web sockets, include `ws:` (`wss:` if using SSL) in the `connect-src` directive.
+
+### Debugging Content Security Policy
+
+When adding a CSP to your app, it's likely you'll encounter some issues. Fortunately, both Google Chrome's Developer Tools and Safari's Web Inspector make it very clear when a CSP violation occurs. Watch the console for any violation messages, which are typically quite detailed, specifying exactly which resource was blocked and why. Address each violation as they appear to ensure your CSP is properly configured.
 
 ## Other Notes
 
