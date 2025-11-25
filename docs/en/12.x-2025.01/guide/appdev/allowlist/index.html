@@ -2419,7 +2419,7 @@
      to the host, or as a suffix to the path --&gt;</span>
 <span class="nt">&lt;allow-navigation</span> <span class="na">href=</span><span class="s">"*://*.example.com/*"</span> <span class="nt">/&gt;</span>
 
-<span class="c">&lt;!-- 
+<span class="c">&lt;!--
     A wildcard can be used to allow the entire network, over HTTP and HTTPS.
     This is *NOT RECOMMENDED*
 --&gt;</span>
@@ -2474,9 +2474,62 @@
 
 <h2>Content Security Policy (CSP)</h2>
 
-<p>Controls which network requests (images, XHRs, etc) are allowed to be made (via webview directly).</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"><strong>Content Security Policy (CSP)</strong></a> <code>&lt;meta&gt;</code> tag is a very powerful mechanism that allows you to control trusted sources of content. You can restrict various content types and domains from which content can be loaded from. Unsafe and risky HTML and JavaScript can also be disabled to further increase the security of your app.</p>
+
+<p>The CSP <code>&lt;meta&gt;</code> tag should be placed in your app&#39;s index.html file.</p>
 
 <p>On Android and iOS, the network request allow list (see above) is not able to filter all types of requests (e.g. <code>&lt;video&gt;</code> &amp; WebSockets are not blocked). So, in addition to the allow list, you should use a <a href="http://content-security-policy.com/">Content Security Policy</a> <code>&lt;meta&gt;</code> tag on all of your pages.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: If your app has multiple HTML files and navigates between them using the browser&#39;s navigation features, you should include the CSP in each file. If your app is a single-page application, you only need to include the CSP on <code>index.html</code>.</p>
+</blockquote>
+
+<h3>Cordova&#39;s Default Template Content Security Policy</h3>
+
+<p>The CSP that Cordova&#39;s default template uses looks like this (indented for clarity):</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span>
+    <span class="na">content=</span><span class="s">"default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval';
+             style-src 'self' 'unsafe-inline';
+             media-src *;
+             img-src 'self' data: content:;"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>The above snippet enforces the following:</p>
+
+<p><strong>Default Source (<code>default-src</code>):</strong></p>
+
+<p>As a fallback, all other network requests are restricted to:</p>
+
+<ul>
+  <li>The same origin as the app itself (<code>'self'</code>).</li>
+  <li>Resources loaded via <code>data:</code> URIs.</li>
+  <li>Resources from the specified external domain <code>https://ssl.gstatic.com</code>.</li>
+  <li>JavaScript methods such as <code>eval()</code> (and similar) are permitted with <code>'unsafe-eval'</code>.</li>
+</ul>
+
+<p><strong>Style Source (<code>style-src</code>):</strong></p>
+
+<ul>
+  <li>Styles can only be loaded from the same origin (<code>'self'</code>).</li>
+  <li>Inline styles (<code>'unsafe-inline'</code>) are also allowed, meaning styles can be directly applied using the <code>style</code> attribute on elements or within <code>&lt;style&gt;</code> tags.</li>
+</ul>
+
+<p><strong>Media Source (<code>media-src</code>):</strong></p>
+
+<ul>
+  <li>Media can be loaded from any source.</li>
+</ul>
+
+<p><strong>Image Source (<code>img-src</code>):</strong></p>
+
+<ul>
+  <li>Images can only be loaded from the same origin (<code>'self'</code>).</li>
+  <li>Allows loading images from <code>data:</code> URIs.</li>
+  <li>Allows loading images from <code>content:</code> URIs, typically used within the Android ecosystem.</li>
+</ul>
+
+<h3>Example Content Security Policy Declarations</h3>
 
 <p>Here are some example CSP declarations for your <code>.html</code> pages:</p>
 
@@ -2491,7 +2544,7 @@
 <span class="c">&lt;!-- Allow everything but only from the same origin and foo.com --&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self' foo.com"</span><span class="nt">&gt;</span>
 
-<span class="c">&lt;!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that 
+<span class="c">&lt;!-- This policy allows everything (eg CSS, AJAX, object, frame, media, etc) except that
     * CSS only from the same origin and inline styles,
     * scripts only from the same origin and inline styles, and eval()
 --&gt;</span>
@@ -2503,6 +2556,16 @@
 <span class="c">&lt;!-- Allow iframe to https://cordova.apache.org/ --&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Security-Policy"</span> <span class="na">content=</span><span class="s">"default-src 'self'; frame-src 'self' https://cordova.apache.org"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
+
+<p>You should fully understand the CSP tag and the various directives that can be specified. More documentation is available at <a href="https://web.dev/articles/csp">Content Security Policy</a> (via Google Developers) and Mozilla&#39;s <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> article.</p>
+
+<blockquote>
+  <p><strong>Tip</strong>: If you&#39;re using web sockets, include <code>ws:</code> (<code>wss:</code> if using SSL) in the <code>connect-src</code> directive.</p>
+</blockquote>
+
+<h3>Debugging Content Security Policy</h3>
+
+<p>When adding a CSP to your app, it&#39;s likely you&#39;ll encounter some issues. Fortunately, both Google Chrome&#39;s Developer Tools and Safari&#39;s Web Inspector make it very clear when a CSP violation occurs. Watch the console for any violation messages, which are typically quite detailed, specifying exactly which resource was blocked and why. Address each violation as they appear to ensure your CSP is properly configured.</p>
 
 <h2>Other Notes</h2>
 

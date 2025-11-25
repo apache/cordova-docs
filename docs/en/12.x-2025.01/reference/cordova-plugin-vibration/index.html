@@ -2398,7 +2398,6 @@
 
 <ul>
   <li>iOS</li>
-  <li>Windows Phone</li>
   <li>Android<br />
 The Android webview (API level 19 and up) supports the <a href="https://www.w3.org/TR/vibration/">W3C Vibration API</a> natively, so no Android specific implementation in this plugin is necessary.</li>
 </ul>
@@ -2439,17 +2438,6 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
     <p><strong>time</strong>: Ignores the specified time and vibrates for a pre-set amount of time.</p>
 
     <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// 3000 is ignored</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<h5>Windows Phone Quirks</h5>
-
-<ul>
-  <li>
-    <p><strong>time</strong>: Max time is 5000ms (5s) and min time is 1ms</p>
-
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">8000</span><span class="p">);</span> <span class="c1">// will be truncated to 5000</span>
 </code></pre></div>    </div>
   </li>
 </ul>

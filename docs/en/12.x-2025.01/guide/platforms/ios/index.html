@@ -2385,6 +2385,18 @@ For details on the CLI, see <a href="../../../reference/cordova-cli/index.html">
     </thead>
     <tbody>
         <tr>
+            <td>8.x</td>
+            <td>13.0</td>
+            <td>
+                <ul>
+                    <li>Cocoapods: &gt;=1.16.0</li>
+                    <li>ios-deploy: &gt;=1.12.2</li>
+                    <li>Node: &gt;=20.17.0</li>
+                    <li>Xcode (xcodebuild): &gt;=15.0.0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
             <td>7.x</td>
             <td>11.0</td>
             <td>
@@ -2442,7 +2454,7 @@ which requires registration as an Apple Developer.</p>
 
 <p>Once Xcode is installed, several command-line tools need to be enabled
 for Cordova to run. From the command line, run:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcode-select <span class="nt">--install</span>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcode-select <span class="nt">--install</span>
 </code></pre></div></div>
 
 <h3>Deployment Tools</h3>
@@ -2452,7 +2464,7 @@ to launch iOS apps on an iOS Device from the command-line.</p>
 
 <p>Install ios-deploy via <a href="https://brew.sh/">Homebrew</a> by running:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>ios-deploy
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>ios-deploy
 </code></pre></div></div>
 
 <h3>CocoaPods</h3>
@@ -2461,7 +2473,7 @@ to launch iOS apps on an iOS Device from the command-line.</p>
 
 <p>To install CocoaPods, run the following from command-line terminal:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>cocoapods
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>cocoapods
 </code></pre></div></div>
 
 <h2>Project Configuration</h2>
@@ -2476,15 +2488,15 @@ For more details on installing and using the CLI, refer to <a href="../../cli/in
 
 <ol>
   <li>
-    <p>Open the workspace file (<code>platforms/ios/HelloWorld.xcworkspace</code>) from Xcode, <em>or</em> from the command line:</p>
+    <p>Open the workspace file (<code>platforms/ios/App.xcworkspace</code>) from Xcode, <em>or</em> from the command line:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>open ./platforms/ios/HelloWorld.xcworkspace/
+    <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>open ./platforms/ios/App.xcworkspace/
 </code></pre></div>    </div>
   </li>
   <li>
     <p>Make sure the <code>HelloWorld</code> project is selected in the left panel (1).</p>
 
-    <p><img src="/static/img/guide/platforms/ios/xcode10-run-project.png" alt="" /></p>
+    <p><img src="/static/img/guide/platforms/ios/xcode26-helloworld-run-project.png" alt="" /></p>
   </li>
   <li>
     <p>Select the intended device from the toolbar&#39;s <strong>Scheme</strong> menu, such
@@ -2496,7 +2508,7 @@ left of the <strong>Scheme</strong>. That builds, deploys, and runs the
 application in the simulator. A separate simulator application opens
 to display the app:</p>
 
-    <p><img src="/static/img/guide/platforms/ios/HelloWorld-running-xr.png" alt="" /></p>
+    <p><img src="/static/img/guide/platforms/ios/xcode26-helloworld-running-simulator.png" alt="iOS Simulator" width="400" /></p>
 
     <p>Only one simulator may run at a time, so if you want to test the app
 in a different simulator, you need to quit the simulator application
@@ -2671,8 +2683,8 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
 
 <p>If you have a custom situation where you need to pass additional build flags to Xcode you would use one or more <code>--buildFlag</code> options to pass these flags to <code>xcodebuild</code>. If you use an <code>xcodebuild</code> built-in flag, it will show a warning.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build --device --buildFlag="MYSETTING=myvalue" --buildFlag="MY_OTHER_SETTING=othervalue"
-cordova run --device --buildFlag="DEVELOPMENT_TEAM=FG35JLLMXX4A" --buildFlag="-scheme TestSchemeFlag"
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build <span class="nt">--device</span> <span class="nt">--buildFlag</span><span class="o">=</span><span class="s2">"MYSETTING=myvalue"</span> <span class="nt">--buildFlag</span><span class="o">=</span><span class="s2">"MY_OTHER_SETTING=othervalue"</span>
+cordova run <span class="nt">--device</span> <span class="nt">--buildFlag</span><span class="o">=</span><span class="s2">"DEVELOPMENT_TEAM=FG35JLLMXX4A"</span> <span class="nt">--buildFlag</span><span class="o">=</span><span class="s2">"-scheme TestSchemeFlag"</span>
 </code></pre></div></div>
 
 <p>You can also specify a <code>buildFlag</code> option in <a href="#using-buildjson"><code>build.json</code> above</a> (the value for the <code>buildFlag</code> key is a string or an array of strings).</p>
@@ -2696,58 +2708,21 @@ plugin to the project via cordova plugin add. This will link the files so that c
 platforms folder are reflected in your plugin&#39;s source folder (and vice versa).</p>
 
 <p>Once the ios platform is added to your project and built using <code>cordova build</code>, you can open it from
-within Xcode. Double-click to open the <code>${PROJECT_NAME}/platforms/ios/${PROJECT_NAME}.xcworkspace</code>
+within Xcode. Double-click to open the <code>${PROJECT_NAME}/platforms/ios/App.xcworkspace</code>
 file or open Xcode from your terminal:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>open <span class="nt">-a</span> Xcode platforms/ios
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>open <span class="nt">-a</span> Xcode platforms/ios/App.xcworkspace
 </code></pre></div></div>
 
 <p>The screen should look like this:</p>
 
-<p><img src="/static/img/guide/platforms/ios/xcode10-review-settings.png" alt="" /></p>
-
-<h2>Platform Centered Workflow</h2>
-
-<p>cordova-ios includes a number of scripts that allow the platform to be used
-without the full Cordova CLI. This development path may offer you a greater
-range of development options in certain situations than the cross-platform cordova CLI.
-For example, you need to use shell tools when deploying a custom
-Cordova WebView alongside native components. Before using this
-development path, you must still configure the SDK environment
-as described in <a href="#link-requirements-and-support">Requirements and Support</a>
-above.</p>
-
-<p>For each of the scripts discussed below, refer to
- <a href="../../../reference/cordova-cli/index.html">Cordova CLI Reference</a> for more information on their
-arguments and usage. Each script has a name that matches the corresponding CLI
-command. For example, <code>cordova-ios/bin/create</code> is equivalent to
-<code>cordova create</code>.</p>
-
-<p>To get started, either download the cordova-ios package from
-<a href="https://www.npmjs.com/package/cordova-ios">npm</a> or
-<a href="https://github.com/apache/cordova-ios">Github</a>.</p>
-
-<p>To create a project using this package, run the <code>create</code> script in the <code>bin</code>
-folder:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-ios/bin/create ...
-</code></pre></div></div>
-
-<p>To run the app, use the <code>run</code> script in the <code>bin</code> folder:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova-ios/bin/run
-</code></pre></div></div>
-
-<p>The created project will have a folder named <code>cordova</code> inside that contains
-scripts for the project-specific Cordova commands (e.g. <code>run</code>, <code>build</code>, etc.).</p>
-
-<p>To install plugins in this project, use the <a href="../../../plugin_ref/plugman.html">Cordova Plugman Utility</a>.</p>
+<p><img src="/static/img/guide/platforms/ios/xcode26-helloworld-general-settings.png" alt="" /></p>
 
 <h2>Upgrading</h2>
 
 <p>Refer to <a href="./upgrade.html">this</a> article for instructions to upgrade your <code>cordova-ios</code> version.</p>
 
-<p>(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
+<p>(macOS®, Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)</p>
 
 
 
