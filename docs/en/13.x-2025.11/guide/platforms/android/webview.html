@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Android WebViews - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/latest/guide/platforms/android/webview.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/overview/project-structure.html">
+                Project Structure
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/overview/project-structure.html">
+        Project Structure
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/guide/platforms/android/webview.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        13.x-2025.11
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/guide/platforms/android/webview.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                13.x-2025.11
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/12.x-2025.01/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                12.x-2025.01
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/12.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                12.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/11.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                11.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/10.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                10.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/guide/platforms/android/webview.html" class="">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Android WebViews</h1>
+
+<p>This guide shows how to embed a Cordova-enabled WebView component
+within a larger Android application. For details on how these
+components can communicate with each other, see Application Plugins.</p>
+
+<p>If you&#39;re unfamiliar with Android, you should first familiarize
+yourself with the <a href="index.html">Android Platform Guide</a> and have the latest Android
+SDK installed before you attempt the more unusual development option
+of embedding a WebView.  Starting with Cordova 1.9, the Android
+platform relies on a <code>CordovaWebView</code> component, which builds on a
+legacy <code>CordovaActivity</code> component that pre-dates the 1.9 release.</p>
+
+<ol>
+  <li>
+    <p>Create a new or open an exisiting native application.</p>
+  </li>
+  <li>
+    <p>Add the Cordova-Android framework dependency to your app module&#39;s build configuration.</p>
+
+    <p>If your build configuration uses Groovy DSL, update <code>app/build.gradle</code> with the following:</p>
+
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">dependencies</span> <span class="o">{</span>
+     <span class="n">implementation</span> <span class="s1">'org.apache.cordova:framework:14.0.1'</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <p>If your build configuration uses Kotlin DSL, update <code>app/build.gradle.kts</code> with the following:</p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nf">dependencies</span> <span class="p">{</span>
+     <span class="nf">implementation</span><span class="p">(</span><span class="s">"org.apache.cordova:framework:14.0.1"</span><span class="p">)</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>After making any changes to your build configuration file, make sure to &quot;<strong>Sync Project with Gradle Files</strong>&quot; so it will checkout the framework.</p>
+
+    <p><strong>Note:</strong> Your build configuration may already includes a <code>dependencies</code> block, so simply add the <code>implementation</code> line within the existing block.</p>
+
+    <p><strong>Note:</strong> You can find a list of available versions of released Cordova-Android framework on <a href="https://central.sonatype.com/artifact/org.apache.cordova/framework/versions">Sonatype Maven Central Repository</a> or any other mirror of the Maven Central Repository.</p>
+  </li>
+  <li>
+    <p>Modify the layout file of the activity that shall host the Cordova view e.g.</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;org.apache.cordova.engine.SystemWebView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/cordovaWebView"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"match_parent"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Modify your activity to extend <code>CordovaActivity</code> and override the <code>onCreate</code>, <code>makeWebView</code> and <code>createViews</code> to use your defined layout:</p>
+
+    <p><strong>Kotlin Example:</strong></p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">org.apache.cordova.testapp</span>
+
+<span class="k">import</span> <span class="nn">android.os.Bundle</span>
+<span class="k">import</span> <span class="nn">android.view.View</span>
+<span class="k">import</span> <span class="nn">androidx.activity.enableEdgeToEdge</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaActivity</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebViewImpl</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebViewEngine</span>
+
+<span class="kd">class</span> <span class="nc">TestActivity</span> <span class="p">:</span> <span class="nc">CordovaActivity</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="nf">enableEdgeToEdge</span><span class="p">()</span>
+        <span class="nf">setContentView</span><span class="p">(</span><span class="nc">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">activity_test</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">makeWebView</span><span class="p">():</span> <span class="nc">CordovaWebView</span> <span class="p">{</span>
+        <span class="kd">val</span> <span class="py">appView</span> <span class="p">=</span> <span class="n">findViewById</span><span class="p">&lt;</span><span class="nc">View</span><span class="p">&gt;(</span><span class="nc">R</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">cordovaWebView</span><span class="p">)</span> <span class="k">as</span> <span class="nc">SystemWebView</span>
+        <span class="k">return</span> <span class="nc">CordovaWebViewImpl</span><span class="p">(</span><span class="nc">SystemWebViewEngine</span><span class="p">(</span><span class="n">appView</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">createViews</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// leave empty so the layout is used</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p><strong>Java Example:</strong></p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">org.apache.cordova.testapp</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">androidx.activity.enableEdgeToEdge</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaWebView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.CordovaWebViewImpl</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.engine.SystemWebView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.cordova.engine.SystemWebViewEngine</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestActivity</span> <span class="kd">extends</span> <span class="nc">CordovaActivity</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_test</span><span class="o">);</span> <span class="c1">// layout file for your activity</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+        <span class="n">loadUrl</span><span class="o">(</span><span class="n">launchUrl</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="nc">CordovaWebView</span> <span class="nf">makeWebView</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">SystemWebView</span> <span class="n">appView</span> <span class="o">=</span> <span class="o">(</span><span class="nc">SystemWebView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">cordovaWebView</span><span class="o">);</span>  <span class="c1">// id for the SystemWebView in previous step</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">CordovaWebViewImpl</span><span class="o">(</span><span class="k">new</span> <span class="nc">SystemWebViewEngine</span><span class="o">(</span><span class="n">appView</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">createViews</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// leave empty so the layout is used</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Set up your activity&#39;s style to comply with Cordova</p>
+
+    <p>By default, <code>CordovaActivity</code> shows an initial splash screen. If this is the desired behavior, your custom activity should define a style in the <code>android:theme</code> attribute that inherits from <code>Theme.SplashScreen.IconBackground</code>.</p>
+
+    <p>Below is an example of what your <code>&lt;activity&gt;</code> might look like in <code>AndroidManifest.xml</code>:</p>
+
+    <p><strong>Sample <code>AndroidManifest.xml</code> <code>&lt;activity&gt;</code>:</strong></p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;activity</span>
+     <span class="na">android:name=</span><span class="s">".TestActivity"</span>
+     <span class="na">android:exported=</span><span class="s">"false"</span>
+     <span class="na">android:theme=</span><span class="s">"@style/Theme.MyCordovaAppSplashScreen"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p>Here&#39;s the corresponding style in <code>themes.xml</code> to match the <code>android:theme</code> value. Feel free to rename the style to suit your app.</p>
+
+    <p><strong>Sample <code>themes.xml</code> <code>&lt;style&gt;</code>:</strong></p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+ <span class="nt">&lt;resources</span> <span class="na">xmlns:tools=</span><span class="s">"http://schemas.android.com/tools"</span><span class="nt">&gt;</span>
+     <span class="c">&lt;!-- Theme for the activity that hosts Cordova --&gt;</span>
+     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Theme.MyCordovaAppSplashScreen"</span> <span class="na">parent=</span><span class="s">"Theme.SplashScreen.IconBackground"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"windowSplashScreenBackground"</span><span class="nt">&gt;</span>@color/black<span class="nt">&lt;/item&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"windowSplashScreenAnimatedIcon"</span><span class="nt">&gt;</span>@drawable/ic_launcher_foreground<span class="nt">&lt;/item&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"windowSplashScreenAnimationDuration"</span><span class="nt">&gt;</span>200<span class="nt">&lt;/item&gt;</span>
+         <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"postSplashScreenTheme"</span><span class="nt">&gt;</span>@style/Theme.MyCordovaApp<span class="nt">&lt;/item&gt;</span>
+     <span class="nt">&lt;/style&gt;</span>
+
+     <span class="c">&lt;!-- Theme applied after the splash screen --&gt;</span>
+     <span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Theme.MyCordovaApp"</span> <span class="na">parent=</span><span class="s">"Theme.AppCompat.DayNight.NoActionBar"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;/resources&gt;</span>
+</code></pre></div>    </div>
+
+    <blockquote>
+      <p><strong>Note:</strong> Since <code>CordovaActivity</code> extends <code>AppCompatActivity</code>, the <code>postSplashScreenTheme</code> must inherit from a <code>Theme.AppCompat.*</code> style (e.g., <code>Theme.AppCompat.DayNight.NoActionBar</code> or a custom variant).</p>
+    </blockquote>
+
+    <p>If you <strong>don&#39;t</strong> want the initial splash screen to appear, override the <code>showInitialSplashScreen</code> method in your activity:</p>
+
+    <p><strong>Kotlin example:</strong></p>
+
+    <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">override</span> <span class="k">fun</span> <span class="nf">showInitialSplashScreen</span><span class="p">():</span> <span class="nc">Boolean</span> <span class="p">{</span>
+     <span class="k">return</span> <span class="k">false</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <blockquote>
+      <p><strong>Note:</strong> If the splash screen is disabled, make sure the <code>android:theme</code> points directly to a theme based on <code>Theme.AppCompat.*</code>. Avoid using <code>Theme.SplashScreen.*</code>.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Copy your application&#39;s web assets (HTML, CSS, JavaScript) to the Android project&#39;s <code>&lt;app-root-directory&gt;/app/src/main/assets/www/</code> directory.</p>
+  </li>
+  <li>
+    <p>Copy your <code>config.xml</code> file to your Android project&#39;s <code>&lt;app-root-directory&gt;/app/src/main/res/xml/</code> directory.</p>
+  </li>
+</ol>
+
+<h2>Bonus: Jetpack Compose</h2>
+
+<p>If your native Android application uses Jetpack Compose instead of XML layouts, you can still integrate the Cordova WebView by writing your Activity like this:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">org.apache.cordova.testapp</span>
+
+<span class="k">import</span> <span class="nn">android.os.Bundle</span>
+<span class="k">import</span> <span class="nn">androidx.activity.compose.setContent</span>
+<span class="k">import</span> <span class="nn">androidx.activity.enableEdgeToEdge</span>
+<span class="k">import</span> <span class="nn">androidx.compose.foundation.layout.fillMaxSize</span>
+<span class="k">import</span> <span class="nn">androidx.compose.runtime.Composable</span>
+<span class="k">import</span> <span class="nn">androidx.compose.ui.Modifier</span>
+<span class="k">import</span> <span class="nn">androidx.compose.ui.viewinterop.AndroidView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.testapp.ui.theme.TestAppTheme</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaActivity</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.CordovaWebViewImpl</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebView</span>
+<span class="k">import</span> <span class="nn">org.apache.cordova.engine.SystemWebViewEngine</span>
+
+<span class="kd">class</span> <span class="nc">TestActivity</span> <span class="p">:</span> <span class="nc">CordovaActivity</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">cordovaWebView</span><span class="p">:</span> <span class="nc">CordovaWebView</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="nc">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">.</span><span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="nf">enableEdgeToEdge</span><span class="p">()</span>
+
+        <span class="c1">// Set up the Cordova WebView manually</span>
+        <span class="kd">val</span> <span class="py">systemWebView</span> <span class="p">=</span> <span class="nc">SystemWebView</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+        <span class="n">cordovaWebView</span> <span class="p">=</span> <span class="nc">CordovaWebViewImpl</span><span class="p">(</span><span class="nc">SystemWebViewEngine</span><span class="p">(</span><span class="n">systemWebView</span><span class="p">))</span>
+
+        <span class="nf">setContent</span> <span class="p">{</span>
+            <span class="c1">// Make sure to change "TestAppTheme" with your app's custom Jetpack Compose theme function.</span>
+            <span class="nc">TestAppTheme</span> <span class="p">{</span>
+                <span class="nc">CordovaWebViewContainer</span><span class="p">(</span><span class="n">systemWebView</span> <span class="p">=</span> <span class="n">systemWebView</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="nf">loadUrl</span><span class="p">(</span><span class="n">launchUrl</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">makeWebView</span><span class="p">():</span> <span class="nc">CordovaWebView</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">cordovaWebView</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">createViews</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// leave empty so the layout is used</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@Composable</span>
+<span class="k">fun</span> <span class="nf">CordovaWebViewContainer</span><span class="p">(</span><span class="n">systemWebView</span><span class="p">:</span> <span class="nc">SystemWebView</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">AndroidView</span><span class="p">(</span>
+        <span class="n">factory</span> <span class="p">=</span> <span class="p">{</span> <span class="n">systemWebView</span> <span class="p">},</span>
+        <span class="n">modifier</span> <span class="p">=</span> <span class="nc">Modifier</span><span class="p">.</span><span class="nf">fillMaxSize</span><span class="p">()</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2025 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>
