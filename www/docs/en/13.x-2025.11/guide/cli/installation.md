@@ -67,6 +67,10 @@ To install the `cordova` CLI tool, follow these steps:
     </thead>
     <tbody>
         <tr>
+            <td>13.x</td>
+            <td>>=20.17.0</td>
+        </tr>
+        <tr>
             <td>12.x</td>
             <td>>=16.13.0</td>
         </tr>
