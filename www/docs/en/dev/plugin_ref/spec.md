@@ -51,9 +51,7 @@ Example:
 
 The child elements of the `<engines>` element specify versions of Apache Cordova-based frameworks that this plugin supports. The CLI aborts with a non-zero code for any plugin whose target project does not meet the engine's constraints. If no <engine> tags are specified, the CLI attempts to install into the specified cordova project directory blindly.
 
->NOTE: In **Cordova 6.1.0+**, the recommended place to specify platform, plugin, and CLI dependencies
->is in a plugin's `package.json`. See [specifying Cordova dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies)
->for more information
+> NOTE: Starting in **Cordova 6.1.0**, it is recommended to include the platform and CLI engine requirements in the plugin's `package.json`, in addition to the `<engines>` declaration in `plugin.xml`. See [Specifying Cordova Dependencies](../guide/hybrid/plugins/index.html#specifying-cordova-dependencies) for more information.
 
 Attributes | Description
 ---------------- | ------------
