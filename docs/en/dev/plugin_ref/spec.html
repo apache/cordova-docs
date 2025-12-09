@@ -2434,9 +2434,7 @@
 <p>The child elements of the <code>&lt;engines&gt;</code> element specify versions of Apache Cordova-based frameworks that this plugin supports. The CLI aborts with a non-zero code for any plugin whose target project does not meet the engine&#39;s constraints. If no <engine> tags are specified, the CLI attempts to install into the specified cordova project directory blindly.</engine></p>
 
 <blockquote>
-  <p>NOTE: In <strong>Cordova 6.1.0+</strong>, the recommended place to specify platform, plugin, and CLI dependencies
-is in a plugin&#39;s <code>package.json</code>. See <a href="../guide/hybrid/plugins/index.html#specifying-cordova-dependencies">specifying Cordova dependencies</a>
-for more information</p>
+  <p>NOTE: Starting in <strong>Cordova 6.1.0</strong>, it is recommended to include the platform and CLI engine requirements in the plugin&#39;s <code>package.json</code>, in addition to the <code>&lt;engines&gt;</code> declaration in <code>plugin.xml</code>. See <a href="../guide/hybrid/plugins/index.html#specifying-cordova-dependencies">Specifying Cordova Dependencies</a> for more information.</p>
 </blockquote>
 
 <table>
