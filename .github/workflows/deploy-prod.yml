@@ -23,11 +23,7 @@ on:
       dispatchReason:
         description: 'Reason of Manual Deploy'
         required: true
-        default: 'Re-run failed deployment'
-
-  push:
-    branches:
-      - master
+        default: 'Deploy to live site (production)'
 
 jobs:
   build:
