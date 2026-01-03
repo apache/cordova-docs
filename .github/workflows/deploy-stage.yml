@@ -19,11 +19,6 @@ name: Deploy Staging Site
 
 on:
   workflow_dispatch:
-    inputs:
-      dispatchReason:
-        description: 'Reason of Manual Deploy'
-        required: true
-        default: 'Re-run failed deployment'
 
   push:
     branches:

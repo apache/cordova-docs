@@ -17,13 +17,7 @@
 
 name: Deploy Prod Site
 
-on:
-  workflow_dispatch:
-    inputs:
-      dispatchReason:
-        description: 'Reason of Manual Deploy'
-        required: true
-        default: 'Deploy to live site (production)'
+on: [workflow_dispatch]
 
 jobs:
   build:
