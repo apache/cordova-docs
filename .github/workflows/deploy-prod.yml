@@ -15,29 +15,54 @@
 # specific language governing permissions and limitations
 # under the License.
 
-name: build test
+name: Deploy Prod Site
 
-on: [ pull_request ]
+on:
+  workflow_dispatch:
+    inputs:
+      dispatchReason:
+        description: 'Reason of Manual Deploy'
+        required: true
+        default: 'Re-run failed deployment'
+
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      contents: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
         with:
-          node-version: 22.x
-      - uses: ruby/setup-ruby@v1
+          ref: master
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+
+      # v1.278.0
+      - uses: ruby/setup-ruby@4c24fa5ec04b2e79eb40571b1cee2a0d2b705771
         with:
           ruby-version: 2.7
           bundler-cache: true
 
-      - name: Run npm install
-        run: npm install
+      - name: Run npm install-ci-test (cit)
+        run: npm install-ci-test
 
-      - name: Run npm test
-        run: npm test
+      - name: Run build
+        run: npm run build:prod
 
-      - name: Run dev build
-        run: npm run build
+      # v4.7.4
+      - name: Run deploy
+        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23
+        with:
+          branch: asf-site
+          folder: build-prod
+          clean-exclude: |
+            archive
