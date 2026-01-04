@@ -45,7 +45,7 @@ title: API Reference
         </li>
         <li>
             <h2><a href="phonegap/contacts/contacts.html">Contacts</a></h2>
-            <span>Work with the devices contact database.</span>
+            <span>Work with the device's contact database.</span>
         </li>
         <li>
             <h2><a href="phonegap/device/device.html">Device</a></h2>
@@ -73,7 +73,7 @@ title: API Reference
         </li>
         <li>
             <h2><a href="phonegap/storage/storage.html">Storage</a></h2>
-            <span>Hook into the devices native storage options.</span>
+            <span>Hook into the device's native storage options.</span>
         </li>
     </ul>
     <h1>Guides</h1>
