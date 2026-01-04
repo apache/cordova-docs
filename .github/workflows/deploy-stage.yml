@@ -15,22 +15,27 @@
 # specific language governing permissions and limitations
 # under the License.
 
-name: build test
+name: Deploy Staging Site
 
 on:
-  pull_request:
+  workflow_dispatch:
+
+  push:
     branches:
-      - '*'
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: master
+
       - uses: actions/setup-node@v6
         with:
           node-version: 24.x
@@ -44,5 +49,14 @@ jobs:
       - name: Run npm install-ci-test (cit)
         run: npm install-ci-test
 
-      - name: Run dev build
-        run: npm run build
+      - name: Run build
+        run: npm run build:prod
+
+      # v4.7.4
+      - name: Run deploy
+        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23
+        with:
+          branch: asf-staging
+          folder: build-prod
+          clean-exclude: |
+            archive
