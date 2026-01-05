@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Getting Started with Android - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/2.3.0/guide/getting-started/android/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/accelerometer/accelerometer.html">
+                Accelerometer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/camera/camera.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/media/capture/capture.html">
+                Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/compass/compass.html">
+                Compass
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/connection/connection.html">
+                Connection
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/contacts/contacts.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/device/device.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/file/file.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/geolocation/geolocation.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/globalization/globalization.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/media/media.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/notification/notification.html">
+                Notification
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/splashscreen/splashscreen.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/getting-started/index.html">
+                Getting Started Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/command-line/index.html">
+                Command-Line Usage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/upgrading/index.html">
+                Upgrading Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/project-settings/index.html">
+                Project Settings
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/plugin-development/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/whitelist/index.html">
+                Domain Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.3.0/guide/cordova-webview/index.html">
+                Embedding WebView
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/2.3.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/accelerometer/accelerometer.html">
+        Accelerometer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/camera/camera.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/media/capture/capture.html">
+        Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/compass/compass.html">
+        Compass
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/connection/connection.html">
+        Connection
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/contacts/contacts.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/device/device.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/file/file.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/geolocation/geolocation.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/globalization/globalization.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/media/media.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/notification/notification.html">
+        Notification
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/splashscreen/splashscreen.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/getting-started/index.html">
+        Getting Started Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/command-line/index.html">
+        Command-Line Usage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/upgrading/index.html">
+        Upgrading Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/project-settings/index.html">
+        Project Settings
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/plugin-development/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/whitelist/index.html">
+        Domain Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.3.0/guide/cordova-webview/index.html">
+        Embedding WebView
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Getting Started with Android</h1>
+
+<p>This guide describes how to set up your development environment for Cordova and run a sample application.</p>
+
+<ol>
+  <li>
+    <h2>Minimum Requirements for Development</h2>
+    <ul>
+      <li>Identical to <a href="http://developer.android.com/sdk/index.html">Android Minimum Requirements</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h2>1.1 Supported Android Devices</h2>
+<ul>
+  <li>Android 2.1 (Deprecated May 2013)</li>
+  <li>Android 2.2</li>
+  <li>Android 2.3</li>
+  <li>Android 3.x (Deprecated May 2013)</li>
+  <li>Android 4.x</li>
+</ul>
+
+<p>We currently do not support Android 1.x, and we plan to deprecate platforms in the future as they are updated and dip below 5% on the <a href="http://developer.android.com/about/dashboards/index.html">distribution dashboard</a> provided by Google.</p>
+
+<ol>
+  <li>
+    <h2>Install SDK + Cordova</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>Download and install <a href="http://www.eclipse.org/downloads/">Eclipse Classic</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/index.html">Android SDK</a></li>
+  <li>Download and install <a href="http://developer.android.com/sdk/eclipse-adt.html#installing">ADT Plugin</a></li>
+  <li>Download the latest copy of <a href="http://cordova.apache.org/#download">Cordova</a> and extract its contents. We will be working with the Android directory.</li>
+</ul>
+
+<h2>3A. Setup your PATH environment variable on Mac OS</h2>
+
+<ul>
+  <li>Open the Terminal program (this is in your Applications/Utilites folder by default).</li>
+  <li>Run the following command</li>
+</ul>
+
+<p><code>touch ~/.bash_profile; open ~/.bash_profile</code></p>
+
+<ul>
+  <li>This will open the file in the your default text editor.</li>
+  <li>You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use &quot;/Development/android-sdk-macosx&quot; as the directory the SDK is installed in. Add the following line:</li>
+</ul>
+
+<p><code>export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools</code></p>
+
+<ul>
+  <li>Save the file and quit the text editor.</li>
+  <li>Execute your .bash_profile to update your PATH.</li>
+</ul>
+
+<p><code>source ~/.bash_profile</code></p>
+
+<ul>
+  <li>Now everytime you open the Terminal program you PATH will included the Android SDK.</li>
+</ul>
+
+<h2>3B. Setup your PATH environment variable on Windows</h2>
+
+<ul>
+  <li>From the Desktop, right-click My Computer and click Properties.</li>
+  <li>Click Advanced System Settings link in the left column.</li>
+  <li>In the System Properties window click the Environment Variables button.</li>
+  <li>Select the PATH variable from the System variables section.</li>
+  <li>Select the Edit button.</li>
+  <li>You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use &quot;C:\Development\android-sdk-windows&quot; as the directory the SDK is installed in. Append the following text into the text box:</li>
+</ul>
+
+<p><code>;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools</code></p>
+
+<ul>
+  <li>Save your edit. Close the Environment Variables dialog.</li>
+  <li>Additionally, you may need to include <code>%JAVA_HOME%\bin</code> to your PATH as well. To check to see if this is required, run a command prompt and type <code>java</code>. If the program can not be found add <code>%JAVA_HOME%\bin</code> to the PATH. You may need to specify the full path instead of using the <code>%JAVA_HOME%</code> environment variable.</li>
+  <li>Finally, you may need to include <code>%ANT_HOME%\bin</code> to your PATH as well. To check to see if this is required, run a command prompt and type <code>ant</code>. If the program can not be found add <code>%ANT_HOME%\bin</code> to the PATH. You may need to specify the full path instead of using the <code>%ANT_HOME%</code> environment variable.</li>
+</ul>
+
+<ol>
+  <li>
+    <h2>Setup New Project</h2>
+  </li>
+</ol>
+
+<ul>
+  <li>In a terminal window, navigate to the <code>bin</code> directory within the <code>android</code> subfolder of the Cordova distribution.</li>
+  <li>
+    <p>Type in <code>./create &lt;project_folder_path&gt; &lt;package_name&gt; &lt;project_name&gt;</code> then press <strong>&quot;Enter&quot;</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;project_folder_path&gt; is the path to your new Cordova Android project
+  &lt;package_name&gt; is the package name, e.g. com.YourCompany.YourAppName
+  &lt;project_name&gt; is the project name, e.g. YourApp (Must not contain spaces)
+</code></pre></div>    </div>
+  </li>
+  <li>Launch Eclipse, and select menu item <strong>New Project</strong>
+  <img src="/static/img/guide/platforms/android/eclipse_new_project.png" alt="" /></li>
+  <li>Select the directory you used for <code>&lt;project_folder_path&gt;</code></li>
+  <li>Click Finish.</li>
+</ul>
+
+<p>If your project has a red X indicating there is a problem follow these additional steps:</p>
+
+<ul>
+  <li>Right click on the project folder.</li>
+  <li>In the Properties dialog that is displayed select Android from the navigation pane.</li>
+  <li>For the project build target select the highest Android API level you have installed.</li>
+  <li>Click OK</li>
+  <li>Then from the Project menu bar item select Clean.</li>
+  <li>This should correct all the errors in the project.</li>
+</ul>
+
+<h2>5A. Deploy to Emulator</h2>
+
+<ul>
+  <li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
+  <li>Eclipse will ask you to select an appropriate AVD. If there isn&#39;t one, then you&#39;ll need to create it.</li>
+</ul>
+
+<p><strong>Note: For a faster experience, use an Intel-based emulator image:</strong></p>
+
+<ul>
+  <li>Open the Android SDK Manager
+<img src="/static/img/guide/platforms/android/eclipse_android_sdk_button.png" alt="" /></li>
+  <li>Install one or more <code>Intel x86 Atom</code> System Images as well as the <code>Intel Hardware Accelerated Execution Manager</code> (under Extras).</li>
+  <li>Run the Intel installer, which has been downloaded to: <code>extras/intel/Hardware_Accelerated_Execution_Manager</code> within your Android SDK</li>
+  <li>Create a new AVD with the Target set to an Intel image.</li>
+  <li>When starting the emulator, ensure there are no error messages about the HAX module failing to load.</li>
+</ul>
+
+<h2>5B. Deploy to <a href="../../../cordova/device/device.html">Device</a></h2>
+
+<ul>
+  <li>Make sure USB debugging is enabled on your device and plug it into your system. Information can be found on the <a href="http://developer.android.com/tools/device.html">Android Developer Site</a></li>
+  <li>Right click the project and go to <strong>Run As &gt; Android Application</strong></li>
+</ul>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

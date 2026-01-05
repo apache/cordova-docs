@@ -600,9 +600,13 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_URI} ^/archive/ [NC]
 RewriteRule .* - [L]
 
-# Prevent redirecting away from English docs
-RewriteCond %{REQUEST_URI} ^/docs/en/ [NC]
+# Allow live English docs (latest + dev)
+RewriteCond %{REQUEST_URI} ^/docs/en/(latest|dev)(/|$) [NC]
 RewriteRule .* - [L]
+
+# Archive all other English versions (permanent)
+RewriteCond %{REQUEST_URI} ^/docs/en/((?:\d+\.(?:\d+\.\d+|x)))(/.*)?$ [NC]
+RewriteRule ^docs/en/((?:\d+\.(?:\d+\.\d+|x)))(/.*)?$ /archive/docs/en/$1$2 [R=301,L]
 
 # Redirect all non-English documentation to the English version.
 # If the English counterpart is missing, a 404 page will be displayed.
