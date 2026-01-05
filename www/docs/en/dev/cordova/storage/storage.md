@@ -86,65 +86,6 @@ database, and its asynchronous API and search indexes provide performance benefi
 
 IndexedDB is supported by the underlying WebView on all platforms, with known limitations on the `browser` platform.
 
-## Cache Storage
-
-### Overview
-
-The Cache Storage API is a web-standard storage mechanism primarily used for
-storing network request and response pairs. It is commonly used to support
-resource caching and offline-read scenarios, and is often associated with
-Service Worker–based caching strategies.
-
-### Availability in Cordova
-
-Cache Storage is exposed via the standard `window.caches` interface when supported
-by the underlying WebView implementation. Availability and behavior depend entirely
-on the platform WebView, and the API may not be available on all Cordova platforms
-or in all execution contexts.
-
-### Platform behavior and caveats
-
-Behavior of Cache Storage in Cordova applications can differ from typical desktop
-browser environments:
-
-- **Android (Chromium WebView):** Behavior is generally similar to Chrome, but may
-  vary depending on the WebView version shipped with the device.
-- **iOS (WKWebView):** Cache Storage persistence is more restrictive, and cached
-  data may be evicted more aggressively by the system.
-- **Origin and scheme sensitivity:** Access to cached data is origin-dependent.
-  Changes to the application origin, scheme, or WebView implementation may prevent
-  access to previously stored cache entries.
-
-### Persistence and eviction
-
-Cache Storage should not be considered durable storage. Cached data may be removed
-by the operating system or WebView implementation under storage pressure, during
-application updates, or when the application is reinstalled.
-
-As with other web storage mechanisms, applications should assume that cached data
-can be evicted at any time and should be able to recover gracefully.
-
-### When to use (and when not to)
-
-Cache Storage is appropriate for:
-
-- Caching network resources such as API responses or static assets
-- Reducing network usage
-- Supporting offline-read or offline-first scenarios
-
-Cache Storage is **not** appropriate for:
-
-- Storing user-generated or business-critical data
-- Data that requires guaranteed persistence across app restarts or updates
-
-For structured or durable data storage, consider using IndexedDB instead.
-
-
-### References
-
-- [MDN: Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage)
-- [MDN: Using the Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
-
 
 ### Web browser limitations
 
@@ -246,6 +187,66 @@ For more information, see:
 - Complex API with nested callbacks.
 - Limited total amount of storage and possible eviction [as described on MDN][MDNIndexedDBLimitsAndEviction].
 - On iOS systems, WebKit may delete web-related data storage when the device is under storage pressure or exceeds defined storage quotas. This eviction is triggered by WebKit itself, based on its internal quota management policies. For more information, see [WebKit – Updates to Storage Policy][WebKitUpdatesToStoragePolicy].
+
+## Cache Storage
+
+### Overview
+
+The Cache Storage API is a web-standard storage mechanism primarily used for
+storing network request and response pairs. It is commonly used to support
+resource caching and offline-read scenarios, and is often associated with
+Service Worker–based caching strategies.
+
+### Availability in Cordova
+
+Cache Storage is exposed via the standard `window.caches` interface when supported
+by the underlying WebView implementation. Availability and behavior depend entirely
+on the platform WebView, and the API may not be available on all Cordova platforms
+or in all execution contexts.
+
+### Platform behavior and caveats
+
+Behavior of Cache Storage in Cordova applications can differ from typical desktop
+browser environments:
+
+- **Android (Chromium WebView):** Behavior is generally similar to Chrome, but may
+  vary depending on the WebView version shipped with the device.
+- **iOS (WKWebView):** Cache Storage persistence is more restrictive, and cached
+  data may be evicted more aggressively by the system.
+- **Origin and scheme sensitivity:** Access to cached data is origin-dependent.
+  Changes to the application origin, scheme, or WebView implementation may prevent
+  access to previously stored cache entries.
+
+### Persistence and eviction
+
+Cache Storage should not be considered durable storage. Cached data may be removed
+by the operating system or WebView implementation under storage pressure, during
+application updates, or when the application is reinstalled.
+
+As with other web storage mechanisms, applications should assume that cached data
+can be evicted at any time and should be able to recover gracefully.
+
+### When to use (and when not to)
+
+Cache Storage is appropriate for:
+
+- Caching network resources such as API responses or static assets
+- Reducing network usage
+- Supporting offline-read or offline-first scenarios
+
+Cache Storage is **not** appropriate for:
+
+- Storing user-generated or business-critical data
+- Data that requires guaranteed persistence across app restarts or updates
+
+For structured or durable data storage, consider using IndexedDB instead.
+
+
+### References
+
+- [MDN: Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage)
+- [MDN: Using the Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+
 
 ## Plugin-Based Options
 
