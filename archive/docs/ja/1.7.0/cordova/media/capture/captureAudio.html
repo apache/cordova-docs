@@ -28,8 +28,6 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../../../../../../static/css/main.css">
     <link rel="stylesheet" type="text/css" href="../../../../../../static/css/lib/syntax.css">
-    <!-- Algolia Search CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
 
     <!-- Fonts -->
     <!-- For attribution information, see www/attributions.html -->
@@ -69,14 +67,7 @@
                         <li >
                             <a href="https://cordova.apache.org/docs/en/latest/">Latest Documentation</a>
                         </li>
-                        <li>
-                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
-                                <div class="input-group">
-                                    
-                                    <input id="header-search-field" type="text" placeholder="Search '1.7.0' docs..." class="form-control hidden-xs" autocomplete="off">
-                                </div>
-                            </form>
-                        </li>
+
                     </ul>
                 </div>
             </div><!--/.navbar-collapse -->
@@ -731,18 +722,6 @@ navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
     <script defer type="text/javascript" src="../../../../../../static/js/index.js"></script>
     <script defer type="text/javascript" src="../../../../../../static/js/twitter.js"></script>
     
-
-
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
-<script type="text/javascript">
-    docsearch({
-        apiKey: '0a916ab198bd93d031aa70611271e42e',
-        indexName: 'cordova',
-        inputSelector: '#header-search-field',
-        algoliaOptions: { 'facetFilters': ["version:  1.7.0", "language: ja"] }
-    });
-</script>
 
 </body>
 </html>
