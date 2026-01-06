@@ -47,9 +47,9 @@ jobs:
       - name: Run build
         run: npm run build:prod
 
-      # v4.7.4
+      # v4.8.0
       - name: Run deploy
-        uses: JamesIves/github-pages-deploy-action@4a3abc783e1a24aeb44c16e869ad83caf6b4cc23
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f
         with:
           branch: asf-site
           folder: build-prod
