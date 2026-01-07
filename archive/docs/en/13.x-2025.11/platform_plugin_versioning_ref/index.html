@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="How to manage platforms & plugins versions. ">
+
+    <title>
+        
+            
+                Version Management - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/13.x-2025.11/platform_plugin_versioning_ref/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/overview/project-structure.html">
+                Project Structure
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/overview/project-structure.html">
+        Project Structure
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/13.x-2025.11/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+                
+                
+
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                        
+                        
+
+                        <a class="edit" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/dev/platform_plugin_versioning_ref/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                    
+                
+
+                <!-- Version dropdown -->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="versionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        13.x-2025.11
+                        
+                            (Latest)
+                        
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="versionDropdown">
+
+                        <!-- List versions available in this language -->
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/dev/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                dev
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/latest/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    <span class="selected">
+                                        
+                                13.x-2025.11
+                                
+                                    (Latest)
+                                
+                            
+                                    </span>
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/12.x-2025.01/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                12.x-2025.01
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/12.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                12.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/11.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                11.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/10.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                10.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/9.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                9.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/8.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                8.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/7.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                7.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/6.x/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                6.x
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.4.0/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                5.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.1.1/platform_plugin_versioning_ref/index.html" class="">
+                                
+                                    
+                                5.1.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/5.0.0/" class="missing-page">
+                                
+                                    
+                                5.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/4.0.0/" class="missing-page">
+                                
+                                    
+                                4.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.6.0/" class="missing-page">
+                                
+                                    
+                                3.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.5.0/" class="missing-page">
+                                
+                                    
+                                3.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.4.0/" class="missing-page">
+                                
+                                    
+                                3.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.3.0/" class="missing-page">
+                                
+                                    
+                                3.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.2.0/" class="missing-page">
+                                
+                                    
+                                3.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.1.0/" class="missing-page">
+                                
+                                    
+                                3.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/3.0.0/" class="missing-page">
+                                
+                                    
+                                3.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.9.0/" class="missing-page">
+                                
+                                    
+                                2.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.8.0/" class="missing-page">
+                                
+                                    
+                                2.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.7.0/" class="missing-page">
+                                
+                                    
+                                2.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.6.0/" class="missing-page">
+                                
+                                    
+                                2.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.5.0/" class="missing-page">
+                                
+                                    
+                                2.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.4.0/" class="missing-page">
+                                
+                                    
+                                2.4.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.3.0/" class="missing-page">
+                                
+                                    
+                                2.3.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.2.0/" class="missing-page">
+                                
+                                    
+                                2.2.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.1.0/" class="missing-page">
+                                
+                                    
+                                2.1.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/2.0.0/" class="missing-page">
+                                
+                                    
+                                2.0.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.9.0/" class="missing-page">
+                                
+                                    
+                                1.9.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.1/" class="missing-page">
+                                
+                                    
+                                1.8.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.8.0/" class="missing-page">
+                                
+                                    
+                                1.8.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.7.0/" class="missing-page">
+                                
+                                    
+                                1.7.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.1/" class="missing-page">
+                                
+                                    
+                                1.6.1
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.6.0/" class="missing-page">
+                                
+                                    
+                                1.6.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                        <li>
+                            
+                            
+
+                            
+
+                            
+                            
+                            
+
+                            
+
+                            <a href="/docs/en/1.5.0/" class="missing-page">
+                                
+                                    
+                                1.5.0
+                                
+                            
+                                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+
+            
+            
+
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Version Management</h1>
+
+<p>Cordova allows developers to <strong>save</strong> and <strong>restore</strong> platforms and plugins, eliminating the need to check in platform and plugin source code.</p>
+
+<p>When a platform or plugin is added, its version details are automatically saved to the <code>package.json</code> file.</p>
+
+<p>The recommended way to add or remove platforms and plugins is by using the Cordova CLI commands:</p>
+
+<ul>
+  <li><code>cordova platform add|remove ...</code></li>
+  <li><code>cordova plugin add|remove ...</code></li>
+</ul>
+
+<p>Using these commands helps prevent out-of-sync issues.</p>
+
+<p>While it is technically possible to add a platform or plugin by editing <code>package.json</code> directly, this is <strong>strongly discouraged</strong>.</p>
+
+<p>The restore process runs automatically when executing <code>cordova prepare</code>, using the information stored in <code>package.json</code> and <code>config.xml</code>. This applies to both platforms and plugins. If a platform or plugin is defined in both files, <code>package.json</code> takes priority.</p>
+
+<p>One scenario where save/restore capabilities come in handy is in large teams that work on an app, with each team member focusing on a platform or plugin. This feature makes it easier to share the project and reduce the amount of redundant code that is checked in the repository.</p>
+
+<p>The adding and removing mechanisim that Cordova CLI uses for platforms and plugins is controlled by npm CLI. Below we will take a look at the command syntax and examples.</p>
+
+<h2>Adding Platforms and Plugins</h2>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;platform | plugin&gt; add <span class="o">[</span>&lt;package-spec&gt; ...]
+</code></pre></div></div>
+
+<p>The <code>package-spec</code> argument supports most formats accepted by the npm CLI.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Scoped and non-scoped npm packages</li>
+  <li>Local directory paths</li>
+  <li>Git remote URLs</li>
+  <li>Tarball archives</li>
+  <li><a href="#Cordova-Resolved-Names">Cordova Resolved Names</a> for official Cordova platforms</li>
+</ul>
+
+<p>Additionally, the <code>--nosave</code> flag could be appended to the command to prevent adding of specified platform and plugins from the <code>package.json</code> file.</p>
+
+<hr />
+
+<p><strong>Quick Overview:</strong></p>
+
+<p>When you add a platform or plugin, <code>package.json</code> is updated with its dependencies and Cordova-specific metadata.</p>
+
+<p>For example, running the following commands in a Cordova project:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@13.0.0
+cordova plugin add cordova-plugin-device@3.0.0
+</code></pre></div></div>
+
+<p>Would result in <code>package.json</code> containing the following entries:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"cordova-android"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^13.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cordova-plugin-device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.0.0"</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"android"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"cordova-plugin-device"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>When restoring a Cordova project, this metadata determines which platforms and plugins will be installed.</p>
+
+<hr />
+
+<h3>Various <code>add</code> Examples</h3>
+
+<ul>
+  <li>
+    <p><strong>Cordova Resolved Names for Platforms:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add android
+</code></pre></div>    </div>
+
+    <p>If no tag or version is specified, the Cordova CLI will fetch the latest release.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add electron@latest
+</code></pre></div>    </div>
+
+    <p>NPM tags are supported and can be appended to the end of the package specification.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add ios@7.1.1
+</code></pre></div>    </div>
+
+    <p>Exact release versions published to the npm registry are also supported and can be appended to the end of the package specification.</p>
+  </li>
+  <li>
+    <p><strong>npm Package:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add cordova-android
+  cordova platform add cordova-android@latest
+  cordova platform add cordova-android@13.0.0
+
+  cordova platform add @cordova/some-platform
+  cordova platform add @cordova/some-platform@latest
+  cordova platform add @cordova/some-platform@1.0.0
+
+  cordova plugin some-cordova-plugin
+  cordova plugin some-cordova-plugin@latest
+
+  cordova plugin add @cordova/some-plugin
+  cordova plugin add @cordova/some-plugin@latest
+  cordova plugin add @cordova/some-plugin@1.0.0
+</code></pre></div>    </div>
+
+    <p>Scoped and non-scope npm packages are supported for both platforms and plugins. Optionally, npm package tags or released versions can be targeted by appending to the end of the package name. (e.g. <code>package-name@latest</code>).</p>
+
+    <p>Please note that the scoped packages shown above are only examples and do not exist.</p>
+  </li>
+  <li>
+    <p><strong>Git remote URL:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add git://github.com/apache/cordova-android.git
+  cordova platform add git://github.com/apache/cordova-android.git#feature-branch
+  cordova platform add git://github.com/apache/cordova-android.git#rel/13.0.0
+
+  cordova platform add https://github.com/apache/cordova-android.git
+  cordova platform add https://github.com/apache/cordova-android.git#feature-branch
+  cordova platform add https://github.com/apache/cordova-android.git#rel/13.0.0
+
+  cordova platform add https://github.com/apache/cordova-android
+  cordova platform add https://github.com/apache/cordova-android#feature-branch
+  cordova platform add https://github.com/apache/cordova-android#rel/13.0.0
+</code></pre></div>    </div>
+
+    <p>Various Git URL formats are supported for installing platforms and plugins. Optionally, a treeish (branch name, tag, or commit ID) can be specified by appending <code>#&lt;treeish&gt;</code> to the URL.</p>
+
+    <p>When targeting a treeish, ensure it is production-ready before using it in a production environment. This functionality is useful for testing and reviewing pull requests, future releases, or release votes.</p>
+  </li>
+  <li>
+    <p><strong>Git service short hand:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add github:apache/cordova-android
+  cordova platform add github:apache/cordova-android#feature-branch
+  cordova platform add github:apache/cordova-android#rel/13.0.0
+</code></pre></div>    </div>
+
+    <p>Platforms and plugins can also be checked out from Git repositories using a shorthand format.</p>
+
+    <p>If your repository is hosted on another Git service, such as Bitbucket or GitLab, you can modify the command to target these services.</p>
+
+    <p>Branches and tags can also be targeted using the shorthand format. However, ensure that the specified branch or version is production-ready before using it in production.</p>
+  </li>
+  <li>
+    <p><strong>Tarball Archive:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add ~/path/to/a/tarbal.tgz
+</code></pre></div>    </div>
+
+    <p>Currently, <strong>only platforms</strong> support installation from a tarball package. The supported archive formats are <code>.tar.gz</code>, <code>.tgz,</code> and <code>.tar</code>.</p>
+  </li>
+  <li>
+    <p><strong>Local Directory Path:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform add ~/path/to/a/cordova-platform
+  cordova plugin add ~/path/to/a/cordova-plugin
+
+  cordova platform add C:/Path/to/a/cordova-platform
+  cordova plugin add C:/Path/to/a/cordova-plugin
+</code></pre></div>    </div>
+
+    <p>Platforms and plugins can be installed from a local directory path.</p>
+  </li>
+</ul>
+
+<h2>Removing Platforms and Plugins</h2>
+
+<p><strong>Command Syntax:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;platform | plugin&gt; remove &lt;package-name&gt;
+</code></pre></div></div>
+
+<p>The <code>remove</code> command also has an alias of <code>rm</code>.</p>
+
+<p>The <code>package-name</code> argument must be the name of the platform or plugin you want to remove.</p>
+
+<p>For Apache Cordova&#39;s platforms, you <strong>MUST</strong> use the <a href="#Cordova-Resolved-Names">Cordova Resolved Names</a> when removing them.</p>
+
+<p>The <code>--nosave</code> flag could be appended to the command to prevent removal of specified platform and plugins from the <code>package.json</code> file.</p>
+
+<hr />
+
+<h3>Various <code>remove</code> Examples</h3>
+
+<ul>
+  <li>
+    <p><strong>Removing platforms:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova platform remove android
+</code></pre></div>    </div>
+
+    <p>The above command will remove the <code>cordova-android</code> platform from the project and <code>package.json</code> file.</p>
+
+    <p><em>Note: If the platform definition existed in <code>config.xml</code> from older version&#39;s of Cordova CLI, it will also be removed from <code>config.xml</code>.</em></p>
+  </li>
+  <li>
+    <p><strong>Removing plugins:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin remove cordova-plugin-device
+</code></pre></div>    </div>
+
+    <p>The above command will remove the <code>cordova-plugin-device</code> plugin from the project and <code>package.json</code> file.</p>
+
+    <p><em>Note: If the plugin definition existed in <code>config.xml</code> from older version&#39;s of Cordova CLI, it will also be removed from <code>config.xml</code>.</em></p>
+  </li>
+</ul>
+
+<h2>Important Notes on Platform Restoration</h2>
+
+<ol>
+  <li>
+    <p>What version is installed when using <code>cordova platform add android</code> and the platform is defined in <code>config.xml</code>?</p>
+
+    <p>If the <code>config.xml</code> file contains the following entry:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span>
+     ...
+     <span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">"13.0.0"</span> <span class="nt">/&gt;</span>
+     ...
+ <span class="nt">&lt;/xml&gt;</span>
+</code></pre></div>    </div>
+
+    <p>When running the <strong><code>cordova platform add android</code></strong> command with no version provided, it will use the <code>spec</code> version defined in <code>config.xml</code>. In this example it would be <code>13.0.0</code>.</p>
+  </li>
+  <li>
+    <p>What version is restored if a platform is defined in both <code>config.xml</code> and <code>package.json</code>?</p>
+
+    <p>Suppose your project has the following configurations:</p>
+
+    <p><strong><code>config.xml</code></strong>:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;engine</span> <span class="na">name=</span><span class="s">"android"</span> <span class="na">spec=</span><span class="s">“12.0.0”</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+
+    <p><strong><code>package.json</code></strong>:</p>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="s2">"android"</span><span class="w">
+     </span><span class="p">]</span><span class="w">
+ </span><span class="p">}</span><span class="err">,</span><span class="w">
+ </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"cordova-android"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^13.0.0"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+
+    <p>When <code>cordova prepare</code> is executed, the version from <code>package.json</code> has higher priority over <code>config.xml</code>. It will install version <code>^13.0.0</code>.</p>
+  </li>
+</ol>
+
+<h2>Cordova Resolved Names</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cordova Resolved Name</th>
+      <th>NPM Package Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>android</code></td>
+      <td><code>cordova-android</code></td>
+    </tr>
+    <tr>
+      <td><code>electron</code></td>
+      <td><code>cordova-electron</code></td>
+    </tr>
+    <tr>
+      <td><code>ios</code></td>
+      <td><code>cordova-ios</code></td>
+    </tr>
+    <tr>
+      <td><code>browser</code></td>
+      <td><code>cordova-browser</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>
