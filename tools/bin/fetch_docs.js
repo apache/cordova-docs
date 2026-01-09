@@ -28,7 +28,7 @@ const util = require('./util');
 
 // constants
 const DEFAULT_REPO_PATH = 'README.md';
-const DEFAULT_VERSION_NAME = 'dev';
+const DEFAULT_VERSION_NAME = 'latest';
 const DEFAULT_LANGUAGE_NAME = 'en';
 
 const THIS_FILE = path.basename(__filename);

@@ -14,7 +14,7 @@ www/static/css
 # done else where as these files are pulled from other sources
 # see fetch_docs.js for more details.
 # www/_data/fetched-files.yml contains an informative list of src/dest pairs
-www/docs/*/dev/reference
+www/docs/*/latest/reference/
 
 node_modules
 ruby_modules

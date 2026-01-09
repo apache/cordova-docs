@@ -19,7 +19,7 @@ excerpt_separator: <!--more-->
 # the version to which /latest/ points
 # NOTE:
 #      this value gets overwritten in _version.yml, which is a generated file
-latest_docs_version: dev
+latest_docs_version: latest
 
 # the docs version that is shown by default when clicking on docs links on the site
 default_linked_docs_version: latest

@@ -17,8 +17,7 @@ const buffer = require('vinyl-buffer');
 const htmllint = require('gulp-htmllint');
 const Crawler = require('simplecrawler');
 
-const nextversion = require('./tools/bin/nextversion');
-const { listdirsSync, srcTocfileName, logger } = require('./tools/bin/util');
+const { listdirsSync, logger } = require('./tools/bin/util');
 
 const HeaderTransform = require('./tools/HeaderTransform');
 
@@ -34,7 +33,7 @@ const PROD_DIR = path.join(ROOT_DIR, 'build-prod');
 const DATA_DIR = path.join(SOURCE_DIR, '_data');
 const TOC_DIR = path.join(DATA_DIR, 'toc');
 const DOCS_DIR = path.join(SOURCE_DIR, 'docs');
-const FETCH_DIR = path.join(DOCS_DIR, 'en', 'dev', 'reference');
+const FETCH_DIR = path.join(DOCS_DIR, 'en', 'latest', 'reference');
 const CSS_SRC_DIR = path.join(SOURCE_DIR, 'static', 'css-src');
 const CSS_OUT_DIR = path.join(SOURCE_DIR, 'static', 'css');
 const JS_DIR = path.join(SOURCE_DIR, 'static', 'js');
@@ -63,11 +62,8 @@ const BASE_URL = '';
 const YAML_FRONT_MATTER = '---\n---\n';
 const WATCH_INTERVAL = 1000; // in milliseconds
 const VERSION_VAR_NAME = 'latest_docs_version';
-const LATEST_DOCS_VERSION = fs.readFileSync(VERSION_FILE, 'utf-8').trim();
+const LATEST_DOCS_VERSION = 'latest';
 
-// '--bumpCli' flag hat determins if the next version is major CLI or new date release.
-const bumpCli = argv.bumpCli || false;
-const NEXT_DOCS_VERSION = nextversion.getNextVersion(bumpCli, LATEST_DOCS_VERSION);
 const LANGUAGES = listdirsSync(DOCS_DIR);
 const PROD_BY_DEFAULT = false;
 
@@ -144,43 +140,6 @@ function jekyllBuild (done) {
     exec(bundle, ['exec', 'jekyll', 'build'].concat(flags), done);
 }
 
-function copyDocsVersion (oldVersion, newVersion, cb) {
-    // copying a folder and a ToC file for each language
-    const numCopyOperations = LANGUAGES.length * 2;
-
-    // pseudo-CV (condition variable)
-    let numCopied = 0;
-    function doneCopying (error) {
-        if (error) {
-            cb(error);
-            return;
-        }
-
-        // call callback if all folders have finished copying
-        numCopied += 1;
-        if (numCopied === numCopyOperations) {
-            cb();
-        }
-    }
-
-    // create a new version for each language
-    LANGUAGES.forEach(function (languageName) {
-        // get files to copy
-        const oldVersionDocs = path.join(DOCS_DIR, languageName, oldVersion);
-        const oldVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, oldVersion));
-        const newVersionDocs = path.join(DOCS_DIR, languageName, newVersion);
-        const newVersionToc = path.join(TOC_DIR, srcTocfileName(languageName, newVersion));
-
-        // copy docs
-        console.log(oldVersionDocs + ' -> ' + newVersionDocs);
-        fs.cp(oldVersionDocs, newVersionDocs, { recursive: true, force: true }, doneCopying);
-
-        // copy ToC
-        console.log(oldVersionToc + ' -> ' + newVersionToc);
-        fs.cp(oldVersionToc, newVersionToc, { recursive: true, force: true }, doneCopying);
-    });
-}
-
 // tasks
 
 module.exports.help = module.exports.default = function help () {
@@ -193,9 +152,8 @@ module.exports.help = module.exports.default = function help () {
     logger('    serve         build the site and open it in a browser');
     logger('    reload        refresh the browser');
     logger('');
-    logger('    newversion    create ' + NEXT_DOCS_VERSION + ' docs from dev docs');
-    logger('    snapshot      copy dev docs to ' + LATEST_DOCS_VERSION + ' docs');
-    logger('');
+    // logger('    snapshot      creates an archive of latest docs');
+    // logger('');
     logger('    configs       run all the below tasks');
     logger('    defaults      create ' + DEFAULTS_CONFIG_FILE);
     logger('    version       create ' + VERSION_CONFIG_FILE);
@@ -346,8 +304,8 @@ module.exports.watch = gulp.series(serve, function watch () {
             path.join(SOURCE_DIR, '_includes', '*.html'),
             path.join(SOURCE_DIR, '**', '*.html') + '!' + path.join(DOCS_DIR, '**'),
             path.join(SOURCE_DIR, '**', '*.md') + '!' + path.join(DOCS_DIR, '**'),
-            path.join(DOCS_DIR, 'en', 'dev', '**', '*.md'),
-            path.join(DOCS_DIR, 'en', 'dev', '**', '*.html')
+            path.join(DOCS_DIR, 'en', 'latest', '**', '*.md'),
+            path.join(DOCS_DIR, 'en', 'latest', '**', '*.html')
         ],
         { interval: WATCH_INTERVAL },
         ['regen']
@@ -365,33 +323,16 @@ module.exports.lint = function lint () {
         .pipe(htmllint());
 };
 
-module.exports.newversion = gulp.series(fetch, function newVersion (done) {
-    if (fs.existsSync(path.join(DOCS_DIR, 'en', NEXT_DOCS_VERSION))) {
-        logger(styleText(['red'], '[ERROR] ') + `The targeted docs version ""${NEXT_DOCS_VERSION}"" already exist. Are you trying to update the existing snapshot? Use "npm run update-docs".`);
-        process.exit(1);
-    }
-
-    copyDocsVersion('dev', NEXT_DOCS_VERSION, function (error) {
-        if (error) {
-            console.error(error);
-            done();
-            return;
-        }
-
-        // finally update the version file with the new version
-        fs.writeFile(VERSION_FILE, NEXT_DOCS_VERSION + '\n', done);
-    });
-});
-
-module.exports.snapshot = gulp.series(fetch, function snapshot (done) {
-    // remove current version first
-    LANGUAGES.forEach(function (languageName) {
-        const languageLatestDocs = path.join(DOCS_DIR, languageName, LATEST_DOCS_VERSION);
-        remove(languageLatestDocs);
-    });
-
-    copyDocsVersion('dev', LATEST_DOCS_VERSION, done);
-});
+/**
+ * TODO: rewrite the snapshot to perform the following steps
+ * 1. create a temp directory
+ * 2. build docs into temp directory
+ *   - A flag should be set so the build process know
+ *     1. dispaly this version is outdated & each page to try and link to its latest page.
+ *     2. the navbar to link to latest docs
+ */
+// module.exports.snapshot = gulp.series(fetch, function snapshot (done) {
+// });
 
 module.exports.checklinks = function checkLinks (done) {
     const crawler = new Crawler('http://localhost:3000/');

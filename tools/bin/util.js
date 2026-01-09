@@ -81,11 +81,11 @@ module.exports = (function () {
     }
 
     function srcTocfileName (language, version) {
-        return tocfileName(language, version, 'src');
+        return tocfileName('en', 'latest', 'src');
     }
 
     function genTocfileName (language, version) {
-        return tocfileName(language, version, 'gen');
+        return tocfileName('en', 'latest', 'gen');
     }
 
     function mergeObjects (a, b) {
