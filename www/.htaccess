@@ -16,63 +16,57 @@
 #               three-oh-TWO (302) means you get TWO chances.
 ###############################################################################
 
-# set error pages
+# Set Error Pages
 ErrorDocument 404 {{site.baseurl}}/404.html
 
-# turn off automatic directory indices
+# Turn Off Automatic Directory Indices
 Options -Indexes
 
-# turn on redirection
+# Turn On Redirection
 Options +FollowSymLinks
 RewriteEngine on
 
-# NOTE:
-#      Some of the below redirects are 302s, and some are 301s. 302s are used
-#      for redirects whose targets change sometimes. For example:
-#          - /docs/          -> /docs/fr/, /docs/en/, etc.
-#          - /docs/en/       -> /docs/en/dev/, /docs/en/latest/, etc.
-#          - /docs/en/latest -> /docs/en/4.0.0/, /docs/en/5.0.0/, etc.
-#
-#      301s are for PERMANENT redirects. These are used only for mapping old
-#      pages to new pages.
-#
-# NOTE:
-#      (\w\w(?:-\w\w)?)                   - regex for languages
-#      (?:\d+\.(?:\d+\.\d+|x))|dev|latest - regex for versions
-#
-# NOTE:
-#      Meanings of some of the flags at the ends of rules:
-#
-#      L  - terminal rule; if it applies, no more rules are checked
-#      R  - redirect (followed by code)
-#      NE - no escaping special characters
+# From Cordova PMC Member raphinesse
+# Redirect to HTTPS (https://s.apache.org/An8s)
+# If we receive a forwarded http request from a proxy or
+# just a plain old http request directly from the client
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+RewriteCond %{HTTP:X-Forwarded-Proto} =""
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# 302 (temporary):
-#
-#     docs/         -> docs/[default language]/latest/
-#     docs/*        -> docs/*/latest/
-#     docs/*/       -> docs/*/latest/
-#     docs/*/latest -> docs/*/latest/
-#
-RewriteRule ^.*docs/$ {{site.baseurl}}/docs/{{site.language}}/latest/ [R=302,L]
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R=302,L]
+# Do Not Rewrite Archive
+RewriteRule ^archive/ - [L]
 
-# 302 (temporary):
+# Redirect language docs with no version or subpath defined to English latest docs
+#   /docs       → /docs/en/latest
+#   /docs/en    → /docs/en/latest
+#   /docs/ja    → /docs/en/latest
+#   /docs/zh-tw → /docs/en/latest
+RewriteRule ^docs(?:/[a-z]{2}(?:-[a-z]{2})?)?/?$ \
+    {{site.baseurl}}/docs/en/latest/ [R=301,L]
+
+# Redirect edge and dev docs to latest docs. There is no more dev docs.
+#   /docs/*/edge/* → /docs/en/latest/*
+#   /docs/*/dev/*  → /docs/en/latest/*
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/(edge|dev)(/.*)?$ \
+    {{site.baseurl}}/docs/en/latest$3 [R=301,L]
+
+# 301 (PERMANENT):
 #
-#     docs/*/XX/* -> docs/*/YY/*
-#
-{% for redirect in site.data.redirects.version-renames %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect[0]}}/(.*)$ {{site.baseurl}}/docs/$1/{{redirect[1]}}/$2 [R=302,L]
+#     docs/*/XX/* -> archive/docs/*/YY/*
+{% for redirect in site.data.redirects.version-renames %}
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/{{redirect[0]}}(/.*)?$ \
+    {{site.baseurl}}/archive/docs/$1/{{redirect[1]}}$2 [R=301,L]
 {% endfor %}
-
-# 302 (temporary):
+# 302 (TEMPORARY):
 #
 #     docs/XX/* -> docs/YY/*
 #
-{% for redirect in site.data.redirects.language-renames %}RewriteRule ^.*docs/{{redirect[0]}}/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/(.*)$ {{site.baseurl}}/docs/{{redirect[1]}}/$1/$2 [R=302,L]
+{% for redirect in site.data.redirects.language-renames %}
+RewriteRule ^docs/{{redirect[0]}}/([0-9]+(\.[0-9x]+)+(-[0-9.]+)?)(/.*)?$ \
+    {{site.baseurl}}/archive/docs/{{redirect[1]}}/$1$4 [R=302,L]
 {% endfor %}
-
 # 301 (PERMANENT):
 #
 #     old docs pages -> new docs pages (global)
@@ -82,66 +76,28 @@ RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest$ {{site.baseurl}}/docs/$1/latest/ [R
 #       by site.baseurl. It is thrown away because there is no RewriteCond to
 #       control whether the rewrite happens to a URI or a local file path
 #       (when Apache is locating the local file to serve).
-{% for redirect in site.data.redirects.docs-global %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/((?:\d+\.(?:\d+\.\d+|x))|dev|latest)/{{redirect[0]}}$ {{site.baseurl}}/docs/$1/$2/{{redirect[1]}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs-global %}
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/([0-9]+(\.[0-9x]+)+(-[0-9.]+)?)/{{redirect[0]}}$ \
+    {{site.baseurl}}/archive/docs/$1/$2/{{redirect[1]}} [NE,R=301,L]
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/{{redirect[0]}}$ \
+    {{site.baseurl}}/docs/$1/{{redirect[1]}} [NE,R=301,L]
 {% endfor %}
-
 # 301 (PERMANENT):
 #
 #     old docs pages -> new docs pages (version-specific)
 #
-{% for redirect in site.data.redirects.docs %}RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/{{redirect[0]}}$ {{site.baseurl}}/docs/$1/{{redirect[1]}} [NE,R=301,L]
+{% for redirect in site.data.redirects.docs %}
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/{{redirect[0]}}$ \
+    {{site.baseurl}}/docs/$1/{{redirect[1]}} [NE,R=301,L]
 {% endfor %}
-
 # 301 (PERMANENT):
 #
 #     old pages -> new pages
 #
-{% for redirect in site.data.redirects.general %}RewriteRule ^.*/{{redirect[0]}}$ {{site.baseurl}}/{{redirect[1]}} [NE,R=301,L]
+{% for redirect in site.data.redirects.general %}
+RewriteRule ^.*/{{redirect[0]}}$ {{site.baseurl}}/{{redirect[1]}} [NE,R=301,L]
 {% endfor %}
-
-# rewrite only:
-#
-#     /docs/XX/latest/* -> /docs/XX/Y.Y.Y/*
-#
-# NOTE:
-#       This does NOT return a redirect. It returns the resource *as if* the
-#       redirected URI was requested. That is, both URIs return the same
-#       resource, but the browser won't change the URI (no redirects followed).
-#
-# NOTE:
-#       This needs to be *after* the docs redirects because they might need the
-#       "/latest/" to be in the URI in order to activate. Placing this rule
-#       before them will rewrite "/latest/" to the latest version and redirects
-#       for "/latest/some/path.html" will never activate.
-RewriteRule ^.*docs/(\w\w(?:-\w\w)?)/latest/(.*)$ {{site.baseurl}}/docs/$1/{{site.latest_docs_version}}/$2 [L]
-
-# Redirect http to https
-# From Cordova PMC Member raphinesse
-# https://s.apache.org/An8s
-
-# If we receive a forwarded http request from a proxy...
-RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
-
-# ...or just a plain old http request directly from the client
-RewriteCond %{HTTP:X-Forwarded-Proto} =""
-RewriteCond %{HTTPS} !=on
-
-# Redirect to https version
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Prevent redirecting away from archive URLs
-RewriteCond %{REQUEST_URI} ^/archive/ [NC]
-RewriteRule .* - [L]
-
-# Prevent redirecting away from English docs
-RewriteCond %{REQUEST_URI} ^/docs/en/ [NC]
-RewriteRule .* - [L]
-
-# Redirect all non-English documentation to the English version.
-# If the English counterpart is missing, a 404 page will be displayed.
-# Over time, the non-English documentation has fallen out of sync with the English version.
-# For example, some pages may have been removed from the English documentation because they were no longer
-# relevant or were merged into other pages, while the translated versions were not updated accordingly.
-RewriteCond %{REQUEST_URI} ^/docs/(\w\w(?:-\w\w)?) [NC]
-RewriteCond %1 !=en
-RewriteRule ^docs/(\w\w(?:-\w\w)?)/(.*)$ /docs/en/$2 [R=302,L]
+# ALL previous language+versioned docs will redirect to archive
+# The key part of the expression is that all versions docs must contain one dot after a number.
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/([0-9]+(\.[0-9x]+)+(-[0-9.]+)?)(/.*)?$ \
+    {{site.baseurl}}/archive/docs/$1/$2$5 [R=301,L]
