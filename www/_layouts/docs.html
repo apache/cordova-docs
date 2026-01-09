@@ -129,6 +129,21 @@ NOTE:
                 {% assign latest_url = latest_root %}
             {% endunless %}
 
+            <!-- Show warnings for special versions -->
+            <!-- outdated warning -->
+            <!-- TODO: Fix this to trigger only during snapshot creation. -->
+            <!-- {% if page.version != 'dev' and page.version != site.latest_docs_version %}
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ layout.outdated_text }}
+                    <a href="{{ site.baseurl }}{{ latest_url }}">
+                        {{ layout.click_here_text }}
+                    </a>
+                </div>
+            {% endif %} -->
+
             <!-- plugin version warning -->
             {% if page.plugin_name and page.plugin_version %}
                 <div class="alert alert-warning docs-alert" role="alert">
