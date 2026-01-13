@@ -43,7 +43,7 @@ function main () {
 
         // Get all directories, excluding dev, and make sure it is in lexicographically order.
         const versionNames = util.listdirsSync(langPath)
-            .filter(dir => dir !== 'dev')
+            .filter(dir => dir !== 'latest')
             .sort((a, b) => a.localeCompare(b));
 
         // Semver cant sort invalid values. E.g. 10.x or 12.x-2025.01
@@ -59,7 +59,7 @@ function main () {
             .sort((a, b) => semver.compare(a.semantic, b.semantic))
             .map(v => v.readable);
 
-        sortedVersions.push('dev'); // add back dev
+        sortedVersions.push('latest'); // add back dev
 
         // get language ID
         const langName = LANGUAGE_MAP[langId];

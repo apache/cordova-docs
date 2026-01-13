@@ -24,7 +24,7 @@ const util = require('./util');
 
 // constants
 const USAGE = 'Usage: gen_defaults.js [docsRoot] [latestVersion]';
-const DEV_VERSION_NAME = 'dev';
+const DEV_VERSION_NAME = 'latest';
 
 // constants for sitemap.xml
 // reference:
@@ -95,7 +95,7 @@ function main () {
 
             const versionDefaults = {
                 scope: {
-                    path: 'docs/' + langName + '/' + versionName
+                    path: 'docs/en/latest'
                 },
                 values: {
                     version: versionName,

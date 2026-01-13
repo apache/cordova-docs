@@ -3,7 +3,6 @@
 
 # 302 (temporary) renames of versions
 version-renames:
-    "edge": "dev"
     "6.0.0": "6.x"
 
 # 302 (temporary) renames of languages
@@ -16,68 +15,35 @@ general:
 
 # 301 (PERMANENT) redirect paths relative to /docs/XX/
 docs:
-    "dev/guide/platforms/android/tools.html": "dev/guide/platforms/android/index.html"
     "latest/guide/platforms/android/tools.html": "latest/guide/platforms/android/index.html"
-
-    "dev/guide/platforms/android/lifecycle.html": "dev/guide/platforms/android/index.html#lifecycle-guide"
     "latest/guide/platforms/android/lifecycle.html": "latest/guide/platforms/android/index.html#lifecycle-guide"
-
-    "dev/guide/platforms/android/config.html": "dev/config_ref/index.html"
     "latest/guide/platforms/android/config.html": "latest/config_ref/index.html"
-
-    "dev/guide/platforms/ios/tools.html": "dev/guide/platforms/ios/index.html"
     "latest/guide/platforms/ios/tools.html": "latest/guide/platforms/ios/index.html"
-
-    "dev/guide/platforms/ios/config.html": "dev/config_ref/index.html"
     "latest/guide/platforms/ios/config.html": "latest/config_ref/index.html"
-
-    "dev/guide/platforms/win8/packaging.html": "dev/guide/platforms/win8/index.html#signing-an-app"
     "latest/guide/platforms/win8/packaging.html": "latest/guide/platforms/win8/index.html#signing-an-app"
-
-    "dev/guide/platforms/win8/win10-support.html": "dev/guide/platforms/win8/index.html"
     "latest/guide/platforms/win8/win10-support.html": "latest/guide/platforms/win8/index.html"
-
-    "dev/cordova/plugins/pluginapis.html": "deprecated.html"
     "latest/cordova/plugins/pluginapis.html": "deprecated.html"
 
     # Rename `cordova-windows` URLs from `win8` to `windows`
-    "dev/guide/platforms/win8/index.html": "dev/guide/platforms/windows/index.html"
     "latest/guide/platforms/win8/index.html": "latest/guide/platforms/windows/index.html"
-    "dev/guide/platforms/win8/plugin.html": "dev/guide/platforms/windows/index.html"
     "latest/guide/platforms/win8/plugin.html": "latest/guide/platforms/windows/index.html"
-    "dev/guide/platforms/win8/upgrade.html": "dev/guide/platforms/windows/index.html"
     "latest/guide/platforms/win8/upgrade.html": "latest/guide/platforms/windows/index.html"
 
     # Removing deprecated platforms and plugins
-    "dev/guide/platforms/blackberry10/home.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/home.html": "deprecated.html"
-    "dev/guide/platforms/blackberry10/index.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/index.html": "deprecated.html"
-    "dev/guide/platforms/blackberry10/tools.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/tools.html": "deprecated.html"
-    "dev/guide/platforms/blackberry10/config.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/config.html": "deprecated.html"
-    "dev/guide/platforms/blackberry10/plugin.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/plugin.html": "deprecated.html"
-    "dev/guide/platforms/blackberry10/upgrade.html": "deprecated.html"
     "latest/guide/platforms/blackberry10/upgrade.html": "deprecated.html"
-    "dev/guide/platforms/blackberry/upgrade.html": "deprecated.html"
     "latest/guide/platforms/blackberry/upgrade.html": "deprecated.html"
-    "dev/guide/platforms/ubuntu/index.html": "deprecated.html"
     "latest/guide/platforms/ubuntu/index.html": "deprecated.html"
-    "dev/guide/platforms/wp8/home.html": "deprecated.html"
     "latest/guide/platforms/wp8/home.html": "deprecated.html"
-    "dev/guide/platforms/wp8/index.html": "deprecated.html"
     "latest/guide/platforms/wp8/index.html": "deprecated.html"
-    "dev/guide/platforms/wp8/plugin.html": "deprecated.html"
     "latest/guide/platforms/wp8/plugin.html": "deprecated.html"
-    "dev/guide/platforms/wp8/upgrade.html": "deprecated.html"
     "latest/guide/platforms/wp8/upgrade.html": "deprecated.html"
-    "dev/guide/platforms/wp8/parallels.html": "deprecated.html"
     "latest/guide/platforms/wp8/parallels.html": "deprecated.html"
-    "dev/guide/platforms/wp8/vmware.html": "deprecated.html"
     "latest/guide/platforms/wp8/vmware.html": "deprecated.html"
-    "dev/guide/platforms/wp8/webview.html": "deprecated.html"
     "latest/guide/platforms/wp8/webview.html": "deprecated.html"
 
     "latest/reference/cordova-plugin-contacts/index.html": "deprecated.html"

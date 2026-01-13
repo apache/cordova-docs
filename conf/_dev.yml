@@ -1,5 +1,5 @@
 baseurl: ""
-default_linked_docs_version: dev
+default_linked_docs_version: latest
 destination: build-dev
 
 exclude:
@@ -7,4 +7,4 @@ exclude:
     - docs/
 
 include:
-    - docs/en/dev
+    - docs/en/latest
