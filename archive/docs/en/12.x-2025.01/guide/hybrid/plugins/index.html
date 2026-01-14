@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Develop your own Cordova plugin. ">
+
+    <title>
+        
+            
+                Create a Plugin - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/12.x-2025.01/guide/hybrid/plugins/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/lib/syntax.css">
+
+
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/archive/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/archive/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Latest Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/overview/project-structure.html">
+                Project Structure
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/overview/project-structure.html">
+        Project Structure
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/guide/hybrid/plugins/index.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Create a Plugin</h1>
+
+<ul>
+  <li><a href="#create-a-plugin">Create a Plugin</a>
+    <ul>
+      <li><a href="#creating-an-npm-package">Creating an npm Package</a>
+        <ul>
+          <li><a href="#updating-the-npm-package-for-cordova">Updating the npm Package for Cordova</a>
+            <ul>
+              <li><a href="#adding-the-plugins-id">Adding the plugin&#39;s <code>id</code></a></li>
+              <li><a href="#specifying-supported-platforms">Specifying supported platforms</a></li>
+              <li><a href="#adding-keywords-for-discoverability">Adding keywords for discoverability</a></li>
+              <li><a href="#adding-engine-requirements">Adding engine requirements</a>
+                <ul>
+                  <li><a href="#upper-bounds">Upper Bounds</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#creating-the-pluginxml-file">Creating the <code>plugin.xml</code> file</a></li>
+      <li><a href="#adding-a-front-end-javascript-api">Adding a Front-End JavaScript API</a>
+        <ul>
+          <li><a href="#cordovaexec-command-syntax"><code>cordova.exec</code> Command Syntax</a></li>
+          <li><a href="#creating-the-wwwapijs-file">Creating the <code>www/api.js</code> File</a></li>
+          <li><a href="#injecting-the-javascript-api-to-the-window-object">Injecting the JavaScript API to the <code>window</code> Object</a></li>
+        </ul>
+      </li>
+      <li><a href="#implementing-native-interfaces">Implementing Native Interfaces</a></li>
+      <li><a href="#testing-a-plugin-during-development">Testing a Plugin during development</a></li>
+      <li><a href="#publishing-plugins">Publishing Plugins</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>A Cordova <em>plugin</em> is a package that enables the Cordova apps to access native device features and functionality that is ordinarily unavailable to web-based apps. All of the core Cordova API features are implemented as plugins. Many third-party plugins are also available to provide additional capabilities such as barcode scanning, near-field communication (NFC), push notification, or even customizing interfaces.</p>
+
+<p>Check out these locations for Cordova plugins:</p>
+
+<ul>
+  <li>Official Apache Cordova plugins on the <a href="/plugins/">Cordova Plugin page</a>.</li>
+  <li>Third-party plugins on the <a href="https://www.npmjs.com/search?q=keywords:ecosystem:cordova">npmjs registry</a>.</li>
+</ul>
+
+<p>Plugins usually consist of a JavaScript interface paired with corresponding platform-native code. In essence, this hides the platform-specific native implementations behind a common JavaScript interface.</p>
+
+<p>This page will walk through the steps to create a basic <em>echo</em> plugin that passes a string from the front-end JavaScript to the native platform and back. The purpose of this guide is to provide a model for how to build and publish a Cordova plugin. It focuses on the fundamentals of plugin structure and the outward-facing JavaScript interface.</p>
+
+<p>For the corresponding native implementations, see the list at the end of this section.</p>
+
+<p>In addition to following these instructions, it is recommended to review <a href="https://cordova.apache.org/contribute">existing plugins</a> for further guidance.</p>
+
+<h2>Creating an npm Package</h2>
+
+<p>In essence, a Cordova plugin is an extension of an npm package. By leveraging the npm ecosystem, plugin developers can easily publish their plugins to the npm registry, allowing app developers to install them into their Cordova apps using the Cordova CLI.</p>
+
+<p>Even if you don&#39;t plan to publish your plugin publicly, you still need to structure it as an npm package for installation purposes. The <a href="../../../reference/cordova-cli/index.html#cordova-plugin-command"><code>cordova plugin add</code></a> command relies on npm under the hood to fetch and install plugins.</p>
+
+<p>First, we&#39;ll create the directory for our <code>echo</code> plugin and change to this newly created directory:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>cordova-plugin-echo
+<span class="nb">cd </span>cordova-plugin-echo
+</code></pre></div></div>
+
+<p>Next, we&#39;ll initialize it as an npm package using the <code>npm init</code> command. In this example, we&#39;ll accept all default values for the initialization process by appending the <code>-y</code> flag. If you want to customize the values, you can omit the flag or change the values later by editing the <code>package.json</code> file.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init <span class="nt">-y</span>
+</code></pre></div></div>
+
+<p><strong>One important note:</strong> the directory name <code>cordova-plugin-echo</code> will be used as the default package name and will be published as such to the npm registry. If the name is already taken, you&#39;ll need to choose a different name or use <a href="https://docs.npmjs.com/cli/v10/using-npm/scope">scoped packages</a>.</p>
+
+<h3>Updating the npm Package for Cordova</h3>
+
+<p>In addition to the standard properties that the <code>package.json</code> file includes for npm, Cordova-specific properties will also be added. These are necessary to define the plugin&#39;s ID, supported platforms, relevant keywords for discoverability, and engine requirements.</p>
+
+<h4>Adding the plugin&#39;s <code>id</code></h4>
+
+<p>This uniquely identifies your plugin within the Cordova ecosystem. It&#39;s generally recommended to match the plugin ID with the npm package name so that when a Cordova project is restored using the <code>cordova prepare</code> command, the package can be easily located in the npm registry.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm pkg <span class="nb">set </span>cordova.id<span class="o">=</span>cordova-plugin-echo
+</code></pre></div></div>
+
+<h4>Specifying supported platforms</h4>
+
+<p>The following example shows how to add support for both Android and iOS. You can modify this to include only the platforms your plugin supports.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm pkg <span class="nb">set</span> <span class="s2">"cordova.platforms[]=android"</span>
+npm pkg <span class="nb">set</span> <span class="s2">"cordova.platforms[]=ios"</span>
+</code></pre></div></div>
+
+<h4>Adding keywords for discoverability</h4>
+
+<p>Keywords help others find your plugin via search.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm pkg <span class="nb">set</span> <span class="s2">"keywords[]=cordova"</span>
+npm pkg <span class="nb">set</span> <span class="s2">"keywords[]=echosystem:cordova"</span>
+npm pkg <span class="nb">set</span> <span class="s2">"keywords[]=cordova-android"</span>
+npm pkg <span class="nb">set</span> <span class="s2">"keywords[]=cordova-ios"</span>
+</code></pre></div></div>
+
+<h4>Adding engine requirements</h4>
+
+<p><strong>Cordova 6.1.0</strong> added support for specifying the Cordova-related dependencies of a plugin as part of the plugin&#39;s <code>package.json</code> file. Plugins may list the dependencies for multiple releases to provide guidance to the Cordova CLI when it is selecting the version of a plugin to fetch from npm. The CLI will choose the latest release of a plugin that is compatible with the local project&#39;s installed platforms and plugins as well as the the local Cordova CLI version. If no releases of the plugin are compatible, the CLI will warn the user about the failed requirements and fall back to the old behavior of fetching the latest release.</p>
+
+<p>This feature is intended to eventually replace the <a href="../../../plugin_ref/spec.html#engines-and-engine">engines element</a> in <code>plugin.xml</code>.</p>
+
+<p>Listing dependencies is a good way to ensure that your plugin will not appear broken or cause build errors when fetched from npm. If the latest release of the plugin is not compatible with a project, the CLI will give the app developer a list of unmet project requirements so that they are aware of incompatibilites and can update their project to support your plugin. This allows your plugin to respond to breaking changes without fear of confusing devlopers who are building against old platforms and plugins.</p>
+
+<p>To specify Cordova-related dependencies for a plugin, alter the <code>engines</code> element in <code>package.json</code> to include a <code>cordovaDependencies</code> object with the following structure:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">engines</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">cordovaDependencies</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nl">PLUGIN_VERSION</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">DEPENDENCY</span><span class="p">:</span> <span class="nx">SEMVER_RANGE</span><span class="p">,</span>
+            <span class="na">DEPENDENCY</span><span class="p">:</span> <span class="nx">SEMVER_RANGE</span><span class="p">,</span>
+            <span class="p">...</span>
+        <span class="p">},</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code>PLUGIN_VERSION</code> specifies the version of your plugin. It should adhere to the syntax for a single version as defined by <a href="https://www.npmjs.com/package/semver">npm&#39;s semver package</a> or an upper bound (see <a href="#upper-bounds">below</a>)</li>
+  <li><code>DEPENDENCY</code> may be one of the following:
+    <ul>
+      <li>The Cordova CLI: <code>"cordova"</code></li>
+      <li>A Cordova platform: <code>"cordova-android"</code>, <code>"cordova-ios"</code>, etc.</li>
+      <li>Another Cordova plugin: <code>"cordova-plugin-camera"</code>, etc.</li>
+    </ul>
+  </li>
+  <li><code>SEMVER_RANGE</code> should adhere to the syntax for a range as defined by <a href="https://www.npmjs.com/package/semver">npm&#39;s semver package</a></li>
+</ul>
+
+<p><strong>NOTE:</strong> A Cordova platform <code>DEPENDENCY</code> refers to the Cordova platform and not the OS, i.e. <code>cordova-android</code> rather than the Android OS.</p>
+
+<p>Your <code>cordovaDependencies</code> may list any number of <code>PLUGIN_VERSION</code> requirements and any number of <code>DEPENDENCY</code> constraints. Versions of your plugin that do not have their dependencies listed will be assumed to have the same dependency information as the highest <code>PLUGIN_VERSION</code> listed below them. For example, consider the following entry:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">engines</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">cordovaDependencies</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">1.0.0</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">cordova-android</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;3.0.0</span><span class="dl">"</span><span class="p">},</span>
+        <span class="dl">"</span><span class="s2">2.1.0</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">cordova-android</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&gt;4.0.0</span><span class="dl">"</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>All plugin versions below the lowest entry (1.0.0 in this example) are assumed to have no dependencies. Any version of the plugin between 1.0.0 and 2.1.0 is assumed to have the same dependencies as version 1.0.0 (a cordova-android version less than 3.0.0). This lets you only update your <code>cordovaDependencies</code>
+information when there are breaking changes.</p>
+
+<h5>Upper Bounds</h5>
+
+<p>In addition to a single version, a <code>PLUGIN_VERSION</code> in <code>cordovaDependencies</code> may also specify an upper bound to amend entries for older releases of your plugin. This is useful when a breaking change occurs in a <code>DEPENDENCY</code> and a new constraint must be added for all older versions of a plugin that do not support it. These bounds should be written as a <code>&lt;</code> followed by a single <a href="https://www.npmjs.com/package/semver">semver</a> version (<strong>Not an arbitrary range!</strong>). This will apply whatever <code>DEPENDENCY</code> values are given to all versions of the plugin below the specified version. For example, consider the following entry:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="dl">"</span><span class="s2">engines</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">cordovaDependencies</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">0.0.1</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{</span> <span class="dl">"</span><span class="s2">cordova-ios</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&gt;1.0.0</span><span class="dl">"</span> <span class="p">},</span>
+        <span class="dl">"</span><span class="s2">&lt;1.0.0</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">cordova-ios</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;2.0.0</span><span class="dl">"</span> <span class="p">},</span>
+        <span class="dl">"</span><span class="s2">&lt;2.0.0</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">cordova-ios</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&lt;5.0.0</span><span class="dl">"</span> <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here we specify one plugin version (0.0.1) and two upper bounds (&lt;1.0.0 and &lt;2.0.0) that constrain cordova-ios. The two upper bounds do not override the constraint of 0.0.1, they are combined via AND at evaluation time. When the CLI checks the cordova-ios version of the project, the constraint that will be evaluated for plugin version 0.0.1 will be the combination of these three:</p>
+
+<blockquote>
+  <p>cordova-ios &gt;1.0.0 AND cordova-ios &lt;2.0.0 AND cordova-ios &lt;5.0.0</p>
+</blockquote>
+
+<p>Please note that the only <code>PLUGIN_VERSION</code> values allowed are single versions or upper bounds; no other semver ranges are supported.</p>
+
+<h2>Creating the <code>plugin.xml</code> file</h2>
+
+<p>Plugins must also be paired with a top-level <code>plugin.xml</code> manifest file. This file is used for configuring the plugin. See the <a href="../../../plugin_ref/spec.html">Plugin.xml Specification</a> for more information of the elements that can be defined.</p>
+
+<p>Below is a simple example of the <code>plugin.xml</code> file that will be used for the <code>Echo</code> plugin and a model to follow for creating your own plugins.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;plugin</span> <span class="na">xmlns=</span><span class="s">"http://apache.org/cordova/ns/plugins/1.0"</span>
+    <span class="na">id=</span><span class="s">"cordova-plugin-echo"</span>
+    <span class="na">version=</span><span class="s">"1.0.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Echo<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;description&gt;</span>Cordova Echo Plugin<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;license&gt;</span>Apache 2.0<span class="nt">&lt;/license&gt;</span>
+    <span class="nt">&lt;keywords&gt;</span>cordova,plugin,echo<span class="nt">&lt;/keywords&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note: The top-level <code>plugin</code> tag&#39;s <code>id</code> attribute usually follows the <code>cordova-plugin-{plugin name}</code> schema and matches the plugin&#39;s npm package name.</p>
+</blockquote>
+
+<h2>Adding a Front-End JavaScript API</h2>
+
+<p>Plugin developers typically include a front-end JavaScript API. The primary purpose is to abstract away Cordova&#39;s internal APIs, eliminate the need for app developers to understand the specific naming of your plugin&#39;s service or methods, and simplify the overall usage of the plugin.</p>
+
+<h3><code>cordova.exec</code> Command Syntax</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>The <code>cordova.exec</code> method is what triggeres the request from the front-end WebView to the native side of the platform, invoking an action method on the specified service class with the provided arguments. Depending on the outcome, either the success or failure callback will be triggered.</p>
+
+<ul>
+  <li><strong><code>successCallback</code></strong>: The first argument is the success callback. If the native operation completes successfully, this function is invoked with any returned data.</li>
+  <li><strong><code>failCallback</code></strong>: The second argument is the error callback. If the operation fails, this function is called with an error object or message.</li>
+  <li><strong><code>service</code></strong>: A string representing the service name on the native side. This typically matches a native class defined in your plugin.</li>
+  <li><strong><code>action</code></strong>: A string representing the method name to invoke on the native service.</li>
+  <li><strong><code>[arguments]</code></strong>: An array of arguments to be passed to the native method.</li>
+</ul>
+
+<h3>Creating the <code>www/api.js</code> File</h3>
+
+<p>In this example, we&#39;ll create a folder named <code>www</code> in the plugin&#39;s root directory and add a file named <code>api.js</code>.</p>
+
+<blockquote>
+  <p>Note: The directory and file names are customizable and do not need to follow this exact structure. However, if you choose to rename the directory or file, be sure to update the corresponding <code>js-module</code> path in the <code>plugin.xml</code> file accordingly.</p>
+</blockquote>
+
+<p>The <code>www/api.js</code> file will contain the front-end JavaScript API. For this example, the contents of the Echo plugin will be as follows:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cordova/exec</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">serviceName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Echo</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">Echo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="p">};</span>
+
+<span class="nx">Echo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">echo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">_successCb</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">resolve</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+        <span class="p">};</span>
+
+        <span class="kd">const</span> <span class="nx">_errorCb</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+        <span class="p">};</span>
+
+        <span class="nx">exec</span><span class="p">(</span><span class="nx">_successCb</span><span class="p">,</span> <span class="nx">_errorCb</span><span class="p">,</span> <span class="nx">serviceName</span><span class="p">,</span> <span class="dl">'</span><span class="s1">echo</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span><span class="nx">message</span><span class="p">]);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Echo</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>This example demonstrates how to build a front-end plugin API that returns a Promise, offering a modern and user-friendly interface for app developers.</p>
+
+<h3>Injecting the JavaScript API to the <code>window</code> Object</h3>
+
+<p>To make the Echo JavaScript API available on the WebView&#39;s <code>window</code> object, we need to update the <code>plugin.xml</code> to add the injection our API using the <code>&lt;js-module&gt;</code> element.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;js-module</span> <span class="na">src=</span><span class="s">"www/api.js"</span> <span class="na">name=</span><span class="s">"Echo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;clobbers</span> <span class="na">target=</span><span class="s">"Echo"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/js-module&gt;</span>
+</code></pre></div></div>
+
+<p>The above wil take the <code>www/api.js</code> and clobber it onto the <code>window</code> object as <code>window.Echo</code>.</p>
+
+<p>Usually, when supporting multiple platforms, all platforms has the same JavaScript API. In this case, the above XML does not need to be posted inside the <code>&lt;platform&gt;</code> element. If there was a case where each platform has their own own JavaScript file, then the <code>&lt;js-module&gt;</code> should be added to the <code>&lt;platform&gt;</code> element.</p>
+
+<h2>Implementing Native Interfaces</h2>
+
+<p>Once you created the core structure of the plugin with the above section, we can how complement it with at least one native implementation.</p>
+
+<p>Details for each platform are listed below, and each section is a continuation of the simple Echo Plugin:</p>
+
+<ul>
+  <li><a href="../../platforms/android/plugin.html">Android Plugin Development Guide</a></li>
+  <li><a href="../../platforms/ios/plugin.html">iOS Plugin Development Guide</a></li>
+</ul>
+
+<h2>Testing a Plugin during development</h2>
+
+<p>Usually, the simplest way to manually test a plugin during development is to create a Cordova app and add the plugin with the <code>--link</code> option:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add ../path/to/my/plugin/relative/to/project <span class="nt">--link</span>
+</code></pre></div></div>
+
+<p>This will creates a symbolic link instead of copying the plugin files, which enables you to work on your plugin and then simply rebuild the app to use your changes. The plugin should be added after the platform, or the link will not work. The link will also be lost if you re-add the platform or <a href="../../../platform_plugin_versioning_ref/index.md">restore the project</a> with <code>cordova prepare</code>. In that case, you&#39;ll need to re-add the plugin to restore the link.</p>
+
+<h2>Publishing Plugins</h2>
+
+<p>You can publish your plugin to any <code>npmjs</code>-based registry, but the recommended one is the <a href="https://www.npmjs.com">npm registry</a>. This allows other developers to easily install your plugin using the Cordova CLI.</p>
+
+<p>To publish,</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm adduser <span class="c"># that is if you don't have an account yet</span>
+<span class="nv">$ </span>npm publish /path/to/your/plugin
+</code></pre></div></div>
+
+<p>If you do not plan to publish your plugin publicly, it is recommended to set the <code>private</code> flag in the <code>package.json</code> to <code>true</code> to prevent accidental publication.</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm pkg <span class="nb">set </span><span class="nv">private</span><span class="o">=</span><span class="nb">true</span> <span class="nt">--json</span>
+</code></pre></div></div>
+
+<p>For more details on npm usage, refer to <a href="https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry">Contributing packages to the registry</a> on the npm documentation site.</p>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/archive/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/archive/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/archive/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/twitter.js"></script>
+</body>
+</html>

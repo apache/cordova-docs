@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="Information and tips for building a secure application. ">
+
+    <title>
+        
+            
+                Manage App's Security - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/12.x-2025.01/guide/appdev/security/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/lib/syntax.css">
+
+
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/archive/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/archive/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Latest Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Getting Started
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/cli/installation.html">
+                Installation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/cli/index.html">
+                Creating an App
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Cordova Projects
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/overview/project-structure.html">
+                Project Structure
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-cli/index.html">
+                CLI Commands
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/support/index.html">
+                Platform Support
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/platform_pinning/index.html">
+                Platform Pinning
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/platform_plugin_versioning_ref/index.html">
+                Version Management
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/hooks/index.html">
+                Hooks
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                App Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Platforms
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/index.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/index.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/electron/index.html">
+                Electron
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Customization
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/config_ref/images.html">
+                Icons
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/core/features/splashscreen/index.html">
+                Splash Screen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Security & Privacy
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/security/index.html">
+                Security
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/privacy/index.html">
+                Privacy
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/appdev/allowlist/index.html">
+                Allow List
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/cordova/storage/storage.html">
+                Data Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugin Development
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/plugins/index.html">
+                Create a Plugin
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Support a Platform
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/plugin.html">
+                Android
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/plugin.html">
+                iOS
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/plugin_ref/plugman.html">
+                Use Plugman
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                References
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/config_ref/index.html">
+                Config.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/plugin_ref/spec.html">
+                Plugin.xml API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/cordova/events/events.html">
+                Cordova JavaScript API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Resources
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/third-party/index.html">
+                Third-party Tools
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/cli/template.html">
+                App Templates
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/next/index.html">
+                Next Steps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Plugins
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-battery-status/index.html">
+                Battery Status
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-camera/index.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-device/index.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-dialogs/index.html">
+                Dialogs
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-file/index.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-geolocation/index.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-inappbrowser/index.html">
+                Inappbrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media/index.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media-capture/index.html">
+                Media Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-network-information/index.html">
+                Network Information
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-screen-orientation/index.html">
+                Screen Orientation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-splashscreen/index.html">
+                Browser Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-statusbar/index.html">
+                Statusbar
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-vibration/index.html">
+                Vibration
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+
+    <li>
+        
+            <span class="toc-section-heading">
+                Advanced Topics
+            </span>
+        
+
+        
+        
+
+        
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/webviews/index.html">
+                Embed Cordova in native apps
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/cli/installation.html">
+        Installation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/cli/index.html">
+        Creating an App
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/overview/project-structure.html">
+        Project Structure
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-cli/index.html">
+        CLI Commands
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/support/index.html">
+        Platform Support
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/platform_pinning/index.html">
+        Platform Pinning
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/platform_plugin_versioning_ref/index.html">
+        Version Management
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/hooks/index.html">
+        Hooks
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/index.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/index.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/electron/index.html">
+        Electron
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/config_ref/images.html">
+        Icons
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/core/features/splashscreen/index.html">
+        Splash Screen
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/security/index.html">
+        Security
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/privacy/index.html">
+        Privacy
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/appdev/allowlist/index.html">
+        Allow List
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/cordova/storage/storage.html">
+        Data Storage
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/plugins/index.html">
+        Create a Plugin
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/android/plugin.html">
+        Android
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/platforms/ios/plugin.html">
+        iOS
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/plugin_ref/plugman.html">
+        Use Plugman
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/config_ref/index.html">
+        Config.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/plugin_ref/spec.html">
+        Plugin.xml API
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/cordova/events/events.html">
+        Cordova JavaScript API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/third-party/index.html">
+        Third-party Tools
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/cli/template.html">
+        App Templates
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/next/index.html">
+        Next Steps
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-battery-status/index.html">
+        Battery Status
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-camera/index.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-device/index.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-dialogs/index.html">
+        Dialogs
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-file/index.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-geolocation/index.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-inappbrowser/index.html">
+        Inappbrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media/index.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-media-capture/index.html">
+        Media Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-network-information/index.html">
+        Network Information
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-screen-orientation/index.html">
+        Screen Orientation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-splashscreen/index.html">
+        Browser Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-statusbar/index.html">
+        Statusbar
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/reference/cordova-plugin-vibration/index.html">
+        Vibration
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="" href="/docs/en/12.x-2025.01/guide/hybrid/webviews/index.html">
+        Embed Cordova in native apps
+    </a>
+</li>
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/guide/appdev/security/index.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Security</h1>
+
+<p>The following guide includes some security best practices that you should consider when developing a Cordova application. Please be aware that security is a very complicated topic and therefore this guide is not exhaustive. If you believe you can contribute to this guide, please feel free to create a pull request in Cordova&#39;s <a href="https://github.com/apache/cordova-docs/issues">cordova-docs</a> repository. This guide is designed to be applicable to general Cordova development (all platforms) but special platform-specific considerations will be noted.</p>
+
+<h2>This guide discusses the following topics:</h2>
+
+<ul>
+  <li>General Tips</li>
+  <li>Plugins and Security</li>
+  <li>Allow List</li>
+  <li>Content Security Policy</li>
+  <li>Certificate Pinning</li>
+  <li>Using TLS/SSL</li>
+  <li>Avoid Self-signed Certificates</li>
+  <li>Wrapping external sites and hot code push</li>
+  <li>Encrypted storage</li>
+  <li>Recommended Articles and Other Resources</li>
+</ul>
+
+<h2>General Tips</h2>
+
+<h3>Use InAppBrowser for outside links</h3>
+
+<p>Use the <a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">InAppBrowser</a> when opening links to any outside website. This is much safer than allow listing a domain name and including the content directly in your application because the InAppBrowser will use the native browser&#39;s security features and will not give the website access to your Cordova environment. Even if you trust the third party website and include it directly in your application, that third party website could link to malicious web content.</p>
+
+<h3>Validate all user input</h3>
+
+<p>Always validate any and all input that your application accepts. This includes usernames, passwords, dates, uploaded media, etc. Because an attacker could manipulate your HTML and JS assets (either by decompiling your application or using debugging tools like <code>chrome://inspect</code>), this validation should also be performed on your server, especially before handing the data off to any backend service.</p>
+
+<blockquote>
+  <p><strong>Tip</strong>: Other sources where data should be validated: user documents, contacts, push notifications</p>
+</blockquote>
+
+<h3>Do not store sensitive data</h3>
+
+<p>If usernames, password, geolocation information, and other sensitive data is stored, then it could potentially be retrieved later by an unauthorized user or application.</p>
+
+<h3>Don&#39;t use <code>eval()</code></h3>
+
+<p>The JavaScript function <code>eval()</code> has a long history of being abused. Using it incorrectly can open your code up for injection attacks, debugging difficulties, and slower code execution.</p>
+
+<h3>Do not assume that your source code is secure</h3>
+
+<p>Since a Cordova application is built from HTML and JavaScript assets that get packaged in a native container, you should not consider your code to be secure. It is possible for an iOS or Android application to be unpacked and unzipped to reveal its web assets such as HTML and JS.</p>
+
+<p>A sampling of what you should not include in your code:</p>
+
+<ul>
+  <li>Authentication information (usernames, passwords, keys, etc.)</li>
+  <li>Encryption keys</li>
+  <li>Trade secrets</li>
+</ul>
+
+<h3>Do not assume storage containers are secure</h3>
+
+<p>Even if a device itself is encrypted, if someone has access to the device and can unlock it, you should not assume that data stored in various formats and containers is safe. Even SQLite databases are easily human readable once access is gained.</p>
+
+<p>As long as you&#39;re storing non-sensitive information, this isn&#39;t a big deal. But if you were storing passwords, keys, and other sensitive information, the data could be easily extracted, and depending on what was stored, could be used against your app and remote servers.</p>
+
+<p>For example, on iOS, if you store data in <code>localStorage</code>, the data itself is easily readable to anyone who has access to the device. This is because <code>localStorage</code> is backed by an unencrypted SQLite database. The underlying storage of the device may in fact be encrypted (and so it would be inaccessible while the device is locked), but once the device decrypts the file, the contents themselves are mostly in the clear. As such, the contents of <code>localStorage</code> can be easily read and even changed.</p>
+
+<h2>Plugins and Security</h2>
+
+<p>Due to the way the native portion of Cordova communicates with your web code, it is possible for any code executing within the main webview context to communicate with any installed plugins. This means that you should <em>never</em> permit untrusted content within the primary webview. This can include third-party advertisements, sites within an <code>iframe</code>, and even content injected via <code>innerHTML</code>.</p>
+
+<p>If you must inject content into the primary webview, be certain that it has been properly sanitized so that no JavaScript can be executed. <em>Do not try to sanitize content on your own; use a vetted third-party library instead!</em></p>
+
+<blockquote>
+  <p><strong>Tip</strong>: If you need to include advertising, use any of the many third-party plugins for Cordova. These are safer than executing arbitrary JavaScript from advertisers.</p>
+</blockquote>
+
+<h2>Allow List</h2>
+
+<p>By default the app&#39;s navigation is unrestricted. It&#39;s recommended to restrict the navigation only to trusted domains. Learn more by reading the <a href="../allowlist/index.html">Allow List Guide</a></p>
+
+<h2>Content Security Policy (CSP)</h2>
+
+<p>Cordova’s default template includes a basic Content Security Policy (CSP). It’s recommended to review and customize this CSP to fit your app&#39;s specific needs. For more information, refer to the <a href="../allowlist/index.html#content-security-policy-csp">Allow List Guide - Content Security Policy (CSP)</a>.</p>
+
+<h2>Certificate Pinning</h2>
+
+<p>It is important to ensure that you trust any hosts with which there are communications. Typically, one would do this using certificate pinning. The app would double check any certificates and only communicate over channels where the certificate check passed. This helps mitigate man-in-the-middle attacks.</p>
+
+<p>Unfortunately, Cordova does not support true certificate pinning. The main barrier to this is a lack of native APIs in Android for intercepting SSL connections to perform the check of the server&#39;s certificate. (Although it is possible to do certificate pinning on Android in Java using JSSE, the webview on Android is written in C++, and server connections are handled for you by the webview, so it is not possible to use Java and JSSE there.) Since Apache Cordova is meant to offer consistent APIs across multiple platforms, not having a capability in a major platform breaks that consistency.</p>
+
+<p>There are ways to approximate certificate pinning, such as checking that the server&#39;s public key (fingerprint) is the expected value when your application starts or at other various times during your application&#39;s lifetime. There are third-party plugins available for Cordova that can do that. However, this is not the same as true certificate pinning which automatically verifies the expected value on every connection to the server.</p>
+
+<p>There are also plugins that can do true certificate pinning for some platforms, assuming your app is able to do all of its network requests using the plugin (i.e.: no traditional XHR/AJAX requests, etc).</p>
+
+<h2>Using TLS/SSL</h2>
+
+<p>If your app communicates to an external server, it should be communicating using modern encryption standards. Use <code>https</code> protocol whenever possible.</p>
+
+<p><a href="https://letsencrypt.org/">Let&#39;s Encrypt</a> is a free, automated, and open certificate authority provided by the nonprofit <a href="https://www.abetterinternet.org/">Internet Security Research Group</a>. Let&#39;s Encrypt will offer free standard certificates, which will be sufficient for most developers. Enterprise organizations may still want to use a traditional certificate authority that offers more advanced features such as <a href="https://en.wikipedia.org/wiki/Public_key_certificate#Organization_validation">Organization validation</a> certificates.</p>
+
+<p>It is also important to keep up to date with security standards as they change over time. What might be acceptable SSL/TLS configuration today may not be acceptable years in the future. Using tools to test your certificate and SSL/TLS configuration should be done regularly. <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> is a free online service provided by Qualys, Inc to test your server&#39;s SSL/TLS configuration and encryption strength, in addition to supported platforms.</p>
+
+<h2>Avoid Self-signed Certificates</h2>
+
+<p>Using self-signed certificates on your server is not recommended. If you desire SSL, then it is highly recommended that your server have a certificate that has been properly signed by a well-known CA (certificate authority). The inability to do true certificate pinning makes this even more important.</p>
+
+<p>The reason is that accepting self-signed certificates bypasses the certificate chain validation, which allows any server certificate to be considered valid by the device. This opens up the communication to man-in-the-middle attacks. It becomes very easy for a hacker to not only intercept and read all communication between the device and the server, but also to modify the communication. The device will never know this is happening because it doesn&#39;t verify that the server&#39;s certificate is signed by a trusted CA. The device has no proof that the server is who it expects.</p>
+
+<p>Because of the ease of doing a man-in-the-middle attack, accepting self-signed certificates is only marginally better than just running <code>http</code> instead of <code>https</code> on an untrusted network. While the traffic would be encrypted, it could be encrypted with the key from a man-in-the-middle, so the man-in-the-middle would have access everything, making the encryption useless except to passive observers. Users trust SSL to be secure, and this would be deliberately making it insecure, so the SSL use becomes misleading.</p>
+
+<p>If the app will be used on a trusted network (i.e., you are entirely inside a controlled enterprise), then self-signed certs are still not recommended. The two recommendations in a trusted network are to just use http because the network itself is trusted, or to get a certificate signed by a trusted CA (not self-signed). Either the network is trusted or it is not.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: The principles described here are not specific to Apache Cordova, they apply to all client-server communication.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Android Tip</strong>: When running Cordova on Android, using <code>android:debuggable="true"</code> in the application manifest will permit SSL errors such as certificate chain validation errors on self-signed certs. So you can use self-signed certs in this configuration, but this is not a configuration that should be used when your application is in production. It is meant to be used only during application development.</p>
+</blockquote>
+
+<h2>Wrapping external sites and hot code push</h2>
+
+<p>Cordova&#39;s implementation allows you to redirect to an external site instead of using local content. This is <strong>not</strong> suggested for most apps, even though it might avoid a rewrite of the app or can make code updates faster. You should avoid this for any apps destined to any app store, but in general, it&#39;s risky regardless, for many reasons:</p>
+
+<ul>
+  <li>No local code to detect no route to host. Apple <em>requires</em> apps to detect no network connection (and other connectivity issues) and display a user-friendly error message. If there&#39;s no local code to detect this, the app will generally remain blank, and Apple will reject it.</li>
+  <li>No local code to verify the downloaded content. The content could be incomplete or corrupted, especially if being downloaded over a poor network connection. Incomplete or corrupt content is not going to render particularly well, leaving your user frustrated.</li>
+  <li>No local code to detect and remove malicious intent. Local code has a chance to sanitize content and verify that there are no spurious or unexpected <code>script</code> tags or event handlers. Without local code, the app is at the server&#39;s mercy.</li>
+  <li>No local code to check certificates. See <strong>Certificate Pinning</strong> above.</li>
+</ul>
+
+<p>Hot code push solutions improve matters a bit, since they will download code and store it locally on the device. This means that in the event of a network failure, the code still has a chance to run and display any appropriate messages, and that same code can verify any future downloads. You should, however, verify that any hot code push service you use does the following:</p>
+
+<ul>
+  <li>Validate checksums to ensure complete and accurate downloads</li>
+  <li>Certificate checking to ensure that the download is from a trusted server</li>
+  <li>Falls back to last downloaded code in the event something goes wrong</li>
+</ul>
+
+<h2>Encrypted Storage</h2>
+
+<p>Both <strong>Android</strong> and <strong>iOS</strong> offer various secure storage options. While <strong>Apache Cordova</strong> does not provide these mechanisms natively at the platform core or plugin level, third-party plugins may be available or can be created to implement such features.</p>
+
+<p><strong>Android:</strong></p>
+
+<ul>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences"><strong>Encrypted Shared Preferences</strong></a></p>
+
+    <p><strong>Encrypted SharedPreferences</strong> is an encrypted version of SharedPreferences, where both the keys and values are encrypted. This is ideal for storing small amounts of data, such as user settings, preferences, or other sensitive information.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.android.com/reference/androidx/security/crypto/EncryptedFile"><strong>Encrypted File Storage</strong></a></p>
+
+    <p><strong>Encrypted File Storage</strong> is suitable for securely storing files, perfect for large data. By using the <code>EncryptedFile</code> class, you can create and read encrypted files, ensuring that the file contents remain protected.</p>
+  </li>
+</ul>
+
+<p><strong>iOS:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>File Protection</strong></p>
+
+    <p>Using <a href="https://developer.apple.com/documentation/foundation/nsfilemanager"><code>NSFileManager</code></a>, which provides an interface for managing the file system, you can define a file&#39;s protection level with the <a href="https://developer.apple.com/documentation/foundation/nsfileprotectiontype"><code>NSFileProtectionType</code></a> attribute. This allows you to store files on disk with protection based on the device&#39;s lock state. Files are encrypted and accessible only when the device is unlocked.</p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/documentation/security/keychain-services?language=objc"><strong>Keychain Services</strong></a></p>
+
+    <p><strong>Keychain Services</strong> is a secure method for storing small pieces of sensitive data, such as passwords or tokens. Data in the keychain is encrypted and protected by the device&#39;s security mechanisms.</p>
+  </li>
+</ul>
+
+<h2>Recommended Articles and Other Resources</h2>
+
+<ul>
+  <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html">OWASP Cheat Sheet Series - HTML5 Security Cheat Sheet</a></li>
+  <li><a href="https://www.cs.ucr.edu/~heng/pubs/webview_acsac2011.pdf">Research Paper - Attacks on WebView in the Android System</a></li>
+</ul>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/archive/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/archive/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/archive/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/twitter.js"></script>
+</body>
+</html>

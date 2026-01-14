@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Project Settings for iOS - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/2.6.0/guide/project-settings/ios/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/lib/syntax.css">
+
+
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/archive/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/archive/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Latest Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/accelerometer/accelerometer.html">
+                Accelerometer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/camera/camera.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/media/capture/capture.html">
+                Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/compass/compass.html">
+                Compass
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/connection/connection.html">
+                Connection
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/contacts/contacts.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/device/device.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/file/file.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/geolocation/geolocation.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/globalization/globalization.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/media/media.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/notification/notification.html">
+                Notification
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/splashscreen/splashscreen.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/getting-started/index.html">
+                Getting Started Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/command-line/index.html">
+                Command-Line Usage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/upgrading/index.html">
+                Upgrading Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/project-settings/index.html">
+                Project Settings
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/plugin-development/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/whitelist/index.html">
+                Domain Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.6.0/guide/cordova-webview/index.html">
+                Embedding WebView
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/2.6.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/accelerometer/accelerometer.html">
+        Accelerometer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/camera/camera.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/media/capture/capture.html">
+        Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/compass/compass.html">
+        Compass
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/connection/connection.html">
+        Connection
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/contacts/contacts.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/device/device.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/file/file.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/geolocation/geolocation.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/globalization/globalization.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/media/media.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/notification/notification.html">
+        Notification
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/splashscreen/splashscreen.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/getting-started/index.html">
+        Getting Started Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/command-line/index.html">
+        Command-Line Usage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/upgrading/index.html">
+        Upgrading Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/project-settings/index.html">
+        Project Settings
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/plugin-development/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/whitelist/index.html">
+        Domain Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.6.0/guide/cordova-webview/index.html">
+        Embedding WebView
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1><a href="../index.html">Project Settings</a> for iOS</h1>
+
+<p>The <code>config.xml</code> settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
+The <code>config.xml</code> file is located in your <code>&lt;project folder&gt;/&lt;appname&gt;</code> directory.</p>
+
+<h2>&lt;preference&gt;</h2>
+
+<p>Various preferences (as <strong>&lt;preference&gt;</strong> tags) default on not breaking existing apps. The available preferences are:</p>
+
+<ol>
+  <li>
+    <p><strong>DisallowOverscroll (boolean, defaults to false)</strong> - set to true if you don&#39;t want the WebView to rubber-band</p>
+  </li>
+  <li>
+    <p><strong>TopActivityIndicator (string, defaults to &#39;gray&#39;)</strong> - this is the top spinning throbber in the status/battery bar, valid values are &quot;whiteLarge&quot;, &quot;white&quot; and &quot;gray&quot;</p>
+  </li>
+  <li>
+    <p><strong>EnableLocation (boolean, defaults to false)</strong> - set to true, to initialize the <a href="../../../cordova/geolocation/geolocation.html">Geolocation</a> plugin at start-up (so the fix on your location can be more accurate) <strong>DEPRECATED</strong>: please set the <strong>onload</strong> attribute of the <strong>Geolocation</strong> plugin to <strong>true</strong> instead.</p>
+  </li>
+  <li>
+    <p><strong>EnableViewportScale (boolean, defaults to false)</strong> - set to true to prevent viewport scaling through a meta tag</p>
+  </li>
+  <li>
+    <p><strong>AutoHideSplashScreen (boolean, defaults to true)</strong> - set to false to control when the splashscreen is hidden through a JavaScript API</p>
+  </li>
+  <li>
+    <p><strong>FadeSplashScreen (boolean, defaults to true)</strong> - set to false to prevent the splash-screen to fade in and out when showing/hiding it.</p>
+  </li>
+  <li>
+    <p><strong>FadeSplashScreenDuration (float, defaults to 2)</strong> - The splash-screen Fade duration in seconds.</p>
+  </li>
+  <li>
+    <p><strong>ShowSplashScreenSpinner (boolean, defaults to true)</strong> - set to false to <a href="../../../cordova/splashscreen/splashscreen.hide.html">hide</a> the splash-screen spinner</p>
+  </li>
+  <li>
+    <p><strong>MediaPlaybackRequiresUserAction (boolean, defaults to false)</strong> - set to true to not allow autoplayed HTML5 video</p>
+  </li>
+  <li>
+    <p><strong>AllowInlineMediaPlayback (boolean, defaults to false)</strong> - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute</p>
+  </li>
+  <li>
+    <p><strong>BackupWebStorage (string, defaults to &#39;cloud&#39;)</strong> - valid values are &#39;none&#39;, &#39;cloud&#39; and &#39;local&#39;. Set to &#39;cloud&#39; to allow the web storage data to be backed up to iCloud, and set to &#39;local&#39; to only allow local backups (iTunes sync). Set to &#39;none&#39; to not allow any backups of web storage.</p>
+  </li>
+  <li>
+    <p><strong>KeyboardDisplayRequiresUserAction (boolean, defaults to true)</strong> - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.</p>
+  </li>
+  <li>
+    <p><strong>SuppressesIncrementalRendering (boolean, defaults to false)</strong> - set to true to wait until all new view content has been received before it is rendered.</p>
+  </li>
+  <li>
+    <p><strong>HideKeyboardFormAccessoryBar (boolean, defaults to false)</strong> - set to true to <a href="../../../cordova/splashscreen/splashscreen.hide.html">hide</a> the additional toolbar that is on top of the keyboard (this is the toolbar that has the Prev, Next and Done buttons)</p>
+  </li>
+  <li>
+    <p><strong>KeyboardShrinksView (boolean, defaults to false)</strong> -  set to true to shrink the WebView when the keyboard comes up. The WebView shrinks instead of the viewport shrinking and the page scrollable. This applies to apps that position their elements relative to the bottom of the WebView. This is the default behaviour on Android, and makes a lot of sense when building apps as opposed to webpages.</p>
+  </li>
+</ol>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/archive/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/archive/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/archive/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/twitter.js"></script>
+</body>
+</html>

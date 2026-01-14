@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Overview - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/2.9.0/guide/overview/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/lib/syntax.css">
+
+
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/archive/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/archive/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Latest Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/accelerometer/accelerometer.html">
+                Accelerometer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/camera/camera.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/media/capture/capture.html">
+                Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/compass/compass.html">
+                Compass
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/connection/connection.html">
+                Connection
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/contacts/contacts.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/device/device.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/file/file.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/geolocation/geolocation.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/globalization/globalization.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/media/media.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/notification/notification.html">
+                Notification
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/splashscreen/splashscreen.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/getting-started/index.html">
+                Platform Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/cli/index.html">
+                The Cordova Command-line Interface
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/command-line/index.html">
+                Command-Line Usage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/privacy/index.html">
+                Privacy Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/upgrading/index.html">
+                Upgrading Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/project-settings/index.html">
+                Project Settings
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/plugin-development/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/whitelist/index.html">
+                Domain Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/cordova-webview/index.html">
+                Embedding WebView
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/2.9.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/accelerometer/accelerometer.html">
+        Accelerometer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/camera/camera.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/media/capture/capture.html">
+        Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/compass/compass.html">
+        Compass
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/connection/connection.html">
+        Connection
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/contacts/contacts.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/device/device.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/file/file.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/geolocation/geolocation.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/globalization/globalization.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/media/media.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/notification/notification.html">
+        Notification
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/splashscreen/splashscreen.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/getting-started/index.html">
+        Platform Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/cli/index.html">
+        The Cordova Command-line Interface
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/command-line/index.html">
+        Command-Line Usage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/privacy/index.html">
+        Privacy Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/upgrading/index.html">
+        Upgrading Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/project-settings/index.html">
+        Project Settings
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/plugin-development/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/whitelist/index.html">
+        Domain Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/cordova-webview/index.html">
+        Embedding WebView
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/guide/overview/index.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>Overview</h1>
+
+<p>Cordova is an open-source mobile development framework. It allows you
+to use standard web technologies such as HTML5, CSS3, and JavaScript
+for cross-platform development, avoiding each mobile platforms&#39; native
+development language.  Applications execute within wrappers targeted
+to each platform, and rely on standards-compliant API bindings to
+access each device&#39;s sensors, data, and network status.</p>
+
+<p>Use Cordova if you are:</p>
+
+<ul>
+  <li>
+    <p>a mobile developer and want to extend an application across more
+than one platform, without having to re-implement it with each
+platform&#39;s language and tool set.</p>
+  </li>
+  <li>
+    <p>a web developer and want to deploy a web app that&#39;s packaged for
+distribution in various app store portals.</p>
+  </li>
+  <li>
+    <p>a mobile developer interested in mixing native application
+components with a <em>WebView</em> (browser window) that can access
+device-level APIs, or if you want to develop a plug-in interface
+between native and WebView components.</p>
+  </li>
+</ul>
+
+<h2>Basic Components</h2>
+
+<p>Cordova applications rely on a common <code>config.xml</code> file that provides
+information about the app and specifies parameters affecting how it
+works, such as whether it responds to orientation shifts. This file
+adheres to the W3C&#39;s
+<a href="http://www.w3.org/TR/widgets/">Packaged Web App</a>,
+or <em>widget</em>, specification.</p>
+
+<p>The application itself is implemented as a web page, named
+<em>index.html</em> by default, that references whatever CSS, JavaScript,
+images, media files, or other resources are necessary for it to run.
+The app executes as a <em>WebView</em> within the native application wrapper,
+which you distribute to app stores.  For the web app to interact with
+various device features the way native apps do, it must also reference
+a <code>cordova.js</code> file, which provides API bindings.
+<!-- XREF
+(See the [API Reference](../../index.html) for an overview, and the API and Configuration
+Guide for examples of how to use them.)
+XREF --></p>
+
+<p>The Cordova-enabled WebView may provide the application with its
+entire user interface. It can also be a component within a larger,
+hybrid application that mixes the WebView with native application
+components.  Cordova provides a <em>plug-in</em> interface for these
+components to communicate with each other.</p>
+
+<h2>Development Paths</h2>
+
+<p>The easiest way to set up an application is to run the <code>cordova</code>
+command-line utility, also known as the <em>command-line interface</em>
+(CLI). (To install the CLI, see <a href="../cli/index.html">The Cordova Command-line Interface</a>.)
+Depending on the set of platforms you wish to target, you can rely on
+the CLI for progressively greater shares of the development cycle:</p>
+
+<ul>
+  <li>
+    <p>In the most basic scenario, you can use the CLI simply to create a
+new project that is populated with default configuration for you to
+modify.</p>
+  </li>
+  <li>
+    <p>For many mobile platforms, you can also use the CLI to set up
+additional project files required to compile within each SDK.  For
+this to work, you must install each targeted platform&#39;s SDK.
+<!-- XREF
+(See the [Platform Guides](../getting-started/index.html) for instructions.)
+XREF -->
+As indicated in the Platform Support table below, you may need to
+run the CLI on different operating systems depending on the targeted
+platform.</p>
+  </li>
+  <li>
+    <p>For supporting platforms, the CLI can compile executible
+applications and run them in an SDK- or browser-based device
+emulator, depending on the device feature you want to test.
+<!-- XREF
+(See API and Configuration Guide for details.)
+XREF -->
+For comprehensive testing, you can also generate application files
+and install them directly on a device.</p>
+  </li>
+</ul>
+
+<p>At any point in the development cycle, you can also rely on
+platform-specific SDK tools, which may provide a richer set of
+options. 
+<!-- XREF
+(See the [Platform Guides](../getting-started/index.html) for details about each platform's SDK tool set.)
+XREF -->
+An SDK environment is more appropriate if you want implement a hybrid
+app that mixes web-based and native application components.
+<!-- XREF
+(See Extended Hybrid Applications for more information.)
+XREF -->
+You may use the command-line utility to initially generate the app, or
+iteratively thereafter to feed updated code to SDK tools.  You may
+also build the app&#39;s configuration file yourself.
+<!-- XREF
+(See Configuration Reference for details.)
+XREF --></p>
+
+<!-- XREF
+To build projects on some platforms, you may need to apply digital signatures.
+See Distributing Applications for information on how to upload your app to various store portals.
+XREF -->
+
+<h2>Platform Support</h2>
+
+<p>The following shows the set of development tools and device APIs
+available for each mobile platform:</p>
+
+<!-- START HTML -->
+
+<table class="compat" width="100%">
+
+<thead>
+    <tr>
+        <th>&lt;/td&gt;
+        <th>Android</th>
+        <th>BlackBerry</th>
+        <th>BlackBerry 10</th>
+        <th>iOS</th>
+        <th>Windows<br />Phone 7</th>
+        <th>Windows<br />Phone 8</th>
+        <th>Windows<br />8</th>
+    &lt;/tr&gt;
+
+&lt;/thead&gt;
+
+<tbody>
+    <tr>
+        <th><a href="#">cordova<br />CLI</a></th>
+        <td data-col="android" class="y">Mac, Windows, Linux</td>
+        <td data-col="blackberry" class="y">Mac, Windows</td>
+        <td data-col="blackberry10" class="y">Mac, Windows</td>
+        <td data-col="ios" class="y">Mac</td>
+        <td data-col="winphone7" class="y">Windows</td>
+        <td data-col="winphone8" class="y">Windows</td>
+        <td data-col="win8" class="u"></td>
+    </tr>
+
+    <tr>
+        <th><a href="#">PhoneGap<br />Build</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="u"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="u"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../getting-started/index.html">IDE platform support</a></th>
+        <td data-col="android" class="y"><a href="../getting-started/android/index.html">         </a></td>
+        <td data-col="blackberry" class="y"><a href="../getting-started/blackberry/index.html">      </a></td>
+        <td data-col="blackberry10" class="y"><a href="../getting-started/blackberry10/index.html">      </a></td>
+        <td data-col="ios" class="y"><a href="../getting-started/ios/index.html">             </a></td>
+        <td data-col="winphone7" class="y"><a href="../getting-started/windows-phone-7/index.html"> </a></td>
+        <td data-col="winphone8" class="y"><a href="../getting-started/windows-phone-8/index.html"> </a></td>
+        <td data-col="win8" class="y"><a href="../getting-started/windows-8/index.html">       </a></td>
+    </tr>
+
+    <tr>
+        <th><a href="#">Embedded<br />WebView</a></th>
+        <td data-col="android" class="y"><a href="../cordova-webview/android.html"></a></td>
+        <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
+        <td data-col="ios" class="y"><a href="../cordova-webview/ios.html"></a></td>
+        <td data-col="winphone7" class="n"></td>
+        <td data-col="winphone8" class="n"></td>
+        <td data-col="win8" class="n"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../plugin-development/index.html">Plug-in<br />Interface</a></th>
+        <td data-col="android" class="y"><a href="../plugin-development/android/index.html"></a></td>
+        <td data-col="blackberry" class="y"><a href="../plugin-development/blackberry/index.html"></a></td>
+        <td data-col="blackberry10" class="y"><a href="../plugin-development/blackberry10/index.html"></a></td>
+        <td data-col="ios" class="y"><a href="../plugin-development/ios/index.html"></a></td>
+        <td data-col="winphone7" class="y"><a href="../plugin-development/windows-phone/index.html"></a></td>
+        <td data-col="winphone8" class="n"></td>
+        <td data-col="win8" class="n"></td>
+    </tr>
+
+    <tr>
+        <th></th>
+        <th colspan="20">Platform APIs</th>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/accelerometer/accelerometer.html">Accelerometer</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/camera/camera.html">Camera</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/media/capture/capture.html">Capture</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="n"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/compass/compass.html">Compass</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
+        <td data-col="ios" class="y">(3GS+)</td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/connection/connection.html">Connection</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/contacts/contacts.html">Contacts</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/device/device.html">Device</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/events/events.html">Events</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/file/file.html">File</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/geolocation/geolocation.html">Geolocation</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/globalization/globalization.html">Globalization</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="n"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="n"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/inappbrowser/inappbrowser.html">InAppBrowser</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/media/media.html">Media</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/notification/notification.html">Notification</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/splashscreen/splashscreen.html">Splashscreen</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="n"></td>
+        <td data-col="winphone8" class="n"></td>
+        <td data-col="win8" class="n"></td>
+    </tr>
+
+    <tr>
+        <th><a href="../../cordova/storage/storage.html">Storage</a></th>
+        <td data-col="android" class="y"></td>
+        <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="ios" class="y"></td>
+        <td data-col="winphone7" class="y"></td>
+        <td data-col="winphone8" class="y"></td>
+        <td data-col="win8" class="y"></td>
+    </tr>
+
+</tbody>
+&lt;/table&gt;
+
+<!-- END HTML -->
+</th></tr></thead></table>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/archive/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/archive/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/archive/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/twitter.js"></script>
+</body>
+</html>

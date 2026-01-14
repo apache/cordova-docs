@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                The Cordova Command-line Interface - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/2.9.0/guide/cli/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/archive/static/css/lib/syntax.css">
+
+
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/archive/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/archive/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Latest Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs">
+
+    <!-- Table of Contents -->
+    <div class="hidden-xs hidden-sm site-toc-container">
+        <ul class="site-toc">
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/">
+                
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/accelerometer/accelerometer.html">
+                Accelerometer
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/camera/camera.html">
+                Camera
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/media/capture/capture.html">
+                Capture
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/compass/compass.html">
+                Compass
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/connection/connection.html">
+                Connection
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/contacts/contacts.html">
+                Contacts
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/device/device.html">
+                Device
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/events/events.html">
+                Events
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/file/file.html">
+                File
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/geolocation/geolocation.html">
+                Geolocation
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/globalization/globalization.html">
+                Globalization
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/inappbrowser/inappbrowser.html">
+                InAppBrowser
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/media/media.html">
+                Media
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/notification/notification.html">
+                Notification
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/splashscreen/splashscreen.html">
+                Splashscreen
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/cordova/storage/storage.html">
+                Storage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/overview/index.html">
+                Overview
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/getting-started/index.html">
+                Platform Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/cli/index.html">
+                The Cordova Command-line Interface
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/command-line/index.html">
+                Command-Line Usage
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/privacy/index.html">
+                Privacy Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/upgrading/index.html">
+                Upgrading Guides
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/project-settings/index.html">
+                Project Settings
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/plugin-development/index.html">
+                Plugin Development Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/whitelist/index.html">
+                Domain Whitelist Guide
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    <li>
+        
+            <a class="" href="/docs/en/2.9.0/guide/cordova-webview/index.html">
+                Embedding WebView
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+</ul>
+
+    </div>
+
+    <!-- Page content -->
+    <div class="page-content-container">
+        <div class="page-content">
+            <div class="content-header">
+
+                <!-- ToC Dropdown (for XS and SM sizes only) -->
+                <div class="toc-dropdown dropdown visible-xs-block visible-sm-block">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="tocDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Table of Contents
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+
+<li>
+    <a class="" href="/docs/en/2.9.0/">
+        
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/accelerometer/accelerometer.html">
+        Accelerometer
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/camera/camera.html">
+        Camera
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/media/capture/capture.html">
+        Capture
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/compass/compass.html">
+        Compass
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/connection/connection.html">
+        Connection
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/contacts/contacts.html">
+        Contacts
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/device/device.html">
+        Device
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/events/events.html">
+        Events
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/file/file.html">
+        File
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/geolocation/geolocation.html">
+        Geolocation
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/globalization/globalization.html">
+        Globalization
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/inappbrowser/inappbrowser.html">
+        InAppBrowser
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/media/media.html">
+        Media
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/notification/notification.html">
+        Notification
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/splashscreen/splashscreen.html">
+        Splashscreen
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/cordova/storage/storage.html">
+        Storage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/overview/index.html">
+        Overview
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/getting-started/index.html">
+        Platform Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/cli/index.html">
+        The Cordova Command-line Interface
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/command-line/index.html">
+        Command-Line Usage
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/privacy/index.html">
+        Privacy Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/upgrading/index.html">
+        Upgrading Guides
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/project-settings/index.html">
+        Project Settings
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/plugin-development/index.html">
+        Plugin Development Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/whitelist/index.html">
+        Domain Whitelist Guide
+    </a>
+</li>
+
+
+
+
+<li>
+    <a class="" href="/docs/en/2.9.0/guide/cordova-webview/index.html">
+        Embedding WebView
+    </a>
+</li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Show warnings for special versions -->
+            <!-- dev warning -->
+            
+
+            <!-- outdated warning -->
+            
+                <div class="alert docs-alert alert-danger" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    This version of the documentation is outdated!
+                    <a href="/docs/en/latest/guide/cli/index.html">
+                        Click here for the latest released version.
+                    </a>
+                </div>
+            
+
+            <!-- plugin version warning -->
+            
+
+            <div id="page-toc-source">
+                <h1>The Cordova Command-line Interface</h1>
+
+<p>This guide shows you how to create applications and deploy them to
+various native mobile platforms using the <code>cordova</code> command-line
+interface (CLI). This tool allows you to create new projects, build
+them on different platforms, and run them within an emulator. You can
+also use the CLI to initialize project code, after which you use
+various platforms&#39; IDEs to develop them further.</p>
+
+<h2>Prerequisites</h2>
+
+<p>Before running any command-line tools, you need to install SDKs for
+each platform you wish to target.
+<!-- XREF
+(See the [Platform Guides](../getting-started/index.html) for more details.)
+XREF --></p>
+
+<p>To add support or rebuild a project for any platform, you need to run
+the command-line interface from the same machine that supports the
+platform&#39;s SDK. The CLI supports the following combinations:</p>
+
+<ul>
+  <li>iOS             (Mac)</li>
+  <li>Android         (Mac, Linux)</li>
+  <li>BlackBerry      (Mac, Windows)</li>
+  <li>Windows Phone 7 (Windows)</li>
+  <li>Windows Phone 8 (Windows)</li>
+</ul>
+
+<p>On the Mac, the command-line is available via the <em>Terminal</em>
+application. On the PC, it&#39;s available as <em>Command Prompt</em> under
+<em>Accessories</em>.</p>
+
+<p>The more likely it is that you run the CLI from different machines,
+the more it makes sense to maintain a remote source code repository,
+whose assets you pull down to local working directories.</p>
+
+<p>To install the <code>cordova</code> command-line tool, follow these steps:</p>
+
+<ol>
+  <li>
+    <p>Download and install <a href="http://nodejs.org/">Node.js</a>. Following
+installation, you should be able to invoke <code>node</code> or <code>npm</code> on your
+command line.</p>
+  </li>
+  <li>
+    <p>Install the <code>cordova</code> utility. In Unix, prefixing the additional
+<code>sudo</code> command may be necessary to install development utilities in
+otherwise restricted directories:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo npm install -g cordova
+</code></pre></div>    </div>
+
+    <p>The installation log may produce errors for any uninstalled
+platform SDKs.  Following installation, you should be able to run
+<code>cordova</code> on the command line.</p>
+  </li>
+  <li>
+    <p>To ensure permissions are correct, run this command on Mac or
+Linux, changing <em>LOGIN</em> to match your account name:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>After installing the <code>cordova</code> utility, you can always update it to
+the latest version by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ sudo npm update -g cordova
+</code></pre></div></div>
+
+<p>Use this syntax to install a specific version:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ sudo npm install -g cordova@2.8.0
+</code></pre></div></div>
+
+<p>Run the <code>info</code> command for a listing that includes the current version
+along with other available version numbers:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ npm info cordova
+</code></pre></div></div>
+
+<h2>Create an App</h2>
+
+<p>Go to the directory where you maintain your source code, and run a
+command such as the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova create HelloWorld com.example.hello "Hello World"
+</code></pre></div></div>
+
+<p>The first argument specifies a <em>HelloWorld</em> directory to be generated
+for your project. Its <code>www</code> subdirectory houses your application&#39;s
+home page, along with various resources under <code>css</code>, <code>js</code>, and <code>img</code>,
+which follow common web development file-naming conventions. The
+<code>config.xml</code> file contains important metadata needed to generate and
+distribute the application.</p>
+
+<p>The other two arguments are optional: the <code>com.example.hello</code> argument
+provides your project with a reverse-domain-style identifier, and the
+<code>"Hello World!"</code> provides the application&#39;s display text. You can edit
+both of these values later in the <code>config.xml</code> file.</p>
+
+<h2>Add Platforms</h2>
+
+<p>All subsequent commands need to be run within the project&#39;s directory,
+or any subdirectories within its scope:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cd HelloWorld
+</code></pre></div></div>
+
+<p>Before you can build the project, you need to specify a set of target
+platforms. Your ability to run these commands depends on whether your
+machine supports each SDK, and whether you have already installed each
+SDK.  Run any of these from a Mac:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platform add ios
+    $ cordova platform add android
+    $ cordova platform add blackberry
+</code></pre></div></div>
+
+<p>Run any of these from a Windows machine, where <em>wp</em> refers to
+different versions of the Windows Phone operating system:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platform add wp7
+    $ cordova platform add wp8
+    $ cordova platform add android
+    $ cordova platform add blackberry
+</code></pre></div></div>
+
+<p>Run this to check your current set of platforms:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platforms ls
+</code></pre></div></div>
+
+<p>(Note the <code>platform</code> and <code>platforms</code> commands are synonymous.)</p>
+
+<p>Run either of the following synonymous commands to remove a platform:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova platform remove blackberry
+    $ cordova platform rm android
+</code></pre></div></div>
+
+<p>Running commands to add or remove platforms affects the contents of
+the project&#39;s <em>platforms</em> directory, where each specified platform
+appears as a subdirectory. The <em>www</em> source directory is reproduced
+within each platform&#39;s subdirectory, appearing for example in
+<em>platforms/ios/www</em> or <em>platforms/android/assets/www</em>.  By default,
+each platform&#39;s configuration file is set up to be able to access all
+of Cordova&#39;s APIs.</p>
+
+<p>If you wish, you can use an SDK at this point to open the project you
+created. However, any edits you make to the project within an SDK
+affect the derivative set of assets, not the original cross-platform
+source files. Use this approach if you simply want to initialize a
+project.
+<!-- XREF
+(See the [Platform Guides](../getting-started/index.html) for information on how to develop applications within each SDK.)
+XREF -->
+Read on if you wish to use command-line tools for the entire
+development cycle.</p>
+
+<h2>Build the App</h2>
+
+<p>By default, the <code>cordova create</code> script generates a skeletal web-based
+application whose home page is the project&#39;s <code>www/index.html</code> file.
+Edit this application however you want, but any initialization should
+be specified as part of the <code>[deviceready](../../cordova/events/events.deviceready.html)</code> event handler, referenced by
+default from <code>www/js/index.js</code>.
+<!-- XREF
+(See API and Configuration Guide for details.)
+XREF --></p>
+
+<p>Run the following command to iteratively build the project:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova build
+</code></pre></div></div>
+
+<p>This generates platform-specific code within the project&#39;s <code>platforms</code>
+subdirectory.  You can optionally limit the scope of each build to
+specific platforms:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova build ios
+</code></pre></div></div>
+
+<p>The <code>cordova build</code> command is a shorthand for the following, which in
+this example is also targeted to a single platform:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova prepare ios
+    $ cordova compile ios
+</code></pre></div></div>
+
+<p>In this case, once you run <code>prepare</code>, you can use Apple&#39;s Xcode SDK as
+an alternative to modify and compile the platform-specific code that
+Cordova generates within <code>platforms/ios</code>. You can use the same
+approach with other platforms&#39; IDEs.</p>
+
+<!-- NOTE: assume `ripple` command will be removed, along with `serve`
+
+## View the App in a Browser
+
+Since the application uses web-based components, you can often use a
+standard web browser to preview them directly from the source _www_
+directory.  The `ripple` command previews the application within a
+browser-based emulation environment, in this case mimicking how it
+would appear on an iPhone:
+
+        $ cordova ripple ios
+
+![](/static/img/guide/cli/scr_ripple.png)
+
+The _ripple_ emulator provides an outer skin that demonstrates how
+applications work with many device-level features. For example, you
+can simulate changes in location, changes to orientation, and other
+accelerometer-driven shaking gestures. Other platform features, such
+as access to the camera or user contacts, can often be tested on the
+SDK's device emulator, or else on the device itself.
+(See View the App in an Emulator, below.)
+
+The default application Cordova provides demonstrates a handler for
+the custom `[deviceready](../../cordova/events/events.deviceready.html)` event, which ordinarily fires once Cordova
+establishes contact with device-level APIs, at which point an
+application can start running. Within the ripple emulator, you must
+fire the event manually:
+
+![](/static/img/guide/cli/scr_ripple_event.png)
+
+As part of its initialization phase, The application displays a new
+log message:
+
+![](/static/img/guide/cli/scr_ripple_ready.png)
+
+Specifying a platform, such as `ios` or `android`, makes the
+application run under `ripple` with a user agent string and screen
+size for a particular device.  You also have the option to modify the
+__Devices__ tab at the top left to change the target device.  For
+example, here is how an application would appear on an iPad that's
+tipped to its side:
+
+![](/static/img/guide/cli/scr_ripple_ipad.png)
+
+The `ripple` command is appropriate if your application responds to
+location, orientation, and varying network conditions, or else if it
+doesn't interact with any of the Cordova APIs at all. The following
+section shows how to run the app in a full platform emulator, which
+may allow access to other device features. Otherwise see Run the App
+on the [Device](../../cordova/device/device.html), below.
+
+-->
+
+<h2>View the App in an Emulator</h2>
+
+<p>SDKs for mobile platforms come bundled with emulators that execute a
+device image, so that you can launch the app from the home screen and
+see how it interacts with many platform features.  Run a command such
+as the following to rebuild the app and view it within a specific
+platform&#39;s emulator:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $ cordova emulate android
+</code></pre></div></div>
+
+<p>Some mobile platforms emulate a particular device by default, such as
+the iPhone for iOS projects. For other platforms, you may need to
+first associate a device with an emulator.
+<!-- XREF
+(See the [Platform Guides](../getting-started/index.html) for details.)
+XREF -->
+For example, you may first run the <code>android</code> command to launch the
+Android SDK, then run a particular device image, which launches it
+according to its default behavior:</p>
+
+<p><img src="/archive/static/img/guide/cli/android_emulate_init.png" alt="" /></p>
+
+<p>Following up with the <code>cordova emulate</code> command refreshes the emulator
+image to display the latest application, which is now available for
+launch from the home screen:</p>
+
+<p><img src="/archive/static/img/guide/cli/android_emulate_install.png" alt="" /></p>
+
+<!--
+
+## Run the App on the Device
+
+## Add a Plug-in
+
+plugin(s) [add|remove|ls [path]] ..... adds or removes a
+         plugin (from the specified path), or lists all
+         currently-added plugins
+
+-->
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="blue-divider"></div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="/archive/static/js/lib/toc.min.js"></script>
+<script defer type="text/javascript" src="/archive/static/js/docs.js"></script>
+
+    <script defer type="text/javascript" src="/archive/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/archive/static/js/twitter.js"></script>
+</body>
+</html>
