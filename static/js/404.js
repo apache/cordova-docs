@@ -4,7 +4,7 @@
     // NOTE:
     //      these patterns should NOT contain capturing groups (parentheses)
     //      because they might be combined with other regexes
-    var DOCS_VERSION_PATTERN      = "(?:[\\d\\.]+x?|dev|latest)";
+    var DOCS_VERSION_PATTERN      = "(?:\\d+\\.\\d+\\.\\d+|\\d+\\.x(?:-\\d{4}\\.\\d{2})?|dev|latest)";
     var DOCS_LANGUAGE_PATTERN     = "\\w\\w(?:-\\w\\w)?";
     var DOCS_VERSION_PATH_PATTERN = "docs\\/" + DOCS_LANGUAGE_PATTERN + "\\/" + DOCS_VERSION_PATTERN;
 
@@ -38,10 +38,11 @@
         return baseURL + versionString + pageExtension;
     }
 
-    function getDevURL(url) {
-        var replaceWhat = new RegExp("docs\\/(" + DOCS_LANGUAGE_PATTERN + ")\\/" + DOCS_VERSION_PATTERN);
-        var replaceWith = "docs/$1/dev";
-        return url.replace(replaceWhat, replaceWith);
+    function getLatestURL(url) {
+        return url.replace(
+            new RegExp(`(archive/)?docs/(${DOCS_LANGUAGE_PATTERN})/${DOCS_VERSION_PATTERN}`),
+            'docs/en/latest'
+        );
     }
 
     function getRootURL(url) {
@@ -62,8 +63,8 @@
         $("#not-found-redirect-alert").css("display", "block");
     }
 
-    function showDevRedirect(url) {
-        $("#dev-redirect-link").attr("href", url);
+    function showLatestRedirect(url) {
+        $("#latest-redirect-link").attr("href", url);
         $("#no-version-redirect-alert").css("display", "block");
     }
 
@@ -82,7 +83,7 @@
 
         // get related URLs
         var rootURL = getRootURL(url);
-        var devURL = getDevURL(url);
+        var latestURL = getLatestURL(url);
         var newURL  = transformOldURL(url);
 
         // try the root URL
@@ -110,9 +111,9 @@
                 },
 
                 // if root doesn't exist, assume that the version
-                // is invalid and redirect to dev
+                // is invalid and redirect to latest
                 404: function () {
-                    showDevRedirect(devURL)
+                    showLatestRedirect(latestURL)
                 }
             }
         });
