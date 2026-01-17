@@ -1,10 +1,9 @@
 {% for entry in include.entries %}
-{% assign normalized_my_entry = include.my_entry | remove: '/' %}
-{% assign normalized_entry_url = entry.url | remove: '/' %}
+{% assign entry_active = include.my_entry | remove: '/' == entry.url | remove: '/' %}
 
 {% if entry.url != null %}
 <li>
-    <a class="{% if normalized_my_entry == normalized_entry_url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
+    <a class="{% if entry_active %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
         {{ entry.name }}
     </a>
 </li>

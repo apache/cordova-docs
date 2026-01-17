@@ -1,8 +1,7 @@
 <ul class="site-toc">
     {% for entry in include.entries %}
 
-    {% assign normalized_my_entry = include.my_entry | remove: '/' %}
-    {% assign normalized_entry_url = entry.url | remove: '/' %}
+    {% assign entry_active = include.my_entry | remove: '/' == entry.url | remove: '/' %}
 
     <li>
         {% if entry.children %}
@@ -10,10 +9,10 @@
                 {{ entry.name }}
             </span>
         {% else %}
-            <a class="{% if normalized_my_entry == normalized_entry_url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
+            <a class="{% if entry_active %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
                 {{ entry.name }}
             </a>
-            {% if normalized_my_entry == normalized_entry_url %}
+            {% if entry_active %}
                 <span class="entry-highlight"></span>
             {% endif %}
         {% endif %}
@@ -22,7 +21,7 @@
         {% comment %}
         Insert page-specific ToC here if this is the entry for this page
         {% endcomment %}
-        {% if normalized_my_entry == normalized_entry_url %}<div id="page-toc" class="page-toc"></div>{% endif %}
+        {% if entry_active %}<div id="page-toc" class="page-toc"></div>{% endif %}
 
 
         {% if entry.children %}
