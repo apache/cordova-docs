@@ -1548,10 +1548,11 @@ the system&#39;s image library.</p>
 
 <p>Although the object is attached to the global scoped <code>navigator</code>, it is not available until after the <code>deviceready</code> event.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(navigator.camera);
-}
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h2>Installation</h2>
@@ -1586,39 +1587,56 @@ If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
 
 <p><strong>And don&#39;t forget to test and document your code.</strong></p>
 
-<h3>iOS Quirks</h3>
+<h3>iOS Specifics</h3>
 
-<p>Since iOS 10 it&#39;s mandatory to provide an usage description in the <code>info.plist</code> if trying to access privacy-sensitive data. When the system prompts the user to allow access, this usage description string will displayed as part of the permission dialog box, but if you didn&#39;t provide the usage description, the app will crash before showing the dialog. Also, Apple will reject apps that access private data but don&#39;t provide an usage description.</p>
+<p>Since iOS 10 it&#39;s mandatory to provide a usage description in the <code>info.plist</code> when accessing privacy-sensitive data. The required keys depend on how you use the plugin and which iOS versions you support:</p>
 
-<p>This plugins requires the following usage descriptions:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NSCameraUsageDescription</td>
+      <td>Required whenever the camera is used (e.g. <code>Camera.PictureSourceType.CAMERA</code>).</td>
+    </tr>
+    <tr>
+      <td>NSPhotoLibraryUsageDescription</td>
+      <td>Required only when your app runs on iOS 13 or older and using as <code>sourceType</code> <code>Camera.PictureSourceType.PHOTOLIBRARY</code>. On iOS 14+ the plugin uses PHPicker for read-only access, which does not need this key.</td>
+    </tr>
+    <tr>
+      <td>NSPhotoLibraryAddUsageDescription</td>
+      <td>Required when the plugin writes to the user&#39;s library (e.g. <code>saveToPhotoAlbum=true</code>).</td>
+    </tr>
+    <tr>
+      <td>NSLocationWhenInUseUsageDescription</td>
+      <td>Required if <code>CameraUsesGeolocation</code> is set to <code>true</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
-<ul>
-  <li><code>NSCameraUsageDescription</code> specifies the reason for your app to access the device&#39;s camera.</li>
-  <li><code>NSPhotoLibraryUsageDescription</code> specifies the reason for your app to access the user&#39;s photo library.</li>
-  <li><code>NSLocationWhenInUseUsageDescription</code> specifies the reason for your app to access the user&#39;s location information while your app is in use. (Set it if you have <code>CameraUsesGeolocation</code> preference set to <code>true</code>)</li>
-  <li><code>NSPhotoLibraryAddUsageDescription</code> specifies the reason for your app to get write-only access to the user&#39;s photo library</li>
-</ul>
+<p>When the system prompts the user to allow access, this usage description string will be displayed as part of the permission dialog box. If you don&#39;t provide the required usage description, the app will crash before showing the dialog. Also, Apple will reject apps that access private data but don&#39;t provide a usage description.</p>
 
 <p>To add these entries into the <code>info.plist</code>, you can use the <code>edit-config</code> tag in the <code>config.xml</code> like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge"&gt;
-    &lt;string&gt;need camera access to take pictures&lt;/string&gt;
-&lt;/edit-config&gt;
-</code></pre></div></div>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;edit-config</span> <span class="na">target=</span><span class="s">"NSCameraUsageDescription"</span> <span class="na">file=</span><span class="s">"*-Info.plist"</span> <span class="na">mode=</span><span class="s">"merge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;string&gt;</span>need camera access to take pictures<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/edit-config&gt;</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge"&gt;
-    &lt;string&gt;need photo library access to get pictures from there&lt;/string&gt;
-&lt;/edit-config&gt;
-</code></pre></div></div>
+<span class="nt">&lt;edit-config</span> <span class="na">target=</span><span class="s">"NSPhotoLibraryUsageDescription"</span> <span class="na">file=</span><span class="s">"*-Info.plist"</span> <span class="na">mode=</span><span class="s">"merge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;string&gt;</span>need photo library access to get pictures from there<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/edit-config&gt;</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge"&gt;
-    &lt;string&gt;need location access to find things nearby&lt;/string&gt;
-&lt;/edit-config&gt;
-</code></pre></div></div>
+<span class="nt">&lt;edit-config</span> <span class="na">target=</span><span class="s">"NSPhotoLibraryAddUsageDescription"</span> <span class="na">file=</span><span class="s">"*-Info.plist"</span> <span class="na">mode=</span><span class="s">"merge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;string&gt;</span>need photo library access to save pictures there<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/edit-config&gt;</span>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge"&gt;
-    &lt;string&gt;need photo library access to save pictures there&lt;/string&gt;
-&lt;/edit-config&gt;
+<span class="nt">&lt;edit-config</span> <span class="na">target=</span><span class="s">"NSLocationWhenInUseUsageDescription"</span> <span class="na">file=</span><span class="s">"*-Info.plist"</span> <span class="na">mode=</span><span class="s">"merge"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;string&gt;</span>need location access to find things nearby<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/edit-config&gt;</span>
 </code></pre></div></div>
 
 <hr />
@@ -1641,12 +1659,9 @@ If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
       <li><a href="#module_Camera.EncodingType">.EncodingType</a> : <code>enum</code></li>
       <li><a href="#module_Camera.MediaType">.MediaType</a> : <code>enum</code></li>
       <li><a href="#module_Camera.PictureSourceType">.PictureSourceType</a> : <code>enum</code></li>
-      <li><a href="#module_Camera.PopoverArrowDirection">.PopoverArrowDirection</a> : <code>enum</code></li>
       <li><a href="#module_Camera.Direction">.Direction</a> : <code>enum</code></li>
     </ul>
   </li>
-  <li><a href="#module_CameraPopoverHandle">CameraPopoverHandle</a></li>
-  <li><a href="#module_CameraPopoverOptions">CameraPopoverOptions</a></li>
 </ul>
 
 <hr />
@@ -2013,12 +2028,6 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>Save the image to the photo album on the device after capture.<br />See <a href="#cameragetpicturesuccesscallback-errorcallback-options">Android Quirks</a>.</td>
     </tr>
     <tr>
-      <td>popoverOptions</td>
-      <td><code>[CameraPopoverOptions](#module_CameraPopoverOptions)</code></td>
-      <td>&#160;</td>
-      <td>iOS-only options that specify popover location in iPad.</td>
-    </tr>
-    <tr>
       <td>cameraDirection</td>
       <td><code>[Direction](#module_Camera.Direction)</code></td>
       <td><code>BACK</code></td>
@@ -2155,7 +2164,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>PHOTOLIBRARY</td>
       <td><code>number</code></td>
       <td><code>0</code></td>
-      <td>Choose image from the device&#39;s photo library (same as SAVEDPHOTOALBUM for Android)</td>
+      <td>Choose image from the device&#39;s photo library.</td>
     </tr>
     <tr>
       <td>CAMERA</td>
@@ -2167,52 +2176,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>SAVEDPHOTOALBUM</td>
       <td><code>number</code></td>
       <td><code>2</code></td>
-      <td>Choose image only from the device&#39;s Camera Roll album (same as PHOTOLIBRARY for Android)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><a name="module_Camera.PopoverArrowDirection"></a></p>
-
-<h3>Camera.PopoverArrowDirection : <code>enum</code></h3>
-<p>Matches iOS UIPopoverArrowDirection constants to specify arrow location on popover.</p>
-
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
-<strong>Properties</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ARROW_UP</td>
-      <td><code>number</code></td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_DOWN</td>
-      <td><code>number</code></td>
-      <td><code>2</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_LEFT</td>
-      <td><code>number</code></td>
-      <td><code>4</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_RIGHT</td>
-      <td><code>number</code></td>
-      <td><code>8</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_ANY</td>
-      <td><code>number</code></td>
-      <td><code>15</code></td>
+      <td>Same as <code>PHOTOLIBRARY</code>, when running on Android or iOS 14+. On iOS older than 14, an image can only be chosen from the device&#39;s Camera Roll album with this setting.</td>
     </tr>
   </tbody>
 </table>
@@ -2248,102 +2212,6 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
   </tbody>
 </table>
 
-<hr />
-
-<p><a name="module_CameraPopoverOptions"></a></p>
-
-<h2>CameraPopoverOptions</h2>
-<p>iOS-only parameters that specify the anchor element location and arrow
-direction of the popover when selecting images from an iPad&#39;s library
-or album.
-Note that the size of the popover may change to adjust to the
-direction of the arrow and orientation of the screen.  Make sure to
-account for orientation changes when specifying the anchor element
-location.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[x]</td>
-      <td><code>Number</code></td>
-      <td><code>0</code></td>
-      <td>x pixel coordinate of screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[y]</td>
-      <td><code>Number</code></td>
-      <td><code>32</code></td>
-      <td>y pixel coordinate of screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[width]</td>
-      <td><code>Number</code></td>
-      <td><code>320</code></td>
-      <td>width, in pixels, of the screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[height]</td>
-      <td><code>Number</code></td>
-      <td><code>480</code></td>
-      <td>height, in pixels, of the screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[arrowDir]</td>
-      <td><code>[PopoverArrowDirection](#module_Camera.PopoverArrowDirection)</code></td>
-      <td><code>ARROW_ANY</code></td>
-      <td>Direction the arrow on the popover should point.</td>
-    </tr>
-    <tr>
-      <td>[popoverWidth]</td>
-      <td><code>Number</code></td>
-      <td><code>0</code></td>
-      <td>width of the popover (0 or not specified will use apple&#39;s default width).</td>
-    </tr>
-    <tr>
-      <td>[popoverHeight]</td>
-      <td><code>Number</code></td>
-      <td><code>0</code></td>
-      <td>height of the popover (0 or not specified will use apple&#39;s default height).</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<p><a name="module_CameraPopoverHandle"></a></p>
-
-<h2>CameraPopoverHandle</h2>
-<p>A handle to an image picker popover.</p>
-
-<p><strong>Supported Platforms</strong></p>
-
-<ul>
-  <li>iOS</li>
-</ul>
-
-<p><strong>Example</strong></p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span>
-<span class="p">{</span>
-    <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">FILE_URI</span><span class="p">,</span>
-    <span class="na">sourceType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span><span class="p">,</span>
-    <span class="na">popoverOptions</span><span class="p">:</span> <span class="k">new</span> <span class="nx">CameraPopoverOptions</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PopoverArrowDirection</span><span class="p">.</span><span class="nx">ARROW_ANY</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
-<span class="p">});</span>
-
-<span class="c1">// Reposition the popover if the orientation changes.</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">onorientationchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">cameraPopoverHandle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CameraPopoverHandle</span><span class="p">();</span>
-    <span class="kd">var</span> <span class="nx">cameraPopoverOptions</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CameraPopoverOptions</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PopoverArrowDirection</span><span class="p">.</span><span class="nx">ARROW_ANY</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
-    <span class="nx">cameraPopoverHandle</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">(</span><span class="nx">cameraPopoverOptions</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
 <hr />
 
 <h2><code>camera.getPicture</code> Errata</h2>
@@ -2421,7 +2289,7 @@ successful.</p>
 
 <p>Including a JavaScript <code>alert()</code> in either of the callback functions
 can cause problems.  Wrap the alert within a <code>setTimeout()</code> to allow
-the iOS image picker or popover to fully close before the alert
+the iOS image picker to fully close before the alert
 displays:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -2541,22 +2409,24 @@ displays:</p>
 
 <h2>Select a File from the Picture Library <a name="selectFile"></a></h2>
 
-<p>When selecting a file using the file picker, you also need to set the CameraOptions object. In this example, set the <code>sourceType</code> to <code>Camera.PictureSourceType.SAVEDPHOTOALBUM</code>. To open the file picker, call <code>getPicture</code> just as you did in the previous example, passing in the success and error callbacks along with CameraOptions object.</p>
+<p>When selecting a file using the file picker, you also need to set the CameraOptions object. In this example, set the <code>sourceType</code> to <code>Camera.PictureSourceType.PHOTOLIBRARY</code>. To open the file picker, call <code>getPicture</code> just as you did in the previous example, passing in the success and error callbacks along with CameraOptions object.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">openFilePicker</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">SAVEDPHOTOALBUM</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">createNewFileEntry</span><span class="p">;</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="kd">function</span> <span class="nx">cameraSuccess</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="c1">// Do something</span>
-
-    <span class="p">},</span> <span class="kd">function</span> <span class="nx">cameraError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
-
-    <span class="p">},</span> <span class="nx">options</span><span class="p">);</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span>
+        <span class="c1">// success callback</span>
+        <span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="c1">// Do something</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="nx">options</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -2566,7 +2436,7 @@ displays:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">openFilePicker</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">SAVEDPHOTOALBUM</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">createNewFileEntry</span><span class="p">;</span>
 
@@ -2577,14 +2447,16 @@ displays:</p>
         <span class="nx">options</span><span class="p">.</span><span class="nx">targetWidth</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="kd">function</span> <span class="nx">cameraSuccess</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="c1">// Do something with image</span>
-
-    <span class="p">},</span> <span class="kd">function</span> <span class="nx">cameraError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
-
-    <span class="p">},</span> <span class="nx">options</span><span class="p">);</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span>
+        <span class="c1">// success callback</span>
+        <span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Do something with image</span>
+        <span class="p">},</span>
+        <span class="c1">// error callback</span>
+        <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="nx">options</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 

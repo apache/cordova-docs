@@ -1842,7 +1842,7 @@ On top of the SPM declaration, be sure to also refer to the section titled <a hr
 
 <p>If the plugin has any logic that should execute on the during the plugin&#39;s initialization process, the <code>pluginInitialize</code> method should be defined in the plugin&#39;s class.</p>
 
-<p>For example, if the plugin has defined <code>onload</code> as <code>true</code>, when the app loads, the <code>pluginInitialize</code> method will be executed. Because this is triggered during app load, there is no <code>callbackID</code> so the <code>pluginInitialize</code> method can not return any results to the WebView. If results matter, they would need to be stored in some manar and later fetched with a JavaScript API call.</p>
+<p>For example, if the plugin has defined <code>onload</code> as <code>true</code>, when the app loads, the <code>pluginInitialize</code> method will be executed. Because this is triggered during app load, there is no <code>callbackID</code> so the <code>pluginInitialize</code> method cannot return any results to the WebView. If results matter, they would need to be stored in some manner and later fetched with a JavaScript API call.</p>
 
 <h4>Handeling Long-running &amp; Background Activities</h4>
 
