@@ -310,7 +310,7 @@ targets: [
 
 If the plugin has any logic that should execute on the during the plugin's initialization process, the `pluginInitialize` method should be defined in the plugin's class.
 
-For example, if the plugin has defined `onload` as `true`, when the app loads, the `pluginInitialize` method will be executed. Because this is triggered during app load, there is no `callbackID` so the `pluginInitialize` method can not return any results to the WebView. If results matter, they would need to be stored in some manar and later fetched with a JavaScript API call.
+For example, if the plugin has defined `onload` as `true`, when the app loads, the `pluginInitialize` method will be executed. Because this is triggered during app load, there is no `callbackID` so the `pluginInitialize` method cannot return any results to the WebView. If results matter, they would need to be stored in some manner and later fetched with a JavaScript API call.
 
 #### Handeling Long-running & Background Activities
 
