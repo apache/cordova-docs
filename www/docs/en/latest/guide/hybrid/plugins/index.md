@@ -104,7 +104,7 @@ Keywords help others find your plugin via search.
 
 ```zsh
 npm pkg set "keywords[]=cordova"
-npm pkg set "keywords[]=echosystem:cordova"
+npm pkg set "keywords[]=ecosystem:cordova"
 npm pkg set "keywords[]=cordova-android"
 npm pkg set "keywords[]=cordova-ios"
 ```
