@@ -1,5 +1,25 @@
 {% for entry in include.entries %}
-{% assign entry_active = include.my_entry | remove: '/' == entry.url | remove: '/' %}
+
+{% assign my_entry_url = include.my_entry %}
+{% assign entry_url = entry.url %}
+
+{% if my_entry_url %}
+    {% if my_entry_url | slice: -1 == '/' %}
+        {% assign my_entry_no_trailing = my_entry_url | slice: 0, my_entry_url.size | minus: 1 %}
+    {% else %}
+        {% assign my_entry_no_trailing = my_entry_url %}
+    {% endif %}
+{% endif %}
+
+{% if entry_url %}
+    {% if entry_url | slice: -1 == '/' %}
+        {% assign entry_no_trailing = entry_url | slice: 0, entry_url.size | minus: 1 %}
+    {% else %}
+        {% assign entry_no_trailing = entry_url %}
+    {% endif %}
+{% endif %}
+
+{% assign entry_active = my_entry_no_trailing == entry_no_trailing %}
 
 {% if entry.url != null %}
 <li>

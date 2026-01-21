@@ -1,7 +1,26 @@
 <ul class="site-toc">
     {% for entry in include.entries %}
 
-    {% assign entry_active = include.my_entry | remove: '/' == entry.url | remove: '/' %}
+    {% assign my_entry_url = include.my_entry %}
+    {% assign entry_url = entry.url %}
+
+    {% if my_entry_url %}
+        {% if my_entry_url | slice: -1 == '/' %}
+            {% assign my_entry_no_trailing = my_entry_url | slice: 0, my_entry_url.size | minus: 1 %}
+        {% else %}
+            {% assign my_entry_no_trailing = my_entry_url %}
+        {% endif %}
+    {% endif %}
+
+    {% if entry_url %}
+        {% if entry_url | slice: -1 == '/' %}
+            {% assign entry_no_trailing = entry_url | slice: 0, entry_url.size | minus: 1 %}
+        {% else %}
+            {% assign entry_no_trailing = entry_url %}
+        {% endif %}
+    {% endif %}
+
+    {% assign entry_active = my_entry_no_trailing == entry_no_trailing %}
 
     <li>
         {% if entry.children %}
@@ -17,12 +36,10 @@
             {% endif %}
         {% endif %}
 
-
         {% comment %}
         Insert page-specific ToC here if this is the entry for this page
         {% endcomment %}
         {% if entry_active %}<div id="page-toc" class="page-toc"></div>{% endif %}
-
 
         {% if entry.children %}
         {% include toc_recursive_main.html entries=entry.children my_entry=include.my_entry path_to_root=include.path_to_root %}
