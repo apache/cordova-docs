@@ -1,16 +1,25 @@
 <ul class="site-toc">
     {% for entry in include.entries %}
 
+    {% comment %}Normalize URLs for comparison: my_entry may be "path/" while entry.url is "path/index.html"{% endcomment %}
+    {% assign normalized_entry_url = entry.url | replace: "/index.html", "/" | replace: "index.html", "" %}
+    {% assign is_current_page = false %}
+    {% if entry.url and entry.url != "" and include.my_entry and include.my_entry != "" %}
+        {% if include.my_entry == entry.url or include.my_entry == normalized_entry_url %}
+            {% assign is_current_page = true %}
+        {% endif %}
+    {% endif %}
+
     <li>
         {% if entry.children %}
             <span class="toc-section-heading">
                 {{ entry.name }}
             </span>
         {% else %}
-            <a class="{% if include.my_entry == entry.url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
+            <a class="{% if is_current_page %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
                 {{ entry.name }}
             </a>
-            {% if include.my_entry == entry.url %}
+            {% if is_current_page %}
                 <span class="entry-highlight"></span>
             {% endif %}
         {% endif %}
@@ -18,7 +27,7 @@
         {% comment %}
         Insert page-specific ToC here if this is the entry for this page
         {% endcomment %}
-        {% if include.my_entry == entry.url %}<div id="page-toc" class="page-toc"></div>{% endif %}
+        {% if is_current_page %}<div id="page-toc" class="page-toc"></div>{% endif %}
 
         {% if entry.children %}
         {% include toc_recursive_main.html entries=entry.children my_entry=include.my_entry path_to_root=include.path_to_root %}
