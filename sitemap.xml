@@ -1703,6 +1703,15 @@
     
 
     <url>
+    <loc>https://cordova.apache.org/downloads/</loc>
+</url>
+
+
+    
+    
+    
+
+    <url>
     <loc>https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

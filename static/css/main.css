@@ -9208,6 +9208,45 @@ img#logo_top {
   }
 }
 
+.page > .downloads .releases {
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.page > .downloads .release-card {
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+}
+.page > .downloads .release-header h2 {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.page > .downloads .download-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page > .downloads .download-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #f1f1f1;
+  margin: 5px;
+}
+.page > .downloads .download-actions a {
+  margin-left: 0.6em;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
 .docs {
   display: flex;
   justify-content: center;

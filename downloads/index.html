@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content=" ">
+
+    <title>
+        
+            
+                Downloads - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/downloads/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li >
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="downloads">
+    <h1>Downloads</h1>
+
+<ul>
+  <li><a href="#downloads">Downloads</a>
+    <ul>
+      <li><a href="#package-list">Package List</a></li>
+      <li><a href="#verifying-package-integrity">Verifying Package Integrity</a>
+        <ul>
+          <li><a href="#1-import-the-apache-cordova-public-keys">1. Import the Apache Cordova Public Keys</a></li>
+          <li><a href="#2-verify-the-sha-512-checksum">2. Verify the SHA-512 Checksum</a></li>
+          <li><a href="#3-verify-the-gpg-signature">3. Verify the GPG Signature</a></li>
+        </ul>
+      </li>
+      <li><a href="#building-from-sources">Building from Sources</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>All Apache Cordova packages are published to the npmjs registry for convenience. Source downloads are also available, allowing you to create and use custom consumable packages.</p>
+
+<p>Below is a link to all Apache Cordova packages from our download server. You must verify the integrity of the downloaded files using the signatures downloaded from our <a href="https://dlcdn.apache.org/cordova/">distribution directory</a>. The signatures can be verified with our <a href="https://dlcdn.apache.org/cordova/KEYS">KEYS</a> file.</p>
+
+<p>The distribution directory will only provide our current recommended releases while you are able to retrieve the older, historical, versions from the <a href="https://archive.apache.org/dist/cordova/">archive download site</a>.</p>
+
+<h2>Package List</h2>
+
+<div class="releases">
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-common@6.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-common-6.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-common-6.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-common-6.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-create@6.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-create-6.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-create-6.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-create-6.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-eslint@6.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-eslint-config-6.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-eslint-config-6.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-eslint-config-6.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-fetch@5.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-fetch-5.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-fetch-5.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-fetch-5.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-js@6.1.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-js-6.1.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-js-6.1.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-js-6.1.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-lib@13.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-lib-13.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-lib-13.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-lib-13.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-serve@4.0.1</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-serve-4.0.1.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-serve-4.0.1.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/cordova-serve-4.0.1.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugman@3.0.1</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/plugman-3.0.1.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/plugman-3.0.1.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/plugman-3.0.1.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-node-xcode@3.0.1</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/tools/xcode-3.0.1.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/tools/xcode-3.0.1.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/tools/xcode-3.0.1.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-app-hello-world@7.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/templates/cordova-app-hello-world-7.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/templates/cordova-app-hello-world-7.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/templates/cordova-app-hello-world-7.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-android@14.0.1</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-android-14.0.1.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-android-14.0.1.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-android-14.0.1.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-browser@7.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-browser-7.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-browser-7.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-browser-7.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-electron@4.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-electron-4.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-electron-4.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-electron-4.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-ios@8.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-ios-8.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-ios-8.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/platforms/cordova-ios-8.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-battery-status@2.0.3</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-battery-status-2.0.3.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-battery-status-2.0.3.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-battery-status-2.0.3.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-camera@7.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-camera-7.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-camera-7.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-camera-7.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-device-motion@1.0.0.</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-motion-1.0.0..tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-motion-1.0.0..tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-motion-1.0.0..tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-device-orientation@3.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-orientation-3.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-orientation-3.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-orientation-3.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-device@3.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-3.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-3.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-device-3.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-dialogs@8.1.3</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-dialogs-8.1.3.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-dialogs-8.1.3.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-dialogs-8.1.3.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-file-transfer@2.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-file-transfer-2.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-file-transfer-2.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-file-transfer-2.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-file@1.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-file-1.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-file-1.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-file-1.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-geolocation@4.1.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-geolocation-4.1.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-geolocation-4.1.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-geolocation-4.1.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-inappbrowser@6.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-inappbrowser-6.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-inappbrowser-6.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-inappbrowser-6.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-media-capture@6.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-media-capture-6.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-media-capture-6.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-media-capture-6.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-media@7.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-media-7.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-media-7.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-media-7.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-network-information@3.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-network-information-3.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-network-information-3.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-network-information-3.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-screen-orientation@3.0.4</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-screen-orientation-3.0.4.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-screen-orientation-3.0.4.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-screen-orientation-3.0.4.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-splashscreen@6.0.2</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-splashscreen-6.0.2.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-splashscreen-6.0.2.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-splashscreen-6.0.2.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-statusbar@4.0.0</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-statusbar-4.0.0.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-statusbar-4.0.0.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-statusbar-4.0.0.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-vibration@3.1.1</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-vibration-3.1.1.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-vibration-3.1.1.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-vibration-3.1.1.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+    <section class="release-card">
+      <header class="release-header">
+        <h2>cordova-plugin-test-framework@1.1.6</h2>
+      </header>
+
+      <ul class="download-list">
+        
+          
+          
+          <li class="download-row">
+            <span class="download-name">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-test-framework-1.1.6.tgz">
+                npm (tgz)
+              </a>
+            </span>
+
+            <span class="download-actions">
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-test-framework-1.1.6.tgz.asc">ASC</a>
+              <a href="https://dlcdn.apache.org/cordova/plugins/cordova-plugin-test-framework-1.1.6.tgz.sha512">SHA512</a>
+            </span>
+          </li>
+        
+      </ul>
+    </section>
+  
+</div>
+
+<h2>Verifying Package Integrity</h2>
+
+<p>To verify package integrity, tools capable of performing GPG signature verification and SHA-512 checksum validation are required. Some operating systems include these tools by default, while others may require additional setup.</p>
+
+<p><strong>Linux:</strong></p>
+
+<p>These tools are typically available by default. If they are missing, they can usually be installed via the system package manager (such as <code>apt</code>, <code>dnf</code>, <code>pacman</code>, or <code>yum</code>). For GPG, the package name is typically <code>gnupg</code>.</p>
+
+<p><strong>macOS:</strong></p>
+
+<p><a href="https://brew.sh/">Homebrew</a> can be used to install the required tools. The <code>gpg</code> command is provided by the Homebrew package <code>gnupg</code>, and the <code>sha512sum</code> command is provided by <code>coreutils</code>.</p>
+
+<p><strong>Windows:</strong></p>
+
+<p>The <code>gpg</code> and <code>sha512sum</code> commands are not provided by default and must be installed separately.</p>
+
+<p>One of the simplest ways to obtain both tools is by installing <a href="https://git-scm.com/install/windows"><strong>Git for Windows</strong></a>, which typically includes <strong>Git Bash</strong> along with several useful binaries such as <code>gpg</code> and <code>sha512sum</code>.</p>
+
+<p>When <strong>Git for Windows</strong> is installed, these binaries can also be made available in <strong>Command Prompt</strong> or <strong>PowerShell</strong> by configuring the system <code>PATH</code> environment variable to point to the Git <code>usr\bin</code> directory. By default, this directory is typically located at <code>C:\Program Files\Git\usr\bin</code>, though the exact path may vary depending on the installation.</p>
+
+<p>For SHA-512 checksum verification, Windows users can alternatively use the built-in <code>certutil</code> command.</p>
+
+<h3>1. Import the Apache Cordova Public Keys</h3>
+
+<p>The <code>KEYS</code> file contains all of the known developer&#39;s public keys that are used for signing official releases. It is recommended to import these keys into your local GPG keyring.</p>
+
+<p>Download the <code>KEYS</code> file from the official Apache Downloads directory then run:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--import</span> KEYS
+</code></pre></div></div>
+
+<p>To list the imported keys:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--list-keys</span>
+</code></pre></div></div>
+
+<h3>2. Verify the SHA-512 Checksum</h3>
+
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> Note</p><p>In the steps below, the file name <code>file.tgz.sha512</code> and <code>file.tgz</code> are used as a placeholder and should be replaced with the name of the actual files that were downloaded. The exact file names will vary depending on the selected package.</p>
+</div>
+
+<p>Use the <strong>provided checksum file</strong> to confirm that the downloaded package matches the official release:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sha512sum</span> <span class="nt">-c</span> file.tgz.sha512
+</code></pre></div></div>
+
+<p>If the package is valid, you should see:</p>
+
+<pre><code class="language-log">file.tgz: OK
+</code></pre>
+
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> Note</p><p>Windows environment can alternatively verify the the SHA-512 checksum with the following command:</p>
+<pre><code class="language-cmd">certutil -hashfile C:\path\to\file.tgz {SHA512}
+</code></pre>
+<p>Replace <code>{SHA512}</code> with the SHA512 string.</p>
+</div>
+
+<p>(Optional)
+If you want to manually double-check, you may generate your own checksum:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sha512sum </span>file.tgz
+</code></pre></div></div>
+
+<p>After generating your own checksum, compare it against the authoritative checksum, <code>file.tgz.sha512</code>, to confirm that they match.</p>
+
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg> Tip</p><p>Generating your own checksum is useful for confirming the file was downloaded correctly.
+The <strong>authoritative</strong> checksum is the one we provide.</p>
+</div>
+
+<h3>3. Verify the GPG Signature</h3>
+
+<div class="markdown-alert markdown-alert-note"><p class="markdown-alert-title"><svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> Note</p><p>In the steps below, the file name <code>file.tgz.asc</code> and <code>file.tgz</code> are used as a placeholder and should be replaced with the name of the actual files that were downloaded. The exact file names will vary depending on the selected package.</p>
+</div>
+
+<p>Use the <code>.asc</code> signature file to confirm that the tarball was signed by an authorized Apache Cordova developer.</p>
+
+<p>Run:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--verify</span> file.tgz.asc file.tgz
+</code></pre></div></div>
+
+<p>If the signature is valid and the signer&#39;s public key exists in your keyring, you&#39;ll see output similar to:</p>
+
+<pre><code class="language-log">gpg: Good signature from "Developer Name &lt;dev@example.org&gt;"
+</code></pre>
+
+<p>If GPG warns about trust levels, this is normal unless you manually set owner trust. What matters is that the signature matches a key from the official <code>KEYS</code> file.</p>
+
+<h2>Building from Sources</h2>
+
+<p>After downloading one of the <strong>source</strong> packages from the list above and completing the steps in <strong>Verifying Package Integrity</strong>, follow these steps:</p>
+
+<ol>
+  <li>Extract the package contents.</li>
+  <li>Change your working directory to the root of the extracted contents.</li>
+  <li>Run <code>npm install</code> to install the package dependencies.</li>
+  <li>Run <code>npm update</code> to update sub-dependencies, as the <code>package-lock.json</code> may become stale over time.</li>
+  <li>Run <code>npm pack</code> to generate the consumable tarball.</li>
+</ol>
+
+<p>This will create a <code>.tgz</code> package file, which you can install into your project using:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> /path/to/the/newly/created/file.tgz
+</code></pre></div></div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="/downloads">Downloads</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>
