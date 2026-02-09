@@ -1,0 +1,414 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# The "customName" attribute is temporary.
+# It is expected to be removed once all packages are released
+# and follow the naming convention based on the repository name.
+#
+# The packages in question are those uploaded to the ASF file
+# server, not package managers.
+#
+# Once a package has been published using the new release
+# process, uncomment the "type: source" entries for that package,
+# as it should have been created.
+#
+# Once all packages contain source artifacts and follow the
+# proper naming convention, this comment block can be removed.
+
+- package: cordova-common
+  version: 6.0.0
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-common
+
+- package: cordova-create
+  version: 6.0.0
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-create
+
+- package: cordova-eslint
+  version: 6.0.0
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-eslint-config
+
+- package: cordova-fetch
+  version: 5.0.0
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-fetch
+
+- package: cordova-js
+  version: 6.1.0
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-js
+
+- package: cordova-lib
+  version: 13.0.0
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-lib
+
+- package: cordova-serve
+  version: 4.0.1
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-serve
+
+- package: cordova-plugman
+  version: 3.0.1
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: plugman
+
+- package: cordova-node-xcode
+  version: 3.0.1
+  downloadDir: tools
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: xcode
+
+- package: cordova-app-hello-world
+  version: 7.0.0
+  downloadDir: templates
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-app-hello-world
+
+- package: cordova-android
+  version: 14.0.1
+  downloadDir: platforms
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-android
+
+- package: cordova-browser
+  version: 7.0.0
+  downloadDir: platforms
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-browser
+
+- package: cordova-electron
+  version: 4.0.0
+  downloadDir: platforms
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-electron
+
+- package: cordova-ios
+  version: 8.0.0
+  downloadDir: platforms
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-ios
+
+- package: cordova-plugin-battery-status
+  version: 2.0.3
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-battery-status
+
+- package: cordova-plugin-camera
+  version: 7.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-camera
+
+- package: cordova-plugin-device-motion
+  version: 1.0.0.
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-device-motion
+
+- package: cordova-plugin-device-orientation
+  version: 3.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-device-orientation
+
+- package: cordova-plugin-device
+  version: 3.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-device
+
+- package: cordova-plugin-dialogs
+  version: 8.1.3
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-dialogs
+
+- package: cordova-plugin-file-transfer
+  version: 2.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-file-transfer
+
+- package: cordova-plugin-file
+  version: 1.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-file
+
+- package: cordova-plugin-geolocation
+  version: 4.1.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-geolocation
+
+- package: cordova-plugin-inappbrowser
+  version: 6.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-inappbrowser
+
+- package: cordova-plugin-media-capture
+  version: 6.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-media-capture
+
+- package: cordova-plugin-media
+  version: 7.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-media
+
+- package: cordova-plugin-network-information
+  version: 3.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-network-information
+
+- package: cordova-plugin-screen-orientation
+  version: 3.0.4
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-screen-orientation
+
+- package: cordova-plugin-splashscreen
+  version: 6.0.2
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-splashscreen
+
+- package: cordova-plugin-statusbar
+  version: 4.0.0
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-statusbar
+
+- package: cordova-plugin-vibration
+  version: 3.1.1
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-vibration
+
+- package: cordova-plugin-test-framework
+  version: 1.1.6
+  downloadDir: plugins
+  tarballs:
+    # - type: source
+    #   extension: tar.gz
+    # - type: source
+    #   extension: zip
+    - type: npm
+      extension: tgz
+      customName: cordova-plugin-test-framework
