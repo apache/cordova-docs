@@ -1,7 +1,17 @@
 {% for entry in include.entries %}
+
+{% comment %}Normalize URLs for comparison: my_entry may be "path/" while entry.url is "path/index.html"{% endcomment %}
+{% assign normalized_entry_url = entry.url | replace: "index.html", "" %}
+{% assign is_current_page = false %}
+{% if entry.url and entry.url != "" and include.my_entry and include.my_entry != "" %}
+    {% if include.my_entry == entry.url or include.my_entry == normalized_entry_url %}
+        {% assign is_current_page = true %}
+    {% endif %}
+{% endif %}
+
 {% if entry.url != null %}
 <li>
-    <a class="{% if include.my_entry == entry.url %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
+    <a class="{% if is_current_page %}this-page{% endif %}" href="{{ include.path_to_root }}{{ entry.url }}">
         {{ entry.name }}
     </a>
 </li>
