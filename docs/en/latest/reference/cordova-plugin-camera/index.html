@@ -1659,12 +1659,9 @@ If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
       <li><a href="#module_Camera.EncodingType">.EncodingType</a> : <code>enum</code></li>
       <li><a href="#module_Camera.MediaType">.MediaType</a> : <code>enum</code></li>
       <li><a href="#module_Camera.PictureSourceType">.PictureSourceType</a> : <code>enum</code></li>
-      <li><a href="#module_Camera.PopoverArrowDirection">.PopoverArrowDirection</a> : <code>enum</code></li>
       <li><a href="#module_Camera.Direction">.Direction</a> : <code>enum</code></li>
     </ul>
   </li>
-  <li><a href="#module_CameraPopoverHandle">CameraPopoverHandle</a></li>
-  <li><a href="#module_CameraPopoverOptions">CameraPopoverOptions</a></li>
 </ul>
 
 <hr />
@@ -2031,12 +2028,6 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
       <td>Save the image to the photo album on the device after capture.<br />See <a href="#cameragetpicturesuccesscallback-errorcallback-options">Android Quirks</a>.</td>
     </tr>
     <tr>
-      <td>popoverOptions</td>
-      <td><code>[CameraPopoverOptions](#module_CameraPopoverOptions)</code></td>
-      <td>&#160;</td>
-      <td>iOS-only options that specify popover location in iPad.</td>
-    </tr>
-    <tr>
       <td>cameraDirection</td>
       <td><code>[Direction](#module_Camera.Direction)</code></td>
       <td><code>BACK</code></td>
@@ -2190,51 +2181,6 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
   </tbody>
 </table>
 
-<p><a name="module_Camera.PopoverArrowDirection"></a></p>
-
-<h3>Camera.PopoverArrowDirection : <code>enum</code></h3>
-<p>Matches iOS UIPopoverArrowDirection constants to specify arrow location on popover.</p>
-
-<p><strong>Kind</strong>: static enum property of <code>[Camera](#module_Camera)</code>
-<strong>Properties</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ARROW_UP</td>
-      <td><code>number</code></td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_DOWN</td>
-      <td><code>number</code></td>
-      <td><code>2</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_LEFT</td>
-      <td><code>number</code></td>
-      <td><code>4</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_RIGHT</td>
-      <td><code>number</code></td>
-      <td><code>8</code></td>
-    </tr>
-    <tr>
-      <td>ARROW_ANY</td>
-      <td><code>number</code></td>
-      <td><code>15</code></td>
-    </tr>
-  </tbody>
-</table>
-
 <p><a name="module_Camera.Direction"></a></p>
 
 <h3>Camera.Direction : <code>enum</code></h3>
@@ -2266,102 +2212,6 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
   </tbody>
 </table>
 
-<hr />
-
-<p><a name="module_CameraPopoverOptions"></a></p>
-
-<h2>CameraPopoverOptions</h2>
-<p>iOS-only parameters that specify the anchor element location and arrow
-direction of the popover when selecting images from an iPad&#39;s library
-or album.
-Note that the size of the popover may change to adjust to the
-direction of the arrow and orientation of the screen.  Make sure to
-account for orientation changes when specifying the anchor element
-location.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[x]</td>
-      <td><code>Number</code></td>
-      <td><code>0</code></td>
-      <td>x pixel coordinate of screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[y]</td>
-      <td><code>Number</code></td>
-      <td><code>32</code></td>
-      <td>y pixel coordinate of screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[width]</td>
-      <td><code>Number</code></td>
-      <td><code>320</code></td>
-      <td>width, in pixels, of the screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[height]</td>
-      <td><code>Number</code></td>
-      <td><code>480</code></td>
-      <td>height, in pixels, of the screen element onto which to anchor the popover.</td>
-    </tr>
-    <tr>
-      <td>[arrowDir]</td>
-      <td><code>[PopoverArrowDirection](#module_Camera.PopoverArrowDirection)</code></td>
-      <td><code>ARROW_ANY</code></td>
-      <td>Direction the arrow on the popover should point.</td>
-    </tr>
-    <tr>
-      <td>[popoverWidth]</td>
-      <td><code>Number</code></td>
-      <td><code>0</code></td>
-      <td>width of the popover (0 or not specified will use apple&#39;s default width).</td>
-    </tr>
-    <tr>
-      <td>[popoverHeight]</td>
-      <td><code>Number</code></td>
-      <td><code>0</code></td>
-      <td>height of the popover (0 or not specified will use apple&#39;s default height).</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<p><a name="module_CameraPopoverHandle"></a></p>
-
-<h2>CameraPopoverHandle</h2>
-<p>A handle to an image picker popover.</p>
-
-<p><strong>Supported Platforms</strong></p>
-
-<ul>
-  <li>iOS</li>
-</ul>
-
-<p><strong>Example</strong></p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span>
-<span class="p">{</span>
-    <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">FILE_URI</span><span class="p">,</span>
-    <span class="na">sourceType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span><span class="p">,</span>
-    <span class="na">popoverOptions</span><span class="p">:</span> <span class="k">new</span> <span class="nx">CameraPopoverOptions</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PopoverArrowDirection</span><span class="p">.</span><span class="nx">ARROW_ANY</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
-<span class="p">});</span>
-
-<span class="c1">// Reposition the popover if the orientation changes.</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">onorientationchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">cameraPopoverHandle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CameraPopoverHandle</span><span class="p">();</span>
-    <span class="kd">var</span> <span class="nx">cameraPopoverOptions</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CameraPopoverOptions</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PopoverArrowDirection</span><span class="p">.</span><span class="nx">ARROW_ANY</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
-    <span class="nx">cameraPopoverHandle</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">(</span><span class="nx">cameraPopoverOptions</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
 <hr />
 
 <h2><code>camera.getPicture</code> Errata</h2>
@@ -2439,7 +2289,7 @@ successful.</p>
 
 <p>Including a JavaScript <code>alert()</code> in either of the callback functions
 can cause problems.  Wrap the alert within a <code>setTimeout()</code> to allow
-the iOS image picker or popover to fully close before the alert
+the iOS image picker to fully close before the alert
 displays:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
@@ -2663,7 +2513,7 @@ displays:</p>
                         <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
                     </li>
                     <li>
-                        <a href="https://www.apache.org/dyn/closer.cgi/cordova">Source Distribution</a>
+                        <a href="/downloads">Downloads</a>
                     </li>
                     <li>
                         <a target="_blank" href="https://www.apache.org/licenses">License</a>
