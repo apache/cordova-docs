@@ -54,16 +54,15 @@
       customName: cordova-create
 
 - package: cordova-eslint
-  version: 6.0.0
+  version: 6.0.1
   downloadDir: tools
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
-      customName: cordova-eslint-config
 
 - package: cordova-fetch
   version: 5.0.0
