@@ -105,11 +105,6 @@
                     display: block;
                     padding: 0 50%;
                     margin: 0 -50%;
-
-                    &.this-page {
-                        font-weight: bold;
-                        background-color: $brand-primary-darker;
-                    }
                 }
             }
             .toc-section-heading {
@@ -139,6 +134,12 @@
                 margin-bottom: 1rem;
             }
         }
+    }
+
+    /* Highlight the current page in the ToC */
+    .this-page {
+        font-weight: bold;
+        background-color: $brand-primary-darker;
     }
 
     .page-content-container {
