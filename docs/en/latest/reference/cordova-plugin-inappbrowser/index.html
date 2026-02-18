@@ -1748,6 +1748,7 @@ Since the introduction of iPadOS 13, iPads try to adapt their content mode / use
       <li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
       <li><strong>beforeload</strong>: event fires when the <code>InAppBrowser</code> decides whether to load an URL or not (only with option <code>beforeload</code> set).</li>
       <li><strong>message</strong>: event fires when the <code>InAppBrowser</code> receives a message posted from the page loaded inside the <code>InAppBrowser</code> Webview.</li>
+      <li><strong>customscheme</strong>: event fires when a link is followed that matches <code>AllowedSchemes</code>.</li>
       <li><strong>download</strong>: <em>(Android Only)</em> event fires when the <code>InAppBrowser</code> loads a URL that leads in downloading of a file.</li>
     </ul>
   </li>
@@ -1852,6 +1853,36 @@ Since the introduction of iPadOS 13, iPads try to adapt their content mode / use
 <span class="p">}</span>
 
 </code></pre></div></div>
+
+<h3>Customscheme event Example</h3>
+
+<p>Sometimes you may want to respond to an event happening on the page loaded in the browser,
+for example a button to open the barcode scanner, or closing the browser when a login flow
+was finished. This can done by navigating to a URL with a custom scheme listed in the
+<code>AllowedSchemes</code> preference in <code>config.xml</code>, triggering a <code>customscheme</code> event on the
+browser. Multiple values are separated by comma&#39;s.</p>
+
+<ul>
+  <li><strong>type</strong> <em>it contains the String value &quot;customscheme&quot; always</em></li>
+  <li><strong>url</strong> <em>The url with custom scheme that triggered the event</em></li>
+</ul>
+
+<p>In <code>config.xml</code>, include the following:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AllowedSchemes"</span> <span class="na">value=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onCustomScheme</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">app://hide</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://example.com</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">_blank</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">customscheme</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onCustomScheme</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>When the opened page navigates to the link <code>app://hide</code>, the browser is hidden.</p>
+
 <h4>Download event Example</h4>
 
 <p>Whenever the InAppBrowser receives or locates to a url which leads in downloading a file, the callback assigned to the &quot;download&quot; event is called. The parameter passed to this callback is an object with the the following properties</p>
@@ -1884,11 +1915,11 @@ function downloadListener(params){
 <h3>InAppBrowserEvent Properties</h3>
 
 <ul>
-  <li><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, <code>message</code> or <code>exit</code>. <em>(String)</em></li>
+  <li><strong>type</strong>: the eventname, either <code>loadstart</code>, <code>loadstop</code>, <code>loaderror</code>, <code>exit</code>, <code>message</code> or <code>customscheme</code>. <em>(String)</em></li>
   <li><strong>url</strong>: the URL that was loaded. <em>(String)</em></li>
   <li><strong>code</strong>: the error code, only in the case of <code>loaderror</code>. <em>(Number)</em></li>
   <li><strong>message</strong>: the error message, only in the case of <code>loaderror</code>. <em>(String)</em></li>
-  <li><strong>data</strong>: the message contents , only in the case of <code>message</code>. A stringified JSON object. <em>(String)</em></li>
+  <li><strong>data</strong>: the message contents, only in the case of <code>message</code>. A stringified JSON object. <em>(String)</em></li>
 </ul>
 
 <h3>Supported Platforms</h3>
@@ -1901,7 +1932,7 @@ function downloadListener(params){
 
 <h3>Browser Quirks</h3>
 
-<p><code>loadstart</code>, <code>loaderror</code>, <code>message</code> events are not fired.</p>
+<p><code>loadstart</code>, <code>loaderror</code>, <code>message</code>, <code>customscheme</code> events are not fired.</p>
 
 <h3>Quick Example</h3>
 
@@ -1931,6 +1962,7 @@ ref.addEventListener('loadstart', function(event) { alert(event.url); });
       <li><strong>loaderror</strong>: event fires when the <code>InAppBrowser</code> encounters an error loading a URL.</li>
       <li><strong>exit</strong>: event fires when the <code>InAppBrowser</code> window is closed.</li>
       <li><strong>message</strong>: event fires when the <code>InAppBrowser</code> receives a message posted from the page loaded inside the <code>InAppBrowser</code> Webview.</li>
+      <li><strong>customscheme</strong>: event fires when a link is followed that matches <code>AllowedSchemes</code>.</li>
       <li><strong>download</strong>: <em>(Android only)</em> event fires when the <code>InAppBrowser</code> loads a URL that leads in downloading of a file.</li>
     </ul>
   </li>
