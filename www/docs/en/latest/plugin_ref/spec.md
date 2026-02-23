@@ -246,6 +246,7 @@ Identifies platforms that have associated native code or require modifications t
 Attributes | Description
 ---------------- | ------------
 name<br />{% cdv_vartype string %}| *Required* <br/> Allowed values: ios, android, browser, electron <br/> Identifies a platform as supported, associating the element's children with that platform.
+package<br />{% cdv_vartype string %} {% cdv_platform ios %}| Allowed value: swift<br/>Starting from cordova-ios 8 and greater, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a `Package.swift` file will need to be created in the plugin's root directory and add the `package="swift"` attribute to the iOS `platform` element. See for more information: [Supporting Swift Package Manager (SPM)](../guide/platforms/ios/plugin.html#supporting-swift-package-manager-spm).
 
 Example:
 ```xml
