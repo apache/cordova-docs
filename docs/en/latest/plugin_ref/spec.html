@@ -2455,6 +2455,10 @@ like. Any object not available on <code>window</code> is created.</p>
       <td>name<br /><span class="cdv-var-type string">String</span></td>
       <td><em>Required</em> <br /> Allowed values: ios, android, browser, electron <br /> Identifies a platform as supported, associating the element&#39;s children with that platform.</td>
     </tr>
+    <tr>
+      <td>package<br /><span class="cdv-var-type string">String</span> <svg class="platform-icon ios"><use href="#ios"></use></svg></td>
+      <td>Allowed value: swift<br />Starting from cordova-ios 8, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a <code>Package.swift</code> file will need to be created in the plugin&#39;s root directory and add the <code>package="swift"</code> attribute to the iOS <code>platform</code> element. See for more information: <a href="../guide/platforms/ios/plugin.html#supporting-swift-package-manager-spm">Supporting Swift Package Manager (SPM)</a>.</td>
+    </tr>
   </tbody>
 </table>
 
