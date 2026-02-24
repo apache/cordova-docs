@@ -521,7 +521,7 @@ Identifies the CocoaPods `Podfile` that provides the dependencies in which the p
 
 This element contains a `<config>` and a `<pods>` tag.
 
-> NOTE: CocoaPods is deprecated and will be a [read-only respository after 2. December 2026](https://blog.cocoapods.org/CocoaPods-Specs-Repo/). As an alternative, Swift Package Manager (SPM) can be used since cordova-ios 8. For adding support to your plugin, see [Supporting Swift Package Manager (SPM)](../guide/platforms/ios/plugin.html#supporting-swift-package-manager-spm).
+> NOTE: CocoaPods is deprecated and will be a [read-only respository after December 2<sup>nd</sup>, 2026](https://blog.cocoapods.org/CocoaPods-Specs-Repo/). As an alternative, Swift Package Manager (SPM) can be used since cordova-ios 8. For adding support to your plugin, see [Supporting Swift Package Manager (SPM)](../guide/platforms/ios/plugin.html#supporting-swift-package-manager-spm).
 
 ### config
 The `<config>` element identifies the source urls in which the CocoaPods specs are retrieved from.
