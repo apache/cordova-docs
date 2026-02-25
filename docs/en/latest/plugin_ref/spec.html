@@ -2915,6 +2915,10 @@ The <code>config-file</code> element only allows you to append new children to a
       <td>Pod spec</td>
     </tr>
     <tr>
+      <td>nospm<br /><span class="cdv-var-type boolean">Boolean</span></td>
+      <td>Provides a mechanism for plugins to transition their pod dependencies to Swift Package Manager dependencies while retaining backwards compatibility with cordova-ios versions older than 8.<br /><code>true</code>: The pod should not be installed when the project supports Swift packages, but should be installed in older projects<br /><code>false</code> (or no attribute at all) means it should always be installed.<br />Introduced in cordova-ios 8.</td>
+    </tr>
+    <tr>
       <td>swift-version<br /><span class="cdv-var-type string">String</span></td>
       <td>Specify swift version of the CocoaPods library</td>
     </tr>
