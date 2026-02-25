@@ -253,7 +253,7 @@ Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager (
 In the plugin's root directory, create a new file called `Package.swift` with the following content:
 
 ```swift
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 
 import PackageDescription
 
