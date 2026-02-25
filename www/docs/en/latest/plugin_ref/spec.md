@@ -551,6 +551,7 @@ Attributes(type) | Description
 ---------------- | ------------
 name<br />{% cdv_vartype string %} | *Required*<br/> Pod name  
 spec<br />{% cdv_vartype string %} | Pod spec
+nospm<br />{% cdv_vartype boolean %} | Provides a mechanism for plugins to transition their pod dependencies to Swift Package Manager dependencies while retaining backwards compatibility with cordova-ios versions older than 8.<br/>`true`: The pod should not be installed when the project supports Swift packages, but should be installed in older projects<br/>`false` (or no attribute at all) means it should always be installed.<br/>Introduced in cordova-ios 8.
 swift-version<br />{% cdv_vartype string %} | Specify swift version of the CocoaPods library
 git<br />{% cdv_vartype string %} | Pod `git` option.
 branch<br />{% cdv_vartype string %} | Pod `branch` option.
