@@ -32,6 +32,7 @@ toc_title: iOS
       - [Configuring Plugin Initialization Timing](#configuring-plugin-initialization-timing)
     - [Supporting Swift Package Manager (SPM)](#supporting-swift-package-manager-spm)
       - [Creating SPM's `Package.swift` File](#creating-spms-packageswift-file)
+      - [Add Generated Files To `.gitignore`](#add-generated-files-to-gitignore)
     - [Additional Native Side Implementation](#additional-native-side-implementation)
       - [Executing Plugin Initialization Logic](#executing-plugin-initialization-logic)
       - [Handeling Long-running \& Background Activities](#handeling-long-running--background-activities)
@@ -302,6 +303,17 @@ targets: [
         ],
     )
 ]
+```
+
+#### Add Generated Files To `.gitignore`
+
+Swift will generate some files and directories which can be ignored. Add the following to `.gitignore`:
+
+```
+# Ignore Swift generated files
+.build
+.swiftpm
+Package.resolved
 ```
 
 ### Additional Native Side Implementation
