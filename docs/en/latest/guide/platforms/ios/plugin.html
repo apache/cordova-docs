@@ -2145,6 +2145,7 @@
           <li><a href="#supporting-swift-package-manager-spm">Supporting Swift Package Manager (SPM)</a>
             <ul>
               <li><a href="#creating-spms-packageswift-file">Creating SPM&#39;s <code>Package.swift</code> File</a></li>
+              <li><a href="#add-generated-files-to-gitignore">Add Generated Files To <code>.gitignore</code></a></li>
             </ul>
           </li>
           <li><a href="#additional-native-side-implementation">Additional Native Side Implementation</a>
@@ -2439,6 +2440,16 @@ On top of the SPM declaration, be sure to also refer to the section titled <a hr
         <span class="p">],</span>
     <span class="p">)</span>
 <span class="p">]</span>
+</code></pre></div></div>
+
+<h4>Add Generated Files To <code>.gitignore</code></h4>
+
+<p>Swift will generate some files and directories which can be ignored. Add the following to <code>.gitignore</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Ignore Swift generated files
+.build
+.swiftpm
+Package.resolved
 </code></pre></div></div>
 
 <h3>Additional Native Side Implementation</h3>
