@@ -122,6 +122,18 @@ cordova platform add android@15.0.0
 
     Users can still opt in to the Edge-to-Edge feature by using the `AndroidEdgeToEdge` preference flag introduced in Cordova-Android 14.
 
+    **IMPORTANT NOTE:** The StatusBar plugin is no longer required. Status bar functionality has been integrated as an internal plugin to maintain the original behavior. The StatusBar JavaScript API is available:
+
+    * `window.statusbar.visible` — A property that controls the visibility of the status bar. It accepts a boolean value (`true` or `false`).
+
+    * `window.statusbar.setBackgroundColor('#AARRGGBB')` — A method that changes the background color of the status bar. It accepts a hexadecimal color string.
+
+    Previous status bar preferences are reused. Preferences are read in the following priority order:
+
+    * `StatusBarBackgroundColor`
+    * `BackgroundColor`
+      * Depending on the OS version, the `BackgroundColor` preference may also change the navigation/gesture bar.
+
 * **Support Night & Day Theme**
 
     Added partial support for automatically switching between night and day themes based on system settings when SplashScreen, StatusBar, or background-related preferences are not set.
