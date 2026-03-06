@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released Cordova Android 15.0.0! This is one of Cordova&#39;s supported platforms for building Android application...">
+
+    <title>
+        
+            
+                Cordova Android 15.0.0 Released! - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2026/03/06/cordova-android-15.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova Android 15.0.0 Released!</div>
+        <div class="author">By:
+            
+              Bryan Ellis
+            
+        </div>
+        <div class="date">06 Mar 2026</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released <code>Cordova Android 15.0.0</code>! This is one of Cordova&#39;s supported platforms for building Android applications.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-android">cordova-android@15.0.0</a></li>
+</ul>
+
+<p><strong>To upgrade:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove android
+cordova platform add android@15.0.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android@15.0.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>BREAKING CHANGES</h3>
+
+<ul>
+  <li>
+    <p><strong>Increased Target SDK</strong></p>
+
+    <p>This release has increased the target SDK to 36 (Android 15).</p>
+  </li>
+  <li>
+    <p><strong>Project Dependencies</strong></p>
+
+    <p>The following Gradle dependencies were bumpped:</p>
+
+    <ul>
+      <li>Gradle: <code>8.14.2</code></li>
+      <li>Android Gradle Plugin (AGP): <code>8.10.1</code></li>
+    </ul>
+
+    <p>Additionally, the following libraries have been upgraded:</p>
+
+    <ul>
+      <li>AndroidX App Compat - <code>1.7.1</code></li>
+      <li>AndroidX WebKit - <code>1.14.0</code></li>
+    </ul>
+
+    <p>If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Preference</th>
+          <th>Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>android-minSdkVersion</code></td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td><code>android-maxSdkVersion</code></td>
+          <td><em>Not set</em></td>
+        </tr>
+        <tr>
+          <td><code>android-targetSdkVersion</code></td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td><code>android-compileSdkVersion</code></td>
+          <td><em>android-targetSdkVersion configured value</em></td>
+        </tr>
+        <tr>
+          <td><code>android-buildToolsVersion</code></td>
+          <td>36.0.0</td>
+        </tr>
+        <tr>
+          <td><code>GradleVersion</code></td>
+          <td>8.14.2</td>
+        </tr>
+        <tr>
+          <td><code>AndroidGradlePluginVersion</code></td>
+          <td>8.10.1</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginKotlinVersion</code></td>
+          <td>2.1.21</td>
+        </tr>
+        <tr>
+          <td><code>AndroidXAppCompatVersion</code></td>
+          <td>1.7.1</td>
+        </tr>
+        <tr>
+          <td><code>AndroidXWebKitVersion</code></td>
+          <td>1.14.0</td>
+        </tr>
+        <tr>
+          <td><code>GradlePluginGoogleServicesVersion</code></td>
+          <td>4.4.2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.</p>
+  </li>
+  <li>
+    <p><strong>Increased Android Studio Requirement</strong></p>
+
+    <p>With the increase of Android Gradle Plugin, &quot;<strong>Android Studio Meerkat Feature Drop</strong>&quot; is the minimum required version for building and running projects in Android Studio. This aligns with the <a href="https://developer.android.com/build/releases/about-agp#android_gradle_plugin_and_android_studio_compatibility">Android Gradle plugin and Android Studio compatibility</a> documentation.</p>
+
+    <p>Newer version of Android Studio are available but comes with untested version of Gradle. It is recommended to run <code>cordova build android</code> after adding the platform and before opening the project in Android Studio to ensure that the project sets up a supported version of Gradle.</p>
+  </li>
+  <li>
+    <p><strong>Required Build Tools</strong></p>
+
+    <p>To use <code>cordova-android@15.0.0</code>, SDK Platform <code>36</code> and SDK Build Tools <code>36.0.0</code> must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.</p>
+
+    <p><strong>Upgrade with Command-line tools:</strong></p>
+
+    <p>The recommended way to install SDK Platform 36 and SDK Build Tools 36.0.0 is by using <code>sdkmanager</code>, which is part of Android&#39;s <a href="https://developer.android.com/tools/">Command-line tools</a> package. The command-line tools is useful as it does not require Android Studio.</p>
+
+    <p>At the time of writing, <strong>version 20</strong> of the Command-line tools was downloaded from Android Studio&#39;s SDK Manager and used. It can also be downloaded from the <a href="https://developer.android.com/studio#command-line-tools-only">Android Developers</a> website.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sdkmanager <span class="s1">'build-tools;36.0.0'</span> <span class="s1">'platforms;android-36'</span>
+</code></pre></div>    </div>
+
+    <p>You may need to run the <code>update</code> flag first:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sdkmanager <span class="nt">--update</span>
+</code></pre></div>    </div>
+
+    <p><strong>Upgrade with Android Studio:</strong></p>
+
+    <p>To install SDK Platform 36:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Platforms</code> tab</li>
+      <li>Check <code>Android 16.0 ("Baklava")</code> which has the <code>API Level</code> of <code>36</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2026/cordova-android-16-platform-sdk-36.png" style="width: 100%;" alt="Android SDK Platform" /></p>
+
+    <p>To install SDK Build Tools 36.0.0:</p>
+
+    <ol>
+      <li>Open Android Studio&#39;s <strong>SDK Manager</strong>:</li>
+      <li>Click on <code>SDK Tools</code> tab</li>
+      <li>Check <code>Show Package Details</code></li>
+      <li>Expand <code>Android SDK Build-Tools</code></li>
+      <li>Check <code>36.0.0</code></li>
+      <li>Click <code>Apply</code></li>
+    </ol>
+
+    <p><img src="/static/img/blog/2026/cordova-android-16-sdk-build-tools-3600.png" style="width: 100%;" alt="Android SDK Build Tools" /></p>
+  </li>
+  <li>
+    <p><strong>Increased Node.js Engine Requirement</strong></p>
+
+    <p>The Node.js engine requirement in this release has been increased to version 20.17.0 or later.</p>
+  </li>
+  <li>
+    <p><strong>Support Previous Non-Edge-to-Edge Functionality</strong></p>
+
+    <p>By default, Android 16 enforces Edge-to-Edge with no way to disable it.</p>
+
+    <p>In this major release, Apache Cordova has improved the system bar functionality to mimic the previous non-Edge-to-Edge behavior, allowing app developers to continue supporting a status bar.</p>
+
+    <p>Users can still opt in to the Edge-to-Edge feature by using the <code>AndroidEdgeToEdge</code> preference flag introduced in Cordova-Android 14.</p>
+
+    <p><strong>IMPORTANT NOTE:</strong> The StatusBar plugin is no longer required. Status bar functionality has been integrated as an internal plugin to maintain the original behavior. The StatusBar JavaScript API is available:</p>
+
+    <ul>
+      <li>
+        <p><code>window.statusbar.visible</code> — A property that controls the visibility of the status bar. It accepts a boolean value (<code>true</code> or <code>false</code>).</p>
+      </li>
+      <li>
+        <p><code>window.statusbar.setBackgroundColor('#AARRGGBB')</code> — A method that changes the background color of the status bar. It accepts a hexadecimal color string.</p>
+      </li>
+    </ul>
+
+    <p>Previous status bar preferences are reused. Preferences are read in the following priority order:</p>
+
+    <ul>
+      <li><code>StatusBarBackgroundColor</code></li>
+      <li><code>BackgroundColor</code>
+        <ul>
+          <li>Depending on the OS version, the <code>BackgroundColor</code> preference may also change the navigation/gesture bar.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Support Night &amp; Day Theme</strong></p>
+
+    <p>Added partial support for automatically switching between night and day themes based on system settings when SplashScreen, StatusBar, or background-related preferences are not set.</p>
+  </li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+  <li>
+    <p><strong>Back button override on API 36+</strong></p>
+
+    <p>Resolved an issue where Android API 36 crashes when the hardware back button is pressed.</p>
+  </li>
+  <li>
+    <p><strong>Apply <code>repositories.gradle</code> for <code>cordova.gradle</code> dependencies</strong></p>
+
+    <p>Resolved an issue where users were unable to override repository settings for build-related Gradle dependencies.</p>
+  </li>
+  <li>
+    <p><strong>Handle uninstalling multiple plugin assets</strong></p>
+
+    <p>Resolved an issue where plugins with multiple defined <code>&lt;assets&gt;</code> were not removed properly during uninstall.</p>
+  </li>
+</ul>
+
+<!--more-->
+<h1>Changes include:</h1>
+
+<p><strong>Breaking Changes:</strong></p>
+
+<ul>
+  <li>feat!: support previous non-E2E (<a href="https://github.com/apache/cordova-android/pull/1817">#1817</a>) [<a href="https://github.com/apache/cordova-android/commit/76aa9380">76aa9380</a>]</li>
+  <li>feat!: add partial night &amp; day theme support (<a href="https://github.com/apache/cordova-android/pull/1818">#1818</a>) [<a href="https://github.com/apache/cordova-android/commit/60d28420">60d28420</a>]</li>
+  <li>feat!: bump kotlin@2.1.21 (<a href="https://github.com/apache/cordova-android/pull/1814">#1814</a>) [<a href="https://github.com/apache/cordova-android/commit/72e71488">72e71488</a>]</li>
+  <li>feat!: bump Gradle@8.14.2 &amp; AGP@8.10.1 (<a href="https://github.com/apache/cordova-android/pull/1811">#1811</a>) [<a href="https://github.com/apache/cordova-android/commit/c25ed278">c25ed278</a>]</li>
+  <li>feat!: bump sdk &amp; build tools to 36 (<a href="https://github.com/apache/cordova-android/pull/1810">#1810</a>) [<a href="https://github.com/apache/cordova-android/commit/d8f6f377">d8f6f377</a>]</li>
+  <li>feat!: remove unused getASPath.bat file (<a href="https://github.com/apache/cordova-android/pull/1808">#1808</a>) [<a href="https://github.com/apache/cordova-android/commit/7a47fe01">7a47fe01</a>]</li>
+  <li>chore!: bump dependencies &amp; update node engine requirement (<a href="https://github.com/apache/cordova-android/pull/1887">#1887</a>) [<a href="https://github.com/apache/cordova-android/commit/b4eadcce">b4eadcce</a>]</li>
+  <li>chore!: update dependencies (<a href="https://github.com/apache/cordova-android/pull/1843">#1843</a>) [<a href="https://github.com/apache/cordova-android/commit/488c4987">488c4987</a>]</li>
+  <li>chore!: update template defaults (<a href="https://github.com/apache/cordova-android/pull/1837">#1837</a>) [<a href="https://github.com/apache/cordova-android/commit/e4457f7f">e4457f7f</a>]</li>
+  <li>chore(npm)!: bump cordova-common@6.0.0 w/ rebuilt package-lock.json (<a href="https://github.com/apache/cordova-android/pull/1835">#1835</a>) [<a href="https://github.com/apache/cordova-android/commit/8742cfe4">8742cfe4</a>]</li>
+</ul>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+  <li>feat: Allows additional settings to be included on settings.gradle (<a href="https://github.com/apache/cordova-android/pull/1819">#1819</a>) [<a href="https://github.com/apache/cordova-android/commit/5bca218e">5bca218e</a>]</li>
+  <li>feat: replace nyc with c8 (<a href="https://github.com/apache/cordova-android/pull/1844">#1844</a>) [<a href="https://github.com/apache/cordova-android/commit/7d7f5110">7d7f5110</a>]</li>
+  <li>feat: allow disabling splash screen for embedded Cordova (<a href="https://github.com/apache/cordova-android/pull/1824">#1824</a>) [<a href="https://github.com/apache/cordova-android/commit/c2cf589d">c2cf589d</a>]</li>
+  <li>feat: AndroidShowDeprecations preference flag (<a href="https://github.com/apache/cordova-android/pull/1822">#1822</a>) [<a href="https://github.com/apache/cordova-android/commit/0190d2e3">0190d2e3</a>]</li>
+  <li>feat: androidx.appcompat:appcompat@1.7.1 (<a href="https://github.com/apache/cordova-android/pull/1813">#1813</a>) [<a href="https://github.com/apache/cordova-android/commit/36bee664">36bee664</a>]</li>
+  <li>feat: androidx.webkit:webkit@1.14.0 (<a href="https://github.com/apache/cordova-android/pull/1812">#1812</a>) [<a href="https://github.com/apache/cordova-android/commit/4dcfc361">4dcfc361</a>]</li>
+  <li>feat(CallbackContext): add success method for boolean (<a href="https://github.com/apache/cordova-android/pull/1864">#1864</a>) [<a href="https://github.com/apache/cordova-android/commit/6b76757c">6b76757c</a>]</li>
+</ul>
+
+<p><strong>Fixes:</strong></p>
+
+<ul>
+  <li>fix: Potential NPE when handling generic exceptions (<a href="https://github.com/apache/cordova-android/pull/1878">#1878</a>) [<a href="https://github.com/apache/cordova-android/commit/7a353fe8">7a353fe8</a>]</li>
+  <li>fix: opaque navigation bar in edge to edge (<a href="https://github.com/apache/cordova-android/pull/1867">#1867</a>) [<a href="https://github.com/apache/cordova-android/commit/eaca570c">eaca570c</a>]</li>
+  <li>fix: cordova requirements command and SDK lookup based on tools (<a href="https://github.com/apache/cordova-android/pull/1877">#1877</a>) [<a href="https://github.com/apache/cordova-android/commit/76bac55f">76bac55f</a>]</li>
+  <li>fix: re-expose and support pollOnce (<a href="https://github.com/apache/cordova-android/pull/1854">#1854</a>) [<a href="https://github.com/apache/cordova-android/commit/655aa0a5">655aa0a5</a>]</li>
+  <li>fix: edge to edge/fullscreen margins (<a href="https://github.com/apache/cordova-android/pull/1847">#1847</a>) [<a href="https://github.com/apache/cordova-android/commit/360be21e">360be21e</a>]</li>
+  <li>fix: Deprecation warning in PluginManager for using Class.newInstance (<a href="https://github.com/apache/cordova-android/pull/1823">#1823</a>) [<a href="https://github.com/apache/cordova-android/commit/eb5fe4fb">eb5fe4fb</a>]</li>
+  <li>fix: Back button override on API 36+ (<a href="https://github.com/apache/cordova-android/pull/1831">#1831</a>) [<a href="https://github.com/apache/cordova-android/commit/46af3114">46af3114</a>]</li>
+  <li>fix: gradle deprecation warnings about property assignment (<a href="https://github.com/apache/cordova-android/pull/1821">#1821</a>) [<a href="https://github.com/apache/cordova-android/commit/df36c7a2">df36c7a2</a>]</li>
+  <li>fix: replace deprecated fs.F_OK with fs.constants.F_OK (<a href="https://github.com/apache/cordova-android/pull/1820">#1820</a>) [<a href="https://github.com/apache/cordova-android/commit/b7923261">b7923261</a>]</li>
+  <li>fix: apply repositories.gradle for cordova.gradle dependencies (<a href="https://github.com/apache/cordova-android/pull/1816">#1816</a>) [<a href="https://github.com/apache/cordova-android/commit/cab5c5b7">cab5c5b7</a>]</li>
+  <li>fix(plugins): remove from platformWWW by default (<a href="https://github.com/apache/cordova-android/pull/1807">#1807</a>) [<a href="https://github.com/apache/cordova-android/commit/f0e88856">f0e88856</a>]</li>
+  <li>fix(plugins): rename &amp; match removeFileF logic with other platforms (<a href="https://github.com/apache/cordova-android/pull/1806">#1806</a>) [<a href="https://github.com/apache/cordova-android/commit/5dc9c728">5dc9c728</a>]</li>
+  <li>fix(plugins): handle uninstalling multiple plugin assets (<a href="https://github.com/apache/cordova-android/pull/1805">#1805</a>) [<a href="https://github.com/apache/cordova-android/commit/08b8a954">08b8a954</a>]</li>
+  <li>fix(statusbar): inject script block to compute color &amp; replace padStart w/ logic supported on SDK 24 (<a href="https://github.com/apache/cordova-android/pull/1853">#1853</a>) [<a href="https://github.com/apache/cordova-android/commit/52578ae7">52578ae7</a>]</li>
+  <li>fix(windows): Escape back-slashes for gradle config jdk path (<a href="https://github.com/apache/cordova-android/pull/1876">#1876</a>) [<a href="https://github.com/apache/cordova-android/commit/fb562f4e">fb562f4e</a>]</li>
+</ul>
+
+<p><strong>Chores:</strong></p>
+
+<ul>
+  <li>chore: add license header to template gitignore (<a href="https://github.com/apache/cordova-android/pull/1893">#1893</a>) [<a href="https://github.com/apache/cordova-android/commit/ffa77cad">ffa77cad</a>]</li>
+  <li>chore: update RELEASENOTES.md (<a href="https://github.com/apache/cordova-android/pull/1892">#1892</a>) [<a href="https://github.com/apache/cordova-android/commit/5003275b">5003275b</a>]</li>
+  <li>chore: license, license headers &amp; CI &amp; draft workflow improvements (<a href="https://github.com/apache/cordova-android/pull/1891">#1891</a>) [<a href="https://github.com/apache/cordova-android/commit/d426e0ff">d426e0ff</a>]</li>
+  <li>chore: update changelog (<a href="https://github.com/apache/cordova-android/pull/1890">#1890</a>) [<a href="https://github.com/apache/cordova-android/commit/aaf46bb2">aaf46bb2</a>]</li>
+  <li>chore(ci): get npm package filename from json output (<a href="https://github.com/apache/cordova-android/pull/1889">#1889</a>) [<a href="https://github.com/apache/cordova-android/commit/7fbdee1e">7fbdee1e</a>]</li>
+  <li>chore: minor changes to DEVELOPMENT.md (<a href="https://github.com/apache/cordova-android/pull/1884">#1884</a>) [<a href="https://github.com/apache/cordova-android/commit/edf34400">edf34400</a>]</li>
+  <li>chore: add DEVELOPMENT.md &amp; cleanup README.md (<a href="https://github.com/apache/cordova-android/pull/1883">#1883</a>) [<a href="https://github.com/apache/cordova-android/commit/31364a97">31364a97</a>]</li>
+  <li>chore: update release audit workflow &amp; license headers (<a href="https://github.com/apache/cordova-android/pull/1870">#1870</a>) [<a href="https://github.com/apache/cordova-android/commit/d7afba0a">d7afba0a</a>]</li>
+  <li>chore: bump 15.0.0-dev (<a href="https://github.com/apache/cordova-android/pull/1803">#1803</a>) [<a href="https://github.com/apache/cordova-android/commit/00744c4f">00744c4f</a>]</li>
+  <li>chore: bump version 14.0.2-dev [<a href="https://github.com/apache/cordova-android/commit/872d9887">872d9887</a>]</li>
+  <li>chore(ci): draft release (<a href="https://github.com/apache/cordova-android/pull/1882">#1882</a>) [<a href="https://github.com/apache/cordova-android/commit/347e2add">347e2add</a>]</li>
+  <li>chore(deps-dev): bump js-yaml from 4.1.0 to 4.1.1 (<a href="https://github.com/apache/cordova-android/pull/1869">#1869</a>) [<a href="https://github.com/apache/cordova-android/commit/ebe6890d">ebe6890d</a>]</li>
+  <li>chore(deps-dev): bump tmp from 0.2.3 to 0.2.4 (<a href="https://github.com/apache/cordova-android/pull/1834">#1834</a>) [<a href="https://github.com/apache/cordova-android/commit/af1ae68a">af1ae68a</a>]</li>
+  <li>chore(deps): bump lodash from 4.17.21 to 4.17.23 (<a href="https://github.com/apache/cordova-android/pull/1879">#1879</a>) [<a href="https://github.com/apache/cordova-android/commit/2ea3a731">2ea3a731</a>]</li>
+  <li>chore(deps): bump glob from 10.4.5 to 10.5.0 (<a href="https://github.com/apache/cordova-android/pull/1868">#1868</a>) [<a href="https://github.com/apache/cordova-android/commit/172b8448">172b8448</a>]</li>
+  <li>chore(readme): added nightly build section (<a href="https://github.com/apache/cordova-android/pull/1873">#1873</a>) [<a href="https://github.com/apache/cordova-android/commit/eaf875b0">eaf875b0</a>]</li>
+</ul>
+
+<p><strong>Other:</strong></p>
+
+<ul>
+  <li>ci: use macos-15 (<a href="https://github.com/apache/cordova-android/pull/1829">#1829</a>) [<a href="https://github.com/apache/cordova-android/commit/1204a793">1204a793</a>]</li>
+  <li>ci: update workflow - added node 24, permission scoping &amp; codecov pinning (<a href="https://github.com/apache/cordova-android/pull/1804">#1804</a>) [<a href="https://github.com/apache/cordova-android/commit/60244658">60244658</a>]</li>
+  <li>ci(release-audit): use latest apache-rat-action (<a href="https://github.com/apache/cordova-android/pull/1809">#1809</a>) [<a href="https://github.com/apache/cordova-android/commit/6b8e819f">6b8e819f</a>]</li>
+  <li>ci(workflow): update release-audit &amp; license config (<a href="https://github.com/apache/cordova-android/pull/1828">#1828</a>) [<a href="https://github.com/apache/cordova-android/commit/bf0ba3dd">bf0ba3dd</a>]</li>
+  <li>dep(npm): bump @cordova/eslint-config@6.0.0 (<a href="https://github.com/apache/cordova-android/pull/1830">#1830</a>) [<a href="https://github.com/apache/cordova-android/commit/56afb708">56afb708</a>]</li>
+  <li>doc(readme): update github and npm version badges (<a href="https://github.com/apache/cordova-android/pull/1872">#1872</a>) [<a href="https://github.com/apache/cordova-android/commit/8c8fbc9a">8c8fbc9a</a>]</li>
+  <li>test(plugins): remove old deprecated android_studio option (<a href="https://github.com/apache/cordova-android/pull/1815">#1815</a>) [<a href="https://github.com/apache/cordova-android/commit/484c60e4">484c60e4</a>]</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2025/11/25/cordova-cli-13.0.0.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2025/11/25/cordova-cli-13.0.0.html">Cordova CLI 13.0.0 Released!</a>
+                    <div class="date"> 25 Nov 2025 - By Bryan Ellis </div>
+                    <p class="content">
+                        We are happy to announce that cordova@13.0.0 has been released! This is...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="/downloads">Downloads</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

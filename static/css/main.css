@@ -9263,6 +9263,7 @@ img#logo_top {
    * See www/static/js/docs.js
    */
   /* outer ToC for the site */
+  /* Highlight the current page in the ToC */
   /* inner ToC for the page */
   /* Quick fix to remove redundant TOC entries */
   /* header above page content */
@@ -9373,10 +9374,6 @@ img#logo_top {
   padding: 0 50%;
   margin: 0 -50%;
 }
-.docs .site-toc-container .site-toc > li a.this-page {
-  font-weight: bold;
-  background-color: rgb(57, 146, 171);
-}
 .docs .site-toc-container .site-toc .toc-section-heading {
   font-size: 18px;
   font-weight: 600;
@@ -9395,6 +9392,10 @@ img#logo_top {
 }
 .docs .site-toc-container > .site-toc > li {
   margin-bottom: 1rem;
+}
+.docs .this-page {
+  font-weight: bold;
+  background-color: rgb(57, 146, 171);
 }
 .docs .page-content-container {
   margin-left: 320px;
