@@ -6,9 +6,303 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Mar 2026 06:02:23 +0000</pubDate>
-    <lastBuildDate>Mon, 02 Mar 2026 06:02:23 +0000</lastBuildDate>
+    <pubDate>Fri, 06 Mar 2026 09:40:16 +0000</pubDate>
+    <lastBuildDate>Fri, 06 Mar 2026 09:40:16 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Android 15.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 15.0.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@15.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@15.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@15.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;BREAKING CHANGES&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Target SDK&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This release has increased the target SDK to 36 (Android 15).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Project Dependencies&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The following Gradle dependencies were bumpped:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Gradle: &lt;code&gt;8.14.2&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Android Gradle Plugin (AGP): &lt;code&gt;8.10.1&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Additionally, the following libraries have been upgraded:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;AndroidX App Compat - &lt;code&gt;1.7.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;AndroidX WebKit - &lt;code&gt;1.14.0&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;If you or a plugin has made changes to any of the following configuration preferences, the build results might not match the expected outcomes with this release:&lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Preference&lt;/th&gt;
+          &lt;th&gt;Default Value&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-minSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;24&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-maxSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;Not set&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-targetSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;36&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-compileSdkVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;android-targetSdkVersion configured value&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;android-buildToolsVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;36.0.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;GradleVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;8.14.2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AndroidGradlePluginVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;8.10.1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;GradlePluginKotlinVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;2.1.21&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AndroidXAppCompatVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.7.1&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AndroidXWebKitVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;1.14.0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;GradlePluginGoogleServicesVersion&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;4.4.2&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;p&gt;Please take note of the versions that have been updated in this release. If you have manually modified any of these values, it is recommended to review and update the preference values accordingly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Android Studio Requirement&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;With the increase of Android Gradle Plugin, &amp;quot;&lt;strong&gt;Android Studio Meerkat Feature Drop&lt;/strong&gt;&amp;quot; is the minimum required version for building and running projects in Android Studio. This aligns with the &lt;a href=&quot;https://developer.android.com/build/releases/about-agp#android_gradle_plugin_and_android_studio_compatibility&quot;&gt;Android Gradle plugin and Android Studio compatibility&lt;/a&gt; documentation.&lt;/p&gt;
+
+    &lt;p&gt;Newer version of Android Studio are available but comes with untested version of Gradle. It is recommended to run &lt;code&gt;cordova build android&lt;/code&gt; after adding the platform and before opening the project in Android Studio to ensure that the project sets up a supported version of Gradle.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Required Build Tools&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;To use &lt;code&gt;cordova-android@15.0.0&lt;/code&gt;, SDK Platform &lt;code&gt;36&lt;/code&gt; and SDK Build Tools &lt;code&gt;36.0.0&lt;/code&gt; must be installed. Older build tools version can be uninstalled if older versions of cordova-android is no longer used in any of your projects.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Upgrade with Command-line tools:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The recommended way to install SDK Platform 36 and SDK Build Tools 36.0.0 is by using &lt;code&gt;sdkmanager&lt;/code&gt;, which is part of Android&amp;#39;s &lt;a href=&quot;https://developer.android.com/tools/&quot;&gt;Command-line tools&lt;/a&gt; package. The command-line tools is useful as it does not require Android Studio.&lt;/p&gt;
+
+    &lt;p&gt;At the time of writing, &lt;strong&gt;version 20&lt;/strong&gt; of the Command-line tools was downloaded from Android Studio&amp;#39;s SDK Manager and used. It can also be downloaded from the &lt;a href=&quot;https://developer.android.com/studio#command-line-tools-only&quot;&gt;Android Developers&lt;/a&gt; website.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;s1&quot;&gt;'build-tools;36.0.0'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'platforms;android-36'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;You may need to run the &lt;code&gt;update&lt;/code&gt; flag first:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;nt&quot;&gt;--update&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;strong&gt;Upgrade with Android Studio:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;To install SDK Platform 36:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
+      &lt;li&gt;Click on &lt;code&gt;SDK Platforms&lt;/code&gt; tab&lt;/li&gt;
+      &lt;li&gt;Check &lt;code&gt;Android 16.0 (&quot;Baklava&quot;)&lt;/code&gt; which has the &lt;code&gt;API Level&lt;/code&gt; of &lt;code&gt;36&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2026/cordova-android-16-platform-sdk-36.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Platform&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;To install SDK Build Tools 36.0.0:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Open Android Studio&amp;#39;s &lt;strong&gt;SDK Manager&lt;/strong&gt;:&lt;/li&gt;
+      &lt;li&gt;Click on &lt;code&gt;SDK Tools&lt;/code&gt; tab&lt;/li&gt;
+      &lt;li&gt;Check &lt;code&gt;Show Package Details&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Expand &lt;code&gt;Android SDK Build-Tools&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Check &lt;code&gt;36.0.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code&gt;Apply&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/static/img/blog/2026/cordova-android-16-sdk-build-tools-3600.png&quot; style=&quot;width: 100%;&quot; alt=&quot;Android SDK Build Tools&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Increased Node.js Engine Requirement&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The Node.js engine requirement in this release has been increased to version 20.17.0 or later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Support Previous Non-Edge-to-Edge Functionality&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;By default, Android 16 enforces Edge-to-Edge with no way to disable it.&lt;/p&gt;
+
+    &lt;p&gt;In this major release, Apache Cordova has improved the system bar functionality to mimic the previous non-Edge-to-Edge behavior, allowing app developers to continue supporting a status bar.&lt;/p&gt;
+
+    &lt;p&gt;Users can still opt in to the Edge-to-Edge feature by using the &lt;code&gt;AndroidEdgeToEdge&lt;/code&gt; preference flag introduced in Cordova-Android 14.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Support Night &amp;amp; Day Theme&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Added partial support for automatically switching between night and day themes based on system settings when SplashScreen, StatusBar, or background-related preferences are not set.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Back button override on API 36+&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Resolved an issue where Android API 36 crashes when the hardware back button is pressed.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Apply &lt;code&gt;repositories.gradle&lt;/code&gt; for &lt;code&gt;cordova.gradle&lt;/code&gt; dependencies&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Resolved an issue where users were unable to override repository settings for build-related Gradle dependencies.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Handle uninstalling multiple plugin assets&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Resolved an issue where plugins with multiple defined &lt;code&gt;&amp;lt;assets&amp;gt;&lt;/code&gt; were not removed properly during uninstall.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feat!: support previous non-E2E (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1817&quot;&gt;#1817&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/76aa9380&quot;&gt;76aa9380&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat!: add partial night &amp;amp; day theme support (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1818&quot;&gt;#1818&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/60d28420&quot;&gt;60d28420&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat!: bump kotlin@2.1.21 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1814&quot;&gt;#1814&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/72e71488&quot;&gt;72e71488&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat!: bump Gradle@8.14.2 &amp;amp; AGP@8.10.1 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1811&quot;&gt;#1811&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/c25ed278&quot;&gt;c25ed278&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat!: bump sdk &amp;amp; build tools to 36 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1810&quot;&gt;#1810&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/d8f6f377&quot;&gt;d8f6f377&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat!: remove unused getASPath.bat file (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1808&quot;&gt;#1808&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/7a47fe01&quot;&gt;7a47fe01&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore!: bump dependencies &amp;amp; update node engine requirement (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1887&quot;&gt;#1887&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/b4eadcce&quot;&gt;b4eadcce&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore!: update dependencies (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1843&quot;&gt;#1843&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/488c4987&quot;&gt;488c4987&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore!: update template defaults (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1837&quot;&gt;#1837&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/e4457f7f&quot;&gt;e4457f7f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(npm)!: bump cordova-common@6.0.0 w/ rebuilt package-lock.json (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1835&quot;&gt;#1835&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/8742cfe4&quot;&gt;8742cfe4&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feat: Allows additional settings to be included on settings.gradle (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1819&quot;&gt;#1819&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/5bca218e&quot;&gt;5bca218e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: replace nyc with c8 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1844&quot;&gt;#1844&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/7d7f5110&quot;&gt;7d7f5110&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: allow disabling splash screen for embedded Cordova (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1824&quot;&gt;#1824&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/c2cf589d&quot;&gt;c2cf589d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: AndroidShowDeprecations preference flag (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1822&quot;&gt;#1822&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/0190d2e3&quot;&gt;0190d2e3&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: androidx.appcompat:appcompat@1.7.1 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1813&quot;&gt;#1813&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/36bee664&quot;&gt;36bee664&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: androidx.webkit:webkit@1.14.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1812&quot;&gt;#1812&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/4dcfc361&quot;&gt;4dcfc361&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat(CallbackContext): add success method for boolean (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1864&quot;&gt;#1864&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/6b76757c&quot;&gt;6b76757c&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fix: Potential NPE when handling generic exceptions (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1878&quot;&gt;#1878&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/7a353fe8&quot;&gt;7a353fe8&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: opaque navigation bar in edge to edge (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1867&quot;&gt;#1867&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/eaca570c&quot;&gt;eaca570c&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: cordova requirements command and SDK lookup based on tools (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1877&quot;&gt;#1877&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/76bac55f&quot;&gt;76bac55f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: re-expose and support pollOnce (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1854&quot;&gt;#1854&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/655aa0a5&quot;&gt;655aa0a5&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: edge to edge/fullscreen margins (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1847&quot;&gt;#1847&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/360be21e&quot;&gt;360be21e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: Deprecation warning in PluginManager for using Class.newInstance (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1823&quot;&gt;#1823&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/eb5fe4fb&quot;&gt;eb5fe4fb&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: Back button override on API 36+ (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1831&quot;&gt;#1831&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/46af3114&quot;&gt;46af3114&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: gradle deprecation warnings about property assignment (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1821&quot;&gt;#1821&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/df36c7a2&quot;&gt;df36c7a2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: replace deprecated fs.F_OK with fs.constants.F_OK (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1820&quot;&gt;#1820&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/b7923261&quot;&gt;b7923261&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: apply repositories.gradle for cordova.gradle dependencies (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1816&quot;&gt;#1816&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/cab5c5b7&quot;&gt;cab5c5b7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(plugins): remove from platformWWW by default (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1807&quot;&gt;#1807&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/f0e88856&quot;&gt;f0e88856&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(plugins): rename &amp;amp; match removeFileF logic with other platforms (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1806&quot;&gt;#1806&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/5dc9c728&quot;&gt;5dc9c728&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(plugins): handle uninstalling multiple plugin assets (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1805&quot;&gt;#1805&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/08b8a954&quot;&gt;08b8a954&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(statusbar): inject script block to compute color &amp;amp; replace padStart w/ logic supported on SDK 24 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1853&quot;&gt;#1853&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/52578ae7&quot;&gt;52578ae7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(windows): Escape back-slashes for gradle config jdk path (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1876&quot;&gt;#1876&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/fb562f4e&quot;&gt;fb562f4e&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore: add license header to template gitignore (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1893&quot;&gt;#1893&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/ffa77cad&quot;&gt;ffa77cad&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update RELEASENOTES.md (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1892&quot;&gt;#1892&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/5003275b&quot;&gt;5003275b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: license, license headers &amp;amp; CI &amp;amp; draft workflow improvements (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1891&quot;&gt;#1891&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/d426e0ff&quot;&gt;d426e0ff&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update changelog (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1890&quot;&gt;#1890&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/aaf46bb2&quot;&gt;aaf46bb2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ci): get npm package filename from json output (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1889&quot;&gt;#1889&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/7fbdee1e&quot;&gt;7fbdee1e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: minor changes to DEVELOPMENT.md (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1884&quot;&gt;#1884&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/edf34400&quot;&gt;edf34400&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: add DEVELOPMENT.md &amp;amp; cleanup README.md (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1883&quot;&gt;#1883&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/31364a97&quot;&gt;31364a97&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update release audit workflow &amp;amp; license headers (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1870&quot;&gt;#1870&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/d7afba0a&quot;&gt;d7afba0a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump 15.0.0-dev (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1803&quot;&gt;#1803&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/00744c4f&quot;&gt;00744c4f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump version 14.0.2-dev [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/872d9887&quot;&gt;872d9887&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ci): draft release (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1882&quot;&gt;#1882&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/347e2add&quot;&gt;347e2add&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump js-yaml from 4.1.0 to 4.1.1 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1869&quot;&gt;#1869&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/ebe6890d&quot;&gt;ebe6890d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump tmp from 0.2.3 to 0.2.4 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1834&quot;&gt;#1834&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/af1ae68a&quot;&gt;af1ae68a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump lodash from 4.17.21 to 4.17.23 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1879&quot;&gt;#1879&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/2ea3a731&quot;&gt;2ea3a731&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump glob from 10.4.5 to 10.5.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1868&quot;&gt;#1868&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/172b8448&quot;&gt;172b8448&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(readme): added nightly build section (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1873&quot;&gt;#1873&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/eaf875b0&quot;&gt;eaf875b0&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Other:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ci: use macos-15 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1829&quot;&gt;#1829&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/1204a793&quot;&gt;1204a793&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: update workflow - added node 24, permission scoping &amp;amp; codecov pinning (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1804&quot;&gt;#1804&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/60244658&quot;&gt;60244658&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci(release-audit): use latest apache-rat-action (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1809&quot;&gt;#1809&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/6b8e819f&quot;&gt;6b8e819f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci(workflow): update release-audit &amp;amp; license config (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1828&quot;&gt;#1828&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/bf0ba3dd&quot;&gt;bf0ba3dd&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;dep(npm): bump @cordova/eslint-config@6.0.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1830&quot;&gt;#1830&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/56afb708&quot;&gt;56afb708&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc(readme): update github and npm version badges (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1872&quot;&gt;#1872&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/8c8fbc9a&quot;&gt;8c8fbc9a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;test(plugins): remove old deprecated android_studio option (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1815&quot;&gt;#1815&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/484c60e4&quot;&gt;484c60e4&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/03/06/cordova-android-15.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/03/06/cordova-android-15.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova CLI 13.0.0 Released!</title>
@@ -870,90 +1164,6 @@ cordova platform add android@14.0.0
         <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/03/26/cordova-android-14.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/03/26/cordova-android-14.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Media Capture Plugin 6.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-media-capture&lt;/code&gt;!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-media-capture/v/6.0.0&quot;&gt;cordova-plugin-media-capture@6.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-media-capture
-cordova plugin add cordova-plugin-media-capture@6.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;This major release primarily focused on &lt;strong&gt;ensuring&lt;/strong&gt; that the plugin complies with Android&amp;#39;s new strict permission requirements.&lt;/p&gt;
-
-&lt;p&gt;Specifically, it &lt;strong&gt;removes&lt;/strong&gt; unnecessary permissions such as:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;android.permission.READ_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;android.permission.WRITE_EXTERNAL_STORAGE&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;android.permission.RECORD_AUDIO&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Additionally, it &lt;strong&gt;removes&lt;/strong&gt; broad media permissions:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_AUDIO&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_IMAGES&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;android.permission.READ_MEDIA_VIDEO&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/308&quot;&gt;GH-308&lt;/a&gt; feat(android)!: remove unnecessary permissions&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/280&quot;&gt;GH-280&lt;/a&gt; feat(android)!: remove RECORD_AUDIO permission not requested at runtime&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/295&quot;&gt;GH-295&lt;/a&gt; fix(android)!: remove broad media permissions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/281&quot;&gt;GH-281&lt;/a&gt; feat(android): Field &amp;#39;storagePermissions&amp;#39; may be &amp;#39;final&amp;#39;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/307&quot;&gt;GH-307&lt;/a&gt; fix(android): Remove usage of Media Store queries&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/302&quot;&gt;GH-302&lt;/a&gt; fix(android): save media capture to File Provider&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores, Refactoring, CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/306&quot;&gt;GH-306&lt;/a&gt; chore: upgrade eslint config and rolled dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/305&quot;&gt;GH-305&lt;/a&gt; chore: npmrc&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/284&quot;&gt;GH-284&lt;/a&gt; chore: update asf config&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/309&quot;&gt;GH-309&lt;/a&gt; refactor(android): cleanup unused or obsolete code&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/304&quot;&gt;GH-304&lt;/a&gt; ci(ios): update workflow environment&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-media-capture/pull/301&quot;&gt;GH-301&lt;/a&gt; ci: sync workflow w/ paramedic&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/02/26/cordova-plugin-media-capture-6.0.0.html</guid>
         
         <category>news</category>
         
