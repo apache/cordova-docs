@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Mar 2026 09:40:16 +0000</pubDate>
-    <lastBuildDate>Fri, 06 Mar 2026 09:40:16 +0000</lastBuildDate>
+    <pubDate>Fri, 06 Mar 2026 18:09:08 +0000</pubDate>
+    <lastBuildDate>Fri, 06 Mar 2026 18:09:08 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -180,6 +180,28 @@ cordova platform add android@15.0.0
     &lt;p&gt;In this major release, Apache Cordova has improved the system bar functionality to mimic the previous non-Edge-to-Edge behavior, allowing app developers to continue supporting a status bar.&lt;/p&gt;
 
     &lt;p&gt;Users can still opt in to the Edge-to-Edge feature by using the &lt;code&gt;AndroidEdgeToEdge&lt;/code&gt; preference flag introduced in Cordova-Android 14.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;IMPORTANT NOTE:&lt;/strong&gt; The StatusBar plugin is no longer required. Status bar functionality has been integrated as an internal plugin to maintain the original behavior. The StatusBar JavaScript API is available:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code&gt;window.statusbar.visible&lt;/code&gt; — A property that controls the visibility of the status bar. It accepts a boolean value (&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code&gt;window.statusbar.setBackgroundColor('#AARRGGBB')&lt;/code&gt; — A method that changes the background color of the status bar. It accepts a hexadecimal color string.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Previous status bar preferences are reused. Preferences are read in the following priority order:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;StatusBarBackgroundColor&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;BackgroundColor&lt;/code&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Depending on the OS version, the &lt;code&gt;BackgroundColor&lt;/code&gt; preference may also change the navigation/gesture bar.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Support Night &amp;amp; Day Theme&lt;/strong&gt;&lt;/p&gt;
