@@ -149,16 +149,15 @@
       customName: cordova-app-hello-world
 
 - package: cordova-android
-  version: 14.0.1
+  version: 15.0.0
   downloadDir: platforms
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
-      customName: cordova-android
 
 - package: cordova-browser
   version: 7.0.0
