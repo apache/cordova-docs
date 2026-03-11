@@ -33,25 +33,10 @@ From your Cordova app root:
 
 ```bash
 cordova platform remove ios
-cordova platform add ios@8.0.1
+cordova platform add ios@8
 ```
 
 Using remove/add is recommended for major upgrades so the generated iOS project files are refreshed.
-
-## Upgrading from 8.0.0 to 8.0.1
-
-`8.0.1` is currently the recommended installation target for Cordova iOS 8.x.
-
-If you are on `8.0.0`, upgrade to `8.0.1`.
-
-Upgrade as usual:
-
-```bash
-cordova platform remove ios
-cordova platform add ios@8.0.1
-```
-
-For new installs targeting Cordova iOS 8, install `8.0.1` directly.
 
 ## New minimum requirements
 
@@ -216,7 +201,6 @@ These changes are not usually migration blockers, but are useful to know:
 4. Confirm plugin functionality, especially plugins with native iOS code.
 5. Confirm custom hooks that read or modify the Xcode project still work with `App.xcodeproj`.
 6. Validate signing, provisioning, and release build output.
-7. If you upgraded from `8.0.0`, also verify the 8.0.1 fix areas relevant to your app: Xcode library search paths, Unicode/non-ASCII project names (`PRODUCT_NAME` normalization), Swift Package Manager deployment target handling, and `/_app_file_/` URL loading.
 
 ## References
 
