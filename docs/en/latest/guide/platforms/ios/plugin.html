@@ -2370,7 +2370,7 @@
 
 <h3>Supporting Swift Package Manager (SPM)</h3>
 
-<p>Starting from Cordova-iOS 8 and greater, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a <code>Package.swift</code> file will need to be created in the plugin&#39;s root directory and add the <code>package="swift"</code> attribute to the iOS <code>&lt;platform&gt;</code> element in your <code>plugin.xml</code> file.</p>
+<p>Starting from cordova-ios 8, support for the Swift Package Manager (SPM) has been implemented. To start using SPM with your plugin, a <code>Package.swift</code> file will need to be created in the plugin&#39;s root directory and add the <code>package="swift"</code> attribute to the iOS <code>&lt;platform&gt;</code> element in your <code>plugin.xml</code> file. To keep support with older cordova-ios versions, where only CocoaPods can be used, the appropriate <code>&lt;pod&gt;</code> tag can be extended with the attribute <code>nospm="true"</code>, which will exclude it, when Swift Package Manager is available, but install it, when it&#39;s not available.</p>
 
 <h4>Creating SPM&#39;s <code>Package.swift</code> File</h4>
 
