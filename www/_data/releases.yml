@@ -184,16 +184,15 @@
       customName: cordova-electron
 
 - package: cordova-ios
-  version: 8.0.0
+  version: 8.0.1
   downloadDir: platforms
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
-      customName: cordova-ios
 
 - package: cordova-plugin-battery-status
   version: 2.0.3
