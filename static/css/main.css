@@ -7777,7 +7777,7 @@ button.close {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#80000000", endColorstr="#00000000", GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
 
 .carousel-control.right {
@@ -7787,7 +7787,7 @@ button.close {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#80000000", GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 
 .carousel-control:hover,
@@ -8703,8 +8703,6 @@ img#logo_top {
   margin: auto;
   float: none;
   max-width: 700px;
-  padding-top: 4px;
-  padding-bottom: 35px;
 }
 .showcase_section_intro h1 {
   color: #F1B444;
@@ -8720,6 +8718,10 @@ img#logo_top {
 .showcase_section_intro p, .showcase_section_intro span {
   color: #999999;
   text-align: left;
+}
+.showcase_section_intro {
+  padding-top: 4px;
+  padding-bottom: 35px;
 }
 
 .supported_platforms {
@@ -8805,10 +8807,6 @@ img#logo_top {
   padding-left: 30px;
 }
 
-.blog {
-  /* landing page */
-  /* blog post page */
-}
 .blog table, .blog td, .blog th {
   border: 1px solid black;
 }
@@ -8824,6 +8822,9 @@ img#logo_top {
   font-weight: lighter;
   color: #4CC2E4;
   vertical-align: middle;
+}
+.blog {
+  /* landing page */
 }
 .blog .blog-list {
   max-width: 700px;
@@ -8944,6 +8945,9 @@ img#logo_top {
   margin-top: 12px;
   text-align: center;
   font-size: 110%;
+}
+.blog {
+  /* blog post page */
 }
 .blog .post header {
   margin-bottom: 20px;
@@ -9257,20 +9261,6 @@ img#logo_top {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  /*
-   * Used to style the platform logos in xml references. Uses the mark element
-   * because we hijack the markdown highlight syntax using js (e.g. ==android==).
-   * See www/static/js/docs.js
-   */
-  /* outer ToC for the site */
-  /* Highlight the current page in the ToC */
-  /* inner ToC for the page */
-  /* Quick fix to remove redundant TOC entries */
-  /* header above page content */
-  /* missing page highlight */
-  /* Formatting for compatibility table on plugin docs page */
-  /* Styling for the /docs/language/version/index.html pages */
-  /* Styling for old /docs/language/version/index.html pages */
 }
 @media (max-width: 991px) {
   .docs {
@@ -9293,6 +9283,13 @@ img#logo_top {
 }
 .docs .row {
   margin: 0px;
+}
+.docs {
+  /*
+   * Used to style the platform logos in xml references. Uses the mark element
+   * because we hijack the markdown highlight syntax using js (e.g. ==android==).
+   * See www/static/js/docs.js
+   */
 }
 .docs mark {
   display: inline-block;
@@ -9346,6 +9343,9 @@ img#logo_top {
   font-size: 22px;
   text-transform: uppercase;
 }
+.docs {
+  /* outer ToC for the site */
+}
 .docs .site-toc-container {
   position: fixed;
   top: 50px;
@@ -9358,7 +9358,6 @@ img#logo_top {
 }
 .docs .site-toc-container .site-toc {
   padding: 10px 15px;
-  /* NOTE: this is not a mistake; .site-toc gets nested inside itself */
 }
 .docs .site-toc-container .site-toc li {
   list-style: none;
@@ -9382,6 +9381,9 @@ img#logo_top {
   display: block;
   color: #4CC2E4;
 }
+.docs .site-toc-container .site-toc {
+  /* NOTE: this is not a mistake; .site-toc gets nested inside itself */
+}
 .docs .site-toc-container .site-toc .site-toc {
   padding: 0 0 0 10px;
 }
@@ -9392,6 +9394,9 @@ img#logo_top {
 }
 .docs .site-toc-container > .site-toc > li {
   margin-bottom: 1rem;
+}
+.docs {
+  /* Highlight the current page in the ToC */
 }
 .docs .this-page {
   font-weight: bold;
@@ -9457,6 +9462,9 @@ img#logo_top {
 .docs .page-content-container .page-content h5 {
   margin-top: 16px;
 }
+.docs {
+  /* inner ToC for the page */
+}
 .docs .page-toc ul {
   padding: 0px;
 }
@@ -9468,8 +9476,14 @@ img#logo_top {
 .docs .page-toc ul > li.toc-active {
   font-weight: bold;
 }
+.docs {
+  /* Quick fix to remove redundant TOC entries */
+}
 .docs .page-toc li:first-of-type {
   display: none;
+}
+.docs {
+  /* header above page content */
 }
 .docs .content-header {
   text-align: right;
@@ -9516,6 +9530,9 @@ img#logo_top {
 .docs .alert.alert-warning.alert-dismissible {
   margin-top: 15px;
 }
+.docs {
+  /* missing page highlight */
+}
 .docs .missing-page {
   color: gray !important;
 }
@@ -9525,10 +9542,8 @@ img#logo_top {
 .docs .docs-alert {
   margin-top: 22px;
 }
-.docs .compat {
-  /* Not compataible (pink with X) */
-  /* Is compataible (green with check) */
-  /* Partially compataible */
+.docs {
+  /* Formatting for compatibility table on plugin docs page */
 }
 .docs .compat td {
   text-align: center;
@@ -9540,6 +9555,9 @@ img#logo_top {
 .docs .compat th {
   text-align: center;
 }
+.docs .compat {
+  /* Not compataible (pink with X) */
+}
 .docs .compat .n::before {
   margin-right: 5px;
   content: "✘";
@@ -9548,12 +9566,18 @@ img#logo_top {
   background-color: pink;
   margin-right: 5px;
 }
+.docs .compat {
+  /* Is compataible (green with check) */
+}
 .docs .compat .y::before {
   margin-right: 5px;
   content: "✔";
 }
 .docs .compat .y {
   background-color: lightgreen;
+}
+.docs .compat {
+  /* Partially compataible */
 }
 .docs .compat .p {
   background-color: khaki;
@@ -9569,6 +9593,9 @@ img#logo_top {
 .docs .hooks td[data-col=description] {
   text-align: left;
   vertical-align: middle;
+}
+.docs {
+  /* Styling for the /docs/language/version/index.html pages */
 }
 .docs .home h1 {
   border-bottom: 1px solid #919395;
@@ -9594,6 +9621,9 @@ img#logo_top {
   list-style: none;
   margin: 0px 15px;
   width: 250px;
+}
+.docs {
+  /* Styling for old /docs/language/version/index.html pages */
 }
 .docs #old-home h1 {
   border-bottom: 1px solid #919395;

@@ -2199,17 +2199,17 @@
 
 <h3>Android Quirks</h3>
 <p>The Android 5+ guidelines specify using a different color for the statusbar than your main app color (unlike the uniform statusbar color of many iOS apps), so you may want to set the statusbar color at runtime instead via <code>StatusBar.backgroundColorByHexString</code> or <code>StatusBar.backgroundColorByName</code>. One way to do that would be:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platformId</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">android</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">StatusBar</span><span class="p">.</span><span class="nx">backgroundColorByHexString</span><span class="p">(</span><span class="dl">"</span><span class="s2">#333</span><span class="dl">"</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platformId</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">android</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">StatusBar</span><span class="p">.</span><span class="nf">backgroundColorByHexString</span><span class="p">(</span><span class="dl">"</span><span class="s2">#333</span><span class="dl">"</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <p>It is also possible to make the status bar semi-transparent. Android uses hexadecimal ARGB values, which are formatted as #AARRGGBB. That first pair of letters, the AA, represent the alpha channel. You must convert your decimal opacity values to a hexadecimal value. You can read more about it <a href="https://stackoverflow.com/questions/5445085/understanding-colors-on-android-six-characters/11019879#11019879">here</a>.</p>
 
 <p>For example, a black status bar with 20% opacity:</p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platformId</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">android</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">StatusBar</span><span class="p">.</span><span class="nx">overlaysWebView</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-    <span class="nx">StatusBar</span><span class="p">.</span><span class="nx">backgroundColorByHexString</span><span class="p">(</span><span class="dl">'</span><span class="s1">#33000000</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if </span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platformId</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">android</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">StatusBar</span><span class="p">.</span><span class="nf">overlaysWebView</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+    <span class="nx">StatusBar</span><span class="p">.</span><span class="nf">backgroundColorByHexString</span><span class="p">(</span><span class="dl">'</span><span class="s1">#33000000</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 

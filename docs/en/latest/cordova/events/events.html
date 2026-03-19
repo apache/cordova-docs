@@ -2136,33 +2136,33 @@ The application code could add listeners for these events. For example:</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// example.js file</span>
 <span class="c1">// Wait for device API libraries to load</span>
 <span class="c1">//</span>
-<span class="kd">function</span> <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// device APIs are available</span>
 <span class="c1">//</span>
-<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">pause</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">resume</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">menubutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onMenuKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">pause</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">resume</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">menubutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onMenuKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
     <span class="c1">// Add similar listeners for other events</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onPause</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onPause</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the pause event</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onResume</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the resume event</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onMenuKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onMenuKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the menubutton event</span>
 <span class="p">}</span>
 
 <span class="c1">// listen for uncaught cordova callback errors</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">cordovacallbackerror</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">cordovacallbackerror</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// event.error contains the original error object</span>
 <span class="p">});</span>
 </code></pre></div></div>
@@ -2268,9 +2268,9 @@ callback function called immediately.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Now safe to use device APIs</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2282,9 +2282,9 @@ typically when the user switches to a different application.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">pause</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">pause</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onPause</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onPause</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onPause</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the pause event</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2312,9 +2312,9 @@ to <code>YES</code>. To run when locked on iOS 4, this setting does not matter.<
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">resume</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">resume</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onResume</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the resume event</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2347,9 +2347,9 @@ to <code>YES</code>. To run when locked on iOS 4, this setting does not matter.<
 as <code>alert()</code> need to be wrapped in a <code>setTimeout()</code> call with a
 timeout value of zero, or else the app hangs. For example:</p>
 
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">resume</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-  <span class="kd">function</span> <span class="nx">onResume</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">resume</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onResume</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="kd">function</span> <span class="nf">onResume</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nf">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
               <span class="c1">// TODO: do your thing!</span>
           <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
   <span class="p">}</span>
@@ -2371,9 +2371,9 @@ back-button behavior.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">backbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onBackKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">backbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onBackKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onBackKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onBackKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the back button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2385,9 +2385,9 @@ overrides the default menu button behavior.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">menubutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onMenuKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">menubutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onMenuKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onMenuKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onMenuKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the menu button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2400,9 +2400,9 @@ listener for the &#39;searchbutton&#39; event.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">searchbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onSearchKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">searchbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onSearchKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onSearchKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onSearchKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the search button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2414,9 +2414,9 @@ the default start call behavior you can register an event listener for the <code
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">startcallbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onStartCallKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">startcallbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onStartCallKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onStartCallKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onStartCallKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the start call button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2428,9 +2428,9 @@ default end call behavior.</p>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">endcallbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onEndCallKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">endcallbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onEndCallKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onEndCallKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onEndCallKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the end call button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2442,9 +2442,9 @@ the default volume down behavior you can register an event listener for the <cod
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">volumedownbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onVolumeDownKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">volumedownbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onVolumeDownKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onVolumeDownKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onVolumeDownKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the volume down button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2456,9 +2456,9 @@ the default volume up behavior you can register an event listener for the <code>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">volumeupbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onVolumeUpKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">volumeupbutton</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onVolumeUpKeyDown</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onVolumeUpKeyDown</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onVolumeUpKeyDown</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// Handle the volume up button</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2482,7 +2482,7 @@ the default volume up behavior you can register an event listener for the <code>
 
 <h3>Quick Example</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">cordovacallbackerror</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">cordovacallbackerror</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// event.error contains the original error object</span>
 <span class="p">});</span>
 </code></pre></div></div>

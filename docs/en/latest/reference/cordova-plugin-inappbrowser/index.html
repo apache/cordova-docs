@@ -2365,94 +2365,94 @@ Since the introduction of iPadOS 13, iPads try to adapt their content mode / use
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="kd">var</span> <span class="nx">inAppBrowserRef</span><span class="p">;</span>
 
-<span class="kd">function</span> <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">_blank</span><span class="dl">"</span><span class="p">;</span>
 
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">location=yes,hidden=yes,beforeload=yes</span><span class="dl">"</span><span class="p">;</span>
 
-    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstart</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstart</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstop</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstop</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaderror</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaderror</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">beforeload</span><span class="dl">'</span><span class="p">,</span> <span class="nx">beforeloadCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">beforeload</span><span class="dl">'</span><span class="p">,</span> <span class="nx">beforeloadCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="nx">messageCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="nx">messageCallBack</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading please wait ...</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading please wait ...</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="s2">body{font-size: 25px;}</span><span class="dl">"</span> <span class="p">});</span>
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="s2">body{font-size: 25px;}</span><span class="dl">"</span> <span class="p">});</span>
 
-        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="se">\</span><span class="s2">
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="se">\</span><span class="s2">
             var message = 'this is the message';</span><span class="se">\</span><span class="s2">
             var messageObj = {my_message: message};</span><span class="se">\</span><span class="s2">
             var stringifiedMessageObj = JSON.stringify(messageObj);</span><span class="se">\</span><span class="s2">
             webkit.messageHandlers.cordova_iab.postMessage(stringifiedMessageObj);</span><span class="dl">"</span>
         <span class="p">});</span>
 
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
 
-        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
 
     <span class="kd">var</span> <span class="nx">scriptErrorMesssage</span> <span class="o">=</span>
        <span class="dl">"</span><span class="s2">alert('Sorry we cannot open that page. Message from the server is : </span><span class="dl">"</span>
        <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">');</span><span class="dl">"</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
 
     <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
 
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span>
            <span class="dl">"</span><span class="s2">Sorry we couldn't open that page. Message from the server is : '</span><span class="dl">"</span>
            <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">'</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">beforeloadCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">beforeloadCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://www.example.com/</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nf">startsWith</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://www.example.com/</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
 
         <span class="c1">// Load this URL in the inAppBrowser.</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+        <span class="nf">callback</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 
         <span class="c1">// The callback is not invoked, so the page will not be loaded.</span>
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">This browser only opens pages on http://www.example.com/</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">This browser only opens pages on http://www.example.com/</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">messageCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">message received: </span><span class="dl">"</span><span class="o">+</span><span class="nx">params</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">my_message</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">messageCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">){</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">message received: </span><span class="dl">"</span><span class="o">+</span><span class="nx">params</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">my_message</span><span class="p">);</span>
 <span class="p">}</span>
 
 </code></pre></div></div>
@@ -2474,14 +2474,14 @@ browser. Multiple values are separated by comma&#39;s.</p>
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"AllowedSchemes"</span> <span class="na">value=</span><span class="s">"app"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onCustomScheme</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">app://hide</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">onCustomScheme</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">url</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">app://hide</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">hide</span><span class="p">();</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://example.com</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">_blank</span><span class="dl">'</span><span class="p">);</span>
-<span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">customscheme</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onCustomScheme</span><span class="p">);</span>
+<span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://example.com</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">_blank</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">customscheme</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onCustomScheme</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>When the opened page navigates to the link <code>app://hide</code>, the browser is hidden.</p>
@@ -2793,11 +2793,11 @@ ref.addEventListener('loadstop', function() {
 <p>Gather the users choice in the <code>onDeviceReady</code> function of the page and then send an appropriate URL to a helper function in some shared library file. Our helper function is named <code>showHelp()</code> and we&#39;ll write that function next.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#help-select</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#help-select</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">url</span><span class="p">;</span>
 
-    <span class="k">switch</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="k">case</span> <span class="dl">"</span><span class="s2">article</span><span class="dl">"</span><span class="p">:</span>
             <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://cordova.apache.org/docs/en/latest/</span><span class="dl">"</span>
@@ -2813,7 +2813,7 @@ ref.addEventListener('loadstop', function() {
             <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+    <span class="nf">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
 
 <span class="p">});</span>
 
@@ -2824,19 +2824,19 @@ ref.addEventListener('loadstop', function() {
 <p>We&#39;ll use the <code>open</code> function to load the help page. We&#39;re setting the <code>hidden</code> property to <code>yes</code> so that we can show the browser only after the page content has loaded. That way, users don&#39;t see a blank browser while they wait for content to appear. When the <code>loadstop</code> event is raised, we&#39;ll know when the content has loaded. We&#39;ll handle that event shortly.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">function</span> <span class="nx">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">showHelp</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">_blank</span><span class="dl">"</span><span class="p">;</span>
 
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">location=yes,hidden=yes</span><span class="dl">"</span><span class="p">;</span>
 
-    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">InAppBrowser</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">target</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstart</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstart</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStartCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstop</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loadstop</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadStopCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaderror</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaderror</span><span class="dl">'</span><span class="p">,</span> <span class="nx">loadErrorCallBack</span><span class="p">);</span>
 
 <span class="p">}</span>
 
@@ -2847,9 +2847,9 @@ ref.addEventListener('loadstop', function() {
 <p>Because the browser doesn&#39;t immediately appear, we can use the <code>loadstart</code> event to show a status message, progress bar, or other indicator. This assures users that content is on the way.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">function</span> <span class="nx">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">loadStartCallBack</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading please wait ...</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">"</span><span class="s2">loading please wait ...</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="p">}</span>
 
@@ -2860,15 +2860,15 @@ ref.addEventListener('loadstop', function() {
 <p>When the <code>loadstopcallback</code> event is raised, we know that the content has loaded and we can make the browser visible. This sort of trick can create the impression of better performance. The truth is that whether you show the browser before content loads or not, the load times are exactly the same.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">function</span> <span class="nx">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">loadStopCallBack</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">inAppBrowserRef</span> <span class="o">!=</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="s2">body{font-size: 25px;}</span><span class="dl">"</span> <span class="p">});</span>
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">insertCSS</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="dl">"</span><span class="s2">body{font-size: 25px;}</span><span class="dl">"</span> <span class="p">});</span>
 
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
 
-        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+        <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -2883,27 +2883,27 @@ ref.addEventListener('loadstop', function() {
 <p>We&#39;ll try to show that error in a message box. We can do that by injecting a script that calls the <code>alert</code> function. That said, this won&#39;t work in browsers on Windows devices so we&#39;ll have to look at the parameter of the <code>executeScript</code> callback function to see if our attempt worked. If it didn&#39;t work out for us, we&#39;ll just show the error message in a <code>&lt;div&gt;</code> on the page.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">function</span> <span class="nx">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">loadErrorCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
 
     <span class="kd">var</span> <span class="nx">scriptErrorMesssage</span> <span class="o">=</span>
        <span class="dl">"</span><span class="s2">alert('Sorry we cannot open that page. Message from the server is : </span><span class="dl">"</span>
        <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">');</span><span class="dl">"</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">executeScript</span><span class="p">({</span> <span class="na">code</span><span class="p">:</span> <span class="nx">scriptErrorMesssage</span> <span class="p">},</span> <span class="nx">executeScriptCallBack</span><span class="p">);</span>
 
-    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+    <span class="nx">inAppBrowserRef</span><span class="p">.</span><span class="nf">close</span><span class="p">();</span>
 
     <span class="nx">inAppBrowserRef</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
 
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">executeScriptCallBack</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#status-message</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span>
            <span class="dl">"</span><span class="s2">Sorry we couldn't open that page. Message from the server is : '</span><span class="dl">"</span>
            <span class="o">+</span> <span class="nx">params</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">'</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">}</span>
