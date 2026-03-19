@@ -266,12 +266,12 @@ for this will be available at an later date. In the meantime, the following can
 be used as a workaround:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// TODO: Remove when https://github.com/apache/cordova-plugin-file/pull/642 is released</span>
-<span class="kd">function</span> <span class="nx">toDomURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platform</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">ios</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">WkWebView</span><span class="p">.</span><span class="nx">convertFilePath</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">nativeUrl</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">toDomURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">platform</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">ios</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">window</span><span class="p">.</span><span class="nx">WkWebView</span><span class="p">.</span><span class="nf">convertFilePath</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">nativeUrl</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+        <span class="k">return</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">toURL</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>

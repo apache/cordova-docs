@@ -2264,9 +2264,9 @@ number of milliseconds for the splash screen fade effect to execute.</p>
 
     <p><em>Note</em>: This only applies to the application startup - you need to take the fading timeout into account when manually showing/hiding the splash screen in your application&#39;s code:</p>
 
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nf">setTimeout</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+      <span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nf">hide</span><span class="p">();</span>
   <span class="p">},</span> <span class="nx">splashDuration</span> <span class="o">-</span> <span class="nx">fadeDuration</span><span class="p">);</span>
 </code></pre></div>    </div>
   </li>
@@ -2300,14 +2300,14 @@ number of milliseconds for the splash screen fade effect to execute.</p>
 
 <p>Dismiss the splash screen.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nf">hide</span><span class="p">();</span>
 </code></pre></div></div>
 
 <h3>splashscreen.show</h3>
 
 <p>Displays the splash screen.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">splashscreen</span><span class="p">.</span><span class="nf">show</span><span class="p">();</span>
 </code></pre></div></div>
 
 <p>Your application cannot call <code>navigator.splashscreen.show()</code> until the application has

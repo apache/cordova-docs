@@ -2863,20 +2863,20 @@ delivered via a document event that fires after the Cordova <a href="http://cord
 
 <p>In your app, you should subscribe to the two possible events like so:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// pendingcaptureresult is fired if the capture call is successful</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureresult</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mediaFiles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureresult</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">mediaFiles</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Do something with result</span>
     <span class="p">});</span>
 
     <span class="c1">// pendingcaptureerror is fired if the capture call is unsuccessful</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureerror</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">pendingcaptureerror</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Handle error case</span>
     <span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// Only subscribe to events after deviceready fires</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">deviceready</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">deviceready</span><span class="dl">'</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>It is up you to track what part of your code these results are coming from. Be sure to

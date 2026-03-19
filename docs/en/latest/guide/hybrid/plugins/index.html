@@ -2308,7 +2308,7 @@ information when there are breaking changes.</p>
 
 <h3><code>cordova.exec</code> Command Syntax</h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">exec</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">successFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">failFunction</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">service</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">action</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">[</span><span class="o">&lt;</span><span class="nx">args</span><span class="o">&gt;</span><span class="p">]);</span>
 </code></pre></div></div>
 
 <p>The <code>cordova.exec</code> method is what triggeres the request from the front-end WebView to the native side of the platform, invoking an action method on the specified service class with the provided arguments. Depending on the outcome, either the success or failure callback will be triggered.</p>
@@ -2331,26 +2331,26 @@ information when there are breaking changes.</p>
 
 <p>The <code>www/api.js</code> file will contain the front-end JavaScript API. For this example, the contents of the Echo plugin will be as follows:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cordova/exec</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">cordova/exec</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">serviceName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Echo</span><span class="dl">'</span><span class="p">;</span>
 
-<span class="kd">const</span> <span class="nx">Echo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="p">};</span>
+<span class="kd">const</span> <span class="nx">Echo</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span> <span class="p">};</span>
 
-<span class="nx">Echo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">echo</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="kd">const</span> <span class="nx">_successCb</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">resolve</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="nx">Echo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">echo</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nc">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">_successCb</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">resolve</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
         <span class="p">};</span>
 
-        <span class="kd">const</span> <span class="nx">_errorCb</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+        <span class="kd">const</span> <span class="nx">_errorCb</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">reject</span><span class="p">(</span><span class="k">new</span> <span class="nc">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
         <span class="p">};</span>
 
-        <span class="nx">exec</span><span class="p">(</span><span class="nx">_successCb</span><span class="p">,</span> <span class="nx">_errorCb</span><span class="p">,</span> <span class="nx">serviceName</span><span class="p">,</span> <span class="dl">'</span><span class="s1">echo</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span><span class="nx">message</span><span class="p">]);</span>
+        <span class="nf">exec</span><span class="p">(</span><span class="nx">_successCb</span><span class="p">,</span> <span class="nx">_errorCb</span><span class="p">,</span> <span class="nx">serviceName</span><span class="p">,</span> <span class="dl">'</span><span class="s1">echo</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span><span class="nx">message</span><span class="p">]);</span>
     <span class="p">});</span>
 <span class="p">};</span>
 
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Echo</span><span class="p">();</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Echo</span><span class="p">();</span>
 </code></pre></div></div>
 
 <p>This example demonstrates how to build a front-end plugin API that returns a Promise, offering a modern and user-friendly interface for app developers.</p>

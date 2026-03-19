@@ -2823,7 +2823,7 @@ Chrome returns the path in the form <code>cdvfile://localhost/persistent/file</c
 <ul>
   <li>Chrome filesystem is not immediately ready after device ready event. As a workaround you can subscribe to <code>filePluginIsReady</code> event.
 Example:
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">filePluginIsReady</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">File plugin is ready</span><span class="dl">'</span><span class="p">);},</span> <span class="kc">false</span><span class="p">);</span>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">filePluginIsReady</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">File plugin is ready</span><span class="dl">'</span><span class="p">);},</span> <span class="kc">false</span><span class="p">);</span>
 </code></pre></div>    </div>
     <p>You can use <code>window.isFilePluginReadyRaised</code> function to check whether event was already raised.</p>
   </li>
@@ -2966,24 +2966,24 @@ cdvfile paths are supported by core plugins - for example you can download an mp
 
 <p><strong>Converting cdvfile:// to native path</strong></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="dl">'</span><span class="s1">cdvfile://localhost/temporary/path/to/file.mp4</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">nativePath</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Native URI: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">nativePath</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">video</span><span class="dl">'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">nativePath</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="dl">'</span><span class="s1">cdvfile://localhost/temporary/path/to/file.mp4</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">nativePath</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nf">toURL</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Native URI: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">nativePath</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">video</span><span class="dl">'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">nativePath</span><span class="p">;</span>
 </code></pre></div></div>
 
 <p><strong>Converting native path to cdvfile://</strong></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">nativePath</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">cdvfile URI: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toInternalURL</span><span class="p">());</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">nativePath</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">cdvfile URI: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">entry</span><span class="p">.</span><span class="nf">toInternalURL</span><span class="p">());</span>
 </code></pre></div></div>
 
 <p><strong>Using cdvfile in core plugins</strong></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">fileTransfer</span><span class="p">.</span><span class="nx">download</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cdvfile://localhost/temporary/path/to/file.mp3</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">fileTransfer</span><span class="p">.</span><span class="nf">download</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cdvfile://localhost/temporary/path/to/file.mp3</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span>
 </code></pre></div></div>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Media</span><span class="p">(</span><span class="dl">'</span><span class="s1">cdvfile://localhost/temporary/path/to/file.mp3</span><span class="dl">'</span><span class="p">,</span> <span class="p">...);</span>
-<span class="nx">my_media</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">my_media</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Media</span><span class="p">(</span><span class="dl">'</span><span class="s1">cdvfile://localhost/temporary/path/to/file.mp3</span><span class="dl">'</span><span class="p">,</span> <span class="p">...);</span>
+<span class="nx">my_media</span><span class="p">.</span><span class="nf">play</span><span class="p">();</span>
 </code></pre></div></div>
 
 <h4>cdvfile quirks</h4>
@@ -3114,15 +3114,15 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
   <p><em>Note</em> When targeting WebView clients (instead of a browser) or native apps (Windows), you dont need to use <code>requestQuota</code> before using persistent storage.</p>
 </blockquote>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">requestFileSystem</span><span class="p">(</span><span class="nx">LocalFileSystem</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="dl">"</span><span class="s2">newPersistentFile.txt</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nf">getFile</span><span class="p">(</span><span class="dl">"</span><span class="s2">newPersistentFile.txt</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="nf">function </span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">fileEntry is file?</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">isFile</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">fileEntry is file?</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">isFile</span><span class="p">.</span><span class="nf">toString</span><span class="p">());</span>
         <span class="c1">// fileEntry.name == 'someFile.txt'</span>
         <span class="c1">// fileEntry.fullPath == '/someFile.txt'</span>
-        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+        <span class="nf">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
 
@@ -3137,20 +3137,20 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>Here is an example of a request for temporary storage. Temporary storage may be deleted by the operating system if the device runs low on memory.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">createFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="dl">"</span><span class="s2">newTempFile.txt</span><span class="dl">"</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nf">createFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="dl">"</span><span class="s2">newTempFile.txt</span><span class="dl">"</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
 <span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
 </code></pre></div></div>
 <p>When you are using temporary storage, you can create or get the file by calling <code>getFile</code>. As in the persistent storage example, this will give you a FileEntry object that you can use for read or write operations.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">createFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Creates a new file or returns the file if it already exists.</span>
-    <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span><span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">dirEntry</span><span class="p">.</span><span class="nf">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span><span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">);</span>
+        <span class="nf">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
 
@@ -3161,26 +3161,26 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>Once you have a FileEntry object, you can write to the file by calling <code>createWriter</code>, which returns a FileWriter object in the success callback. Call the <code>write</code> method of FileWriter to write to the file.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
-    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">createWriter</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwrite</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
-            <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nf">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
         <span class="p">};</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nf">toString</span><span class="p">());</span>
         <span class="p">};</span>
 
         <span class="c1">// If data object is not passed in,</span>
         <span class="c1">// create a new Blob instead.</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">dataObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="dl">'</span><span class="s1">some file data</span><span class="dl">'</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/plain</span><span class="dl">'</span> <span class="p">});</span>
+        <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="nx">dataObj</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">dataObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Blob</span><span class="p">([</span><span class="dl">'</span><span class="s1">some file data</span><span class="dl">'</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/plain</span><span class="dl">'</span> <span class="p">});</span>
         <span class="p">}</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -3189,17 +3189,17 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>You also need a FileEntry object to read an existing file. Use the file property of FileEntry to get the file reference, and then create a new FileReader object. You can use methods like <code>readAsText</code> to start the read operation. When the read operation is complete, <code>this.result</code> stores the result of the read operation.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">file</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileReader</span><span class="p">();</span>
 
         <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file read: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
-            <span class="nx">displayFileData</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file read: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nf">displayFileData</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
         <span class="p">};</span>
 
-        <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+        <span class="nx">reader</span><span class="p">.</span><span class="nf">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">onErrorReadFile</span><span class="p">);</span>
 <span class="p">}</span>
@@ -3209,10 +3209,10 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>Of course, you will often want to append existing files instead of creating new ones. Here is an example of that. This example shows another way that you can access the file system using window.resolveLocalFileSystemURL. In this example, pass the cross-platform Cordova file URL, cordova.file.dataDirectory, to the function. The success callback receives a DirectoryEntry object, which you can use to do things like create a file.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">isAppend</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="nx">createFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fileToAppend.txt</span><span class="dl">"</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">);</span>
+    <span class="nf">createFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fileToAppend.txt</span><span class="dl">"</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">);</span>
 <span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
 </code></pre></div></div>
 
@@ -3222,29 +3222,29 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>Once you have a FileWriter object, call the <code>seek</code> method, and pass in the index value for the position where you want to write. In this example, you also test whether the file exists. After calling seek, then call the write method of FileWriter.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
-    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">createWriter</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwrite</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
-            <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nf">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
         <span class="p">};</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nf">toString</span><span class="p">());</span>
         <span class="p">};</span>
 
         <span class="c1">// If we are appending data to file, go to the end of the file.</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">try</span> <span class="p">{</span>
-                <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="nx">fileWriter</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+                <span class="nx">fileWriter</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="nx">fileWriter</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
             <span class="p">}</span>
-            <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">file doesn't exist!</span><span class="dl">"</span><span class="p">);</span>
+            <span class="k">catch </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">file doesn't exist!</span><span class="dl">"</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -3255,30 +3255,30 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>Before you get the file, get a FileSystem reference using <code>requestFileSystem</code>. By passing window.TEMPORARY in the method call (same as before), the returned FileSystem object (fs) represents the cache in the sandboxed file system. Use <code>fs.root</code> to get the DirectoryEntry object that you need.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">requestFileSystem</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">TEMPORARY</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">fs</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-    <span class="nx">getSampleFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">file system open: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+    <span class="nf">getSampleFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">root</span><span class="p">);</span>
 
 <span class="p">},</span> <span class="nx">onErrorLoadFs</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>For completeness, here is the xhr request to get a Blob image. There is nothing Cordova-specific in this code, except that you forward the DirectoryEntry reference that you already obtained as an argument to the saveFile function. You will save the blob image and display it later after reading the file (to validate the operation).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getSampleFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">getSampleFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">http://cordova.apache.org/static/img/cordova_bot.png</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLHttpRequest</span><span class="p">();</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">http://cordova.apache.org/static/img/cordova_bot.png</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
     <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseType</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">blob</span><span class="dl">'</span><span class="p">;</span>
 
     <span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">image/png</span><span class="dl">'</span> <span class="p">});</span>
-            <span class="nx">saveFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">blob</span><span class="p">,</span> <span class="dl">"</span><span class="s2">downloadedImage.png</span><span class="dl">"</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Blob</span><span class="p">([</span><span class="k">this</span><span class="p">.</span><span class="nx">response</span><span class="p">],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">image/png</span><span class="dl">'</span> <span class="p">});</span>
+            <span class="nf">saveFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">blob</span><span class="p">,</span> <span class="dl">"</span><span class="s2">downloadedImage.png</span><span class="dl">"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">};</span>
-    <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nf">send</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></div>
 <blockquote>
@@ -3287,11 +3287,11 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>After getting the file, copy the contents to a new file. The current DirectoryEntry object is already associated with the app cache.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">saveFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">fileData</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">saveFile</span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">,</span> <span class="nx">fileData</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">dirEntry</span><span class="p">.</span><span class="nf">getFile</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="na">exclusive</span><span class="p">:</span> <span class="kc">false</span> <span class="p">},</span> <span class="nf">function </span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">fileData</span><span class="p">);</span>
+        <span class="nf">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">fileData</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">onErrorCreateFile</span><span class="p">);</span>
 <span class="p">}</span>
@@ -3299,47 +3299,47 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>In writeFile, you pass in the Blob object as the dataObj and you will save that in the new file.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">writeFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">,</span> <span class="nx">dataObj</span><span class="p">,</span> <span class="nx">isAppend</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// Create a FileWriter object for our FileEntry (log.txt).</span>
-    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">createWriter</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">createWriter</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">fileWriter</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onwrite</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">dataObj</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write...</span><span class="dl">"</span><span class="p">);</span>
+            <span class="k">if </span><span class="p">(</span><span class="nx">dataObj</span><span class="p">.</span><span class="nx">type</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
             <span class="p">}</span>
             <span class="k">else</span> <span class="p">{</span>
-                <span class="nx">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
+                <span class="nf">readFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">};</span>
 
         <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Failed file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nf">toString</span><span class="p">());</span>
         <span class="p">};</span>
 
-        <span class="nx">fileWriter</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
+        <span class="nx">fileWriter</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">dataObj</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <p>After writing to the file, read it and display it. You saved the image as binary data, so you can read it using FileReader.readAsArrayBuffer.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">readBinaryFile</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+    <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">file</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileReader</span><span class="p">();</span>
 
         <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
-            <span class="nx">displayFileData</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Successful file write: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+            <span class="nf">displayFileData</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">.</span><span class="nx">fullPath</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">: </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
 
-            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span> <span class="p">});</span>
-            <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Blob</span><span class="p">([</span><span class="k">new</span> <span class="nc">Uint8Array</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">)],</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">image/png</span><span class="dl">"</span> <span class="p">});</span>
+            <span class="nf">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
         <span class="p">};</span>
 
-        <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+        <span class="nx">reader</span><span class="p">.</span><span class="nf">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">onErrorReadFile</span><span class="p">);</span>
 <span class="p">}</span>
@@ -3347,12 +3347,12 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>After reading the data, you can display the image using code like this. Use window.URL.createObjectURL to get a DOM string for the Blob image.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">displayImage</span><span class="p">(</span><span class="nx">blob</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// Displays image if result is a valid DOM string for an image.</span>
-    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageFile</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageFile</span><span class="dl">'</span><span class="p">);</span>
     <span class="c1">// Note: Use window.URL.revokeObjectURL when finished with image.</span>
-    <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+    <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nf">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -3360,9 +3360,9 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>To display an image using a FileEntry, you can call the <code>toURL</code> method.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">displayImageByFileURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageFile</span><span class="dl">'</span><span class="p">);</span>
-    <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">displayImageByFileURL</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageFile</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">toURL</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -3377,11 +3377,11 @@ Android also supports a special filesystem named &quot;documents&quot;, which re
 
 <p>This code creates the /NewDirInRoot/images folder in the application cache. For platform-specific values, look at <em>File System Layouts</em>.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createDirectory</span><span class="p">(</span><span class="nx">rootDirEntry</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">rootDirEntry</span><span class="p">.</span><span class="nx">getDirectory</span><span class="p">(</span><span class="dl">'</span><span class="s1">NewDirInRoot</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">dirEntry</span><span class="p">.</span><span class="nx">getDirectory</span><span class="p">(</span><span class="dl">'</span><span class="s1">images</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">subDirEntry</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">createDirectory</span><span class="p">(</span><span class="nx">rootDirEntry</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">rootDirEntry</span><span class="p">.</span><span class="nf">getDirectory</span><span class="p">(</span><span class="dl">'</span><span class="s1">NewDirInRoot</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="nf">function </span><span class="p">(</span><span class="nx">dirEntry</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">dirEntry</span><span class="p">.</span><span class="nf">getDirectory</span><span class="p">(</span><span class="dl">'</span><span class="s1">images</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">create</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="nf">function </span><span class="p">(</span><span class="nx">subDirEntry</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="nx">createFile</span><span class="p">(</span><span class="nx">subDirEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fileInNewSubDir.txt</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nf">createFile</span><span class="p">(</span><span class="nx">subDirEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fileInNewSubDir.txt</span><span class="dl">"</span><span class="p">);</span>
 
         <span class="p">},</span> <span class="nx">onErrorGetDir</span><span class="p">);</span>
     <span class="p">},</span> <span class="nx">onErrorGetDir</span><span class="p">);</span>

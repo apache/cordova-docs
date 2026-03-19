@@ -2134,9 +2134,9 @@ platforms.</p>
 snippet shows the most important methods exposed by the returned <code>Storage</code> object:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">storage</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span> <span class="c1">// Pass a key name to get its value.</span>
-<span class="nx">storage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="c1">// Pass a key name and its value to add or update that key.</span>
-<span class="nx">storage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="c1">// Pass a key name to remove that key from storage.</span>
+<span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">.</span><span class="nf">getItem</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span> <span class="c1">// Pass a key name to get its value.</span>
+<span class="nx">storage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="c1">// Pass a key name and its value to add or update that key.</span>
+<span class="nx">storage</span><span class="p">.</span><span class="nf">removeItem</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="c1">// Pass a key name to remove that key from storage.</span>
 </code></pre></div></div>
 
 <p>For more information, see:</p>
@@ -2204,21 +2204,21 @@ and <code>readyState</code>.</li>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">db</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">databaseName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">myDB</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">databaseVersion</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">openRequest</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">indexedDB</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">databaseName</span><span class="p">,</span> <span class="nx">databaseVersion</span><span class="p">);</span>
-<span class="nx">openRequest</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">openRequest</span><span class="p">.</span><span class="nx">errorCode</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">openRequest</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">indexedDB</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="nx">databaseName</span><span class="p">,</span> <span class="nx">databaseVersion</span><span class="p">);</span>
+<span class="nx">openRequest</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">openRequest</span><span class="p">.</span><span class="nx">errorCode</span><span class="p">);</span>
 <span class="p">};</span>
-<span class="nx">openRequest</span><span class="p">.</span><span class="nx">onsuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">openRequest</span><span class="p">.</span><span class="nx">onsuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Database is open and initialized - we're good to proceed.</span>
     <span class="nx">db</span> <span class="o">=</span> <span class="nx">openRequest</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
-    <span class="nx">displayData</span><span class="p">();</span>
+    <span class="nf">displayData</span><span class="p">();</span>
 <span class="p">};</span>
-<span class="nx">openRequest</span><span class="p">.</span><span class="nx">onupgradeneeded</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">openRequest</span><span class="p">.</span><span class="nx">onupgradeneeded</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// This is either a newly created database, or a new version number</span>
     <span class="c1">// has been submitted to the open() call.</span>
     <span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
-    <span class="nx">db</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nx">errorCode</span><span class="p">);</span>
+    <span class="nx">db</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">db</span><span class="p">.</span><span class="nx">errorCode</span><span class="p">);</span>
     <span class="p">};</span>
 
     <span class="c1">// Create an object store and indexes. A key is a data value used to organize</span>
@@ -2226,7 +2226,7 @@ and <code>readyState</code>.</li>
     <span class="c1">// the key is stored. If a key path is specified, the store can only contain</span>
     <span class="c1">// JavaScript objects, and each object stored must have a property with the</span>
     <span class="c1">// same name as the key path (unless the autoIncrement option is true).</span>
-    <span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">createObjectStore</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">keyPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">customerId</span><span class="dl">'</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">store</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">createObjectStore</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">keyPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">customerId</span><span class="dl">'</span> <span class="p">});</span>
 
     <span class="c1">// Define the indexes we want to use. Objects we add to the store don't need</span>
     <span class="c1">// to contain these properties, but they will only appear in the specified</span>
@@ -2235,15 +2235,15 @@ and <code>readyState</code>.</li>
     <span class="c1">// syntax: store.createIndex(indexName, keyPath[, parameters]);</span>
     <span class="c1">//</span>
     <span class="c1">// All these values could have duplicates, so set unique to false</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">firstName</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">firstName</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">lastName</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">lastName</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">street</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">street</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">zipCode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">zipCode</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nf">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">firstName</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">firstName</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nf">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">lastName</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">lastName</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nf">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">street</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">street</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nf">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nf">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">zipCode</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">zipCode</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nf">createIndex</span><span class="p">(</span><span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">country</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">unique</span><span class="p">:</span> <span class="kc">false</span> <span class="p">});</span>
 
     <span class="c1">// Once the store is created, populate it</span>
-    <span class="nx">store</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">oncomplete</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">store</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">oncomplete</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// The transaction method takes an array of the names of object stores</span>
         <span class="c1">// and indexes that will be in the scope of the transaction (or a single</span>
         <span class="c1">// string to access a single object store). The transaction will be</span>
@@ -2251,14 +2251,14 @@ and <code>readyState</code>.</li>
         <span class="c1">// It returns a transaction object, which provides an objectStore method</span>
         <span class="c1">// to access one of the object stores that are in the scope of this</span>
         <span class="c1">//transaction.</span>
-        <span class="kd">var</span> <span class="nx">customerStore</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">transaction</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">readwrite</span><span class="dl">'</span><span class="p">).</span><span class="nx">objectStore</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">);</span>
-        <span class="nx">customers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">customer</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">customerStore</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">customer</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">customerStore</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">transaction</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">readwrite</span><span class="dl">'</span><span class="p">).</span><span class="nf">objectStore</span><span class="p">(</span><span class="dl">'</span><span class="s1">customers</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nx">customers</span><span class="p">.</span><span class="nf">forEach</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">customer</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">customerStore</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nx">customer</span><span class="p">);</span>
         <span class="p">});</span>
     <span class="p">};</span>
 <span class="p">};</span>
 
-<span class="kd">function</span> <span class="nx">displayData</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">displayData</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre></div></div>
 

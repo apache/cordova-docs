@@ -2150,9 +2150,9 @@
 
 <p>The plugin defines a global object/method <code>navigator.vibrate</code>. Although in the global scope, it is not available until after the <code>deviceready</code> event.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -2177,10 +2177,10 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 
 <p>Vibrates the device for a given amount of time.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span>
 </code></pre></div></div>
 <p>or</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="nx">time</span><span class="p">])</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">([</span><span class="nx">time</span><span class="p">])</span>
 </code></pre></div></div>
 
 <ul>
@@ -2190,10 +2190,10 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 <h4>Example</h4>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vibrate for 3 seconds</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
 
 <span class="c1">// Vibrate for 3 seconds</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">3000</span><span class="p">]);</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">([</span><span class="mi">3000</span><span class="p">]);</span>
 </code></pre></div></div>
 
 <h4>Quirks</h4>
@@ -2204,7 +2204,7 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
   <li>
     <p><strong>time</strong>: Ignores the specified time and vibrates for a pre-set amount of time.</p>
 
-    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// 3000 is ignored</span>
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">// 3000 is ignored</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -2221,7 +2221,7 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 
 <p>Vibrates the device with a given pattern</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="nx">pattern</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">(</span><span class="nx">pattern</span><span class="p">);</span>
 </code></pre></div></div>
 <ul>
   <li><strong>pattern</strong>: Sequence of durations (in milliseconds) for which to turn on or off the vibrator. <em>(Array of Numbers)</em></li>
@@ -2234,7 +2234,7 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 <span class="c1">// Vibrate for 3 seconds</span>
 <span class="c1">// Wait for 1 second</span>
 <span class="c1">// Vibrate for 5 seconds</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]);</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]);</span>
 </code></pre></div></div>
 
 <h4>Quirks</h4>
@@ -2246,13 +2246,13 @@ The Android webview (API level 19 and up) supports the <a href="https://www.w3.o
 <h3>Cancel vibration</h3>
 
 <p>Immediately cancels any currently running vibration.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div></div>
 <p>or</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([])</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">([])</span>
 </code></pre></div></div>
 <p>or</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nf">vibrate</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
 </code></pre></div></div>
 <p>Passing in a parameter of 0, an empty array, or an array with one element of value 0 will cancel any vibrations.</p>
 

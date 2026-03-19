@@ -2151,10 +2151,10 @@ the system&#39;s image library.</p>
 
 <p>Although the object is attached to the global scoped <code>navigator</code>, it is not available until after the <code>deviceready</code> event.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -2458,7 +2458,7 @@ consistent access to that resource, so it&#39;s not suitable to retain the tempo
 </table>
 
 <p><strong>Example</strong></p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">cameraSuccess</span><span class="p">,</span> <span class="nx">cameraError</span><span class="p">,</span> <span class="nx">cameraOptions</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span><span class="nx">cameraSuccess</span><span class="p">,</span> <span class="nx">cameraError</span><span class="p">,</span> <span class="nx">cameraOptions</span><span class="p">);</span>
 </code></pre></div></div>
 <p><a name="module_camera.cleanup"></a></p>
 
@@ -2476,14 +2476,14 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 
 <p><strong>Kind</strong>: static method of <code>[camera](#module_camera)</code>
 <strong>Example</strong></p>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">cleanup</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">);</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">cleanup</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Camera cleanup success.</span><span class="dl">"</span><span class="p">)</span>
+<span class="kd">function</span> <span class="nf">onSuccess</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Camera cleanup success.</span><span class="dl">"</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 <p><a name="module_camera.onError"></a></p>
@@ -2536,16 +2536,16 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 
 <p><strong>Example</strong></p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Show image captured with FILE_URI</span>
-<span class="kd">function</span> <span class="nx">cameraCallback</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
-        <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nf">cameraCallback</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nf">toURL</span><span class="p">();</span>
     <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Show image captured with DATA_URL</span>
-<span class="kd">function</span> <span class="nx">cameraCallback</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
-   <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">cameraCallback</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
    <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageData</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2825,18 +2825,18 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Don't forget to install cordova-plugin-file for resolveLocalFileSystemURL!</span>
 
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
     <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">FILE_URI</span> <span class="p">});</span>
 
-<span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">image</span><span class="dl">'</span><span class="p">);</span>
-        <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">toURL</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="nx">imageURI</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="p">(</span><span class="nx">entry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">image</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">.</span><span class="nf">toURL</span><span class="p">();</span>
     <span class="p">},</span> <span class="nx">onFail</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -2848,17 +2848,17 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
  * can result in out of memory errors and application crashes. Use FILE_URI
  * instead.
  */</span>
-<span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">,</span> <span class="p">{</span> <span class="na">quality</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
     <span class="na">destinationType</span><span class="p">:</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">DestinationType</span><span class="p">.</span><span class="nx">DATA_URL</span>
 <span class="p">});</span>
 
-<span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="nx">imageData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myImage</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">image</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imageData</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -2895,7 +2895,7 @@ can cause problems.  Wrap the alert within a <code>setTimeout()</code> to allow
 the iOS image picker to fully close before the alert
 displays:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// do your thing here!</span>
 <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
 </code></pre></div></div>
@@ -2936,7 +2936,7 @@ displays:</p>
 
 <p>Before you can take a picture, you need to set some Camera plugin options to pass into the Camera plugin&#39;s <code>getPicture</code> function. Here is a common set of recommendations. In this example, you create the object that you will use for the Camera options, and set the <code>sourceType</code> dynamically to support both the Camera app and the file picker.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
         <span class="c1">// Some common settings are 20, 50, and 100</span>
         <span class="na">quality</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
@@ -2956,20 +2956,20 @@ displays:</p>
 
 <p>You take a picture by passing in the options object to <code>getPicture</code>, which takes a CameraOptions object as the third argument. When you call <code>setOptions</code>, pass <code>Camera.PictureSourceType.CAMERA</code> as the picture source.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">openCamera</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">openCamera</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">CAMERA</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nf">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">createNewFileEntry</span><span class="p">;</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="kd">function</span> <span class="nx">cameraSuccess</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span><span class="kd">function</span> <span class="nf">cameraSuccess</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="nx">displayImage</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">);</span>
+        <span class="nf">displayImage</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">);</span>
         <span class="c1">// You may choose to copy the picture, save it somewhere, or upload.</span>
-        <span class="nx">func</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">);</span>
+        <span class="nf">func</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">);</span>
 
-    <span class="p">},</span> <span class="kd">function</span> <span class="nx">cameraError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">},</span> <span class="kd">function</span> <span class="nf">cameraError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">options</span><span class="p">);</span>
 <span class="p">}</span>
@@ -2977,9 +2977,9 @@ displays:</p>
 
 <p>Once you take the picture, you can display it or do something else. In this example, call the app&#39;s <code>displayImage</code> function from the preceding code.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">displayImage</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">displayImage</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageFile</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">imageFile</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">elem</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">imgUri</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -2988,23 +2988,23 @@ displays:</p>
 
 <p>To get smaller images, you can return a resized image by passing both <code>targetHeight</code> and <code>targetWidth</code> values with your CameraOptions object. In this example, you resize the returned image to fit in a 100px by 100px box (the aspect ratio is maintained, so 100px is either the height or width, whichever is greater in the source).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">openCamera</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">openCamera</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">CAMERA</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nf">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">createNewFileEntry</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">selection</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">camera-thmb</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">selection</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">camera-thmb</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">options</span><span class="p">.</span><span class="nx">targetHeight</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
         <span class="nx">options</span><span class="p">.</span><span class="nx">targetWidth</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span><span class="kd">function</span> <span class="nx">cameraSuccess</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span><span class="kd">function</span> <span class="nf">cameraSuccess</span><span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="c1">// Do something</span>
 
-    <span class="p">},</span> <span class="kd">function</span> <span class="nx">cameraError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">},</span> <span class="kd">function</span> <span class="nf">cameraError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
 
     <span class="p">},</span> <span class="nx">options</span><span class="p">);</span>
 <span class="p">}</span>
@@ -3014,20 +3014,20 @@ displays:</p>
 
 <p>When selecting a file using the file picker, you also need to set the CameraOptions object. In this example, set the <code>sourceType</code> to <code>Camera.PictureSourceType.PHOTOLIBRARY</code>. To open the file picker, call <code>getPicture</code> just as you did in the previous example, passing in the success and error callbacks along with CameraOptions object.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">openFilePicker</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">openFilePicker</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nf">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">createNewFileEntry</span><span class="p">;</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span>
         <span class="c1">// success callback</span>
         <span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
             <span class="c1">// Do something</span>
         <span class="p">},</span>
         <span class="c1">// error callback</span>
         <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
         <span class="p">},</span>
         <span class="nx">options</span><span class="p">);</span>
 <span class="p">}</span>
@@ -3037,27 +3037,27 @@ displays:</p>
 
 <p>Resizing a file selected with the file picker works just like resizing using the Camera app; set the <code>targetHeight</code> and <code>targetWidth</code> options.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">openFilePicker</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">openFilePicker</span><span class="p">(</span><span class="nx">selection</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">srcType</span> <span class="o">=</span> <span class="nx">Camera</span><span class="p">.</span><span class="nx">PictureSourceType</span><span class="p">.</span><span class="nx">PHOTOLIBRARY</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nx">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nf">setOptions</span><span class="p">(</span><span class="nx">srcType</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">createNewFileEntry</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">selection</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">picker-thmb</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">selection</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">picker-thmb</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// To downscale a selected image,</span>
         <span class="c1">// Camera.EncodingType (e.g., JPEG) must match the selected image type.</span>
         <span class="nx">options</span><span class="p">.</span><span class="nx">targetHeight</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
         <span class="nx">options</span><span class="p">.</span><span class="nx">targetWidth</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nx">getPicture</span><span class="p">(</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span>
         <span class="c1">// success callback</span>
         <span class="p">(</span><span class="nx">imageUri</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// Do something with image</span>
         <span class="p">},</span>
         <span class="c1">// error callback</span>
         <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="dl">"</span><span class="s2">Unable to obtain picture: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">error</span><span class="p">,</span> <span class="dl">"</span><span class="s2">app</span><span class="dl">"</span><span class="p">);</span>
         <span class="p">},</span>
         <span class="nx">options</span><span class="p">);</span>
 <span class="p">}</span>
@@ -3071,28 +3071,28 @@ displays:</p>
 
 <p>Here is the call to <code>window.resolveLocalFileSystemURL</code>. The image URI is passed to this function from the success callback of <code>getPicture</code>. The success handler of <code>resolveLocalFileSystemURL</code> receives the FileEntry object.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">getFileEntry</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">,</span> <span class="kd">function</span> <span class="nx">success</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">getFileEntry</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">imgUri</span><span class="p">,</span> <span class="kd">function</span> <span class="nf">success</span><span class="p">(</span><span class="nx">fileEntry</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="c1">// Example 1: Copy to app data directory</span>
-        <span class="nb">window</span><span class="p">.</span><span class="nx">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">copyTo</span><span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">profilePic</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nf">resolveLocalFileSystemURL</span><span class="p">(</span><span class="nx">cordova</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">dataDirectory</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">copyTo</span><span class="p">(</span><span class="nx">dataDirectoryEntry</span><span class="p">,</span> <span class="dl">"</span><span class="s2">profilePic</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
         <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
 
         <span class="c1">// Example 2: Upload it!</span>
-        <span class="nx">fileEntry</span><span class="p">.</span><span class="nx">file</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
+        <span class="nx">fileEntry</span><span class="p">.</span><span class="nf">file</span><span class="p">(</span><span class="nf">function </span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileReader</span><span class="p">();</span>
 
             <span class="nx">reader</span><span class="p">.</span><span class="nx">onloadend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-                <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">https://myserver.com/upload</span><span class="dl">'</span><span class="p">);</span>
-                <span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLHttpRequest</span><span class="p">();</span>
+                <span class="nx">xhr</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">https://myserver.com/upload</span><span class="dl">'</span><span class="p">);</span>
+                <span class="nx">xhr</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
                     <span class="c1">// All done!</span>
                 <span class="p">};</span>
-                <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+                <span class="nx">xhr</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
             <span class="p">};</span>
 
-            <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+            <span class="nx">reader</span><span class="p">.</span><span class="nf">readAsArrayBuffer</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
         <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
     <span class="p">},</span> <span class="nx">onError</span><span class="p">);</span>
 <span class="p">}</span>

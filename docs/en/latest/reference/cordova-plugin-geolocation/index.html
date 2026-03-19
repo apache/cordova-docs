@@ -2184,9 +2184,9 @@ where it is otherwise missing).</p>
 are not available until after the <code>deviceready</code> event.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="kd">function</span> <span class="nx">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">navigator.geolocation works well</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="kd">function</span> <span class="nf">onDeviceReady</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">navigator.geolocation works well</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">}</span>
 
 </code></pre></div></div>
@@ -2265,7 +2265,7 @@ error, the <code>geolocationError</code> callback is passed a
     <span class="c1">// current GPS coordinates</span>
     <span class="c1">//</span>
     <span class="kd">var</span> <span class="nx">onSuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Latitude: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Latitude: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
               <span class="dl">'</span><span class="s1">Longitude: </span><span class="dl">'</span>         <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span>         <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
               <span class="dl">'</span><span class="s1">Altitude: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">altitude</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
               <span class="dl">'</span><span class="s1">Accuracy: </span><span class="dl">'</span>          <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">accuracy</span>          <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
@@ -2277,12 +2277,12 @@ error, the <code>geolocationError</code> callback is passed a
 
     <span class="c1">// onError Callback receives a PositionError object</span>
     <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="kd">function</span> <span class="nf">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
               <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nf">getCurrentPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">);</span>
 
 </code></pre></div></div>
 
@@ -2364,8 +2364,8 @@ there is an error, the <code>geolocationError</code> callback executes with a
     <span class="c1">//   This method accepts a `Position` object, which contains</span>
     <span class="c1">//   the current GPS coordinates</span>
     <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onSuccess</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">geolocation</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">function</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">geolocation</span><span class="dl">'</span><span class="p">);</span>
         <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Latitude: </span><span class="dl">'</span>  <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span>      <span class="o">+</span> <span class="dl">'</span><span class="s1">&lt;br /&gt;</span><span class="dl">'</span> <span class="o">+</span>
                             <span class="dl">'</span><span class="s1">Longitude: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span>     <span class="o">+</span> <span class="dl">'</span><span class="s1">&lt;br /&gt;</span><span class="dl">'</span> <span class="o">+</span>
                             <span class="dl">'</span><span class="s1">&lt;hr /&gt;</span><span class="dl">'</span>      <span class="o">+</span> <span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;</span>
@@ -2373,14 +2373,14 @@ there is an error, the <code>geolocationError</code> callback executes with a
 
     <span class="c1">// onError Callback receives a PositionError object</span>
     <span class="c1">//</span>
-    <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="kd">function</span> <span class="nf">onError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span>    <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span>    <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
               <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="c1">// Options: throw an error if no update is received every 30 seconds.</span>
     <span class="c1">//</span>
-    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="p">{</span> <span class="na">timeout</span><span class="p">:</span> <span class="mi">30000</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nf">watchPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="p">{</span> <span class="na">timeout</span><span class="p">:</span> <span class="mi">30000</span> <span class="p">});</span>
 
 </code></pre></div></div>
 
@@ -2431,11 +2431,11 @@ If <code>timeout</code> parameter is not specified then no callback is called.</
     <span class="c1">// Options: watch for changes in position, and use the most</span>
     <span class="c1">// accurate position acquisition method available.</span>
     <span class="c1">//</span>
-    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+    <span class="kd">var</span> <span class="nx">watchID</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nf">watchPosition</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
 
     <span class="c1">// ...later on...</span>
 
-    <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">clearWatch</span><span class="p">(</span><span class="nx">watchID</span><span class="p">);</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nf">clearWatch</span><span class="p">(</span><span class="nx">watchID</span><span class="p">);</span>
 
 </code></pre></div></div>
 
@@ -2544,7 +2544,7 @@ callback function when an error occurs with navigator.geolocation.</p>
 <h2><a id="coord"></a>Get your geolocation coordinates</h2>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">function</span> <span class="nx">getWeatherLocation</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getWeatherLocation</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span>
     <span class="p">(</span><span class="nx">onWeatherSuccess</span><span class="p">,</span> <span class="nx">onWeatherError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
@@ -2556,17 +2556,17 @@ callback function when an error occurs with navigator.geolocation.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">// Success callback for get geo coordinates</span>
 
-<span class="kd">var</span> <span class="nx">onWeatherSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onWeatherSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="nx">getWeather</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
+    <span class="nf">getWeather</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Get weather by using coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getWeather</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getWeather</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1">// Get a free key at http://openweathermap.org/. Replace the "Your_Key_Here" string with that key.</span>
     <span class="kd">var</span> <span class="nx">OpenWeatherAppKey</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Your_Key_Here</span><span class="dl">"</span><span class="p">;</span>
@@ -2575,38 +2575,38 @@ callback function when an error occurs with navigator.geolocation.</p>
       <span class="dl">'</span><span class="s1">http://api.openweathermap.org/data/2.5/weather?lat=</span><span class="dl">'</span>
       <span class="o">+</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;lon=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">longitude</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;appid=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">OpenWeatherAppKey</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&amp;units=imperial</span><span class="dl">'</span><span class="p">;</span>
 
-    <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nf">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nf">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
 
-                <span class="k">if</span> <span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if </span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
 
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#description</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#temp</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#wind</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">wind</span><span class="p">.</span><span class="nx">speed</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#humidity</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">humidity</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#visibility</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">main</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#description</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#temp</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">temp</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#wind</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">wind</span><span class="p">.</span><span class="nx">speed</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#humidity</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">humidity</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#visibility</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">weather</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">main</span><span class="p">);</span>
 
-                    <span class="kd">var</span> <span class="nx">sunriseDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">sys</span><span class="p">.</span><span class="nx">sunrise</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sunrise</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">sunriseDate</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">());</span>
+                    <span class="kd">var</span> <span class="nx">sunriseDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">sys</span><span class="p">.</span><span class="nx">sunrise</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sunrise</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">sunriseDate</span><span class="p">.</span><span class="nf">toLocaleTimeString</span><span class="p">());</span>
 
-                    <span class="kd">var</span> <span class="nx">sunsetDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">sys</span><span class="p">.</span><span class="nx">sunrise</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sunset</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">sunsetDate</span><span class="p">.</span><span class="nx">toLocaleTimeString</span><span class="p">());</span>
+                    <span class="kd">var</span> <span class="nx">sunsetDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">sys</span><span class="p">.</span><span class="nx">sunrise</span><span class="p">);</span>
+                    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sunset</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">sunsetDate</span><span class="p">.</span><span class="nf">toLocaleTimeString</span><span class="p">());</span>
                 <span class="p">}</span>
 
             <span class="p">});</span>
         <span class="p">}</span>
-    <span class="p">}).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">error getting location</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}).</span><span class="nf">fail</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">error getting location</span><span class="dl">"</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// Error callback</span>
 
-<span class="kd">function</span> <span class="nx">onWeatherError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+<span class="kd">function</span> <span class="nf">onWeatherError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
         <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -2617,7 +2617,7 @@ callback function when an error occurs with navigator.geolocation.</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">// Watch your changing position</span>
 
-<span class="kd">function</span> <span class="nx">watchWeatherPosition</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">watchWeatherPosition</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="k">return</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span>
     <span class="p">(</span><span class="nx">onWeatherWatchSuccess</span><span class="p">,</span> <span class="nx">onWeatherError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
@@ -2625,18 +2625,18 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Success callback for watching your changing position</span>
 
-<span class="kd">var</span> <span class="nx">onWeatherWatchSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onWeatherWatchSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">updatedLatitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">updatedLongitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">updatedLatitude</span><span class="p">;</span>
         <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">updatedLongitude</span><span class="p">;</span>
 
         <span class="c1">// Calls function we defined earlier.</span>
-        <span class="nx">getWeather</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
+        <span class="nf">getWeather</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -2660,7 +2660,7 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Get geo coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getMapLocation</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getMapLocation</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span>
     <span class="p">(</span><span class="nx">onMapSuccess</span><span class="p">,</span> <span class="nx">onMapError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
@@ -2668,66 +2668,66 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Success callback for get geo coordinates</span>
 
-<span class="kd">var</span> <span class="nx">onMapSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onMapSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="nx">getMap</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
+    <span class="nf">getMap</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
 
 <span class="p">}</span>
 
 <span class="c1">// Get map by using coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getMap</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getMap</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">mapOptions</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="na">center</span><span class="p">:</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">LatLng</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="na">center</span><span class="p">:</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">LatLng</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
         <span class="na">zoom</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
         <span class="na">mapTypeId</span><span class="p">:</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">MapTypeId</span><span class="p">.</span><span class="nx">ROADMAP</span>
     <span class="p">};</span>
 
     <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nb">Map</span>
-    <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
+    <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">map</span><span class="dl">"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
 
 
-    <span class="kd">var</span> <span class="nx">latLong</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">latLong</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">);</span>
 
-    <span class="kd">var</span> <span class="nx">marker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">Marker</span><span class="p">({</span>
+    <span class="kd">var</span> <span class="nx">marker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">Marker</span><span class="p">({</span>
         <span class="na">position</span><span class="p">:</span> <span class="nx">latLong</span>
     <span class="p">});</span>
 
-    <span class="nx">marker</span><span class="p">.</span><span class="nx">setMap</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
-    <span class="nx">map</span><span class="p">.</span><span class="nx">setZoom</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
-    <span class="nx">map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="nx">marker</span><span class="p">.</span><span class="nx">getPosition</span><span class="p">());</span>
+    <span class="nx">marker</span><span class="p">.</span><span class="nf">setMap</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nf">setZoom</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+    <span class="nx">map</span><span class="p">.</span><span class="nf">setCenter</span><span class="p">(</span><span class="nx">marker</span><span class="p">.</span><span class="nf">getPosition</span><span class="p">());</span>
 <span class="p">}</span>
 
 <span class="c1">// Success callback for watching your changing position</span>
 
-<span class="kd">var</span> <span class="nx">onMapWatchSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onMapWatchSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">updatedLatitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">updatedLongitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">updatedLatitude</span><span class="p">;</span>
         <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">updatedLongitude</span><span class="p">;</span>
 
-        <span class="nx">getMap</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
+        <span class="nf">getMap</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1">// Error callback</span>
 
-<span class="kd">function</span> <span class="nx">onMapError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+<span class="kd">function</span> <span class="nf">onMapError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
         <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Watch your changing position</span>
 
-<span class="kd">function</span> <span class="nx">watchMapPosition</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">watchMapPosition</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="k">return</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span>
     <span class="p">(</span><span class="nx">onMapWatchSuccess</span><span class="p">,</span> <span class="nx">onMapError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
@@ -2758,42 +2758,42 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Get geo coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getPlacesLocation</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getPlacesLocation</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span>
     <span class="p">(</span><span class="nx">onPlacesSuccess</span><span class="p">,</span> <span class="nx">onPlacesError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// Success callback for get geo coordinates</span>
 
-<span class="kd">var</span> <span class="nx">onPlacesSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onPlacesSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="nx">getPlaces</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
+    <span class="nf">getPlaces</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
 
 <span class="p">}</span>
 
 <span class="c1">// Get places by using coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getPlaces</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getPlaces</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="kd">var</span> <span class="nx">latLong</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">latLong</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">);</span>
 
     <span class="kd">var</span> <span class="nx">mapOptions</span> <span class="o">=</span> <span class="p">{</span>
 
-        <span class="na">center</span><span class="p">:</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">),</span>
+        <span class="na">center</span><span class="p">:</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">LatLng</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">),</span>
         <span class="na">zoom</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
         <span class="na">mapTypeId</span><span class="p">:</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">MapTypeId</span><span class="p">.</span><span class="nx">ROADMAP</span>
 
     <span class="p">};</span>
 
-    <span class="nb">Map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nb">Map</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">places</span><span class="dl">"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
+    <span class="nb">Map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">Map</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">places</span><span class="dl">"</span><span class="p">),</span> <span class="nx">mapOptions</span><span class="p">);</span>
 
-    <span class="nx">Infowindow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">InfoWindow</span><span class="p">();</span>
+    <span class="nx">Infowindow</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">InfoWindow</span><span class="p">();</span>
 
-    <span class="kd">var</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">places</span><span class="p">.</span><span class="nx">PlacesService</span><span class="p">(</span><span class="nb">Map</span><span class="p">);</span>
-    <span class="nx">service</span><span class="p">.</span><span class="nx">nearbySearch</span><span class="p">({</span>
+    <span class="kd">var</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">places</span><span class="p">.</span><span class="nc">PlacesService</span><span class="p">(</span><span class="nb">Map</span><span class="p">);</span>
+    <span class="nx">service</span><span class="p">.</span><span class="nf">nearbySearch</span><span class="p">({</span>
 
         <span class="na">location</span><span class="p">:</span> <span class="nx">latLong</span><span class="p">,</span>
         <span class="na">radius</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
@@ -2804,29 +2804,29 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Success callback for watching your changing position</span>
 
-<span class="kd">var</span> <span class="nx">onPlacesWatchSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onPlacesWatchSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">updatedLatitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">updatedLongitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">updatedLatitude</span><span class="p">;</span>
         <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">updatedLongitude</span><span class="p">;</span>
 
-        <span class="nx">getPlaces</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
+        <span class="nf">getPlaces</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1">// Success callback for locating stores in the area</span>
 
-<span class="kd">function</span> <span class="nx">foundStoresCallback</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">foundStoresCallback</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">===</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">places</span><span class="p">.</span><span class="nx">PlacesServiceStatus</span><span class="p">.</span><span class="nx">OK</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">status</span> <span class="o">===</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">places</span><span class="p">.</span><span class="nx">PlacesServiceStatus</span><span class="p">.</span><span class="nx">OK</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">results</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">results</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="nx">createMarker</span><span class="p">(</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+            <span class="nf">createMarker</span><span class="p">(</span><span class="nx">results</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 
         <span class="p">}</span>
     <span class="p">}</span>
@@ -2834,33 +2834,33 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Place a pin for each store on the map</span>
 
-<span class="kd">function</span> <span class="nx">createMarker</span><span class="p">(</span><span class="nx">place</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">createMarker</span><span class="p">(</span><span class="nx">place</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">placeLoc</span> <span class="o">=</span> <span class="nx">place</span><span class="p">.</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">location</span><span class="p">;</span>
 
-    <span class="kd">var</span> <span class="nx">marker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">Marker</span><span class="p">({</span>
+    <span class="kd">var</span> <span class="nx">marker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nc">Marker</span><span class="p">({</span>
         <span class="na">map</span><span class="p">:</span> <span class="nb">Map</span><span class="p">,</span>
         <span class="na">position</span><span class="p">:</span> <span class="nx">place</span><span class="p">.</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">location</span>
     <span class="p">});</span>
 
-    <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="nx">marker</span><span class="p">,</span> <span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">event</span><span class="p">.</span><span class="nf">addListener</span><span class="p">(</span><span class="nx">marker</span><span class="p">,</span> <span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
 
-        <span class="nx">Infowindow</span><span class="p">.</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">place</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-        <span class="nx">Infowindow</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nb">Map</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+        <span class="nx">Infowindow</span><span class="p">.</span><span class="nf">setContent</span><span class="p">(</span><span class="nx">place</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+        <span class="nx">Infowindow</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="nb">Map</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
 
     <span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// Error callback</span>
 
-<span class="kd">function</span> <span class="nx">onPlacesError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+<span class="kd">function</span> <span class="nf">onPlacesError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
         <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Watch your changing position</span>
 
-<span class="kd">function</span> <span class="nx">watchPlacesPosition</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">watchPlacesPosition</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="k">return</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span>
     <span class="p">(</span><span class="nx">onPlacesWatchSuccess</span><span class="p">,</span> <span class="nx">onPlacesError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
@@ -2880,7 +2880,7 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Get geo coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getPicturesLocation</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getPicturesLocation</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span>
     <span class="p">(</span><span class="nx">onPicturesSuccess</span><span class="p">,</span> <span class="nx">onPicturesError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
@@ -2889,31 +2889,31 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Success callback for get geo coordinates</span>
 
-<span class="kd">var</span> <span class="nx">onPicturesSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onPicturesSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="nx">getPictures</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
+    <span class="nf">getPictures</span><span class="p">(</span><span class="nx">Latitude</span><span class="p">,</span> <span class="nx">Longitude</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Get pictures by using coordinates</span>
 
-<span class="kd">function</span> <span class="nx">getPictures</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">getPictures</span><span class="p">(</span><span class="nx">latitude</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pictures</span><span class="dl">'</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pictures</span><span class="dl">'</span><span class="p">).</span><span class="nf">empty</span><span class="p">();</span>
 
     <span class="kd">var</span> <span class="nx">queryString</span> <span class="o">=</span>
     <span class="dl">"</span><span class="s2">https://api.flickr.com/services/rest/?method=flickr.photos.search&amp;api_key=Your_API_Key&amp;lat=</span><span class="dl">"</span>
     <span class="o">+</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">&amp;lon=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">longitude</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">&amp;format=json&amp;jsoncallback=?</span><span class="dl">"</span><span class="p">;</span>
 
-    <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">photos</span><span class="p">.</span><span class="nx">photo</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nf">getJSON</span><span class="p">(</span><span class="nx">queryString</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">.</span><span class="nf">each</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">photos</span><span class="p">.</span><span class="nx">photo</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
 
             <span class="kd">var</span> <span class="nx">photoURL</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">http://farm</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">farm</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">.static.flickr.com/</span><span class="dl">"</span> <span class="o">+</span>
                 <span class="nx">item</span><span class="p">.</span><span class="nx">server</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">_</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">secret</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">_m.jpg</span><span class="dl">"</span><span class="p">;</span>
 
-            <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pictures</span><span class="dl">'</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">&lt;img /&gt;</span><span class="dl">"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">photoURL</span><span class="p">));</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pictures</span><span class="dl">'</span><span class="p">).</span><span class="nf">append</span><span class="p">(</span><span class="nf">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">&lt;img /&gt;</span><span class="dl">"</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">photoURL</span><span class="p">));</span>
 
            <span class="p">});</span>
         <span class="p">}</span>
@@ -2922,31 +2922,31 @@ callback function when an error occurs with navigator.geolocation.</p>
 
 <span class="c1">// Success callback for watching your changing position</span>
 
-<span class="kd">var</span> <span class="nx">onPicturesWatchSuccess</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">onPicturesWatchSuccess</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="kd">var</span> <span class="nx">updatedLatitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">updatedLongitude</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">updatedLatitude</span> <span class="o">!=</span> <span class="nx">Latitude</span> <span class="o">&amp;&amp;</span> <span class="nx">updatedLongitude</span> <span class="o">!=</span> <span class="nx">Longitude</span><span class="p">)</span> <span class="p">{</span>
 
         <span class="nx">Latitude</span> <span class="o">=</span> <span class="nx">updatedLatitude</span><span class="p">;</span>
         <span class="nx">Longitude</span> <span class="o">=</span> <span class="nx">updatedLongitude</span><span class="p">;</span>
 
-        <span class="nx">getPictures</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
+        <span class="nf">getPictures</span><span class="p">(</span><span class="nx">updatedLatitude</span><span class="p">,</span> <span class="nx">updatedLongitude</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1">// Error callback</span>
 
-<span class="kd">function</span> <span class="nx">onPicturesError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">onPicturesError</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">code: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span> <span class="o">+</span>
         <span class="dl">'</span><span class="s1">message: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="c1">// Watch your changing position</span>
 
-<span class="kd">function</span> <span class="nx">watchPicturePosition</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nf">watchPicturePosition</span><span class="p">()</span> <span class="p">{</span>
 
     <span class="k">return</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">watchPosition</span>
     <span class="p">(</span><span class="nx">onPicturesWatchSuccess</span><span class="p">,</span> <span class="nx">onPicturesError</span><span class="p">,</span> <span class="p">{</span> <span class="na">enableHighAccuracy</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>

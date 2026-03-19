@@ -2151,10 +2151,10 @@
 <p>The plugin adds the following to the screen object (<code>window.screen</code>):</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// lock the device orientation</span>
-<span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">portrait</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nf">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">portrait</span><span class="dl">'</span><span class="p">)</span>
 
 <span class="c1">// unlock the orientation</span>
-<span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nf">unlock</span><span class="p">()</span>
 
 <span class="c1">// current orientation</span>
 <span class="p">.</span><span class="nx">orientation</span>
@@ -2205,13 +2205,13 @@
 <h2>Usage</h2>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// set to either landscape</span>
-<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">landscape</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nf">lock</span><span class="p">(</span><span class="dl">'</span><span class="s1">landscape</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="c1">// allow user rotate</span>
-<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">unlock</span><span class="p">();</span>
+<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nf">unlock</span><span class="p">();</span>
 
 <span class="c1">// access current orientation</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Orientation is </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Orientation is </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h2>Events</h2>
@@ -2221,8 +2221,8 @@ For this version of the plugin use the window object if you require notification
 
 <h3>Example usage</h3>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">orientationchange</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="c1">// e.g. portrait</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">orientationchange</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="c1">// e.g. portrait</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
@@ -2230,12 +2230,12 @@ For this version of the plugin use the window object if you require notification
 
 <h3>Example usage</h3>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="c1">// e.g. portrait</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span> <span class="c1">// e.g. portrait</span>
 <span class="p">});</span>
     <span class="c1">// OR</span>
 
-<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+<span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">screen</span><span class="p">.</span><span class="nx">orientation</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
 <span class="p">};</span>
 
 </code></pre></div></div>
