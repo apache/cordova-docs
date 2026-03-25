@@ -57,7 +57,7 @@
   <!-- End Matomo Code -->
   
 
-</head>
+<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
 
 <body>
     <header>
@@ -2123,33 +2123,40 @@
             <div id="page-toc-source">
                 <!-- WARNING: This file is generated. See fetch_docs.js. -->
 
-<!---
-# license: Licensed to the Apache Software Foundation (ASF) under one
-#         or more contributor license agreements.  See the NOTICE file
-#         distributed with this work for additional information
-#         regarding copyright ownership.  The ASF licenses this file
-#         to you under the Apache License, Version 2.0 (the
-#         "License"); you may not use this file except in compliance
-#         with the License.  You may obtain a copy of the License at
+<!--
 #
-#           http://www.apache.org/licenses/LICENSE-2.0
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
 #
-#         Unless required by applicable law or agreed to in writing,
-#         software distributed under the License is distributed on an
-#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#         KIND, either express or implied.  See the License for the
-#         specific language governing permissions and limitations
-#         under the License.
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
 -->
-
 <h1>cordova-plugin-camera</h1>
 
-<p><a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/android.yml"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/android.yml/badge.svg" alt="Android Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/chrome.yml"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/chrome.yml/badge.svg" alt="Chrome Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/ios.yml"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/ios.yml/badge.svg" alt="iOS Testsuite" /></a> <a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/lint.yml"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/lint.yml/badge.svg" alt="Lint Test" /></a></p>
+<p><a href="https://npmjs.com/package/cordova-plugin-camera"><img src="https://img.shields.io/npm/v/cordova-plugin-camera/latest?label=Latest%20Release%20(npm)" alt="npm - Latest" /></a></p>
 
-<p>This plugin defines a global <code>navigator.camera</code> object, which provides an API for taking pictures and for choosing images from
-the system&#39;s image library.</p>
+<p><a href="https://github.com/apache/cordova-plugin-camera"><img src="https://img.shields.io/github/package-json/v/apache/cordova-plugin-camera?label=Development%20(Git)" alt="GitHub" /></a>
+<a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/android.yml?query=branch%3Amaster"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/android.yml/badge.svg?branch=master" alt="GitHub - Android Workflow" /></a>
+<a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/chrome.yml?query=branch%3Amaster"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/chrome.yml/badge.svg?branch=master" alt="GitHub - Chrome Workflow" /></a>
+<a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/ios.yml?query=branch%3Amaster"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/ios.yml/badge.svg?branch=master" alt="GitHub - iOS Workflow" /></a>
+<a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/lint.yml?query=branch%3Amaster"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/lint.yml/badge.svg?branch=master" alt="GitHub - Lint" /></a>
+<a href="https://github.com/apache/cordova-plugin-camera/actions/workflows/release-audit.yml?query=branch%3Amaster"><img src="https://github.com/apache/cordova-plugin-camera/actions/workflows/release-audit.yml/badge.svg?branch=master" alt="GitHub - Release Audit Workflow" /></a></p>
 
-<p>Although the object is attached to the global scoped <code>navigator</code>, it is not available until after the <code>deviceready</code> event.</p>
+<p>This plugin defines a global <code>navigator.camera</code> object, which provides an API for taking pictures and choosing images from the device&#39;s image library.</p>
+
+<p>Although the object is attached to the global <code>navigator</code> object, it is not available until after the <code>deviceready</code> event.</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">deviceready</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDeviceReady</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 
@@ -2158,41 +2165,68 @@ the system&#39;s image library.</p>
 <span class="p">}</span>
 </code></pre></div></div>
 
+<h2>Supported Platforms</h2>
+
+<ul>
+  <li>Android</li>
+  <li>Browser</li>
+  <li>iOS</li>
+</ul>
+
 <h2>Installation</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera
 </code></pre></div></div>
 
-<p>It is also possible to install via repo url directly ( unstable )</p>
+<h3>Plugin Variables</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add https://github.com/apache/cordova-plugin-camera.git
+<p>Plugin variables let you configure parts of a plugin and must be set during installation. To set these variables, append <code>--variable {VARIABLE_NAME}={VALUE}</code> to the <code>cordova plugin add</code> command for each variable. If you wish you change or remove any of the plugin variables, uninstall and reinstall with the updated variables.</p>
+
+<ul>
+  <li>
+    <p><strong><code>ANDROIDX_CORE_VERSION</code></strong></p>
+
+    <p><strong>Default:</strong> <code>1.6.+</code></p>
+
+    <p>This variable allows you to configure the <code>androidx.core:core</code> dependency for this plugin only. Some plugins may include this dependency with hard-coded versions, so you can use this variable to try to match those versions and reduce conflicts.</p>
+
+    <p><strong>Example:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova plugin add cordova-plugin-camera <span class="nt">--variable</span> <span class="nv">ANDROIDX_CORE_VERSION</span><span class="o">=</span>1.8.0
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2>App Configuration</h2>
+
+<p>The following preferences can be set in the app&#39;s <code>config.xml</code> file to configure the plugin.</p>
+
+<h3>Android-Specific</h3>
+
+<h4>Supporting <code>saveToPhotoAlbum</code> on Android 9 (API 28) &amp; Lower</h4>
+
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> Warning</p><p>If you support Android 9 (API 28) and lower and need <code>saveToPhotoAlbum</code>, then this step is required.</p>
+
+<p>If you support only Android 10 (API 29) and later, or do not need <code>saveToPhotoAlbum</code>, then skip this step.</p>
+
+<p>Configuring the <code>WRITE_EXTERNAL_STORAGE</code> permission for Android 10 or later has no effect.</p>
+</div>
+
+<p>To declare the <code>WRITE_EXTERNAL_STORAGE</code> permission, add the following:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/config-file&gt;</span>
 </code></pre></div></div>
 
-<h2>Plugin variables</h2>
+<h3>iOS-Specific</h3>
 
-<p>The plugin uses the <code>ANDROIDX_CORE_VERSION</code> variable to configure <code>androidx.core:core</code> dependency. This allows to avoid conflicts with other plugins that have the dependency hardcoded.
-If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
+<h4>Mandatory Usage Description</h4>
 
-<p>The variable is configured on install time</p>
+<div class="markdown-alert markdown-alert-warning"><p class="markdown-alert-title"><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> Warning</p><p>Since iOS 10, you must provide usage descriptions in the <code>info.plist</code> when accessing privacy-sensitive data.</p>
+</div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera --variable ANDROIDX_CORE_VERSION=1.8.0
-</code></pre></div></div>
-
-<h2>How to Contribute</h2>
-
-<p>Contributors are welcome! And we need your contributions to keep the project moving forward. You can[report bugs, improve the documentation, or <a href="https://github.com/apache/cordova-plugin-camera/pulls">contribute code</a>.</p>
-
-<p>There is a specific <a href="http://wiki.apache.org/cordova/ContributorWorkflow">contributor workflow</a> we recommend. Start reading there. More information is available on <a href="http://wiki.apache.org/cordova">our wiki</a>.</p>
-
-<p><strong>Have a solution?</strong> Send a <a href="https://github.com/apache/cordova-plugin-camera/pulls">Pull Request</a>.</p>
-
-<p>In order for your changes to be accepted, you need to sign and submit an Apache <a href="http://www.apache.org/licenses/#clas">ICLA</a> (Individual Contributor License Agreement). Then your name will appear on the list of CLAs signed by <a href="https://people.apache.org/committer-index.html#unlistedclas">non-committers</a> or <a href="http://people.apache.org/committers-by-project.html#cordova">Cordova committers</a>.</p>
-
-<p><strong>And don&#39;t forget to test and document your code.</strong></p>
-
-<h3>iOS Specifics</h3>
-
-<p>Since iOS 10 it&#39;s mandatory to provide a usage description in the <code>info.plist</code> when accessing privacy-sensitive data. The required keys depend on how you use the plugin and which iOS versions you support:</p>
+<p>The required keys depend on how you use the plugin and which iOS versions you support:</p>
 
 <table>
   <thead>
@@ -2241,6 +2275,23 @@ If no value is passed, it will use <code>1.6.+</code> as the default value.</p>
     <span class="nt">&lt;string&gt;</span>need location access to find things nearby<span class="nt">&lt;/string&gt;</span>
 <span class="nt">&lt;/edit-config&gt;</span>
 </code></pre></div></div>
+
+<h4>Preferences</h4>
+
+<ul>
+  <li>
+    <p><strong><code>CameraUsesGeolocation</code></strong></p>
+
+    <p><strong>Default:</strong> <code>false</code> (boolean)</p>
+
+    <p>Enables geolocation data in the EXIF header when capturing JPEG images. When set to <code>true</code>, the app will request for geolocation permissions .</p>
+
+    <p>To set this preference, add the following:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;preference</span> <span class="na">name=</span><span class="s">"CameraUsesGeolocation"</span> <span class="na">value=</span><span class="s">"false"</span> <span class="nt">/&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
 
 <hr />
 
@@ -2393,17 +2444,6 @@ quality, even if a <code>quality</code> parameter is specified.  To avoid common
 memory problems, set <code>Camera.destinationType</code> to <code>FILE_URI</code> rather
 than <code>DATA_URL</code>.</p>
 
-<p><strong>NOTE</strong>: To use <code>saveToPhotoAlbum</code> option on Android 9 (API 28) and lower, the <code>WRITE_EXTERNAL_STORAGE</code> permission must be declared.</p>
-
-<p>To do this, add the following in your <code>config.xml</code>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;config-file</span> <span class="na">target=</span><span class="s">"AndroidManifest.xml"</span> <span class="na">parent=</span><span class="s">"/*"</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span> <span class="na">android:maxSdkVersion=</span><span class="s">"28"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/config-file&gt;</span>
-</code></pre></div></div>
-
-<p>Android 10 (API 29) and later devices does not require <code>WRITE_EXTERNAL_STORAGE</code> permission. If your application only supports Android 10 or later, then this step is not necessary.</p>
-
 <h4>FILE_URI Usage</h4>
 
 <p>When <code>FILE_URI</code> is used, the returned path is not directly usable. The file path needs to be resolved into
@@ -2553,6 +2593,7 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
 
 <h3>camera.CameraOptions : <code>Object</code></h3>
 <p>Optional parameters to customize the camera settings.</p>
+
 <ul>
   <li><a href="#CameraOptions-quirks">Quirks</a></li>
 </ul>
@@ -2861,17 +2902,6 @@ after calling <a href="#module_camera.getPicture"><code>camera.getPicture</code>
     <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
-
-<h4>Preferences (iOS)</h4>
-
-<ul>
-  <li>
-    <p><strong>CameraUsesGeolocation</strong> (boolean, defaults to false). For capturing JPEGs, set to true to get geolocation data in the EXIF header. This will trigger a request for geolocation permissions if set to true.</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;preference name="CameraUsesGeolocation" value="false" /&gt;
-</code></pre></div>    </div>
-  </li>
-</ul>
 
 <h4>Android Quirks</h4>
 
