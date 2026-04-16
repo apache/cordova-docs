@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
+  <title id="title">How iOS can render icon variants</title>
+  <desc id="desc">Illustration of regular, dark, and tinted icon appearances.</desc>
+  <rect width="900" height="300" fill="#f6f7f9"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" fill="#1f2937">
+    <text x="45" y="40" font-size="20" font-weight="700">How iOS renders variants</text>
+    <text x="45" y="64" font-size="14">Xcode 16+ can emit dark and tinted variants when foreground/monochrome are provided.</text>
+  </g>
+
+  <g transform="translate(70,95)">
+    <text x="90" y="-14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#111827">Regular appearance</text>
+    <rect x="10" y="8" width="160" height="160" rx="36" fill="#0ea5e9"/>
+    <rect x="10" y="8" width="160" height="160" rx="36" fill="url(#gradB)"/>
+    <circle cx="90" cy="88" r="56" fill="#ffffff" fill-opacity="0.25"/>
+    <path d="M79 74c0-8 6-14 14-14h21c20 0 36 16 36 36s-16 36-36 36H93c-8 0-14-6-14-14V74Zm22 6v32h13c9 0 16-7 16-16s-7-16-16-16h-13Z" fill="#fff"/>
+  </g>
+
+  <g transform="translate(350,95)">
+    <text x="90" y="-14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#111827">Dark appearance</text>
+    <rect x="10" y="8" width="160" height="160" rx="36" fill="#111827"/>
+    <path d="M79 74c0-8 6-14 14-14h21c20 0 36 16 36 36s-16 36-36 36H93c-8 0-14-6-14-14V74Zm22 6v32h13c9 0 16-7 16-16s-7-16-16-16h-13Z" fill="#f9fafb"/>
+  </g>
+
+  <g transform="translate(630,95)">
+    <text x="90" y="-14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#111827">Tinted appearance</text>
+    <rect x="10" y="8" width="160" height="160" rx="36" fill="url(#checkerR)"/>
+    <rect x="10" y="8" width="160" height="160" rx="36" fill="none" stroke="#9ca3af"/>
+    <path d="M79 74c0-8 6-14 14-14h21c20 0 36 16 36 36s-16 36-36 36H93c-8 0-14-6-14-14V74Zm22 6v32h13c9 0 16-7 16-16s-7-16-16-16h-13Z" fill="#8b5cf6"/>
+  </g>
+
+  <defs>
+    <linearGradient id="gradB" x1="10" y1="8" x2="170" y2="168" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0369a1"/>
+    </linearGradient>
+    <pattern id="checkerR" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#f8fafc"/>
+      <rect x="0" y="0" width="8" height="8" fill="#e5e7eb"/>
+      <rect x="8" y="8" width="8" height="8" fill="#e5e7eb"/>
+    </pattern>
+  </defs>
+</svg>
