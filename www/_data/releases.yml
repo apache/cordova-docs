@@ -339,16 +339,15 @@
       customName: cordova-plugin-media
 
 - package: cordova-plugin-network-information
-  version: 3.0.0
+  version: 3.1.0
   downloadDir: plugins
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
-      customName: cordova-plugin-network-information
 
 - package: cordova-plugin-screen-orientation
   version: 3.0.4
