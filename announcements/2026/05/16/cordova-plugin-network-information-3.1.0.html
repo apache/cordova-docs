@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content=" ">
+    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-network-information!  cordova-plugin-network-information@3.1.0To upgrade:cor...">
 
     <title>
         
             
-                Artwork - Apache Cordova
+                Network Information Plugin 3.1.0 Released! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/artwork/">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2026/05/16/cordova-plugin-network-information-3.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -57,7 +57,7 @@
   <!-- End Matomo Code -->
   
 
-<style>.markdown-alert{padding:.5rem 1rem;margin-bottom:1rem;color:inherit;border-left:.25em solid #30363d}.markdown-alert>:first-child{margin-top:0}.markdown-alert>:last-child{margin-bottom:0}.markdown-alert .markdown-alert-title{display:flex;font-weight:500;align-items:center;line-height:1}.markdown-alert svg{margin-right:.5rem!important}.markdown-alert svg path{fill:currentColor}.markdown-alert.markdown-alert-note{border-left-color:#4493f8}.markdown-alert.markdown-alert-note .markdown-alert-title{color:#4493f8}.markdown-alert.markdown-alert-important{border-left-color:#ab7df8}.markdown-alert.markdown-alert-important .markdown-alert-title{color:#ab7df8}.markdown-alert.markdown-alert-warning{border-left-color:#9e6a03}.markdown-alert.markdown-alert-warning .markdown-alert-title{color:#d29922}.markdown-alert.markdown-alert-tip{border-left-color:#238636}.markdown-alert.markdown-alert-tip .markdown-alert-title{color:#3fb950}.markdown-alert.markdown-alert-caution{border-left-color:#da3633}.markdown-alert.markdown-alert-caution .markdown-alert-title{color:#f85149}</style></head>
+</head>
 
 <body>
     <header>
@@ -82,7 +82,7 @@
                         <li >
                             <a href="/plugins">Plugins</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
                         </li>
                         <li >
@@ -109,69 +109,93 @@
     <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
 </header>
 
-<div class="artwork container">
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <h1>Apache Cordova Artwork</h1>
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Network Information Plugin 3.1.0 Released!</div>
+        <div class="author">By:
+            
+              Manuel Beck
+            
         </div>
+        <div class="date">16 May 2026</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-network-information</code>!</p>
 
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-network-information">cordova-plugin-network-information@3.1.0</a></li>
+</ul>
 
-    </div>
+<p><strong>To upgrade:</strong></p>
 
-    <div class="row iconset">
-        <div class="images col-xs-12 col-md-8">
-            <img src="/static/img/cordova_256.png" alt=""/>
-            <img src="/static/img/cordova_128.png" alt=""/>
-            <img src="/static/img/cordova_64.png" alt=""/>
-            <img src="/static/img/cordova_48.png" alt=""/>
-            <img src="/static/img/cordova_32.png" alt=""/>
-            <img src="/static/img/cordova_24.png" alt=""/>
-            <img src="/static/img/cordova_16.png" alt=""/>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-network-information
+cordova plugin add cordova-plugin-network-information@3.1.0
+</code></pre></div></div>
+
+<h2>Release Highlights</h2>
+
+<h3>Features</h3>
+
+<ul>
+  <li>feat(android): add 5G check and test (<a href="https://github.com/apache/cordova-plugin-network-information/pull/172">#172</a>)</li>
+  <li>feat(ios): add 5G check (<a href="https://github.com/apache/cordova-plugin-network-information/pull/159">#159</a>)</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+  <li>fix(ios): fix deprecation warnings for iOS 12+ (<a href="https://github.com/apache/cordova-plugin-network-information/pull/169">#169</a>)</li>
+  <li>fix(ios): Remove redundant <code>#import &lt;netinet6/in6.h&gt;</code> for Xcode 26.4 compatibility (<a href="https://github.com/apache/cordova-plugin-network-information/pull/166">#166</a>)</li>
+</ul>
+
+<h3>Other</h3>
+
+<ul>
+  <li>chore: various updates (<a href="https://github.com/apache/cordova-plugin-network-information/pull/177">#177</a>)</li>
+  <li>chore: update asf config (<a href="https://github.com/apache/cordova-plugin-network-information/pull/161">#161</a>)</li>
+  <li>chore(dev-dep): bump @cordova/eslint-config to 6.0.1 w/ fixes (<a href="https://github.com/apache/cordova-plugin-network-information/pull/171">#171</a>) [<a href="https://github.com/apache/cordova-plugin-network-information/commit/952bd51">952bd51</a>]</li>
+</ul>
+
+<p>For a full list of changes, see the <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/RELEASENOTES.md#310">release notes</a>.</p>
+
+<p>Please report any issues you find at <a href="https://github.com/apache/cordova-plugin-network-information/issues">GitHub</a>!</p>
+
         </div>
-        <div class="col-xs-12 col-md-4">
-            <div class="button-container middle">
-                <a class="button" href="/static/downloads/icons.zip">ICON SET<label>512x512~16x16</label></a>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2026/03/12/cordova-ios-8.0.1.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2026/03/12/cordova-ios-8.0.1.html">Cordova iOS 8.0.1 is now available!</a>
+                    <div class="date"> 12 Mar 2026 - By Darryl Pogue </div>
+                    <p class="content">
+                        We are happy to announce that we have just released Cordova iOS...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
             </div>
         </div>
-    </div>
-
-    <div class="row iconset">
-        <div class="images col-xs-12 col-md-8">
-            <img src="/static/img/artwork/cordova_logo_dark_gray_large.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_normal_dark_large.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_normal_large.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_white_large.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_dark_gray_small.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_normal_dark_small.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_normal_small.png" alt="" />
-            <img src="/static/img/artwork/cordova_logo_white_small.png" alt="" />
-        </div>
-
-
-        <div class="col-xs-12 col-md-4">
-            <div class="button-container middle">
-                <a class="button" href="/static/downloads/logos.zip">LOGO SET<label>2 Sets of 4 Variations</label></a>
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-    <div class="row iconset">
-        <div class="images col-xs-12 col-md-8">
-            <img src="/static/img/splash.png" alt=""/>
-        </div>
-        <div class="col-xs-12 col-md-4">
-            <div class="button-container middle">
-                <a class="button" href="/static/downloads/screens.zip">SPLASH SCREENS<label>For iPhone, iPad, etc.</label></a>
-            </div>
-        </div>
-    </div>
+    </footer>
 </div>
 
+</div>
 
+</div>
 
 <div class="blue-divider"></div>
 <footer>
