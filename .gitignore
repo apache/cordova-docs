@@ -23,3 +23,8 @@ ruby_modules
 Gemfile.lock
 
 .*.swp
+
+# asdf tool-version pinning for e.g. ruby
+.tool-versions
+# Workspace files for VS Code
+*.code-workspace
