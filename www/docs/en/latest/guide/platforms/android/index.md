@@ -35,6 +35,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
     <thead>
         <tr>
             <th>cordova-android Version</th>
+            <th>Latest Release</th>
             <th>Android API-Levels (Android Version)</th>
             <th>Library &amp; Tooling Version</th>
         </tr>
@@ -42,6 +43,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
     <tbody>
         <tr>
             <td>15.0.x</td>
+            <td>15.0.0</td>
             <td>24 (7.0) - 36 (16.0)</td>
             <td>
                 <ul>
@@ -60,6 +62,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
             <td>14.0.x</td>
+            <td>14.0.1</td>
             <td>24 (7.0) - 35 (15.0)</td>
             <td>
                 <ul>
@@ -78,6 +81,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
             <td>13.0.x</td>
+            <td>13.0.0</td>
             <td>24 (7.0) - 34 (14.0)</td>
             <td>
                 <ul>
@@ -96,6 +100,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
             <td>12.0.x</td>
+            <td>12.0.1</td>
             <td>24 (7.0) - 33 (13.0)</td>
             <td>
                 <ul>
@@ -114,6 +119,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
         <td>11.0.x</td>
+        <td>11.0.0</td>
         <td>22 (5.1) - 32 (12L)</td>
         <td>
             <ul>
@@ -132,6 +138,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
             <td>10.1.x</td>
+            <td>10.1.2</td>
             <td>22 (5.1) - 30 (11.0)</td>
             <td>
                 <ul>
@@ -149,6 +156,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
             <td>10.0.x</td>
+            <td>10.0.1</td>
             <td>22 (5.1) - 30 (11.0)</td>
             <td>
                 <ul>
@@ -166,41 +174,49 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
         </tr>
         <tr>
             <td>9.X.X</td>
+            <td>9.1.0</td>
             <td>22 (5.1) - 29 (10.0)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>8.X.X</td>
+            <td>8.1.0</td>
             <td>19 (4.4) - 28 (9.0)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>7.X.X</td>
+            <td>7.1.4</td>
             <td>19 (4.4) - 27 (8.1)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>6.X.X</td>
+            <td>6.4.0</td>
             <td>16 (4.1) - 26 (8.0)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>5.X.X</td>
+            <td>5.2.2</td>
             <td>14 (4.0) - 23 (6.0)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>4.1.X</td>
+            <td>-</td>
             <td>14 (4.0) - 22 (5.1)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>4.0.X</td>
+            <td>-</td>
             <td>10 (2.3.3) - 22 (5.1)</td>
             <td>-</td>
         </tr>
         <tr>
             <td>3.7.X</td>
+            <td>-</td>
             <td>10 (2.3.3) - 21 (5.0)</td>
             <td>-</td>
         </tr>

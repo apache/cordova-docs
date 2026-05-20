@@ -44,6 +44,7 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
     <thead>
         <tr>
             <th>Cordova-iOS Version</th>
+            <th>Latest Release</th>
             <th>iOS Minimum-Support</th>
             <th>Tooling Version</th>
         </tr>
@@ -51,6 +52,7 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
     <tbody>
         <tr>
             <td>8.x</td>
+            <td>8.0.1</td>
             <td>13.0</td>
             <td>
                 <ul>
@@ -63,6 +65,7 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
         </tr>
         <tr>
             <td>7.x</td>
+            <td>7.1.1</td>
             <td>11.0</td>
             <td>
                 <ul>
@@ -75,6 +78,7 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
         </tr>
         <tr>
             <td>6.x</td>
+            <td>6.3.0</td>
             <td>11.0</td>
             <td>
                 <ul>
@@ -87,6 +91,7 @@ The table below outlines Cordova-iOS's prerequisites by version. Additionally, X
         </tr>
         <tr>
             <td>5.x</td>
+            <td>5.1.1</td>
             <td>10.0</td>
             <td>
                 <ul>
