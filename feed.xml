@@ -6,9 +6,110 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 May 2026 10:01:12 +0000</pubDate>
-    <lastBuildDate>Sun, 17 May 2026 10:01:12 +0000</lastBuildDate>
+    <pubDate>Sun, 31 May 2026 09:08:54 +0000</pubDate>
+    <lastBuildDate>Sun, 31 May 2026 09:08:54 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova iOS 8.1.0 is now available!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova iOS 8.1.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building iOS applications.&lt;/p&gt;
+
+&lt;p&gt;This release contains fixes for several bugs that were reported against the 8.0.1 version.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@8.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
+cordova platform add ios@8.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add ios@8.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fix for Ionic WebView plugin&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Re-add an implementation of the deprecated &lt;code&gt;shouldOverrideLoadWithRequest:navigationType:&lt;/code&gt; selector because the Ionic WebView plugin relies on it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fix &lt;code&gt;/_app_file_/&lt;/code&gt; URLs not working&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;During refactoring of the &lt;strong&gt;URLSchemeTask&lt;/strong&gt; handler for cordova-ios 8, an error was introduced where &lt;code&gt;/_app_file_&lt;/code&gt; URLs were treated as being relative to the resources directory rather than as filesystem paths.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fixes various build issues&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h2&gt;Changes include:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1653&quot;&gt;GH-1653&lt;/a&gt; fix(actions): fix CDVURLSchemeHandlerTest warnings&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1652&quot;&gt;GH-1652&lt;/a&gt; fix(actions): IPhone 16e not found on macOS 26 for latest OS&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1640&quot;&gt;GH-1640&lt;/a&gt; fix: &lt;code&gt;NSInternalInconsistencyException: &quot;No response has been sent for this task&quot;&lt;/code&gt; - second attempt&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1637&quot;&gt;GH-1637&lt;/a&gt; fix(build): Target a generic &lt;strong&gt;iOS&lt;/strong&gt; simulator for building&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1632&quot;&gt;GH-1632&lt;/a&gt; fix(ionic): Add workaround for Ionic WebView plugin&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1618&quot;&gt;GH-1618&lt;/a&gt; fix(xcode): Fix library search paths for target&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1621&quot;&gt;GH-1621&lt;/a&gt; fix(xcode): Ensure we do NFD normalization on PRODUCT_NAME&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1616&quot;&gt;GH-1616&lt;/a&gt; fix(spm): Ensure the deployment target always gets set&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1606&quot;&gt;GH-1606&lt;/a&gt; fix(webview): Ensure scheme task is always finished&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1610&quot;&gt;GH-1610&lt;/a&gt; fix(scheme): Fix /&lt;em&gt;app_file&lt;/em&gt;/ URLs not working&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1612&quot;&gt;GH-1612&lt;/a&gt; fix(spm): Set deployment target in Package.swift&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1597&quot;&gt;GH-1597&lt;/a&gt; fix: ignore spm build artifacts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1650&quot;&gt;GH-1650&lt;/a&gt; chore: remove redundant Hello World template files&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1647&quot;&gt;GH-1647&lt;/a&gt; chore(deps): bump @xmldom/xmldom from 0.8.12 to 0.8.13&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1634&quot;&gt;GH-1634&lt;/a&gt; doc: &lt;code&gt;keepCallback&lt;/code&gt; and &lt;code&gt;setKeepCallbackAsBool:&lt;/code&gt; of &lt;code&gt;CDVPluginResult&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1646&quot;&gt;GH-1646&lt;/a&gt; chore(deps): bump lodash from 4.17.23 to 4.18.1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1644&quot;&gt;GH-1644&lt;/a&gt; chore(deps): bump @xmldom/xmldom from 0.8.11 to 0.8.12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1642&quot;&gt;GH-1642&lt;/a&gt; chore(deps): bump picomatch&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1639&quot;&gt;GH-1639&lt;/a&gt; chore: update package-lock&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1635&quot;&gt;GH-1635&lt;/a&gt; chore: Fix improperly ignored deprecation warning&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1633&quot;&gt;GH-1633&lt;/a&gt; chore: Bump patch level for ongoing dev work&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1628&quot;&gt;GH-1628&lt;/a&gt; chore: Fix missing licence headers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1627&quot;&gt;GH-1627&lt;/a&gt; release(8.0.1): Update release notes and version&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1623&quot;&gt;GH-1623&lt;/a&gt; chore(ci): draft release&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1624&quot;&gt;GH-1624&lt;/a&gt; chore: cleanup license headers&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1625&quot;&gt;GH-1625&lt;/a&gt; chore: add DEVELOPMENT.md &amp;amp; cleanup &lt;code&gt;README&lt;/code&gt;.md&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1622&quot;&gt;GH-1622&lt;/a&gt; refactor(versions): Refactor version code for test reliability&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1619&quot;&gt;GH-1619&lt;/a&gt; chore(deps): Update to latest jasmine &amp;amp; c8 versions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1614&quot;&gt;GH-1614&lt;/a&gt; doc(readme): improve badges&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1601&quot;&gt;GH-1601&lt;/a&gt; chore: Remove compileBitcode from export options&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1611&quot;&gt;GH-1611&lt;/a&gt; chore: set swift-tools-version to 5.9&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1599&quot;&gt;GH-1599&lt;/a&gt; chore(deps): bump lodash from 4.17.21 to 4.17.23&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1598&quot;&gt;GH-1598&lt;/a&gt; Add missing trailing new line&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1592&quot;&gt;GH-1592&lt;/a&gt; doc(readme): add minimum &lt;strong&gt;iOS&lt;/strong&gt; version&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1591&quot;&gt;GH-1591&lt;/a&gt; doc(readme): add Link to &lt;strong&gt;iOS&lt;/strong&gt; Platform Guide&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1588&quot;&gt;GH-1588&lt;/a&gt; chore: update release audit workflow &amp;amp; license headers&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/05/31/cordova-ios-8.1.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/05/31/cordova-ios-8.1.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Network Information Plugin 3.1.0 Released!</title>
@@ -942,72 +1043,6 @@ This resolves numerous issues around CocoaPods, multi-target projects, and Info.
         <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Common 6.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-common@6.0.0&lt;/code&gt; has been released. This is one of the libraries used behind-the-scenes by nearly all of the Cordova tooling and provides utilities for dealing with things like &lt;code&gt;config.xml&lt;/code&gt; parsing.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable changes in this major release were:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Removal of &lt;code&gt;superspawn&lt;/code&gt;, which also dropped the npm dependencies &lt;code&gt;q&lt;/code&gt; and &lt;code&gt;cross-spawn&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Update to the &lt;code&gt;&amp;lt;resource-file&amp;gt;&lt;/code&gt; directive to allow directories and their contents to be copied.&lt;/li&gt;
-  &lt;li&gt;Update to the &lt;code&gt;&amp;lt;config-file&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;edit-config&amp;gt;&lt;/code&gt; directives to support finding unprefixed &lt;code&gt;Info.plist&lt;/code&gt; files.&lt;/li&gt;
-  &lt;li&gt;Increase in the Node.js engine requirement to &lt;code&gt;&amp;gt;=20.9.0&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/239&quot;&gt;GH-239&lt;/a&gt; feat!: change &lt;code&gt;resource-file&lt;/code&gt; behavior to support directory contents&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/236&quot;&gt;GH-236&lt;/a&gt; feat!: remove &lt;code&gt;superspawn.js&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/231&quot;&gt;GH-231&lt;/a&gt; feat!: remove &lt;code&gt;superspawn&lt;/code&gt; &amp;amp; npm packages &lt;code&gt;q&lt;/code&gt; &amp;amp; &lt;code&gt;cross-spawn&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/235&quot;&gt;GH-235&lt;/a&gt; dep(npm)!: bump &lt;code&gt;@cordova/eslint-config@6.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Bumps &lt;code&gt;node &amp;gt;=20.9.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/228&quot;&gt;GH-228&lt;/a&gt; chore!: bump &lt;code&gt;node &amp;gt;=20.5.0&lt;/code&gt; &amp;amp; upgrade npm packages&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/212&quot;&gt;GH-212&lt;/a&gt; feat: Support finding an unprefixed &lt;code&gt;Info.plist&lt;/code&gt; file&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/240&quot;&gt;GH-240&lt;/a&gt; chore: update &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/232&quot;&gt;GH-232&lt;/a&gt; chore(tests): Improve test coverage&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/229&quot;&gt;GH-229&lt;/a&gt; chore(coverage): Move from &lt;code&gt;nyc&lt;/code&gt; to &lt;code&gt;c8&lt;/code&gt; for code coverage&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/238&quot;&gt;GH-238&lt;/a&gt; dep(npm): update w/ rebuilt &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/237&quot;&gt;GH-237&lt;/a&gt; refactor(bom): Bring &lt;code&gt;strip-bom&lt;/code&gt; in as util&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI &amp;amp; Refactoring:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/234&quot;&gt;GH-234&lt;/a&gt; ci: use macos-15&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/233&quot;&gt;GH-233&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/pull/230&quot;&gt;GH-230&lt;/a&gt; ci: add permissions block &amp;amp; commit hash pinning of third-party actions&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html</guid>
         
         <category>news</category>
         

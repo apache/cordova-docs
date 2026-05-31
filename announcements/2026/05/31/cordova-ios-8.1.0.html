@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="We are happy to announce that we have just released an update for cordova-plugin-network-information!  cordova-plugin-network-information@3.1.0To upgrade:cor...">
+    <meta name="description" content="We are happy to announce that we have just released Cordova iOS 8.1.0! This is one of Cordova&#39;s supported platforms for building iOS applications.This re...">
 
     <title>
         
             
-                Network Information Plugin 3.1.0 Released! - Apache Cordova
+                Cordova iOS 8.1.0 is now available! - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/announcements/2026/05/16/cordova-plugin-network-information-3.1.0.html">
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2026/05/31/cordova-ios-8.1.0.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -120,55 +120,101 @@
 
 <div class="post">
     <header>
-        <div class="title">Network Information Plugin 3.1.0 Released!</div>
+        <div class="title">Cordova iOS 8.1.0 is now available!</div>
         <div class="author">By:
             
-              Manuel Beck
+              Niklas Merz
             
         </div>
-        <div class="date">16 May 2026</div>
+        <div class="date">31 May 2026</div>
     </header>
     <section>
         <div>
-            <p>We are happy to announce that we have just released an update for <code>cordova-plugin-network-information</code>!</p>
+            <p>We are happy to announce that we have just released <code>Cordova iOS 8.1.0</code>! This is one of Cordova&#39;s supported platforms for building iOS applications.</p>
+
+<p>This release contains fixes for several bugs that were reported against the 8.0.1 version.</p>
 
 <ul>
-  <li><a href="https://www.npmjs.com/package/cordova-plugin-network-information">cordova-plugin-network-information@3.1.0</a></li>
+  <li><a href="https://www.npmjs.com/package/cordova-ios">cordova-ios@8.1.0</a></li>
 </ul>
 
 <p><strong>To upgrade:</strong></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin remove cordova-plugin-network-information
-cordova plugin add cordova-plugin-network-information@3.1.0
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform remove ios
+cordova platform add ios@8.1.0
+</code></pre></div></div>
+
+<p><strong>To install:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add ios@8.1.0
 </code></pre></div></div>
 
 <h2>Release Highlights</h2>
 
-<h3>Features</h3>
-
 <ul>
-  <li>feat(android): add 5G check and test (<a href="https://github.com/apache/cordova-plugin-network-information/pull/172">#172</a>)</li>
-  <li>feat(ios): add 5G check (<a href="https://github.com/apache/cordova-plugin-network-information/pull/159">#159</a>)</li>
+  <li>
+    <p><strong>Fix for Ionic WebView plugin</strong></p>
+
+    <p>Re-add an implementation of the deprecated <code>shouldOverrideLoadWithRequest:navigationType:</code> selector because the Ionic WebView plugin relies on it.</p>
+  </li>
+  <li>
+    <p><strong>Fix <code>/_app_file_/</code> URLs not working</strong></p>
+
+    <p>During refactoring of the <strong>URLSchemeTask</strong> handler for cordova-ios 8, an error was introduced where <code>/_app_file_</code> URLs were treated as being relative to the resources directory rather than as filesystem paths.</p>
+  </li>
+  <li>
+    <p><strong>Fixes various build issues</strong></p>
+  </li>
 </ul>
 
-<h3>Fixes</h3>
+<!--more-->
+<h2>Changes include:</h2>
+
+<p><strong>Fixes:</strong></p>
 
 <ul>
-  <li>fix(ios): fix deprecation warnings for iOS 12+ (<a href="https://github.com/apache/cordova-plugin-network-information/pull/169">#169</a>)</li>
-  <li>fix(ios): Remove redundant <code>#import &lt;netinet6/in6.h&gt;</code> for Xcode 26.4 compatibility (<a href="https://github.com/apache/cordova-plugin-network-information/pull/166">#166</a>)</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1653">GH-1653</a> fix(actions): fix CDVURLSchemeHandlerTest warnings</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1652">GH-1652</a> fix(actions): IPhone 16e not found on macOS 26 for latest OS</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1640">GH-1640</a> fix: <code>NSInternalInconsistencyException: "No response has been sent for this task"</code> - second attempt</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1637">GH-1637</a> fix(build): Target a generic <strong>iOS</strong> simulator for building</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1632">GH-1632</a> fix(ionic): Add workaround for Ionic WebView plugin</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1618">GH-1618</a> fix(xcode): Fix library search paths for target</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1621">GH-1621</a> fix(xcode): Ensure we do NFD normalization on PRODUCT_NAME</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1616">GH-1616</a> fix(spm): Ensure the deployment target always gets set</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1606">GH-1606</a> fix(webview): Ensure scheme task is always finished</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1610">GH-1610</a> fix(scheme): Fix /<em>app_file</em>/ URLs not working</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1612">GH-1612</a> fix(spm): Set deployment target in Package.swift</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1597">GH-1597</a> fix: ignore spm build artifacts</li>
 </ul>
 
-<h3>Other</h3>
+<p><strong>Others:</strong></p>
 
 <ul>
-  <li>chore: various updates (<a href="https://github.com/apache/cordova-plugin-network-information/pull/177">#177</a>)</li>
-  <li>chore: update asf config (<a href="https://github.com/apache/cordova-plugin-network-information/pull/161">#161</a>)</li>
-  <li>chore(dev-dep): bump @cordova/eslint-config to 6.0.1 w/ fixes (<a href="https://github.com/apache/cordova-plugin-network-information/pull/171">#171</a>) [<a href="https://github.com/apache/cordova-plugin-network-information/commit/952bd51">952bd51</a>]</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1650">GH-1650</a> chore: remove redundant Hello World template files</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1647">GH-1647</a> chore(deps): bump @xmldom/xmldom from 0.8.12 to 0.8.13</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1634">GH-1634</a> doc: <code>keepCallback</code> and <code>setKeepCallbackAsBool:</code> of <code>CDVPluginResult</code></li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1646">GH-1646</a> chore(deps): bump lodash from 4.17.23 to 4.18.1</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1644">GH-1644</a> chore(deps): bump @xmldom/xmldom from 0.8.11 to 0.8.12</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1642">GH-1642</a> chore(deps): bump picomatch</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1639">GH-1639</a> chore: update package-lock</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1635">GH-1635</a> chore: Fix improperly ignored deprecation warning</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1633">GH-1633</a> chore: Bump patch level for ongoing dev work</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1628">GH-1628</a> chore: Fix missing licence headers</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1627">GH-1627</a> release(8.0.1): Update release notes and version</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1623">GH-1623</a> chore(ci): draft release</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1624">GH-1624</a> chore: cleanup license headers</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1625">GH-1625</a> chore: add DEVELOPMENT.md &amp; cleanup <code>README</code>.md</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1622">GH-1622</a> refactor(versions): Refactor version code for test reliability</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1619">GH-1619</a> chore(deps): Update to latest jasmine &amp; c8 versions</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1614">GH-1614</a> doc(readme): improve badges</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1601">GH-1601</a> chore: Remove compileBitcode from export options</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1611">GH-1611</a> chore: set swift-tools-version to 5.9</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1599">GH-1599</a> chore(deps): bump lodash from 4.17.21 to 4.17.23</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1598">GH-1598</a> Add missing trailing new line</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1592">GH-1592</a> doc(readme): add minimum <strong>iOS</strong> version</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1591">GH-1591</a> doc(readme): add Link to <strong>iOS</strong> Platform Guide</li>
+  <li><a href="https://github.com/apache/cordova-ios/pull/1588">GH-1588</a> chore: update release audit workflow &amp; license headers</li>
 </ul>
-
-<p>For a full list of changes, see the <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/RELEASENOTES.md#310">release notes</a>.</p>
-
-<p>Please report any issues you find at <a href="https://github.com/apache/cordova-plugin-network-information/issues">GitHub</a>!</p>
 
         </div>
     </section>
@@ -176,37 +222,17 @@ cordova plugin add cordova-plugin-network-information@3.1.0
         <div class="row">
             <div class="col-sm-6">
                 
-                    <a href="/announcements/2026/03/12/cordova-ios-8.0.1.html">Previous</a>
+                    <a href="/announcements/2026/05/16/cordova-plugin-network-information-3.1.0.html">Previous</a>
                     <br>
                     <br>
-                    <a class="title" href="/announcements/2026/03/12/cordova-ios-8.0.1.html">Cordova iOS 8.0.1 is now available!</a>
-                    <div class="date"> 12 Mar 2026 - By Darryl Pogue </div>
+                    <a class="title" href="/announcements/2026/05/16/cordova-plugin-network-information-3.1.0.html">Network Information Plugin 3.1.0 Released!</a>
+                    <div class="date"> 16 May 2026 - By Manuel Beck </div>
                     <p class="content">
-                        We are happy to announce that we have just released Cordova iOS...
+                        We are happy to announce that we have just released an update...
                     </p>
                 
             </div>
             <div class="col-sm-6">
-                
-                    <a href="/announcements/2026/05/31/cordova-ios-8.1.0.html">Next</a>
-                    <br>
-                    <br>
-                    <a class="title" href="/announcements/2026/05/31/cordova-ios-8.1.0.html">Cordova iOS 8.1.0 is now available!</a>
-                    <div class="date"> 31 May 2026 - By Niklas Merz </div>
-                    <p class="content">
-                        <!--
-                            NOTE:
-                                the markdownify filter is used here
-                                because posts are rendered in sequence;
-                                that is, the next post's content isn't
-                                yet rendered at the time that this post
-                                is being rendered, so page.next.excerpt
-                                is still in Markdown and not HTML
-
-                            Reference: https://github.com/jekyll/jekyll/issues/2860
-                        -->
-                        We are happy to announce that we have just released Cordova iOS...
-                    </p>
                 
             </div>
         </div>
