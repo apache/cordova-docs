@@ -85,7 +85,7 @@ module.exports = (function () {
     }
 
     function genTocfileName (language, version) {
-        return tocfileName('en', 'latest', 'gen');
+        return tocfileName(language, version, 'gen');
     }
 
     function mergeObjects (a, b) {
