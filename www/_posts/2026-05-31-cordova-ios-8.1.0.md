@@ -30,11 +30,11 @@ cordova platform add ios@8.1.0
 
 * **Fix for Ionic WebView plugin**
 
-    Re-add an implementation of the deprecated shouldOverrideLoadWithRequest:navigationType: selector because the Ionic WebView plugin relies on it.
+    Re-add an implementation of the deprecated `shouldOverrideLoadWithRequest:navigationType:` selector because the Ionic WebView plugin relies on it.
 
-* **Fix /_app_file_/ URLs not working**
+* **Fix `/_app_file_/` URLs not working**
 
-    During refactoring of the URLSchemeTask handler for cordova-ios 8, an error was introduced where /_app_file_ URLs were treated as being relative to the resources directory rather than as filesystem paths.
+    During refactoring of the **URLSchemeTask** handler for cordova-ios 8, an error was introduced where `/_app_file_` URLs were treated as being relative to the resources directory rather than as filesystem paths.
 
 * **Fixes various build issues**
 
@@ -57,7 +57,6 @@ cordova platform add ios@8.1.0
 * [GH-1597](https://github.com/apache/cordova-ios/pull/1597) fix: ignore spm build artifacts
 
 **Others:**
-
 
 * [GH-1650](https://github.com/apache/cordova-ios/pull/1650) chore: remove redundant Hello World template files
 * [GH-1647](https://github.com/apache/cordova-ios/pull/1647) chore(deps): bump @xmldom/xmldom from 0.8.12 to 0.8.13
