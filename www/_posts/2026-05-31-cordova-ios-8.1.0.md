@@ -2,6 +2,7 @@
 layout: post
 author:
     name: Niklas Merz
+    url: https://w3c.social/@niklasmerz
 title:  "Cordova iOS 8.1.0 is now available!"
 categories: announcements
 tags: news releases
