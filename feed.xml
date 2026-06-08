@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Jun 2026 12:51:38 +0000</pubDate>
-    <lastBuildDate>Mon, 08 Jun 2026 12:51:38 +0000</lastBuildDate>
+    <pubDate>Mon, 08 Jun 2026 15:15:38 +0000</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2026 15:15:38 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -48,7 +48,7 @@
 
 &lt;p&gt;https://www.cve.org/CVERecord?id=CVE-2026-47430&lt;/p&gt;
 
-&lt;p&gt;Please report any issues you find on &lt;a href=&quot;http://https://github.com/apache/cordova-plugin-inappbrowser/issues&quot;&gt;GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Please report any issues you find on &lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/issues&quot;&gt;GitHub&lt;/a&gt;!&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;h1&gt;Changes include:&lt;/h1&gt;
