@@ -123,6 +123,72 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Sun, 07 Jun 2026 00:00:00 +0000"></div>
+
+
+                    <h2 class="title">
+                        <a href="/announcements/2026/06/07/inappbrowser-release-6.0.1.html">Cordova Plugin InAppBrowser 6.0.1 With Fix For CVE-2026-47430 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">07 Jun 2026</span>
+                        - by
+                        <span class="author">
+                            
+                                <a href="https://w3c.social/@niklasmerz">Niklas Merz</a>
+                            
+                        </span>
+                    </div>
+
+
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released an update to <code>cordova-plugin-inappbrowser</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">cordova-plugin-inappbrowser@6.0.1</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p>This is a small patch release that addresses the recently published vulnerability <strong><a href="https://www.cve.org/CVERecord?id=CVE-2026-47430">CVE-2026-47430</a>: Cordova Plugin InAppBrowser: iOS: Arbitrary Cordova callback IDs can be dispatched without validation from InAppBrowser WebViews</strong>. Full details:</p>
+
+<p><em>Severity: important</em></p>
+
+<p>Affected versions:</p>
+
+<ul>
+  <li>Cordova Plugin InAppBrowser (cordova-plugin-inappbrowser) 3.1.0 through 6.0.0</li>
+</ul>
+
+<p>Description:</p>
+
+<h3>Summary</h3>
+
+<p>The iOS implementation of <code>cordova-plugin-inappbrowser</code> passes the <code>id</code> field from a <code>WKScriptMessage</code> body to <code>commandDelegate sendPluginResult:callbackId:</code> with no format validation (<code>CDVWKInAppBrowser.m:560–574</code>). Any web content loaded inside the InAppBrowser can fire any pending Cordova callback in the host app by posting a message whose <code>id</code> field is a guessable or enumerated callback identifier. An attack abusing this weakness must be tailored to the specific plugins and callback IDs the host app uses. Though an attacker with knowledge of common Cordova plugin configurations could craft reusable payloads targeting widely-adopted plugins.</p>
+
+<h3>Impact</h3>
+
+<p>An unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call <code>window.webkit.messageHandlers.cordova_iab.postMessage({id: '&lt;victim-callback-id&gt;', d: '...'})</code> to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format <code>&lt;PluginName&gt;&lt;sequential-integer&gt;</code>, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.</p>
+
+<p>This issue affects Cordova Plugin InAppBrowser: from 3.1.0 through 6.0.0.</p>
+
+<p>Users are recommended to upgrade to version 6.0.1, which fixes the issue.</p>
+
+<p>References:</p>
+
+<p>https://www.cve.org/CVERecord?id=CVE-2026-47430</p>
+
+<p>Please report any issues you find on <a href="http://https://github.com/apache/cordova-plugin-inappbrowser/issues">GitHub</a>!</p>
+
+</p>
+                    <div><a href="/announcements/2026/06/07/inappbrowser-release-6.0.1.html">More...</a></div>
+
+
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Sun, 31 May 2026 00:00:00 +0000"></div>
 
 
@@ -134,7 +200,7 @@
                         - by
                         <span class="author">
                             
-                                Niklas Merz
+                                <a href="https://w3c.social/@niklasmerz">Niklas Merz</a>
                             
                         </span>
                     </div>
@@ -17345,7 +17411,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Sun, 31 May 2026 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Sun, 07 Jun 2026 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };

@@ -6,9 +6,73 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 May 2026 08:59:21 +0000</pubDate>
-    <lastBuildDate>Sun, 31 May 2026 08:59:21 +0000</lastBuildDate>
+    <pubDate>Mon, 08 Jun 2026 11:52:02 +0000</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2026 11:52:02 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Plugin InAppBrowser 6.0.1 With Fix For CVE-2026-47430 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update to &lt;code&gt;cordova-plugin-inappbrowser&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-inappbrowser&quot;&gt;cordova-plugin-inappbrowser@6.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This is a small patch release that addresses the recently published vulnerability &lt;strong&gt;&lt;a href=&quot;https://www.cve.org/CVERecord?id=CVE-2026-47430&quot;&gt;CVE-2026-47430&lt;/a&gt;: Cordova Plugin InAppBrowser: iOS: Arbitrary Cordova callback IDs can be dispatched without validation from InAppBrowser WebViews&lt;/strong&gt;. Full details:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Severity: important&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Affected versions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cordova Plugin InAppBrowser (cordova-plugin-inappbrowser) 3.1.0 through 6.0.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Description:&lt;/p&gt;
+
+&lt;h3&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;The iOS implementation of &lt;code&gt;cordova-plugin-inappbrowser&lt;/code&gt; passes the &lt;code&gt;id&lt;/code&gt; field from a &lt;code&gt;WKScriptMessage&lt;/code&gt; body to &lt;code&gt;commandDelegate sendPluginResult:callbackId:&lt;/code&gt; with no format validation (&lt;code&gt;CDVWKInAppBrowser.m:560–574&lt;/code&gt;). Any web content loaded inside the InAppBrowser can fire any pending Cordova callback in the host app by posting a message whose &lt;code&gt;id&lt;/code&gt; field is a guessable or enumerated callback identifier. An attack abusing this weakness must be tailored to the specific plugins and callback IDs the host app uses. Though an attacker with knowledge of common Cordova plugin configurations could craft reusable payloads targeting widely-adopted plugins.&lt;/p&gt;
+
+&lt;h3&gt;Impact&lt;/h3&gt;
+
+&lt;p&gt;An unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call &lt;code&gt;window.webkit.messageHandlers.cordova_iab.postMessage({id: '&amp;lt;victim-callback-id&amp;gt;', d: '...'})&lt;/code&gt; to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format &lt;code&gt;&amp;lt;PluginName&amp;gt;&amp;lt;sequential-integer&amp;gt;&lt;/code&gt;, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.&lt;/p&gt;
+
+&lt;p&gt;This issue affects Cordova Plugin InAppBrowser: from 3.1.0 through 6.0.0.&lt;/p&gt;
+
+&lt;p&gt;Users are recommended to upgrade to version 6.0.1, which fixes the issue.&lt;/p&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;p&gt;https://www.cve.org/CVERecord?id=CVE-2026-47430&lt;/p&gt;
+
+&lt;p&gt;Please report any issues you find on &lt;a href=&quot;http://https://github.com/apache/cordova-plugin-inappbrowser/issues&quot;&gt;GitHub&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1152&quot;&gt;GH-1152&lt;/a&gt; fix(ios): check callbackId with regex&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1095&quot;&gt;GH-1095&lt;/a&gt; chore: gh-action workflow, license header formatting &amp;amp; cleanups&lt;/li&gt;
+  &lt;li&gt;Fix npm audit issues&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/06/07/inappbrowser-release-6.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/06/07/inappbrowser-release-6.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova iOS 8.1.0 is now available!</title>
@@ -999,50 +1063,6 @@ This resolves numerous issues around CocoaPods, multi-target projects, and Info.
         <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova App Hello World 7.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-app-hello-world@7.0.0&lt;/code&gt; has been released. This is the default app template used when creating a new Cordova App project though Cordova CLI.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable changes in this release were:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Setting the &lt;code&gt;body&lt;/code&gt; element&amp;#39;s &lt;code&gt;box-sizing&lt;/code&gt; to &lt;code&gt;border-box&lt;/code&gt; to avoid the &lt;code&gt;safe-area-inset&lt;/code&gt; padding that caused scrolling issues&lt;/li&gt;
-  &lt;li&gt;Disabled the &lt;code&gt;overscroll&lt;/code&gt; behavior of the root element to remove rubber-banding effects.&lt;/li&gt;
-  &lt;li&gt;Used modern, unprefixed CSS directives.&lt;/li&gt;
-  &lt;li&gt;Updated default template&amp;#39;s package ID to &lt;code&gt;org.apache.cordova.hellocordova&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/98&quot;&gt;GH-98&lt;/a&gt; fix(css): Fix extra padding causing scrolling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/99&quot;&gt;GH-99&lt;/a&gt; chore: updated defaults, license headers &amp;amp; added release audit workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-app-hello-world/pull/78&quot;&gt;GH-78&lt;/a&gt; chore: correct &lt;code&gt;access&lt;/code&gt; inline comment&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html</guid>
         
         <category>news</category>
         
