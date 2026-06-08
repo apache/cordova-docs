@@ -41,7 +41,7 @@ References:
 
 https://www.cve.org/CVERecord?id=CVE-2026-47430
 
-Please report any issues you find on [GitHub](http://https://github.com/apache/cordova-plugin-inappbrowser/issues)!
+Please report any issues you find on [GitHub](https://github.com/apache/cordova-plugin-inappbrowser/issues)!
 
 <!--more-->
 # Changes include:
