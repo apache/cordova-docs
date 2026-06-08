@@ -14,7 +14,7 @@ We are happy to announce that we have just released an update to `cordova-plugin
 
 ## Release Highlights
 
-This is a small patch release that addresses the recently published vulnerability **CVE-2026-47430: Cordova Plugin InAppBrowser: iOS: Arbitrary Cordova callback IDs can be dispatched without validation from InAppBrowser WebViews**. Full details:
+This is a small patch release that addresses the recently published vulnerability **[CVE-2026-47430](https://www.cve.org/CVERecord?id=CVE-2026-47430): Cordova Plugin InAppBrowser: iOS: Arbitrary Cordova callback IDs can be dispatched without validation from InAppBrowser WebViews**. Full details:
 
 *Severity: important*
 
