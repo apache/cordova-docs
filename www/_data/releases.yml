@@ -312,7 +312,6 @@
       extension: zip
     - type: npm
       extension: tgz
-      customName: cordova-plugin-inappbrowser
 
 - package: cordova-plugin-media-capture
   version: 6.0.0
