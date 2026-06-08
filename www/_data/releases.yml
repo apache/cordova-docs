@@ -303,13 +303,13 @@
       customName: cordova-plugin-geolocation
 
 - package: cordova-plugin-inappbrowser
-  version: 6.0.0
+  version: 6.0.1
   downloadDir: plugins
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
       customName: cordova-plugin-inappbrowser
