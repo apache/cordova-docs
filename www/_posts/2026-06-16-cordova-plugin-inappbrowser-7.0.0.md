@@ -27,21 +27,21 @@ Some other relvant changes:
 Please report any issues you find on [GitHub](https://github.com/apache/cordova-plugin-inappbrowser/issues)!
 
 <!--more-->
-## Changes include:
+## Changes include
 
-### Breaking Changes:
+### Breaking Changes
 
 * chore(ios)!: Remove unused private method ([#1113](https://github.com/apache/cordova-plugin-inappbrowser/pull/1113)) [[b7ab3d0](https://github.com/apache/cordova-plugin-inappbrowser/commit/b7ab3d0)]
 * refactor(ios)!: remove property `instance` and getter method `getInstance` ([#1116](https://github.com/apache/cordova-plugin-inappbrowser/pull/1116)) [[c5a0979](https://github.com/apache/cordova-plugin-inappbrowser/commit/c5a0979)]
 
-### Features:
+### Features
 
 * feat(android): make zoom on-screen controls configurable ([#1023](https://github.com/apache/cordova-plugin-inappbrowser/pull/1023)) [[24c6738](https://github.com/apache/cordova-plugin-inappbrowser/commit/24c6738)]
 * feat(ios): use `UIBarButtonSystemItemClose` since iOS 26 ([#1138](https://github.com/apache/cordova-plugin-inappbrowser/pull/1138)) [[5cf7c2d](https://github.com/apache/cordova-plugin-inappbrowser/commit/5cf7c2d)]
 * feat(ios): Support custom scheme event for iOS ([#1112](https://github.com/apache/cordova-plugin-inappbrowser/pull/1112)) [[03831d7](https://github.com/apache/cordova-plugin-inappbrowser/commit/03831d7)]
 * feat(ios): correct code formatting ([#1100](https://github.com/apache/cordova-plugin-inappbrowser/pull/1100)) [[fb5b469](https://github.com/apache/cordova-plugin-inappbrowser/commit/fb5b469)]
 
-### Fixes:
+### Fixes
 
 * fix: add `data` property for `InAppBrowserEvnet` type ([#1118](https://github.com/apache/cordova-plugin-inappbrowser/pull/1118)) [[18ef50d](https://github.com/apache/cordova-plugin-inappbrowser/commit/18ef50d)]
 * fix: defer navigation until async cookie or data clearing completes ([#1150](https://github.com/apache/cordova-plugin-inappbrowser/pull/1150)) [[1b0be4a](https://github.com/apache/cordova-plugin-inappbrowser/commit/1b0be4a)]
@@ -72,7 +72,7 @@ Please report any issues you find on [GitHub](https://github.com/apache/cordova-
 * fix(iOS): IAB not showing up in apps using UIScenes ([#1067](https://github.com/apache/cordova-plugin-inappbrowser/pull/1067)) [[e2d8429](https://github.com/apache/cordova-plugin-inappbrowser/commit/e2d8429)]
 * fix(types): support beforeload listener signature in TypeScript defs ([#1149](https://github.com/apache/cordova-plugin-inappbrowser/pull/1149)) [[e28ca69](https://github.com/apache/cordova-plugin-inappbrowser/commit/e28ca69)]
 
-### Others:
+### Others
 
 * doc(readme): improve `addEventListener` examples ([#1142](https://github.com/apache/cordova-plugin-inappbrowser/pull/1142)) [[7a90dde](https://github.com/apache/cordova-plugin-inappbrowser/commit/7a90dde)]
 * doc(readme): update badges ([#1140](https://github.com/apache/cordova-plugin-inappbrowser/pull/1140)) [[d922047](https://github.com/apache/cordova-plugin-inappbrowser/commit/d922047)]
