@@ -2,6 +2,7 @@
 layout: post
 author:
     name: Manuel Beck
+    url: https://github.com/GitToTheHub
 title:  "Network Information Plugin 3.1.0 Released!"
 categories: announcements
 tags: news releases

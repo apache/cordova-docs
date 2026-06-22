@@ -23,7 +23,7 @@ The most notable improvements in this major release are:
 * Make WebView inspectable on iOS
 * Make system open tel, sms, mailto and geo links on iOS
 
-Please report any issues you find on [GitHub](http://https://github.com/apache/cordova-plugin-inappbrowser/issues)!
+Please report any issues you find on [GitHub](https://github.com/apache/cordova-plugin-inappbrowser/issues)!
 
 <!--more-->
 # Changes include:
