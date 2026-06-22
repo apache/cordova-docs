@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="description" content="We are happy to announce that we have just released an update to cordova-plugin-inappbrowser!  cordova-plugin-inappbrowser@7.0.0Release HighlightsThis major ...">
+
+    <title>
+        
+            
+                Cordova Plugin InAppBrowser 7.0.0 Released! - Apache Cordova
+            
+        
+    </title>
+
+    <link rel="SHORTCUT ICON" href="/favicon.ico"/>
+
+    
+
+    
+    
+
+    <link rel="canonical" href="https://cordova.apache.org/announcements/2026/06/16/cordova-plugin-inappbrowser-7.0.0.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/lib/syntax.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script defer type="text/javascript" src="/static/js/lib/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+
+    <!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.apache.org/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '16']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  
+
+</head>
+
+<body>
+    <header>
+    <a class="scroll-point pt-top" name="top"></a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img id="logo_top" src="/static/img/cordova-logo-newbrand.svg"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="nav_bar_center">
+                    <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/docs/en/latest/">Documentation</a>
+                        </li>
+                        <li >
+                            <a href="/plugins">Plugins</a>
+                        </li>
+                        <li class="active">
+                            <a href="/blog" id="blog_button">Blog<span class="badge" id="new_blog_count"></span></a>
+                        </li>
+                        <li >
+                            <a href="/contribute">Contribute</a>
+                        </li>
+                        <li >
+                            <a href="/contribute/team.html">Team</a>
+                        </li>
+                        <li>
+                            <a href="/#getstarted">Get Started</a>
+                        </li>
+                        <li>
+                            <form class="navbar-form navbar-right" id="header-search-form" role="search">
+                                <div class="input-group">
+                                    
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div id="_fixed_navbar_spacer" style="padding-top:50px"></div>
+</header>
+
+<div class="page container">
+    <div class="blog">
+    <h1 class="blogHeader">
+    Blog
+    <span class="rss">
+        <img src="/static/img/subscribe.png"><a href="/feed.xml">RSS Feed</a>
+    </span>
+</h1>
+
+<div class="post">
+    <header>
+        <div class="title">Cordova Plugin InAppBrowser 7.0.0 Released!</div>
+        <div class="author">By:
+            
+              <a href="https://github.com/GitToTheHub">Manuel Beck</a>
+            
+        </div>
+        <div class="date">16 Jun 2026</div>
+    </header>
+    <section>
+        <div>
+            <p>We are happy to announce that we have just released an update to <code>cordova-plugin-inappbrowser</code>!</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/cordova-plugin-inappbrowser">cordova-plugin-inappbrowser@7.0.0</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p>This major update makes the plugin compatible with cordova-ios 8.0.0, fixes layout issues with <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1132">XCode 26 compiling for iOS 26</a>, layout issues regarding not respecting the <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1099">safe areas of the iPhone X</a> and newer (iPhone 11, 12, etc.) and layout issues on <a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1148">Android when the footer is used</a>.</p>
+
+<p>Some other relvant changes:</p>
+<ul>
+  <li>Make zoom on-screen controls configurable on Android</li>
+  <li>Fixes issues ragarding the <code>beforeload</code> event on Android and iOS</li>
+  <li>Cookies or data were not properly cleared when the options <code>cleardata</code>, <code>clearcache</code> or <code>clearsessioncache</code> were set on Android and iOS</li>
+  <li>The callback context will only be changed for non-whitelisted urls (Android) or target <code>_blank</code> (Android/iOS)</li>
+  <li>Fix XCode deprecations warnings</li>
+  <li>In-app browser did not show when using cordova-ios 8.0.0</li>
+</ul>
+
+<p>Please report any issues you find on <a href="https://github.com/apache/cordova-plugin-inappbrowser/issues">GitHub</a>!</p>
+
+<!--more-->
+<h2>Changes include</h2>
+
+<h3>Breaking Changes</h3>
+
+<ul>
+  <li>chore(ios)!: Remove unused private method (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1113">#1113</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/b7ab3d0">b7ab3d0</a>]</li>
+  <li>refactor(ios)!: remove property <code>instance</code> and getter method <code>getInstance</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1116">#1116</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/c5a0979">c5a0979</a>]</li>
+</ul>
+
+<h3>Features</h3>
+
+<ul>
+  <li>feat(android): make zoom on-screen controls configurable (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1023">#1023</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/24c6738">24c6738</a>]</li>
+  <li>feat(ios): use <code>UIBarButtonSystemItemClose</code> since iOS 26 (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1138">#1138</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/5cf7c2d">5cf7c2d</a>]</li>
+  <li>feat(ios): Support custom scheme event for iOS (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1112">#1112</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/03831d7">03831d7</a>]</li>
+  <li>feat(ios): correct code formatting (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1100">#1100</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/fb5b469">fb5b469</a>]</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+  <li>fix: add <code>data</code> property for <code>InAppBrowserEvnet</code> type (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1118">#1118</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/18ef50d">18ef50d</a>]</li>
+  <li>fix: defer navigation until async cookie or data clearing completes (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1150">#1150</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/1b0be4a">1b0be4a</a>]</li>
+  <li>fix(android): change callback context only on non-whitelisted urls or target <code>_blank</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1147">#1147</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/694adb0">694adb0</a>]</li>
+  <li>fix(android): <code>beforeload</code> event fires only once (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1146">#1146</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/160e414">160e414</a>]</li>
+  <li>fix(android): place footer below WebView instead of overlaying content (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1148">#1148</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/56fb083">56fb083</a>]</li>
+  <li>fix(ios): fix white screen on iOS 13+ when in-app browser window scene is nil (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1131">#1131</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/c1c6544">c1c6544</a>]</li>
+  <li>fix(ios): render in-app browser underneath the status bar (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1158">#1158</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/40ff663">40ff663</a>]</li>
+  <li>fix(ios): replace macro <code>kCloseButtonSystemItem</code> with static function to fix XCode warning (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1153">#1153</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/60a5c73">60a5c73</a>]</li>
+  <li>fix(ios): check callbackId with regex (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1152">#1152</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/e0bd9dc">e0bd9dc</a>]</li>
+  <li>fix(ios): suppress expected cancellation errors when <code>beforeload</code> is set (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1145">#1145</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/0cea6cc">0cea6cc</a>]</li>
+  <li>fix(ios): Don&#39;t call <code>beforeload</code> on POST and <code>beforeload=yes</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1144">#1144</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/f71de8f">f71de8f</a>]</li>
+  <li>fix(ios): set callbackId only on target=_blank, update readme (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1143">#1143</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/6106897">6106897</a>]</li>
+  <li>fix(ios): constraint warnings in iOS 18 and older (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1123">#1123</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/bad3830">bad3830</a>]</li>
+  <li>fix(ios): add custom toolbar background (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1132">#1132</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/c140eaf">c140eaf</a>]</li>
+  <li>fix(ios): constrain address label horizontal to safe area for landscape (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1126">#1126</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/de95bb2">de95bb2</a>]</li>
+  <li>fix(ios): full width WebView on landscape (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1120">#1120</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/22ebb87">22ebb87</a>]</li>
+  <li>fix(ios): suppress deprecation warning for <code>processPool</code> for<code>deployment-target</code> greater than 14 (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1119">#1119</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/105b0ae">105b0ae</a>]</li>
+  <li>fix(ios): remove use of deprecated <code>CDVWebViewProcessPoolFactory</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1115">#1115</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/f76988e">f76988e</a>]</li>
+  <li>fix(ios): simplify using <code>CDVSettingsDictionary</code> in older cordova-ios versions (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1105">#1105</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/f67412f">f67412f</a>]</li>
+  <li>fix(ios): use <code>cordovaSettingForKey:</code> instead of <code>objectForKey:</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1106">#1106</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/540bfe3">540bfe3</a>]</li>
+  <li>fix(ios): set minimum cordova-ios to 6.2.0 (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1107">#1107</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/15714f4">15714f4</a>]</li>
+  <li>fix(ios): Use <code>CDVSettingsDictionary</code> since cordova-ios 8 [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/b52242a">b52242a</a>]</li>
+  <li>fix(ios): deprecation of <code>UIActivityIndicatorViewStyleGray</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1104">#1104</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/6f413e0">6f413e0</a>]</li>
+  <li>fix(ios): replace <code>UIBarStyleBlackOpaque</code> with <code>UIBarStyleBlack</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1103">#1103</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/d4ae06d">d4ae06d</a>]</li>
+  <li>fix(ios): remove use of <code>CDVScreenOrientationDelegate</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1101">#1101</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/246f2a0">246f2a0</a>]</li>
+  <li>fix(ios): use auto layout to respect safe areas (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1099">#1099</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/375c02b">375c02b</a>]</li>
+  <li>fix(iOS): IAB not showing up in apps using UIScenes (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1067">#1067</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/e2d8429">e2d8429</a>]</li>
+  <li>fix(types): support beforeload listener signature in TypeScript defs (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1149">#1149</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/e28ca69">e28ca69</a>]</li>
+</ul>
+
+<h3>Others</h3>
+
+<ul>
+  <li>doc(readme): improve <code>addEventListener</code> examples (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1142">#1142</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/7a90dde">7a90dde</a>]</li>
+  <li>doc(readme): update badges (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1140">#1140</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/d922047">d922047</a>]</li>
+  <li>chore(ios): remove pre ios 11 code in <code>show:withNoAnimate:</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1135">#1135</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/8d2845b">8d2845b</a>]</li>
+  <li>chore(ios): resolve variable <code>safeArea</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1121">#1121</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/89cd5fe">89cd5fe</a>]</li>
+  <li>chore(ios): Cleanup code (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1117">#1117</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/6b28d2d">6b28d2d</a>]</li>
+  <li>refactor(ios): refactor code for clearing data (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1137">#1137</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/f40f41b">f40f41b</a>]</li>
+  <li>refactor(ios): adding toolbar items (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1124">#1124</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/b83a9b7">b83a9b7</a>]</li>
+  <li>refactor(ios): handle constraints in cases (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1125">#1125</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/ddab657">ddab657</a>]</li>
+  <li>refactor(ios): remove unused method <code>invertFrameIfNeeded</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1102">#1102</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/dfce3c7">dfce3c7</a>]</li>
+  <li>doc(ios): constraint warnings on iOS 26 and using <code>initWithBarButtonSystemItem</code> (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1127">#1127</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/42e12dd">42e12dd</a>]</li>
+  <li>chore: Remove unused inappbrowser.css file (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1038">#1038</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/eac7303">eac7303</a>]</li>
+  <li>chore: bump to major 7.0.0-dev (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1156">#1156</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/cc727aa">cc727aa</a>]</li>
+  <li>chore: bump version to 6.1.0-dev (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1108">#1108</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/322182a">322182a</a>]</li>
+  <li>chore: incremented plugin version 6.0.1-dev [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/f27c663">f27c663</a>]</li>
+  <li>chore: add changelog from 6.0.1 (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1159">#1159</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/92a53a9">92a53a9</a>]</li>
+  <li>chore: update npm package (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1134">#1134</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/4f9d07d">4f9d07d</a>]</li>
+  <li>chore: gh-action workflow, license header formatting &amp; cleanups (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1095">#1095</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/1e4ab4b">1e4ab4b</a>]</li>
+  <li>chore(ci): add/update release workflows (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1157">#1157</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/e1cb106">e1cb106</a>]</li>
+  <li>chore(deps-dev): bump @cordova/eslint-config to 6.0.0 w/ lint fixes (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1096">#1096</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/4cf5c24">4cf5c24</a>]</li>
+  <li>chore(gitattributes): normalize line endings and binary detection (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1139">#1139</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/675002f">675002f</a>]</li>
+  <li>chore(INFRA): Set up default protection ruleset for default and release branches (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1151">#1151</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/efd32a9">efd32a9</a>]</li>
+  <li>chore(workflow): update workflows to the latest one of cordova-paramedic (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1141">#1141</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/3fdfc96">3fdfc96</a>]</li>
+  <li>ci: remove osx (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1111">#1111</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/c1eaf3b">c1eaf3b</a>]</li>
+  <li>ci: sync workflow w/ paramedic (<a href="https://github.com/apache/cordova-plugin-inappbrowser/pull/1068">#1068</a>) [<a href="https://github.com/apache/cordova-plugin-inappbrowser/commit/dfde59d">dfde59d</a>]</li>
+</ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                
+                    <a href="/announcements/2026/06/07/inappbrowser-release-6.0.1.html">Previous</a>
+                    <br>
+                    <br>
+                    <a class="title" href="/announcements/2026/06/07/inappbrowser-release-6.0.1.html">Cordova Plugin InAppBrowser 6.0.1 With Fix For CVE-2026-47430 Released!</a>
+                    <div class="date"> 07 Jun 2026 - By Niklas Merz </div>
+                    <p class="content">
+                        We are happy to announce that we have just released an update...
+                    </p>
+                
+            </div>
+            <div class="col-sm-6">
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue-divider"></div>
+<footer>
+    <div class="container">
+        <div class="row">
+    <div class="col-sm-9">
+        <h1>More Resources</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>General</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://projects.apache.org/project.html?cordova">Apache Project Page</a>
+                    </li>
+                    <li>
+                        <a href="/downloads">Downloads</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/licenses">License</a>
+                    </li>
+                    <li>
+                        <a href="/artwork">Artwork</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Development</h2>
+                <ul class="nav">
+                    <li><a target="_blank" href="https://github.com/apache?utf8=%E2%9C%93&amp;q=cordova-">Source Code</a></li>
+                    <li><a target="_blank" href="https://github.com/apache/cordova#filing-a-bug">Issue Tracker</a></li>
+                    <li><a target="_blank" href="https://stackoverflow.com/questions/tagged/cordova">Stack Overflow</a></li>
+                    <li><a href="/contact">Mailing List</a></li>
+                    <li><a href="/contribute/nightly_builds.html">Nightly builds</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h2>Apache Software Foundation</h2>
+                <ul class="nav">
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/">About ASF</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/events/current-event">Events</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/sponsorship.html">Become a Sponsor</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.apache.org/security/">Security</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h1>Contribute</h1>
+        <p style="padding-top:20px"><strong>Help Cordova move forward!</strong></p>
+        <p>Report bugs, improve the docs, or contribute to the code.</p>
+        <a href="/contribute" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+        <p style="padding-top:20px"> <a href="https://twitter.com/apachecordova" class="twitter-follow-button" data-show-count="false">Follow @apachecordova</a></p>
+    </div>
+</div>
+<p class="copyright_text">
+    Copyright &copy; 2026 <a href="https://apache.org">The Apache Software Foundation</a>, Licensed under the <a target="_blank" href="https://www.apache.org/licenses/">Apache License, Version 2.0</a>.<br/>
+    Apache and the Apache feather logos are <a target="_blank" href="https://www.apache.org/foundation/marks/list/">trademarks</a> of The Apache Software Foundation.
+    <br/>
+    <p>See the <a href="/attributions/">attributions page</a> for other copyright & trademark notices.</p>
+</p>
+
+    </div>
+</footer>
+
+
+    <script defer type="text/javascript" src="/static/js/index.js"></script>
+    <script defer type="text/javascript" src="/static/js/twitter.js"></script>
+</body>
+</html>

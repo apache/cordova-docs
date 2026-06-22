@@ -6,9 +6,129 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Jun 2026 13:57:19 +0000</pubDate>
-    <lastBuildDate>Tue, 16 Jun 2026 13:57:19 +0000</lastBuildDate>
+    <pubDate>Mon, 22 Jun 2026 07:43:23 +0000</pubDate>
+    <lastBuildDate>Mon, 22 Jun 2026 07:43:23 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Plugin InAppBrowser 7.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update to &lt;code&gt;cordova-plugin-inappbrowser&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-inappbrowser&quot;&gt;cordova-plugin-inappbrowser@7.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This major update makes the plugin compatible with cordova-ios 8.0.0, fixes layout issues with &lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1132&quot;&gt;XCode 26 compiling for iOS 26&lt;/a&gt;, layout issues regarding not respecting the &lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1099&quot;&gt;safe areas of the iPhone X&lt;/a&gt; and newer (iPhone 11, 12, etc.) and layout issues on &lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1148&quot;&gt;Android when the footer is used&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some other relvant changes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make zoom on-screen controls configurable on Android&lt;/li&gt;
+  &lt;li&gt;Fixes issues ragarding the &lt;code&gt;beforeload&lt;/code&gt; event on Android and iOS&lt;/li&gt;
+  &lt;li&gt;Cookies or data were not properly cleared when the options &lt;code&gt;cleardata&lt;/code&gt;, &lt;code&gt;clearcache&lt;/code&gt; or &lt;code&gt;clearsessioncache&lt;/code&gt; were set on Android and iOS&lt;/li&gt;
+  &lt;li&gt;The callback context will only be changed for non-whitelisted urls (Android) or target &lt;code&gt;_blank&lt;/code&gt; (Android/iOS)&lt;/li&gt;
+  &lt;li&gt;Fix XCode deprecations warnings&lt;/li&gt;
+  &lt;li&gt;In-app browser did not show when using cordova-ios 8.0.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find on &lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/issues&quot;&gt;GitHub&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h2&gt;Changes include&lt;/h2&gt;
+
+&lt;h3&gt;Breaking Changes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore(ios)!: Remove unused private method (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1113&quot;&gt;#1113&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/b7ab3d0&quot;&gt;b7ab3d0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;refactor(ios)!: remove property &lt;code&gt;instance&lt;/code&gt; and getter method &lt;code&gt;getInstance&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1116&quot;&gt;#1116&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/c5a0979&quot;&gt;c5a0979&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feat(android): make zoom on-screen controls configurable (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1023&quot;&gt;#1023&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/24c6738&quot;&gt;24c6738&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat(ios): use &lt;code&gt;UIBarButtonSystemItemClose&lt;/code&gt; since iOS 26 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1138&quot;&gt;#1138&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/5cf7c2d&quot;&gt;5cf7c2d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat(ios): Support custom scheme event for iOS (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1112&quot;&gt;#1112&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/03831d7&quot;&gt;03831d7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat(ios): correct code formatting (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1100&quot;&gt;#1100&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/fb5b469&quot;&gt;fb5b469&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fix: add &lt;code&gt;data&lt;/code&gt; property for &lt;code&gt;InAppBrowserEvnet&lt;/code&gt; type (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1118&quot;&gt;#1118&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/18ef50d&quot;&gt;18ef50d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: defer navigation until async cookie or data clearing completes (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1150&quot;&gt;#1150&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/1b0be4a&quot;&gt;1b0be4a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(android): change callback context only on non-whitelisted urls or target &lt;code&gt;_blank&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1147&quot;&gt;#1147&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/694adb0&quot;&gt;694adb0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(android): &lt;code&gt;beforeload&lt;/code&gt; event fires only once (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1146&quot;&gt;#1146&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/160e414&quot;&gt;160e414&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(android): place footer below WebView instead of overlaying content (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1148&quot;&gt;#1148&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/56fb083&quot;&gt;56fb083&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): fix white screen on iOS 13+ when in-app browser window scene is nil (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1131&quot;&gt;#1131&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/c1c6544&quot;&gt;c1c6544&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): render in-app browser underneath the status bar (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1158&quot;&gt;#1158&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/40ff663&quot;&gt;40ff663&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): replace macro &lt;code&gt;kCloseButtonSystemItem&lt;/code&gt; with static function to fix XCode warning (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1153&quot;&gt;#1153&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/60a5c73&quot;&gt;60a5c73&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): check callbackId with regex (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1152&quot;&gt;#1152&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/e0bd9dc&quot;&gt;e0bd9dc&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): suppress expected cancellation errors when &lt;code&gt;beforeload&lt;/code&gt; is set (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1145&quot;&gt;#1145&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/0cea6cc&quot;&gt;0cea6cc&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): Don&amp;#39;t call &lt;code&gt;beforeload&lt;/code&gt; on POST and &lt;code&gt;beforeload=yes&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1144&quot;&gt;#1144&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/f71de8f&quot;&gt;f71de8f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): set callbackId only on target=_blank, update readme (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1143&quot;&gt;#1143&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/6106897&quot;&gt;6106897&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): constraint warnings in iOS 18 and older (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1123&quot;&gt;#1123&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/bad3830&quot;&gt;bad3830&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): add custom toolbar background (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1132&quot;&gt;#1132&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/c140eaf&quot;&gt;c140eaf&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): constrain address label horizontal to safe area for landscape (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1126&quot;&gt;#1126&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/de95bb2&quot;&gt;de95bb2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): full width WebView on landscape (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1120&quot;&gt;#1120&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/22ebb87&quot;&gt;22ebb87&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): suppress deprecation warning for &lt;code&gt;processPool&lt;/code&gt; for&lt;code&gt;deployment-target&lt;/code&gt; greater than 14 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1119&quot;&gt;#1119&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/105b0ae&quot;&gt;105b0ae&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): remove use of deprecated &lt;code&gt;CDVWebViewProcessPoolFactory&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1115&quot;&gt;#1115&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/f76988e&quot;&gt;f76988e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): simplify using &lt;code&gt;CDVSettingsDictionary&lt;/code&gt; in older cordova-ios versions (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1105&quot;&gt;#1105&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/f67412f&quot;&gt;f67412f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): use &lt;code&gt;cordovaSettingForKey:&lt;/code&gt; instead of &lt;code&gt;objectForKey:&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1106&quot;&gt;#1106&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/540bfe3&quot;&gt;540bfe3&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): set minimum cordova-ios to 6.2.0 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1107&quot;&gt;#1107&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/15714f4&quot;&gt;15714f4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): Use &lt;code&gt;CDVSettingsDictionary&lt;/code&gt; since cordova-ios 8 [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/b52242a&quot;&gt;b52242a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): deprecation of &lt;code&gt;UIActivityIndicatorViewStyleGray&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1104&quot;&gt;#1104&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/6f413e0&quot;&gt;6f413e0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): replace &lt;code&gt;UIBarStyleBlackOpaque&lt;/code&gt; with &lt;code&gt;UIBarStyleBlack&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1103&quot;&gt;#1103&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/d4ae06d&quot;&gt;d4ae06d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): remove use of &lt;code&gt;CDVScreenOrientationDelegate&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1101&quot;&gt;#1101&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/246f2a0&quot;&gt;246f2a0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): use auto layout to respect safe areas (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1099&quot;&gt;#1099&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/375c02b&quot;&gt;375c02b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(iOS): IAB not showing up in apps using UIScenes (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1067&quot;&gt;#1067&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/e2d8429&quot;&gt;e2d8429&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(types): support beforeload listener signature in TypeScript defs (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1149&quot;&gt;#1149&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/e28ca69&quot;&gt;e28ca69&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Others&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;doc(readme): improve &lt;code&gt;addEventListener&lt;/code&gt; examples (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1142&quot;&gt;#1142&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/7a90dde&quot;&gt;7a90dde&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc(readme): update badges (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1140&quot;&gt;#1140&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/d922047&quot;&gt;d922047&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ios): remove pre ios 11 code in &lt;code&gt;show:withNoAnimate:&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1135&quot;&gt;#1135&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/8d2845b&quot;&gt;8d2845b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ios): resolve variable &lt;code&gt;safeArea&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1121&quot;&gt;#1121&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/89cd5fe&quot;&gt;89cd5fe&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ios): Cleanup code (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1117&quot;&gt;#1117&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/6b28d2d&quot;&gt;6b28d2d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;refactor(ios): refactor code for clearing data (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1137&quot;&gt;#1137&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/f40f41b&quot;&gt;f40f41b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;refactor(ios): adding toolbar items (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1124&quot;&gt;#1124&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/b83a9b7&quot;&gt;b83a9b7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;refactor(ios): handle constraints in cases (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1125&quot;&gt;#1125&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/ddab657&quot;&gt;ddab657&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;refactor(ios): remove unused method &lt;code&gt;invertFrameIfNeeded&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1102&quot;&gt;#1102&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/dfce3c7&quot;&gt;dfce3c7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc(ios): constraint warnings on iOS 26 and using &lt;code&gt;initWithBarButtonSystemItem&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1127&quot;&gt;#1127&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/42e12dd&quot;&gt;42e12dd&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: Remove unused inappbrowser.css file (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1038&quot;&gt;#1038&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/eac7303&quot;&gt;eac7303&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump to major 7.0.0-dev (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1156&quot;&gt;#1156&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/cc727aa&quot;&gt;cc727aa&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump version to 6.1.0-dev (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1108&quot;&gt;#1108&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/322182a&quot;&gt;322182a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: incremented plugin version 6.0.1-dev [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/f27c663&quot;&gt;f27c663&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: add changelog from 6.0.1 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1159&quot;&gt;#1159&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/92a53a9&quot;&gt;92a53a9&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update npm package (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1134&quot;&gt;#1134&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/4f9d07d&quot;&gt;4f9d07d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: gh-action workflow, license header formatting &amp;amp; cleanups (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1095&quot;&gt;#1095&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/1e4ab4b&quot;&gt;1e4ab4b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ci): add/update release workflows (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1157&quot;&gt;#1157&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/e1cb106&quot;&gt;e1cb106&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump @cordova/eslint-config to 6.0.0 w/ lint fixes (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1096&quot;&gt;#1096&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/4cf5c24&quot;&gt;4cf5c24&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(gitattributes): normalize line endings and binary detection (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1139&quot;&gt;#1139&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/675002f&quot;&gt;675002f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(INFRA): Set up default protection ruleset for default and release branches (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1151&quot;&gt;#1151&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/efd32a9&quot;&gt;efd32a9&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(workflow): update workflows to the latest one of cordova-paramedic (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1141&quot;&gt;#1141&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/3fdfc96&quot;&gt;3fdfc96&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: remove osx (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1111&quot;&gt;#1111&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/c1eaf3b&quot;&gt;c1eaf3b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: sync workflow w/ paramedic (&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/pull/1068&quot;&gt;#1068&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-inappbrowser/commit/dfde59d&quot;&gt;dfde59d&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/06/16/cordova-plugin-inappbrowser-7.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/06/16/cordova-plugin-inappbrowser-7.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Plugin InAppBrowser 6.0.1 With Fix For CVE-2026-47430 Released!</title>
@@ -996,73 +1116,6 @@ This resolves numerous issues around CocoaPods, multi-target projects, and Info.
         <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/10/22/cordova-create-6.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/10/22/cordova-create-6.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Fetch 5.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-fetch@5.0.0&lt;/code&gt; has been released. This is the library used behind-the-scenes of the Cordova tooling for fetching of Cordova platforms and plugins.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable changes in this major release were:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Updated the library&amp;#39;s npm dependencies.&lt;/li&gt;
-  &lt;li&gt;Increased in the Node.js engine requirement to &lt;code&gt;&amp;gt;=20.9.0&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/131&quot;&gt;GH-131&lt;/a&gt; chore(npm)!: bump &lt;code&gt;cordova-common@6.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/125&quot;&gt;GH-125&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/136&quot;&gt;GH-136&lt;/a&gt; chore(README): update badges&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/135&quot;&gt;GH-135&lt;/a&gt; chore: update &amp;amp; add source code license headers&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/130&quot;&gt;GH-130&lt;/a&gt; chore: bump &lt;code&gt;@cordova/eslint-config&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/127&quot;&gt;GH-127&lt;/a&gt; chore(coverage): Move from &lt;code&gt;nyc&lt;/code&gt; to &lt;code&gt;c8&lt;/code&gt; for code coverage&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/124&quot;&gt;GH-124&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;brace-expansion&lt;/code&gt; from 1.1.11 to 1.1.12&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/122&quot;&gt;GH-122&lt;/a&gt; chore(deps): bump &lt;code&gt;cross-spawn&lt;/code&gt; from 7.0.3 to 7.0.6&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/120&quot;&gt;GH-120&lt;/a&gt; chore(deps): bump &lt;code&gt;micromatch&lt;/code&gt; from 4.0.5 to 4.0.8&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/119&quot;&gt;GH-119&lt;/a&gt; chore(deps): bump &lt;code&gt;braces&lt;/code&gt; from 3.0.2 to 3.0.3&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/116&quot;&gt;GH-116&lt;/a&gt; chore(deps): Update some dependencies, add Node 20 to CI&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/137&quot;&gt;GH-137&lt;/a&gt; ci: workflow updates&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/128&quot;&gt;GH-128&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/123&quot;&gt;GH-123&lt;/a&gt; ci: Add licence checker workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/121&quot;&gt;GH-121&lt;/a&gt; ci: Fix dependabot code scanning errors&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/118&quot;&gt;GH-118&lt;/a&gt; ci: Set up CodeQL analysis&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/117&quot;&gt;GH-117&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Tests:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/pull/126&quot;&gt;GH-126&lt;/a&gt; test: drop &lt;code&gt;file-url&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html</guid>
         
         <category>news</category>
         
