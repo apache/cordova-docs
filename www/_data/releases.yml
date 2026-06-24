@@ -184,7 +184,7 @@
       customName: cordova-electron
 
 - package: cordova-ios
-  version: 8.0.1
+  version: 8.1.0
   downloadDir: platforms
   tarballs:
     - type: source
@@ -303,16 +303,15 @@
       customName: cordova-plugin-geolocation
 
 - package: cordova-plugin-inappbrowser
-  version: 6.0.0
+  version: 7.0.0
   downloadDir: plugins
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
-      customName: cordova-plugin-inappbrowser
 
 - package: cordova-plugin-media-capture
   version: 6.0.0
