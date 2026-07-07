@@ -9,7 +9,7 @@ tags: news releases
 
 We are happy to announce that we have just released `Cordova iOS 8.1.1`! This is one of Cordova's supported platforms for building iOS applications.
 
-This release contains fixes for several bugs that were reported against the 8.1.0 version.
+This release includes general improvements and fixes for several bugs.
 
 * [cordova-ios@8.1.1](https://www.npmjs.com/package/cordova-ios)
 
