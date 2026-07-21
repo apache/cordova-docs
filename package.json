@@ -32,7 +32,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "engines": {
-    "node": ">=20.18.0"
+    "node": ">=20.19.0"
   },
   "repository": "github:apache/cordova-docs",
   "bugs": "https://github.com/apache/cordova-docs/issues",
