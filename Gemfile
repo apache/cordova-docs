@@ -18,4 +18,4 @@
 source 'https://rubygems.org'
 gem 'jekyll', '~> 4.4'
 gem 'rouge', '~> 4.7'
-gem 'jekyll-gfm-admonitions', '~> 1.3'
+gem 'jekyll-gfm-admonitions', '~> 1.4'
