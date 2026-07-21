@@ -149,7 +149,7 @@
       customName: cordova-app-hello-world
 
 - package: cordova-android
-  version: 15.0.0
+  version: 15.1.0
   downloadDir: platforms
   tarballs:
     - type: source
