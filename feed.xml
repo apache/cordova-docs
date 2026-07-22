@@ -6,9 +6,192 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jul 2026 02:53:51 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Jul 2026 02:53:51 +0000</lastBuildDate>
+    <pubDate>Wed, 22 Jul 2026 07:22:09 +0000</pubDate>
+    <lastBuildDate>Wed, 22 Jul 2026 07:22:09 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Android 15.1.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Android 15.1.0&lt;/code&gt;! This is one of Cordova&amp;#39;s supported platforms for building Android applications.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-android&quot;&gt;cordova-android@15.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove android
+cordova platform add android@15.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;To install:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform add android@15.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;h3&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Deprecation of &lt;code&gt;PermissionHelper&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The &lt;code&gt;PermissionHelper&lt;/code&gt; class has been deprecated.&lt;/p&gt;
+
+    &lt;p&gt;Plugin developers that relied on the &lt;code&gt;PermissionHelper&lt;/code&gt; class should migrate their plugins to use the permission APIs available through the &lt;code&gt;CordovaInterface&lt;/code&gt; of the &lt;code&gt;CordovaPlugin&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;Before:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;// Requesting a Permission&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;PermissionHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;requestPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;READ_MEDIA_IMAGES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Requesting a Collection of Permissions&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;PermissionHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;requestPermissions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;READ_MEDIA_IMAGES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+    
+  &lt;span class=&quot;c1&quot;&gt;// Checking if the App has a Permission&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;PermissionHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;READ_MEDIA_IMAGES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;strong&gt;After:&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;// Requesting a Permission&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cordova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;requestPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;READ_MEDIA_IMAGES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Requesting a Collection of Permissions&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cordova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;requestPermissions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requestCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;READ_MEDIA_IMAGES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+    
+  &lt;span class=&quot;c1&quot;&gt;// Checking if the App has a Permission&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;cordova&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasPermission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Manifest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permission&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;READ_MEDIA_IMAGES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Calling of &lt;code&gt;CordovaPlugin.onRequestPermissionsResult&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Updated &lt;code&gt;CordovaInterfaceImpl.onRequestPermissionsResult&lt;/code&gt; to call the new &lt;code&gt;CordovaPlugin.onRequestPermissionsResult&lt;/code&gt; method in addition to the exisiting &lt;code&gt;CordovaPlugin.onRequestPermissionResult&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Keyboard Layout and Page Scrolling when Input Fields Receive Focus&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixes a UI layout and scrolling bug, that was introduced in &lt;code&gt;cordova-android@15.0.0&lt;/code&gt;, where focusing on an input field while the soft keyboard was open could cause the WebView to shift upwards, leaving an unrendered space at the bottom of the Activity, and prevent the page from scrolling. This update restores the expected layout and scrolling behavior when interacting with input fields.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Handle Permissions for &lt;code&gt;getUserMedia&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixes &lt;code&gt;getUserMedia()&lt;/code&gt; permission handling to correctly check for and request the required native camera and microphone permissions before proceeding. This aligns the WebView permission flow with the native platform, improving compatibility and ensuring media requests behave as expected.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Back Button Handling After App Launch&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixes an issue where the back button would not respond immediately after the app launched. Back button events are now handled consistently from startup, including on devices that support the Android back gesture, ensuring expected navigation behavior throughout the app.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Properly Handle CSS Color with Alpha&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixes an issue where &lt;code&gt;window.statusbar.setBackgroundColor()&lt;/code&gt; incorrectly interpreted 8-digit hexadecimal CSS color values, which could result in the wrong status bar color being applied.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Status Bar Appearance Styling for Edge-to-Edge&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;When Edge-to-Edge was enabled, apps could not adjust the status bar text and icon appearance, which could make them difficult to see against certain backgrounds.&lt;/p&gt;
+
+    &lt;p&gt;This release exposes the exisiting &lt;code&gt;window.statusbar.setBackgroundColor()&lt;/code&gt; JS API for Edge-to-Edge layouts. Although the API is used to set the status bar background color, it also determines the appropriate status bar text and icon appearance, allowing apps to maintain proper contrast. In Edge-to-Edge layouts, the background color itself is not applied as there is no status bar, but the calculated appearance is still applied.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fix Status Bar Background Color Handling for Opaque White&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Fixes an issue where the valid color &lt;code&gt;#FFFFFFFF&lt;/code&gt; was incorrectly treated as an invalid status bar color, preventing fully opaque white from being applied. This restores support for all valid status bar background colors.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feat: call new method &lt;code&gt;CordovaPlugin.onRequestPermissionsResult&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1855&quot;&gt;#1855&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/b66f0f33&quot;&gt;b66f0f33&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: deprecate &lt;code&gt;PermissionHelper&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1857&quot;&gt;#1857&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/8c839764&quot;&gt;8c839764&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: remove unused private Method &lt;code&gt;PermissionHelper.deliverPermissionResult&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1858&quot;&gt;#1858&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/9c3d8268&quot;&gt;9c3d8268&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fix: webview loses scrollability and creates empty bottom space (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1924&quot;&gt;#1924&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/b91144c0&quot;&gt;b91144c0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: handle permissions for getUserMedia (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1895&quot;&gt;#1895&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/24502178&quot;&gt;24502178&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: overwritten backbutton not firing on first time by hardware button and never on back gesture (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1910&quot;&gt;#1910&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/0bfbc20b&quot;&gt;0bfbc20b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(android): use AndroidX &lt;code&gt;OnBackPressedCallback&lt;/code&gt; instead of &lt;code&gt;OnBackInvokedCallback&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1903&quot;&gt;#1903&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/9064bc07&quot;&gt;9064bc07&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(gradle-9): unable to resolve class XmlParser for Groovy 4.x (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1896&quot;&gt;#1896&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/9ae489bd&quot;&gt;9ae489bd&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(statusbar.js): remove trailing whitespace in comment for lint (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1970&quot;&gt;#1970&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/cdbeb603&quot;&gt;cdbeb603&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(statusbar): Properly handle CSS colours (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1955&quot;&gt;#1955&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/dd3fd357&quot;&gt;dd3fd357&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(SystemBarPlugin): remove &lt;code&gt;canEdgeToEdge&lt;/code&gt; check for &lt;code&gt;execute&lt;/code&gt; method (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1971&quot;&gt;#1971&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/61ebdcde&quot;&gt;61ebdcde&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(SystemBarPlugin): remove sentinel value &lt;code&gt;INVALID_COLOR&lt;/code&gt;, use &lt;code&gt;null&lt;/code&gt; instead  (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1939&quot;&gt;#1939&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/f4ecf997&quot;&gt;f4ecf997&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Others&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore: cleanup PermissionHelper (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1925&quot;&gt;#1925&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/7dd7f504&quot;&gt;7dd7f504&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump package 15.1.0-dev.0 &amp;amp; update package-lock (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1964&quot;&gt;#1964&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/929f2054&quot;&gt;929f2054&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: remove redundant Hello World template files (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1926&quot;&gt;#1926&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/56e263fe&quot;&gt;56e263fe&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: simplify edge-to-edge preference logic in CordovaActivity and SystemBarPlugin (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1902&quot;&gt;#1902&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/190076ba&quot;&gt;190076ba&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: ignore gradle build artificat &lt;code&gt;problems-report.html&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1912&quot;&gt;#1912&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/b1705d83&quot;&gt;b1705d83&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: more license header updates (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1909&quot;&gt;#1909&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/1f70d396&quot;&gt;1f70d396&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update package-lock (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1905&quot;&gt;#1905&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/af56a003&quot;&gt;af56a003&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ci): update &amp;amp; clean workflow (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1966&quot;&gt;#1966&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/654b03a3&quot;&gt;654b03a3&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ci): improve workflows &amp;amp; dependabot (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1928&quot;&gt;#1928&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/08c4fd1e&quot;&gt;08c4fd1e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump js-yaml from 4.1.1 to 4.2.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1960&quot;&gt;#1960&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/ebccedf6&quot;&gt;ebccedf6&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump tmp from 0.2.6 to 0.2.7 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1956&quot;&gt;#1956&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/d90eeecb&quot;&gt;d90eeecb&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump tmp from 0.2.5 to 0.2.6 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1945&quot;&gt;#1945&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/a63c1e18&quot;&gt;a63c1e18&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump c8 from 10.1.3 to 11.0.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1941&quot;&gt;#1941&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/74fbbdce&quot;&gt;74fbbdce&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump jasmine from 6.1.0 to 6.2.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1932&quot;&gt;#1932&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/90b4b057&quot;&gt;90b4b057&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump github/codeql-action/analyze from 4.36.3 to 4.37.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1973&quot;&gt;#1973&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/80658ea4&quot;&gt;80658ea4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump github/codeql-action/init from 4.36.3 to 4.37.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1972&quot;&gt;#1972&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/89771e64&quot;&gt;89771e64&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump actions/setup-java from 5.4.0 to 5.5.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1974&quot;&gt;#1974&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/065a99d8&quot;&gt;065a99d8&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump github/codeql-action/analyze from 4.36.2 to 4.36.3 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1969&quot;&gt;#1969&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/d830222e&quot;&gt;d830222e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump github/codeql-action/init from 4.36.2 to 4.36.3 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1968&quot;&gt;#1968&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/1e2f0ca6&quot;&gt;1e2f0ca6&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump codecov/codecov-action from 4.6.0 to 7.0.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1954&quot;&gt;#1954&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/acbc5b48&quot;&gt;acbc5b48&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump actions/setup-java from 5.3.0 to 5.4.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1965&quot;&gt;#1965&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/cb52fb8d&quot;&gt;cb52fb8d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump actions/checkout from 6.0.3 to 7.0.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1959&quot;&gt;#1959&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/79771499&quot;&gt;79771499&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump actions/setup-java from 5.2.0 to 5.3.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1958&quot;&gt;#1958&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/e53dc373&quot;&gt;e53dc373&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump actions/checkout from 6.0.2 to 6.0.3 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1952&quot;&gt;#1952&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/703ebeae&quot;&gt;703ebeae&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump github/codeql-action from 4.36.0 to 4.36.2 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1953&quot;&gt;#1953&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/363a9a77&quot;&gt;363a9a77&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump github/codeql-action from 4.35.5 to 4.36.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1944&quot;&gt;#1944&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/a1f75a3e&quot;&gt;a1f75a3e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump erisu/apache-rat-action from 2.0.0 to 3.0.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1937&quot;&gt;#1937&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/4ce731da&quot;&gt;4ce731da&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump semver from 7.7.4 to 7.8.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1934&quot;&gt;#1934&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/c636f8bb&quot;&gt;c636f8bb&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump erisu/license-checker-action from 2.0.1 to 2.1.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1930&quot;&gt;#1930&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/0baa901d&quot;&gt;0baa901d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump @xmldom/xmldom from 0.8.12 to 0.8.13 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1918&quot;&gt;#1918&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/0d6fdd17&quot;&gt;0d6fdd17&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump lodash from 4.17.23 to 4.18.1 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1914&quot;&gt;#1914&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/7b33c5dd&quot;&gt;7b33c5dd&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump @xmldom/xmldom from 0.8.11 to 0.8.12 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1911&quot;&gt;#1911&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/c44a4627&quot;&gt;c44a4627&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump picomatch (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1908&quot;&gt;#1908&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/2868f93a&quot;&gt;2868f93a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump minimatch (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1898&quot;&gt;#1898&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/31f3d57c&quot;&gt;31f3d57c&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(gh-action): improve draft-release workflow (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1906&quot;&gt;#1906&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/340eade2&quot;&gt;340eade2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(INFRA): Set up default protection ruleset for default and release branches (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1927&quot;&gt;#1927&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/f490531d&quot;&gt;f490531d&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(post-release): bump v15.0.1-dev.0 (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1899&quot;&gt;#1899&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/c02d1b03&quot;&gt;c02d1b03&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc: improve documentation of &lt;code&gt;onRequestPermissionResult&lt;/code&gt; and &lt;code&gt;onRequestPermissionsResult&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1920&quot;&gt;#1920&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/1d01ea1f&quot;&gt;1d01ea1f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc(CordovaPreferences): Improve documentation for using Long.decode instead of Integer.decode (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1943&quot;&gt;#1943&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/661fadd0&quot;&gt;661fadd0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc(statusbar.js): document &lt;code&gt;visible&lt;/code&gt; property and &lt;code&gt;setBackgroundColor&lt;/code&gt; method (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1961&quot;&gt;#1961&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/50ee09e4&quot;&gt;50ee09e4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;refactor: address warnings in SystemWebChromeClient.java (&lt;a href=&quot;https://github.com/apache/cordova-android/pull/1951&quot;&gt;#1951&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-android/commit/80491e9a&quot;&gt;80491e9a&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/07/22/cordova-android-15.1.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/07/22/cordova-android-15.1.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova iOS 8.1.1 Released!</title>
@@ -1035,91 +1218,6 @@ This resolves numerous issues around CocoaPods, multi-target projects, and Info.
         <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/11/23/cordova-ios-8.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/23/cordova-ios-8.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova Lib 13.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova-lib@13.0.0&lt;/code&gt; has been released. This is the main library behind the Cordova CLI, handling project and build operations.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-lib/v/13.0.0&quot;&gt;cordova-lib@13.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable changes in this major release are:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Updated the library&amp;#39;s npm dependencies.&lt;/li&gt;
-  &lt;li&gt;Increased the Node.js engine requirement to &lt;code&gt;&amp;gt;=20.17.0 || &amp;gt;=22.9.0&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Dropped support for the &lt;code&gt;cordova serve&lt;/code&gt; command.&lt;/li&gt;
-  &lt;li&gt;Dropped support for the &lt;code&gt;create plugin&lt;/code&gt; command.&lt;/li&gt;
-  &lt;li&gt;Added support for listing available emulators with the &lt;code&gt;cordova emulate &amp;lt;platform&amp;gt; --list&lt;/code&gt; command.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/964&quot;&gt;GH-964&lt;/a&gt; chore(npm)!: bump &lt;code&gt;write-file-atomic@7.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/961&quot;&gt;GH-961&lt;/a&gt; chore!: update dependencies &amp;amp; node requirement&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/957&quot;&gt;GH-957&lt;/a&gt; feat!: remove &lt;code&gt;cordova serve&lt;/code&gt; command&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/955&quot;&gt;GH-955&lt;/a&gt; chore(npm)!: bump various packages&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/953&quot;&gt;GH-953&lt;/a&gt; feat(plugman)!: remove &lt;code&gt;create plugin&lt;/code&gt; support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/949&quot;&gt;GH-949&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/958&quot;&gt;GH-958&lt;/a&gt; chore!: remove deprecated platform data&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/959&quot;&gt;GH-959&lt;/a&gt; chore!: remove unused templates&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/952&quot;&gt;GH-952&lt;/a&gt; feat: replace &lt;code&gt;dep-graph&lt;/code&gt; dependency w/ custom class&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/944&quot;&gt;GH-944&lt;/a&gt; fix(emulator): Support listing emulators with &lt;code&gt;--list&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Chores:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/963&quot;&gt;GH-963&lt;/a&gt; chore: update &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/960&quot;&gt;GH-960&lt;/a&gt; chore: various updates to the root files&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/956&quot;&gt;GH-956&lt;/a&gt; chore(npm): bump &lt;code&gt;@cordova/eslint-config@6.0.0&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/946&quot;&gt;GH-946&lt;/a&gt; chore(deps-dev): bump &lt;code&gt;brace-expansion&lt;/code&gt; from 1.1.11 to 1.1.12&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/939&quot;&gt;GH-939&lt;/a&gt; chore(deps): bump &lt;code&gt;path-to-regexp&lt;/code&gt; and express&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/937&quot;&gt;GH-937&lt;/a&gt; chore(deps): bump &lt;code&gt;cross-spawn&lt;/code&gt; from 7.0.3 to 7.0.6&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/938&quot;&gt;GH-938&lt;/a&gt; chore(ci): Fix failing dependabot PRs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;CI &amp;amp; Others:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/954&quot;&gt;GH-954&lt;/a&gt; ci: various workflow improvements&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/950&quot;&gt;GH-950&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/945&quot;&gt;GH-945&lt;/a&gt; ci: Add node 22 and 24 to CI testing matrix&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/941&quot;&gt;GH-941&lt;/a&gt; Keep final new line in &lt;code&gt;package.json&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/pull/942&quot;&gt;GH-942&lt;/a&gt; Persist relative paths on disk&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 05 Nov 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/11/05/cordova-lib-13.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/05/cordova-lib-13.0.0.html</guid>
         
         <category>news</category>
         
