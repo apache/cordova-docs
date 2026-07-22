@@ -30,6 +30,14 @@ how to update the version of the CLI.
 
 __NOTE__: You should use the latest shipped version of the iOS SDK, which is included with the latest version of Xcode.
 
+## Upgrading to Cordova iOS 8.x
+
+If you are upgrading from Cordova iOS 7.x or earlier, use the dedicated guide:
+
+* [Upgrading to Cordova iOS 8.x](upgrade-to-8.html)
+
+The rest of this page contains historical upgrade instructions for much older Cordova iOS versions.
+
 ## Upgrading 4.x projects
 
 ```
