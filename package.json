@@ -21,8 +21,8 @@
     "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
     "gulp-htmllint": "0.0.19",
-    "gulp-sass": "^5.1.0",
-    "js-yaml": "^4.3.0",
+    "gulp-sass": "^6.0.1",
+    "js-yaml": "^5.2.1",
     "minimist": "^1.2.8",
     "sass": "^1.80.6",
     "semver": "^7.6.3",
@@ -32,7 +32,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "engines": {
-    "node": ">=20.18.0"
+    "node": ">=20.19.0"
   },
   "repository": "github:apache/cordova-docs",
   "bugs": "https://github.com/apache/cordova-docs/issues",
