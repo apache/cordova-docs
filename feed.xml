@@ -6,9 +6,67 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jul 2026 07:22:09 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Jul 2026 07:22:09 +0000</lastBuildDate>
+    <pubDate>Mon, 10 Aug 2026 12:08:43 +0000</pubDate>
+    <lastBuildDate>Mon, 10 Aug 2026 12:08:43 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>File Transfer Plugin 2.0.1 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released an update for &lt;code&gt;cordova-plugin-file-transfer&lt;/code&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-plugin-file-transfer&quot;&gt;cordova-plugin-file-transfer@2.0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova plugin remove cordova-plugin-file-transfer
+cordova plugin add cordova-plugin-file-transfer@2.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;This is a patch release which resolves a build error with Xcode and cordova-ios 8.0.0.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fix(ios): cast to &lt;code&gt;CDVFile&lt;/code&gt; when getting the plugin by &lt;code&gt;getCommandInstance&lt;/code&gt; (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/385&quot;&gt;#385&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/7b869a2&quot;&gt;7b869a2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(ios): Set minimum XCode version in GitHub Action to 15 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/386&quot;&gt;#386&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/41b0605&quot;&gt;41b0605&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Others&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore: update linter (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/396&quot;&gt;#396&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/e7a7a1f&quot;&gt;e7a7a1f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: sync workflows with paramedic, add release audit &amp;amp; missing license headers (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/390&quot;&gt;#390&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/86ad889&quot;&gt;86ad889&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: add asf config (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/375&quot;&gt;#375&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/f12b73e&quot;&gt;f12b73e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump version 2.0.1-dev [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/2c15ad2&quot;&gt;2c15ad2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(ci): draft release (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/395&quot;&gt;#395&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/02dd05e&quot;&gt;02dd05e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump flatted from 3.2.7 to 3.4.3 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/393&quot;&gt;#393&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/485ae29&quot;&gt;485ae29&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump minimatch from 3.1.2 to 3.1.5 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/392&quot;&gt;#392&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/c20f683&quot;&gt;c20f683&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump js-yaml from 4.1.0 to 4.3.0 (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/394&quot;&gt;#394&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/33f34e0&quot;&gt;33f34e0&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump brace-expansion from 1.1.11 to 1.1.12 in /tests/server (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/382&quot;&gt;#382&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/345c6cf&quot;&gt;345c6cf&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(INFRA): Set up default protection ruleset for default and release branches (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/389&quot;&gt;#389&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/c8d6b90&quot;&gt;c8d6b90&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: sync workflow w/ paramedic (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/379&quot;&gt;#379&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/24e2e99&quot;&gt;24e2e99&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;doc(readme): update badges, update license header (&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/pull/391&quot;&gt;#391&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-plugin-file-transfer/commit/8793e51&quot;&gt;8793e51&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/08/10/cordova-plugin-file-transfer-2.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/08/10/cordova-plugin-file-transfer-2.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>Cordova Android 15.1.0 Released!</title>
@@ -1122,102 +1180,6 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
         <pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2025/11/25/cordova-cli-13.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/25/cordova-cli-13.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova iOS 8.0.0 is now available!</title>
-        <description>&lt;p&gt;After nearly 2 years of work, we are excited to finally announce that we have released &lt;strong&gt;Cordova iOS 8.0.0&lt;/strong&gt;! This is Cordova&amp;#39;s platform supporting the development of applications for iOS &amp;amp; iPadOS; now with better support for the latest platform features.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova-ios&quot;&gt;cordova-ios@8.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cordova platform remove ios
-cordova platform add ios@8.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;This is a major version release which includes some breaking changes!&lt;/strong&gt;&lt;br /&gt;
-We have tried hard to make the update process as smooth as possible for both application and plugin developers, while improving the experience for developers embedding Cordova iOS as a library.&lt;/p&gt;
-
-&lt;p&gt;For plugin authors, we&amp;#39;ve written a guide about &lt;a href=&quot;https://apache.github.io/cordova-ios/documentation/cordova/upgrading-8?language=objc&quot;&gt;Upgrading Plugins to Cordova iOS 8.x&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Supported version minimums&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The minimum supported &lt;strong&gt;iOS&lt;/strong&gt; version is now 13.&lt;/li&gt;
-      &lt;li&gt;The minimum supported &lt;strong&gt;Xcode&lt;/strong&gt; version is now 15.&lt;/li&gt;
-      &lt;li&gt;The minimum supported &lt;strong&gt;NodeJS&lt;/strong&gt; version is now 20.17.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Embracing Swift&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The platform project now uses Swift classes and a storyboard file.&lt;/li&gt;
-      &lt;li&gt;Plugins can now be set up as Swift packages, including other Swift packages as dependencies.&lt;/li&gt;
-      &lt;li&gt;CordovaLib is available as a Swift package to be embedded in existing projects.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Platform project modernizing&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The Xcode project, and build target are now always named &lt;code&gt;App&lt;/code&gt;.&lt;br /&gt;
-This resolves numerous issues around CocoaPods, multi-target projects, and Info.plist additions, but potentially breaks some hooks that assume the project name matches what&amp;#39;s defined in config.xml.&lt;/li&gt;
-      &lt;li&gt;The platform project now supports building for macOS using Catalyst.&lt;/li&gt;
-      &lt;li&gt;The platform project has adopted the iOS Scene APIs, which are required for iOS 26 support.&lt;/li&gt;
-      &lt;li&gt;CordovaLib (used as a library) supports targeting the visionOS platform.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Build-in status bar handling&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Status bar handling is now built-in to Cordova iOS, and the StatusBar plugin is no longer required in most cases.&lt;/li&gt;
-      &lt;li&gt;Whether the status bar is shown or not is controlled by the viewport meta tag&amp;#39;s &lt;code&gt;viewport-fit&lt;/code&gt; directive.&lt;/li&gt;
-      &lt;li&gt;The background color of the status bar is controlled by the theme-color meta tag.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;App icon simplification&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Projects can now provide a single 1024px × 1024px icon in config.xml.&lt;/li&gt;
-      &lt;li&gt;Projects building with Xcode 16 or newer can provide monochrome and dark mode icon variants.&lt;/li&gt;
-      &lt;li&gt;See &lt;a href=&quot;https://github.com/apache/cordova-ios/pull/1465&quot;&gt;GH-1465&lt;/a&gt; for details.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; Cordova iOS 8.0.0 does not include support for the new Xcode 26 Icon Composer file format. We hope to introduce support in the near future.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bunches of bugs fixed&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Range requests are now supported for large media files when using a custom protocol.&lt;/li&gt;
-      &lt;li&gt;Opening system alert boxes from JavaScript code should no longer freeze the application.&lt;/li&gt;
-      &lt;li&gt;Improved error messaging when no iOS simulators are installed.&lt;/li&gt;
-      &lt;li&gt;Configurable behavior for recovering from web view crashes that sometimes left blank screens.&lt;/li&gt;
-      &lt;li&gt;Fix for &lt;code&gt;handleOpenURL()&lt;/code&gt; not firing reliably when the app is launched.&lt;/li&gt;
-      &lt;li&gt;Improve handling for the &lt;code&gt;deployment-target&lt;/code&gt; preference with CocoaPods.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Embedded framework improvements&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Several memory leaks have been fixed when disposing of a Cordova view controller.&lt;/li&gt;
-      &lt;li&gt;Several API improvements for specifying background colours and splash screen behaviour.&lt;/li&gt;
-      &lt;li&gt;Introduced &lt;code&gt;CDVSceneDelegate&lt;/code&gt; for integrating with the iOS Scene API.&lt;/li&gt;
-      &lt;li&gt;Added nullability annotations to several classes and API methods.&lt;/li&gt;
-      &lt;li&gt;New &lt;a href=&quot;https://apache.github.io/cordova-ios/&quot;&gt;API documentation&lt;/a&gt; is published for the CordovaLib classes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The full changelog is available to read &lt;a href=&quot;https://github.com/apache/cordova-ios/blob/rel/8.0.0/RELEASENOTES.md&quot;&gt;here&lt;/a&gt;. Please report any issues you find on our &lt;a href=&quot;https://github.com/apache/cordova-ios/issues&quot;&gt;Cordova-iOS&lt;/a&gt; GitHub issue tracker!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/11/23/cordova-ios-8.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/23/cordova-ios-8.0.0.html</guid>
         
         <category>news</category>
         

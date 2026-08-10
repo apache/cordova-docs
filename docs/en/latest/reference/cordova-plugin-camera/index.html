@@ -2317,7 +2317,11 @@
 <ul>
   <li><a href="#module_camera">camera</a>
     <ul>
-      <li><a href="#module_camera.getPicture">.getPicture(successCallback, errorCallback, options)</a></li>
+      <li><a href="#module_camera.getPicture">.getPicture(successCallback, errorCallback, options)</a>
+        <ul>
+          <li><a href="#module_camera.stop">.stop()</a></li>
+        </ul>
+      </li>
       <li><a href="#module_camera.cleanup">.cleanup()</a></li>
       <li><a href="#module_camera.onError">.onError</a> : <code>function</code></li>
       <li><a href="#module_camera.onSuccess">.onSuccess</a> : <code>function</code></li>
@@ -2517,6 +2521,32 @@ consistent access to that resource, so it&#39;s not suitable to retain the tempo
 <p><strong>Example</strong></p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">getPicture</span><span class="p">(</span><span class="nx">cameraSuccess</span><span class="p">,</span> <span class="nx">cameraError</span><span class="p">,</span> <span class="nx">cameraOptions</span><span class="p">);</span>
 </code></pre></div></div>
+
+<p><a name="module_camera.stop"></a></p>
+
+<h3>camera.stop()</h3>
+<p>Closes the active camera or photo library picker UI.</p>
+
+<p><strong>Supported Platforms</strong></p>
+
+<ul>
+  <li>Android</li>
+  <li>iOS</li>
+</ul>
+
+<p><strong>Kind</strong>: static method of <code>[camera](#module_camera)</code>
+<strong>Example</strong></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">navigator</span><span class="p">.</span><span class="nx">camera</span><span class="p">.</span><span class="nf">stop</span><span class="p">(</span><span class="nx">onSuccess</span><span class="p">,</span> <span class="nx">onFail</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nf">onSuccess</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Camera stopped successfully.</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nf">onFail</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed because: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">message</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 <p><a name="module_camera.cleanup"></a></p>
 
 <h3>camera.cleanup()</h3>
