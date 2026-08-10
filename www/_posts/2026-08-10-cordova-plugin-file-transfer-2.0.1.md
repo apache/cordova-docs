@@ -21,7 +21,7 @@ cordova plugin add cordova-plugin-file-transfer@2.0.1
 
 ## Release Highlights
 
-This is a patch release which resolves a build error with XCode and using cordova-ios 8.0.0.
+This is a patch release which resolves a build error with Xcode and cordova-ios 8.0.0.
 
 <!--more-->
 ### Fixes
