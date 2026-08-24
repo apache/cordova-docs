@@ -79,6 +79,12 @@ To use the adaptive icons the `background`, `foreground` and optionally `monochr
 
 #### Adaptive Icon with Vectors:
 
+Android vector drawable resources are XML files, not regular SVG files. To convert an SVG for use
+as a vector drawable, open Vector Asset Studio in Android Studio by right-clicking the `res` folder
+and selecting `New > Vector Asset`, then import the SVG. A vector drawable can be resized for
+different screen densities without losing image quality; Android Studio can also generate bitmap
+fallbacks for older Android versions that do not support vector drawables.
+
 ```xml
 <platform name="android">
   <icon monochrome="res/icon/android/ldpi-monochrome.png" background="res/icon/android/ldpi-background.xml" density="ldpi" foreground="res/icon/android/ldpi-foreground.xml" src="res/android/ldpi.png" />
@@ -140,9 +146,10 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 
 **See Also:**
 
-- [Android icon guide](https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive)
+- [Create app icons with Android Studio](https://developer.android.com/studio/write/create-app-icons)
+- [Add multi-density vector graphics with Vector Asset Studio](https://developer.android.com/studio/write/vector-asset-studio)
+- [Adaptive icon design guidance](https://developer.android.com/develop/ui/compose/system/icon_design_adaptive)
 - [Android Adaptive icons - User theming](https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming)
-- [Android - Supporting multiple screens](https://developer.android.com/guide/practices/screens_support.html)
 
 ## Browser
 Icons are not applicable to the Browser platform.
