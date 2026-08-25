@@ -2209,6 +2209,12 @@ If you do not specify an icon, the Apache Cordova logo is used.</p>
 
 <h4>Adaptive Icon with Vectors:</h4>
 
+<p>Android vector drawable resources are XML files, not regular SVG files. To convert an SVG for use
+as a vector drawable, open Vector Asset Studio in Android Studio by right-clicking the <code>res</code> folder
+and selecting <code>New &gt; Vector Asset</code>, then import the SVG. A vector drawable can be resized for
+different screen densities without losing image quality; Android Studio can also generate bitmap
+fallbacks for older Android versions that do not support vector drawables.</p>
+
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;platform</span> <span class="na">name=</span><span class="s">"android"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/ldpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/ldpi-background.xml"</span> <span class="na">density=</span><span class="s">"ldpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/ldpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/ldpi.png"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;icon</span> <span class="na">monochrome=</span><span class="s">"res/icon/android/mdpi-monochrome.png"</span> <span class="na">background=</span><span class="s">"res/icon/android/mdpi-background.xml"</span> <span class="na">density=</span><span class="s">"mdpi"</span> <span class="na">foreground=</span><span class="s">"res/icon/android/mdpi-foreground.xml"</span> <span class="na">src=</span><span class="s">"res/android/mdpi.png"</span> <span class="nt">/&gt;</span>
@@ -2267,9 +2273,11 @@ If you do not specify an icon, the Apache Cordova logo is used.</p>
 <p><strong>See Also:</strong></p>
 
 <ul>
-  <li><a href="https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive">Android icon guide</a></li>
+  <li><a href="https://developer.android.com/studio/write/create-app-icons">Create app icons with Android Studio</a></li>
+  <li><a href="https://developer.android.com/studio/write/vector-asset-studio">Add multi-density vector graphics with Vector Asset Studio</a></li>
+  <li><a href="https://developer.android.com/develop/ui/compose/system/icon_design_adaptive">Adaptive icon design guidance</a></li>
   <li><a href="https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming">Android Adaptive icons - User theming</a></li>
-  <li><a href="https://developer.android.com/guide/practices/screens_support.html">Android - Supporting multiple screens</a></li>
+  <li><a href="https://developer.android.com/guide/practices/screens_support">Android - Supporting multiple screens</a></li>
 </ul>
 
 <h2>Browser</h2>
