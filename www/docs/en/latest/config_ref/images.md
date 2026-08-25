@@ -150,6 +150,7 @@ In the `config.xml`, we will add `resource-file` to copy the `colors.xml` into t
 - [Add multi-density vector graphics with Vector Asset Studio](https://developer.android.com/studio/write/vector-asset-studio)
 - [Adaptive icon design guidance](https://developer.android.com/develop/ui/compose/system/icon_design_adaptive)
 - [Android Adaptive icons - User theming](https://developer.android.com/develop/ui/views/launch/icon_design_adaptive#user-theming)
+- [Android - Supporting multiple screens](https://developer.android.com/guide/practices/screens_support)
 
 ## Browser
 Icons are not applicable to the Browser platform.
