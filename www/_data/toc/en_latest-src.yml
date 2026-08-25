@@ -52,6 +52,7 @@
     name: References
     children:
         - url: config_ref/index.html
+        - url: package_ref/index.html
         - url: plugin_ref/spec.html
         - url: cordova/events/events.html
 
