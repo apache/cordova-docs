@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: 24.x
 
-      - uses: ruby/setup-ruby@d45b1a4e94b71acab930e56e79c6aa188764e7f9 # v1.316.0
+      - uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1.321.0
         with:
           ruby-version: 2.7
           bundler-cache: true
@@ -54,7 +54,7 @@ jobs:
         run: npm run build:prod
 
       - name: Run deploy
-        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
+        uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4.9.0
         with:
           branch: asf-staging
           folder: build-prod
