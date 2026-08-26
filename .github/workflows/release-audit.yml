@@ -15,48 +15,44 @@
 # specific language governing permissions and limitations
 # under the License.
 
-name: Deploy Staging Site
+name: Release Auditing
 
 on:
-  workflow_dispatch:
-
   push:
+    branches-ignore:
+      - 'dependabot/**'
+  pull_request:
     branches:
-      - master
+      - '*'
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  test:
+    name: Audit Licenses
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
     steps:
+      # Checkout project
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
           fetch-depth: 1
-          ref: master
 
+      # TODO: Add license headers
+      # Check license headers
+      # - uses: erisu/apache-rat-action@30c94d10ed21e6f6fd5590dc5c158f58cae7a0dd # v3.0.0
+
+      # Setup environment with node
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 24.x
+          node-version: 24
 
-      - uses: ruby/setup-ruby@d45b1a4e94b71acab930e56e79c6aa188764e7f9 # v1.316.0
+      # Install node packages
+      - name: npm install packages
+        run: npm ci
+
+      # Check node package licenses
+      - uses: erisu/license-checker-action@04511f4c052b5773f11e1c65b42cda88235c62ae # v2.1.0
         with:
-          ruby-version: 2.7
-          bundler-cache: true
-
-      - name: Run npm install-ci-test (cit)
-        run: npm install-ci-test
-
-      - name: Run build
-        run: npm run build:prod
-
-      - name: Run deploy
-        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
-        with:
-          branch: asf-staging
-          folder: build-prod
-          clean-exclude: |
-            archive
+          include-asf-category-a: true
