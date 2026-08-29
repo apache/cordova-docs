@@ -286,6 +286,20 @@ For manual signing, specifying the provisioning profiles by UUID:
 
 There is also support to mix and match command line arguments and parameters in `build.json`. Values from the command line arguments will get precedence.
 
+### Building for App Store Upload
+
+When creating an `.ipa` intended for App Store upload, make sure the build targets a **device** build.
+
+Use:
+
+```zsh
+cordova build ios --release --device
+```
+
+Without `--device`, Cordova may build for the simulator depending on context, which does not follow the same archive/export flow used for App Store distribution.
+
+If `packageType` is already set in your `build.json` release configuration (for example, `"packageType": "app-store"`), you do not need to pass `--packageType` on the command line unless you want to override it.
+
 ## Xcode Build Flags
 
 If you have a custom situation where you need to pass additional build flags to Xcode you would use one or more `--buildFlag` options to pass these flags to `xcodebuild`. If you use an `xcodebuild` built-in flag, it will show a warning.
