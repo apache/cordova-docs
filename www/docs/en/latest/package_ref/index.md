@@ -25,7 +25,7 @@ description: List of Cordova-specific fields in the package.json file, and when 
 
 # package.json API
 
-Alongside `config.xml`, every Cordova project created with the CLI also has a standard npm `package.json` file. Cordova's tooling reads from and writes to a handful of fields in this file automatically, in addition to `config.xml`, to keep track of your project's platforms, plugins, and metadata.
+Alongside `config.xml`, every Cordova project created with the CLI also has a standard npm [`package.json`](https://docs.npmjs.com/cli/configuring-npm/package-json) file. Cordova's tooling reads from and writes to a handful of fields in this file automatically, in addition to `config.xml`, to keep track of your project's platforms, plugins, and metadata.
 
 This page lists the Cordova-specific fields you may find in your `package.json`, and explains when and how the CLI updates each one, so that you know what's safe to edit by hand and what's managed for you.
 
@@ -60,7 +60,7 @@ This page lists the Cordova-specific fields you may find in your `package.json`,
 
 ## name, displayName, version
 
-Set automatically when a project is first created with `cordova create`. These values are copied from the corresponding attributes in `config.xml`, and kept in sync with them.
+Set automatically when a project is first created with `cordova create`. These values are copied from the corresponding attributes in `config.xml` at that time only, Cordova does not go back and update them later if `config.xml` changes.
 
 Field | Description
 ----------------- | ------------
@@ -82,15 +82,7 @@ Examples:
 
 An array listing the platforms currently installed in the project. Entries are added automatically when you run `cordova platform add <platform>`, and removed when you run `cordova platform remove <platform>`. Adding a platform that's already listed will not create a duplicate entry.
 
-> [!NOTE]
-> By default, `cordova platform add` and `cordova plugin add` automatically save what you installed into `package.json` (and `config.xml`). If you'd rather install something without permanently adding it to your project's configuration, for example, to test a plugin temporarily, pass the `--nosave` flag:
->
-> ```bash
-> cordova platform add android --nosave
-> cordova plugin add cordova-plugin-camera --nosave
-> ```
->
-> This applies to `cordova.platforms`, `cordova.plugins`, and `devDependencies` all at once, there's a single flag, not one per field.
+Automatic saving can be turned off with the [`--nosave` flag](#cli---nosave-flag).
 
 Examples:
 
@@ -109,7 +101,7 @@ cordova platform add ios --nosave
 
 ## cordova.plugins
 
-An object listing the plugins currently installed in the project. Each key is a plugin's ID, and its value holds any CLI variables that were supplied when the plugin was installed (or an empty object if none were needed). Entries are added by `cordova plugin add <plugin>` and removed by `cordova plugin remove <plugin>`. See the note on `--nosave` above, it applies here too.
+An object listing the plugins currently installed in the project. Each key is a plugin's ID, and its value holds any CLI variables that were supplied when the plugin was installed (or an empty object if none were needed). Entries are added by `cordova plugin add <plugin>` and removed by `cordova plugin remove <plugin>`. Automatic saving can be turned off with the [`--nosave` flag](#cli---nosave-flag).
 
 Examples:
 
@@ -133,9 +125,9 @@ cordova plugin add cordova-plugin-some-plugin --variable API_KEY=my-api-key
 
 ## devDependencies
 
-A standard npm field, not unique to Cordova. When a platform or plugin is installed, Cordova's tooling also records it here as an npm dependency, alongside its installed version number. This is separate from `cordova.platforms` and `cordova.plugins` above: those track *which* platforms/plugins are part of the project and their configuration, while `devDependencies` tracks the actual npm package and version that was fetched.
+A standard npm field, not unique to Cordova. See npm's docs on [`devDependencies`](https://docs.npmjs.com/cli/v12/configuring-npm/package-json#devdependencies) for the general behavior. When a platform or plugin is installed, Cordova's tooling also records it here as an npm dependency, alongside its installed version number. This is separate from [`cordova.platforms`](#cordovaplatforms) and [`cordova.plugins`](#cordovaplugins), `devDependencies` tracks the actual npm package and version that was fetched.
 
-This is controlled by the same `--nosave` flag mentioned in the note under `cordova.platforms` above, there isn't a separate flag just for `devDependencies`.
+Automatic saving can be turned off with the [`--nosave` flag](#cli---nosave-flag).
 
 Examples:
 
@@ -147,3 +139,14 @@ Examples:
   }
 }
 ```
+
+## CLI --nosave Flag
+
+By default, `cordova platform add` and `cordova plugin add` automatically save what you installed into `package.json` (and `config.xml`). If you'd rather install something without permanently adding it to your project's configuration, for example, to test a plugin temporarily, pass the `--nosave` flag:
+
+```bash
+cordova platform add android --nosave
+cordova plugin add cordova-plugin-camera --nosave
+```
+
+This applies to `cordova.platforms`, `cordova.plugins`, and `devDependencies` all at once, there's a single flag, not one per field.
