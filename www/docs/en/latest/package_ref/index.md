@@ -25,7 +25,7 @@ description: List of Cordova-specific fields in the package.json file, and when 
 
 # package.json API
 
-Alongside `config.xml`, every Cordova project created with the CLI also has a standard npm [`package.json`](https://docs.npmjs.com/cli/configuring-npm/package-json) file. Cordova's tooling reads from and writes to a handful of fields in this file automatically, in addition to `config.xml`, to keep track of your project's platforms, plugins, and metadata.
+Alongside `config.xml`, every Cordova project created with the CLI also has a standard npm [`package.json`](https://docs.npmjs.com/cli/configuring-npm/package-json) file. Cordova reads and writes fields inside `package.json` to keep track of your project's platforms and plugins.
 
 This page lists the Cordova-specific fields you may find in your `package.json`, and explains when and how the CLI updates each one, so that you know what's safe to edit by hand and what's managed for you.
 
@@ -60,7 +60,7 @@ This page lists the Cordova-specific fields you may find in your `package.json`,
 
 ## name, displayName, version
 
-Set automatically when a project is first created with `cordova create`. These values are copied from the corresponding attributes in `config.xml` at that time only, Cordova does not go back and update them later if `config.xml` changes.
+Set automatically when a project is first created with `cordova create`, alongside `config.xml`. Cordova does not go back and update these values later if `config.xml` changes.
 
 Field | Description
 ----------------- | ------------
@@ -142,7 +142,7 @@ Examples:
 
 ## CLI --nosave Flag
 
-By default, `cordova platform add` and `cordova plugin add` automatically save what you installed into `package.json` (and `config.xml`). If you'd rather install something without permanently adding it to your project's configuration, for example, to test a plugin temporarily, pass the `--nosave` flag:
+By default, `cordova platform add` and `cordova plugin add` automatically save what you installed into `package.json`. If you'd rather install something without permanently adding it to your project's configuration, for example, to test a plugin temporarily, pass the `--nosave` flag:
 
 ```bash
 cordova platform add android --nosave
