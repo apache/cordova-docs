@@ -25,6 +25,11 @@
                 - url: guide/platforms/ios/index.html
                 - url: guide/platforms/electron/index.html
         -
+            name: References
+            children:
+                - url: config_ref/index.html
+                - url: cordova/events/events.html
+        -
             name: Customization
             children:
                 - url: config_ref/images.html
@@ -35,7 +40,10 @@
                 - url: guide/appdev/security/index.html
                 - url: guide/appdev/privacy/index.html
                 - url: guide/appdev/allowlist/index.html
-        - url: cordova/storage/storage.html
+        -
+            name: Miscellaneous
+            children:
+                - url: cordova/storage/storage.html
 
 -
     name: Plugin Development
@@ -46,14 +54,8 @@
             children:
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/ios/plugin.html
-        - url: plugin_ref/plugman.html
-
--
-    name: References
-    children:
-        - url: config_ref/index.html
         - url: plugin_ref/spec.html
-        - url: cordova/events/events.html
+        - url: plugin_ref/plugman.html
 
 -
     name: Resources
