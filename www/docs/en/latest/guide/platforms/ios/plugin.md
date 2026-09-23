@@ -308,7 +308,7 @@ targets: [
 
 #### Using Plugin Variables in `Package.swift`
 
-> This feature is pending [cordova-ios PR #1724](https://github.com/apache/cordova-ios/pull/1724), targeted for cordova-ios 8.2.0.
+Starting with cordova-ios 8.2.0, plugin variables can be used in `Package.swift`.
 
 Plugin variables can be referenced in `Package.swift` using `$VARIABLE_NAME`. When installing the plugin, Cordova replaces these references in the copied package manifest with the installation values. Values supplied with the CLI's `--variable` option override the defaults declared by [`<preference>` elements in `plugin.xml`](../../../plugin_ref/spec.html#preference).
 
