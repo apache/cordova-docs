@@ -810,6 +810,26 @@
 
     <li>
         
+            <a class="" href="/docs/en/latest/package_ref/index.html">
+                package.json API
+            </a>
+            
+        
+
+        
+        
+
+        
+    </li>
+    
+
+    
+    
+    
+    
+
+    <li>
+        
             <a class="" href="/docs/en/latest/plugin_ref/spec.html">
                 Plugin.xml API
             </a>
@@ -1756,6 +1776,21 @@
 
 
 <li>
+    <a class="" href="/docs/en/latest/package_ref/index.html">
+        package.json API
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
     <a class="" href="/docs/en/latest/plugin_ref/spec.html">
         Plugin.xml API
     </a>
@@ -2183,7 +2218,10 @@
 
     <p>##### iOS Specifics</p>
 
-    <p>The status bar will be transparent if <code>StatusBarOverlaysWebView</code> is set to <code>true</code>. A background color cannot be applied.</p>
+    <p>The status bar will be transparent if <code>StatusBarOverlaysWebView</code> is set to <code>true</code>. A background color cannot be applied. Since iOS 11 you must also include <code>viewport-fit=cover</code> in your <code>&lt;meta name="viewport" content="..."&gt;</code> tag if you want the status bar to overlay the webview:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"initial-scale=1, width=device-width, viewport-fit=cover"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
 
     <p>##### Android Quirks</p>
 
@@ -2227,12 +2265,6 @@
     <span class="nx">StatusBar</span><span class="p">.</span><span class="nf">overlaysWebView</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
     <span class="nx">StatusBar</span><span class="p">.</span><span class="nf">backgroundColorByHexString</span><span class="p">(</span><span class="dl">'</span><span class="s1">#33000000</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div>
-
-<h3>iOS Quirks</h3>
-<p>Starting with iOS 11 you must include <code>viewport-fit=cover</code> in your viewport meta tag if you want the status bar to overlay the webview:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"initial-scale=1, width=device-width, viewport-fit=cover"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
 <h2>Hiding at startup</h2>

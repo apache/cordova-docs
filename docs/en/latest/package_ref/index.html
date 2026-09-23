@@ -6,12 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta name="description" content="Cordova CLI pinned platform versions. ">
+    <meta name="description" content="List of Cordova-specific fields in the package.json file, and when the CLI updates them. ">
 
     <title>
         
             
-                Platform Pinning - Apache Cordova
+                package.json API - Apache Cordova
             
         
     </title>
@@ -23,7 +23,7 @@
     
     
 
-    <link rel="canonical" href="https://cordova.apache.org/docs/en/latest/platform_pinning/">
+    <link rel="canonical" href="https://cordova.apache.org/docs/en/latest/package_ref/">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
@@ -302,16 +302,14 @@
 
     <li>
         
-            <a class="this-page" href="/docs/en/latest/platform_pinning/index.html">
+            <a class="" href="/docs/en/latest/platform_pinning/index.html">
                 Platform Pinning
             </a>
-            
-                <span class="entry-highlight"></span>
             
         
 
         
-        <div id="page-toc" class="page-toc"></div>
+        
 
         
     </li>
@@ -812,14 +810,16 @@
 
     <li>
         
-            <a class="" href="/docs/en/latest/package_ref/index.html">
+            <a class="this-page" href="/docs/en/latest/package_ref/index.html">
                 package.json API
             </a>
+            
+                <span class="entry-highlight"></span>
             
         
 
         
-        
+        <div id="page-toc" class="page-toc"></div>
 
         
     </li>
@@ -1437,7 +1437,7 @@
 
 
 <li>
-    <a class="this-page" href="/docs/en/latest/platform_pinning/index.html">
+    <a class="" href="/docs/en/latest/platform_pinning/index.html">
         Platform Pinning
     </a>
 </li>
@@ -1776,7 +1776,7 @@
 
 
 <li>
-    <a class="" href="/docs/en/latest/package_ref/index.html">
+    <a class="this-page" href="/docs/en/latest/package_ref/index.html">
         package.json API
     </a>
 </li>
@@ -2127,7 +2127,7 @@
                 </div>
                 
                 
-                <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/latest/platform_pinning/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
+                <a class="edit hidden-xs hidden-sm" href="https://github.com/apache/cordova-docs/tree/master/www/docs/en/latest/package_ref/index.md"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a>
             </div>
 
             
@@ -2146,51 +2146,144 @@
             
 
             <div id="page-toc-source">
-                <h2>Platform Pinning</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" hidden="" style="display: none !important"><symbol id="cdv-platform-browser" viewBox="461.6 9.3 30 30"><path d="M476.7 10.3c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14m9.8 9h-5.1c-.3-2.1-.8-4-1.4-5.5 2.8.9 5.1 2.9 6.5 5.5m-6.8 5-.1 3h-5.8l-.1-3 .1-3h5.8l.1 3m-3 11h-.9c-.6-1.1-1.4-3.1-1.8-6h5.3c-.4 2.9-1.1 4.8-1.8 6h-.8m-2.7-16c.4-2.9 1.1-4.8 1.8-6h1.8c.6 1.1 1.4 3.1 1.8 6H474zm-.6-5.5c-.6 1.5-1.1 3.4-1.4 5.5h-5.1c1.3-2.6 3.6-4.6 6.5-5.5m-7.3 7.5h5.7l-.1 3 .1 3h-5.7c-.3-1-.4-2-.4-3s.1-2 .4-3m.8 8h5.1c.3 2.1.8 4 1.4 5.5-2.9-.9-5.2-2.9-6.5-5.5m13.1 5.5c.6-1.5 1.1-3.4 1.4-5.5h5.1a11.4 11.4 0 0 1-6.5 5.5m7.2-7.5h-5.7l.1-3-.1-3h5.7c.3 1 .4 2 .4 3 .1 1.1-.1 2.1-.4 3" /></symbol><symbol id="cdv-platform-android" viewBox="0 0 553 553"><path d="M76.8 179.1a33 33 0 0 0-24.3 10 32.6 32.6 0 0 0-10 24V356a33 33 0 0 0 10 24.2 33 33 0 0 0 24.3 10 32 32 0 0 0 24-10 33.3 33.3 0 0 0 9.9-24.2V213c0-9.3-3.3-17.2-10-23.9a32.6 32.6 0 0 0-24-10zM352 50.8l23.6-43.5c1.5-2.9 1-5-1.7-6.6-2.9-1.4-5-.7-6.6 2l-24 43.8c-21-9.3-43.3-14-66.8-14s-45.7 4.7-66.8 14L185.8 2.7c-1.6-2.7-3.8-3.4-6.7-2-2.6 1.5-3.2 3.7-1.6 6.6L201 50.8c-24 12.2-43 29.2-57.2 51a128.9 128.9 0 0 0-21.2 71.7H430c0-26-7.1-49.8-21.3-71.6a146.3 146.3 0 0 0-56.8-51zm-136.5 63.4a12.5 12.5 0 0 1-9.1 3.8 12.7 12.7 0 0 1-12.6-13c0-3.5 1.2-6.6 3.6-9.1 2.5-2.6 5.5-3.8 9-3.8s6.6 1.2 9.1 3.8c2.6 2.5 3.9 5.6 3.9 9.1 0 3.6-1.3 6.6-3.9 9.2zm140.1 0a12 12 0 0 1-9 3.8c-3.5 0-6.5-1.3-9-3.8a12.4 12.4 0 0 1-4-9.2c0-3.5 1.4-6.6 4-9.1a12 12 0 0 1 9-3.8 12 12 0 0 1 9 3.8c2.5 2.5 3.7 5.6 3.7 9.1 0 3.6-1.2 6.6-3.7 9.2zM124 406.8c0 10.2 3.5 18.8 10.6 26 7 7 15.7 10.6 26 10.6H185l.4 75.4c0 9.5 3.3 17.6 10 24.3s14.6 10 23.9 10c9.5 0 17.6-3.4 24.2-10s10-14.8 10-24.3v-75.4h45.8v75.4c0 9.5 3.4 17.6 10 24.3s14.7 10 24.3 10c9.5 0 17.6-3.4 24.2-10s10-14.8 10-24.3v-75.4h25a35 35 0 0 0 25.5-10.7 35 35 0 0 0 10.7-25.9V185.4H124v221.4zm352.3-227.7a33 33 0 0 0-24 9.8 32.5 32.5 0 0 0-10 24.1v143c0 9.5 3.4 17.6 10 24.2s14.7 10 24 10c9.5 0 17.6-3.3 24.2-10s10-14.7 10-24.2V213a32 32 0 0 0-10-24 33.3 33.3 0 0 0-24.2-9.9z" /></symbol><symbol id="cdv-platform-ios" viewBox="0 0 512 512"><path d="M410 334s-10 29-30 59c-5 9-29 43-58 43-21 0-35-15-62-15-33 0-46 15-67 15-11 1-22-5-34-16-77-73-81-181-52-225 18-29 48-47 81-48 26 0 54 17 65 17 8 0 50-20 74-18 33 3 56 15 73 38-49 24-66 117 10 150zM329 56c8 32-27 93-79 90-3-43 34-87 79-90z" /></symbol><symbol id="cdv-platform-electron" viewBox="0 0 256 256"><path d="M100.5 71.69c-26-4.74-46.57.22-54.76 14.41-6.12 10.6-4.37 24.64 4.24 39.65a2.67 2.67 0 1 0 4.63-2.65c-7.76-13.52-9.27-25.64-4.25-34.33 6.8-11.79 25.15-16.21 49.19-11.83a2.67 2.67 0 0 0 .95-5.25zm-37 72.3c10.52 11.56 24.18 22.4 39.76 31.4 37.72 21.78 77.88 27.6 97.67 14.1a2.67 2.67 0 1 0-3-4.4c-17.72 12.07-55.86 6.54-92-14.32-15.12-8.73-28.35-19.23-38.48-30.36A2.67 2.67 0 1 0 63.5 144z" /><path d="M194.62 140.75c17.03-20.11 22.97-40.35 14.8-54.5-6.02-10.43-18.74-15.94-35.65-16.16a2.67 2.67 0 0 0-.07 5.34c15.2.2 26.17 4.94 31.1 13.48 6.79 11.76 1.49 29.8-14.25 48.4a2.67 2.67 0 1 0 4.07 3.44zm-43.76-68.17c-15.4 3.3-31.79 9.75-47.52 18.83-38.94 22.49-64.35 55.64-60.82 79.68a2.67 2.67 0 1 0 5.28-.78c-3.14-21.34 20.94-52.77 58.2-74.28 15.27-8.81 31.14-15.06 45.98-18.24a2.67 2.67 0 1 0-1.12-5.21z" /><path d="M87.77 187.75c8.9 24.86 23.47 40.17 39.85 40.17 11.94 0 23-8.14 31.61-22.48a2.67 2.67 0 1 0-4.57-2.75c-7.75 12.89-17.26 19.9-27.04 19.9-13.6 0-26.6-13.66-34.83-36.63a2.67 2.67 0 1 0-5.02 1.8zm81.32-4.86c4.61-14.73 7.09-31.72 7.09-49.42 0-44.18-15.47-82.27-37.49-92.05a2.67 2.67 0 0 0-2.16 4.88c19.64 8.72 34.31 44.86 34.31 87.17 0 17.17-2.4 33.63-6.84 47.83a2.67 2.67 0 1 0 5.1 1.59zm50.23-2.61a12.76 12.76 0 1 0-25.53 0 12.76 12.76 0 0 0 25.53 0zm-5.34 0a7.43 7.43 0 1 1-14.86 0 7.43 7.43 0 0 1 14.86 0zM48.5 193.04a12.76 12.76 0 1 0 0-25.52 12.76 12.76 0 0 0 0 25.52zm0-5.33a7.43 7.43 0 1 1 0-14.86 7.43 7.43 0 0 1 0 14.86z" /><path d="M127.62 54.44a12.76 12.76 0 1 0 0-25.52 12.76 12.76 0 0 0 0 25.52zm0-5.33a7.43 7.43 0 1 1 0-14.86 7.43 7.43 0 0 1 0 14.86zm1.95 93.38a9.23 9.23 0 0 1-10.98-7.07 9.24 9.24 0 0 1 7.08-10.98 9.24 9.24 0 0 1 3.9 18.05z" /></symbol></svg>
 
-<h3>Cordova CLI 12.x &amp; Higher</h3>
+<h1>package.json API</h1>
 
-<p>Starting from Cordova CLI 12.0.0, the CLI no longer maintains a list of pinned Apache Cordova platforms.</p>
+<p>Alongside <code>config.xml</code>, every Cordova project created with the CLI also has a standard npm <a href="https://docs.npmjs.com/cli/configuring-npm/package-json"><code>package.json</code></a> file. Cordova reads and writes fields inside <code>package.json</code> to keep track of your project&#39;s platforms and plugins.</p>
 
-<p>When you run the <code>cordova platform add &lt;PLATFORM&gt;</code> command, it will always fetch the latest available platform from the npm registry. This ensures immediate access to newly released platforms.</p>
+<p>This page lists the Cordova-specific fields you may find in your <code>package.json</code>, and explains when and how the CLI updates each one, so that you know what&#39;s safe to edit by hand and what&#39;s managed for you.</p>
 
-<p>If you want to consistently fetch a specific version, you need to modify the command and include the version pinning. For example, use <code>cordova platform add &lt;PLATFORM&gt;@&lt;VERSION&gt;</code>.</p>
+<p><strong>Sample <code>package.json</code>:</strong></p>
 
-<p>The <code>cordova platform list</code> command displays the list of platforms without their versions. However, it will continue to show the versions of the installed platforms.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"io.cordova.hellocordova"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HelloCordova"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sample Apache Cordova App"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"android"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ios"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"cordova-plugin-device"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"cordova-android"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^13.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cordova-ios"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^7.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cordova-plugin-device"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.1.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-<p><strong>Example Output:</strong></p>
+<h2>name, displayName, version</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform list
-Installed platforms:
-  android 12.0.0
-Available platforms:
-  browser
-  electron
-  ios
+<p>Set automatically when a project is first created with <code>cordova create</code>, alongside <code>config.xml</code>. Cordova does not go back and update these values later if <code>config.xml</code> changes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>Copied from <code>config.xml</code>&#39;s <code>widget id</code> attribute (the app&#39;s reverse-DNS identifier), converted to lowercase.</td>
+    </tr>
+    <tr>
+      <td>displayName</td>
+      <td>Copied from <code>config.xml</code>&#39;s <code>&lt;name&gt;</code> element (the app&#39;s human-readable name).</td>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>Copied from <code>config.xml</code>&#39;s <code>widget version</code> attribute.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"io.cordova.hellocordova"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HelloCordova"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2>cordova.platforms</h2>
+
+<p>An array listing the platforms currently installed in the project. Entries are added automatically when you run <code>cordova platform add &lt;platform&gt;</code>, and removed when you run <code>cordova platform remove &lt;platform&gt;</code>. Adding a platform that&#39;s already listed will not create a duplicate entry.</p>
+
+<p>Automatic saving can be turned off with the <a href="#cli---nosave-flag"><code>--nosave</code> flag</a>.</p>
+
+<p>Examples:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"android"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ios"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android
+cordova platform add ios <span class="nt">--nosave</span>
 </code></pre></div></div>
 
-<h3>Cordova CLI 11.x &amp; Lower</h3>
+<h2>cordova.plugins</h2>
 
-<p>Cordova CLI 11.x and lower versions still use platform pinning but won&#39;t receive further updates since Cordova CLI 12.0.0 has been released. Platforms are pinned with a <code>^</code> symbol, allowing the CLI to fetch new minor and patch releases for the pinned platforms.</p>
+<p>An object listing the plugins currently installed in the project. Each key is a plugin&#39;s ID, and its value holds any CLI variables that were supplied when the plugin was installed (or an empty object if none were needed). Entries are added by <code>cordova plugin add &lt;plugin&gt;</code> and removed by <code>cordova plugin remove &lt;plugin&gt;</code>. Automatic saving can be turned off with the <a href="#cli---nosave-flag"><code>--nosave</code> flag</a>.</p>
 
-<p>To view the pinned platforms for your CLI version, run the command <code>cordova platform list</code> in a new project directory.</p>
+<p>Examples:</p>
 
-<p><strong>Example Output:</strong></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cordova"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"cordova-plugin-camera"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+      </span><span class="nl">"cordova-plugin-some-plugin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"API_KEY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-api-key"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>cordova platform list
-Installed platforms:
-
-Available platforms:
-  android ^10.1.1
-  browser ^6.0.0
-  electron ^3.0.0
-  ios ^6.2.0
-  osx ^6.0.0 <span class="o">(</span>deprecated<span class="o">)</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova plugin add cordova-plugin-camera
+cordova plugin add cordova-plugin-some-plugin <span class="nt">--variable</span> <span class="nv">API_KEY</span><span class="o">=</span>my-api-key
 </code></pre></div></div>
 
-<p>Based on the above information, executing <code>cordova platform add android</code> will fetch the latest minor/patch release version starting from 10.1.1 or higher. If you specify a version, it will fetch the specified version. For example, <code>cordova platform add ios@5.0.1</code> will fetch Cordova iOS 5.0.1.</p>
+<h2>devDependencies</h2>
 
-<p><em>Note: After installing a platform, the &quot;<strong>Installed platforms:</strong>&quot; section will display the actual installed platform version. The installed platform will no longer appear in the &quot;<strong>Available platforms:</strong>&quot; section until it is removed from the project.</em></p>
+<p>A standard npm field, not unique to Cordova. See npm&#39;s docs on <a href="https://docs.npmjs.com/cli/v12/configuring-npm/package-json#devdependencies"><code>devDependencies</code></a> for the general behavior. When a platform or plugin is installed, Cordova&#39;s tooling also records it here as an npm dependency, alongside its installed version number. This is separate from <a href="#cordovaplatforms"><code>cordova.platforms</code></a> and <a href="#cordovaplugins"><code>cordova.plugins</code></a>, <code>devDependencies</code> tracks the actual npm package and version that was fetched.</p>
+
+<p>Automatic saving can be turned off with the <a href="#cli---nosave-flag"><code>--nosave</code> flag</a>.</p>
+
+<p>Examples:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"cordova-android"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^13.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cordova-plugin-camera"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^7.0.0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2>CLI --nosave Flag</h2>
+
+<p>By default, <code>cordova platform add</code> and <code>cordova plugin add</code> automatically save what you installed into <code>package.json</code>. If you&#39;d rather install something without permanently adding it to your project&#39;s configuration, for example, to test a plugin temporarily, pass the <code>--nosave</code> flag:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova platform add android <span class="nt">--nosave</span>
+cordova plugin add cordova-plugin-camera <span class="nt">--nosave</span>
+</code></pre></div></div>
+
+<p>This applies to <code>cordova.platforms</code>, <code>cordova.plugins</code>, and <code>devDependencies</code> all at once, there&#39;s a single flag, not one per field.</p>
 
 
             </div>
