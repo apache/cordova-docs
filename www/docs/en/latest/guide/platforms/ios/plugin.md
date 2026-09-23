@@ -336,6 +336,8 @@ The copied `Package.swift` will contain `exact: "1.2.0"`. The CLI saves the supp
 
 Substitution occurs when Cordova copies the plugin into the iOS project's `packages` directory. It does not modify the plugin's original `Package.swift`, and does not apply to plugins installed with `--link`.
 
+> **Note for plugin authors:** A plugin repository can also be a standalone Swift package, with its own tests. Swift Package Manager does not substitute Cordova plugin variables, so version placeholders such as `$SDK_VERSION` can prevent the original package from resolving dependencies, building, or running its tests directly with Swift Package Manager. If your plugin needs to work as a standalone Swift package, use valid dependency versions in its `Package.swift` rather than Cordova variable placeholders.
+
 #### Add Generated Files To `.gitignore`
 
 Swift will generate some files and directories which can be ignored. Add the following to `.gitignore`:
