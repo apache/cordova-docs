@@ -116,6 +116,24 @@ You can optionally limit the scope of each build to specific platforms - 'ios' i
 cordova build ios
 ```
 
+### Passing Platform-Specific Arguments
+
+When using `cordova build` or `cordova run`, you can pass platform-specific options (such as signing flags or Gradle parameters) by prefixing them with the `--` pass-through separator:
+
+```bash
+# Example passing Gradle flags on Android
+cordova build android -- --gradleArg=-PcdvMinSdkVersion=20
+
+# Example passing signing flags on Android
+cordova build android --release -- --packageType=apk
+```
+
+> **Note for Windows users:** On Windows (Command Prompt and PowerShell), the `--` separator must be enclosed in quotation marks (`"--"`) so that the shell forwards the arguments to platform build scripts correctly, for example:
+> ```bash
+> cordova build android --release "--" --packageType=apk
+> ```
+> See the [Android Platform Guide](../../guide/platforms/android/index.html#signing-an-app) and [iOS Platform Guide](../../guide/platforms/ios/index.html) for available platform-specific flags.
+
 **See Also:**
 
 - [Cordova build command reference documentation][cdv_build]
