@@ -233,7 +233,11 @@ These parameters can be specified using the command line arguments above to the 
 
 **Note**: You should use double `--` to indicate that these are platform-specific arguments, for example:
 
-`cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development`.
+```bash
+cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development
+```
+
+> **Note for Windows users**: On Windows (Command Prompt and PowerShell), the `--` separator must be enclosed in quotation marks (`"--"`).
 
 ### Using build.json
 
