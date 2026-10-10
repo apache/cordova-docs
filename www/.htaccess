@@ -46,6 +46,13 @@ RewriteRule ^archive/ - [L]
 RewriteRule ^docs(?:/[a-z]{2}(?:-[a-z]{2})?)?/?$ \
     {{site.baseurl}}/docs/en/latest/ [R=301,L]
 
+# Latest docs are only available in English. Preserve the requested page path.
+#   /docs/de/latest/                    → /docs/en/latest/
+#   /docs/zh-tw/latest/guide/platforms/ios/ → /docs/en/latest/guide/platforms/ios/
+RewriteCond $1 !=en
+RewriteRule ^docs/([a-z]{2}(?:-[a-z]{2})?)/latest(/.*)?$ \
+    {{site.baseurl}}/docs/en/latest$2 [R=301,L]
+
 # Redirect edge and dev docs to latest docs. There is no more dev docs.
 #   /docs/*/edge/* → /docs/en/latest/*
 #   /docs/*/dev/*  → /docs/en/latest/*
