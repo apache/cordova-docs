@@ -470,7 +470,7 @@ You can set these properties in one of four ways:
 
 - Using an Environment Variables:
 
-    **Example:**
+    **Example (Unix/macOS):**
 
     ```bash
     export ORG_GRADLE_PROJECT_cdvMinSdkVersion=20
@@ -479,10 +479,16 @@ You can set these properties in one of four ways:
 
 - Using the `--gradleArg` flag with the Cordova `build` or `run` command:
 
-    **Example:**
+    **Example (Unix/macOS):**
 
     ```bash
     cordova run android -- --gradleArg=-PcdvMinSdkVersion=20
+    ```
+
+    **Example (Windows):**
+
+    ```bash
+    cordova run android "--" --gradleArg=-PcdvMinSdkVersion=20
     ```
 
 - Creating a `gradle.properties` in the project's Android platform directory
@@ -559,8 +565,16 @@ To change the Gradle JVM args, the `--jvmargs` flag can be used with both Cordov
 
 By default, JVM args has a value of `-Xmx2048m`. To increase the maximum allowed memory, use the `-Xmx` JVM arg. Example given below:
 
-```
+**Example (Unix/macOS):**
+
+```bash
 cordova build android -- --jvmargs='-Xmx4g'
+```
+
+**Example (Windows):**
+
+```bash
+cordova build android "--" --jvmargs="-Xmx4g"
 ```
 
 The following units are supported:
@@ -609,9 +623,17 @@ The parameters above can be specified as an argument when using the [Cordova CLI
 
 _**Note**: You should use double `--` to indicate that these are platform-specific arguments._
 
-Example:
+**Example (Unix/macOS):**
 
-`cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password --packageType=bundle`.
+```bash
+cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password --packageType=bundle
+```
+
+**Example (Windows):**
+
+```bash
+cordova run android --release "--" --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password --packageType=bundle
+```
 
 ### Using `build.json`
 

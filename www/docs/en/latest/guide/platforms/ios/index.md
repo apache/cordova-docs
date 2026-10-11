@@ -231,9 +231,13 @@ To sign an app, you need the following parameters:
 
 These parameters can be specified using the command line arguments above to the Cordova CLI `build` or `run` commands.
 
-**Note**: You should use double `--` to indicate that these are platform-specific arguments, for example:
+**Note**: You should use double `--` to indicate that these are platform-specific arguments.
 
-`cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development`.
+**Example (Unix/macOS):**
+
+```bash
+cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development
+```
 
 ### Using build.json
 
