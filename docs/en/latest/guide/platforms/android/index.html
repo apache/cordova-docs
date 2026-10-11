@@ -2662,7 +2662,7 @@ C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
   <li>
     <p>Using an Environment Variables:</p>
 
-    <p><strong>Example:</strong></p>
+    <p><strong>Example (Unix/macOS):</strong></p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">ORG_GRADLE_PROJECT_cdvMinSdkVersion</span><span class="o">=</span>20
   cordova build android
@@ -2671,9 +2671,14 @@ C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
   <li>
     <p>Using the <code>--gradleArg</code> flag with the Cordova <code>build</code> or <code>run</code> command:</p>
 
-    <p><strong>Example:</strong></p>
+    <p><strong>Example (Unix/macOS):</strong></p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova run android <span class="nt">--</span> <span class="nt">--gradleArg</span><span class="o">=</span><span class="nt">-PcdvMinSdkVersion</span><span class="o">=</span>20
+</code></pre></div>    </div>
+
+    <p><strong>Example (Windows):</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cordova run android <span class="s2">"--"</span> <span class="nt">--gradleArg</span><span class="o">=</span><span class="nt">-PcdvMinSdkVersion</span><span class="o">=</span>20
 </code></pre></div>    </div>
   </li>
   <li>
@@ -2749,7 +2754,14 @@ C:\Users\[your user]\AppData\Local\Android\Sdk\emulator
 
 <p>By default, JVM args has a value of <code>-Xmx2048m</code>. To increase the maximum allowed memory, use the <code>-Xmx</code> JVM arg. Example given below:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android -- --jvmargs='-Xmx4g'
+<p><strong>Example (Unix/macOS):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--</span> <span class="nt">--jvmargs</span><span class="o">=</span><span class="s1">'-Xmx4g'</span>
+</code></pre></div></div>
+
+<p><strong>Example (Windows):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="s2">"--"</span> <span class="nt">--jvmargs</span><span class="o">=</span><span class="s2">"-Xmx4g"</span>
 </code></pre></div></div>
 
 <p>The following units are supported:</p>
@@ -2851,9 +2863,15 @@ will happen regardless of whether the version code is taken from the <code>andro
 
 <p><em><strong>Note</strong>: You should use double <code>--</code> to indicate that these are platform-specific arguments.</em></p>
 
-<p>Example:</p>
+<p><strong>Example (Unix/macOS):</strong></p>
 
-<p><code>cordova run android --release -- --keystore=../my-release-key.keystore --storePassword=password --alias=alias_name --password=password --packageType=bundle</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span>../my-release-key.keystore <span class="nt">--storePassword</span><span class="o">=</span>password <span class="nt">--alias</span><span class="o">=</span>alias_name <span class="nt">--password</span><span class="o">=</span>password <span class="nt">--packageType</span><span class="o">=</span>bundle
+</code></pre></div></div>
+
+<p><strong>Example (Windows):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run android <span class="nt">--release</span> <span class="s2">"--"</span> <span class="nt">--keystore</span><span class="o">=</span>../my-release-key.keystore <span class="nt">--storePassword</span><span class="o">=</span>password <span class="nt">--alias</span><span class="o">=</span>alias_name <span class="nt">--password</span><span class="o">=</span>password <span class="nt">--packageType</span><span class="o">=</span>bundle
+</code></pre></div></div>
 
 <h3>Using <code>build.json</code></h3>
 
