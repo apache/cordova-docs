@@ -2416,9 +2416,12 @@ and the <a href="https://developer.apple.com/library/prerelease/ios/documentatio
 
 <p>These parameters can be specified using the command line arguments above to the Cordova CLI <code>build</code> or <code>run</code> commands.</p>
 
-<p><strong>Note</strong>: You should use double <code>--</code> to indicate that these are platform-specific arguments, for example:</p>
+<p><strong>Note</strong>: You should use double <code>--</code> to indicate that these are platform-specific arguments.</p>
 
-<p><code>cordova run ios --release -- --codeSignIdentity="iPhone Developer" --developmentTeam=FG35JLLMXX4A --packageType=development</code>.</p>
+<p><strong>Example (Unix/macOS):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run ios <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--codeSignIdentity</span><span class="o">=</span><span class="s2">"iPhone Developer"</span> <span class="nt">--developmentTeam</span><span class="o">=</span>FG35JLLMXX4A <span class="nt">--packageType</span><span class="o">=</span>development
+</code></pre></div></div>
 
 <h3>Using build.json</h3>
 
