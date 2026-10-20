@@ -125,16 +125,15 @@
       customName: plugman
 
 - package: cordova-node-xcode
-  version: 3.0.1
+  version: 4.0.0
   downloadDir: tools
   tarballs:
-    # - type: source
-    #   extension: tar.gz
-    # - type: source
-    #   extension: zip
+    - type: source
+      extension: tar.gz
+    - type: source
+      extension: zip
     - type: npm
       extension: tgz
-      customName: xcode
 
 - package: cordova-app-hello-world
   version: 7.0.0
