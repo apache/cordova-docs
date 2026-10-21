@@ -6,9 +6,126 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2026 09:21:14 +0000</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2026 09:21:14 +0000</lastBuildDate>
+    <pubDate>Wed, 21 Oct 2026 02:58:40 +0000</pubDate>
+    <lastBuildDate>Wed, 21 Oct 2026 02:58:40 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Cordova Node Xcode 4.0.0 Released!</title>
+        <description>&lt;p&gt;We are happy to announce that we have just released &lt;code&gt;Cordova Node Xcode 4.0.0&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;This is one of the libraries used behind-the-scenes for parsing, editing, and writing xcodeproj project files.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/xcode&quot;&gt;cordova-node-xcode@4.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Highlights&lt;/h2&gt;
+
+&lt;p&gt;In this major release, the &lt;code&gt;uuid&lt;/code&gt; dependency has been replaced with Node.js&amp;#39;s built-in &lt;code&gt;crypto.randomUUID()&lt;/code&gt; API. As a result, the minimum Node.js engine requirement has been bumped to &lt;code&gt;&amp;gt;=14.17.0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Support for the &lt;code&gt;PBXShellScriptBuildPhase&lt;/code&gt; options &lt;code&gt;alwaysOutOfDate&lt;/code&gt; and &lt;code&gt;runOnlyForDeploymentPostprocessing&lt;/code&gt; has been added.&lt;/p&gt;
+
+&lt;p&gt;Additionally, the following fixes were applied:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shallow-merging of section properties while preserving previously parsed entries that have the same section name.&lt;/li&gt;
+  &lt;li&gt;Allow adding a &lt;code&gt;PBXBuildFile&lt;/code&gt; entry with the &lt;code&gt;name&lt;/code&gt; property defined when &lt;code&gt;path&lt;/code&gt; is not defined.&lt;/li&gt;
+  &lt;li&gt;Pathing issues on Windows.&lt;/li&gt;
+  &lt;li&gt;Ensure that the &lt;code&gt;PBXGroup&lt;/code&gt; object exists before attempting to read the &lt;code&gt;path&lt;/code&gt; property.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please report any issues you find to the &lt;a href=&quot;https://github.com/apache/cordova-node-xcode/issues&quot;&gt;Cordova Node Xcode Issue Tracker&lt;/a&gt;!&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore!: bump minimum Node.js engine to &amp;gt;=14.17.0 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/154&quot;&gt;#154&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/1edf705&quot;&gt;1edf705&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix!: replace uuid dependency with crypto.randomUUID() (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/153&quot;&gt;#153&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;feat: support for &amp;#39;alwaysOutOfDate&amp;#39; PBX Shell Script property (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/173&quot;&gt;#173&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/04fc2dd&quot;&gt;04fc2dd&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: add support for runOnlyForDeploymentPostprocessing (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/172&quot;&gt;#172&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/9d908c4&quot;&gt;9d908c4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat: add eslint w/ lint fixes (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/151&quot;&gt;#151&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/8f43d12&quot;&gt;8f43d12&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;feat(ci): replace nodeunit &amp;amp; nyc for node:test (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/150&quot;&gt;#150&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/b27fbd4&quot;&gt;b27fbd4&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fix: shallow-merging nested objects for split sections (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/167&quot;&gt;#167&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/e7df64a&quot;&gt;e7df64a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(addBuildPhase): adding of PBXBuildFile entries to lookup table (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/174&quot;&gt;#174&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/81ddc4a&quot;&gt;81ddc4a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix(windows): Fix path issues on Windows (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/170&quot;&gt;#170&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/2f89486&quot;&gt;2f89486&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;fix: Need to check for object existence (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/112&quot;&gt;#112&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/e81ecab&quot;&gt;e81ecab&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;chore: Bump @babel/traverse from 7.18.9 to 7.23.2 [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/505a8d4&quot;&gt;505a8d4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: Bump simple-plist from 1.1.0 to 1.3.1 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/127&quot;&gt;#127&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/335874e&quot;&gt;335874e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update dependencies with npm update (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/191&quot;&gt;#191&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/ec95ec8&quot;&gt;ec95ec8&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: action workflow updates &amp;amp; add dependabot (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/180&quot;&gt;#180&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/3cdce4b&quot;&gt;3cdce4b&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: restrict writing to certain object keys (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/176&quot;&gt;#176&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/4a9fd34&quot;&gt;4a9fd34&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: license header improvements (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/169&quot;&gt;#169&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/7e647c3&quot;&gt;7e647c3&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: improve ci workflow, ensure built parser committed, cleanup (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/166&quot;&gt;#166&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/ca3d1d2&quot;&gt;ca3d1d2&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update .asf.yaml (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/160&quot;&gt;#160&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/7451fc6&quot;&gt;7451fc6&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: bump 4.0.0-dev.0 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/159&quot;&gt;#159&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/bc87c09&quot;&gt;bc87c09&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update release audit workflow &amp;amp; license headers (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/146&quot;&gt;#146&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/e6b981e&quot;&gt;e6b981e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: update ci workflow (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/147&quot;&gt;#147&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/9664ef8&quot;&gt;9664ef8&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: clean up package.json (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/115&quot;&gt;#115&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/127a4df&quot;&gt;127a4df&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(addBuildPhase): remove unused variable buildPhaseSection (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/175&quot;&gt;#175&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/780467c&quot;&gt;780467c&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(dep): update package json (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/165&quot;&gt;#165&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/35da006&quot;&gt;35da006&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump brace-expansion from 1.1.18 to 1.1.21 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/190&quot;&gt;#190&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/74935d6&quot;&gt;74935d6&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump js-yaml from 4.3.1 to 4.3.2 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/186&quot;&gt;#186&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/6e31505&quot;&gt;6e31505&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump brace-expansion from 1.1.15 to 1.1.18 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/179&quot;&gt;#179&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/c0b7624&quot;&gt;c0b7624&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump js-yaml from 4.2.0 to 4.3.1 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/178&quot;&gt;#178&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/226c345&quot;&gt;226c345&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps-dev): bump js-yaml from 3.14.1 to 3.14.2 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/145&quot;&gt;#145&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/5447827&quot;&gt;5447827&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump the gh-actions-patch-minor group with 3 updates (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/192&quot;&gt;#192&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/9df6e52&quot;&gt;9df6e52&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump the gh-actions-patch-minor group with 2 updates (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/189&quot;&gt;#189&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/ff0086e&quot;&gt;ff0086e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump codecov/codecov-action (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/188&quot;&gt;#188&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/0ac3c65&quot;&gt;0ac3c65&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump the gh-actions-patch-minor group with 2 updates (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/187&quot;&gt;#187&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/c8e1116&quot;&gt;c8e1116&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump the gh-actions-patch-minor group across 1 directory with 2 updates (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/183&quot;&gt;#183&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/3033cd8&quot;&gt;3033cd8&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump @xmldom/xmldom from 0.9.10 to 0.9.12 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/185&quot;&gt;#185&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/ca2c32a&quot;&gt;ca2c32a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump codecov/codecov-action from 4.6.0 to 7.0.0 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/182&quot;&gt;#182&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/0920ebc&quot;&gt;0920ebc&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump the gh-actions-patch-minor group with 2 updates (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/181&quot;&gt;#181&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/ba44143&quot;&gt;ba44143&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(deps): bump minimatch from 3.1.2 to 3.1.5 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/148&quot;&gt;#148&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/5a20cef&quot;&gt;5a20cef&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(INFRA): Set up default protection ruleset for default and release branches (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/155&quot;&gt;#155&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/f9b58c4&quot;&gt;f9b58c4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(npm): rebuilt package-lock to v2 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/133&quot;&gt;#133&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/659a4e7&quot;&gt;659a4e7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(readme): update badges (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/163&quot;&gt;#163&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/304a309&quot;&gt;304a309&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(workflow): update upload-to-atr action (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/184&quot;&gt;#184&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/31e32fc&quot;&gt;31e32fc&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(workflow): update CI &amp;amp; use macos-26 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/164&quot;&gt;#164&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/fd7ccf1&quot;&gt;fd7ccf1&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(workflow): pin sha &amp;amp; update actions [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/cf3d318&quot;&gt;cf3d318&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(workflow): pin sha &amp;amp; update actions [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/680991e&quot;&gt;680991e&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore(workflow) added release draft, updated release audit, &amp;amp; cleanup CI (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/161&quot;&gt;#161&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/0f6e63f&quot;&gt;0f6e63f&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: Drop NodeJS 10, 12, 14. Added 18, 20, 22 (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/144&quot;&gt;#144&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/c491d3a&quot;&gt;c491d3a&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: update codecov@v4 w/ token (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/142&quot;&gt;#142&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/5158ec5&quot;&gt;5158ec5&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;ci: add node-14.x to workflow (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/117&quot;&gt;#117&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/8b98cab&quot;&gt;8b98cab&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;chore: Increment package version to 3.0.2-dev [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/56b8ffd&quot;&gt;56b8ffd&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Merge pull request #141 from apache/dependabot/npm_and_yarn/babel/traverse-7.23.2 [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/e594cd4&quot;&gt;e594cd4&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;test: Ensure we wait for async project.parse (&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/pull/168&quot;&gt;#168&lt;/a&gt;) [&lt;a href=&quot;https://github.com/apache/cordova-node-xcode/commit/9c89212&quot;&gt;9c89212&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+        <link>https://cordova.apache.org/announcements/2026/10/20/xcode-4.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/10/20/xcode-4.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        <category>tools</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
     
       <item>
         <title>File Transfer Plugin 2.0.1 Released!</title>
@@ -1064,122 +1181,6 @@ cordova platform add android@15.0.0
         <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
         <link>https://cordova.apache.org/announcements/2026/03/06/cordova-android-15.0.0.html</link>
         <guid isPermaLink="true">https://cordova.apache.org/announcements/2026/03/06/cordova-android-15.0.0.html</guid>
-        
-        <category>news</category>
-        
-        <category>releases</category>
-        
-        
-        <category>announcements</category>
-        
-      </item>
-    
-      <item>
-        <title>Cordova CLI 13.0.0 Released!</title>
-        <description>&lt;p&gt;We are happy to announce that &lt;code&gt;cordova@13.0.0&lt;/code&gt; has been released! This is the latest version of the Cordova command-line interface (CLI) used for creating and building Cordova apps.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/cordova/v/13.0.0&quot;&gt;cordova@13.0.0 on npm&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;To upgrade a global installation:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm uninstall &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; cordova
-npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; cordova@latest
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note: If you are installing Cordova locally in a project (not globally), simply omit the &lt;code&gt;-g&lt;/code&gt; flag.&lt;/p&gt;
-
-&lt;h2&gt;Release Highlights&lt;/h2&gt;
-
-&lt;p&gt;The most notable changes in this major release include:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Updated npm dependencies.&lt;/li&gt;
-  &lt;li&gt;Increased Node.js engine requirement to &lt;code&gt;&amp;gt;=20.17.0 || &amp;gt;=22.9.0&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Removed &lt;code&gt;telemetry&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One of the main dependencies that was updated is &lt;strong&gt;cordova-lib&lt;/strong&gt;, which for provides the core CLI functionality for managing platforms and plugins, including adding and removing them. Among the breaking changes in this release, the &lt;code&gt;cordova serve&lt;/code&gt; command has been removed.&lt;/p&gt;
-
-&lt;p&gt;We recommend checking out the following blog posts for updates on related packages that also apply to Cordova CLI:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/11/05/cordova-lib-13.0.0.html&quot;&gt;Cordova Lib 13.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/10/22/cordova-create-6.0.0.html&quot;&gt;Cordova Create 6.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/08/29/cordova-fetch-5.0.0.html&quot;&gt;Cordova Fetch 5.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/08/29/cordova-app-hello-world-7.0.0.html&quot;&gt;Cordova App Hello World 7.0.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://cordova.apache.org/announcements/2025/08/09/cordova-common-6.0.0.html&quot;&gt;Cordova Common 6.0.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please report any issues you find by following the &lt;a href=&quot;https://github.com/apache/cordova#filing-a-bug&quot;&gt;How to File a Bug&lt;/a&gt; guide!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/issues&quot;&gt;Cordova CLI - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-lib/issues&quot;&gt;Cordova Lib - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-create/issues&quot;&gt;Cordova Create - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-fetch/issues&quot;&gt;Cordova Fetch - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-serve/issues&quot;&gt;Cordova Serve - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-common/issues&quot;&gt;Cordova Common - Issue Tracker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h1&gt;Changes include:&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Breaking Changes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/678&quot;&gt;GH-678&lt;/a&gt; feat!: bump dependencies &amp;amp; node engine requirement&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/633&quot;&gt;GH-633&lt;/a&gt; feat!: remove telemetry feature&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/672&quot;&gt;GH-672&lt;/a&gt; chore(npm)!: bump various npm packages&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/666&quot;&gt;GH-666&lt;/a&gt; chore!: bump node requirement &amp;amp; npm dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/642&quot;&gt;GH-642&lt;/a&gt; chore!: Prepare for next major&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Fixes:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/662&quot;&gt;GH-662&lt;/a&gt; fix: bump @babel/helpers&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/640&quot;&gt;GH-640&lt;/a&gt; fix: remove potential error when setting exit code&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Others:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/679&quot;&gt;GH-679&lt;/a&gt; chore: update release audit workflow &amp;amp; license headers&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/677&quot;&gt;GH-677&lt;/a&gt; chore(deps-dev): bump js-yaml from 4.1.0 to 4.1.1&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/676&quot;&gt;GH-676&lt;/a&gt; chore(deps): bump glob from 10.4.5 to 10.5.0&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/673&quot;&gt;GH-673&lt;/a&gt; chore: license headers&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/671&quot;&gt;GH-671&lt;/a&gt; chore(deps): bump tmp from 0.2.3 to 0.2.4&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/668&quot;&gt;GH-668&lt;/a&gt; chore(coverage): Move from nyc to c8 for code coverage&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/667&quot;&gt;GH-667&lt;/a&gt; chore(deps): bump on-headers and compression&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/665&quot;&gt;GH-665&lt;/a&gt; chore(deps-dev): bump brace-expansion from 1.1.11 to 1.1.12&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/658&quot;&gt;GH-658&lt;/a&gt; chore(deps): bump systeminformation from 5.22.11 to 5.23.8&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/657&quot;&gt;GH-657&lt;/a&gt; chore(deps): bump path-to-regexp and express&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/654&quot;&gt;GH-654&lt;/a&gt; chore(deps): bump cross-spawn from 7.0.3 to 7.0.6&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/655&quot;&gt;GH-655&lt;/a&gt; chore(ci): Add code scanning &amp;amp; fix dependabot failures&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/646&quot;&gt;GH-646&lt;/a&gt; chore(deps): bump micromatch from 4.0.7 to 4.0.8&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/652&quot;&gt;GH-652&lt;/a&gt; chore(deps): bump cookie and express&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/643&quot;&gt;GH-643&lt;/a&gt; chore: Update dependencies&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/637&quot;&gt;GH-637&lt;/a&gt; chore(deps): bump express from 4.18.2 to 4.19.2&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/639&quot;&gt;GH-639&lt;/a&gt; chore(deps): bump tar from 6.2.0 to 6.2.1&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/641&quot;&gt;GH-641&lt;/a&gt; chore(deps): bump braces from 3.0.2 to 3.0.3&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/635&quot;&gt;GH-635&lt;/a&gt; chore(deps): bump ip from 2.0.0 to 2.0.1&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/631&quot;&gt;GH-631&lt;/a&gt; chore: Rolled dependencies to the latest non-breaking versions&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/670&quot;&gt;GH-670&lt;/a&gt; ci: various workflow improvements&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/669&quot;&gt;GH-669&lt;/a&gt; ci(workflow): update release-audit &amp;amp; license config&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/656&quot;&gt;GH-656&lt;/a&gt; ci: use apache-rat-action@v1 (tag)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/638&quot;&gt;GH-638&lt;/a&gt; ci: update codecov@v4 w/ token&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/636&quot;&gt;GH-636&lt;/a&gt; ci: update release audit workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/630&quot;&gt;GH-630&lt;/a&gt; ci(gh-action): add Apache RAT &amp;amp; package license checker workflow&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/554&quot;&gt;GH-554&lt;/a&gt; doc(create): update default values&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/428&quot;&gt;GH-428&lt;/a&gt; doc: update &lt;code&gt;README&lt;/code&gt;.md&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apache/cordova-cli/pull/616&quot;&gt;GH-616&lt;/a&gt; doc: update &amp;amp; refactor cli reference&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate>
-        <link>https://cordova.apache.org/announcements/2025/11/25/cordova-cli-13.0.0.html</link>
-        <guid isPermaLink="true">https://cordova.apache.org/announcements/2025/11/25/cordova-cli-13.0.0.html</guid>
         
         <category>news</category>
         

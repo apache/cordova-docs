@@ -2173,7 +2173,14 @@
 
 <h2>CLI Syntax</h2>
 
+<p><strong>Unix/macOS:</strong></p>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="o">[</span>options] <span class="nt">--</span> <span class="o">[</span>platformOpts]
+</code></pre></div></div>
+
+<p><strong>Windows:</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova &lt;command&gt; [options] "--" [platformOpts]
 </code></pre></div></div>
 
 <h2>Global Command List</h2>
@@ -2289,6 +2296,10 @@
 
 <p>Certain commands have options (<code>platformOpts</code>) that are specific to a particular platform. They can be provided to the cordova-cli with a &#39;--&#39; separator that stops the command parsing within the cordova-lib module and passes through rest of the options for platforms to parse.</p>
 
+<blockquote>
+  <p><strong>Note for Windows users:</strong> On Windows (Command Prompt and PowerShell), the <code>--</code> separator must be enclosed in quotation marks (<code>"--"</code>) so that the shell forwards the arguments to platform build scripts correctly.</p>
+</blockquote>
+
 <h2>CLI Usage Example</h2>
 
 <p>The following example illustrates how to utilize Cordova CLI to perform various tasks such as:</p>
@@ -2342,7 +2353,14 @@
   <li>
     <p>Build Project for Android in Release Mode with Signing Parameters</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova build android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span><span class="s2">"..</span><span class="se">\a</span><span class="s2">ndroid.keystore"</span> <span class="nt">--storePassword</span><span class="o">=</span>android <span class="nt">--alias</span><span class="o">=</span>mykey
+    <p><strong>Unix/macOS:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova build android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span><span class="s2">"../android.keystore"</span> <span class="nt">--storePassword</span><span class="o">=</span>android <span class="nt">--alias</span><span class="o">=</span>mykey
+</code></pre></div>    </div>
+
+    <p><strong>Windows:</strong></p>
+
+    <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cordova build android --release "--" --keystore="../android.keystore" --storePassword=android --alias=mykey
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -2844,7 +2862,7 @@ It only performs the compilation step without doing prepare. It&#39;s common to 
     </tr>
     <tr>
       <td><code>&lt;platformOpts&gt;</code></td>
-      <td>To provide platform specific options, you must include them after <code>--</code> separator. Review platform guide docs for more details.</td>
+      <td>To provide platform specific options, you must include them after <code>--</code> separator (on Windows shells, enclose in quotes: <code>"--"</code>). Review platform guide docs for more details.</td>
     </tr>
   </tbody>
 </table>
@@ -2862,14 +2880,21 @@ It only performs the compilation step without doing prepare. It&#39;s common to 
   <li>Build for <code>android</code> platform in <code>release</code> mode and use the specified build configuration:</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--release</span> <span class="nt">--buildConfig</span><span class="o">=</span>..<span class="se">\m</span>yBuildConfig.json
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--release</span> <span class="nt">--buildConfig</span><span class="o">=</span><span class="s2">"../myBuildConfig.json"</span>
 </code></pre></div></div>
 
 <ul>
   <li>Build for <code>android</code> platform in release mode and pass custom platform options to android build process:</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span><span class="s2">"..</span><span class="se">\a</span><span class="s2">ndroid.keystore"</span> <span class="nt">--storePassword</span><span class="o">=</span>android <span class="nt">--alias</span><span class="o">=</span>mykey
+<p><strong>Unix/macOS:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android <span class="nt">--release</span> <span class="nt">--</span> <span class="nt">--keystore</span><span class="o">=</span><span class="s2">"../android.keystore"</span> <span class="nt">--storePassword</span><span class="o">=</span>android <span class="nt">--alias</span><span class="o">=</span>mykey
+</code></pre></div></div>
+
+<p><strong>Windows:</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova build android --release "--" --keystore="../android.keystore" --storePassword=android --alias=mykey
 </code></pre></div></div>
 
 <h2><code>cordova run</code> command</h2>
@@ -2937,7 +2962,7 @@ It only performs the compilation step without doing prepare. It&#39;s common to 
     </tr>
     <tr>
       <td><code>&lt;platformOpts&gt;</code></td>
-      <td>To provide platform specific options, you must include them after <code>--</code> separator. Review platform guide docs for more details.</td>
+      <td>To provide platform specific options, you must include them after <code>--</code> separator (on Windows shells, enclose in quotes: <code>"--"</code>). Review platform guide docs for more details.</td>
     </tr>
   </tbody>
 </table>
@@ -2948,7 +2973,7 @@ It only performs the compilation step without doing prepare. It&#39;s common to 
   <li>Run a release build of current cordova project on <code>android</code> platform emulator named <code>Nexus_5_API_23_x86</code>. Use the spcified build configuration when running:</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run android <span class="nt">--release</span> <span class="nt">--buildConfig</span><span class="o">=</span>..<span class="se">\m</span>yBuildConfig.json <span class="nt">--target</span><span class="o">=</span>Nexus_5_API_23_x86
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cordova run android <span class="nt">--release</span> <span class="nt">--buildConfig</span><span class="o">=</span><span class="s2">"../myBuildConfig.json"</span> <span class="nt">--target</span><span class="o">=</span>Nexus_5_API_23_x86
 </code></pre></div></div>
 
 <ul>

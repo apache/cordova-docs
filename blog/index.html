@@ -123,6 +123,59 @@
             
             <li>
                 <header>
+                    <div class="adorner" blogTime="Tue, 20 Oct 2026 00:00:00 +0000"></div>
+
+
+                    <h2 class="title">
+                        <a href="/announcements/2026/10/20/xcode-4.0.0.html">Cordova Node Xcode 4.0.0 Released!</a>
+                    </h2>
+                    <div class="details">
+                        <span class="date">20 Oct 2026</span>
+                        - by
+                        <span class="author">
+                            
+                                Bryan Ellis
+                            
+                        </span>
+                    </div>
+
+
+                </header>
+                <section class="post-excerpt">
+                    <p><p>We are happy to announce that we have just released <code>Cordova Node Xcode 4.0.0</code>!</p>
+
+<p>This is one of the libraries used behind-the-scenes for parsing, editing, and writing xcodeproj project files.</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/xcode">cordova-node-xcode@4.0.0</a></li>
+</ul>
+
+<h2>Release Highlights</h2>
+
+<p>In this major release, the <code>uuid</code> dependency has been replaced with Node.js&#39;s built-in <code>crypto.randomUUID()</code> API. As a result, the minimum Node.js engine requirement has been bumped to <code>&gt;=14.17.0</code>.</p>
+
+<p>Support for the <code>PBXShellScriptBuildPhase</code> options <code>alwaysOutOfDate</code> and <code>runOnlyForDeploymentPostprocessing</code> has been added.</p>
+
+<p>Additionally, the following fixes were applied:</p>
+
+<ul>
+  <li>Shallow-merging of section properties while preserving previously parsed entries that have the same section name.</li>
+  <li>Allow adding a <code>PBXBuildFile</code> entry with the <code>name</code> property defined when <code>path</code> is not defined.</li>
+  <li>Pathing issues on Windows.</li>
+  <li>Ensure that the <code>PBXGroup</code> object exists before attempting to read the <code>path</code> property.</li>
+</ul>
+
+<p>Please report any issues you find to the <a href="https://github.com/apache/cordova-node-xcode/issues">Cordova Node Xcode Issue Tracker</a>!</p>
+
+</p>
+                    <div><a href="/announcements/2026/10/20/xcode-4.0.0.html">More...</a></div>
+
+
+                </section>
+            </li>
+            
+            <li>
+                <header>
                     <div class="adorner" blogTime="Mon, 10 Aug 2026 00:00:00 +0000"></div>
 
 
@@ -17686,7 +17739,7 @@ just around the corner (July 19, 2013), and we are really excited about it!</p>
 <script>
     window.onload = function(){
         setTimeout(function(){
-            var lastPostTime = new Date("Mon, 10 Aug 2026 00:00:00 +0000").getTime();
+            var lastPostTime = new Date("Tue, 20 Oct 2026 00:00:00 +0000").getTime();
           setCookie("visitTime", lastPostTime, 365);
         }, 2000);
     };
