@@ -32,6 +32,7 @@ toc_title: iOS
       - [Configuring Plugin Initialization Timing](#configuring-plugin-initialization-timing)
     - [Supporting Swift Package Manager (SPM)](#supporting-swift-package-manager-spm)
       - [Creating SPM's `Package.swift` File](#creating-spms-packageswift-file)
+      - [Using Plugin Variables in `Package.swift`](#using-plugin-variables-in-packageswift)
       - [Add Generated Files To `.gitignore`](#add-generated-files-to-gitignore)
     - [Additional Native Side Implementation](#additional-native-side-implementation)
       - [Executing Plugin Initialization Logic](#executing-plugin-initialization-logic)
@@ -304,6 +305,38 @@ targets: [
     )
 ]
 ```
+
+#### Using Plugin Variables in `Package.swift`
+
+Starting with cordova-ios 8.2.0, plugin variables can be used in `Package.swift`.
+
+Plugin variables can be referenced in `Package.swift` using `$VARIABLE_NAME`. When installing the plugin, Cordova replaces these references in the copied package manifest with the installation values. Values supplied with the CLI's `--variable` option override the defaults declared by [`<preference>` elements in `plugin.xml`](../../../plugin_ref/spec.html#preference).
+
+For example, declare an SDK version in `plugin.xml`:
+
+```xml
+<platform name="ios" package="swift">
+    <preference name="SDK_VERSION" default="1.0.0" />
+</platform>
+```
+
+Then reference it in the `dependencies` array of `Package.swift` (replace the example URL with your SDK's repository):
+
+```swift
+.package(url: "https://github.com/example/example-sdk.git", exact: "$SDK_VERSION")
+```
+
+Installing the plugin without an override uses `1.0.0`. To use a different version:
+
+```bash
+cordova plugin add cordova-plugin-example --variable SDK_VERSION=1.2.0
+```
+
+The copied `Package.swift` will contain `exact: "1.2.0"`. The CLI saves the supplied variable under [`cordova.plugins` in the application's `package.json`](../../../package_ref/index.html#cordovaplugins), unless `--nosave` is used. The default belongs in the plugin's `plugin.xml`.
+
+Substitution occurs when Cordova copies the plugin into the iOS project's `packages` directory. It does not modify the plugin's original `Package.swift`, and does not apply to plugins installed with `--link`.
+
+> **Note for plugin authors:** A plugin repository can also be a standalone Swift package, with its own tests. Swift Package Manager does not substitute Cordova plugin variables, so version placeholders such as `$SDK_VERSION` in the example above can prevent the original package from resolving dependencies, building, or running its tests directly with Swift Package Manager. If your plugin needs to work as a standalone Swift package, use valid dependency versions in its `Package.swift` rather than Cordova variable placeholders.
 
 #### Add Generated Files To `.gitignore`
 

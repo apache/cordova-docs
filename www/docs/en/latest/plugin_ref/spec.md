@@ -658,6 +658,8 @@ a `<preference>` tag.
 The CLI checks that these required preferences are passed in.  If not, it should warn the user how to pass the variable in and exit with a non-zero code.
 Preferences can be referenced elsewhere in `plugin.xml` using the syntax `$PREFERENCE_NAME`.
 
+Use `cordova plugin add <plugin> --variable PREFERENCE_NAME=value` to supply a value that overrides the default. The CLI saves supplied variables under [`cordova.plugins` in the application's `package.json`](../package_ref/index.html#cordovaplugins), unless `--nosave` is used. For using these variables in an iOS Swift package manifest, see [Using Plugin Variables in `Package.swift`](../guide/platforms/ios/plugin.html#using-plugin-variables-in-packageswift), including its version requirements.
+
 Attributes | Description
 ---------------- | ------------
 name<br />{% cdv_vartype string %}| *Required* <br/> Name of the variable. Can only contain capital letters, digits, and underscores.

@@ -103,6 +103,8 @@ cordova platform add ios --nosave
 
 An object listing the plugins currently installed in the project. Each key is a plugin's ID, and its value holds any CLI variables that were supplied when the plugin was installed (or an empty object if none were needed). Entries are added by `cordova plugin add <plugin>` and removed by `cordova plugin remove <plugin>`. Automatic saving can be turned off with the [`--nosave` flag](#cli---nosave-flag).
 
+Plugin authors declare variables and their optional defaults with [`<preference>` elements in `plugin.xml`](../plugin_ref/spec.html#preference). Values supplied through `--variable` override those defaults. For an iOS example that uses a variable to select a Swift package dependency version, see [Using Plugin Variables in `Package.swift`](../guide/platforms/ios/plugin.html#using-plugin-variables-in-packageswift), including its version requirements.
+
 Examples:
 
 ```json
