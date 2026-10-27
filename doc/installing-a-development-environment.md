@@ -32,7 +32,7 @@ Install Ruby 3.4.x using a version manager or the appropriate method from the [R
 
 Install Node.js 24.x using the instructions on [nodejs.org][nodejs].
 
-### Check installations
+### Check Installations
 
 Verify that the active Ruby version is 3.4.x:
 
@@ -43,7 +43,7 @@ Verify Node.js and npm:
     node --version
     npm --version
 
-### Local repository setup
+### Local Repository Setup
 
 Clone the [cordova-docs] repository and navigate to its directory.
 
@@ -61,7 +61,7 @@ Install the locked JavaScript dependencies:
 
     npm ci
 
-### Verify the setup
+### Verify the Setup
 
 Run the checks and development build:
 
