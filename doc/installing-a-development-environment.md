@@ -61,7 +61,7 @@ Install the locked JavaScript dependencies:
 
     npm ci
 
-### Verify the Setup
+### Verify The Setup
 
 Run the checks and development build:
 
