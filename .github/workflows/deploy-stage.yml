@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: 24.x
 
-      - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1.328.0
+      - uses: ruby/setup-ruby@26e5b7d197ebf60545ee9667bcbace0be11ccaec # v1.334.0
         with:
           ruby-version: 2.7
           bundler-cache: true
