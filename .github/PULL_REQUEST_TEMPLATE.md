@@ -33,3 +33,4 @@ Thanks!
 - [ ] Commit is prefixed with `(platform)` if this change only applies to one platform (e.g. `(android)`)
 - [ ] If this Pull Request resolves an issue, I linked to the issue in the text above (and used the correct [keyword to close issues using keywords](https://help.github.com/articles/closing-issues-using-keywords/))
 - [ ] I've updated the documentation if necessary
+- [ ] Documentation changes follow the [Editorial Style Sheet](https://github.com/apache/cordova-docs/blob/master/doc/docs-STYLEGUIDE.md#structure-and-flow), including heading capitalization (if applicable)
