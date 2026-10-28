@@ -1,4 +1,4 @@
-## Building And Deploying (Automated)
+## Building and Deploying (Automated)
 
 GitHub Actions builds and deploys the website using Ruby 3.4.x and Node.js 24.x.
 
