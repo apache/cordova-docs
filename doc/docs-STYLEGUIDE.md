@@ -68,11 +68,20 @@ help identify them in Markdown.
   is, if one is task-based and reads "Adding a Platform," the other
   should be "Developing for Android" rather than "Android Development"
 
-* __Heading Content__: In reference doc, preserve case in titles and
-  headings.  In guide doc: Initial Cap Words in Headings, Except for
-  Short Prepositions or Conjunctions. Also Init-Cap Around Hyphens. No
-  punctuation at the end of a heading, and avoid punctuation within
-  headings.  Do not prefix headings with numbers.
+* __Heading Content__: In reference doc, preserve the case of API names
+  and identifiers in titles and headings. In guide doc, use title case:
+  capitalize the first and last words, nouns, pronouns, verbs, adjectives,
+  adverbs, and words of four or more letters. Lowercase articles ("a",
+  "an", "the"), short conjunctions ("and", "but", "or"), and short
+  prepositions ("at", "for", "in", "of", "to") unless they are the first
+  or last word. Capitalize both parts of hyphenated major words, as in
+  "Self-Report". Preserve the official spelling of product names such as
+  "macOS" and "Node.js". Examples: "Installing a Development Environment",
+  "Building and Deploying the Website", and "Verify the Setup". See the
+  [APA title case guidance](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)
+  for more examples of major and minor words. No punctuation at the end
+  of a heading, and avoid punctuation within headings. Do not prefix
+  headings with numbers.
 
         grep -hr '^#' * | sed 's/^#*//g' | grep '[^A-Za-z0-9 ]'
 
