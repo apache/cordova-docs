@@ -2,7 +2,7 @@
 
 ### Automatic Deployment
 
-See [building-and-deploying-the-website.md](building-and-deploying-the-website.md) for a description of the automated build and deploy process via Travis.
+See [building-and-deploying-the-website.md](building-and-deploying-the-website.md) for a description of the automated build and deploy process via GitHub Actions.
 
 ### Manual Deployment
 
