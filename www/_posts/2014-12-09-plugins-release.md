@@ -52,7 +52,7 @@ org.apache.cordova.camera@0.3.4
 
 org.apache.cordova.contacts@0.2.15
 
-* [CB-7131](https://issues.apache.org/jira/browse/CB-7131) **Android** Check for profile photo existance
+* [CB-7131](https://issues.apache.org/jira/browse/CB-7131) **Android** Check for profile photo existence
 * [CB-7896](https://issues.apache.org/jira/browse/CB-7896) Better way to detect **Windows** and **WindowsPhone8.1**
 * [CB-7772](https://issues.apache.org/jira/browse/CB-7772) **iOS** Cancelling `pickContact` should call the error callback, not the success callback
 * [CB-7761](https://issues.apache.org/jira/browse/CB-7761) Misleading text in documentation
