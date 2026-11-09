@@ -6,8 +6,8 @@
 </description>
     <link>https://cordova.apache.org/</link>
     <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Nov 2026 15:00:18 +0000</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2026 15:00:18 +0000</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2026 04:23:12 +0000</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2026 04:23:12 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -586,7 +586,7 @@ cordova platform add ios@8.1.1
 
 &lt;h3&gt;Impact&lt;/h3&gt;
 
-&lt;p&gt;An unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call &lt;code&gt;window.webkit.messageHandlers.cordova_iab.postMessage({id: '&amp;lt;victim-callback-id&amp;gt;', d: '...'})&lt;/code&gt; to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format &lt;code&gt;&amp;lt;PluginName&amp;gt;&amp;lt;sequential-integer&amp;gt;&lt;/code&gt;, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.&lt;/p&gt;
+&lt;p&gt;An unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call &lt;code&gt;window.webkit.messageHandlers.cordova_iab.postMessage({id: &apos;&amp;lt;victim-callback-id&amp;gt;&apos;, d: &apos;...&apos;})&lt;/code&gt; to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format &lt;code&gt;&amp;lt;PluginName&amp;gt;&amp;lt;sequential-integer&amp;gt;&lt;/code&gt;, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.&lt;/p&gt;
 
 &lt;p&gt;This issue affects Cordova Plugin InAppBrowser: from 3.1.0 through 6.0.0.&lt;/p&gt;
 
@@ -998,7 +998,7 @@ cordova platform add android@15.0.0
 
     &lt;p&gt;At the time of writing, &lt;strong&gt;version 20&lt;/strong&gt; of the Command-line tools was downloaded from Android Studio&amp;#39;s SDK Manager and used. It can also be downloaded from the &lt;a href=&quot;https://developer.android.com/studio#command-line-tools-only&quot;&gt;Android Developers&lt;/a&gt; website.&lt;/p&gt;
 
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;s1&quot;&gt;'build-tools;36.0.0'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'platforms;android-36'&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  sdkmanager &lt;span class=&quot;s1&quot;&gt;&apos;build-tools;36.0.0&apos;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;platforms;android-36&apos;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
     &lt;p&gt;You may need to run the &lt;code&gt;update&lt;/code&gt; flag first:&lt;/p&gt;
@@ -1053,7 +1053,7 @@ cordova platform add android@15.0.0
         &lt;p&gt;&lt;code&gt;window.statusbar.visible&lt;/code&gt; — A property that controls the visibility of the status bar. It accepts a boolean value (&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;).&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;&lt;code&gt;window.statusbar.setBackgroundColor('#AARRGGBB')&lt;/code&gt; — A method that changes the background color of the status bar. It accepts a hexadecimal color string.&lt;/p&gt;
+        &lt;p&gt;&lt;code&gt;window.statusbar.setBackgroundColor(&apos;#AARRGGBB&apos;)&lt;/code&gt; — A method that changes the background color of the status bar. It accepts a hexadecimal color string.&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
 
