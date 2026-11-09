@@ -3172,7 +3172,7 @@ input[type=search] {
 input[type=radio],
 input[type=checkbox] {
   margin: 4px 0 0;
-  margin-top: 1px \9 ;
+  margin-top: 1px \9;
   line-height: normal;
 }
 
@@ -3320,7 +3320,7 @@ input[type=search] {
 .checkbox-inline input[type=checkbox] {
   position: absolute;
   margin-left: -20px;
-  margin-top: 4px \9 ;
+  margin-top: 4px \9;
 }
 
 .radio + .radio,
@@ -4347,7 +4347,7 @@ tbody.collapse.in {
   margin-left: 2px;
   vertical-align: middle;
   border-top: 5px dashed;
-  border-top: 5px solid \9 ;
+  border-top: 5px solid \9;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
 }
@@ -4481,7 +4481,7 @@ tbody.collapse.in {
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
   border-bottom: 5px dashed;
-  border-bottom: 5px solid \9 ;
+  border-bottom: 5px solid \9;
   content: "";
 }
 
@@ -7859,7 +7859,7 @@ button.close {
   border: 1px solid #ffffff;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #000 \9 ;
+  background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
 }
 
