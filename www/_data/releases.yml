@@ -183,7 +183,7 @@
       customName: cordova-electron
 
 - package: cordova-ios
-  version: 8.1.1
+  version: 8.2.0
   downloadDir: platforms
   tarballs:
     - type: source
