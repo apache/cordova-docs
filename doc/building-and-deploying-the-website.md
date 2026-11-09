@@ -1,14 +1,11 @@
 ## Building and Deploying (Automated)
 
-[Travis] automatically builds and publishes commits to `master` of this repository, so either merged Pull Requests or direct commits. 
+GitHub Actions builds and deploys the website using Ruby 3.4.x and Node.js 24.x.
 
-In [`.travis.yml`](../.travis.yml), Travis installs the required dependencies and then runs `buildAndDeploy.sh`. This script runs the build script (`npm run-script build`, which runs `gulp build --prod`) and then then uses [SVN] to update, copy, add, and commit the new changes over to the website SVN repository. 
+The [staging workflow](../.github/workflows/deploy-stage.yml) runs automatically on pushes to `master` and can also be started manually. The [production workflow](../.github/workflows/deploy-prod.yml) is started manually. Both check out `master`.
 
-You can read more about the individual steps [here](deploying-the-website.md).
+Each deployment workflow installs Ruby dependencies with Bundler, runs `npm install-ci-test` to install the locked Node.js dependencies and run the checks, then runs `npm run build:prod`.
 
-Travis also runs `npm test` and will notify you if any of your `eslint` or `mocha` tests are failing.
+The generated `build-prod` directory is committed to `asf-staging` for staging or `asf-site` for production. The existing `archive` directory is preserved during deployment.
 
-**NOTE**: Committing to Travis might take a while (up to 1 hour), depending on the number of files changed.
-
-[Travis]: https://travis-ci.org/
-[SVN]: https://svnbook.red-bean.com/en/1.7/svn.intro.quickstart.html
+The [PR workflow](../.github/workflows/ci.yml) runs the checks and a development build for pull requests.
