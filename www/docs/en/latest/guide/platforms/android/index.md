@@ -216,7 +216,9 @@ Cordova generally ceases support for Android versions that fall below 5% on Goog
 
 ## WebView Support
 
-Starting with cordova-android 15.0.0, the minimum supported Chromium-based Android WebView version is **52**. The Android API level and WebView version are separate requirements: the installed WebView can vary between devices running the same Android version. Plugins and your application's JavaScript may require a newer WebView.
+Cordova uses the device's Chromium-based Android WebView to render your application. The minimum supported WebView version is based on the WebView baseline of the oldest Android version supported by the cordova-android release. See the [Android API Level Support](#android-api-level-support) table for the minimum version.
+
+WebView can be updated independently of Android, so devices running the same Android version can have different WebView versions. Users can update their WebView provider through Google Play where available, but only to versions compatible with their Android version. Plugins and your application's JavaScript may require a newer WebView than Cordova's minimum.
 
 ### WebView updates on Android 7–9
 
