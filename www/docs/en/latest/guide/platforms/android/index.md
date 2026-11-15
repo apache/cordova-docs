@@ -45,6 +45,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             <td>24 (7.0) - 36 (16.0)</td>
             <td>
                 <ul>
+                    <li>Minimum WebView: <a href="#webview-support">52</a></li>
                     <li>Build Tools: ^36.0.0</li>
                     <li>Kotlin: 2.1.21</li>
                     <li>Gradle: 8.14.2</li>
