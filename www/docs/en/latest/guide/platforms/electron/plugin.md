@@ -126,6 +126,13 @@ Then load the package in your main file with `require`:
 const { system } = require('systeminformation');
 ```
 
+### Native Module Quirks
+
+If the NodeJS module includes native components, it may not work right in an
+electron environment, unless if it includes the builds explicitly for the
+electron version and all the OS variants. The electron documentation has more
+information on using [Native Node Modules](https://www.electronjs.org/docs/latest/tutorial/using-native-node-modules).
+
 ## Debugging Electron Plugins
 
 The JavaScript of your plugin that runs in the web page, such as the
