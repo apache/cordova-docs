@@ -45,6 +45,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             <td>24 (7.0) - 36 (16.0)</td>
             <td>
                 <ul>
+                    <li>Minimum WebView: <a href="https://github.com/apache/cordova-android/pull/1571">52</a></li>
                     <li>Build Tools: ^36.0.0</li>
                     <li>Kotlin: 2.1.21</li>
                     <li>Gradle: 8.14.2</li>
@@ -63,6 +64,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             <td>24 (7.0) - 35 (15.0)</td>
             <td>
                 <ul>
+                    <li>Minimum WebView: <a href="https://github.com/apache/cordova-android/pull/1571">52</a></li>
                     <li>Build Tools: ^35.0.0</li>
                     <li>Kotlin: 1.9.24</li>
                     <li>Gradle: 8.13</li>
@@ -81,6 +83,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             <td>24 (7.0) - 34 (14.0)</td>
             <td>
                 <ul>
+                    <li>Minimum WebView: <a href="https://github.com/apache/cordova-android/pull/1571">52</a></li>
                     <li>Build Tools: ^34.0.0</li>
                     <li>Kotlin: 1.9.24</li>
                     <li>Gradle: 8.7</li>
@@ -99,6 +102,7 @@ The supported [Android API Levels](https://developer.android.com/guide/topics/ma
             <td>24 (7.0) - 33 (13.0)</td>
             <td>
                 <ul>
+                    <li>Minimum WebView: <a href="https://github.com/apache/cordova-android/pull/1571">52</a></li>
                     <li>Build Tools: ^33.0.2</li>
                     <li>Kotlin: 1.7.21</li>
                     <li>Gradle: 7.6</li>
@@ -212,6 +216,24 @@ _**Note:** The [cordova-android](https://github.com/apache/cordova-android) vers
 To find out the version of the Cordova-Android package installed in your Cordova project, navigate to the root directory of your project and execute the command `cordova platform ls`.
 
 Cordova generally ceases support for Android versions that fall below 5% on Google's distribution dashboard. You can refer to Google's [Distribution dashboard](https://developer.android.com/about/dashboards/index.html) for more information.
+
+## WebView Support
+
+Cordova uses the device's Chromium-based Android WebView to render your application. The minimum supported WebView version is based on the WebView baseline of the oldest Android version supported by the cordova-android release. See the [Android API Level Support](#android-api-level-support) table for the minimum version.
+
+WebView can be updated independently of Android, so devices running the same Android version can have different WebView versions. Users can update their WebView provider through Google Play where available, but only to versions compatible with their Android version. Plugins and your application's JavaScript may require a newer WebView than Cordova's minimum.
+
+### WebView updates on Android 7–9
+
+Google no longer provides WebView updates for Android 7–9. Devices can still install the last supported release for their Android version, as explained in the [Chromium WebView documentation](https://chromium.googlesource.com/chromium/src/+/HEAD/android_webview/docs/prerelease.md#android-5-through-9-lollipop_marshmallow_nougat_oreo_pie).
+
+| Android version | API levels | Last supported Chrome/WebView major version |
+| --- | --- | --- |
+| 7.0–7.1 (Nougat) | 24–25 | [119](https://groups.google.com/a/chromium.org/g/chromium-dev/c/B9AYI3WAvRo) |
+| 8.0–8.1 (Oreo) | 26–27 | [138](https://groups.google.com/a/chromium.org/g/chromium-dev/c/vEZz0721rUY) |
+| 9 (Pie) | 28 | [138](https://groups.google.com/a/chromium.org/g/chromium-dev/c/vEZz0721rUY) |
+
+These are Google's final supported release lines for those Android versions, not Cordova's minimum WebView versions. Cordova support does not extend Google's WebView update support.
 
 ## System Requirements
 
