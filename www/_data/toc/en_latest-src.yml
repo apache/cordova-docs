@@ -46,6 +46,7 @@
             children:
                 - url: guide/platforms/android/plugin.html
                 - url: guide/platforms/ios/plugin.html
+                - url: guide/platforms/electron/plugin.html
         - url: plugin_ref/plugman.html
 
 -
