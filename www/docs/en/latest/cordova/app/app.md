@@ -17,7 +17,7 @@ license: >
     specific language governing permissions and limitations
     under the License.
 
-title: navigator.app
+title: App Control
 description: Android-only functions for controlling the app, such as exiting it.
 ---
 
