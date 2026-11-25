@@ -24,8 +24,7 @@ description: Android-only functions for controlling the app, such as exiting it.
 # navigator.app
 
 The `navigator.app` object is available on Android only. It gives your app a
-few functions to control the app itself, such as closing it or going back
-through the page history.
+few functions to control the app itself, such as closing it, clearing its cache, or taking over the behavior of the device buttons.
 
 ## exitApp
 
@@ -45,65 +44,6 @@ Clears the app's cached resources. This is Android only.
 
 ```javascript
 navigator.app.clearCache();
-```
-
-## clearHistory
-
-Clears the web history of the app's webview. After this, pressing the back
-button exits the app instead of loading the previous page. This is Android only.
-
-### Quick Example
-
-```javascript
-navigator.app.clearHistory();
-```
-
-## backHistory
-
-Goes back to the previous page, the same as pressing the back button on an
-Android device. This is Android only.
-
-### Quick Example
-
-```javascript
-navigator.app.backHistory();
-```
-
-## loadUrl
-
-Loads a URL into the app's webview, or into a new browser instance. This is
-Android only.
-
-The second argument, `props`, is optional. It is an object that can contain:
-
-- `wait`: number of milliseconds to wait before loading the URL.
-- `loadingDialog`: a string in the form `"Title,Message"`. Shows a native
-  loading dialog.
-- `loadUrlTimeoutValue`: number of milliseconds to wait before a timeout error
-  is triggered.
-- `clearHistory`: boolean. Clears the webview history. The default is `false`.
-- `openExternal`: boolean. Opens the URL in a new browser. The default is
-  `false`.
-
-### Quick Example
-
-```javascript
-navigator.app.loadUrl("http://server/myapp/index.html", {
-    wait: 2000,
-    loadingDialog: "Wait,Loading App",
-    loadUrlTimeoutValue: 60000
-});
-```
-
-## cancelLoadUrl
-
-Cancels a `loadUrl` call that is still waiting to be loaded. This is Android
-only.
-
-### Quick Example
-
-```javascript
-navigator.app.cancelLoadUrl();
 ```
 
 ## overrideBackbutton
