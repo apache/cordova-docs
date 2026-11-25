@@ -71,6 +71,55 @@ This container has a very crucial file - [config.xml](../../config_ref/index.htm
 file that provides information about the app and specifies parameters affecting how it
 works, such as whether it responds to orientation shifts.
 
+## App Origin
+
+Every web page has an _origin_: the address it was loaded from, made up of a
+scheme (such as `https`), a host, and a port. The WebView uses the origin to
+decide what a page is allowed to do, for example which saved data it can see
+(Localstorage, IndexedDB) and which pages it can send messages to.
+
+Most websites load from an `http://` or `https://` address. A Cordova app can
+instead load from a local file, with an address that starts with `file://`.
+Pages loaded this way are treated differently from normal web pages, and some
+WebViews report their origin as `file://` or `null`.
+
+How your app is loaded depends on the platform and version:
+
+* **Android:** Before cordova-android 10.0.0, the app started from
+  `file:///android_asset/www/index.html`. From 10.0.0 onwards, it starts from
+  `https://localhost/` by default. You can switch back to `file://` with the
+  `AndroidInsecureFileModeEnabled` preference, but loading `file:///` URLs is
+  considered insecure. See the
+  [Android upgrade guide](../platforms/android/upgrade.html) and the `scheme`,
+  `hostname` and `AndroidInsecureFileModeEnabled` preferences in the
+  [config.xml reference](../../config_ref/index.html).
+* **iOS:** No `scheme` is defined by default. If you set a `scheme` that is
+  invalid, it falls back to `app`. If `scheme` is not defined, the `hostname`
+  preference is ignored. See the
+  [config.xml reference](../../config_ref/index.html).
+
+### Things That Can Go Wrong
+
+* **Saved data can seem to disappear.** Storage belongs to an origin, so
+  changing it (for example, moving from `file://` to `https://localhost`) means
+  your app starts with an empty Localstorage and IndexedDB.
+* **Embedded content can fail.** Some content checks where your app was loaded
+  from. For example, a YouTube player embed can show a blank box and log this
+  error, because the app's origin is `file://`:
+
+  ```
+  Unable to post message to https://www.youtube.com. Recipient has origin file://.
+  ```
+
+  Allowing navigation to the site in `config.xml` has been reported to help:
+
+  ```xml
+  <allow-navigation href="https://*youtube.com/*" />
+  ```
+
+  See the [Navigation Allow List](../appdev/allowlist/index.html#navigation-allow-list)
+  for how these rules work.
+
 ## Plugins
 
 Plugins are an integral part of the Cordova ecosystem. They provide
