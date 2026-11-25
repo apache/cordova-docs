@@ -55,6 +55,7 @@
         - url: package_ref/index.html
         - url: plugin_ref/spec.html
         - url: cordova/events/events.html
+        - url: cordova/app/app.html
 
 -
     name: Resources
